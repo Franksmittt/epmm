@@ -953,7 +953,6 @@ export function AbmMasterBatteryOverlayStudio() {
           />
         ) : null}
         <div className={surgeVertical.industrialGrid} />
-        <div className={surgeVertical.currentSurge} />
         <div className={surgeVertical.scrim} />
         <div className={surgeVertical.topHud}>
           <div className={surgeVertical.brandLockup}>
