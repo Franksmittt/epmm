@@ -40,7 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Mock persistence + local uploads (replace with Supabase later)
-/data/
-/public/uploads/*
-!/public/uploads/.gitkeep
+# Seed schedule + bundled post images ship with the repo for client previews.
+# Revisit when moving persistence to Supabase.

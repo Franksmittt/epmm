@@ -62,7 +62,7 @@ export async function loginAction(
       path: "/",
       maxAge: 60 * 60 * 24 * 30,
     });
-    redirect("/admin/coordinator");
+    redirect("/my-companies");
   }
 
   const token = await new SignJWT({

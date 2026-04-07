@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { AdminMonthCalendar } from "@/components/admin/AdminMonthCalendar";
 import { AdminMonthNav } from "@/components/admin/AdminMonthNav";
 import { deleteClientDayAction } from "@/app/admin/actions";
@@ -10,11 +10,7 @@ import {
   parseYearMonth,
   summarizeClientMonth,
 } from "@/lib/admin/schedule-helpers";
-import {
-  getClientBySlug,
-  isCoordinatorAllowedSlug,
-} from "@/lib/clients/registry";
-import { getSession } from "@/lib/auth/session";
+import { getClientBySlug } from "@/lib/clients/registry";
 import { loadAppData } from "@/lib/data/app-data";
 import { EfsAdventureOverlayStudio } from "@/components/admin/absolute-offroad/EfsAdventureOverlayStudio";
 import { AbmMasterBatteryOverlayStudio } from "@/components/admin/alberton-battery-mart/AbmMasterBatteryOverlayStudio";
@@ -43,14 +39,6 @@ export default async function AdminClientSchedulePage({
     notFound();
   }
 
-  const session = await getSession();
-  const isCoordinator = session?.role === "coordinator";
-  if (isCoordinator && !isCoordinatorAllowedSlug(slug)) {
-    redirect("/admin/coordinator");
-  }
-
-  const adminHubHref = isCoordinator ? "/admin/coordinator" : "/admin";
-
   const { year, month } = parseYearMonth(sp.y, sp.m);
   const selectedDate =
     typeof sp.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(sp.date)
@@ -76,10 +64,10 @@ export default async function AdminClientSchedulePage({
     <div className="space-y-10">
       <div>
         <Link
-          href={adminHubHref}
+          href="/admin"
           className="text-sm text-[#8E8E93] hover:text-white"
         >
-          ← {isCoordinator ? "My companies" : "All clients"}
+          ← All clients
         </Link>
         <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
@@ -91,14 +79,12 @@ export default async function AdminClientSchedulePage({
               <code className="text-white/90">{client.accessCode}</code> · /{slug}
             </p>
           </div>
-          {!isCoordinator ? (
-            <Link
-              href={`/admin/schedule?y=${year}&m=${month}&client=${encodeURIComponent(slug)}`}
-              className="shrink-0 rounded-md border border-white/15 px-3 py-2 text-sm text-[#8E8E93] hover:border-white/25 hover:text-white"
-            >
-              View on master schedule →
-            </Link>
-          ) : null}
+          <Link
+            href={`/admin/schedule?y=${year}&m=${month}&client=${encodeURIComponent(slug)}`}
+            className="shrink-0 rounded-md border border-white/15 px-3 py-2 text-sm text-[#8E8E93] hover:border-white/25 hover:text-white"
+          >
+            View on master schedule →
+          </Link>
         </div>
       </div>
 

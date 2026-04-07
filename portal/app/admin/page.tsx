@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export default async function AdminHomePage() {
   const session = await getSession();
   if (session?.role === "coordinator") {
-    redirect("/admin/coordinator");
+    redirect("/my-companies");
   }
   const data = await loadAppData();
   const { year, month } = parseYearMonth(null, null);

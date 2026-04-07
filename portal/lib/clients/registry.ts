@@ -13,7 +13,7 @@ export const ADMIN_ACCESS_CODE = "Admin@epmm";
  */
 export const COORDINATOR_ACCESS_CODE = "Yogs@123";
 
-/** Slugs the coordinator can open (scheduling + client view). Order = hub display order. */
+/** Slugs the multi-brand client login can open (same client dashboard). Order = hub display order. */
 export const COORDINATOR_CLIENT_SLUGS = [
   "absolute-offroad",
   "alberton-battery-mart",

@@ -45,7 +45,7 @@ function scheduleQuery(
 export default async function AdminMasterSchedulePage({ searchParams }: Props) {
   const session = await getSession();
   if (session?.role === "coordinator") {
-    redirect("/admin/coordinator");
+    redirect("/my-companies");
   }
   const sp = await searchParams;
   const { year, month } = parseYearMonth(sp.y, sp.m);
