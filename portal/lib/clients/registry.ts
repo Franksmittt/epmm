@@ -9,6 +9,22 @@ export interface ClientRecord {
 export const ADMIN_ACCESS_CODE = "Admin@epmm";
 
 /**
+ * Coordinator / social-media operator — sees only {@link COORDINATOR_CLIENT_SLUGS} on one hub.
+ */
+export const COORDINATOR_ACCESS_CODE = "Yogs@123";
+
+/** Slugs the coordinator can open (scheduling + client view). Order = hub display order. */
+export const COORDINATOR_CLIENT_SLUGS = [
+  "absolute-offroad",
+  "alberton-battery-mart",
+  "alberton-tyre-clinic",
+] as const;
+
+export function isCoordinatorAllowedSlug(slug: string): boolean {
+  return (COORDINATOR_CLIENT_SLUGS as readonly string[]).includes(slug);
+}
+
+/**
  * Preset client access codes (plain for now). Share each code only with that client.
  * Admin: Admin@epmm
  */
@@ -45,6 +61,12 @@ const byCode = new Map(
 
 export function getClientBySlug(slug: string): ClientRecord | undefined {
   return bySlug.get(slug);
+}
+
+export function getCoordinatorClients(): ClientRecord[] {
+  return COORDINATOR_CLIENT_SLUGS.map((s) => getClientBySlug(s)).filter(
+    (c): c is ClientRecord => c !== undefined,
+  );
 }
 
 export function findClientByAccessCode(

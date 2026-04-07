@@ -1,7 +1,10 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { getClientBySlug } from "@/lib/clients/registry";
+import {
+  getClientBySlug,
+  isCoordinatorAllowedSlug,
+} from "@/lib/clients/registry";
 import {
   loadAppData,
   saveAppData,
@@ -13,6 +16,16 @@ import { getSession } from "@/lib/auth/session";
 async function requireAdmin(): Promise<boolean> {
   const s = await getSession();
   return s?.role === "admin";
+}
+
+/** Admin or coordinator editing an allowed client slug. */
+async function canEditClientSchedule(slug: string): Promise<boolean> {
+  const s = await getSession();
+  if (s?.role === "admin") return true;
+  if (s?.role === "coordinator" && isCoordinatorAllowedSlug(slug)) {
+    return true;
+  }
+  return false;
 }
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
@@ -47,15 +60,15 @@ export async function saveClientDayAction(
   _prev: SaveClientDayState,
   formData: FormData,
 ): Promise<SaveClientDayState> {
-  if (!(await requireAdmin())) {
-    return { error: "Unauthorized." };
-  }
   const slug = formData.get("slug");
   const date = formData.get("date");
   const caption = formData.get("caption");
 
   if (typeof slug !== "string" || !getClientBySlug(slug)) {
     return { error: "Invalid client." };
+  }
+  if (!(await canEditClientSchedule(slug))) {
+    return { error: "Unauthorized." };
   }
   if (typeof date !== "string" || !DATE_RE.test(date)) {
     return { error: "Pick a valid date." };
@@ -101,18 +114,19 @@ export async function saveClientDayAction(
 
   await saveAppData(data);
   revalidatePath("/admin");
+  revalidatePath("/admin/coordinator");
   revalidatePath(`/admin/clients/${slug}`);
   revalidatePath(`/${slug}`);
   return { ok: true };
 }
 
 export async function deleteClientDayAction(formData: FormData): Promise<void> {
-  if (!(await requireAdmin())) {
-    return;
-  }
   const slug = formData.get("slug");
   const date = formData.get("date");
   if (typeof slug !== "string" || typeof date !== "string" || !DATE_RE.test(date)) {
+    return;
+  }
+  if (!(await canEditClientSchedule(slug))) {
     return;
   }
   const data = await loadAppData();
@@ -124,6 +138,7 @@ export async function deleteClientDayAction(formData: FormData): Promise<void> {
     await saveAppData(data);
   }
   revalidatePath("/admin");
+  revalidatePath("/admin/coordinator");
   revalidatePath(`/admin/clients/${slug}`);
   revalidatePath(`/${slug}`);
 }

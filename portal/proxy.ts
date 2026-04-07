@@ -1,7 +1,10 @@
 import { jwtVerify } from "jose";
 import { NextResponse, type NextRequest } from "next/server";
 import { SESSION_COOKIE_NAME } from "@/lib/auth/constants";
-import { isRegisteredClientSlug } from "@/lib/clients/registry";
+import {
+  isCoordinatorAllowedSlug,
+  isRegisteredClientSlug,
+} from "@/lib/clients/registry";
 
 type JwtPayload = {
   role?: string;
@@ -51,24 +54,54 @@ export async function proxy(request: NextRequest) {
     if (role === "admin") {
       return NextResponse.redirect(new URL("/admin", request.url));
     }
+    if (role === "coordinator") {
+      return NextResponse.redirect(new URL("/admin/coordinator", request.url));
+    }
     if (role === "client" && clientSlug) {
       return NextResponse.redirect(new URL(`/${clientSlug}`, request.url));
     }
   }
 
   if (pathname.startsWith("/admin")) {
-    if (role !== "admin") {
-      if (role === "client" && clientSlug) {
-        return NextResponse.redirect(new URL(`/${clientSlug}`, request.url));
-      }
-      return NextResponse.redirect(new URL("/login", request.url));
+    if (role === "admin") {
+      return NextResponse.next();
     }
+    if (role === "coordinator") {
+      if (pathname === "/admin" || pathname.startsWith("/admin/schedule")) {
+        return NextResponse.redirect(new URL("/admin/coordinator", request.url));
+      }
+      if (
+        pathname === "/admin/coordinator" ||
+        pathname.startsWith("/admin/coordinator/")
+      ) {
+        return NextResponse.next();
+      }
+      const clientMatch = pathname.match(/^\/admin\/clients\/([^/]+)/);
+      if (clientMatch) {
+        const slug = decodeURIComponent(clientMatch[1]);
+        if (isCoordinatorAllowedSlug(slug)) {
+          return NextResponse.next();
+        }
+        return NextResponse.redirect(new URL("/admin/coordinator", request.url));
+      }
+      return NextResponse.redirect(new URL("/admin/coordinator", request.url));
+    }
+    if (role === "client" && clientSlug) {
+      return NextResponse.redirect(new URL(`/${clientSlug}`, request.url));
+    }
+    return NextResponse.redirect(new URL("/login", request.url));
   }
 
   const oneSeg = pathname.match(/^\/([^/]+)$/);
   if (oneSeg) {
     const seg = decodeURIComponent(oneSeg[1]);
     if (seg !== "login" && seg !== "admin") {
+      if (role === "coordinator") {
+        if (isCoordinatorAllowedSlug(seg)) {
+          return NextResponse.next();
+        }
+        return NextResponse.redirect(new URL("/admin/coordinator", request.url));
+      }
       if (role === "client" && clientSlug) {
         if (isRegisteredClientSlug(seg) && seg !== clientSlug) {
           return NextResponse.redirect(new URL(`/${clientSlug}`, request.url));

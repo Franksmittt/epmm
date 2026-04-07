@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { AdminMonthNav } from "@/components/admin/AdminMonthNav";
 import {
   buildMasterSchedule,
@@ -6,6 +7,7 @@ import {
   parseYearMonth,
   summarizeClientMonth,
 } from "@/lib/admin/schedule-helpers";
+import { getSession } from "@/lib/auth/session";
 import { CLIENTS } from "@/lib/clients/registry";
 import { loadAppData } from "@/lib/data/app-data";
 
@@ -41,6 +43,10 @@ function scheduleQuery(
 }
 
 export default async function AdminMasterSchedulePage({ searchParams }: Props) {
+  const session = await getSession();
+  if (session?.role === "coordinator") {
+    redirect("/admin/coordinator");
+  }
   const sp = await searchParams;
   const { year, month } = parseYearMonth(sp.y, sp.m);
   const clientFilter =

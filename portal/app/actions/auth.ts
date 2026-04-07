@@ -49,6 +49,22 @@ export async function loginAction(
     redirect("/admin");
   }
 
+  if (resolved.kind === "coordinator") {
+    const token = await new SignJWT({ role: "coordinator" })
+      .setProtectedHeader({ alg: "HS256" })
+      .setIssuedAt()
+      .setExpirationTime("30d")
+      .sign(key);
+    jar.set(SESSION_COOKIE_NAME, token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "lax",
+      path: "/",
+      maxAge: 60 * 60 * 24 * 30,
+    });
+    redirect("/admin/coordinator");
+  }
+
   const token = await new SignJWT({
     role: "client",
     clientSlug: resolved.client.slug,

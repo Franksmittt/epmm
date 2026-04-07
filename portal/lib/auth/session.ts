@@ -4,6 +4,7 @@ import { SESSION_COOKIE_NAME } from "@/lib/auth/constants";
 
 export type Session =
   | { role: "admin" }
+  | { role: "coordinator" }
   | { role: "client"; clientSlug: string };
 
 export async function getSession(): Promise<Session | null> {
@@ -21,6 +22,9 @@ export async function getSession(): Promise<Session | null> {
     );
     if (payload.role === "admin") {
       return { role: "admin" };
+    }
+    if (payload.role === "coordinator") {
+      return { role: "coordinator" };
     }
     if (
       payload.role === "client" &&

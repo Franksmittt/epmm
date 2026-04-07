@@ -1,5 +1,6 @@
 import {
   ADMIN_ACCESS_CODE,
+  COORDINATOR_ACCESS_CODE,
   findClientByAccessCode,
   type ClientRecord,
 } from "@/lib/clients/registry";
@@ -7,6 +8,7 @@ import { isSlugRevoked, loadAppData } from "@/lib/data/app-data";
 
 export type ResolvedLogin =
   | { kind: "admin" }
+  | { kind: "coordinator" }
   | { kind: "client"; client: ClientRecord };
 
 export async function resolveLogin(
@@ -23,6 +25,10 @@ export async function resolveLogin(
 
   if (code === ADMIN_ACCESS_CODE) {
     return { kind: "admin" };
+  }
+
+  if (code === COORDINATOR_ACCESS_CODE) {
+    return { kind: "coordinator" };
   }
 
   const client = findClientByAccessCode(code);

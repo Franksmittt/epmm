@@ -1,12 +1,18 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { RevokeToggleForm } from "@/app/admin/RevokeToggleForm";
 import { parseYearMonth, summarizeClientMonth } from "@/lib/admin/schedule-helpers";
+import { getSession } from "@/lib/auth/session";
 import { CLIENTS } from "@/lib/clients/registry";
 import { loadAppData } from "@/lib/data/app-data";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminHomePage() {
+  const session = await getSession();
+  if (session?.role === "coordinator") {
+    redirect("/admin/coordinator");
+  }
   const data = await loadAppData();
   const { year, month } = parseYearMonth(null, null);
   const monthLabel = new Date(year, month - 1, 1).toLocaleString("en-ZA", {
