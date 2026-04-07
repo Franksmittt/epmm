@@ -143,8 +143,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 16px;
+  flex-wrap: nowrap;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
 }
 
@@ -153,6 +153,7 @@
   flex-direction: column;
   gap: 2px;
   min-width: 0;
+  flex: 1;
 }
 
 .serviceTitle {
@@ -171,31 +172,11 @@
   letter-spacing: 1px;
 }
 
-.techTags {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding: 0 20px;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.specMini {
-  color: var(--abm-red);
-  font-family: ui-monospace, "SF Mono", monospace;
-  font-size: 0.55rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: rgba(230, 25, 25, 0.1);
-  padding: 3px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-
 .actionBlock {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  margin-left: auto;
 }
 
 .btnCall {
@@ -272,16 +253,6 @@
 
 .root.canvas1080 .serviceSub {
   font-size: 22px;
-}
-
-.root.canvas1080 .techTags {
-  padding: 0 36px;
-  gap: 11px;
-}
-
-.root.canvas1080 .specMini {
-  font-size: 17px;
-  padding: 5px 14px;
 }
 
 .root.canvas1080 .btnCall {

@@ -1,4 +1,4 @@
-/* Alberton Battery Mart — Rejuvenation Cell (charging) vertical 9:16. Export 1080×1920. No motion — static power accents only. */
+/* Alberton Battery Mart — Rejuvenation Cell (charging) vertical 9:16. Export 1080×1920. */
 
 .root {
   --pure-black: #000000;
@@ -41,37 +41,6 @@
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-}
-
-.powerCore {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 2px dashed rgba(230, 25, 25, 0.2);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.powerPulse {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(
-    circle,
-    rgba(230, 25, 25, 0.15) 0%,
-    transparent 70%
-  );
-  border-radius: 50%;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.85;
 }
 
 .scrim {
@@ -262,17 +231,6 @@
   height: 1920px;
   max-width: none;
   aspect-ratio: auto;
-}
-
-.root.canvas1080x1920 .powerCore {
-  width: 600px;
-  height: 600px;
-  border-width: 5px;
-}
-
-.root.canvas1080x1920 .powerPulse {
-  width: 360px;
-  height: 360px;
 }
 
 .root.canvas1080x1920 .topHud {

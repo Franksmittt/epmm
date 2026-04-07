@@ -53,7 +53,7 @@ export const ABM_OVERLAY_PRESETS: {
 ];
 
 export const BATTERY_OVERLAY_JSON_TEMPLATE_ID = "alberton-battery-mart-overlay";
-export const BATTERY_OVERLAY_JSON_VERSION = 5;
+export const BATTERY_OVERLAY_JSON_VERSION = 6;
 
 const ENERGY_KEYS = [
   "clinicName",
@@ -133,8 +133,6 @@ const REJUVENATION_KEYS = [
   "rejVerticalSubtext",
   "rejVerticalServiceTitle",
   "rejVerticalServiceSub",
-  "rejSquareSpec1",
-  "rejSquareSpec2",
   "rejSquareServiceTitle",
   "rejSquareServiceSub",
   "rejPhone",
@@ -251,8 +249,6 @@ const DEFAULTS_REJUVENATION: Record<RejuvenationCopyKey, string> = {
     "Advanced battery diagnostics and professional capacity recovery. We don't just charge it; we condition it for maximum lifespan.",
   rejVerticalServiceTitle: "Professional Charging",
   rejVerticalServiceSub: "Drop-off & Collect",
-  rejSquareSpec1: "Deep Cycle Charging",
-  rejSquareSpec2: "Capacity Recovery",
   rejSquareServiceTitle: "Professional Charging",
   rejSquareServiceSub: "Drop-off & Collect Service",
   rejPhone: "010 109 6211",
@@ -1197,14 +1193,6 @@ export function AbmMasterBatteryOverlayStudio() {
               {crj.rejSquareServiceSub}
             </span>
           </div>
-          <div className={rejuvenationSquare.techTags}>
-            <span className={rejuvenationSquare.specMini}>
-              {crj.rejSquareSpec1}
-            </span>
-            <span className={rejuvenationSquare.specMini}>
-              {crj.rejSquareSpec2}
-            </span>
-          </div>
           <div className={rejuvenationSquare.actionBlock}>
             <button type="button" className={rejuvenationSquare.btnCall}>
               <PhoneHandsetSvg size={18} />
@@ -1231,8 +1219,6 @@ export function AbmMasterBatteryOverlayStudio() {
             alt=""
           />
         ) : null}
-        <div className={rejuvenationVertical.powerCore} />
-        <div className={rejuvenationVertical.powerPulse} />
         <div className={rejuvenationVertical.scrim} />
         <div className={rejuvenationVertical.topHud}>
           <div className={rejuvenationVertical.brandLockup}>
@@ -1913,16 +1899,6 @@ export function AbmMasterBatteryOverlayStudio() {
               label="Ribbon — service sub"
               value={crj.rejSquareServiceSub}
               onChange={(v) => setRejuvenation("rejSquareServiceSub", v)}
-            />
-            <Field
-              label="Spec mini 1"
-              value={crj.rejSquareSpec1}
-              onChange={(v) => setRejuvenation("rejSquareSpec1", v)}
-            />
-            <Field
-              label="Spec mini 2"
-              value={crj.rejSquareSpec2}
-              onChange={(v) => setRejuvenation("rejSquareSpec2", v)}
             />
           </>
         ) : preset === "data-matrix" ? (
