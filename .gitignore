@@ -3,10 +3,18 @@ node_modules/
 **/node_modules/
 
 # Knowledge — do not track (large / policy)
+knowledge/_inbox/
+knowledge/_review/
 knowledge/archive/
 knowledge/audiences/
 knowledge/channels/
 knowledge/creative-direction/
+knowledge/industry/
+knowledge/super-knowledge/
+knowledge/web-development/
+
+# Client working images (copies live under portal/public/uploads)
+knowledge/clients/**/client_images/
 
 # Environment & secrets (repo root)
 .env
