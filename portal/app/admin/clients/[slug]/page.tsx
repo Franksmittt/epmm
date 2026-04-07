@@ -168,16 +168,17 @@ export default async function AdminClientSchedulePage({
               Overlay studio · templates
             </h2>
             <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
-              Presets: Glass Vault, Executive Ledger, Onyx Typographic, Titanium
-              Vault (quiet luxury, no photo). Photo heroes where needed;
-              per-preset copy and JSON (
+              Presets: Glass Vault, Executive Ledger, Onyx Typographic, Wealth
+              Terminal, Institutional Matrix (photo + scanner HUD), Titanium Vault.
+              Photo heroes for Glass, Ledger, and Institutional Matrix; optional
+              under Wealth Terminal grid. Per-preset copy and JSON (
               <code className="text-white/80">preset</code>), export 1080×1080 and
               1080×1920.
             </p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">
             <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
-              AS Brokers — Glass Vault (1:1 + 9:16)
+              AS Brokers — overlay studio (1:1 + 9:16)
             </p>
             <AsBrokersOverlayStudio />
           </div>

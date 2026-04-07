@@ -10,11 +10,17 @@ import onyxSquare from "./asb-onyx-typographic-square.module.css";
 import onyxVertical from "./asb-onyx-typographic-vertical.module.css";
 import titaniumSquare from "./asb-titanium-vault-square.module.css";
 import titaniumVertical from "./asb-titanium-vault-vertical.module.css";
+import wealthSquare from "./asb-wealth-terminal-square.module.css";
+import wealthVertical from "./asb-wealth-terminal-vertical.module.css";
+import institutionalSquare from "./asb-institutional-matrix-square.module.css";
+import institutionalVertical from "./asb-institutional-matrix-vertical.module.css";
 
 export type AsbOverlayPresetId =
   | "glass-vault"
   | "executive-ledger"
   | "onyx-typographic"
+  | "wealth-terminal"
+  | "institutional-matrix"
   | "titanium-vault";
 
 export const ASB_OVERLAY_PRESETS: {
@@ -32,6 +38,16 @@ export const ASB_OVERLAY_PRESETS: {
     id: "onyx-typographic",
     label: "Onyx Typographic (text-only)",
     short: "Onyx Typographic",
+  },
+  {
+    id: "wealth-terminal",
+    label: "Wealth Terminal (actuarial teal)",
+    short: "Wealth Terminal",
+  },
+  {
+    id: "institutional-matrix",
+    label: "Institutional Matrix (photo + HUD)",
+    short: "Institutional Matrix",
   },
   {
     id: "titanium-vault",
@@ -98,10 +114,49 @@ const TITANIUM_KEYS = [
   "buttonText",
 ] as const;
 
+/** Square + vertical variants share FSP block, yield card, CTA; headlines differ by format. */
+const TERMINAL_KEYS = [
+  "brandName",
+  "brandSub",
+  "trustLine1",
+  "trustLine2",
+  "squareHeadline1",
+  "squareHeadline2",
+  "verticalHeadline1",
+  "verticalHeadline2",
+  "verticalHeroSub",
+  "yieldLabel",
+  "yieldPercent",
+  "tag1",
+  "tag2",
+  "contactLabel",
+  "website",
+  "phone",
+] as const;
+
+const INSTITUTIONAL_KEYS = [
+  "brandName",
+  "brandSub",
+  "verticalTopBadge",
+  "verticalTag1",
+  "verticalTag2",
+  "headlineLine1",
+  "headlineLine2",
+  "verticalSubtext",
+  "yieldLabel",
+  "squareYieldSub",
+  "yieldPercent",
+  "squareRibbonTag1",
+  "squareRibbonTag2",
+  "phone",
+] as const;
+
 type GlassCopyKey = (typeof GLASS_KEYS)[number];
 type LedgerCopyKey = (typeof LEDGER_KEYS)[number];
 type OnyxCopyKey = (typeof ONYX_KEYS)[number];
 type TitaniumCopyKey = (typeof TITANIUM_KEYS)[number];
+type TerminalCopyKey = (typeof TERMINAL_KEYS)[number];
+type InstitutionalCopyKey = (typeof INSTITUTIONAL_KEYS)[number];
 
 const DEFAULTS_GLASS: Record<GlassCopyKey, string> = {
   firmName: "YOUR FIRM LTD",
@@ -163,6 +218,44 @@ const DEFAULTS_TITANIUM: Record<TitaniumCopyKey, string> = {
   buttonText: "Initiate Protocol",
 };
 
+const DEFAULTS_TERMINAL: Record<TerminalCopyKey, string> = {
+  brandName: "AS Brokers",
+  brandSub: "Wealth Engineering",
+  trustLine1: "FSP 17273",
+  trustLine2: "Category 1.8",
+  squareHeadline1: "Protecting Your Legacy.",
+  squareHeadline2: "Engineering Your Wealth.",
+  verticalHeadline1: "Wealth.",
+  verticalHeadline2: "Engineered.",
+  verticalHeroSub:
+    "Stop guessing your capital lifespan. Access institutional-grade Everest Wealth private equity structures designed for absolute certainty.",
+  yieldLabel: "Everest Wealth Strategic Growth",
+  yieldPercent: "14.5",
+  tag1: "20% DWT Tax Arbitrage",
+  tag2: "Zero Advice Fees",
+  contactLabel: "Consult Albert Directly",
+  website: "asbrokers.co.za",
+  phone: "082 377 3894",
+};
+
+const DEFAULTS_INSTITUTIONAL: Record<InstitutionalCopyKey, string> = {
+  brandName: "AS Brokers",
+  brandSub: "FSP 17273 | Category 1.8",
+  verticalTopBadge: "Private Equity",
+  verticalTag1: "Everest Wealth",
+  verticalTag2: "20% DWT Arbitrage",
+  headlineLine1: "Public Volatility.",
+  headlineLine2: "Private Certainty.",
+  verticalSubtext:
+    "Bypass the structural flaws of the public market. Access institutional-grade, unlisted private equity portfolios engineered for absolute yield.",
+  yieldLabel: "Targeted Yield",
+  squareYieldSub: "Everest Wealth",
+  yieldPercent: "14.5",
+  squareRibbonTag1: "Unlisted Private Equity",
+  squareRibbonTag2: "20% DWT Arbitrage",
+  phone: "082 377 3894",
+};
+
 function initialCopyByPreset(): Record<
   AsbOverlayPresetId,
   Record<string, string>
@@ -171,6 +264,8 @@ function initialCopyByPreset(): Record<
     "glass-vault": { ...DEFAULTS_GLASS },
     "executive-ledger": { ...DEFAULTS_LEDGER },
     "onyx-typographic": { ...DEFAULTS_ONYX },
+    "wealth-terminal": { ...DEFAULTS_TERMINAL },
+    "institutional-matrix": { ...DEFAULTS_INSTITUTIONAL },
     "titanium-vault": { ...DEFAULTS_TITANIUM },
   };
 }
@@ -193,6 +288,8 @@ function isPresetId(v: unknown): v is AsbOverlayPresetId {
     v === "glass-vault" ||
     v === "executive-ledger" ||
     v === "onyx-typographic" ||
+    v === "wealth-terminal" ||
+    v === "institutional-matrix" ||
     v === "titanium-vault"
   );
 }
@@ -215,6 +312,7 @@ function inferPresetFromBlock(
   block: Record<string, unknown>,
 ): AsbOverlayPresetId | null {
   const keys = Object.keys(block);
+
   const onyxHit =
     keys.includes("megaLine1") ||
     keys.includes("megaLine2") ||
@@ -228,6 +326,19 @@ function inferPresetFromBlock(
     keys.includes("contactFooterPrefix") ||
     (keys.includes("brandName") && keys.includes("serviceLabel"));
   if (titaniumHit) return "titanium-vault";
+
+  const institutionalHit =
+    keys.includes("verticalTopBadge") ||
+    keys.includes("verticalSubtext") ||
+    keys.includes("squareRibbonTag1");
+  if (institutionalHit) return "institutional-matrix";
+
+  const terminalHit =
+    keys.includes("yieldPercent") ||
+    keys.includes("verticalHeroSub") ||
+    keys.includes("squareHeadline1") ||
+    keys.includes("trustLine1");
+  if (terminalHit) return "wealth-terminal";
 
   const ledgerHit = keys.some((k) =>
     (LEDGER_KEYS as readonly string[]).includes(k),
@@ -292,6 +403,33 @@ function BtnChevron({ className }: { className?: string }) {
   );
 }
 
+function PhoneHandsetIcon({
+  className,
+  width = 18,
+  height = 18,
+}: {
+  className?: string;
+  width?: number;
+  height?: number;
+}) {
+  return (
+    <svg
+      className={className}
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+    </svg>
+  );
+}
+
 function FeatureCheckSvg({ className }: { className?: string }) {
   return (
     <svg
@@ -333,6 +471,8 @@ export function AsBrokersOverlayStudio() {
   const l = copyByPreset["executive-ledger"];
   const o = copyByPreset["onyx-typographic"];
   const tv = copyByPreset["titanium-vault"];
+  const wt = copyByPreset["wealth-terminal"];
+  const im = copyByPreset["institutional-matrix"];
 
   const setGlass = (key: GlassCopyKey, value: string) => {
     setCopyByPreset((prev) => ({
@@ -359,6 +499,20 @@ export function AsBrokersOverlayStudio() {
     setCopyByPreset((prev) => ({
       ...prev,
       "titanium-vault": { ...prev["titanium-vault"], [key]: value },
+    }));
+  };
+
+  const setTerminal = (key: TerminalCopyKey, value: string) => {
+    setCopyByPreset((prev) => ({
+      ...prev,
+      "wealth-terminal": { ...prev["wealth-terminal"], [key]: value },
+    }));
+  };
+
+  const setInstitutional = (key: InstitutionalCopyKey, value: string) => {
+    setCopyByPreset((prev) => ({
+      ...prev,
+      "institutional-matrix": { ...prev["institutional-matrix"], [key]: value },
     }));
   };
 
@@ -446,7 +600,11 @@ export function AsBrokersOverlayStudio() {
           ? LEDGER_KEYS
           : targetPreset === "onyx-typographic"
             ? ONYX_KEYS
-            : TITANIUM_KEYS;
+            : targetPreset === "wealth-terminal"
+              ? TERMINAL_KEYS
+              : targetPreset === "institutional-matrix"
+                ? INSTITUTIONAL_KEYS
+                : TITANIUM_KEYS;
     const picked: Record<string, string> = {};
     for (const key of keys) {
       if (Object.prototype.hasOwnProperty.call(block, key)) {
@@ -462,7 +620,11 @@ export function AsBrokersOverlayStudio() {
             ? LEDGER_KEYS.join(", ")
             : targetPreset === "onyx-typographic"
               ? ONYX_KEYS.join(", ")
-              : TITANIUM_KEYS.join(", ");
+              : targetPreset === "wealth-terminal"
+                ? TERMINAL_KEYS.join(", ")
+                : targetPreset === "institutional-matrix"
+                  ? INSTITUTIONAL_KEYS.join(", ")
+                  : TITANIUM_KEYS.join(", ");
       setJsonError(`No recognised fields for this preset. Try: ${hint}`);
       return;
     }
@@ -514,6 +676,16 @@ export function AsBrokersOverlayStudio() {
         ...prev,
         "onyx-typographic": { ...DEFAULTS_ONYX },
       }));
+    } else if (preset === "wealth-terminal") {
+      setCopyByPreset((prev) => ({
+        ...prev,
+        "wealth-terminal": { ...DEFAULTS_TERMINAL },
+      }));
+    } else if (preset === "institutional-matrix") {
+      setCopyByPreset((prev) => ({
+        ...prev,
+        "institutional-matrix": { ...DEFAULTS_INSTITUTIONAL },
+      }));
     } else {
       setCopyByPreset((prev) => ({
         ...prev,
@@ -529,7 +701,11 @@ export function AsBrokersOverlayStudio() {
         ? "executive-ledger"
         : preset === "onyx-typographic"
           ? "onyx-typographic"
-          : "titanium-vault";
+          : preset === "wealth-terminal"
+            ? "wealth-terminal"
+            : preset === "institutional-matrix"
+              ? "institutional-matrix"
+              : "titanium-vault";
 
   const downloadSquare = useCallback(async () => {
     const el = squareRef.current;
@@ -756,6 +932,136 @@ export function AsBrokersOverlayStudio() {
           </div>
         </div>
       </div>
+    ) : preset === "wealth-terminal" ? (
+      <div
+        ref={squareRef}
+        className={`${wealthSquare.root} ${wealthSquare.canvas1080}`}
+        aria-label="AS Brokers Wealth Terminal square 1080 export"
+      >
+        <div className={wealthSquare.adContainer}>
+          {bgSquareDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={wealthSquare.heroBg}
+              src={bgSquareDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={wealthSquare.engineeringGrid} />
+          <div
+            className={`${wealthSquare.ambientOrb} ${wealthSquare.orbRight}`}
+          />
+          <div
+            className={`${wealthSquare.ambientOrb} ${wealthSquare.orbLeft}`}
+          />
+          <div className={wealthSquare.topSection}>
+            <div className={wealthSquare.headerRow}>
+              <div className={wealthSquare.brandLockup}>
+                <span className={wealthSquare.btName}>{wt.brandName}</span>
+                <span className={wealthSquare.btSub}>{wt.brandSub}</span>
+              </div>
+              <div className={wealthSquare.trustHallmark}>
+                <span>{wt.trustLine1}</span>
+                <span>{wt.trustLine2}</span>
+              </div>
+            </div>
+            <h1 className={wealthSquare.heroType}>
+              {wt.squareHeadline1}
+              <br />
+              <span className={wealthSquare.heroGradient}>
+                {wt.squareHeadline2}
+              </span>
+            </h1>
+          </div>
+          <div className={wealthSquare.wealthTerminal}>
+            <div
+              className={`${wealthSquare.bentoCard} ${wealthSquare.yieldCard}`}
+            >
+              <div className={wealthSquare.yieldData}>
+                <span className={wealthSquare.yieldLbl}>{wt.yieldLabel}</span>
+                <span className={wealthSquare.yieldVal}>
+                  {wt.yieldPercent}
+                  <span className={wealthSquare.yieldSuffix}>%</span>
+                </span>
+              </div>
+              <div className={wealthSquare.tagsCol}>
+                <span className={wealthSquare.dataTag}>{wt.tag1}</span>
+                <span className={wealthSquare.dataTag}>{wt.tag2}</span>
+              </div>
+            </div>
+            <div className={wealthSquare.actionRow}>
+              <div className={wealthSquare.contactInfo}>
+                <span className={wealthSquare.contactAgent}>
+                  {wt.contactLabel}
+                </span>
+                <span className={wealthSquare.webLink}>{wt.website}</span>
+              </div>
+              <button type="button" className={wealthSquare.btnPrimary}>
+                <PhoneHandsetIcon width={20} height={20} />
+                {wt.phone}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    ) : preset === "institutional-matrix" ? (
+      <div
+        ref={squareRef}
+        className={`${institutionalSquare.root} ${institutionalSquare.canvas1080}`}
+        aria-label="AS Brokers Institutional Matrix square 1080 export"
+      >
+        <div className={institutionalSquare.adContainer}>
+          {bgSquareDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={institutionalSquare.heroBg}
+              src={bgSquareDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={institutionalSquare.scrimTop} />
+          <div className={institutionalSquare.scrimBottom} />
+          <div className={institutionalSquare.topPerimeter}>
+            <div className={institutionalSquare.brandLockup}>
+              <span className={institutionalSquare.btName}>{im.brandName}</span>
+              <span className={institutionalSquare.btSub}>{im.brandSub}</span>
+            </div>
+            <h1 className={institutionalSquare.heroType}>
+              {im.headlineLine1}
+              <br />
+              <span>{im.headlineLine2}</span>
+            </h1>
+          </div>
+          <div className={institutionalSquare.slimTerminal}>
+            <div className={institutionalSquare.yieldBlock}>
+              <div className={institutionalSquare.yieldVal}>
+                {im.yieldPercent}
+                <span>%</span>
+              </div>
+              <div className={institutionalSquare.yieldText}>
+                <span className={institutionalSquare.ytMain}>{im.yieldLabel}</span>
+                <span className={institutionalSquare.ytSub}>
+                  {im.squareYieldSub}
+                </span>
+              </div>
+            </div>
+            <div className={institutionalSquare.techTags}>
+              <span className={institutionalSquare.specMini}>
+                {im.squareRibbonTag1}
+              </span>
+              <span className={institutionalSquare.specMini}>
+                {im.squareRibbonTag2}
+              </span>
+            </div>
+            <div className={institutionalSquare.actionBlock}>
+              <button type="button" className={institutionalSquare.btnContact}>
+                <PhoneHandsetIcon width={16} height={16} />
+                {im.phone}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     ) : (
       <div
         ref={squareRef}
@@ -976,6 +1282,137 @@ export function AsBrokersOverlayStudio() {
           </div>
         </div>
       </div>
+    ) : preset === "wealth-terminal" ? (
+      <div
+        ref={verticalRef}
+        className={`${wealthVertical.root} ${wealthVertical.canvas1080x1920}`}
+        aria-label="AS Brokers Wealth Terminal vertical 9:16 export"
+      >
+        <div className={wealthVertical.adContainer}>
+          {bgVerticalDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={wealthVertical.heroBg}
+              src={bgVerticalDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={wealthVertical.engineeringGrid} />
+          <div
+            className={`${wealthVertical.ambientOrb} ${wealthVertical.orbTop}`}
+          />
+          <div
+            className={`${wealthVertical.ambientOrb} ${wealthVertical.orbBottom}`}
+          />
+          <div className={wealthVertical.topHud}>
+            <div className={wealthVertical.brandLockup}>
+              <span className={wealthVertical.btName}>{wt.brandName}</span>
+              <span className={wealthVertical.btSub}>{wt.brandSub}</span>
+            </div>
+            <div className={wealthVertical.trustHallmark}>
+              <span>{wt.trustLine1}</span>
+              <span>{wt.trustLine2}</span>
+            </div>
+          </div>
+          <div className={wealthVertical.heroSection}>
+            <h1 className={wealthVertical.heroType}>
+              {wt.verticalHeadline1}
+              <br />
+              <span className={wealthVertical.heroGradient}>
+                {wt.verticalHeadline2}
+              </span>
+            </h1>
+            <p className={wealthVertical.heroSub}>{wt.verticalHeroSub}</p>
+          </div>
+          <div className={wealthVertical.wealthTerminal}>
+            <div
+              className={`${wealthVertical.bentoCard} ${wealthVertical.yieldCard}`}
+            >
+              <div className={wealthVertical.yieldData}>
+                <span className={wealthVertical.yieldLbl}>{wt.yieldLabel}</span>
+                <span className={wealthVertical.yieldVal}>
+                  {wt.yieldPercent}
+                  <span className={wealthVertical.yieldSuffix}>%</span>
+                </span>
+              </div>
+              <div className={wealthVertical.tagsCol}>
+                <span className={wealthVertical.dataTag}>{wt.tag1}</span>
+                <span className={wealthVertical.dataTag}>{wt.tag2}</span>
+              </div>
+            </div>
+            <div className={wealthVertical.actionRow}>
+              <span className={wealthVertical.contactAgent}>{wt.contactLabel}</span>
+              <button type="button" className={wealthVertical.btnPrimary}>
+                <PhoneHandsetIcon width={18} height={18} />
+                {wt.phone}
+              </button>
+              <div className={wealthVertical.webLink}>{wt.website}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ) : preset === "institutional-matrix" ? (
+      <div
+        ref={verticalRef}
+        className={`${institutionalVertical.root} ${institutionalVertical.canvas1080x1920}`}
+        aria-label="AS Brokers Institutional Matrix vertical 9:16 export"
+      >
+        <div className={institutionalVertical.adContainer}>
+          {bgVerticalDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={institutionalVertical.heroBg}
+              src={bgVerticalDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={institutionalVertical.matrixGrid} />
+          <div className={institutionalVertical.scrim} />
+          <div className={institutionalVertical.focusBracket} />
+          <div className={institutionalVertical.topHud}>
+            <div className={institutionalVertical.brandLockup}>
+              <span className={institutionalVertical.btName}>
+                {im.brandName}
+              </span>
+              <span className={institutionalVertical.btSub}>{im.brandSub}</span>
+            </div>
+            <div className={institutionalVertical.fspBadge}>
+              {im.verticalTopBadge}
+            </div>
+          </div>
+          <div className={institutionalVertical.wealthTerminal}>
+            <div className={institutionalVertical.specGrid}>
+              <div className={institutionalVertical.specTag}>
+                {im.verticalTag1}
+              </div>
+              <div className={institutionalVertical.specTag}>
+                {im.verticalTag2}
+              </div>
+            </div>
+            <h1 className={institutionalVertical.headline}>
+              {im.headlineLine1}
+              <br />
+              <span>{im.headlineLine2}</span>
+            </h1>
+            <p className={institutionalVertical.subtext}>{im.verticalSubtext}</p>
+            <div className={institutionalVertical.actionDock}>
+              <div className={institutionalVertical.yieldDisplay}>
+                <span className={institutionalVertical.yieldLbl}>
+                  {im.yieldLabel}
+                </span>
+                <span className={institutionalVertical.yieldVal}>
+                  {im.yieldPercent}
+                  <span>%</span>
+                </span>
+              </div>
+              <button type="button" className={institutionalVertical.btnContact}>
+                <PhoneHandsetIcon width={16} height={16} />
+                {im.phone}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     ) : (
       <div
         ref={verticalRef}
@@ -1041,9 +1478,9 @@ export function AsBrokersOverlayStudio() {
             ))}
           </select>
           <p className="text-xs leading-relaxed text-[#8E8E93]">
-            Glass Vault and Executive Ledger use photo heroes. Onyx Typographic
-            and Titanium Vault are text-only (no uploads). Each preset keeps its
-            own copy in JSON.
+            Glass Vault, Executive Ledger, and Institutional Matrix use photo
+            heroes. Wealth Terminal and Titanium default to built-in art (optional
+            photo for Wealth Terminal). Each preset keeps its own copy in JSON.
           </p>
         </div>
 
@@ -1057,6 +1494,54 @@ export function AsBrokersOverlayStudio() {
                 ? "Not used — blueprint grid and electric glow only."
                 : "Not used — brushed metal grain and typographic layout only."}
             </p>
+          </div>
+        ) : preset === "wealth-terminal" ? (
+          <div className="rounded-md border border-white/10 bg-black/30 p-3">
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Hero images (optional)
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-[#8E8E93]">
+              Teal glass layout works without a photo. Add a hero underneath if
+              you want photography behind the grid and orbs.
+            </p>
+            <div className="mt-3 space-y-2">
+              <label className="text-xs text-[#8E8E93]">Square 1:1</label>
+              <input
+                ref={squareFileRef}
+                type="file"
+                accept="image/*"
+                onChange={onPickSquare}
+                className="block w-full text-sm text-[#8E8E93] file:mr-3 file:rounded-md file:border-0 file:bg-white file:px-3 file:py-2 file:text-sm file:font-medium file:text-black"
+              />
+              {bgSquareDataUrl ? (
+                <button
+                  type="button"
+                  onClick={clearSquare}
+                  className="text-xs text-[#8E8E93] underline hover:text-white"
+                >
+                  Remove square image
+                </button>
+              ) : null}
+            </div>
+            <div className="mt-3 space-y-2 border-t border-white/10 pt-3">
+              <label className="text-xs text-[#8E8E93]">Vertical 9:16</label>
+              <input
+                ref={verticalFileRef}
+                type="file"
+                accept="image/*"
+                onChange={onPickVertical}
+                className="block w-full text-sm text-[#8E8E93] file:mr-3 file:rounded-md file:border-0 file:bg-white file:px-3 file:py-2 file:text-sm file:font-medium file:text-black"
+              />
+              {bgVerticalDataUrl ? (
+                <button
+                  type="button"
+                  onClick={clearVertical}
+                  className="text-xs text-[#8E8E93] underline hover:text-white"
+                >
+                  Remove vertical image
+                </button>
+              ) : null}
+            </div>
           </div>
         ) : (
           <div className="space-y-4 rounded-md border border-white/10 bg-black/30 p-3">
@@ -1113,6 +1598,8 @@ export function AsBrokersOverlayStudio() {
             <code className="text-white/80">glass-vault</code>,{" "}
             <code className="text-white/80">executive-ledger</code>,{" "}
             <code className="text-white/80">onyx-typographic</code>,{" "}
+            <code className="text-white/80">wealth-terminal</code>,{" "}
+            <code className="text-white/80">institutional-matrix</code>,{" "}
             <code className="text-white/80">titanium-vault</code>. Template:{" "}
             <code className="text-white/80">{OVERLAY_JSON_TEMPLATE_ID}</code>.
           </p>
@@ -1137,7 +1624,11 @@ export function AsBrokersOverlayStudio() {
                     ? 20
                     : preset === "onyx-typographic"
                       ? 22
-                      : 18
+                      : preset === "wealth-terminal"
+                        ? 26
+                        : preset === "institutional-matrix"
+                          ? 24
+                          : 18
               }
               className="w-full resize-y rounded-md border border-white/15 bg-black/60 px-2 py-2 font-mono text-[11px] leading-relaxed text-[#D1D1D6] focus:outline-none"
               spellCheck={false}
@@ -1359,6 +1850,164 @@ export function AsBrokersOverlayStudio() {
               label="Button label (e.g. Consult / Secure Consultation)"
               value={o.buttonText}
               onChange={(v) => setOnyx("buttonText", v)}
+            />
+          </>
+        ) : preset === "wealth-terminal" ? (
+          <>
+            <Field
+              label="Brand name (header)"
+              value={wt.brandName}
+              onChange={(v) => setTerminal("brandName", v)}
+            />
+            <Field
+              label="Brand subline (teal mono)"
+              value={wt.brandSub}
+              onChange={(v) => setTerminal("brandSub", v)}
+            />
+            <Field
+              label="Trust hallmark — line 1 (e.g. FSP)"
+              value={wt.trustLine1}
+              onChange={(v) => setTerminal("trustLine1", v)}
+            />
+            <Field
+              label="Trust hallmark — line 2"
+              value={wt.trustLine2}
+              onChange={(v) => setTerminal("trustLine2", v)}
+            />
+            <Field
+              label="Square headline — line 1"
+              value={wt.squareHeadline1}
+              onChange={(v) => setTerminal("squareHeadline1", v)}
+            />
+            <Field
+              label="Square headline — line 2 (gradient)"
+              value={wt.squareHeadline2}
+              onChange={(v) => setTerminal("squareHeadline2", v)}
+            />
+            <Field
+              label="Vertical headline — line 1"
+              value={wt.verticalHeadline1}
+              onChange={(v) => setTerminal("verticalHeadline1", v)}
+            />
+            <Field
+              label="Vertical headline — line 2 (gradient)"
+              value={wt.verticalHeadline2}
+              onChange={(v) => setTerminal("verticalHeadline2", v)}
+            />
+            <Field
+              label="Vertical body copy (under headline)"
+              value={wt.verticalHeroSub}
+              onChange={(v) => setTerminal("verticalHeroSub", v)}
+              rows={4}
+            />
+            <Field
+              label="Yield card — product label"
+              value={wt.yieldLabel}
+              onChange={(v) => setTerminal("yieldLabel", v)}
+            />
+            <Field
+              label="Yield figure (number only, % added in design)"
+              value={wt.yieldPercent}
+              onChange={(v) => setTerminal("yieldPercent", v)}
+            />
+            <Field
+              label="Tag 1"
+              value={wt.tag1}
+              onChange={(v) => setTerminal("tag1", v)}
+            />
+            <Field
+              label="Tag 2"
+              value={wt.tag2}
+              onChange={(v) => setTerminal("tag2", v)}
+            />
+            <Field
+              label="Contact label"
+              value={wt.contactLabel}
+              onChange={(v) => setTerminal("contactLabel", v)}
+            />
+            <Field
+              label="Website"
+              value={wt.website}
+              onChange={(v) => setTerminal("website", v)}
+            />
+            <Field
+              label="Phone (button)"
+              value={wt.phone}
+              onChange={(v) => setTerminal("phone", v)}
+            />
+          </>
+        ) : preset === "institutional-matrix" ? (
+          <>
+            <Field
+              label="Brand name"
+              value={im.brandName}
+              onChange={(v) => setInstitutional("brandName", v)}
+            />
+            <Field
+              label="Brand subline (square: neon · vertical: grey mono)"
+              value={im.brandSub}
+              onChange={(v) => setInstitutional("brandSub", v)}
+            />
+            <Field
+              label="Vertical — top-right badge"
+              value={im.verticalTopBadge}
+              onChange={(v) => setInstitutional("verticalTopBadge", v)}
+            />
+            <Field
+              label="Vertical — spec chip 1"
+              value={im.verticalTag1}
+              onChange={(v) => setInstitutional("verticalTag1", v)}
+            />
+            <Field
+              label="Vertical — spec chip 2"
+              value={im.verticalTag2}
+              onChange={(v) => setInstitutional("verticalTag2", v)}
+            />
+            <Field
+              label="Headline — line 1 (both formats)"
+              value={im.headlineLine1}
+              onChange={(v) => setInstitutional("headlineLine1", v)}
+            />
+            <Field
+              label="Headline — line 2 (teal)"
+              value={im.headlineLine2}
+              onChange={(v) => setInstitutional("headlineLine2", v)}
+            />
+            <Field
+              label="Vertical — body copy (console)"
+              value={im.verticalSubtext}
+              onChange={(v) => setInstitutional("verticalSubtext", v)}
+              rows={4}
+            />
+            <Field
+              label="Yield — label (Targeted Yield)"
+              value={im.yieldLabel}
+              onChange={(v) => setInstitutional("yieldLabel", v)}
+            />
+            <Field
+              label="Square — yield subline (under label, e.g. Everest Wealth)"
+              value={im.squareYieldSub}
+              onChange={(v) => setInstitutional("squareYieldSub", v)}
+            />
+            <Field
+              label="Yield figure (number only)"
+              value={im.yieldPercent}
+              onChange={(v) => setInstitutional("yieldPercent", v)}
+            />
+            <Field
+              label="Square — ribbon tech tag 1"
+              value={im.squareRibbonTag1}
+              onChange={(v) => setInstitutional("squareRibbonTag1", v)}
+            />
+            <Field
+              label="Square — ribbon tech tag 2"
+              value={im.squareRibbonTag2}
+              onChange={(v) => setInstitutional("squareRibbonTag2", v)}
+            />
+            <Field
+              label="Phone (button)"
+              value={im.phone}
+              onChange={(v) => setInstitutional("phone", v)}
             />
           </>
         ) : (

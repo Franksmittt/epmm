@@ -1,0 +1,407 @@
+/* AS Brokers — Wealth Terminal (Actuarial) vertical 9:16. Export 1080×1920. */
+
+.root {
+  --void-black: #0a0a0c;
+  --pure-white: #ffffff;
+  --cinematic-teal: #008080;
+  --text-muted: #9ca3af;
+  --glass-base: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --teal-glow: rgba(0, 128, 128, 0.3);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--void-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 40px 80px rgba(0, 128, 128, 0.15);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.engineeringGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+  z-index: 1;
+}
+
+.ambientOrb {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    var(--teal-glow) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 2;
+}
+
+.orbTop {
+  top: -10%;
+  right: -20%;
+}
+
+.orbBottom {
+  bottom: 10%;
+  left: -20%;
+  opacity: 0.7;
+}
+
+.topHud {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandLockup {
+  display: flex;
+  flex-direction: column;
+}
+
+.btName {
+  color: var(--pure-white);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btSub {
+  color: var(--cinematic-teal);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.trustHallmark {
+  background: var(--glass-base);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.5rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.trustHallmark span:first-child {
+  color: var(--pure-white);
+  font-weight: 800;
+}
+
+.heroSection {
+  position: absolute;
+  top: 22%;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.heroType {
+  color: var(--pure-white);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+}
+
+.heroGradient {
+  background: linear-gradient(90deg, #ffffff, var(--cinematic-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.heroSub {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-top: 15px;
+  max-width: 90%;
+}
+
+.wealthTerminal {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bentoCard {
+  background: var(--glass-base);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.yieldCard {
+  border-top: 2px solid var(--cinematic-teal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yieldData {
+  display: flex;
+  flex-direction: column;
+}
+
+.yieldLbl {
+  color: var(--text-muted);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.yieldVal {
+  color: var(--pure-white);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.yieldSuffix {
+  color: var(--cinematic-teal);
+  font-size: 1.2rem;
+}
+
+.tagsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.dataTag {
+  background: rgba(0, 128, 128, 0.1);
+  border: 1px solid rgba(0, 128, 128, 0.2);
+  color: var(--cinematic-teal);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.5rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.actionRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.contactAgent {
+  color: var(--text-muted);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.btnPrimary {
+  background: var(--pure-white);
+  color: var(--void-black);
+  width: 100%;
+  height: 52px;
+  border-radius: 16px;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: none;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.btnPrimary svg {
+  flex-shrink: 0;
+}
+
+.webLink {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ─── 1080×1920 export ─── */
+
+.root.canvas1080x1920 .adContainer {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+/*
+  For vertical layout, original HTML is ~450×800 “units”.
+  Multiply positions × (1080/450)=2.4, × (1920/800)=2.4 for typography scale.
+*/
+.root.canvas1080x1920 .topHud {
+  top: 60px;
+  left: 48px;
+  right: 48px;
+}
+
+.root.canvas1080x1920 .btName {
+  font-size: 24px;
+}
+
+.root.canvas1080x1920 .btSub {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.root.canvas1080x1920 .trustHallmark {
+  font-size: 12px;
+  padding: 14px 24px;
+  border-radius: 19px;
+}
+
+.root.canvas1080x1920 .heroSection {
+  top: 22%;
+  left: 48px;
+  right: 48px;
+}
+
+.root.canvas1080x1920 .heroType {
+  font-size: 77px;
+  letter-spacing: -4px;
+}
+
+.root.canvas1080x1920 .heroSub {
+  font-size: 20px;
+  margin-top: 36px;
+  max-width: 95%;
+}
+
+.root.canvas1080x1920 .wealthTerminal {
+  bottom: 48px;
+  left: 36px;
+  right: 36px;
+  gap: 29px;
+}
+
+.root.canvas1080x1920 .bentoCard {
+  border-radius: 58px;
+  padding: 48px;
+}
+
+.root.canvas1080x1920 .yieldLbl {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.root.canvas1080x1920 .yieldVal {
+  font-size: 48px;
+}
+
+.root.canvas1080x1920 .yieldSuffix {
+  font-size: 29px;
+}
+
+.root.canvas1080x1920 .dataTag {
+  font-size: 12px;
+  padding: 10px 19px;
+}
+
+.root.canvas1080x1920 .tagsCol {
+  gap: 14px;
+}
+
+.root.canvas1080x1920 .actionRow {
+  gap: 29px;
+}
+
+.root.canvas1080x1920 .contactAgent {
+  font-size: 14px;
+}
+
+.root.canvas1080x1920 .btnPrimary {
+  height: 125px;
+  border-radius: 38px;
+  font-size: 25px;
+  gap: 24px;
+}
+
+.root.canvas1080x1920 .btnPrimary svg {
+  width: 43px;
+  height: 43px;
+}
+
+.root.canvas1080x1920 .webLink {
+  font-size: 16px;
+}
+
+.root.canvas1080x1920 .engineeringGrid {
+  background-size: 58px 58px;
+}
+
+.root.canvas1080x1920 .ambientOrb {
+  width: 600px;
+  height: 600px;
+}

@@ -1,0 +1,309 @@
+/* AS Brokers — Institutional Matrix slim square 1:1. Export 1080×1080. */
+
+.root {
+  --void-black: #0a0a0c;
+  --pure-white: #ffffff;
+  --cinematic-teal: #008080;
+  --neon-teal: #00e6e6;
+  --text-muted: #9ca3af;
+  --glass-base: rgba(10, 10, 12, 0.85);
+  --glass-border: rgba(0, 128, 128, 0.25);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--void-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 40px 80px rgba(0, 128, 128, 0.15);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.scrimTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 12, 0.9) 0%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scrimBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(
+    0deg,
+    rgba(10, 10, 12, 0.95) 0%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.topPerimeter {
+  position: relative;
+  z-index: 10;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.brandLockup {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.btName {
+  color: var(--pure-white);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btSub {
+  color: var(--neon-teal);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.heroType {
+  color: var(--pure-white);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: right;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  min-width: 0;
+}
+
+.heroType span {
+  color: var(--cinematic-teal);
+  display: block;
+}
+
+.slimTerminal {
+  position: relative;
+  z-index: 10;
+  margin: 0 20px 20px 20px;
+  background: var(--glass-base);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--glass-border);
+  border-left: 4px solid var(--cinematic-teal);
+  border-radius: 16px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.yieldBlock {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.yieldVal {
+  color: var(--pure-white);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.yieldVal span {
+  color: var(--neon-teal);
+  font-size: 1.2rem;
+}
+
+.yieldText {
+  display: flex;
+  flex-direction: column;
+}
+
+.ytMain {
+  color: var(--pure-white);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.ytSub {
+  color: var(--text-muted);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.techTags {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specMini {
+  color: var(--neon-teal);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(0, 128, 128, 0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.actionBlock {
+  display: flex;
+  align-items: center;
+}
+
+.btnContact {
+  background: var(--pure-white);
+  color: var(--void-black);
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btnContact svg {
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1080 export ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080 .topPerimeter {
+  padding: 36px 45px;
+}
+
+.root.canvas1080 .btName {
+  font-size: 20px;
+}
+
+.root.canvas1080 .btSub {
+  font-size: 11px;
+}
+
+.root.canvas1080 .heroType {
+  font-size: 40px;
+  letter-spacing: -2px;
+}
+
+.root.canvas1080 .slimTerminal {
+  margin: 0 36px 36px 36px;
+  border-radius: 29px;
+  padding: 27px 36px;
+  border-left-width: 7px;
+  gap: 22px;
+}
+
+.root.canvas1080 .yieldVal {
+  font-size: 40px;
+}
+
+.root.canvas1080 .yieldVal span {
+  font-size: 22px;
+}
+
+.root.canvas1080 .ytMain {
+  font-size: 16px;
+}
+
+.root.canvas1080 .ytSub {
+  font-size: 10px;
+}
+
+.root.canvas1080 .techTags {
+  padding: 0 36px;
+  gap: 11px;
+}
+
+.root.canvas1080 .specMini {
+  font-size: 9px;
+  padding: 5px 14px;
+}
+
+.root.canvas1080 .btnContact {
+  height: 79px;
+  padding: 0 36px;
+  border-radius: 18px;
+  font-size: 16px;
+  gap: 14px;
+}
+
+.root.canvas1080 .btnContact svg {
+  width: 29px;
+  height: 29px;
+}

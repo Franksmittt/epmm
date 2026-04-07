@@ -1,0 +1,384 @@
+/* AS Brokers — Wealth Terminal (Actuarial) square 1:1. Export 1080×1080. */
+
+.root {
+  --void-black: #0a0a0c;
+  --pure-white: #ffffff;
+  --cinematic-teal: #008080;
+  --text-muted: #9ca3af;
+  --glass-base: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --teal-glow: rgba(0, 128, 128, 0.25);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--void-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  box-shadow: 0 40px 80px rgba(0, 128, 128, 0.15);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.engineeringGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 1;
+}
+
+.ambientOrb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    var(--teal-glow) 0%,
+    transparent 60%
+  );
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 2;
+}
+
+.orbRight {
+  top: -20%;
+  right: -20%;
+}
+
+.orbLeft {
+  bottom: -20%;
+  left: -20%;
+  opacity: 0.5;
+}
+
+.topSection {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.brandLockup {
+  display: flex;
+  flex-direction: column;
+}
+
+.btName {
+  color: var(--pure-white);
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btSub {
+  color: var(--cinematic-teal);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.trustHallmark {
+  background: var(--glass-base);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.55rem;
+  padding: 8px 12px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-transform: uppercase;
+}
+
+.trustHallmark span:first-child {
+  color: var(--pure-white);
+  font-weight: 800;
+}
+
+.heroType {
+  color: var(--pure-white);
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.heroGradient {
+  background: linear-gradient(90deg, #ffffff, var(--cinematic-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+}
+
+.wealthTerminal {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bentoCard {
+  background: var(--glass-base);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.yieldCard {
+  border-left: 3px solid var(--cinematic-teal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yieldData {
+  display: flex;
+  flex-direction: column;
+}
+
+.yieldLbl {
+  color: var(--text-muted);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.yieldVal {
+  color: var(--pure-white);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.yieldSuffix {
+  color: var(--cinematic-teal);
+  font-size: 1.4rem;
+}
+
+.tagsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.dataTag {
+  background: rgba(0, 128, 128, 0.1);
+  border: 1px solid rgba(0, 128, 128, 0.2);
+  color: var(--cinematic-teal);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.contactAgent {
+  color: var(--text-muted);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.webLink {
+  color: var(--pure-white);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btnPrimary {
+  background: var(--pure-white);
+  color: var(--void-black);
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 16px;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: none;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.btnPrimary svg {
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1080 export ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+  padding: 54px;
+}
+
+.root.canvas1080 .topSection {
+  gap: 36px;
+}
+
+.root.canvas1080 .btName {
+  font-size: 22px;
+}
+
+.root.canvas1080 .btSub {
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.root.canvas1080 .trustHallmark {
+  font-size: 10px;
+  padding: 14px 22px;
+  border-radius: 18px;
+}
+
+.root.canvas1080 .heroType {
+  font-size: 68px;
+  letter-spacing: -4px;
+}
+
+.root.canvas1080 .heroGradient {
+  margin-top: 0;
+}
+
+.root.canvas1080 .wealthTerminal {
+  gap: 27px;
+}
+
+.root.canvas1080 .bentoCard {
+  border-radius: 43px;
+  padding: 45px;
+}
+
+.root.canvas1080 .yieldLbl {
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.root.canvas1080 .yieldVal {
+  font-size: 45px;
+}
+
+.root.canvas1080 .yieldSuffix {
+  font-size: 25px;
+}
+
+.root.canvas1080 .dataTag {
+  font-size: 10px;
+  padding: 9px 18px;
+}
+
+.root.canvas1080 .tagsCol {
+  gap: 14px;
+}
+
+.root.canvas1080 .contactAgent {
+  font-size: 11px;
+}
+
+.root.canvas1080 .webLink {
+  font-size: 15px;
+}
+
+.root.canvas1080 .btnPrimary {
+  height: 94px;
+  padding: 0 43px;
+  border-radius: 29px;
+  font-size: 20px;
+  gap: 22px;
+}
+
+.root.canvas1080 .btnPrimary svg {
+  width: 36px;
+  height: 36px;
+}
+
+.root.canvas1080 .engineeringGrid {
+  background-size: 54px 54px;
+}
+
+.root.canvas1080 .ambientOrb {
+  width: 720px;
+  height: 720px;
+}
