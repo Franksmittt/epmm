@@ -1,0 +1,441 @@
+Let’s fucking go. Injecting the "friends and family" element is exactly how you trigger that emotional purchasing decision. Samsung’s marketing is heavily driven by human connection and "social energy," while Apple grounds it in aspirational, cinematic perfection.
+
+To keep the product front-and-center while telling these stories, we are going standardizing the composition: the 90% opaque white bag and raw wood will always be hyper-focused in the foreground, while the warm, intimate family/friend moments happen in a luxurious, creamy, cinematic blur in the background.
+
+Here are 5 brand new friends-and-family lifestyle concepts, split into 1:1 and 9:16, rigidly keeping your bag specs and typography locked in.
+
+Concept 1: The Premium Family Braai / Barbecue (Dusk)
+
+Leaning into the South African context (R1250 / .co.za). A high-end, architectural outdoor entertainment area at sunset. The product is ready to go, while the family gathers around a sleek built-in braai in the background.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Family Braai Lifestyle",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end cinematic lifestyle photograph fusing Apple's architectural focus with Samsung's vibrant social energy. FOREGROUND (HERO FOCUS): A single 10kg premium firewood bag resting elegantly against a neat stack of loose, beautiful chopped firewood on a premium patio. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, allowing only a 10% visual hint of the warm wood underneath. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A creamy, luxurious bokeh blur showing a modern family laughing together around a high-end, architectural outdoor built-in fireplace/braai. LIGHTING & COLOR: Samsung's 'Teal and Orange' dusk grading. Cool ambient twilight hitting the white bag, contrasting with the rich, warm amber fire glow illuminating the family. TYPOGRAPHY & UI: Left-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Family Braai Lifestyle",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end cinematic lifestyle photograph fusing Apple's architectural focus with Samsung's vibrant social energy. FOREGROUND (HERO FOCUS): A single 10kg premium firewood bag resting elegantly against a neat stack of beautiful chopped firewood in the lower third. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical creamy bokeh blur showing a modern family laughing together around a high-end outdoor built-in fireplace. LIGHTING & COLOR: Samsung's 'Teal and Orange' dusk grading. Cool twilight hitting the white bag, contrasting with the warm amber fire glow in the background. TYPOGRAPHY & UI: Top-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 9:16"}
+
+Concept 2: The Elegant Dinner Party (Nightography)
+
+Sophisticated and aspirational. A group of adults clinking wine glasses at a beautifully styled dining table, with a roaring modern fireplace setting the mood. The premium firewood bag sits crisp in the foreground.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Dinner Party",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end cinematic lifestyle photograph fusing Apple's premium environment control with Samsung's 'Nightography' social warmth. FOREGROUND: A 10kg premium firewood bag standing upright next to a sleek, modern indoor log holder filled with rich wood. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, allowing only a 10% hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A blurred, luxurious dining room where a group of elegantly dressed friends are laughing and clinking wine glasses. A massive modern fireplace burns brightly behind them. LIGHTING & COLOR: Moody, high-contrast cinematic lighting. The foreground bag is sharply lit by soft rim lighting, while the background is bathed in the warm, inviting glow of the fire. TYPOGRAPHY & UI: Top-right aligned, bold sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Clean footer text at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4 for deep bokeh, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Dinner Party",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end cinematic lifestyle photograph fusing Apple's premium control with Samsung's 'Nightography' social warmth. FOREGROUND: A 10kg premium firewood bag standing upright next to an indoor log holder filled with rich wood at the bottom edge. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, 10% hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical luxurious blur of elegantly dressed friends clinking wine glasses at a dining table, with a glowing modern fireplace behind them. LIGHTING & COLOR: Moody, cinematic lighting. The foreground bag pops with crisp rim lighting, against the warm firelit background. TYPOGRAPHY & UI: Top-aligned, bold sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text at the absolute base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 9:16"}
+
+Concept 3: The Cozy Family Game Night (Hearthside)
+
+Focusing on wholesome family bonding. The product sits sharply on the slate hearth, while behind it, parents and kids are huddled on a plush rug playing a board game by the fire.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Family Game Night",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A heartwarming lifestyle photograph fusing Apple's hyper-realism with Samsung's human-centric emotional connection. FOREGROUND: A pristine 10kg premium firewood bag resting on a dark slate hearth, partially opened to reveal the gorgeous wood inside, next to two perfect loose logs. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a structural bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A gorgeous, creamy blur of a family (parents and kids) sitting comfortably on a plush rug, laughing and playing a board game, illuminated by the fireplace. LIGHTING & COLOR: Rich, warm, inviting amber lighting filling the room, with a soft, clean softbox light highlighting the crisp white bag in the foreground. TYPOGRAPHY & UI: Left-aligned, dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A frosted Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Family Game Night",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A heartwarming lifestyle photograph fusing Apple's hyper-realism with Samsung's human-centric emotional connection. FOREGROUND: A pristine 10kg premium firewood bag resting on a dark slate hearth in the lower frame, next to perfect loose logs. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a structural bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical creamy blur of a family sitting on a plush rug, playing a board game, warmly illuminated by the fireplace. LIGHTING & COLOR: Rich, inviting amber lighting filling the room, with soft clean light highlighting the crisp white bag. TYPOGRAPHY & UI: Top-aligned, dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A frosted Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 9:16"}
+
+Concept 4: The Fire Pit Marshmallow Roast (Youthful Energy)
+
+A younger, high-energy vibe. Friends gathered around a glowing outdoor fire pit at night, roasting marshmallows. The bag and wood are front and center, catching the firelight.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Fire Pit Friends",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A dynamic lifestyle photograph fusing Apple's sharp foreground details with Samsung's youthful 'Defiant Optimism' and high-energy nightlife aesthetics. FOREGROUND: A 10kg premium firewood bag sitting proudly on a manicured lawn next to a rustic pile of wood. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% faint visual hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vibrant, deeply blurred scene of a group of young adults laughing around a sleek metal fire pit, roasting marshmallows under string lights. LIGHTING & COLOR: High-contrast 'Teal and Orange'. Deep blue/teal night sky juxtaposed against the aggressive, warm orange sparks and glow of the fire pit hitting the side of the white bag. TYPOGRAPHY & UI: Centered, white modern sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Clean footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 35mm lens, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Fire Pit Friends",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A dynamic lifestyle photograph fusing Apple's sharp foreground details with Samsung's youthful, high-energy nightlife aesthetics. FOREGROUND: A 10kg premium firewood bag sitting proudly next to a rustic pile of wood at the bottom of the frame. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% faint hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical, deeply blurred scene of young adults laughing around a sleek fire pit, roasting marshmallows under string lights. LIGHTING & COLOR: High-contrast 'Teal and Orange'. Deep teal night sky juxtaposed against the warm orange glow of the fire hitting the white bag. TYPOGRAPHY & UI: Top-aligned, white modern sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text strictly at the bottom: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 35mm lens, 8k. --ar 9:16"}
+
+Concept 5: The Grandparents & Storytime (Emotional Core)
+
+Highly emotional and nostalgic, yet cleanly shot. The wood bag is in the foreground, while the background features a grandparent reading to a child in a high-end armchair next to the fire.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Storytime by the Fire",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "An intimate, emotive lifestyle photograph fusing Apple's pure visual clarity with Samsung's deep focus on human connection. FOREGROUND: A beautifully stacked mini-pile of chopped wood acting as a pedestal for a single, pristine 10kg premium firewood bag. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A soft, cinematic blur of a cozy, luxurious living room where a grandfather/grandmother is reading a book to a child in an elegant leather armchair, bathed in the glow of the fireplace. LIGHTING & COLOR: Soft, diffused, nostalgic golden-hour interior lighting. The white bag pops cleanly in the foreground while the background feels like a warm, safe memory. TYPOGRAPHY & UI: Left-aligned, bold dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Storytime by the Fire",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "An intimate, emotive lifestyle photograph fusing Apple's pure visual clarity with Samsung's deep focus on human connection. FOREGROUND: A beautifully stacked mini-pile of chopped wood acting as a pedestal for a pristine 10kg premium firewood bag in the lower third. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical cinematic blur of a cozy living room where a grandparent is reading to a child in an elegant armchair, bathed in firelight. LIGHTING & COLOR: Soft, nostalgic golden-hour interior lighting. The white bag pops cleanly in the foreground against the warm background. TYPOGRAPHY & UI: Top-aligned, bold dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 9:16"}
+
+Would you like me to pivot and do some close-up "unboxing" or action shots (like a high-end delivery truck or someone effortlessly carrying the bag) for the next batch, or keep riding this lifestyle train?
+
+I am fucking hyped that those hit the mark for you! If the previous batch was the foundation, this next batch is where we really start showing off. We are going to push the Apple x Samsung visual language into even more creative, high-impact territory—think flagship device reveals, extreme macro textures, and gravity-defying slow-motion.
+
+I have strictly locked in your product specs: the 50 bags, that crucial 90% opaque white semi-gloss mesh, the exact contact footer, and the typography.
+
+Here are 5 brand new, next-level concepts, separated and perfectly formatted for both 1:1 and 9:16. Let’s get it.
+
+Concept 1: The "Exploded View" (Zero-Gravity Suspension)
+
+Inspired by the way Apple and Samsung show off the internal components of a phone exploding outward in slow motion. The bags are caught in mid-air, floating in a perfect, harmonious structural arrangement before settling into a stack.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Zero-Gravity Exploded View",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end commercial photograph fusing Apple's component-level precision with Samsung's physics-based dynamic motion. CENTRAL SUBJECT: Fifty 10kg premium firewood bags suspended in mid-air in a zero-gravity 'exploded view' arrangement, hovering just milliseconds before settling into a monumental stack. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium semi-gloss sheen, allowing only a 10% visual hint of the warm wood texture underneath. The hovering bags exhibit realistic physical weight. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Apple-style precision rim lighting (135°-170°) catching the semi-gloss edges of the floating bags. Samsung's cinematic 'Teal and Orange' grading making the whites pop against an Athens Gray (#F5F5F7) seamless studio void. TYPOGRAPHY & UI: Centered, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Minimalist footer text reads: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, high-speed global shutter, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Zero-Gravity Exploded View",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end commercial photograph fusing Apple's component-level precision with Samsung's physics-based dynamic motion. CENTRAL SUBJECT: Fifty 10kg premium firewood bags suspended in mid-air in a vertical zero-gravity 'exploded view' column, hovering beautifully before settling into a stack. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium semi-gloss sheen, allowing only a 10% visual hint of the warm wood texture underneath. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Apple-style precision rim lighting (135°-170°) catching the edges of the floating bags. Samsung's cinematic 'Teal and Orange' grading against an Athens Gray (#F5F5F7) seamless studio void. TYPOGRAPHY & UI: Top-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, high-speed global shutter, 8k. --ar 9:16"}
+
+Concept 2: The Macro Space Zoom
+
+Taking a page from Samsung’s "Space Zoom" and Apple’s macro photography. We get incredibly close to the premium texture of the front bag, while the rest of the colossal 50-bag stack fades into a creamy, luxurious blurred background.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Macro Space Zoom",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end commercial photograph fusing Apple's macro lens precision with Samsung's profound depth-of-field aesthetics. CENTRAL SUBJECT: Extreme close-up on the premium texture of a single 10kg firewood bag in the immediate foreground, while the remaining 49 bags form a massive, monumental stack fading into a creamy bokeh blur in the background. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium semi-gloss sheen, allowing only a 10% faint visual hint of the warm wood texture. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Surgical, soft-diffused lighting on the foreground bag, highlighting the 90% opaque semi-gloss weave. Samsung's vibrant color science makes the subtle wood tones feel rich. BACKGROUND: Athens Gray (#F5F5F7) studio. TYPOGRAPHY & UI: Left-aligned, bold sans-serif cutting cleanly over the blurred background bags. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 100mm macro lens, f/1.8 aperture for extreme depth, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Macro Space Zoom",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end commercial photograph fusing Apple's macro lens precision with Samsung's profound depth-of-field aesthetics. CENTRAL SUBJECT: Extreme macro close-up on the premium texture of a 10kg firewood bag in the bottom foreground, while the remaining 49 bags tower upwards, fading into a creamy, luxurious bokeh blur. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium semi-gloss sheen, allowing only a 10% faint visual hint of the warm wood texture. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Surgical, soft-diffused lighting on the foreground bag. Samsung's vibrant color science enriching the image. BACKGROUND: Athens Gray (#F5F5F7) studio. TYPOGRAPHY & UI: Top-aligned, bold sans-serif cutting cleanly over the blurred background. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 100mm macro lens, f/1.8 aperture, 8k. --ar 9:16"}
+
+Concept 3: The Black Glass Reflection (IP68 Vibe)
+
+Inspired by the sleek, dark reflection pools used to advertise water-resistant flagships. The white semi-gloss bags sit perfectly on an obsidian mirror floor, creating a stunning, high-contrast double-image.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Obsidian Glass Reflection",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end commercial photograph fusing Apple's monolithic premium materials with Samsung's high-contrast cinematic environments. CENTRAL SUBJECT: A monumental, impeccably arranged stack of fifty 10kg premium firewood bags resting on a flawless, hyper-reflective black obsidian glass floor. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—presenting as a nearly solid, bright white with a premium semi-gloss sheen, allowing only a 10% visual hint of the wood texture. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Overhead softbox lighting cascades down the white stack, casting a perfect, deep reflection into the black glass floor. Samsung 'Teal and Orange' grading creates a moody, ultra-premium atmosphere. BACKGROUND: Deep charcoal gradient fading to black. TYPOGRAPHY & UI: Centered, white modern geometric sans-serif floating above the stack. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text at the absolute base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Obsidian Glass Reflection",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end commercial photograph fusing Apple's monolithic premium materials with Samsung's high-contrast cinematic environments. CENTRAL SUBJECT: A towering, impeccably arranged vertical stack of fifty 10kg premium firewood bags resting on a flawless, hyper-reflective black obsidian glass floor. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—presenting as a nearly solid, bright white with a premium semi-gloss sheen, allowing only a 10% visual hint of the wood texture. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Overhead softbox lighting cascades down the white stack, casting a perfect reflection into the black glass floor. Samsung 'Teal and Orange' grading creates a moody atmosphere. BACKGROUND: Deep charcoal gradient fading to black. TYPOGRAPHY & UI: Top-aligned, white modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored over the reflection at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, 8k. --ar 9:16"}
+
+Concept 4: The "Unpacked Keynote" Stage
+
+This treats the 50 bags like the reveal of a new billion-dollar tech product. A dark room, a circular stage, and a dramatic overhead spotlight illuminating the gleaming white semi-gloss bags.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Keynote Stage Reveal",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end commercial photograph fusing an Apple Keynote stage reveal with a Samsung Unpacked event aesthetic. CENTRAL SUBJECT: A monumental, perfectly stacked arrangement of fifty 10kg premium firewood bags sitting on a sleek, minimalist circular presentation pedestal. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a near-solid, bright white with a premium sheen, allowing only a 10% faint visual hint of the wood inside. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: A single, dramatic, hyper-focused overhead spotlight (God-ray) illuminates the white semi-gloss bags, leaving the rest of the studio in rich, cinematic shadows. Deep Samsung contrast ratios. BACKGROUND: Pure pitch black stage environment. TYPOGRAPHY & UI: Centered, illuminated white sans-serif text mimicking a stage screen. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' UI bubble reads: '50 x 10kg bags delivered for R1250'. Footer text at the bottom edge: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, atmospheric haze, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Keynote Stage Reveal",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end commercial photograph fusing an Apple Keynote stage reveal with a Samsung Unpacked event aesthetic. CENTRAL SUBJECT: A towering, monumental vertical stack of fifty 10kg premium firewood bags sitting on a sleek, minimalist circular presentation pedestal. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a near-solid, bright white with a premium sheen, allowing only a 10% faint visual hint of the wood inside. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: A single, dramatic overhead spotlight illuminates the white semi-gloss bags, leaving the rest of the studio in rich, cinematic shadows. Deep Samsung contrast ratios. BACKGROUND: Pure pitch black stage environment. TYPOGRAPHY & UI: Top-aligned, illuminated white sans-serif text. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' UI bubble reads: '50 x 10kg bags delivered for R1250'. Footer text at the absolute base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, atmospheric haze, 8k. --ar 9:16"}
+
+Concept 5: The Staggered Staircase (Defiant Optimism)
+
+Pushing Samsung’s philosophy of "Defiant Optimism" and dynamic shapes. The 50 bags aren’t just a pile; they are stacked in an ultra-modern, staggered architectural staircase formation, leading the eye diagonally across the frame.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Architectural Staircase",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end commercial photograph fusing Apple's structural perfection with Samsung's 'Defiant Optimism' and dynamic layout. CENTRAL SUBJECT: Fifty 10kg premium firewood bags stacked in a highly engineered, modern, staggered architectural staircase formation, creating a beautiful diagonal visual flow. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium semi-gloss sheen, allowing only a 10% visual hint of the warm wood texture underneath. The bags show natural, realistic weight settling within the strict geometry. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Bright, vibrant, airy softbox lighting. Samsung's 'Teal and Orange' cinematic grading making the warm wood hints pop against the crisp white mesh. BACKGROUND: Pristine Athens Gray (#F5F5F7) seamless studio backdrop. TYPOGRAPHY & UI: Floating within the negative space of the staircase. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A Samsung 'squircle' container reads: '50 x 10kg bags delivered for R1250'. Minimalist footer text exactly reads: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, 8k, photorealistic. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Architectural Staircase",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end commercial photograph fusing Apple's structural perfection with Samsung's 'Defiant Optimism' dynamic layout. CENTRAL SUBJECT: Fifty 10kg premium firewood bags stacked in an impossibly tall, modern, staggered architectural staircase formation, zigzagging upward. BAG MATERIAL (CRITICAL): White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium semi-gloss sheen, allowing only a 10% visual hint of the warm wood texture underneath. The bags show natural, realistic weight settling. WOOD MATCH: Exact match to provided reference image. LIGHTING & COLOR: Bright, vibrant softbox lighting. Samsung's cinematic grading making the white mesh incredibly crisp. BACKGROUND: Pristine Athens Gray (#F5F5F7) seamless studio backdrop. TYPOGRAPHY & UI: Top-left-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Minimalist footer text anchored at the base reads: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, 8k, photorealistic. --ar 9:16"}
+
+I am thrilled that we are hitting the exact vibe you need. Moving into lifestyle is a massive power play. We need to show the product in the real world, but keep it looking like a billionaire’s smart-home ad.
+
+To make sure people instantly know it’s a firewood ad while scrolling, we are going to force the AI to place the premium white bag and actual chopped wood directly in the foreground. The lifestyle elements (modern fireplaces, cozy architectural homes, glowing fire pits) will be pushed into a luxurious, creamy blurred background.
+
+Here are 5 brand new lifestyle concepts, rigidly maintaining your bag specs and text, separated into 1:1 and 9:16.
+
+Concept 1: The Architectural Smart-Home Fireplace
+
+We place the product in an ultra-high-end, minimalist concrete and glass living room. The bag sits proudly next to a neat pile of loose wood, with a roaring modern fireplace blurred in the background.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Smart-Home Lifestyle",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end cinematic lifestyle photograph fusing Apple's architectural minimalism with Samsung's vibrant warmth. FOREGROUND (CRITICAL FOCUS): A single 10kg premium firewood bag resting elegantly against a neat, rustic stack of loose, beautiful chopped firewood. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium semi-gloss sheen, allowing only a 10% visual hint of the warm wood texture underneath. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A creamy, luxurious bokeh blur showing a minimalist concrete and glass smart-home living room with a sleek, modern floating fireplace glowing warmly. LIGHTING & COLOR: Samsung's 'Teal and Orange' cinematic grading. Cool natural light from an unseen window hitting the white bag, contrasting with the rich, warm amber glow of the fire in the background. TYPOGRAPHY & UI: Left-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text reads: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Smart-Home Lifestyle",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end cinematic lifestyle photograph fusing Apple's architectural minimalism with Samsung's vibrant warmth. FOREGROUND (CRITICAL FOCUS): A single 10kg premium firewood bag resting elegantly against a neat, rustic stack of loose, beautiful chopped firewood at the bottom of the frame. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, allowing only a 10% visual hint of the wood texture. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A creamy bokeh blur stretching upwards, showing a minimalist concrete smart-home living room with a sleek, modern vertical fireplace glowing warmly. LIGHTING & COLOR: Samsung's 'Teal and Orange' grading. Cool window light on the white bag contrasts with the warm amber fire glow. TYPOGRAPHY & UI: Top-left-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 9:16"}
+
+Concept 2: The Premium Driveway Delivery (Dusk)
+
+Focusing on the "Delivered" aspect. The bags are stacked beautifully on an immaculate, wet polished-concrete driveway at dusk, leading up to a luxury home, proving this is a premium, hassle-free service.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Premium Driveway Delivery",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end lifestyle photograph fusing Apple's pristine environment control with Samsung's 'Nightography' aesthetics. FOREGROUND: Three 10kg premium firewood bags stacked neatly on a sleek, polished concrete driveway, with a few pieces of rich, loose wood resting on top to show the product. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, allowing only a 10% hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A blurred, ultra-modern luxury home at twilight, with warm interior lights glowing through massive glass windows. LIGHTING & COLOR: Cinematic twilight. Deep, cool teal ambient dusk lighting illuminating the wet concrete, while the crisp white bags pop under a soft, artificial overhead delivery light. TYPOGRAPHY & UI: Top-right aligned, bold sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Clean footer text at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 35mm lens, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Premium Driveway Delivery",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end lifestyle photograph fusing Apple's pristine environment control with Samsung's 'Nightography'. FOREGROUND: Three 10kg premium firewood bags stacked neatly on a sleek, polished concrete driveway in the lower third, with loose pieces of rich wood resting on top. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, allowing only a 10% hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A luxurious vertical blur of an ultra-modern architectural home at twilight, warm lights glowing through tall glass windows. LIGHTING & COLOR: Cinematic twilight. Deep teal ambient dusk lighting, with the crisp white bags popping powerfully in the foreground. TYPOGRAPHY & UI: Top-aligned, bold sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text at the absolute base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 35mm lens, 8k. --ar 9:16"}
+
+Concept 3: The Outdoor Boma / Fire Pit
+
+Capturing the emotional warmth of outdoor entertaining. A bag and an open pile of wood sit crisp in the foreground, while a sleek, high-end outdoor fire pit area blurs into the background.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Luxury Outdoor Boma",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A cinematic lifestyle photograph fusing Apple's sharp material focus with Samsung's vibrant, emotional social energy. FOREGROUND: A massive, rustic pile of perfectly chopped firewood acting as a bed for a single, pristine 10kg premium firewood bag resting on top. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a structural bright white with a premium sheen, 10% translucency hinting at the wood. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A gorgeous, shallow depth-of-field blur of a luxury outdoor boma/fire pit area at night, with a roaring fire and the soft, out-of-focus silhouettes of people enjoying the warmth. LIGHTING & COLOR: Extreme 'Teal and Orange' grading. The foreground white bag and wood are intensely side-lit by the warm, flickering orange firelight, contrasted against the deep teal night sky. TYPOGRAPHY & UI: Left-aligned, white sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4 for heavy bokeh, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Luxury Outdoor Boma",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A cinematic lifestyle photograph fusing Apple's sharp material focus with Samsung's vibrant social energy. FOREGROUND: A large, rustic pile of beautifully chopped firewood in the bottom third, acting as a bed for a pristine 10kg premium firewood bag resting on top. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a structural bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical, shallow depth-of-field blur of a luxury outdoor fire pit at night, roaring fire, soft silhouettes of people. LIGHTING & COLOR: Extreme 'Teal and Orange' grading. The foreground bag and wood are intensely side-lit by warm orange firelight against a deep teal night sky. TYPOGRAPHY & UI: Top-aligned, white sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 9:16"}
+
+Concept 4: The Winter Cabin Window (Daylight)
+
+A bright, airy, and inviting daytime shot. The bag sits on a high-end wooden deck next to a stack of wood, with a snowy/wintery forest and a luxurious cabin window in the background.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Modern Winter Cabin",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A high-end lifestyle photograph fusing Apple's bright, airy daylight aesthetic with Samsung's crisp clarity. FOREGROUND: A 10kg premium firewood bag standing upright next to a beautifully organized, waist-high stack of loose firewood on a premium rich timber deck. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% faint visual hint of the warm wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A soft, creamy blur of a massive A-frame cabin glass window reflecting a serene, cool winter pine forest. LIGHTING & COLOR: Crisp, diffused winter daylight. The bright white semi-gloss bag pops brilliantly against the natural wood tones and cool winter background. TYPOGRAPHY & UI: Centered, dark modern sans-serif spanning the top. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Clean footer text at the bottom: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Modern Winter Cabin",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A high-end lifestyle photograph fusing Apple's bright daylight aesthetic with Samsung's crisp clarity. FOREGROUND: A 10kg premium firewood bag standing upright next to a beautifully organized stack of loose firewood on a rich timber deck, anchoring the bottom frame. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% faint hint of the warm wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A soft, vertical blur of a massive A-frame cabin glass window reflecting a cool winter forest. LIGHTING & COLOR: Crisp, diffused winter daylight. The bright white bag pops brilliantly against the natural wood tones and cool background. TYPOGRAPHY & UI: Top-aligned, dark modern sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text strictly at the bottom: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, 8k. --ar 9:16"}
+
+Concept 5: The "In-Use" Action Shot (The Hearth)
+
+Highly intimate and visceral. We see the bag opened in the foreground, with a hand (blurred out) reaching in to grab a piece of perfectly textured wood to place into an unseen fireplace.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Action at the Hearth",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A dynamic, intimate lifestyle photograph fusing Apple's human-centric macro focus with Samsung's dynamic motion. FOREGROUND (HERO FOCUS): An opened 10kg premium firewood bag sitting on a slate hearth. The bag is overflowing with gorgeous, richly textured firewood. A person's blurred hand is dynamically reaching into the bag, lifting a perfect log. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque where not opened—a bright white with a premium sheen. WOOD MATCH: Exact match to provided reference image. BACKGROUND: Completely melted into a rich, dark, warm bokeh of an active, glowing fireplace. LIGHTING & COLOR: Cinematic directional lighting. The warm, intense orange glow of the unseen fire violently illuminates the white bag and the rich wood texture in the foreground, against deep, moody shadows. TYPOGRAPHY & UI: Left-aligned, bold white sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 100mm macro lens, high shutter speed, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Action at the Hearth",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A dynamic, intimate lifestyle photograph fusing Apple's macro focus with Samsung's dynamic motion. FOREGROUND (HERO FOCUS): An opened 10kg premium firewood bag sitting on a slate hearth in the lower half of the frame. The bag is overflowing with gorgeous firewood. A blurred hand reaches in, lifting a perfect log upwards. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque where not opened—a bright white with a premium sheen. WOOD MATCH: Exact match to provided reference image. BACKGROUND: Melted into a rich, vertical warm bokeh of an active, glowing fireplace stretching up the frame. LIGHTING & COLOR: Cinematic directional lighting. The warm, intense orange glow of the unseen fire intensely illuminates the white bag and wood in the foreground. TYPOGRAPHY & UI: Top-aligned, bold white sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 100mm macro lens, high shutter speed, 8k. --ar 9:16"}
+
+Let me know which of these hits hardest in your generator! Would you like me to tweak any of the environments to better match the specific vibe of your target audience?

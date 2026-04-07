@@ -1,0 +1,280 @@
+/* AS Brokers — Titanium Vault vertical 9:16. Export 1080×1920. */
+
+.root {
+  --titanium: #0f0f11;
+  --brushed: #1a1a1e;
+  --crimson: #990000;
+  --silver: #e0e0e0;
+  --slate: #555555;
+  --sapphire: #007aff;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    Inter,
+    -apple-system,
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--titanium);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #222;
+}
+
+.metalGrain {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fiduciaryHeader {
+  position: relative;
+  z-index: 3;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--silver);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.authTag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--slate);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-left: 2px solid var(--crimson);
+  padding-left: 10px;
+}
+
+.monolithCenter {
+  position: relative;
+  z-index: 2;
+  padding: 0 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+.mainHeadline {
+  font-size: 5.2rem;
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -4px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.mainHeadlineLight {
+  color: var(--slate);
+  display: block;
+  font-weight: 300;
+  font-size: 3.8rem;
+  letter-spacing: -2px;
+  margin-top: 5px;
+}
+
+.machinedConsole {
+  position: relative;
+  z-index: 3;
+  background: #080808;
+  border-top: 1px solid #222;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex-shrink: 0;
+}
+
+.sapphireIndicator {
+  position: absolute;
+  top: -1px;
+  left: 30px;
+  width: 40px;
+  height: 2px;
+  background: var(--sapphire);
+  box-shadow: 0 0 12px var(--sapphire);
+  pointer-events: none;
+}
+
+.deckInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceLabel {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 5px;
+}
+
+.serviceTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--silver);
+  margin-bottom: 10px;
+}
+
+.serviceDesc {
+  font-size: 0.95rem;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.ignitionBar {
+  background: var(--crimson);
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+.btnText {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ignitionBar svg {
+  width: 24px;
+  height: 24px;
+  stroke: #ffffff;
+  stroke-width: 2.5px;
+  fill: none;
+  flex-shrink: 0;
+}
+
+.contactFooter {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--slate);
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+/* ─── 1080×1920 (×2.4) ─── */
+
+.root.canvas1080x1920 .adContainer {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080x1920 .fiduciaryHeader {
+  padding: 96px 72px;
+  gap: 19px;
+}
+
+.root.canvas1080x1920 .brandName {
+  font-size: 41px;
+  letter-spacing: 10px;
+}
+
+.root.canvas1080x1920 .authTag {
+  font-size: 25px;
+  padding-left: 24px;
+  border-left-width: 5px;
+}
+
+.root.canvas1080x1920 .monolithCenter {
+  padding: 0 72px;
+}
+
+.root.canvas1080x1920 .mainHeadline {
+  font-size: 211px;
+  letter-spacing: -10px;
+}
+
+.root.canvas1080x1920 .mainHeadlineLight {
+  font-size: 154px;
+  letter-spacing: -5px;
+  margin-top: 12px;
+}
+
+.root.canvas1080x1920 .machinedConsole {
+  padding: 96px 72px;
+  gap: 60px;
+}
+
+.root.canvas1080x1920 .sapphireIndicator {
+  left: 72px;
+  width: 96px;
+  height: 5px;
+}
+
+.root.canvas1080x1920 .serviceLabel {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.root.canvas1080x1920 .serviceTitle {
+  font-size: 58px;
+  margin-bottom: 24px;
+}
+
+.root.canvas1080x1920 .serviceDesc {
+  font-size: 41px;
+  margin-bottom: 24px;
+}
+
+.root.canvas1080x1920 .ignitionBar {
+  height: 154px;
+  padding: 0 60px;
+}
+
+.root.canvas1080x1920 .btnText {
+  font-size: 41px;
+}
+
+.root.canvas1080x1920 .ignitionBar svg {
+  width: 58px;
+  height: 58px;
+}
+
+.root.canvas1080x1920 .contactFooter {
+  font-size: 29px;
+}

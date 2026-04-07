@@ -1,0 +1,305 @@
+/* Maverick — Structural HUD vertical 9:16. Base 450×800 → 1080×1920 (×2.4). No scanner animation (static export). */
+
+.root {
+  --obsidian: #050508;
+  --pure-white: #ffffff;
+  --blueprint-cyan: #00d1ff;
+  --thermal-orange: #ff3b30;
+  --stealth-grey: #8e8e93;
+  --glass-terminal: rgba(15, 15, 20, 0.7);
+  --glass-border: rgba(0, 209, 255, 0.2);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--obsidian);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 0 0 1px #111,
+    0 30px 60px rgba(0, 209, 255, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.blueprintGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 209, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 209, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.topHud {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  padding: 8px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: calc(100% - 40px);
+}
+
+.hudIndicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--thermal-orange);
+  box-shadow: 0 0 8px var(--thermal-orange);
+  flex-shrink: 0;
+}
+
+.hudText {
+  color: var(--pure-white);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.commandTerminal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: var(--glass-terminal);
+  backdrop-filter: blur(35px);
+  -webkit-backdrop-filter: blur(35px);
+  border-top: 1px solid var(--glass-border);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 35px 30px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.systemTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  background: rgba(0, 209, 255, 0.1);
+  border: 1px solid rgba(0, 209, 255, 0.3);
+  color: var(--blueprint-cyan);
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tagAlert {
+  background: rgba(255, 59, 48, 0.1);
+  border-color: rgba(255, 59, 48, 0.3);
+  color: var(--thermal-orange);
+}
+
+.headline {
+  color: var(--pure-white);
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+  margin-bottom: 15px;
+}
+
+.headlineOutline {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--pure-white);
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.telemetryReadout {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.readoutVal {
+  color: var(--pure-white);
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+}
+
+.readoutLbl {
+  color: var(--stealth-grey);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.btnSquircle {
+  background: var(--pure-white);
+  color: var(--obsidian);
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── 1080×1920 (×2.4) ─── */
+
+.root.canvas1080x1920 .adCanvas {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080x1920 .blueprintGrid {
+  background-size: 48px 48px;
+}
+
+.root.canvas1080x1920 .topHud {
+  top: 72px;
+  padding: 19px 48px;
+  border-radius: 72px;
+  gap: 36px;
+  max-width: calc(100% - 96px);
+}
+
+.root.canvas1080x1920 .dot {
+  width: 14px;
+  height: 14px;
+}
+
+.root.canvas1080x1920 .hudText {
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+
+.root.canvas1080x1920 .commandTerminal {
+  border-top-left-radius: 96px;
+  border-top-right-radius: 96px;
+  padding: 84px 72px 96px 72px;
+}
+
+.root.canvas1080x1920 .systemTags {
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.root.canvas1080x1920 .tag {
+  font-size: 22px;
+  padding: 12px 29px;
+  border-radius: 29px;
+}
+
+.root.canvas1080x1920 .headline {
+  font-size: 122px;
+  letter-spacing: -4px;
+  margin-bottom: 36px;
+}
+
+.root.canvas1080x1920 .headlineOutline {
+  -webkit-text-stroke-width: 2px;
+}
+
+.root.canvas1080x1920 .subtext {
+  font-size: 34px;
+  margin-bottom: 60px;
+}
+
+.root.canvas1080x1920 .actionRow {
+  gap: 38px;
+}
+
+.root.canvas1080x1920 .readoutVal {
+  font-size: 38px;
+}
+
+.root.canvas1080x1920 .readoutLbl {
+  font-size: 22px;
+}
+
+.root.canvas1080x1920 .btnSquircle {
+  height: 120px;
+  padding: 0 58px;
+  border-radius: 38px;
+  font-size: 29px;
+}

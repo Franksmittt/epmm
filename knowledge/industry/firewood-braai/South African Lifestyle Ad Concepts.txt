@@ -1,0 +1,149 @@
+Ah, I see exactly where we are going now. You want that authentic South African "naweek kuier" energy—the rugby on the big screen, the potjie bubbling, the braai roaring, and the drinks flowing. But we are still executing it with that billion-dollar Apple/Samsung flagship camera aesthetic.
+
+We will put the premium 90% opaque white bag and crisp wood sharply in the foreground, while the vibrant, emotional, high-energy South African culture happens in a beautiful cinematic blur right behind it.
+
+Here are 5 hyper-targeted South African lifestyle concepts, split into 1:1 and 9:16 formats.
+
+Concept 1: The Big Match Watch Party (Rugby & Braai)
+
+Capturing the tension and excitement of game day. The product is ready by the fire, while in the background, friends in green and gold are cheering at a massive outdoor TV.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Rugby Watch Party",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A cinematic lifestyle photograph fusing Apple's sharp foreground focus with Samsung's high-energy social aesthetics. FOREGROUND (HERO FOCUS): A single 10kg premium firewood bag resting elegantly against a stack of perfectly chopped wood on a premium patio floor. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, allowing only a 10% visual hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A luxurious, creamy bokeh blur of a group of friends wearing subtle green and gold, cheering excitedly with drinks in hand around a glowing outdoor TV screen, with a braai smoking nearby. LIGHTING & COLOR: Samsung's 'Teal and Orange'. The crisp white bag is lit by cool ambient light, contrasting with the warm, dynamic glow of the TV and fire in the background. TYPOGRAPHY & UI: Left-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Rugby Watch Party",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A cinematic lifestyle photograph fusing Apple's sharp foreground focus with Samsung's high-energy social aesthetics. FOREGROUND (HERO FOCUS): A single 10kg premium firewood bag resting elegantly against a stack of chopped wood in the lower third. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical creamy bokeh blur of friends in subtle green and gold, cheering excitedly around a glowing outdoor TV screen, braai fire in the distance. LIGHTING & COLOR: Samsung 'Teal and Orange'. The crisp white bag pops against the warm, dynamic glow of the background. TYPOGRAPHY & UI: Top-aligned, modern geometric sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating frosted-glass Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 9:16"}
+
+Concept 2: The Ultimate Braai Master
+
+Focusing on the food and the coals. The wood bag stands proudly next to the braai tools, while thick cuts of meat sizzle on the grid in the background blur.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Braai Master",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A mouth-watering lifestyle photograph fusing Apple's hyper-realism with Samsung's vibrant color science. FOREGROUND: A 10kg premium firewood bag standing upright next to premium stainless steel braai tongs and a rustic pile of rich wood. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, allowing only a 10% hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A blurred, high-end built-in patio braai. Thick, juicy steaks are sizzling on the grid over glowing red coals, with a man in the background casually tending to the meat with a drink in hand. LIGHTING & COLOR: Rich, warm cinematic lighting. The foreground white bag is sharply lit, while the background is filled with the aggressive, warm orange glow of the braai coals and subtle smoke. TYPOGRAPHY & UI: Top-right aligned, bold sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Clean footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Braai Master",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A mouth-watering lifestyle photograph fusing Apple's hyper-realism with Samsung's vibrant color science. FOREGROUND: A 10kg premium firewood bag standing upright next to premium stainless steel braai tongs and rich wood at the bottom edge. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, 10% hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical luxurious blur of a built-in patio braai. Steaks sizzling over glowing red coals, a man casually tending to the meat. LIGHTING & COLOR: Rich cinematic lighting. The foreground bag pops sharply, while the background is filled with the warm orange glow of coals and subtle smoke. TYPOGRAPHY & UI: Top-aligned, bold sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A floating dark-mode Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text at the absolute base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 9:16"}
+
+Concept 3: The Sunday Potjie
+
+A slower, more traditional vibe, but still ultra-premium. The wood feeds the coals for a classic three-legged cast-iron potjie bubbling away while the family relaxes.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Sunday Potjie",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A nostalgic yet premium lifestyle photograph fusing Apple's crisp material focus with Samsung's emotional human connection. FOREGROUND: A pristine 10kg premium firewood bag resting on manicured green grass, partially opened with beautiful, rich wood spilling out elegantly. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a structural bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A gorgeous, creamy blur of a traditional cast-iron potjie pot sitting over low glowing coals, with family members relaxing in camping chairs in the late afternoon sun, chatting warmly. LIGHTING & COLOR: Golden hour sunlight. Long, beautiful shadows. The bright white bag pops brilliantly against the green grass and warm, sun-drenched background. TYPOGRAPHY & UI: Left-aligned, dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A frosted Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Sunday Potjie",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A nostalgic yet premium lifestyle photograph fusing Apple's crisp material focus with Samsung's emotional human connection. FOREGROUND: A pristine 10kg premium firewood bag resting on green grass in the lower frame, overflowing with rich wood. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a structural bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical creamy blur of a cast-iron potjie pot over glowing coals, family relaxing in camping chairs in the late afternoon sun. LIGHTING & COLOR: Golden hour sunlight. The bright white bag pops brilliantly against the green grass and warm, sun-drenched background. TYPOGRAPHY & UI: Top-aligned, dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A frosted Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 50mm lens, f/1.8, 8k. --ar 9:16"}
+
+Concept 4: The Late Night Boma Kuier
+
+Deep into the night. The braai is done, and everyone is sitting around the fire pit having a "lekker kuier" with drinks and stories.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Late Night Boma Kuier",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "A dynamic lifestyle photograph fusing Apple's sharp nightography details with Samsung's deep, moody social aesthetics. FOREGROUND: A 10kg premium firewood bag sitting next to a massive, rustic pile of wood on a stone boma floor. A person's hand (blurred) is reaching in to grab a piece of wood. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% faint visual hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vibrant, deeply blurred scene of a group of friends sitting in a circle around a roaring luxury stone boma fire pit, laughing deeply with drinks. LIGHTING & COLOR: High-contrast 'Teal and Orange'. Deep blue night sky juxtaposed against the intense, warm orange glow of the boma fire violently illuminating the side of the white bag. TYPOGRAPHY & UI: Centered, white modern sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Clean footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 35mm lens, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Late Night Boma Kuier",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "A dynamic lifestyle photograph fusing Apple's sharp nightography details with Samsung's deep, moody social aesthetics. FOREGROUND: A 10kg premium firewood bag sitting next to a rustic pile of wood on a stone boma floor at the bottom of the frame. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright, structural white with a premium sheen, 10% faint hint of the wood inside. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical, deeply blurred scene of friends sitting in a circle around a roaring boma fire pit, laughing with drinks. LIGHTING & COLOR: High-contrast 'Teal and Orange'. Deep teal night sky juxtaposed against the intense, warm orange glow of the boma fire illuminating the white bag. TYPOGRAPHY & UI: Top-aligned, white modern sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A glowing Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text strictly at the bottom: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 35mm lens, 8k. --ar 9:16"}
+
+Concept 5: The Pre-Game / Warm-Up
+
+The afternoon before the big event starts. The fire is just being lit, someone is tossing a rugby ball, and the cooler box is full. High anticipation energy.
+
+1:1 Square Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Pre-Game Anticipation",  "platform": "Facebook/Instagram Square Ad",  "prompt_square_1_1": "An active lifestyle photograph fusing Apple's pure visual clarity with Samsung's dynamic 'Defiant Optimism' energy. FOREGROUND: A pristine 10kg premium firewood bag sitting proudly on an outdoor entertainment deck, right next to a premium, condensation-covered cooler box and a few perfect logs. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A soft, cinematic blur of two guys casually tossing a rugby ball on a manicured lawn, while someone else is just starting to light the braai fire under a clear blue afternoon sky. LIGHTING & COLOR: Bright, punchy, high-definition daylight. The white bag looks incredibly crisp and structural against the vibrant green lawn and blue sky. TYPOGRAPHY & UI: Left-aligned, bold dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 1:1"}
+
+9:16 Vertical Version:
+
+
+
+JSON
+
+
+
+
+
+{  "product": "50 x 10kg Firewood Bags - Pre-Game Anticipation",  "platform": "Facebook Vertical Ad",  "prompt_vertical_9_16": "An active lifestyle photograph fusing Apple's pure visual clarity with Samsung's dynamic energy. FOREGROUND: A pristine 10kg premium firewood bag sitting proudly in the lower third, next to a premium, condensation-covered cooler box and perfect logs. BAG MATERIAL: White, semi-gloss, thinly woven industrial mesh. Strictly 90% opaque—a bright white with a premium sheen, 10% translucency. WOOD MATCH: Exact match to provided reference image. BACKGROUND: A vertical cinematic blur of guys tossing a rugby ball on the lawn, with a braai fire just starting to smoke under a clear blue sky. LIGHTING & COLOR: Bright, punchy daylight. The white bag looks incredibly crisp against the vibrant green lawn and blue sky. TYPOGRAPHY & UI: Top-aligned, bold dark sans-serif. Headline: 'Miwesu'. Subtext: 'Premium fire wood. Delivered.' A sleek Samsung 'squircle' reads: '50 x 10kg bags delivered for R1250'. Footer text anchored at the base: 'www.miwesufirewood.co.za | 073 030 9679 | 072 717 2572'. CAMERA: Medium format, 85mm lens, f/1.4, 8k. --ar 9:16"}
+
+This captures the absolute essence of a South African weekend but keeps the aesthetic tied to that ultra-premium, flagship-device visual language.
+
+Are we ready to throw these into the generator, or do you want to experiment with different text layouts (like moving the 'Miwesu' logo to the bottom)?

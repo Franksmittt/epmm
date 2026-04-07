@@ -1,0 +1,374 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { AdminMonthCalendar } from "@/components/admin/AdminMonthCalendar";
+import { AdminMonthNav } from "@/components/admin/AdminMonthNav";
+import { deleteClientDayAction } from "@/app/admin/actions";
+import { SaveDayForm } from "@/app/admin/clients/[slug]/SaveDayForm";
+import {
+  getDayPostStatus,
+  missingParts,
+  parseYearMonth,
+  summarizeClientMonth,
+} from "@/lib/admin/schedule-helpers";
+import { getClientBySlug } from "@/lib/clients/registry";
+import { loadAppData } from "@/lib/data/app-data";
+import { EfsAdventureOverlayStudio } from "@/components/admin/absolute-offroad/EfsAdventureOverlayStudio";
+import { AbmMasterBatteryOverlayStudio } from "@/components/admin/alberton-battery-mart/AbmMasterBatteryOverlayStudio";
+import { AlbertonTyreClinicOverlayStudio } from "@/components/admin/alberton-tyre-clinic/AlbertonTyreClinicOverlayStudio";
+import { AsBrokersOverlayStudio } from "@/components/admin/as-brokers/AsBrokersOverlayStudio";
+import { EfsExpeditionHudOverlayStudio } from "@/components/admin/efs-suspension/EfsExpeditionHudOverlayStudio";
+import { MaverickPaintingOverlayStudio } from "@/components/admin/maverick-painting/MaverickPaintingOverlayStudio";
+import { OtmaRelocationRadarOverlayStudio } from "@/components/admin/on-the-move-again/OtmaRelocationRadarOverlayStudio";
+
+export const dynamic = "force-dynamic";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ y?: string; m?: string; date?: string }>;
+};
+
+export default async function AdminClientSchedulePage({
+  params,
+  searchParams,
+}: Props) {
+  const { slug: raw } = await params;
+  const sp = await searchParams;
+  const slug = decodeURIComponent(raw);
+  const client = getClientBySlug(slug);
+  if (!client) {
+    notFound();
+  }
+
+  const { year, month } = parseYearMonth(sp.y, sp.m);
+  const selectedDate =
+    typeof sp.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(sp.date)
+      ? sp.date
+      : undefined;
+
+  const data = await loadAppData();
+  const days = data.schedules[slug] ?? {};
+  const sortedDates = Object.keys(days).sort().reverse();
+  const summary = summarizeClientMonth(slug, year, month, data.schedules);
+
+  const prefillCaption =
+    selectedDate && days[selectedDate]?.caption
+      ? days[selectedDate].caption
+      : "";
+
+  const monthTitle = new Date(year, month - 1, 1).toLocaleString("en-ZA", {
+    month: "long",
+    year: "numeric",
+  });
+
+  return (
+    <div className="space-y-10">
+      <div>
+        <Link
+          href="/admin"
+          className="text-sm text-[#8E8E93] hover:text-white"
+        >
+          ← All clients
+        </Link>
+        <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h1 className="text-2xl font-semibold text-white">
+              {client.name}
+            </h1>
+            <p className="mt-1 text-sm text-[#8E8E93]">
+              Code:{" "}
+              <code className="text-white/90">{client.accessCode}</code> · /{slug}
+            </p>
+          </div>
+          <Link
+            href={`/admin/schedule?y=${year}&m=${month}&client=${encodeURIComponent(slug)}`}
+            className="shrink-0 rounded-md border border-white/15 px-3 py-2 text-sm text-[#8E8E93] hover:border-white/25 hover:text-white"
+          >
+            View on master schedule →
+          </Link>
+        </div>
+      </div>
+
+      {slug === "absolute-offroad" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Four presets: EFS Adventure Pro, Onca Armor, Rock Sliders, and
+              DeGraaf Performance (cyan accent + glow). Separate square/vertical
+              heroes,
+              per-preset copy + JSON (
+              <code className="text-white/80">preset</code> +{" "}
+              <code className="text-white/80">efs-adventure-overlay</code>),
+              export 1080×1080 and 1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Absolute Offroad — overlay studio (1:1 + 9:16)
+            </p>
+            <EfsAdventureOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "alberton-battery-mart" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Four presets: Energy Core, Tactical HUD, Ignition Core (emergency red
+              glass strip + terminal), and Surge Matrix (industrial hash, static
+              surge line, jumper strip / terminal). Separate square/vertical heroes,
+              copy + JSON per preset, export 1080×1080 and 1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Master Battery — overlay presets
+            </p>
+            <AbmMasterBatteryOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "alberton-tyre-clinic" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Presets include Velocity Precision / Fitment Laboratory, Kinetic
+              Grip (dark kinetic HUD), Commercial Transit (light fleet / glass
+              terminal, #FF4500), Kinetic Monolith, Apex Interface, and
+              Calibration Matrix. Per-preset copy +
+              JSON (
+              <code className="text-white/80">preset</code> +{" "}
+              <code className="text-white/80">alberton-tyre-clinic-overlay</code>
+              ), export 1080×1080 and 1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Alberton Tyre Clinic — overlay studio
+            </p>
+            <AlbertonTyreClinicOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "as-brokers" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Presets: Glass Vault, Executive Ledger, Onyx Typographic, Titanium
+              Vault (quiet luxury, no photo). Photo heroes where needed;
+              per-preset copy and JSON (
+              <code className="text-white/80">preset</code>), export 1080×1080 and
+              1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              AS Brokers — Glass Vault (1:1 + 9:16)
+            </p>
+            <AsBrokersOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "efs-suspension" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Four presets: Expedition HUD, X-Ray / Scanner, Impact Stamp /
+              Vertical Spine, Grid-Lock / Longitude. Separate square and vertical
+              heroes, per-preset copy + JSON (
+              <code className="text-white/80">preset</code>), export 1080×1080
+              and 1080×1920 (EFS green / red).
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              EFS — overlay studio (1:1 + 9:16)
+            </p>
+            <EfsExpeditionHudOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "maverick-painting-contractors" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Four presets: Zenith Industrial Monolith, Structural HUD
+              (blueprint), Enterprise Ecosystem (violet + trust blue), and Forensic
+              Matrix (green + amber). Separate square/vertical heroes, per-preset
+              copy + JSON (
+              <code className="text-white/80">preset</code> +{" "}
+              <code className="text-white/80">maverick-painting-overlay</code>),
+              export 1080×1080 and 1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Maverick Painting — Zenith Industrial Monolith
+            </p>
+            <MaverickPaintingOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "on-the-move-again" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Three presets: Relocation Radar, Waypoint compact (route line +
+              dots), and Corporate transit (blueprint grid, B2B badge, left-accent
+              strip on square). Sky blue{" "}
+              <code className="text-white/80">#0284c7</code>. Separate
+              square/vertical heroes, per-preset copy + JSON (
+              <code className="text-white/80">on-the-move-again-overlay</code>),
+              export 1080×1080 and 1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              On The Move Again — Relocation Radar (1:1 + 9:16)
+            </p>
+            <OtmaRelocationRadarOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      <section className="space-y-3 rounded-md border border-white/10 bg-black/20 p-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="text-sm font-medium text-white">
+            {monthTitle} · at a glance
+          </h2>
+          <AdminMonthNav
+            basePath={`/admin/clients/${slug}`}
+            year={year}
+            month={month}
+          />
+        </div>
+        <div className="flex flex-wrap gap-3 text-sm">
+          <span className="rounded-md bg-white/5 px-2 py-1 text-[#8E8E93]">
+            <span className="text-white">{summary.scheduled}</span> days with
+            posts
+          </span>
+          <span className="rounded-md bg-emerald-500/10 px-2 py-1 text-emerald-200">
+            <span className="font-medium">{summary.complete}</span> ready
+          </span>
+          <span className="rounded-md bg-amber-500/10 px-2 py-1 text-amber-200">
+            <span className="font-medium">{summary.incomplete}</span> need work
+          </span>
+        </div>
+        <AdminMonthCalendar
+          slug={slug}
+          year={year}
+          month={month}
+          byDate={days}
+        />
+      </section>
+
+      <SaveDayForm
+        slug={slug}
+        defaultDate={selectedDate}
+        defaultCaption={prefillCaption}
+      />
+
+      {selectedDate && days[selectedDate] ? (
+        <p className="text-xs text-[#8E8E93]">
+          Editing{" "}
+          <span className="text-white/90">{selectedDate}</span>
+          {getDayPostStatus(days[selectedDate]) === "incomplete" ? (
+            <>
+              {" "}
+              — still needed:{" "}
+              {missingParts(days[selectedDate]).join(", ") || "review assets"}
+            </>
+          ) : null}
+        </p>
+      ) : null}
+
+      <section className="space-y-3">
+        <h2 className="text-lg font-medium text-white">All scheduled days</h2>
+        <p className="text-xs text-[#8E8E93]">
+          Newest first. Calendar above is fastest for spotting gaps in a month.
+        </p>
+        {sortedDates.length === 0 ? (
+          <p className="text-sm text-[#8E8E93]">
+            Nothing saved yet. Pick a date on the calendar or use the form.
+          </p>
+        ) : (
+          <ul className="space-y-2">
+            {sortedDates.map((date) => {
+              const row = days[date];
+              const st = getDayPostStatus(row);
+              const miss = missingParts(row);
+              return (
+                <li
+                  key={date}
+                  className="flex flex-col gap-2 rounded-md border border-white/15 bg-[#1D1D1F] px-4 py-3 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <div className="min-w-0 text-sm">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="font-medium text-white">{date}</p>
+                      {st === "complete" ? (
+                        <span className="rounded bg-emerald-500/15 px-2 py-0.5 text-xs text-emerald-200">
+                          Ready
+                        </span>
+                      ) : (
+                        <span className="rounded bg-amber-500/15 px-2 py-0.5 text-xs text-amber-200">
+                          Needs: {miss.join(", ")}
+                        </span>
+                      )}
+                    </div>
+                    <p className="mt-1 line-clamp-2 text-[#8E8E93]">
+                      {row.caption}
+                    </p>
+                  </div>
+                  <div className="flex shrink-0 flex-wrap gap-2">
+                    <Link
+                      href={`/admin/clients/${slug}?y=${year}&m=${month}&date=${date}`}
+                      className="rounded-md border border-white/20 px-3 py-2 text-xs text-white hover:bg-white/5"
+                    >
+                      Open in form
+                    </Link>
+                    <form action={deleteClientDayAction}>
+                      <input type="hidden" name="slug" value={slug} />
+                      <input type="hidden" name="date" value={date} />
+                      <button
+                        type="submit"
+                        className="rounded-md border border-red-500/40 px-3 py-2 text-xs text-red-200 hover:bg-red-500/10"
+                      >
+                        Remove
+                      </button>
+                    </form>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </section>
+    </div>
+  );
+}

@@ -1,0 +1,15 @@
+{
+  "name": "endpoint-media-meta",
+  "private": true,
+  "workspaces": ["portal"],
+  "scripts": {
+    "dev": "npm run dev -w portal",
+    "build": "npm run build -w portal",
+    "start": "npm run start -w portal",
+    "lint": "npm run lint -w portal",
+    "convert-knowledge": "node scripts/convert-knowledge-docx.mjs"
+  },
+  "devDependencies": {
+    "mammoth": "^1.9.1"
+  }
+}

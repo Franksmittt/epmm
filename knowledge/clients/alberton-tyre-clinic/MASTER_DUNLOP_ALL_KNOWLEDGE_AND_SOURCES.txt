@@ -1,0 +1,1039 @@
+================================================================================
+MASTER DUNLOP TYRES — ALL SOURCES & CONSOLIDATED KNOWLEDGE
+================================================================================
+Generated: 2026-04-05 (repository scan)
+Client context: Alberton Tyre Clinic (portal slug: alberton-tyre-clinic); Dunlop as stocked / campaign brand
+
+This file has four parts:
+  (1) Catalogue — every Dunlop-primary path and related knowledge pointers
+  (2) Consolidated text — full contents of dedicated Dunlop *.txt sources
+  (3) Excerpts — Dunlop sections from broader ATC knowledge files
+  (4) Pointers — other .txt files that mention Dunlop briefly (not fully inlined)
+
+================================================================================
+PART 1 — CATALOGUE (paths relative to repo root endpoint_media_meta)
+================================================================================
+
+--- Dedicated Dunlop filenames (full text in Part 2 below) ---
+knowledge/clients/alberton-tyre-clinic/Facebook Captions for Dunlop Tyres.txt
+knowledge/clients/alberton-tyre-clinic/Dunlop Tyres South Africa Social Media Plan.txt
+
+--- Parallel / duplicate export (same strategic doc, alternate formatting — NOT re-printed in Part 2) ---
+knowledge/clients/alberton-tyre-clinic/Dunlop Tyres South Africa Social Media Plan (2).txt
+  → Substantive overlap with "Dunlop Tyres South Africa Social Media Plan.txt"; use the primary file.
+
+--- Alberton Tyre Clinic knowledge: Dunlop excerpts inlined in Part 3 ---
+knowledge/clients/alberton-tyre-clinic/Tire Brand Deep Dive for Social Media.txt  (Dunlop brand section + summary table)
+knowledge/clients/alberton-tyre-clinic/South Africa Tire Store Research.txt     (§2.6 Dunlop network, §4.1 portfolio, §6.1 Container programme)
+
+--- Other ATC *.txt that mention Dunlop (passing references — Part 4) ---
+knowledge/clients/alberton-tyre-clinic/Website Research For Alberton Tyre Clinic.txt
+knowledge/clients/alberton-tyre-clinic/Website Research For Alberton Tyre Clinic (docx).txt
+knowledge/clients/alberton-tyre-clinic/Alberton Tyre Clinic SEO Strategy.txt
+knowledge/clients/alberton-tyre-clinic/Tyre Sorting_ A No-Nonsense Plan.txt
+knowledge/clients/alberton-tyre-clinic/Social Media Plan For Tyre Clinic.txt
+
+--- Repo-wide knowledge (SEO / schema examples citing Dunlop — Part 4) ---
+knowledge/web-development/SEO DEC 2025 PHASE 13 Next.js Entity Stronghold Strategy.txt
+
+--- False positives (legal cases; not tyre brand knowledge) ---
+knowledge/archive/legal-litigation/*.txt  (e.g. "Dunlop" as court case name / party)
+
+================================================================================
+PART 2 — FULL TEXT OF DEDICATED DUNLOP KNOWLEDGE FILES (alphabetical by filename)
+================================================================================
+
+(Files are appended below in this order: Facebook Captions → Dunlop Tyres South Africa Social Media Plan.)
+
+================================================================================
+PART 3 — EXCERPTS FROM BROADER ATC SOURCES (Dunlop-only)
+================================================================================
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+EXCERPT FROM: knowledge/clients/alberton-tyre-clinic/Tire Brand Deep Dive for Social Media.txt
+SECTION: Dunlop (narrative + summary table row)
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Dunlop
+
+With an unbroken global history spanning over 130 years, Dunlop is deeply entrenched in the South African automotive psyche.30 It is exceptionally popular, heavily stocked, and relied upon for a massive range of applications, from daily city commuting to commercial fleet vehicles and rugged off-road adventures.30 Recently, Dunlop announced a sweeping new global brand statement, "Taking You Beyond," which focuses on empowering people to express themselves and act positively without limits, whether in motorsport competition or daily life.31
+
+The visual identity of Dunlop centers on the highly recognizable "Flying D" emblem. Designed as a stylized red arrow pointing right, intersected by a yellow circle containing a black "D", the logo is timeless.32 The brand strictly dictates its color palette: Dunlop Yellow (Hex #FEDE00), Red (Hex #FF0000), Process Black (#000000), and Cool Gray 9 (#808080).33 Brand guidelines mandate that the Preferred Logo must always include the "Flying D" element next to the wordmark. Crucially, if the logo is placed on a colorful or busy photographic background, a yellow rectangle must be utilized behind the logo to ensure absolute visibility.33
+
+In South Africa, Dunlop is deeply integrated into local enterprise development, evidenced by initiatives like their partnership with Isuzu Motors South Africa to bring Dunlop fitment expertise directly onto the OEM production line in Gqeberha.34 A local shop must leverage this localized, grassroots trust. Social media campaigns should feature Dunlop tires fitted to South Africa's most popular vehicles navigating highly recognizable local terrain. Furthermore, local shops can draw inspiration from award-winning international Dunlop campaigns—such as the "El Ared Saboun" (The roads are soapy) campaign—by running hyper-local, weather-triggered social media advertisements that warn drivers to check their Dunlop tires during the first perilous Highveld thunderstorms.35
+
+[Summary table row]
+Dunlop | "Taking You Beyond." | "Flying D", Yellow (#FEDE00) & Red, strict background rules. | Daily commuters, commercial fleets, legacy brand loyalists.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+EXCERPT FROM: knowledge/clients/alberton-tyre-clinic/South Africa Tire Store Research.txt
+SECTIONS: §2.6 The Dunlop Network; §4.1 Dunlop (Sumitomo); §6.1 Dunlop Container Programme
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+2.6 The Dunlop Network (Sumitomo Rubber SA)
+
+Sumitomo Rubber South Africa (SRSA) employs a highly segmented "Red" dealer strategy for the Dunlop brand, recognizing that a singular retail model cannot service South Africa's economic diversity. The network is stratified into four distinct channels:
+
+Dunlop Zone: The flagship urban retailers, independently owned, offering multi-brand tyres and full mechanical services.21
+
+Dunlop Express: Smaller, high-volume outlets servicing secondary towns and specific districts.22
+
+Dunlop Commercial: Specialized dealers focused on fleet, transport, and agricultural needs.22
+
+Dunlop Container: A transformative enterprise development model for the township economy (detailed in Section 6).
+
+This tiered structure allows Dunlop to simultaneously compete for the high-end SUV market in Sandton and the taxi industry in Soweto without diluting brand equity.
+
+[From §4.1 Global Premium Brands]
+Dunlop (Sumitomo): Holds a massive brand equity in South Africa, covering everything from passenger to taxi tyres. Retails through the Dunlop Zone network.
+
+6.1 The Dunlop Container Programme
+
+Sumitomo Rubber SA has pioneered a model to formalize this sector through the Dunlop Container initiative.
+
+The "Business in a Box" Concept: Dunlop converts 12-meter shipping containers into fully functional, branded tyre fitment centres. These units are deployed in townships and rural areas where brick-and-mortar development is difficult or too costly.29
+
+Empowerment and Access: The program empowers local entrepreneurs with training, stock, and equipment. It provides the taxi industry and township residents with access to safe, new tyres and professional fitment within their own communities, combating the dangerous trade in illicit second-hand tyres.30
+
+Scale: With over 80 such outlets, this network allows Dunlop to penetrate the informal market deeper than any competitor.31
+
+================================================================================
+PART 4 — POINTERS (grep hits; open original file for full context)
+================================================================================
+
+• Website Research For Alberton Tyre Clinic (.txt / docx .txt): ATC stocks Dunlop among car tyre brands; brand list mentions.
+• Alberton Tyre Clinic SEO Strategy.txt: brand portfolio bullets include Dunlop.
+• Tyre Sorting_ A No-Nonsense Plan.txt: example brand list includes Dunlop.
+• Social Media Plan For Tyre Clinic.txt: section comparing Pirelli vs Dunlop narrative hooks.
+• SEO DEC 2025 PHASE 13 (web-development): JSON-LD / entity examples use Dunlop as sample brand linked to Alberton Tyre Clinic.
+
+================================================================================
+END OF FRONT MATTER — dedicated Dunlop source files follow verbatim
+================================================================================
+
+================================================================================
+FILE: Facebook Captions for Dunlop Tyres.txt
+================================================================================
+
+Concept 1: The Titanium Void (Dunlop SP Sport Maxx 050+)
+
+Caption:
+
+Pure precision. Infinite control.
+
+The Dunlop SP Sport Maxx 050+ is engineered for the driving purist. Experience flagship performance where every millimeter of rubber is designed for maximum grip, flawless cornering stability, and a whispered ride. Uncompromising design meets elite handling. Upgrade your drive today.
+
+📍 Alberton Tyre Clinic
+
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+
+📞 011 907 8495
+
+🌐 https://www.albertontyreclinic.co.za/
+
+#DunlopTyres #SPSportMaxx #PerformanceTyres #AlbertonTyreClinic #PremiumDriving #Alberton #TyreFitment
+
+Concept 2: The Macro Atmosphere (Dunlop Grandtrek AT5)
+
+Caption:
+
+Unyielding strength, beautifully engineered.
+
+The Dunlop Grandtrek AT5 redefines all-terrain capability. Built with a robust, hyper-detailed architecture to conquer the wild, yet meticulously refined for your daily commute. Experience the perfect balance of rugged endurance and premium comfort. Where will you take it?
+
+📍 Alberton Tyre Clinic
+
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+
+📞 011 907 8495
+
+🌐 https://www.albertontyreclinic.co.za/
+
+#GrandtrekAT5 #DunlopTyres #AllTerrain #OffRoadingSA #AlbertonTyreClinic #4x4SouthAfrica #Alberton
+
+Concept 3: The Kinetic Edge (Dunlop SP Sport FM800)
+
+Caption:
+
+Effortless velocity. Unshakable grip.
+
+The Dunlop SP Sport FM800 delivers a masterclass in dynamic handling and refined comfort. Designed to cut through the noise and grip the road with absolute certainty, even in the wet. Fluid motion, engineered perfectly for the modern passenger vehicle. Move with purpose.
+
+📍 Alberton Tyre Clinic
+
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+
+📞 011 907 8495
+
+🌐 https://www.albertontyreclinic.co.za/
+
+#SPSportFM800 #DunlopTyres #PassengerTyres #SafetyFirst #AlbertonTyreClinic #VehicleMaintenance #Alberton
+
+Concept 4: The Engineered Element (Dunlop Grandtrek MT2)
+
+Caption:
+
+Engineered for the extreme. Commanding the elements.
+
+The Dunlop Grandtrek MT2 is the undisputed heavyweight of mud-terrain architecture. Featuring deep, aggressive lugs designed to conquer dirt, mud, and rock with clinical precision. Raw power meets intelligent engineering for off-road dominance that knows no limits. Equip your 4x4 for the ultimate challenge.
+
+📍 Alberton Tyre Clinic
+
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+
+📞 011 907 8495
+
+🌐 https://www.albertontyreclinic.co.za/
+
+#GrandtrekMT2 #MudTerrain #DunlopTyres #4x4Life #AlbertonTyreClinic #OffRoadTyres #Alberton
+
+Concept 5: The Luminescent Contour (Dunlop Direzza DZ102)
+
+Caption:
+
+The shape of performance.
+
+With its unmistakable, aggressive directional tread, the Dunlop Direzza DZ102 turns raw energy into refined traction. Sleek, highly responsive, and unapologetically bold—this is the ultimate upgrade for sports car enthusiasts who demand sleek aesthetics and superior handling. Redefine your vehicle's stance.
+
+📍 Alberton Tyre Clinic
+
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+
+📞 011 907 8495
+
+🌐 https://www.albertontyreclinic.co.za/
+
+#DirezzaDZ102 #SportsTyres #DunlopTyres #CarEnthusiast #AlbertonTyreClinic #PerformanceUpgrades #Alberton
+
+
+================================================================================
+FILE: Dunlop Tyres South Africa Social Media Plan.txt
+================================================================================
+
+Strategic Product Analysis and Digital Marketing Roadmap: Dunlop Tyres South Africa (February 2026)
+
+1. Executive Strategy and Market Landscape Analysis
+
+1.1 The South African Automotive Aftermarket Ecosystem in 2026
+
+The South African tyre retail sector has evolved into a sophisticated, vertically integrated ecosystem that serves as a critical node in the continent’s automotive supply chain. Valued at approximately USD 1.2 billion in 2024 and projected to expand substantially by 2030, the market is driven by a complex interplay of rising vehicle ownership, deteriorating road infrastructure necessitating frequent replacements, and a shifting consumer preference from pure product purchase to holistic vehicle maintenance.1 Unlike markets characterized by fragmented independent dealerships, South Africa’s landscape is defined by powerful franchise networks aligned with global tyre manufacturers. This structural integration ensures supply chain stability but imposes fierce competitive pressures regarding brand exclusivity and pricing power.1
+
+A defining characteristic of the current market phase, specifically relevant to the February 2026 strategy, is the transition from traditional "tyre shops" to comprehensive "fitment centres." Profit margins on tyre casings have compressed due to the influx of cost-competitive Asian imports and the commoditization of standard passenger tyres. Consequently, major retailers have aggressively diversified into "underbody" services—encompassing shock absorbers, brakes, batteries, and exhaust systems—to increase the average basket size and secure long-term customer retention. The marketing narrative, therefore, must pivot from a commoditized discussion of rubber to a value-added discussion of total vehicle safety and lifestyle enablement.1
+
+The competitive hierarchy is dominated by six major retail networks, each cultivating a distinct market persona which this strategy must navigate. Tiger Wheel & Tyre (TWT) positions itself as the preeminent premium retailer, leveraging its aspirational "showroom" aesthetic and the proprietary Velocity brand to control margins. Supa Quick, conversely, has repositioned as "More Than Tyre Experts," emphasizing holistic maintenance and pioneering mobile fitment vans to address the "time poverty" of the urban workforce. Hi-Q markets heavily on trust and "peace of mind" through its TyreSurance program, while Tyremart leverages its independence and exclusive Davanti import to offer unbiased advice. The strategy for Dunlop, sold primarily through the Dunlop Zone, Dunlop Express, and Dunlop Container networks, must therefore carve out a niche that balances the premium aspiration of TWT with the accessibility of Supa Quick, leveraging its manufacturing heritage and the "Sumitomo" quality stamp.1
+
+Furthermore, the manufacturing landscape plays a pivotal role in product availability and marketing claims. The Dunlop Ladysmith plant, celebrating over 50 years of operation, stands as a cornerstone of local production. Following a massive R1.7 billion investment announced in late 2023, the facility has modernized its mixing and tread lines to produce high-performance passenger and SUV tyres that meet stringent Original Equipment (OE) standards.2 This local manufacturing capability allows Dunlop to tailor products like the SP Touring R1 "L" specifically for South African road conditions, a unique selling proposition that imported brands cannot easily match.4 The "Locally Made for Local Roads" narrative is not merely patriotic; it is a technical assurance of durability against the unique challenges of the South African road network.
+
+1.2 Macroeconomic Context: The February 2026 "Relief" Window
+
+The trajectory of the tyre retail market is heavily influenced by South Africa’s broader economic environment. Infrastructure decay, particularly the prevalence of potholes in provinces like Gauteng, KwaZulu-Natal, and the Eastern Cape, has shortened the replacement cycle for tyres and suspension components, artificially stimulating demand for durable, high-impact products and road hazard guarantees. However, high inflation and interest rates have historically forced a segment of the consumer base down the value chain, driving the growth of private label budget brands.1
+
+Crucially, February 2026 presents a unique and highly specific economic window. Data from the Central Energy Fund (CEF) indicates that South African motorists are anticipating a significant petrol price cut in February 2026, potentially dropping inland petrol prices below R20 per litre for the first time in years. Early indicators point to a massive over-recovery, with petrol potentially dropping by R1.20 to R2.75 per litre and diesel by up to R1.75 per litre, driven by lower global oil prices and a stronger rand.5 This creates a potent psychological "wealth effect" and a tangible increase in disposable income for the average motorist.
+
+This report posits that the marketing strategy for February 2026 must aggressively capitalize on this fuel price reduction. The narrative should frame the savings at the pump as the perfect opportunity to invest in deferred maintenance (tyres, shocks, brakes) that was previously delayed due to financial strain. The tagline "Fill up for less, Fix up for safety" underpins the strategic approach, directly linking the economic relief at the fuel pump to the safety investment at the fitment centre.
+
+1.3 Target Audience Personas and Digital Behavior
+
+To ensure the social media schedule resonates, we must define the target audiences based on 2026 behavioral data. The strategy targets three distinct personas:
+
+Persona A: The Urban Commuter (The "Grudge" Purchaser)
+
+Profile: Gauteng/Cape Town based, drives a hatchback or crossover (VW Polo Vivo, Suzuki Swift, Toyota Starlet). Time-poor, financially squeezed but responsive to value.
+
+Pain Points: Potholes, fuel costs, safety during load-shedding, cost of living.
+
+Digital Behavior: Engages with content mid-week (Wednesday/Thursday) and Sunday evenings. Highly responsive to humour (slang), practical tips, and clear pricing.5
+
+Strategic Hook: Emphasize the "Long Life" benefits of the Dunlop SP Touring R1 L and the fuel economy benefits of new tyres. The 18-month free insurance is a critical closer for this risk-averse group.4
+
+Persona B: The Family Guardian (The Safety Conscious)
+
+Profile: Drives an SUV/MPV (Toyota Fortuner, Kia Sportage, Hyundai Tucson). Risk-averse. Prioritizes family safety over aesthetics. Likely planning school runs and holiday travel.
+
+Pain Points: Wet weather handling (February rains), braking distance, school run reliability, tyre blowouts.
+
+Digital Behavior: Appreciates educational carousels and "myth-busting" content. High engagement on weekends.
+
+Strategic Hook: Leverage the "back to school" narrative and the "Peace of Mind" offered by the FM800's wet weather performance and the Dunlop Sure insurance coverage.6
+
+Persona C: The Enthusiast (The Petrolhead & Overlander)
+
+Profile: Drives a 4x4 or performance vehicle (Ford Ranger, Toyota Hilux, VW Golf GTI). Values brands like BFGoodrich, Michelin, or Continental but respects Dunlop's heritage.
+
+Pain Points: Performance, aesthetics (white lettering), vehicle capability, sidewall durability.
+
+Digital Behavior: Engages with high-quality static imagery of alloy wheels, off-road trails, and classic cars. Interested in events like the George Old Car Show.5
+
+Strategic Hook: Aspirational content featuring premium fitments (Grandtrek AT5, Sport Maxx 060+) and "lifestyle" imagery showing vehicles in their element.9
+
+1.4 The "Static-Only" Constraint as a Strategic Advantage
+
+The requirement for static posts only (no video) is a strategic differentiator in an era of ephemeral TikToks and Reels. While video drives reach, static content drives retention and saves.
+
+Saveability: Educational infographics (e.g., "How to read a tyre sidewall" or "R5 coin tread test") are saved by users for future reference, signaling high value to the algorithm.
+
+Detail: Static carousels allow for the granular comparison of tread patterns or price points which often flashes by too quickly in video.
+
+Aesthetics: 2026 graphic design trends favor "maximalist" layouts, exaggerated typography, and surreal imagery.5 This allows the brand to disrupt the feed without motion, using high-contrast visuals to stop the scroll. The trend towards "sensory design" can be exploited through high-resolution close-ups of tyre textures, conveying "grip" visually.11
+
+2. Comprehensive Dunlop Product Portfolio Analysis (2025/2026 Availability)
+
+To ensure the social media plan promotes only current and readily available stock, this section provides a granular analysis of the Dunlop product lines active in the South African market as of early 2026. This analysis filters out discontinued models to prevent customer friction and focuses on the high-volume movers.
+
+2.1 Passenger Vehicle Segment: The Core Volume Drivers
+
+The passenger vehicle segment remains the highest volume category. Dunlop’s strategy here splits into three distinct value propositions: Safety/Wet Performance, Durability/Economy, and Comfort/Silence.
+
+2.1.1 Dunlop SP Sport FM800 (The "Wet Weather" Expert)
+
+Status: Current flagship mid-range passenger tyre. Readily available.
+
+Market Positioning: This tyre positions itself on safety, specifically wet weather handling. It effectively replaces older lines like the SP Sport 6060 in many sizes, offering a modern tread pattern and compound.
+
+Technical Differentiators:
+
+Enhanced Silica Compound: The tread compound features high silica loading, which increases rubber flexibility on wet surfaces. This improves molecular adhesion for better braking and cornering grip in rainy conditions.7
+
+4-Wide Circumferential Grooves: These deep channels are engineered to evacuate water rapidly from the contact patch, directly combating hydroplaning—a critical selling point for South African summer storms which often persist into February.7
+
+Profile Design: A new profile reduces deformation stress during rotation, lowering energy consumption and improving rolling resistance, which translates to better fuel economy.7
+
+Key Fitments:
+
+VW Polo Vivo: 185/60R15, 195/55R16.
+
+Toyota Corolla Quest: 195/65R15, 205/55R16.
+
+Suzuki Swift Sport: 195/50R16.
+
+Marketing Angle: "The Rain Master." Focus on stopping distance and aquaplaning resistance. The tagline "Grip when you need it most" is appropriate.
+
+2.1.2 Dunlop SP Touring R1 & R1 L (The "Economy" Warriors)
+
+Status: Core entry-level product. The "R1 L" variant was launched specifically for the SA market in late 2024/2025.
+
+Market Positioning: These are the entry-level, high-durability tyres designed for cost-conscious consumers and fleet operators. They directly compete with budget imports but offer the backing of a major manufacturer.
+
+Model Distinction:
+
+SP Touring R1 L: Specifically marketed for South African road conditions. The "L" stands for "Long Life".4 It features a deeper tread depth and wider tread width to maximize mileage, offering up to 6% more mileage than its predecessor.4 It uses a circular profile to distribute tension evenly, preventing irregular wear.14
+
+SP Touring T1: Often found in smaller rim sizes (13-14 inch) for older vehicles. It uses a specialized polymer blend for wear resistance and anti-hydroplaning slots.15
+
+Key Fitments:
+
+Suzuki Swift (GL/GL+): 165/80R14 or 185/65R15.17
+
+Toyota Starlet / VW Polo Vivo (Base): 165/80R14, 185/60R15.19
+
+Datsun Go: 155/70R13.
+
+Marketing Angle: "The Mileage Marathon." Focus on cost-per-kilometer and long life. "Made for SA Roads, Built to Last."
+
+2.1.3 Dunlop SP Sport LM705 (The "Silent" Shinobi)
+
+Status: Current comfort-oriented performance tyre.
+
+Market Positioning: A premium touring tyre using "Shinobi Technology." It targets the driver who values a quiet cabin over aggressive sportiness, ideal for long-distance cruising.
+
+Technical Differentiators:
+
+Shinobi Technology: A redesigned sidewall profile that acts like a suspension cushion, flexing to absorb road shock before it reaches the rim. This is visually represented in marketing materials as a ninja's stealthy movement.20
+
+Asymmetric Pattern: Promotes even wear and reduces pattern noise, making for a quieter cabin environment.20
+
+Key Fitments:
+
+Audi A4 / BMW 3 Series: 225/50R17, 225/45R18.
+
+Mazda CX-3 / CX-5: 215/60R16, 225/65R17.
+
+Marketing Angle: "The Ninja." Focus on silence, comfort, and shock absorption. "Master the road in silence."
+
+2.1.4 Dunlop SP Sport Maxx 060+ (The "Ultra-High Performance" Flagship)
+
+Status: Launched in late 2022/2023, this remains the active flagship UHP tyre, replacing the 050+.
+
+Market Positioning: The premier UHP tyre for high-performance sedans, sports cars, and performance SUVs. It competes with the Michelin Pilot Sport 5 and Continental SportContact 7.
+
+Technical Differentiators:
+
+High-Speed Stability: New sustainable rubber compounds and structural rigidity allow for cornering precision at speed.10
+
+Wide Size Range: Available in 56 sizes ranging from 16 to 21 inches, catering to the growing market of large-rim SUVs and crossovers.10
+
+Key Fitments:
+
+Mercedes-AMG C-Class: 225/40R19 (Front), 255/35R19 (Rear).
+
+Volkswagen Golf GTI / R: 225/40R18, 235/35R19.
+
+Marketing Angle: "The Track Star." Focus on grip, cornering precision, and premium aesthetics.
+
+2.2 SUV & 4x4 Segment: The Growth Engine
+
+South Africa’s obsession with bakkies (pickups) and SUVs makes this the most critical segment for high-margin sales. The "Grandtrek" family is the cornerstone here.
+
+2.2.1 Dunlop Grandtrek AT5 (The "All-Rounder")
+
+Status: The current core All-Terrain product, widely available and actively marketed. It has replaced the standard AT3 and AT25 in many aftermarket applications.
+
+Technical Differentiators:
+
+Long Connected Block Design: A unique tread pattern where blocks are connected to prevent squirming. This increases handling stability on tar and reduces irregular wear, addressing a common complaint with aggressive AT tyres.9
+
+Stone Ejectors: Integrated into the shoulder grooves to prevent stone drilling on gravel roads, a major cause of premature failure in SA.9
+
+Mileage Claim: Explicitly offers a 50% improvement in mileage over the older AT3, a massive selling point.23
+
+Visuals: Available with Outline White Lettering (OWL) in specific sizes (e.g., 265/65R17, 265/60R18), which is a massive aesthetic selling point for bakkie owners wanting a rugged look.24
+
+Key Fitments:
+
+Ford Ranger (Next Gen): 255/70R17 (XLT), 255/65R18 (Sport/Wildtrak).
+
+Toyota Hilux: 265/65R17.
+
+Isuzu D-Max: 265/60R18.
+
+Marketing Angle: "Do More." The tyre that transitions from highway to gravel without compromise.
+
+2.2.2 Dunlop Grandtrek AT3G (The "Rugged" Specialist)
+
+Status: Positioned above the AT5 for serious off-road use. It is not discontinued; it serves a specific heavy-duty niche and is critical for the agri/mining/overlanding sectors.
+
+Technical Differentiators:
+
+3-Ply Sidewall: A reinforced sidewall construction (in specific "LT" sizes) providing superior resistance to punctures and cuts in rocky terrain. This is a key differentiator against 2-ply competitors.25
+
+Tough Tectonic Construction: Designed for high load-carrying capacity and impact resistance, making it heavier and more robust than the AT5.27
+
+Key Fitments:
+
+Toyota Land Cruiser 79 Series: 265/75R16.
+
+Overlanding Rigs: 285/75R16.
+
+Marketing Angle: "The Rock Crawler." Focus on puncture resistance, 3-ply strength, and the "Gatvol" attitude towards tough terrain.
+
+2.2.3 Dunlop Grandtrek AT25 / AT23 / AT20 (The "OEM" Replacements)
+
+Status: These are Original Equipment fitments. While less aggressive than the AT5/AT3G, they are crucial for customers who want to keep their vehicle "stock" or comply with specific lease/warranty requirements.
+
+AT25: Standard on Toyota Hilux (Legend variants) and Fortuner.23
+
+AT23: Standard on Nissan Navara.28
+
+AT20: Standard on Suzuki Jimny and some entry-level Hilux models.28
+
+Marketing Angle: "Factory Approved." Restore your vehicle to its original showroom performance.
+
+2.3 Commercial Segment: The Workhorses
+
+2.3.1 Dunlop Econodrive
+
+Positioning: Light truck and van tyre focusing on lowering the Total Cost of Ownership (TCO).
+
+Tech: Carbon particles in the compound improve stiffness and friction, while reinforced sidewalls protect against kerb damage—vital for taxi and delivery operations.29
+
+Key Fitments: Toyota Quantum (195R15C), Nissan NV350.
+
+2.3.2 Dunlop SP LT37
+
+Positioning: A robust commercial tyre with a focus on comfort and wet grip for taxis and light trucks, offering a slightly more "passenger-like" feel than the Econodrive.31
+
+2.4 Discontinued/Legacy Warnings
+
+Grandtrek AT3: While still visible in some legacy stock lists 38, the AT5 is the active replacement promoted by Dunlop SA. Marketing should focus on the AT5 to avoid selling old DOT-code stock unless running a specific clearance campaign. The AT3G remains active.
+
+SP Sport 6060 / 7000: Largely replaced by the FM800 and 060+. Avoid featuring these as primary lines in new creative.
+
+3. Brand Equity Drivers & Value Propositions
+
+To differentiate Dunlop from competitors like Bridgestone or Continental, the marketing plan must heavily leverage Dunlop’s unique value-adds which go beyond the rubber itself.
+
+3.1 Dunlop Sure: The Ultimate Closer (Updated for 2026)
+
+As of late 2025/early 2026, Dunlop has aggressively enhanced its value proposition with the Dunlop Sure programme.
+
+18-Month Free Tyre Insurance: A promotional extension (up from the standard 12 months) valid until January 31, 2026, likely extended or marketed as a core benefit in Feb 2026. This covers irreparable damage (potholes, cuts).6
+
+First 12 Months: Full replacement (free).6
+
+Months 13-18: Credit based on remaining tread depth.6
+
+Mileage Warranty: Now covers 100,000km for the AT5 and 70,000km for the AT25/23/20.28
+
+Accessibility: Crucially, the mileage warranty now applies to the purchase of just two tyres (previously four), making it accessible to budget buyers who cannot afford a full set at once.28 This is a massive competitive advantage.
+
+3.2 The Dunlop Container Programme ("Business in a Box")
+
+Narrative: "Empowering the Township Economy." Dunlop empowers local entrepreneurs by converting shipping containers into fully equipped fitment centres in townships and rural areas.32
+
+Impact: Over 80 branded container stores employing around 400 people. This is a powerful Corporate Social Responsibility (CSR) story that resonates with socially conscious consumers and aligns with the "Local is Lekker" sentiment.32
+
+3.3 Motorsport Dominance
+
+Narrative: "Win on Sunday, Sell on Monday." Dunlop is the official tyre partner for the National Extreme Festival (including Polo Cup, GTC SupaCup) and the newly branded Dunlop V8 Supercars series as of 2025.34
+
+Validation: The same engineering DNA that survives the punishing Kyalami 9 Hour goes into the passenger tyres. The partnership with the Toyota Gazoo Racing series further cements this performance credibility.35
+
+3.4 Grandtrek Uncharted
+
+Narrative: "Going where Google hasn't." Dunlop's expedition to map uncharted South African roads for Google Street View using their 4x4 tyres serves as incredible "proof of concept" content. It visualizes the rugged capability of the AT3G and AT5 in real South African landscapes.36
+
+4. 30-Day Social Media Plan: "Fill Up For Less, Fix Up For Safety"
+
+Campaign Theme: Capitalizing on the February 2026 fuel price relief to encourage investment in safety (tyres).
+
+Visual Style: Static-only, using "Maximalist" 2026 design trends (bold typography, high contrast, sensory textures) to stop the scroll.
+
+Platforms: Facebook (Community/Sales focus) & Instagram (Aesthetic/Brand focus).
+
+Week 1: The "Januworry" Hangover & The Price Cut Relief
+
+Goal: Capture the relief of payday and the fuel price drop to trigger purchases.
+
+Day
+
+Date
+
+Theme
+
+Product Focus
+
+Creative Concept (Static Visual)
+
+Copywriting Hook
+
+1
+
+Sun, Feb 01
+
+Financial Relief
+
+SP Touring R1 L
+
+Split Screen: Left side shows a dusty empty wallet (Grayscale). Right side shows a bright "FEB 01" calendar & fresh tyre tread with golden light. Text: "WE SURVIVED."
+
+We made it, Mzansi! 🇿🇦 Januworry is officially over. Now that the budget is breathing again, give your car the love you couldn't afford last month. The SP Touring R1 L is built for long life and local roads.
+
+2
+
+Mon, Feb 02
+
+Newsjacking
+
+Brand / Savings
+
+Infographic: A massive neon green arrow pointing DOWN. Text: "PETROL DOWN R2.75/L?*" (Disclaimer: *Estimated).
+
+⛽ GOOD NEWS ALERT! Petrol is dropping! What are you doing with the extra cash? A) Braai meat 🥩 B) Finally fixing those bald tyres 🚗? Invest your savings in safety.
+
+3
+
+Tue, Feb 03
+
+Education
+
+FM800 (Safety)
+
+Macro Photography: A close-up of a R5 coin inserted into a tyre tread. Green zone vs. Red zone lines marked clearly on the coin. Text: "THE R5 TEST."
+
+Don't have a tread gauge? Use a R5 coin! If the tread doesn't touch the wildebeest's tail, you're driving on danger. 🛑 Wet roads are coming. Check your tread today.
+
+4
+
+Wed, Feb 04
+
+World Cancer Day
+
+CSR / Brand
+
+Minimalist Art: A purple ribbon formed by a tyre skid mark on asphalt. Clean, respectful, white space. No hard sell.
+
+Today we pause the car talk. We stand with the fighters, the survivors, and those we've lost. The toughest journeys aren't always on the road. 💜
+
+5
+
+Thu, Feb 05
+
+Heritage / TBT
+
+Grandtrek AT5
+
+Then vs Now: Left: An old Land Cruiser on legacy Grandtreks (Sepia). Right: New Hilux on AT5s (Vibrant). Text: "EVOLUTION OF GRIP."
+
+From farm roads in 1980 to highways in 2026. We've been gripping SA soil for decades. The Grandtrek AT5 is the result of 50 years of learning. 🚜➡️🛻
+
+6
+
+Fri, Feb 06
+
+Humor / Slang
+
+Rim Repairs
+
+Meme Style: A photo of a massive pothole with a "WARNING: EISH" sign superimposed in neon. Text: "THE NATIONAL FLOWER OF SA."
+
+Potholes are blooming early this year! 🌸🤕 If the road bit your rim, we can fix it. Don't drive on a bent wheel—it destroys your bearings. DM us for a quote!
+
+7
+
+Sat, Feb 07
+
+Adventure
+
+Grandtrek AT5 (OWL)
+
+Lifestyle Shot: A Ford Ranger parked on a cliff edge at sunset (Golden Hour). The white lettering (OWL) on the AT5s is glowing. Text: "WEEKEND MODE."
+
+The pavement ends where the fun begins. The Grandtrek AT5 with White Lettering isn't just tough; it looks the part. Where are you heading this weekend? 🌄
+
+Week 2: Love & The "Perfect Pair" (Valentine's Lead-up)
+
+Goal: Use Valentine's Day to push the "Safety is Love" narrative and the "Two Tyre" warranty benefit.
+
+Day
+
+Date
+
+Theme
+
+Product Focus
+
+Creative Concept (Static Visual)
+
+Copywriting Hook
+
+8
+
+Sun, Feb 08
+
+Maintenance
+
+Alignment
+
+Graphic Illustration: A car driving crookedly with a "crabbing" effect lines. Text: "DRIVING STRAIGHT? OR SIDEWAYS?"
+
+Does your steering wheel look straight but your car goes left? ⬅️ Don't fight the wheel. Potholes knock your alignment out, chewing your tyres. Book an alignment check for Monday!
+
+9
+
+Mon, Feb 09
+
+Pizza Day
+
+Brand Fun
+
+Visual Pun: A pizza sliced into wheel shapes with tyres as pepperoni. Text: "WE PREFER DONUTS."
+
+Happy #NationalPizzaDay! 🍕 We love a slice, but we prefer our circles made of rubber. (Donuts on the track only! 😉) What's your favourite topping?
+
+10
+
+Tue, Feb 10
+
+Tech Tuesday
+
+LM705 (Shinobi)
+
+X-Ray Style: A tyre sidewall flexing like a ninja absorbing a blow. Neon blue internal structure lines. Text: "SILENCE IS GOLDEN."
+
+Meet the tyre that moves like a Ninja. 🥷 Shinobi Technology absorbs shocks so your coffee doesn't spill. ☕ The SP Sport LM705: Designed for silence.
+
+11
+
+Wed, Feb 11
+
+Slang
+
+Grandtrek AT3G
+
+Dictionary Definition: Background: Chalkboard. Word: "GATVOL." Definition: "When you get another puncture on a gravel road." Solution: "Dunlop AT3G 3-Ply."
+
+Gatvol of punctures? 😤 Upgrade to the 3-Ply Grandtrek AT3G. It's tough as nails and eats gravel for breakfast. No more roadside tyre changes.
+
+12
+
+Thu, Feb 12
+
+Events
+
+George Car Show
+
+Vintage Photo: A classic 1930s Benz (celebrating Pioneers of Motoring) next to a modern AMG on Dunlops. Text: "PIONEERS OF MOTORING."
+
+Heading to the George Old Car Show this weekend? 🏎️ We are celebrating the legends of the road. Look out for the Dunlop stand and travel safe!
+
+13
+
+Fri, Feb 13
+
+Galentine's
+
+Safety
+
+Flat Lay: Car keys, lipstick, a tyre pressure gauge, and a Dunlop valve cap. Text: "INDEPENDENT WOMAN STARTER PACK."
+
+Ladies, don't wait for a man to check your pressure. 💅 Know your numbers and drive with confidence! Safe tyres mean you rely on no one.
+
+14
+
+Sat, Feb 14
+
+Valentine's
+
+Dunlop Sure
+
+Romantic: Two tyres leaning on each other making a subtle heart shape in the negative space. Text: "THE PERFECT PAIR."
+
+True love is... ensuring they get home safe. ❤️ Give the gift of grip this Valentine's. Plus, buy 2 tyres and get our Mileage Warranty FREE!
+
+Week 3: The "School Run" & Technical Authority
+
+Goal: Target family safety and highlight technical superiority.
+
+Day
+
+Date
+
+Theme
+
+Product Focus
+
+Creative Concept (Static Visual)
+
+Copywriting Hook
+
+15
+
+Sun, Feb 15
+
+Tech
+
+Nitrogen
+
+Comparison: Blue Balloon (Nitrogen) staying full vs. Red Balloon (Air) deflating. Text: "STOP LOSING PRESSURE."
+
+Why Nitro? Nitrogen molecules are bigger than Oxygen, so they leak slower. 🎈 Stable pressure = Better fuel economy. ⛽ Keep your tyres fuller for longer.
+
+16
+
+Mon, Feb 16
+
+Family Safety
+
+SP Touring R1
+
+POV Shot: View from the driver's seat looking at kids in the rear view mirror. Text: "PRECIOUS CARGO."
+
+The most important thing in your car isn't the engine. It's the people in the back. 👶 Are your tyres safe enough for the school run? The SP Touring R1 offers premium safety at an affordable price.
+
+17
+
+Tue, Feb 17
+
+Product Spotlight
+
+Grandtrek AT25
+
+Vehicle Match: A Toyota Fortuner and Hilux nose-to-nose. Text: "FACTORY APPROVED."
+
+Drivers of Fortuners and Hiluxes! 📢 Stick with what your bakkie was born with. The Grandtrek AT25 is Original Equipment for a reason. Keep it genuine.
+
+18
+
+Wed, Feb 18
+
+Wine Day
+
+Responsible Driving
+
+Graphic: A wine glass next to car keys with a red "NO" sign over them. Text: "THE ONLY MIX WE DON'T LIKE."
+
+#NationalDrinkWineDay 🍷 Enjoy the Pinotage, but leave the keys. Alcohol and asphalt don't mix. Arrive Alive.
+
+19
+
+Thu, Feb 19
+
+Finance
+
+PayFlex/Credit
+
+Typography: Bold text "DRIVE NOW. PAY LATER." with logos of PayFlex/Mobicred/Float.
+
+Tight month? 💸 You don't have to risk driving on bald tyres. Split your payment into 4 interest-free instalments! Safety shouldn't depend on payday.
+
+20
+
+Fri, Feb 20
+
+Love Your Pet
+
+Community
+
+UGC Call: A dog sitting inside a large tractor tyre or looking out a car window. Text: "PAWS & PETROL."
+
+Happy #LoveYourPetDay! 🐶 Show us your co-pilot! Post a pic of your pet in your car below! Best pic wins a Dunlop cap! 👇
+
+21
+
+Sat, Feb 21
+
+Adventure
+
+AT3G White Lettering
+
+Close Up: Mud splattered across the white "DUNLOP" lettering on a rugged sidewall. Text: "WEAR IT LIKE A BADGE."
+
+White Lettering isn't just for show. It's a warning to the rocks that you mean business. 🏔️ The AT3G is built for the path less travelled.
+
+Week 4: Month-End Push & Heritage
+
+Goal: Drive sales before the next payday/month end and celebrate SA culture.
+
+Day
+
+Date
+
+Theme
+
+Product Focus
+
+Creative Concept (Static Visual)
+
+Copywriting Hook
+
+22
+
+Sun, Feb 22
+
+Tech
+
+Balancing
+
+Visual Effect: A steering wheel with "motion blur" lines indicating shaking. Text: "GOOD VIBRATIONS? NO THANKS."
+
+Shaky steering wheel at 100km/h? 🫨 You need wheel balancing, not a gym membership. Smooth out your ride tomorrow at your nearest Dunlop Zone.
+
+23
+
+Mon, Feb 23
+
+Load Shedding
+
+Resilience
+
+Dark Mode: A tyre glowing in the dark/spotlight against a black background. Text: "WE STAY ON WHEN THE LIGHTS GO OFF."
+
+Stage 6? 🔦 No stress. Our generators are running. We are open for fitment regardless of Eskom's schedule. Don't let load shedding stop your safety check.
+
+24
+
+Tue, Feb 24
+
+Add-on Sales
+
+Wiper Blades
+
+Split View: Windshield half blurry, half crystal clear. Text: "HD VISION FOR R250."
+
+Can you see clearly now? 🌧️ Don't let old wipers ruin your view. Add a set of Bosch wipers to your tyre purchase! It's the cheapest safety upgrade you can make.
+
+25
+
+Wed, Feb 25
+
+Insurance
+
+Dunlop Sure
+
+Calculator: "18 MONTHS > 12 MONTHS." Text: "THE MATHS IS MATHING."
+
+We upgraded our Free Tyre Insurance to 18 Months! 🛡️ Why settle for less? Get full replacement cover for the first year. Exclusive to Dunlop.
+
+26
+
+Thu, Feb 26
+
+Payday
+
+Sales Push
+
+Checklist: [ ] Groceries [ ] Rent [X] SAFE TYRES. Text: "ADULTING 101."
+
+Payday is here! 💰 Before you blow it on entertainment, secure your safety for the year. Check our month-end specials on the FM800 and AT5.
+
+27
+
+Fri, Feb 27
+
+Milk Tart Day
+
+Heritage
+
+Collage: A Milk Tart with a tyre tread pattern dusted in cinnamon on top. Text: "SWEET RIDES. SWEET TREATS."
+
+It's #NationalMilkTartDay! 🥧🇿🇦 We love local heritage almost as much as we love local roads. Pop in for a free safety check (sorry, we ate the tart).
+
+28
+
+Sat, Feb 28
+
+Performance
+
+Sport Maxx 060+
+
+Action Shot: A blurry background of Kyalami track, sharp focus on the tyre. Text: "GRIP MATTERS."
+
+Unleash your car's potential. 🏁 The SP Sport Maxx 060+ is built for the track, legal for the street. Feel the difference in every corner.
+
+29
+
+Sun, Mar 01
+
+New Goals
+
+General
+
+Calendar Flip: "MARCH INTO SAFETY."
+
+New Month. New Grip. Let's make March smooth sailing. 🗓️ Don't let your tread depth be an April Fool's joke.
+
+30
+
+Mon, Mar 02
+
+News Desk
+
+Fuel Price
+
+Infographic: Confirming the new fuel price. "OFFICIAL: PRICE DROP LIVE."
+
+⛽ It's official! Enjoy the savings at the pump! Use that extra cash to invest in a set of long-lasting Dunlop tyres.
+
+5. Strategic Implementation Guidelines
+
+5.1 Design & Aesthetic Protocols (2026 Trends)
+
+Maximalist Typography: Use large, bold, sans-serif fonts that take up 40-50% of the image space. This stops the scroll on small mobile screens.
+
+High Contrast: Use the Dunlop Yellow/Black corporate colours but accent them with a "Digital Neon" (e.g., Electric Blue or Lime Green) to signify the "clean tech" evolution of the brand.
+
+Sensory Texture: Close-up macro shots of the tyre rubber, mud, or water droplets. The viewer should "feel" the grip through the screen. This aligns with the "Sensory Design" trend for 2026.11
+
+Authenticity: Avoid generic stock photos of smiling models. Use "UGC-style" (User Generated Content) shots—a hand checking tread depth, a real workshop floor, a dusty bakkie. This builds trust.37
+
+5.2 Community Management "Slang" Protocol
+
+To resonate with the South African audience, the community manager should adopt a "Local Expert" persona.
+
+Key Phrases to Use:
+
+"Eish" (empathy for potholes/cost).
+
+"Now Now" (speed of service).
+
+"Gatvol" (frustration with roads) – Use carefully, only in humorous context.
+
+"Lekker" (general positive affirmation).
+
+5.3 Measurement & KPIs
+
+Since video views are not applicable, success will be measured by:
+
+Saves: High save rates on educational posts (e.g., Day 3, Day 11) indicate the content provided real utility.
+
+Shares: High shares on humorous/relatable posts (e.g., Day 6, Day 9) indicate brand resonance.
+
+Direct Messages (DMs): Sales posts must drive DMs ("DM us for a quote"), as this signals high intent to purchase.
+
+6. Conclusion
+
+This comprehensive roadmap leverages the specific opportunities of February 2026—the fuel price cut, the "Januworry" recovery, and the unique South African automotive culture—to position Dunlop not just as a tyre brand, but as a partner in mobility. By focusing on readily available, high-performance products like the Grandtrek AT5 and SP Sport FM800, and backing them with the powerful 18-month Dunlop Sure insurance, the brand can dominate the digital share of voice. The 30-day "static-only" content plan turns a constraint into an aesthetic advantage, using bold design to capture attention and deep technical education to secure the sale. This is a strategy built on local relevance, product excellence, and consumer empathy.
+
+Works cited
+
+South Africa Tire Store Research
+
+Dunlop proceeds with R1.7bn investment in Ladysmith tyre factory - Engineering News, accessed January 20, 2026, https://www.engineeringnews.co.za/article/dunlop-proceeds-with-r17bn-investment-in-ladysmith-tyre-factory-2023-10-03
+
+Sumitomo Rubber SA pledges investments ahead of Dunlop Ladysmith plant's 50th anniversary - Bizcommunity, accessed January 20, 2026, https://www.bizcommunity.com/Article/196/485/237014.html
+
+Dunlop unveils the SP Touring R1 L - Bizcommunity, accessed January 20, 2026, https://www.bizcommunity.com/article/dunlop-unveils-the-sp-touring-r1-l-929914a
+
+Social Media Plan for Tire Store
+
+Dunlop extends tyre insurance - ALL THINGS MOTORING, accessed January 20, 2026, https://www.allthingsmotoringinternational.com/articles/dunlop-extends-tyre-insurance
+
+SP SPORT FM800 | Dunlop Tyres SA, accessed January 20, 2026, https://www.dunloptyres.co.za/Tyre-Range/Passenger/%2520SP%2520SPORT%2520FM800
+
+accessed January 20, 2026, https://www.scocc.co.za/scocc-2026-george-old-car-show/
+
+Dunlop Grandtrek AT5 Spec Sheet, accessed January 20, 2026, https://quicktyreprod.z1.web.core.windows.net/content/documents/Dunlop%20Grandtrek%20AT5%20Spec%20Sheet.pdf
+
+New Dunlop performance tyre, SP SPORT MAXX 060+ - AUTOFORUM, accessed January 20, 2026, https://www.autoforum.co.za/View-News-Article.aspx?News=new-dunlop-performance-tyre-22-11-15
+
+Design trends for 2026 - Adobe, accessed January 20, 2026, https://www.adobe.com/express/learn/blog/design-trends-2026
+
+225/65R17 Dunlop SP FM800 Tyre | TYREMART, accessed January 20, 2026, https://www.tyremart.co.za/product/dunlop-sp-fm800-22565r17-load-102-speed-v/
+
+DUNLOP SP SPORT FM800A - Errol's Tyres, accessed January 20, 2026, https://www.errolstyres.co.za/tyre/dunlop/sp-sport-fm800a/11632
+
+Go the extra mile with Dunlop!, accessed January 20, 2026, https://www.dunloptyres.co.za/go-the-extra-mile-with-dunlop
+
+Dunlop SP TOURING T1 - Advantage Tyres, accessed January 20, 2026, https://advantagetyres.co.nz/shop/dunlop/sp-touring-t1/
+
+155/70R13 Dunlop SP Touring T1 Tyre | TYREMART, accessed January 20, 2026, https://www.tyremart.co.za/product/dunlop-sp-touring-t1-15570r13-load-75-speed-t/
+
+Features & Specs | Swift - Suzuki Auto, accessed January 20, 2026, https://www.suzukiauto.co.za/features-specs/swift
+
+SW Specs - Suzuki Nelspruit, accessed January 20, 2026, https://suzukinelspruit.co.za/sw-specs/
+
+2025 Volkswagen Polo Vivo - Wheel & Tire Sizes, PCD, Offset and Rims specs, accessed January 20, 2026, https://www.wheel-size.com/size/volkswagen/polo-vivo/2025/
+
+Dunlop SP SPORT LM705, accessed January 20, 2026, https://www.blackcircles.com.eg/en/tire/dunlop/sp-sport-lm705
+
+the new grandtrek at5 fits most suv and 4x4 vehicles - Dunlop Tyres, accessed January 20, 2026, https://www.dunloptyres.co.za/take-it-on/
+
+265/65R17 Dunlop Grandtrek AT5 Tyre | TYREMART, accessed January 20, 2026, https://www.tyremart.co.za/product/dunlop-grandtrek-at5-26565r17-load-112-speed-s/
+
+Game changer - New Grandtrek AT5 tyre from Dunlop - RoadTrip Magazine, accessed January 20, 2026, https://roadtripmag.co.za/game-changer-new-grandtrek-at5-tyre-from-dunlop/
+
+SUV 4x4 | Dunlop Tyres SA, accessed January 20, 2026, https://www.dunloptyres.co.za/Tyre-Range/SUV4x4
+
+dunlop 285/70r17 121s grandtrek at3gm - Tonnesen Motors, accessed January 20, 2026, https://www.tonnesen.co.za/product/dunlop-grandtrek-at3gm-28570r17-121s3-ply
+
+GRANDTREK AT3G, accessed January 20, 2026, https://quicktyreprod.z1.web.core.windows.net/content/documents/Dunlop%20Grandtrek%20AT3G%20Spec%20Sheet.pdf
+
+Dunlop Grandtrek AT3G - Advantage Tyres, accessed January 20, 2026, https://advantagetyres.co.nz/shop/dunlop/grandtrek-at3g/
+
+Dunlop Tyres enhances Mileage Warranty with extra coverage for drivers - Bizcommunity, accessed January 20, 2026, https://www.bizcommunity.com/article/dunlop-tyres-enhances-mileage-warranty-with-extra-coverage-for-drivers-952054a
+
+DUNLOP 215/70R15C 109/107S ECONODRIVE - Sharwoods Tyres, accessed January 20, 2026, https://www.sharwoodstyres.co.za/commercial/9855-dunlop-215-70r15c-109-107s-econodrive.html
+
+Dunlop ECONODRIVE - Advantage Tyres, accessed January 20, 2026, https://advantagetyres.co.nz/shop/dunlop/econodrive/
+
+Dunlop SP LT37 - Adelaide Tyrepower, accessed January 20, 2026, https://adelaidetyrepower.com/tyres/dunlop/sp-lt37
+
+About Business In a Box - Dunlop Tyres, accessed January 20, 2026, https://www.dunloptyres.co.za/business-in-a-box
+
+Over 100 youth to benefit from Dunlop's Business in a Box - AUTOFORUM, accessed January 20, 2026, https://www.autoforum.co.za/View-News-Article.aspx?News=over-100-youth-to-benefit-from-dunlops-business-in-a-box-24-38-06
+
+Dunlop signs as South African V8 SuperCars title sponsor - motorsportmedia.co.za, accessed January 20, 2026, https://motorsportmedia.co.za/DUNLOP_ROLLS_THE_V8_SUPERCAR_THUNDER.art15956
+
+DUNLOP SALUTES ITS 2025 NATIONAL CHAMPIONS | Motorsport South Africa, accessed January 20, 2026, https://www.motorsport.co.za/dunlop-salutes-its-2025-national-champions/
+
+Grandtrek Uncharted - About - Dunlop Tyres, accessed January 20, 2026, https://www.dunloptyres.co.za/grandtrek-uncharted/about.aspx
+
+Design Trends 2026: 5 Predictions to Get Excited About, accessed January 20, 2026, https://www.eighty3.co.uk/design-trends-2026/
+
+265-65-17" Dunlop Grandtrek AT3 White Letter Tyres - Wheels Direct South Africa, accessed January 20, 2026, https://wheelsdirect.co.za/product/265-65-17-dunlop-grandtrek-at3-white-letter-tyres/
+
+
+================================================================================
+END OF MASTER DUNLOP FILE
+================================================================================
+

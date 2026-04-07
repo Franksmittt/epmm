@@ -1,0 +1,322 @@
+﻿Strategic Digital Transformation & Engineering Roadmap: Golf Cart Energy Systems
+1. Executive Strategy and Architectural Vision
+The South African Light Electric Vehicle (LEV) sector, particularly the niche market for golf carts utilized within residential lifestyle estates, is currently navigating a profound technological inflection point. For a specialized automotive battery retailer located in Alberton, Johannesburg, the transition from legacy flooded lead-acid (FLA) chemistries to advanced Lithium Iron Phosphate (LiFePO4) technologies represents more than a mere inventory update; it signals a fundamental shift in the business model from commodity retail to high-value engineering services.1
+This report establishes a comprehensive, expert-level instruction plan for leveraging Cursor, an AI-powered code editor, to re-architect the existing digital presence. The objective is to construct a "Digital Twin" of the physical engineering expertise required to dominate the estate logistics market. This involves moving beyond simple e-commerce listings to a programmatic, data-driven platform that addresses the specific pain points of residents in high-density estates like Eye of Africa and Meyersdal: load shedding, steep terrain, and range anxiety.1
+The technical execution focuses on leveraging the Next.js 15 App Router for superior Server-Side Rendering (SSR) and Programmatic SEO (pSEO), enabling the generation of thousands of hyper-specific landing pages. Furthermore, the integration of complex logic—such as "Scrap Arbitrage" financial modeling 2 and physics-based range calculators 3—will establish the site as an authoritative engineering resource, effectively creating a defensive moat against generalist competitors like Battery Pitstop and broad-spectrum golf cart dealers.1
+1.1. The "Estate Logistics" Economy and User Personas
+To effectively instruct Cursor on component design and content flow, the development team must first codify the user personas and market realities derived from the "New South" ecosystem analysis. Unlike international markets where golf carts are primarily confined to the fairways of golf courses, the South African use case is uniquely defined by the phenomenon of "Estate Living." Prestigious residential communities such as Zimbali Coastal Resort, Serengeti Estates, Val de Vie, and Steyn City utilize golf carts not merely for sport, but as the primary mode of internal transport.2
+This usage pattern fundamentally alters the duty cycle requirements of the energy storage system, imposing demands that traditional chemistries struggle to meet. The "Estate Commuter" persona is characterized by high-frequency short trips (school runs, gym visits) and, critically, a dependence on the national grid for recharging. The prevalence of load shedding restricts the available charging window. A lead-acid battery bank requiring 8–10 hours to reach full saturation often cannot be fully recharged between power cuts.1 This chronic undercharging leads to premature failure, creating a cycle of frustration and expense for the owner.
+Therefore, the digital platform must be engineered to sell "Energy Security" rather than just batteries. The User Experience (UX) must be centered around tools that prove the viability of lithium in a load-shedding environment.
+1.2. Technical Constraints and Competitor Gap Analysis
+The engineering constraints for the web logic are dictated by the physical reality of the batteries and the terrain.
+* Grid Volatility: The system must include logic to calculate "Charge Time vs. Load Shedding Schedules."
+* Topography: Estates like Eye of Africa feature steep gradients that significantly exceed the standard 10-15% grade found on flat golf courses. Navigating these inclines requires sustained high-amperage output, which causes significant voltage sag (the "Peukert Effect") in lead-acid batteries, leading to sluggish performance and reduced range.1 The website must explicitly filter battery recommendations based on the user's estate topography.
+* Safety & Compliance: Estates enforce strict rules regarding noise and safety. Lithium conversions offering "silent charging" (no humming transformers) and sealed units (no hydrogen off-gassing) are premium selling points that must be highlighted in the UX.2
+The competitive landscape in Johannesburg South is fragmented. Competitors like Golf Car Associates focus on OEM specifications and are slow to adopt aftermarket retrofits, while generalists like Battery Pitstop lack vehicle-specific engineering depth.1 By positioning the Alberton store as the engineering authority that refuses unsafe installs (e.g., prohibiting 12V series lithium strings) and provides estate-specific solutions, the business can establish a defensive moat.
+________________
+2. Next.js 15 Application Architecture and Folder Structure
+The application will be built on the Next.js 15 framework, utilizing the App Router to leverage React Server Components (RSC). This architecture is non-negotiable as it provides the necessary performance for Core Web Vitals and the SEO capabilities required to dominate local search results.
+2.1. The src Directory Strategy
+To maintain a clean and scalable codebase, we will utilize the src directory convention. This separates application code from configuration files, a best practice for modern Next.js development.5
+File Structure Blueprint:
+src/
+├── app/
+│ ├── (marketing)/ # Route group for static marketing pages
+│ │ ├── about/
+│ │ │ └── page.tsx
+│ │ └── contact/
+│ │ └── page.tsx
+│ ├── (shop)/ # Route group for e-commerce
+│ │ ├── batteries/
+│ │ │ ├── [brand]/ # e.g., /batteries/trojan
+│ │ │ │ └── [model]/ # e.g., /batteries/trojan/t-875
+│ │ │ └── page.tsx
+│ │ ├── conversions/
+│ │ │ ├── [cart_model]/ # Dynamic segment for conversion kits
+│ │ │ │ └── page.tsx
+│ │ │ └── page.tsx
+│ │ └── cart/
+│ │ └── page.tsx
+│ ├── (tools)/ # Calculators and Engineering Tools
+│ │ ├── range-calculator/
+│ │ │ └── page.tsx
+│ │ └── roi-calculator/
+│ │ └── page.tsx
+│ ├── api/ # Backend Route Handlers
+│ │ ├── shipping/ # The Courier Guy API Proxy
+│ │ │ └── route.ts
+│ │ ├── payment/ # Webhooks for Float/PayJustNow
+│ │ │ ├── float/
+│ │ │ │ └── route.ts
+│ │ │ └── payjustnow/
+│ │ │ └── route.ts
+│ ├── layout.tsx # Root Layout (Navbar, Footer, Global Scripts)
+│ ├── page.tsx # Homepage
+│ └── globals.css # Tailwind directives
+├── components/
+│ ├── ui/ # Atomic components (Buttons, Inputs, Cards)
+│ ├── commerce/ # ProductCards, CartDrawer, CheckoutForm
+│ ├── calculators/ # Complex logic: RangeCalc, ROICalc
+│ ├── layouts/ # Headers, Footers, Sidebars
+│ └── seo/ # Schema.org JSON-LD generators
+├── lib/
+│ ├── courier-guy.ts # Shipping rate logic & Types
+│ ├── float-payment.ts # Float widget initialization logic
+│ ├── payjustnow.ts # PayJustNow widget logic
+│ ├── constants.ts # Battery specifications & Estate data
+│ └── prisma.ts # Database client (if using Prisma)
+├── hooks/ # Custom React Hooks
+│ ├── use-cart.ts
+│ └── use-shipping-rates.ts
+├── types/ # TypeScript Definitions
+│ ├── product.d.ts
+│ └── shipping.d.ts
+└── utils/
+├── battery-physics.ts # Peukert's Law & Range formulas
+└── formatting.ts # Currency formatting (ZAR)
+Architectural Rationale:
+* (Route Groups): The use of parenthesis naming folders like (shop) and (marketing) allows us to organize routes logically without affecting the URL structure. This is crucial for maintaining a flat URL hierarchy (e.g., domain.com/batteries instead of domain.com/shop/batteries) which is preferred for SEO.5
+* API Routes: Placing API handlers in src/app/api ensures that sensitive logic, such as API keys for The Courier Guy and payment gateway secrets, remains on the server-side, inaccessible to the client.8
+* Utils & Lib: Separation of pure utility functions (math, formatting) from library integrations (API calls) ensures testability and modularity.
+2.2. Server Components vs. Client Components
+Next.js 15 introduces a paradigm shift where components are Server Components by default. We must instruct Cursor to adhere to this strictly to maximize performance.
+Instruction for Cursor:
+"When generating pages in the app directory, assume they are Server Components. Do not use useState or useEffect directly in page.tsx files. Instead, fetch data (e.g., battery specs, estate details) directly in the page component using async/await. Pass this data as props to interactive Client Components (marked with 'use client') such as the 'Add to Cart' button or the 'Range Calculator'. This ensures that the heavy lifting of data fetching and HTML generation happens on the server, reducing the JavaScript bundle size sent to the user's device.".5
+2.3. Data Fetching Strategy
+We will avoid using useEffect for initial data loads. Instead, we will use standard fetch requests within Server Components. Next.js extends the native fetch API to allow for granular caching strategies.
+Caching Strategy for Battery Data:
+Since battery specifications (weight, voltage, capacity) rarely change, we will instruct Cursor to cache these requests indefinitely or revalidate them at a long interval (e.g., revalidate: 86400 seconds).
+Dynamic Data (Pricing & Stock):
+Pricing and stock levels, however, change frequently. These fetch requests should be set to cache: 'no-store' or revalidated frequently to ensure users never see stale data regarding availability, which is critical during high-demand periods like Stage 6 load shedding.1
+________________
+3. Component Engineering and Design System
+To support the "Engineering Authority" narrative, the UI components must be robust, informative, and technical. We are not building a fashion boutique; we are building an industrial supply platform.
+3.1. The "Battery Card" Component
+Standard product cards are insufficient. The BatteryCard component must display technical attributes prominently.
+Instruction for Cursor:
+"Create a BatteryCard component that accepts a Product object. Apart from the image, title, and price, clearly display the following 'Engineering Specs' in a grid layout within the card:
+1. Voltage: (e.g., 48V)
+2. Capacity (20hr rate): (e.g., 170Ah)
+3. Technology: (e.g., LiFePO4 or Lead-Acid)
+4. Weight: (e.g., 45kg) - Highlight weight savings for Lithium.
+5. Warranty: (e.g., 5 Years)
+Include a visual badge for 'Load Shedding Ready' if the battery chemistry is Lithium. This badge should have a tooltip explaining: 'Accepts High-Current Charging (0.5C) for rapid recovery between power cuts.'".1
+3.2. The "Conversion Wizard" Component
+This is a critical sales tool to guide users through the complex compatibility logic of retrofitting.
+Logic Flow:
+1. Select Make: Club Car, EZGO, Yamaha.
+2. Select Model: Precedent, TXT, Drive2.
+3. Select Current Voltage: 36V or 48V.
+4. Select Usage Profile: 'Flat Golf Course', 'Hilly Estate', 'Industrial/Heavy Load'.
+Output:
+The Wizard will return a recommended "Conversion Kit" bundle. Crucially, it must handle the "No-Go" zones identified in the research:
+* If the user selects EZGO RXV, the recommendation must include a Resistor Bank upgrade to handle the regenerative braking current that trips standard Lithium BMS units.2
+* If the user selects Club Car Precedent (Pre-2014), the recommendation must include an OBC Bypass Kit instructions or service add-on.2
+Instruction for Cursor:
+"Develop a ConversionWizard component using a multi-step form pattern. Store the user's selection in a state object. On the final step, filter the products array to find matching kits. If EZGO RXV is selected, append a warning alert: 'RXV Models require specialized BMS programming for regenerative braking. This kit includes the necessary resistor bank.' If Club Car Precedent is selected, append: 'OBC Bypass Required for Lithium Chargers.'"
+3.3. Payment Integration Components (Float & PayJustNow)
+High-ticket conversions (R30k+) are friction points. Integrating "Buy Now Pay Later" options reduces this friction. However, third-party scripts can severely impact performance if not loaded correctly.
+Float Integration:
+Float provides an installment payment solution using the customer's existing credit card limit.9 The integration typically involves a widget on the product page and a payment method at checkout.
+PayJustNow Integration:
+PayJustNow offers a 3-installment interest-free plan.11
+Component Strategy:
+We will create a specialized PaymentWidget component that acts as a wrapper for these third-party scripts.
+Instruction for Cursor:
+"Create a reusable PaymentWidget component that takes price and provider as props. Use next/script from next/script to load the external widget scripts.
+* Strategy: Use strategy='lazyOnload' to inject the external widget scripts only during idle time. This prevents the heavy third-party scripts from blocking the main thread and impacting the Largest Contentful Paint (LCP) score.13
+* Container: Float and PayJustNow often require a specific div with a unique ID or data attribute to render the installment breakdown (e.g., 'Pay 3 x R5,000'). Ensure the component renders this container before the script loads to avoid layout shifts (CLS)."
+________________
+4. The Physics Engine: Range and ROI Calculators
+These components are the primary value-add, moving the site from "Retail" to "Consultative Engineering." We must implement accurate mathematical models to build trust.
+4.1. Advanced Range Calculator Logic
+The "Range Calculator" will differentiate the site from competitors who use generic "25-mile" estimates. We will use a physics-based approach adapted for golf carts.
+Mathematical Model:
+The calculator must use the following derived formula for Range ($R$):
+
+
+$$R = \frac{C_{bat} \times V_{sys} \times \eta_{DoD} \times \eta_{eff}}{E_{cons} \times (1 + F_{terrain} + F_{load})}$$
+Variable Definitions & Data Sources:
+* $C_{bat}$ (Capacity): Rated Amp-Hours (Ah). E.g., 105Ah for Enertec Block, 170Ah for Trojan T-875.2
+* $V_{sys}$ (System Voltage): 48V or 51.2V (Lithium nominal).
+* $\eta_{DoD}$ (Depth of Discharge Efficiency):
+   * Lead-Acid: 0.50 (50% usable capacity to prevent sulfation).3
+   * Lithium: 0.90 (90% usable capacity).3
+* $\eta_{eff}$ (Peukert/Coulombic Efficiency):
+   * Lead-Acid: ~0.75 (Significant losses at high discharge rates due to Peukert effect on hills).1
+   * Lithium: ~0.98 (Negligible losses).15
+* $E_{cons}$ (Base Energy Consumption): Approx. 150 Wh/km (or 0.15 kWh/km) for a standard 48V cart on flat ground.3
+* $F_{terrain}$ (Terrain Factor):
+   * Flat (Alberton North): 0.0
+   * Hilly (Eye of Africa): 0.3 (30% increase in consumption).18
+* $F_{load}$ (Load Factor):
+   * 2 Passengers: 0.0
+   * 4 Passengers: 0.15 (15% increase).3
+Cursor Instruction:
+"Implement a TypeScript utility function calculateRange in utils/battery-physics.ts. It should accept an object with keys: batteryType, voltage, ampHours, terrain, and passengerCount. Apply the formula above.
+* Crucial Detail: If batteryType is 'Lead-Acid' and terrain is 'Hilly', apply an additional penalty of 0.8 to the $\eta_{eff}$ variable to simulate the Peukert Effect voltage sag on inclines.
+* Return the estimated range in Kilometers.
+* Create a React component RangeCalculator that uses sliders for input and displays a dynamic bar chart comparing the selected Lead-Acid vs. Lithium options side-by-side."
+4.2. Total Cost of Ownership (TCO) Arbitrage Engine
+This tool visualizes the long-term financial reality, incorporating the "Scrap Arbitrage" model (trade-in value of old lead batteries) which acts as a discount on the Lithium upgrade.2
+Logic Flow:
+1. Lithium Net Cost: $Cost_{Li} - (Weight_{Pb} \times Rate_{Scrap})$.
+   * Weight of Lead Bank: ~174kg (6 x Trojan T-875 at ~29kg each).2
+   * Scrap Rate: ~R12.00 per kg.
+   * Trade-In Value: ~R2,088 (Rounding to R2,500 for marketing incentive).2
+2. Replacement Cycle:
+   * Lead-Acid: Replaced every 3 years (avg lifespan in SA heat).16
+   * Lithium: Replaced every 10 years (3,500+ cycles).16
+3. Maintenance Costs:
+   * Lead-Acid: Distilled water + Terminal spray + Labor = ~R2,000/year.
+   * Lithium: R0/year.16
+Cursor Instruction:
+"Build a ROICalculator component.
+* Input: 'Years of Ownership' (Slider, 1-10 years).
+* Data: Use hardcoded constants for Lead-Acid replacement cost (~R24,000) vs. Lithium cost (~R35,000).
+* Visualization: Render a line chart. The Lead-Acid line should show a massive spike (step function) at Year 3, Year 6, and Year 9 representing battery replacement costs. The Lithium line should remain flat (initial cost only).
+* Annotation: Highlight the 'Break-Even Point' where the lines cross, typically around Year 3-4."
+________________
+5. Third-Party API Integration Layer
+To facilitate logistics and payments, the application must integrate with external South African service providers. These integrations must be handled securely via server-side proxies.
+5.1. The Courier Guy API (Logistics)
+Shipping lithium batteries requires specialized handling (Class 9 Dangerous Goods). Standard courier rates do not apply. We must use The Courier Guy's API to pull accurate quotes based on volumetric weight and hazardous goods surcharges.20
+API Architecture:
+We will create a Next.js Route Handler to proxy requests. This prevents the API Key from being exposed to the client browser.
+Route File: src/app/api/shipping/rates/route.ts
+Request Object Structure (TypeScript Interface):
+Based on The Courier Guy's API documentation 22, the request body requires specific address and parcel objects.
+
+
+TypeScript
+
+
+
+
+// src/types/shipping.d.ts
+
+export interface CourierGuyRateRequest {
+ collection_address: {
+   suburb: string; // "Alberton"
+   city: string;   // "Johannesburg"
+   code: string;   // "1449"
+   country: string; // "ZA"
+ };
+ delivery_address: {
+   suburb: string;
+   city: string;
+   code: string;
+   country: string; // "ZA"
+ };
+ parcels: Array<{
+   parcel_description: string; // "Lithium Battery UN3480"
+   measurements: {
+     height: number; // cm
+     length: number; // cm
+     width: number;  // cm
+     weight: number; // kg
+   };
+ }>;
+ service_level_code?: string; // Filter for "RPL" (Road Freight)
+}
+
+Instruction for Cursor:
+"Implement a POST route handler at src/app/api/shipping/rates/route.ts.
+1. Authentication: Read COURIER_GUY_API_KEY from process.env. Add it to the request headers: Authorization: Bearer <key>.
+2. Validation: Use Zod schema validation to ensure the incoming request body matches the CourierGuyRateRequest interface.
+3. External Call: Send a POST request to https://api.thecourierguy.co.za/api/v1/rates (confirm endpoint in docs).
+4. Filtering: The API will return multiple service levels (Overnight, Economy, etc.). Filter out Air Freight options. Lithium batteries >100Wh are forbidden on air transport.1 Only return 'Economy Road' or 'Road Freight' options.
+5. Response: Return the filtered rates to the client."
+5.2. Payment Gateway Webhooks (Float & PayJustNow)
+While the widgets handle the UI, the actual transaction confirmation happens via webhooks.
+Instruction for Cursor:
+"Create a webhook handler at src/app/api/payment/float/webhook/route.ts.
+1. Signature Verification: Float sends a signature header. Verify this against the FLOAT_SECRET using HMAC-SHA256 to ensure the request is genuine.
+2. Order Status Update: Parse the body. If status is 'APPROVED', use the Prisma client to update the local Order record to 'Paid'.
+3. Inventory Decrement: Trigger an inventory update function to reserve the stock.
+4. Idempotency: Implement a check using the transaction_id. If this ID has already been processed, return 200 OK immediately to prevent duplicate processing.24"
+________________
+6. Programmatic SEO (pSEO) & Content Engineering
+The core growth engine is the pSEO architecture. We will generate thousands of landing pages targeting specific combinations of Cart Model, Battery Type, and Location.
+6.1. generateStaticParams Implementation
+We will use the generateStaticParams function in Next.js 15 to pre-render these pages at build time. This ensures instant page loads (Time to First Byte) and perfect indexability for Google.5
+Target Route: src/app/services/battery-replacement/[location]/[cart_model]/page.tsx
+Data Matrix:
+* Locations: ['eye-of-africa', 'meyersdal', 'sandton', 'zimbali', 'dainfern']
+* Cart Models: ['club-car-precedent', 'club-car-tempo', 'ezgo-txt-48v', 'yamaha-drive2']
+* Battery Types: ['lithium-conversion', 'trojan-replacement']
+Instruction for Cursor:
+"Create the generateStaticParams function in the dynamic route page.
+1. Data Arrays: Define arrays for locations and cart_models. In a real scenario, these would come from the database/CMS.
+2. Permutations: Use nested loops to generate every combination of location and cart model. Return an array of params objects: [{ location: 'eye-of-africa', cart_model: 'club-car-precedent' },...].
+3. Page Component: In the Page component, use the params to dynamically construct the H1 and Meta Tags.
+   * Example H1: 'Club Car Precedent Battery Replacement in Eye of Africa'
+   * Example Description: 'Expert Lithium upgrades for Club Car Precedent golf carts in Eye of Africa. Solve hill climbing issues on steep estate gradients.'
+4. Content Injection: Create a dictionary of 'Location Context'. If the location is 'Eye of Africa', inject a paragraph about 'Hill Climbing Performance'. If the location is 'Alberton', inject a paragraph about 'Free Local Installation'."
+6.2. Schema.org Structured Data
+To dominate the "Local Pack" in Google, we will implement specific Schema.org definitions.
+Instruction for Cursor:
+"In the layout.tsx or a specific SEO component, inject the following JSON-LD script using the next/script component or the metadata API.
+* Type: AutoPartsStore and AutomotiveBusiness.26
+* AreaServed: Dynamically list the estates: 'Eye of Africa', 'Meyersdal', 'Serengeti'.
+* PriceRange: '$$$'
+* Services: Include 'Battery Installation', 'Lithium Conversion', 'OBC Bypass'.
+For Product pages, generate Product schema. crucially, include an aggregateRating field. If real reviews are missing, use a placeholder based on 'Trusted by X Residents' to ensure the Star Rating appears in SERPs, increasing CTR.28"
+________________
+7. Operational Workflows & Admin Systems
+The backend logic must support the physical constraints of the business.
+7.1. Service Radius Logic (The "Golden Circle")
+We need a logic engine to determine if a customer qualifies for free installation.
+Instruction for Cursor:
+"Create a utility function checkServiceZone(postalCode).
+1. Zone 1 (Golden Circle): Postal Codes 1449, 1448 (Alberton areas). Return { zone: 1, fee: 0, label: 'Free Installation' }.
+2. Zone 2 (Silver Ring): Postal Codes 1609, 1501 (Benoni, Bedfordview). Return { zone: 2, fee: 650, label: 'Standard Call-out' }.
+3. Zone 3 (National): All others. Return { zone: 3, fee: null, label: 'Courier Delivery Only' }.
+Integrate this function into the Checkout flow. If Zone 3 is detected, disable the 'Mobile Installation' radio button.".1
+7.2. FIFO Inventory Management
+Lead-acid batteries degrade if left on the shelf. The system must track "Date of Manufacture" to strictly adhere to Enertec's warranty conditions (void if shelf life > 6 months).2
+Instruction for Cursor:
+"In the Admin Dashboard (or Prisma schema), add a field manufactureDate to the InventoryItem model. Create a scheduled task (using Vercel Cron or similar) that queries items where manufactureDate < Date.now() - 6_months. Flag these items as 'Clearance' in the database and automatically apply a 15% discount to move the stock before it becomes dead inventory."
+________________
+8. Implementation Roadmap
+This comprehensive plan transforms the website from a passive catalog into an active sales and engineering tool.
+Phase 1: Foundation (Days 1-3)
+   * Initialize Next.js 15 app with TypeScript & Tailwind.
+   * Set up src directory structure.
+   * Define Zod schemas for Product and Shipping types.
+Phase 2: Core Components & Logic (Days 4-7)
+   * Build BatteryCard with technical specs grid.
+   * Implement RangeCalculator using the physics formulas.
+   * Develop ConversionWizard with compatibility logic (RXV/OBC warnings).
+Phase 3: Integration (Days 8-12)
+   * Build The Courier Guy API route proxy.
+   * Implement Float and PayJustNow widgets using next/script strategies.
+   * Set up Database/CMS for battery inventory.
+Phase 4: Growth Engine (Days 13-15)
+   * Implement generateStaticParams for pSEO.
+   * Write and inject Estate-specific content blocks.
+   * Add Schema.org JSON-LD to all pages.
+By following this roadmap, the Alberton store will not just "sell batteries"; it will provide a verified, engineered solution to the energy crisis faced by South African estate residents, securing its position as the market leader.
+________________
+Appendix: Mathematical Models for Calculators
+Range Calculation Formula
+
+
+$$R = \frac{C_{bat} \times V_{sys} \times \eta_{DoD}}{E_{cons} \times (1 + F_{terrain})}$$
+Where:
+   * $R$ = Range in km
+   * $C_{bat}$ = Battery Capacity in Amp-Hours (Ah)
+   * $V_{sys}$ = System Voltage (V)
+   * $\eta_{DoD}$ = Usable Depth of Discharge (0.5 for Lead-Acid, 0.9 for Lithium)
+   * $E_{cons}$ = Energy Consumption (approx. 150 Wh/km)
+   * $F_{terrain}$ = Terrain Factor (0 for flat, 0.3 for hilly)
+Payback Period (ROI)
+
+
+$$T_{break-even} = \frac{C_{Li} - C_{Pb} - V_{trade-in}}{(O_{Pb} + M_{Pb}) - O_{Li}}$$
+Where:
+   * $C_{Li}, C_{Pb}$ = Initial Cost of Lithium vs Lead-Acid
+   * $V_{trade-in}$ = Scrap Value of old Lead-Acid batteries
+   * $O_{Pb}, O_{Li}$ = Annual Operating Cost (Electricity)
+   * $M_{Pb}$ = Annual Maintenance Cost (Water, Terminal Cleaner, Labor)
+These formulas should be implemented directly into the TypeScript utility functions.

@@ -1,0 +1,123 @@
+🛠️ Phase 1: Preparation (Link WhatsApp & Set Up)
+
+Before you launch the ad, you must ensure your WhatsApp Business account is correctly linked to your Facebook Page.
+
+1. Link Your WhatsApp Business Account
+
+Why: Facebook needs to know where to send the "Send Message" clicks.
+
+How: Go to your Facebook Page Settings (or the WhatsApp section in Meta Business Manager).
+
+Action: Click "Add WhatsApp" and enter your number 079 507 0901. You will receive a verification code on the WhatsApp Business App. Enter the code to confirm the connection.
+
+2. Enter Meta Ads Manager
+
+How: Go to Meta Ads Manager (not the "Boost Post" button on your Page—that wastes money).
+
+Action: Click the "+ Create" button to start a new campaign.
+
+🎯 Phase 2: Campaign Setup (Objective & Budget)
+
+Your objective must tell Facebook's algorithm exactly what you want it to find: people who will start a conversation.
+
+1. Campaign Objective: Choose "Leads" or "Engagement"
+
+Recommendation: Choose Leads. This objective is designed for driving quotes, service inquiries, and appointments, and it specifically supports a Calls conversion location. Alternatively, choose Engagement if you want to optimize purely for Messages (WhatsApp/Messenger).
+
+Conversion Location: Set the conversion location at the Ad Set level to "Calls" or "Messaging Apps" (select WhatsApp only).
+
+Campaign Budget: Set this to your total budget for the campaign duration (e.g., R1,750 over 7 days, which is R250/day). Use Campaign Budget Optimization (CBO) if you plan to run multiple Ad Sets (see Phase 3).
+
+🗺️ Phase 3: Ad Set (Hyper-Local Targeting)
+
+This is the most critical stage for getting your ad in front of the Land Cruiser owner near your Alberton shop.
+
+1. Location Targeting: The 50 km Radius
+
+Action: Go to the Location section.
+
+Location: Type in Alberton or your address: 28 St Columb Rd, New Redruth, Alberton, 1449.
+
+Radius: Set the radius to 50 km.
+
+Crucial Setting: Change the option from "People recently in this location" to "People who live in this location." This avoids showing the ad to tourists or people passing through and focuses only on local residents who can drive to your shop.
+
+2. Detailed Targeting (LC79 Purist Focus)
+
+Demographics: Set Age to 35–65+ and Gender to Men. This targets the high-value LC79 owner demographic.
+
+Interests (Must Include):
+
+Vehicles: Toyota Land Cruiser (or 70 Series), Toyota Hilux (most popular vehicle).
+
+Accessories/Hobby: 4x4 accessories, Off-roading, Overlanding, ARB 4x4 Accessories (as a competitor research proxy).
+
+Income/Affluence: Search for the behavior "People who prefer high-value goods in South Africa".
+
+3. Placements
+
+Recommendation: Use Advantage+ Placements (Automatic Placements). Let Facebook decide where your ad performs best. Your Carousel format is ideal for the mobile News Feed, which is where most users are.
+
+🖼️ Phase 4: Ad Creation (The Carousel)
+
+This is where you upload your four AI-generated images and link the CTA to your objective.
+
+1. Format: Select Carousel
+
+Ad Type: In the Ad Setup section, select Carousel.
+
+Image Specs: Ensure your AI-generated images are 1080 x 1080 pixels (1:1 ratio) for maximum quality.
+
+Card Order: Uncheck the box that says "Automatically show the best performing cards first." Your four cards are designed to tell a specific story, so you need them in order (Action $\rightarrow$ Trust $\rightarrow$ Value $\rightarrow$ Contact).
+
+2. Copy & Links (The Direct Response Messaging)
+
+Element
+
+Content to Insert
+
+Rationale
+
+Primary Text (The Main Ad Copy)
+
+LC79 Owners: Stop Scrolling. The EFS Suspension Sale is LIVE. 🇿🇦 Upgrade your Land Cruiser for the bush TODAY. Our Alberton specialists are standing by on WhatsApp right now to quote your Elite, XTR, or Xtreme Series kit. This sale is limited time. Don't miss out!
+
+Uses urgency, location, and the desired action (WhatsApp/Call) for a high-value purchase.
+
+Call to Action (CTA)
+
+"Send Message" (if optimizing for WhatsApp) or "Call Now" (if optimizing for Calls).
+
+This button will appear on all carousel cards and links directly to the number you linked in Phase 1.
+
+Carousel Card 1 Headline
+
+LC79 EFS Suspension SALE!
+
+High-impact hook.
+
+Carousel Card 2 Headline
+
+3 YR / 100 000 KM WARRANTY.
+
+The critical trust signal that justifies the price.
+
+Carousel Card 3 Headline
+
+XTREME Series: SAVE UP TO R7 750!
+
+The value proposition and upsell.
+
+Carousel Card 4 Headline
+
+CALL NOW 079 507 0901.
+
+The final, explicit action closer.
+
+3. Final Review and Launch
+
+Review: Use the Preview Tool to check your ad on mobile devices (where most WhatsApp conversations start).
+
+Compliance: Double-check that your images have minimal text overlay (less than 20% of the image) to maximize ad delivery.
+
+Launch: Click Confirm to submit your campaign for review. Reviews typically take less than 24 hours.

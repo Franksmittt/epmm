@@ -1,0 +1,523 @@
+The South African Automotive Scrap Battery Economy: Arbitrage, Regulation, and Commercial Viability Analysis
+
+1. Executive Strategic Overview
+
+The automotive energy storage sector in South Africa stands at a critical juncture, characterized by a collision between entrenched informal trading practices and a rapidly hardening regulatory framework. Historically, the trade in scrap lead-acid batteries was a fluid, often cash-based economy where the distinction between waste, recyclable resource, and reusable product was blurred by lack of oversight. However, the landscape has fundamentally shifted following the legislative interventions of the early 2020s, specifically the amendments to the Second-Hand Goods Act (SHGA), the imposition of trade policy directives banning cash payments for scrap metal, and the rigorous enforcement of Extended Producer Responsibility (EPR) under the National Environmental Management: Waste Act (NEM:WA).1
+
+This report provides an exhaustive, forensic analysis of the scrap battery business ecosystem in South Africa. Its primary objective is to dissect the viability of a specific arbitrage model proposed by market entrants: the acquisition of scrap batteries for the purpose of "reviving" them or fraudulently claiming warranty replacements to resell at a profit. The analysis demonstrates that this model is not only commercially unviable due to advanced diagnostic barriers and inventory tracking technologies but also constitutes a serious criminal offense involving fraud and theft by false pretenses.4
+
+Beyond the deconstruction of this illicit model, the report explores the legitimate, high-compliance commercial avenues available within the sector. The South African battery market involves millions of units annually, creating a massive reverse logistics challenge that major manufacturers like AutoX (Willard/Sabat) and First National Battery (Raylite/Exide) are legally mandated to manage.7 The "Core Deposit" economy, where the financial value of a spent casing often exceeds its raw material scrap value, presents unique, legal arbitrage opportunities for astute operators who can bridge the gap between retail incentives and scrap metal commodity pricing.10
+
+The analysis synthesizes technical data on lead-acid chemistry failure modes, legal interpretations of the Consumer Protection Act (CPA) regarding "second-hand" and "reconditioned" goods, and the operational realities of the modern battery retailer—now a sophisticated diagnostic hub rather than a simple parts store. It serves as a definitive guide for investors and entrepreneurs seeking to navigate the complex, regulated terrain of the South African secondary battery market.
+
+2. Structural Analysis of the Proposed Arbitrage Model
+
+The user’s query posits a theoretical arbitrage loop: Purchase Scrap $\rightarrow$ Revive/Claim Warranty $\rightarrow$ Resell. To evaluate this, one must dismantle the operational and legal mechanics of each stage, contrasting the "theoretical" profit against the "actual" barriers erected by manufacturers and regulators.
+
+2.1 The "Warranty Claim" Mechanism: A Forensic Deconstruction
+
+The concept of purchasing a scrap battery to claim a new replacement under warranty relies on a fundamental misunderstanding of the legal nature of a warranty in South Africa. A warranty is not an intrinsic value attached to the physical object (the battery); rather, it is a contractual right attached to the specific sales transaction between a supplier and an original purchaser.13
+
+2.1.1 The Doctrine of Privity and the "Original Purchaser" Clause
+
+Major South African battery manufacturers, including AutoX (which manufactures Willard and Sabat brands) and First National Battery (manufacturing Raylite and Exide), have explicitly drafted their warranty terms to exclude transferability. The standard terms of sale state unequivocally that the warranty coverage is for the "original end user only".13 This clause is legally binding and aligns with the common law principle of privity of contract, which dictates that rights and obligations arising from a contract are binding only on the parties to that contract.
+
+When a speculator purchases a scrap battery from a waste picker or scrap yard, they do not acquire the "warranty rights" associated with that unit. They acquire only the physical material—the lead, plastic, and acid. The contractual link to the manufacturer was severed the moment the original owner disposed of the unit. Attempting to re-establish this link by posing as the original owner is the fraudulent fulcrum upon which this arbitrage model rests.9
+
+2.1.2 The Proof of Purchase Barrier
+
+In the past, the "lost slip" loophole allowed individuals to claim warranties on batteries based solely on the date stamp branded into the casing. If a battery was stamped with a recent manufacturing code (e.g., "A3" for January 2023), a retailer might have processed a claim to maintain customer goodwill. However, this loophole has been systematically closed through digitization and strict policy enforcement.16
+
+Current warranty adjudication procedures strictly require a valid proof of purchase (invoice). The terms for Willard and Sabat batteries, for example, state that failure to provide proof of purchase renders the claim "null and void".9 Furthermore, the industry has migrated to digital registration platforms, such as registermybattery.co.za. Upon the sale of a new battery, the consumer’s mobile number, vehicle registration, and the battery’s unique serial number are logged into a central database.18
+
+When a battery is presented for a claim, the retailer enters the serial number into the system. If the system shows the battery was registered to "Mr. X" with a specific vehicle VIN, and the claimant is "Mr. Y" with no invoice, the discrepancy is immediately flagged. This digital audit trail makes it virtually impossible for a third-party speculator to successfully process a claim without the collusion of retail staff, which introduces additional criminal conspiracy risks.20
+
+2.1.3 Advanced Diagnostic Vetting: The "Defect" vs. "Abuse" Distinction
+
+Even if a speculator could bypass the administrative hurdles, they face a technical firewall. A warranty covers manufacturing defects (e.g., a shorted cell due to separator failure or a broken inter-cell weld). It does not cover batteries that have reached the end of their life due to normal wear, deep cycling, or sulfation.22
+
+Scrap batteries, by definition, are units that have failed. In 99% of cases, this failure is due to sulfation (crystallization of lead sulfate) or plate shedding (active material falling off the grid), both of which are natural consequences of usage and age.7 Retailers employ sophisticated conductance testers (such as Midtronics devices) that utilize frequency domain technology to profile the battery's internal chemistry.
+
+Conductance Profiling: These devices measure the available plate surface area. A battery with a manufacturing defect (like a snapped post) will show specific resistance signatures (infinite resistance). A scrap battery will show high resistance consistent with sulfation. The tester will output a "Replace Battery" code only for genuine defects or end-of-life, but the retailer’s training manual instructs them to reject claims where the diagnostic codes indicate "Good-Recharge" or abuse (sulfation).7
+
+Holistic System Testing: Retailers are trained to test the vehicle associated with the battery. A "dead" battery presented without a vehicle is often rejected or subjected to a charging period (24-48 hours) to determine if it can hold a charge.27 A scrap battery "revived" by a speculator will typically fail the load test after charging, revealing it as worn out rather than defective. Since "normal wear and tear" is excluded from warranty coverage, the claim is denied.22
+
+2.2 The "Revival" Mechanism: Technical Realities and Safety Risks
+
+The second prong of the arbitrage model—buying scrap to "revive" and resell—rests on the assumption that dead batteries can be chemically or electrically restored to a marketable condition. While "desulfation" is a scientifically valid concept, its commercial application on mixed scrap is severely limited.
+
+2.2.1 The Physics of Irreversible Failure
+
+A lead-acid battery generates power through a chemical reaction between lead dioxide (positive plate), sponge lead (negative plate), and sulfuric acid. During discharge, both plates turn into lead sulfate. During recharge, this reverses. However, two primary aging mechanisms are irreversible:
+
+Hard Sulfation: If a battery sits discharged (as scrap batteries do), the amorphous lead sulfate recrystallizes into a stable, hard crystalline structure. These crystals are non-conductive and cannot be reconverted back into active material by standard charging. While high-frequency pulse desulfators can break some of this down, they cannot restore the lost surface area of the plate.24
+
+Plate Shedding (Mudding): As a battery cycles, the expansion and contraction of the active material cause it to loosen and fall to the bottom of the case. This "mud" reduces the capacity of the battery. Once the lead has shed, it is physically impossible to put it back onto the grid. A "revived" battery with 50% shed material may show 12.6 Volts (surface charge), but it will have virtually no Reserve Capacity (RC) or Cold Cranking Amps (CCA).31
+
+2.2.2 The Dangers of "Drill and Fill"
+
+Many "YouTube methods" for battery revival involve drilling holes into sealed Maintenance-Free (MF) or AGM batteries to add water or chemicals (like Epsom salts/magnesium sulfate).32
+
+Safety Hazard: Modern automotive batteries are often Valve Regulated (VRLA) or sealed calcium units. Drilling into them compromises the pressure relief valves and hydrogen recombination systems. This creates a severe risk of acid leakage and hydrogen gas explosions, especially if the battery is subsequently installed in a vehicle where it is subjected to alternator charging voltages.31
+
+Commercial Viability: A battery that has been drilled and resealed with silicone or glue is immediately identifiable as tampered. No reputable buyer will purchase such a unit, and selling it poses immense liability risks.
+
+2.3 Legal Liability under the Consumer Protection Act (CPA)
+
+If an arbitrageur manages to "revive" a battery and sells it, they enter the domain of the Consumer Protection Act 68 of 2008. The CPA imposes strict liability on the supply chain, which includes anyone marketing goods for consideration.
+
+2.3.1 The Implied Warranty of Quality (Section 56)
+
+Under Section 55(2) of the CPA, all goods sold must be of good quality, in good working order, and free of defects. Section 56 creates an implied warranty of quality for six months after delivery.6
+
+The Refund Trap: If the revived battery fails within six months (which is statistically probable given the internal degradation of scrap), the consumer has the right to return it for a full refund, repair, or replacement. The choice of remedy lies with the consumer, not the seller.34
+
+Operational Risk: The seller would be forced to refund the retail price (e.g., R600–R800) for a battery that cost them R150 in scrap plus labor/chemicals. A single refund wipes out the profit from multiple successful sales. Furthermore, if the failed battery damages the consumer's vehicle (e.g., acid leak damages the chassis or voltage spikes fry the ECU), the seller is liable for consequential damages under Section 61 (Product Liability), which is a no-fault liability regime.36
+
+2.3.2 Disclosure of "Reconditioned" Status (Section 25)
+
+Section 25 of the CPA specifically regulates reconditioned goods. A supplier must apply a conspicuous notice stating that the goods have been "reconditioned," "rebuilt," or "remade." Failure to do so is a deceptive trade practice. Selling a revived scrap battery as "second-hand" without explicitly disclosing its reconditioned status and the limitations of its life expectancy exposes the seller to prosecution by the National Consumer Commission (NCC) and massive reputational damage.39
+
+2.4 Conclusion on the Arbitrage Model
+
+The proposed arbitrage model is a commercial dead-end. The "profit" is theoretical and predicated on successfully deceiving either the manufacturer (warranty fraud) or the consumer (selling defective goods). The defensive architecture of the industry—digital tracking, advanced diagnostics, and CPA liability—makes the risk-to-reward ratio prohibitively high. The only intrinsic value in a scrap battery is its lead content, which dictates that the only sustainable business model is one that aligns with the recycling stream, not one that attempts to swim upstream against it.
+
+3. The Regulatory Landscape: A High-Compliance Environment
+
+The trade in scrap batteries in South Africa has migrated from an informal sector activity to a highly regulated industrial process. This shift is driven by the government's aggressive stance on infrastructure theft (copper/cable theft) and environmental protection. Understanding this regulatory web is the prerequisite for any legal participation in the sector.
+
+3.1 The "Cash for Scrap" Ban and Trade Policy
+
+In a decisive move to cripple the market for stolen infrastructure, the Department of Trade, Industry and Competition (dtic), in conjunction with the International Trade Administration Commission (ITAC), issued Trade Policy Directives that fundamentally altered the scrap metal trade.
+
+3.1.1 Prohibition of Cash Payments
+
+The directive, gazetted in late 2022 and reinforced through 2023-2025, bans all cash transactions for "scrap metal." Crucially, the legal definition of scrap metal in these directives is broad, encompassing "any used, broken, worn out... goods made wholly or partly of non-ferrous or ferrous metal, lead or zinc".40
+
+Lead-Acid Inclusion: Because automotive batteries are primarily lead (a non-ferrous metal), they fall squarely within this definition. Therefore, it is illegal to pay cash for scrap batteries in South Africa.
+
+EFT Mandate: All transactions must be settled via Electronic Fund Transfer (EFT) or similar traceable electronic banking methods. This creates a digital paper trail linking the seller’s identity to the bank account receiving funds.1
+
+Penalties: Possession of scrap metal (batteries) without a corresponding electronic proof of payment is an offense. Authorities can confiscate the stock, and registered dealers caught paying cash face de-registration and criminal charges.42
+
+3.1.2 Export Restrictions and the Price Preference System (PPS)
+
+To ensure local beneficiation and prevent the export of stolen material, the government has imposed temporary bans on the export of scrap metal and utilizes a Price Preference System (PPS).
+
+PPS Mechanism: Before any scrap can be exported, it must first be offered to domestic consumers (smelters like Fry's Metals) at a discount of 30% below the international benchmark price (e.g., LME Lead price).44
+
+Implication for Traders: This effectively caps the local price of scrap batteries. Traders cannot simply export to the highest international bidder; they are structurally tethered to the local smelting industry's pricing, which is artificially suppressed by the PPS to support local manufacturing. This limits the "upside" of speculative hoarding.3
+
+3.2 The Second-Hand Goods Act (SHGA) Compliance
+
+The Second-Hand Goods Act 6 of 2009 is the primary policing instrument for the industry. It treats scrap batteries as "controlled metals" requiring rigorous oversight.
+
+3.2.1 Registration as Dealer and Recycler
+
+Anyone buying and selling scrap batteries must register with the South African Police Service (SAPS) as a Second-Hand Goods Dealer. If the business involves dismantling (breaking) the batteries, they must also register as a Recycler.27
+
+Application Process (Form SAPS 601): The application requires tax clearance, premises floor plans, and fingerprints of all associates. Registration is valid for five years.49
+
+Association Membership: Membership in an accredited industry body, such as the Metal Recyclers Association (MRA), is highly recommended and often facilitates the registration process by certifying the dealer’s compliance standards.10
+
+3.2.2 The "Chain of Custody" Registers
+
+Dealers are mandated to keep detailed registers (Acquisition and Disposal).
+
+Seller Identity: For every battery bought, the dealer must record the seller’s full name, ID number, physical address, and contact details. A copy of the ID must be kept on file.49
+
+Goods Description: The register must detail the nature of the goods (e.g., "50kg Lead-Acid Batteries"), the weight, and the vehicle registration of the transport used.50
+
+Reporting: Under enhanced regulations, dealers must submit monthly returns to ITAC detailing their input (purchases) and output (sales) volumes. This "mass balance" reporting is used to detect anomalies that suggest the laundering of stolen goods.54
+
+3.3 Environmental Licensing: The NEM:WA Barrier
+
+Lead-acid batteries are classified as Hazardous Waste under the National Environmental Management: Waste Act (NEM:WA). This triggers a separate layer of compliance managed by the Department of Forestry, Fisheries, and the Environment (DFFE).
+
+3.3.1 Storage Norms and Standards
+
+Thresholds: Facilities storing more than 80m³ of hazardous waste (batteries) at any one time require a full Waste Management License (WML). Facilities storing less than 80m³ are exempt from the full license but must register with the department and comply with the National Norms and Standards for the Storage of Waste.56
+
+Infrastructure Requirements: Compliance involves specific infrastructure: impermeable floors (concrete), bunding (containment walls) to capture acid leaks, covered storage to prevent rain ingress, and specific signage. Failure to meet these standards can result in "Green Scorpions" (environmental inspectors) shutting down operations and imposing massive fines.59
+
+3.3.2 Extended Producer Responsibility (EPR)
+
+The EPR regulations of 2021 shifted the financial burden of recycling onto producers (manufacturers and importers).
+
+The EPR Fee: Producers pay a levy to Producer Responsibility Organizations (PROs) like eWASA or Circular Energy. This fee funds the recycling ecosystem.61
+
+Impact on Traders: While traders don't pay the fee directly, they are part of the system. Formal recyclers (smelters) will often only purchase from compliant aggregators who can provide the necessary "waste manifests" and "safe disposal certificates" required for the PROs' auditing trails. This effectively locks non-compliant "bucket shops" out of the premium supply chain.57
+
+4. Legitimate Commercial Models: Finding Value in the Chain
+
+With the "warranty fraud" door closed and the "illegal trading" door heavily guarded, where is the money? The value in the sector has shifted from speculation to efficiency and aggregation.
+
+4.1 The Formal Aggregator Model (The "Super-Collector")
+
+The "Cash Ban" has heavily disrupted the informal sector. Small-scale waste pickers (trolley pushers) often lack bank accounts and cannot sell directly to large yards that strictly enforce the EFT rule. This creates an opportunity for a Formal Aggregator.
+
+4.1.1 The Bridge Mechanism
+
+An aggregator establishes a fully compliant, registered buying station (Dealer status) that acts as a bridge between the informal sector and the industrial smelters.
+
+Payment Infrastructure: By utilizing fintech solutions (e-wallets, "Cash Send" vouchers, or instant clearance EFTs), the aggregator can legally pay informal collectors who are unbanked, ensuring they get paid "immediately" (digitally) while the aggregator retains the necessary digital audit trail for SAPS/ITAC compliance.64
+
+Consolidation: Smelters like Fry's Metals or SA Metal Group prefer buying bulk tonnage (e.g., 10-30 ton truckloads) rather than processing hundreds of individual walk-ins. An aggregator accumulates small volumes, sorts them by chemistry (Flooded vs. AGM), palletizes them, and sells in bulk.60
+
+Margins: Aggregators buy at "street price" (e.g., R7.50/kg) and sell at "dealer price" (e.g., R9.50–R10.00/kg). The margin is thin per unit but substantial at volume. Success depends on low overheads and high throughput.
+
+4.2 The "Core Deposit" Arbitrage
+
+This is the most potent legal arbitrage opportunity identified in the market structure. It exploits the price differential between the scrap value of a battery and the deposit value assigned to it by retailers.
+
+4.2.1 The Mathematics of the Gap
+
+Scrap Value: A standard "628" car battery weighs approx. 12kg. At a street scrap price of R8.00/kg, its cash value at a scrap yard is R96.00.67
+
+Retailer Core Credit: Major retailers like AutoZone, Midas, and Battery Centre charge a "Core Deposit" to incentivize returns. This deposit is often fixed or tiered. Data indicates core credits can range from R250.00 to R300.00+.12
+
+The Arbitrage: The credit (R300) is significantly higher than the scrap value (R96).
+
+4.2.2 Execution Strategy
+
+This arbitrage cannot be extracted as cash (retailers don't buy old batteries for cash; they credit them against new purchases). However, it can be monetized by B2B operators:
+
+Fleet Service Model: An entrepreneur servicing a logistics fleet needs to buy 100 new truck batteries. If they buy them without trade-ins, they pay the "price + deposit."
+
+Sourcing Cores: The entrepreneur can source scrap Group 31 batteries from the scrap market (e.g., paying R200/unit, which is above scrap value but below core value) or use lighter/cheaper automotive batteries if the retailer accepts "any lead-acid battery" as a core (policy dependent).7
+
+The Swap: By presenting these cheaper scrap units as trade-ins, the entrepreneur saves the R300+ deposit per unit on the new invoice.
+
+Net Benefit: If they bought the scrap for R100 and get a R300 credit, they have effectively "earned" R200 per unit in cost savings. This is a legitimate way to reduce CAPEX for fleet maintenance businesses.
+
+4.3 The Reconditioning Franchise
+
+For those seeking to extract value from the battery's utility rather than its material, reconditioning is viable only within a structured, high-tech framework.
+
+4.3.1 Moving Beyond "Revival"
+
+Legitimate franchises (e.g., Battery Clinic) do not use "magic pills." They use industrial desulfation machines that pulse-charge batteries at high voltages and specific frequencies to resonate the sulfate crystals off the plates.70
+
+Diagnostic Sorting: The key is knowing which batteries to scrap and which to fix. Only about 30-40% of cores are chemically viable for reconditioning. A franchise provides the know-how and equipment to make this distinction quickly.
+
+Market Positioning: Reconditioned batteries are sold at ~50% of the new price with a specific, CPA-compliant warranty (e.g., 6 months). This appeals to the second-hand car market and taxi industry.
+
+Barriers: High setup cost (R500k–R700k) and strict adherence to franchise standards protect the brand from the "snake oil" reputation of backyard mechanics.70
+
+5. Technical and Financial Data
+
+To aid in decision-making, the following data tables synthesize the pricing and compliance realities of the market as of 2025/2026.
+
+Table 1: Financial Arbitrage Analysis (Scrap vs. Core)
+
+
+
+Metric
+
+Estimated Value
+
+Notes
+
+Scrap Yard Buying Price
+
+R 7.50 – R 9.00 / kg
+
+Rate paid to public for wet lead-acid batteries.67
+
+Typical Battery Weight (646/628)
+
+12 – 14 kg
+
+Standard passenger car battery.
+
+Cash Value at Scrap Yard
+
+R 90.00 – R 126.00
+
+Weight × Scrap Price.
+
+Retailer Core Deposit Credit
+
+R 250.00 – R 304.75
+
+Fixed credit at Midas/AutoZone.12
+
+Arbitrage Gap
+
++ R 124.00 – R 178.00
+
+Potential savings per unit if used as a trade-in.
+
+Table 2: Regulatory Compliance Checklist for Traders
+
+Requirement
+
+Legislation
+
+Threshold/Trigger
+
+Authority
+
+Dealer Registration
+
+Second-Hand Goods Act
+
+Buying/selling any scrap metal
+
+SAPS (Designated Police Officer)
+
+Recycler Registration
+
+Second-Hand Goods Act
+
+Altering/Dismantling batteries
+
+SAPS
+
+Payment Method
+
+Trade Policy Directive
+
+NO CASH. EFT/Bank Transfer Only.
+
+ITAC / SAPS
+
+Waste Storage Reg
+
+NEM: Waste Act
+
+Storage < 80m³
+
+DFFE (SAWIC Registration)
+
+Waste License (WML)
+
+NEM: Waste Act
+
+Storage > 80m³ or Processing
+
+DFFE (Full EIA required)
+
+Transport Permit
+
+National Road Traffic Act
+
+Transporting Hazardous Goods
+
+Dept of Transport (PrDP-D)
+
+Reporting
+
+ITAC Regulations
+
+Monthly Input/Output Reports
+
+ITAC
+
+6. Detailed Operational Risks and Recommendations
+
+6.1 The Risk of Environmental Liability
+
+The concept of "Cradle-to-Grave" liability in NEM:WA means a trader can be held liable if their downstream partner dumps acid illegally.
+
+Recommendation: Only sell to ISO 14001 certified smelters (e.g., Fry's Metals, First National Battery). Obtain "Safe Disposal Certificates" for every load sold. This is not just paperwork; it is an insurance policy against environmental prosecution.72
+
+6.2 Security and Theft
+
+Battery stores and aggregators are high-risk targets for armed robbery due to the concentration of valuable lead.
+
+Recommendation: Premises must have "bunker-grade" security. Do not advertise "Cash for Batteries" (illegal and attracts criminals). Operate as a closed B2B entity or a secured depot with strict access control.
+
+6.3 The "Trojan Horse" Battery
+
+Buying from informal sources carries the risk of buying stolen batteries (e.g., from cell phone towers). These batteries often have specific markings (e.g., "Property of MTN/Vodacom") or distinct form factors (170Ah+ AGM blocks).
+
+Recommendation: Train staff to identify telecoms batteries. Possession of these without explicit authorization is a serious crime involving critical infrastructure statutes. Never buy them from walk-in sellers.74
+
+7. Conclusion
+
+The South African scrap battery market has evolved into a fortress of compliance. The "wild west" era, where one could buy scrap for cash and flip it for easy margins, has been legislated out of existence. The user’s proposed model of warranty arbitrage is a high-speed collision with this new reality—a strategy that is technically unsound due to modern diagnostics and legally suicidal due to digital tracking and fraud statutes.
+
+However, the "Cash Ban" and the "Core Deposit" system have created structural inefficiencies that professional operators can exploit. The legal arbitrage lies in:
+
+Aggregation: Using fintech to pay informal collectors who are excluded by big yards, then consolidating for bulk premiums.
+
+Core Optimization: Using cheap scrap units to unlock high-value core credits for fleet maintenance.
+
+Specialized Reconditioning: Using franchise-grade technology to serve the price-sensitive second-hand market legally.
+
+Success in this domain now requires capital, compliance, and technological sophistication. It is no longer a trade for the opportunist; it is an industry for the industrialist.
+
+Works Cited
+
+1
+
+Works cited
+
+Cost of Crime – No More Cash Payments - Maningi Scrap Metals, accessed January 18, 2026, https://maningiscrapmetals.co.za/crime/
+
+Policy Proposals on Measures to Address Scrap Metal Theft - eWASA, accessed January 18, 2026, https://ewasa.org/policy-proposals-on-measures-to-address-scrap-metal-theft/
+
+Copper and Ferrous Waste and Scrap Metal Export Legislation - eWASA, accessed January 18, 2026, https://ewasa.org/copper-and-ferrous-waste-and-scrap-metal-export-legislation/
+
+The everyday traps South Africans keep falling for and how to dodge them, accessed January 18, 2026, https://www.ecr.co.za/news/consumer-hacks/traps-south-africans-keep-falling-and-how-dodge-them/
+
+Consumer Protection - Legal Aid South Africa, accessed January 18, 2026, https://legal-aid.co.za/2018/09/26/consumer-protection/
+
+CONSUMER PROTECTION ACT - The Department of Trade Industry and Competition, accessed January 18, 2026, https://www.thedtic.gov.za/wp-content/uploads/Consumer_Protection_Act.pdf
+
+Automotive Battery Store Products and Services
+
+Willard Battery Selection Guide 2019 Web | PDF | Technology & Engineering - Scribd, accessed January 18, 2026, https://www.scribd.com/document/684269553/Willard-Battery-Selection-Guide-2019-Web
+
+"SABAT Batteries: Warranty Procedure", accessed January 18, 2026, https://www.sabat.co.za/warranty-procedure/
+
+Legislation - Fine Metals, accessed January 18, 2026, https://www.finemetals.co.za/company/legislation/
+
+Scrap Levies - Dixon Batteries, accessed January 18, 2026, https://www.dixonbatteries.co.za/media/upload/downloads/Scrap%20Loading%20Regulations.pdf
+
+BATTERIES - - - AutoZone, accessed January 18, 2026, https://www.autozoneonline.co.za/ts/batteries-5/all?q=&manufacturers=AUTOZONE
+
+Terms of sale – AA Batteries, accessed January 18, 2026, https://www.willardbat.co.za/terms-of-sale/
+
+Product Warranty - AutoX, accessed January 18, 2026, https://auto-x.co.za/product-warranty/
+
+Metindustrial (Pty) Ltd T/A FIRST BATTERY SURFACE MOTIVE POWER: LIMITED WARRANTY TERMS AND CONDITIONS VENTED LEAD ACID (VLA) –, accessed January 18, 2026, https://www.battery.co.za/wp-content/uploads/2023/06/FB-Warranty-Guide-lead-acid-batteries.pdf
+
+Warranty - Willard Batteries, accessed January 18, 2026, https://willard.co.za/warranty/
+
+WARRANTY PROCEDURE - Battery On Call, accessed January 18, 2026, https://battery-on-call.co.za/warranty-procedure/
+
+Register My Battery - SABAT BATTERIES, accessed January 18, 2026, https://www.sabat.co.za/register-my-battery/
+
+Why it's important to register your car's battery, accessed January 18, 2026, https://willard.co.za/why-its-important-to-register-your-cars-battery/
+
+Fraud Prevention in Warranty Claims: Key Strategies for Businesses | CodeWarranty, accessed January 18, 2026, https://codewarranty.com/blogs/fraud_prevention_in_warranty_claims_key_strategies
+
+How to Reduce Warranty Fraud in Your eCommerce Store - WeSupply | Labs, accessed January 18, 2026, https://wesupplylabs.com/how-to-reduce-warranty-fraud-in-your-ecommerce-store/
+
+Exide Battery Warranty Guide | Global Batteries South Africa, accessed January 18, 2026, https://globalbatteries.co.za/exide-automotive-warranty/
+
+Diesel Electric Battery Warranty, accessed January 18, 2026, https://de.co.za/wp-content/uploads/2024/03/Battery-warranty-DE.pdf
+
+How to recondition lead acid batteries: extending lifespan and restoring performance, accessed January 18, 2026, https://www.gme-recycling.com/how-to-recondition-lead-acid-batteries-extending-lifespan-and-restoring-performance/
+
+CLAIMS PROCEDURE - Sabat Batteries, accessed January 18, 2026, https://www.sabat.co.za/docs/sabat%20cpa%20procedures%20warranty%20and%20contract%20clauses%20150211.pdf
+
+Battery Warranty | First Battery's Quality Guarantee, accessed January 18, 2026, https://www.battery.co.za/about-us/battery-warranty/
+
+SECOND-HAND GOODS ACT 6 OF 2009 - Civilian Secretariat for Police Service, accessed January 18, 2026, https://www.policesecretariat.gov.za/sites/default/files/documents/Second-Hand%20Goods%20Act%206%20of%202009.pdf
+
+Warranty & Claims Conditions - Batteries Online, accessed January 18, 2026, https://batteriesonline.co.za/warranty-claims-conditions/
+
+Consumer Protection Act | CPA South Africa - LegalWise, accessed January 18, 2026, https://www.legalwise.co.za/help-yourself/quicklaw-guides/consumer-protection-act
+
+Battery regeneration solutions - Be Energy South Africa, accessed January 18, 2026, https://za.be-energy.group/what-is-battery-regeneration/
+
+Don't Buy Refurbished Car Batteries, Here's Why, accessed January 18, 2026, https://willard.co.za/dont-buy-refurbished-car-batteries-heres-why/
+
+So I am going to try my hand at reconditioning lead acid batteries... | DIY Solar Power Forum, accessed January 18, 2026, https://diysolarforum.com/threads/so-i-am-going-to-try-my-hand-at-reconditioning-lead-acid-batteries.76116/
+
+How can I restore this Lead Acid Battery? It has less than 0.1V - Reddit, accessed January 18, 2026, https://www.reddit.com/r/batteries/comments/pctwtu/how_can_i_restore_this_lead_acid_battery_it_has/
+
+Second-hand Vehicles and the CPA - Attorneys in Pretoria | Botha Bezuidenhout, accessed January 18, 2026, https://bblaw.co.za/2025/12/19/second-hand-vehicles-and-the-cpa/
+
+ADVISORY NOTE 1: CONSUME' S 'IGHTS 'EGA'DING DEFECTIVE GOODS with regard to sections 55 & 56 Consumer Protection Act, accessed January 18, 2026, http://www.cgso.org.za/wp-content/uploads/2015/12/CGSO-ADVISORY-NOTE-1-RETURNS-REVISION-2.pdf
+
+The Consumer's Right to Safe, Good Quality Goods and the Implied Warranty of Quality Under Sections 55 and 56 of the Consumer - Open UCT, accessed January 18, 2026, https://open.uct.ac.za/server/api/core/bitstreams/1fca54a3-54f7-4138-aff4-deff08f94dd8/content
+
+Consumer Protection Act (CPA) - Law Society of South Africa, accessed January 18, 2026, https://www.lssa.org.za/wp-content/uploads/2019/12/LSSA-CONSUMER-PROTECTION-ACT-BROCHURE-20121.pdf
+
+Defective Cars and Consumer Protection: What You Need to Know, accessed January 18, 2026, https://dutoitdrotsky.co.za/2024/02/21/defective-cars-and-consumer-protection-what-you-need-to-know/
+
+The Consumer Protection Act and Reconditioned Goods - DML Law, accessed January 18, 2026, https://www.dmllaw.co.za/the-consumer-protection-act-and-reconditioned-goods/
+
+Policy implementation actions on measures to restrict and regulate trade in ferrous and - South African Revenue Service, accessed January 18, 2026, https://www.sars.gov.za/wp-content/uploads/Docs/ProhibitedGoods/Policy_scrapMetal2022.pdf
+
+Government Gazette Staatskoerant - International Trade Administration Commission (ITAC), accessed January 18, 2026, https://itac.org.za/wp-content/uploads/Notice-R2801-Scrap-Metal-Final-Policy-and-Regulations.pdf
+
+Battery Scrap, accessed January 18, 2026, https://scrap-savvy.com/battery-scrap/
+
+Scrap metal smuggling could cripple East Africa's infrastructure, accessed January 18, 2026, https://issafrica.org/iss-today/scrap-metal-smuggling-could-cripple-east-africas-infrastructure
+
+International Trade Administration Act: Export Control Guidelines on the Exportation of Ferrous and Non-Ferrous Waste and Scrap: - South African Government, accessed January 18, 2026, https://www.gov.za/sites/default/files/gcis_document/202510/53605gen3579.pdf
+
+DEPARTMENT OF TRADE, INDUSTRY AND COMPETITION NOTICE 2738 OF 2024 International Trade Administration Commission of South Africa, accessed January 18, 2026, https://itac.org.za/wp-content/uploads/Amended-Export-Control-Guidelines-on-the-Exportation-of-Ferrous-and-Non-Ferrous-Waste-and-Scrap.pdf
+
+Calls for scrap metal inquiry after price-fixing-cartel ruling - The Writer's Room, accessed January 18, 2026, https://www.writersroom.co.za/calls-for-scrap-metal-inquiry-after-price-fixing-cartel-ruling/
+
+The Impact of Current Policies on South Africa's Metals Recycling Sector A Submission by the Recycling Association of South Afri - DTIC, accessed January 18, 2026, https://www.thedtic.gov.za/wp-content/uploads/RASA.pdf
+
+Second-Hand Goods Act 2009 – Policies - IEA, accessed January 18, 2026, https://www.iea.org/policies/25168-second-hand-goods-act-2009
+
+Registration, Certificates, Records and Inspection of Second-Hand Goods - Lawful Living, accessed January 18, 2026, https://lawfulliving.co.za/law-made-simple/text/trade-industry--second-hand-goods.html
+
+Second-Hand Goods Act: Regulations: Dealers and recyclers - South African Government, accessed January 18, 2026, https://www.gov.za/sites/default/files/gcis_document/201409/35220gon285.pdf
+
+TOWARDS THE NEW SECOND-HAND GOODS ACT, accessed January 18, 2026, https://pmg.org.za/files/docs/080227secondhand.ppt
+
+MRA | Metal Recyclers Association | We have members throughout South Africa. Make use of our member locator to find a scrap metal recycling business near you., accessed January 18, 2026, https://mra.co.za/
+
+SA Recycling Columbus, accessed January 18, 2026, https://www.sarecycling.com/yard/sa-recycling-columbus/
+
+Second-Hand Goods Act: Regulations for Dealers and Recyclers: Amendments - South African Government, accessed January 18, 2026, https://www.gov.za/sites/default/files/gcis_document/202407/50929gon5037.pdf
+
+Second-Hand Goods Act: Regulations: Dealers and Recyclers: Amendments, accessed January 18, 2026, https://www.gov.za/sites/default/files/gcis_document/202311/49720gon4073.pdf
+
+LIST OF WASTE MANAGEMENT ACTIVITIES THAT HAVE, OR ARE LIKELY TO HAVE, A DETRIMENTAL EFFECT ON THE ENVIRONMENT - SAFLII, accessed January 18, 2026, https://www.saflii.org/za/legis/consol_reg/lowmathoalthadeote934/
+
+WASTE LICENCE APPLICATION PROCESS FOR WASTE ..., accessed January 18, 2026, https://www.dffe.gov.za/sites/default/files/docs/forms/cwm/wastemanagementlicence_nationalapplication.pdf
+
+WASTE MANAGEMENT & LEGAL COMPLIANCE - MYCPD, accessed January 18, 2026, https://cct.mycpd.co.za/IWMSA/IWMSA%20CB%20MeetGreet_20160915.pdf
+
+Lead acid batteries - Waste & Debris Fact Sheets | I-WASTE DST | US EPA, accessed January 18, 2026, https://iwaste.epa.gov/guidance/natural-disaster/fact-sheets/types-of-waste?id=auto-batteries
+
+Scrap Lead Recycling | First Battery's Recovery Solutions, accessed January 18, 2026, https://www.battery.co.za/battery-recycling/scrap-lead/
+
+A Guide to Portable Battery EPR in South Africa - eWASA, accessed January 18, 2026, https://ewasa.org/portable-batteries/
+
+The Importance Of A Robust End-Of-Life Battery Management System In South Africa, accessed January 18, 2026, https://africa.com/the-importance-of-a-robust-end-of-life-battery-management-system-in-south-africa/
+
+About - ERANPC, accessed January 18, 2026, https://eranpc.co.za/about/
+
+Waste pickers and the proposed scrap metal regulations - TIPS, accessed January 18, 2026, https://www.tips.org.za/policy-briefs/item/download/2311_a588048097b3b80060c560538227a189
+
+Sell Your Old Car Batteries - Recycling, accessed January 18, 2026, https://www.interstatebatteries.com/recycling/sell-your-old-car-batteries
+
+Sa Metal Recycling Home - RecycleInMe, accessed January 18, 2026, https://www.recycleinme.com/rim-sametalecyclin/home
+
+Non-Ferrous Metal Prices | Fine Scrap Metals SA Buying Rates, accessed January 18, 2026, https://www.finemetals.co.za/products/non-ferrous-metal-products/non-ferrous-metal-buying-prices/
+
+Scrap value of batteries - Power Forum, accessed January 18, 2026, https://powerforum.co.za/topic/344-scrap-value-of-batteries/
+
+BATTERIES - - - AutoZone, accessed January 18, 2026, https://www.autozoneonline.co.za/ts/batteries-5/all?pagenumber=5&q=
+
+Franchise Opportunity - Battery Clinic | South Africa, accessed January 18, 2026, https://batteryclinic.co.za/franchise/
+
+Energic Plus - Battery regenerators | TVH South Africa, accessed January 18, 2026, https://www.tvh.com/en-za/parts/our-brands-partnerships/energic-plus/battery-regenerators-maintenance
+
+Battery Recycling | Do you have old lead Acid Batteries? - BHG Power Storage Solutions, accessed January 18, 2026, https://bhgpower.co.za/battery-recycling/
+
+Battery Recycling Process | First Battery's Eco-Friendly Methods, accessed January 18, 2026, https://www.battery.co.za/battery-recycling/recycling-process/
+
+Two scams on the rise in South Africa - Moonstone Information Refinery, accessed January 18, 2026, https://www.moonstone.co.za/two-scams-on-the-rise-in-south-africa/
+
+South Africa's Proposed Amendments to the Second Hand Goods Act to Monitor Scrap Metal Trade, accessed January 18, 2026, https://www.xagta.com/south-africas-proposed-amendments-to-the-second-hand-goods-act-to-monitor-scrap-metal-trade/
+
+Battery Clinic (Pty) Ltd - Franchise Association of South Africa, accessed January 18, 2026, https://fasa.co.za/directory-accredited_f/listing/battery-clinic-franchise/
+
+The Blame Game: Who Pays When Products Fail? - Barnard | Law Firm, accessed January 18, 2026, https://barnardinc.co.za/2025/12/18/the-blame-game-who-pays-when-products-fail/
+
+FAQ - SA Recycling, accessed January 18, 2026, https://www.sarecycling.com/company/faq/
+
+Makes Of Car Batteries - Get Yours Checked Today At E-CAR, accessed January 18, 2026, https://www.e-car.co.za/car-tips/makes-of-car-batteries/
+
+01.07.2020 Waste management licenses, permits, authorisations and registration on the national South African Waste Information S - MYCPD, accessed January 18, 2026, https://cct.mycpd.co.za/IWMSA/Licensing-of-Waste-Management-Activities-01-07-2020.pdf
+
+SECOND-HAND GOODS ACT 6 OF 2009 - SAFLII, accessed January 18, 2026, https://www.saflii.org/za/legis/consol_act/sga2009153.pdf
+
+6 Facts About Your Car's Battery - Willard Batteries, accessed January 18, 2026, https://willard.co.za/6-facts-about-your-cars-battery/
+
+READING BATTERY DATE CODES | Tires Plus, accessed January 18, 2026, https://www.tiresplus.com/content/dam/bsro-sites/tiresplus/pdfs/reading-battery-date-codes.pdf
+
+How to Read Battery Date Codes | U.S. Battery Mfg. Co., accessed January 18, 2026, https://www.usbattery.com/how-old-or-new-are-your-deep-cycle-batteries/

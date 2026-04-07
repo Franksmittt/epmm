@@ -1,0 +1,505 @@
+Phase 18: The Predator Logic - Autonomous Evolutionary Architecture at the Network Edge
+
+1. The Evolutionary Paradigm Shift in Web Architecture
+
+The history of web development has largely been defined by static determinism. Developers write code, deploy a specific version of an interface, and serve that identical version to every user until a human decision-maker intervenes to change it. This traditional model, while stable, suffers from a fundamental inefficiency: it relies on human intuition to guess what works. In the high-velocity environment of modern digital commerce, "guessing" is a liability. The "Predator" Logic represents a paradigm shift from static delivery to autonomous, Darwinian evolution at the network edge.
+
+The core thesis of Phase 18 is that a web application should not be a static artifact but a living organism. It must possess the capability to sense its environment (user interactions), maintain a genetic memory of success (Edge Config), and ruthlessly eliminate weaker traits (low-performing variants) through natural selection.1 This is not merely A/B testing; it is the implementation of Reinforcement Learning (RL) directly within the Content Delivery Network (CDN) layer. By leveraging Next.js Middleware and Vercel’s serverless infrastructure, we move the decision-making logic from the slow, central origin server to the fast, distributed edge, achieving decision latencies of under 15 milliseconds.3
+
+This report offers an exhaustive technical and theoretical analysis of this architecture. We explore the transition from client-side experimentation—plagued by performance-degrading Cumulative Layout Shift (CLS)—to server-side, edge-compute decision engines. We dissect the "Predator" strategy: deploying multiple genetic variants (headlines), subjecting them to environmental selection pressures (user clicks), and automating the propagation of successful traits while the system administrator sleeps.
+
+1.1 The Limitations of Frequentist A/B Testing
+
+To understand the necessity of Predator Logic, one must first analyze the deficiencies of the incumbent model: Frequentist A/B testing. In a traditional workflow, a marketing team hypothesizes two variations (A and B). Traffic is split evenly between them for a fixed period—often weeks—to achieve statistical significance.
+
+This approach suffers from three critical failures in a modern context:
+
+Regret (The Opportunity Cost of Exploration): During the testing period, 50% of users are deliberately shown the inferior variation. If Variation B converts at 2% and Variation A at 4%, the system continues to serve the losing Variation B to half the traffic until the test concludes. This accumulates "Regret"—the difference between the potential optimal reward and the actual reward received.5
+
+Latency of Human Intervention: The cycle of analyzing data and manually deploying the winner introduces a lag time where the optimal solution is known by the data but not yet implemented in the code.
+
+Static Granularity: Traditional tests usually compare two or three distinct, manually crafted versions. They rarely explore a continuous spectrum of possibilities or react dynamically to shifting user behaviors in real-time.
+
+The Predator Logic replaces this static hypothesis testing with a Multi-Armed Bandit (MAB) framework. In this model, the system does not wait for a test to finish. It continuously balances Exploration (gathering data on potential headlines) and Exploitation (capitalizing on the currently best-performing headline). As soon as one variant demonstrates superiority, the "Predator" logic begins to cannibalize the traffic of the weaker variants, effectively "killing" them off to maximize system-wide yield.6
+
+1.2 The Latency Imperative: Why the Edge Matters
+
+Implementing evolutionary logic requires a decision engine that operates faster than human perception. If the decision to show "Cheap Tyres" versus "Premium Safety" takes 200ms to compute, the user experience is degraded, negating the benefits of the optimization.
+
+Traditional server-side experimentation requires the request to travel to the origin server (e.g., a data center in Virginia), query a database, determine the variant, and render the HTML. For a user in London or Tokyo, this round-trip introduces unacceptable latency.
+
+The Predator architecture utilizes Vercel Edge Middleware to solve this. Middleware runs on the V8 engine at the edge of the network—physically closer to the user.1 The decision (rolling the dice) happens before the cache is even checked.
+
+Execution Time: Edge Middleware typically executes in <10ms.
+
+Data Access: Vercel Edge Config provides global, low-latency reads (P99 <15ms).3
+
+Result: The decision is instantaneous. The user perceives no delay.
+
+1.3 Zero Layout Shift (CLS) and Core Web Vitals
+
+A pervasive issue in client-side A/B testing (e.g., using Google Optimize or JavaScript injection) is the "flicker" effect. The browser loads the original page, executes a script, and then swaps the headline. This causes Cumulative Layout Shift (CLS), a Core Web Vital that negatively impacts Google Search rankings and user trust.1
+
+By performing the logic in Middleware, the Predator architecture achieves Zero CLS.
+
+The request hits the Edge Node.
+
+Middleware determines the variant.
+
+Middleware rewrites the request to the specific static variant path (e.g., /variant-b).
+
+The browser receives the final HTML immediately.
+
+Outcome: The user never sees the "losing" variant. The evolution is invisible to the observer.4
+
+2. Theoretical Foundations: The Mathematics of the Predator
+
+The "Predator" is not magic; it is mathematics. specifically, it is an implementation of the Epsilon-Greedy algorithm, a foundational strategy in Reinforcement Learning (RL) for solving the Multi-Armed Bandit problem. This chapter dissects the mathematical logic that governs the system's "choices."
+
+2.1 The Multi-Armed Bandit Problem
+
+The name derives from a hypothetical gambler standing in front of a row of slot machines ("one-armed bandits"). Each machine has a different, unknown probability of paying out a jackpot (reward). The gambler has a limited number of coins (traffic). The objective is to maximize the total money won.5
+
+In our context:
+
+The Gambler: The Next.js Middleware.
+
+The Arms: The 5 Headlines deployed (A, B, C, D, E).
+
+The Coin Pull: A user visiting the site.
+
+The Reward: The user clicking "Add to Cart" (The Kill).
+
+The dilemma is the trade-off between Exploration (pulling a new arm to see if it pays out) and Exploitation (pulling the arm that has paid out the most so far).
+
+2.2 The Epsilon-Greedy Algorithm
+
+The Predator Logic utilizes the Epsilon-Greedy algorithm to automate this trade-off. It introduces a parameter, Epsilon ($\epsilon$), which governs the "curiosity" of the system.2
+
+$\epsilon$ (Epsilon): The probability that the system will explore.
+
+$1 - \epsilon$: The probability that the system will exploit.
+
+For every incoming user, the Middleware rolls a digital die (generates a random number $r$ between 0 and 1).
+
+If $r < \epsilon$ (Exploration): The system selects a variant randomly from the pool of 5 options. This ensures that even if Variant A is winning, Variants B, C, D, and E still receive a trickle of traffic. This is crucial because user behavior changes over time; a headline that failed on Tuesday might succeed on Saturday.
+
+If $r \ge \epsilon$ (Exploitation): The system selects the variant currently marked as the "Champion" (the one with the highest conversion rate). This maximizes the revenue for the vast majority of users.9
+
+2.3 Regret Minimization and Dynamic Tuning
+
+The "Predator" aspect of the logic comes from the dynamic adjustment of traffic. In a static A/B test, traffic is fixed at 20% per variant for 5 variants. In the Predator model, as the "Champion" establishes dominance, the Exploitation phase (which directs traffic to the Champion) consumes the majority of requests.
+
+Consider a scenario with 5 headlines and $\epsilon = 0.1$ (10% exploration):
+
+10% of traffic is split randomly among A, B, C, D, E (2% each).
+
+90% of traffic is directed to the current winner (e.g., B).
+
+Total Traffic to B: $90\% + 2\% = 92\%$.
+
+Total Traffic to Others: $2\%$ each.
+
+This massive imbalance allows the site to "optimize itself while you sleep." If Variant B is the best, 92% of users see it immediately, maximizing sales. If Variant C suddenly improves (perhaps due to a viral trend making its phrasing more relevant), the 2% exploration traffic will detect this increase in conversion rate. The nightly evolution cycle (Cron Job) will then dethrone B and crown C as the new Champion, shifting the 90% exploitation traffic to C automatically.11
+
+2.4 Comparison of Algorithms
+
+While Epsilon-Greedy is the primary logic described, it is worth comparing it to other strategies to justify its selection for Edge implementations.
+
+Algorithm
+
+Mechanism
+
+Pros
+
+Cons
+
+Edge Suitability
+
+Epsilon-Greedy
+
+Fixed % for random exploration, rest to winner.
+
+computationally cheap ($O(1)$), easy to implement in Middleware.
+
+Convergence can be slower than UCB; constant exploration means some "regret" is always present.
+
+High. Requires minimal CPU at the edge.
+
+Upper Confidence Bound (UCB)
+
+Selects based on potential optimality plus uncertainty.
+
+Faster convergence; reduces regret quickly.
+
+Requires logarithmic calculations and tracking total counts per request.
+
+Medium. Higher math overhead.
+
+Thompson Sampling
+
+Probability matching based on Bayesian posterior distributions.
+
+theoretically optimal in many cases.
+
+Requires complex sampling from Beta distributions; computationally expensive for lightweight edge functions.
+
+Low. Too heavy for <10ms execution budgets.
+
+Static A/B
+
+Fixed 50/50 split.
+
+Simple to analyze.
+
+High regret; slow to adapt; requires manual intervention.
+
+N/A. Does not fulfill "Evolution" requirement.
+
+For the "Predator" logic, Epsilon-Greedy is chosen for its balance of efficiency and effectiveness. It requires only a random number generator and a lookup of the current winner, making it perfectly suited for the constraints of the Edge Runtime.6
+
+3. The Edge Habitat: Infrastructure Deep Dive
+
+To sustain an evolutionary system, we require a robust "habitat"—an infrastructure capable of supporting high-velocity decision-making and data consistency. The Vercel ecosystem provides three distinct components that act as the organs of the Predator: Edge Config (DNA), Middleware (Brain), and Vercel KV (Memory).
+
+3.1 The DNA Store: Vercel Edge Config
+
+In our biological metaphor, the Edge Config acts as the DNA of the website. It contains the genetic instructions—the text of the headlines, the IDs of the variants, and the current state of the evolutionary hierarchy (who is the alpha?).3
+
+Edge Config is a global, low-latency key-value store optimized for reads. It is not a standard database. It pushes data to the edge nodes, making it accessible essentially as in-memory variables.
+
+Read Latency: <1ms to 15ms (P99).
+
+Propagation: Updates take seconds (up to 10s) to propagate globally.13
+
+Capacity: Suitable for configuration data (JSON), not massive datasets.
+
+Why Edge Config?
+
+Standard databases (Postgres) or even standard Redis are located in specific regions (e.g., us-east-1). If a user in Sydney hits the site, querying a database in Virginia adds 200ms+ latency. Edge Config replicates the "Genome" to the Sydney edge node. The Middleware reads it locally, ensuring the "roll of the dice" adds zero perceptible delay.3
+
+The Genome Structure (JSON Schema):
+
+The configuration file stored in Edge Config defines the active experiment.
+
+
+
+JSON
+
+
+
+
+
+{  "predator_experiment_v1": {    "status": "active",    "epsilon": 0.15,    "winning_variant_id": "variant_b",    "variants":  }}
+
+This JSON object is the "living code" that the Middleware consults. Changing this JSON immediately alters the behavior of the site worldwide without a code deployment.3
+
+3.2 The Brain: Next.js Middleware
+
+The Middleware is the decision engine. It intercepts the HTTP request before it reaches the page rendering logic or the static cache. It operates within the Vercel Edge Runtime, which is built on the V8 engine (the same engine that powers Chrome) but is strictly isolated and lightweight.1
+
+Constraint: The Edge Runtime does not support Node.js APIs (like fs or native modules). It supports standard Web APIs (Request, Response, Fetch).
+
+Function: It executes the Epsilon-Greedy logic. It checks cookies for session consistency (stickiness) and rewrites the URL to the chosen variant.
+
+Rewrite vs. Redirect: The Middleware uses NextResponse.rewrite(). This is architecturally significant. A redirect (302) forces the browser to load a new URL, causing a full page refresh and latency. A rewrite keeps the URL bar as www.example.com but serves the content of www.example.com/headlines/b. This is seamless to the user and essential for SEO.16
+
+3.3 The Memory: Vercel KV (Redis)
+
+While Edge Config is the DNA (Read-Heavy), the system needs a memory of "The Kill" (Write-Heavy). We cannot write to Edge Config every time a user clicks "Add to Cart" because it is rate-limited and slow to update.
+
+We use Vercel KV, which is a serverless Redis implementation.
+
+Role: Tracks Impressions (how many times a variant was shown) and Conversions (how many times it won).
+
+Requirement: It must support Atomic Operations. If 1,000 users click "Buy" simultaneously, we cannot have a "read-modify-write" race condition where counts are lost. Redis HINCRBY (Hash Increment By) guarantees atomicity.18
+
+Performance: While Redis is regional, writing the conversion data (The Kill) happens asynchronously after the user interaction, so the slight latency of a cross-region write is acceptable compared to the blocking latency of a read.20
+
+4. The Brain: Middleware Implementation Strategy
+
+This section details the specific logic flow within the middleware.ts file, the operational heart of the Predator.
+
+4.1 Stickiness and Consistency
+
+A critical requirement for any A/B testing system is consistency. If User A sees "Cheap Tyres" on the homepage, clicks to a product page, and then hits "Back," they must see "Cheap Tyres" again. If the Predator switches them to "Premium Safety" mid-session, it creates user confusion and invalidates the data.
+
+The Middleware handles this via cookies:
+
+Check Cookie: Does predator_variant exist?
+
+If Yes: Bypass the dice roll. Serve the variant ID stored in the cookie.
+
+If No: Execute Predator Logic (Roll Dice). Set the result in the predator_variant cookie.21
+
+4.2 The Decision Matrix (Code Logic)
+
+The implementation involves importing the get function from @vercel/edge-config and NextResponse from next/server.
+
+
+
+TypeScript
+
+
+
+
+
+// middleware.ts - Conceptual Implementationimport { NextResponse } from 'next/server';import type { NextRequest } from 'next/server';import { get } from '@vercel/edge-config'; // export const config = {  matcher: ['/'], // Target the homepage};export async function middleware(request: NextRequest) {  // 1. Stickiness Check  const cookieVariant = request.cookies.get('predator_variant');  if (cookieVariant) {    return rewrite(request, cookieVariant.value);  }  // 2. Fetch Genome (DNA)  // This is an ultra-low latency read from Edge Config  const experiment = await get('predator_experiment_v1');    // Fallback if config is broken/missing  if (!experiment) return rewrite(request, 'variant_a');  // 3. Epsilon-Greedy Logic  const epsilon = experiment.epsilon || 0.1; // Default 10% exploration  const roll = Math.random();  let selectedVariantId;  if (roll < epsilon) {    // Exploration: Random selection    const randomIndex = Math.floor(Math.random() * experiment.variants.length);    selectedVariantId = experiment.variants[randomIndex].id;  } else {    // Exploitation: Select the current Alpha    selectedVariantId = experiment.winning_variant_id;  }  // 4. Set Cookie and Rewrite  const response = rewrite(request, selectedVariantId);  response.cookies.set('predator_variant', selectedVariantId, { path: '/' });  return response;}function rewrite(req: NextRequest, variantId: string) {  const url = req.nextUrl.clone();  // Map variant ID to internal path, e.g., /variants/b  url.pathname = `/variants/${variantId}`;   return NextResponse.rewrite(url);}
+
+Note: The actual implementation would include error handling and map lookups for paths..17
+
+4.3 Handling Bot Traffic
+
+The Predator logic relies on human behavior. Bots do not buy tyres. If a Googlebot crawler hits the site 10,000 times, it creates noise in the data. Furthermore, serving different content to Googlebot on every fetch can be perceived as "cloaking," a black-hat SEO tactic.
+
+Strategy:
+
+The Middleware should inspect the User-Agent header. If the agent matches known bots (Googlebot, Bingbot), the system should bypass the bandit logic and consistently serve the Winning Variant (or the Control). This ensures that search engines index the most effective version of the site while preventing data pollution.23
+
+5. The Kill: High-Velocity State Management
+
+"The Kill" is the conversion event. It is the signal that feeds the evolutionary loop. Without accurate tracking of kills, the Predator is blind.
+
+5.1 The Atomic Tracking Architecture
+
+We track two metrics per variant:
+
+Impressions ($N$): Number of times the variant was served.
+
+Conversions ($R$): Number of times the user clicked "Add to Cart."
+
+Impressions are best tracked on the client-side to filter out bounced requests (users who hit the middleware but close the tab before the paint). A useEffect hook triggers a "view" event.
+
+Conversions are tracked via an API route triggered by the button click.
+
+Both events send data to Vercel KV (Redis).
+
+5.2 Redis Data Structure
+
+We utilize a Redis Hash to store counters. Hashes are efficient and allow grouping data by experiment ID.
+
+Key: predator:v1:stats
+
+Fields:
+
+variant_a:impressions
+
+variant_a:conversions
+
+variant_b:impressions
+
+variant_b:conversions
+
+...etc.
+
+5.3 Atomic Increment Implementation
+
+The code uses HINCRBY. This command is atomic. It increments the value in memory and returns the new value. It is thread-safe.19
+
+
+
+TypeScript
+
+
+
+
+
+// app/api/track/route.tsimport { kv } from '@vercel/kv';import { NextRequest, NextResponse } from 'next/server';export async function POST(req: NextRequest) {  const { event, variantId } = await req.json(); // e.g., 'conversion', 'variant_b'    // Construct the Redis field name  const field = `${variantId}:${event}s`; // e.g., variant_b:conversions    // Atomic Increment  // This is "The Kill" recording  await kv.hincrby('predator:v1:stats', field, 1);    return NextResponse.json({ ok: true });}
+
+.18
+
+6. The Evolution: Automating Natural Selection
+
+This is the phase where the system "optimizes itself while you sleep." The Edge Config (DNA) is static until we update it. We cannot update it on every request. Instead, we use a scheduled background process—a Cron Job—to perform the evolutionary selection.
+
+6.1 The Cron Job Architecture
+
+Vercel Cron Jobs allow us to trigger a serverless function at a fixed interval (e.g., every hour). This function acts as the "Game Master."
+
+The Cron Workflow:
+
+Wake Up: The Cron job triggers /api/cron/evolve.
+
+Gather Intelligence: It queries Vercel KV to get the current stats for all 5 variants.
+
+Compute Fitness: It calculates the Conversion Rate ($CR$) for each variant:$$CR = \frac{Conversions}{Impressions}$$
+
+Selection: It identifies the variant with the highest $CR$.
+
+Validation: It performs a sanity check (e.g., "Is the sample size > 100?").
+
+Mutation: It calls the Vercel API to update the Edge Config. It sets winning_variant_id to the new leader.
+
+Decay (Optional): It may slightly reduce the Epsilon value if the winner is maintaining a strong lead, shifting the system from Exploration toward pure Exploitation.12
+
+6.2 Updating the Genome (Edge Config Write)
+
+Writing to Edge Config is an API operation. The Cron job authenticates with the Vercel API and patches the JSON store.
+
+Relevant Research Snippet Analysis:
+
+Snippets 25 and 26 detail the PATCH endpoint for Edge Config. The payload looks like:
+
+
+
+JSON
+
+
+
+
+
+{  "items":}
+
+Once this request succeeds, the Vercel infrastructure propagates this new JSON to every Edge node on the planet within ~10 seconds.
+
+Implication: At 02:00 AM, the Cron job runs. By 02:00:10 AM, users in Tokyo, London, and New York simultaneously start seeing "Variant C" as the default.13
+
+6.3 Handling Low Traffic (Cold Start Problem)
+
+If the site has low traffic, the Cron job might run before significant data is collected.
+
+Problem: Variant B has 1 view and 1 conversion (100% rate). Variant A has 1000 views and 50 conversions (5% rate). The naive math says B is better.
+
+Solution: The "Fitness Function" in the Cron job must include a Bayesian Average or a simple threshold.
+
+Rule: "Do not promote a new winner unless it has at least 100 impressions."
+
+This prevents volatility and ensures the Predator doesn't chase statistical noise.2
+
+7. Advanced Predator Strategies
+
+The Epsilon-Greedy approach is robust, but for high-stakes environments, more sophisticated algorithms can be implemented within the same architecture.
+
+7.1 Softmax Selection
+
+Instead of purely random exploration, Softmax adjusts the probability of picking a variant based on its current estimated value.
+
+Concept: If Variant A has 5% conversion and Variant B has 4%, Epsilon-Greedy treats B the same as Variant C (0%). Softmax would show B more often than C, acknowledging that B is a "contender" while C is a "loser."
+
+Implementation: The Cron job calculates "selection weights" instead of just a single winner. The Edge Config stores these weights (e.g., A: 0.8, B: 0.15, C: 0.05). The Middleware rolls the dice against these weighted ranges.8
+
+7.2 Upper Confidence Bound (UCB)
+
+UCB adds a mathematical "bonus" to variants that have been explored less.
+
+Formula: $Score = AverageReward + \sqrt{\frac{2 \ln TotalImpressions}{VariantImpressions}}$
+
+Effect: This forces the Predator to aggressively test new or ignored headlines. As VariantImpressions increases, the bonus decreases, and the system relies more on the actual AverageReward. This minimizes "Regret" faster than Epsilon-Greedy.5
+
+7.3 Contextual Bandits (Personalization)
+
+The ultimate Predator adapts not just to the crowd, but to the individual.
+
+Strategy: User A (Mobile, New York) sees "Cheap Tyres." User B (Desktop, London) sees "Premium Safety."
+
+Data: The Middleware has access to request.geo and request.headers (User-Agent).
+
+Execution: The Edge Config stores a mapping:JSON"segments": {  "US": "variant_a",  "UK": "variant_b",  "Mobile": "variant_a"}The Middleware checks these attributes before rolling the dice. This transforms the system from a global optimizer to a segmented optimizer.23
+
+8. Security, Reliability, and Scale
+
+8.1 Protection Against Poisoning
+
+The evolutionary data is vulnerable to manipulation. A competitor could script a bot to click "Add to Cart" on the worst headline, tricking the Predator into promoting it.
+
+WAF Integration: Vercel Web Application Firewall (WAF) can block malicious IPs.
+
+Bot Analysis: The Cron job should analyze the IP distribution of conversions. If 50 conversions come from a single IP, they should be discarded before calculating the winner.27
+
+8.2 Rate Limiting the Writer
+
+Vercel KV (Redis) is fast, but it has connection limits.
+
+Risk: A DDoS attack on the tracking endpoint could exhaust Redis connections.
+
+Mitigation: Implement Rate Limiting logic in the /api/track route using @vercel/rate-limit. Ensure that a single session ID cannot trigger more than one conversion per second.27
+
+8.3 The "Brain Dead" Scenario
+
+What happens if Edge Config goes down or returns a 500 error?
+
+Fail-Safe: The Middleware must wrap the get() call in a try/catch block.
+
+Default Behavior: If the DNA cannot be read, the Middleware must default to the Control (Variant A). This ensures the site never crashes; it merely stops evolving temporarily.
+
+9. Implementation Guide Summary
+
+To build the Predator Phase 18 logic:
+
+Setup Storage: Create a Vercel KV store (for stats) and an Edge Config store (for variants).
+
+Define Variants: Create 5 static versions of the component/page (e.g., page_a.tsx, page_b.tsx).
+
+Configure DNA: Upload the initial JSON to Edge Config defining the 5 variants and $\epsilon = 0.2$.
+
+Deploy Middleware: Implement the middleware.ts to read Edge Config, handle cookies, and rewrite paths.
+
+Instrument Tracking: Add useEffect tracking for impressions and API calls for "Add to Cart" conversions targeting the KV store.
+
+Automate Evolution: Deploy a Cron Job API route that reads KV, computes the winner, and patches Edge Config.
+
+10. Conclusion
+
+The "Predator" Logic represents the maturation of the autonomous web. It moves beyond the passive "deploy and pray" methodology of the past into an active, aggressive, and self-optimizing future. By combining the sub-millisecond decision capabilities of Vercel Edge Middleware with the global state management of Edge Config and the atomic precision of Redis, we create a system that acts less like a document and more like a biological entity.
+
+It explores the unknown. It exploits the known. It kills the weak. And it does so continuously, ensuring that the version of the site the user sees is mathematically the fittest possible version for that specific moment in time. This is the Darwinian Edge.
+
+Referenced Research Material
+
+1 Vercel Templates: Edge Config A/B Testing
+
+23 Vercel Guide: A/B Testing on Vercel
+
+3 Vercel Documentation: Edge Config Overview
+
+14 Vercel Documentation: Edge Config Get Started
+
+4 Vercel Blog: Zero CLS Experiments
+
+11 Instant Bandit Library
+
+6 Multi-Armed Bandit Implementation Guide
+
+5 Towards Data Science: Solving Multi-Armed Bandit Problems
+
+25 Vercel API: Update Edge Config
+
+26 Vercel API: Managing Edge Configs
+
+22 Vercel Documentation: Edge Config SDK
+
+21 Next.js Documentation: Cookies
+
+15 Next.js Documentation: Middleware
+
+13 Vercel Documentation: Edge Config Limits
+
+27 Vercel Knowledge Base: Rate Limiting
+
+3 Vercel Documentation: KV vs Edge Config
+
+14 Vercel Documentation: Getting Started with KV
+
+16 StackOverflow: Middleware Rewrites
+
+12 Bandit Simulations: Epsilon Greedy Analysis
+
+9 GeeksForGeeks: Epsilon Greedy in RL
+
+10 Medium: In-depth Exploration of Epsilon Greedy
+
+17 Next.js Documentation: Middleware Routing
+
+24 Vercel Guide: Setup Cron Jobs
+
+18 Reddit: Optimizing Vercel KV
+
+2 Medium: A/B Testing and Multi-Armed Bandits
+
+8 Statsig Perspectives: Epsilon-Greedy Algorithms
+
+7 CodeSignal: Balancing Exploration and Exploitation
+
+19 W3Resource: Redis HINCRBY
+
+20 Dev.to: Using Node Redis with Vercel KV

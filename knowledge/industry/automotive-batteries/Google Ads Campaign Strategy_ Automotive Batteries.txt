@@ -1,0 +1,645 @@
+Strategic Blueprint for Market Dominance: The 'Flawless' Automotive Battery Search Campaign Architecture for Alberton Battery Mart
+
+1. Executive Strategic Analysis and Market Psychographics
+
+1.1 The Operational Mandate: Precision Engineering for High-Intent Capture
+
+The directive governing this strategic overhaul is unequivocal: the construction of a flawless, high-performance Google Ads search architecture dedicated exclusively to automotive battery sales within the Alberton jurisdiction. This mandate explicitly rejects the "spray and pray" methodologies of generalist digital marketing—specifically Display Network advertising and broad-spectrum targeting—in favor of a surgical, high-intent search acquisition model. The user’s requirement for a "flawless" campaign necessitates a shift from passive brand awareness to active demand capture. In the context of the automotive aftermarket, specifically starting, lighting, and ignition (SLI) batteries, "flawless" is defined as the total elimination of budgetary waste on irrelevant traffic (solar, motorcycle, gate motors) and the maximization of conversion efficiency during peak profitability windows (Monday through Friday).1
+
+The current digital landscape for Alberton Battery Mart is at a critical inflection point. As of February 2026, the South African market is navigating a post-load-shedding correction, where the artificial demand for backup power has evaporated, leaving only the core automotive demand.2 Simultaneously, the account data reveals a perceived decline in traffic, which a forensic audit attributes not to a market collapse, but to the pausing of broad-match campaigns ("winter sales 2025") and the stabilization of the energy grid.2 This reduction in volume is, in fact, a strategic opportunity to refine the quality of the funnel.
+
+To achieve the "ultimate" campaign, we must align the account’s technical architecture with the specific psychographic reality of the battery buyer: urgency and distress. A driver with a dead battery does not browse; they hunt. They do not wait for a sale; they require an immediate solution. Therefore, this report outlines a strategy that treats the Google Ads account not as a billboard, but as a rapid-response dispatch system. The distinction is critical: standard e-commerce campaigns optimize for "shopping," whereas this campaign must optimize for "rescue".1
+
+1.2 The "Flawless" Doctrine: Zero-Waste Architecture
+
+The proposed strategy is built upon three non-negotiable pillars derived from the user's constraints and the forensic data analysis:
+
+The Mon-Fri Efficiency Protocol: Data explicitly confirms that Saturday trading hours (08:00–12:00) represent the most expensive customer acquisition period, with a Cost Per Click (CPC) of ZAR 31.73, nearly 50% higher than the weekday average.1 By concentrating the budget on Monday through Friday, particularly capitalizing on the "Monday Peak" where interaction rates hit 21.33%, we maximize yield per Rand spent.2 This aligns with the user's intuition to focus on weekdays, turning a hunch into a data-backed operational imperative.
+
+The Automotive-Only Firewall: The "flawless" campaign must hermetically seal the budget against non-automotive leakage. This involves not just targeting car terms, but aggressively negating terms associated with deep cycle, solar, inverter, and motorcycle applications, which previously diluted the account’s relevance.1 The analysis shows that the paused "winter sales" campaign wasted impressions on "motorcycle" and general "battery" terms that no longer serve the business's core 90% automotive focus.1
+
+Hyper-Local Radius Dominance: The 15km radius around New Redruth is not merely a delivery boundary; it is a competitive moat. By restricting impressions to this zone, we ensure that every click represents a viable mobile fitment candidate, leveraging the high-performing "We Come To You" value proposition that currently drives a 13-16% interaction rate.1 This radius is calculated based on the logistical reality of mobile mechanics; driving further erodes margins and increases response times, violating the core promise of "rapid" service.4
+
+1.3 Macroeconomic Context: The "January Squeeze"
+
+February 2026 represents a specific convergence of fiscal stressors that suppresses automotive aftermarket spending, creating a natural "quiet" period. The Alberton consumer is currently in a state of financial recovery, which directly impacts "grudge purchases" like car batteries. School fees rose by approximately 5.0%, and the cost of enrolling a Grade 8 learner in Alberton climbed to over R5,000.2 Consequently, 80% of households reported financial setbacks during the back-to-school period. This creates a "spending freeze" on non-essential items. While a dead battery is technically essential, consumers with failing (but not yet dead) batteries will delay replacement during this high-expense period, effectively jumping-starting their vehicles until absolute failure occurs. This behavior reduces search volume for terms like "battery price" or "battery replacement" as users avoid the purchase until absolutely necessary.2
+
+2. Forensic Data Audit and Historical Performance Review
+
+Before constructing the new architecture, it is essential to diagnose the structural realities of the current account performance (December 15, 2025 – February 12, 2026) to separate genuine market signals from configuration noise.
+
+2.1 The Source of the "Traffic Decline"
+
+The user's observation of "getting less and less traffic" is accurate in volume but misleading in cause. The analysis of the Ad report.csv reveals that the campaign winter sales 2025 is currently paused.1 This campaign utilized broad headlines such as "Car, Truck, Bike, Motor Home" and likely captured a significant amount of low-intent, top-of-funnel traffic. Its deactivation has artificially depressed the total impression count.2 However, this reduction is strategically positive. The paused campaign included terms for "motorcycle batteries," which the user has now explicitly flagged for exclusion. The "traffic drop" effectively represents the shedding of waste. The remaining active traffic is of significantly higher quality, as evidenced by the A-Auto-Urgency-Alberton-Walkins campaign, which maintains an exceptional interaction rate of 17.86%.1 The goal is not to restore the volume of the old broad campaign, but to replace it with the precision of a new automotive-only structure.
+
+2.2 Temporal Performance Diagnostics (Day-of-Week Analysis)
+
+The user's intuition to focus on Monday to Friday is strongly corroborated by the Ad schedule report.csv. The data presents a clear dichotomy between weekday efficiency and weekend inflation.
+
+Table 1: Weekly Performance Metrics for "Urgency" Campaign (Dec 15, 2025 - Feb 12, 2026)
+
+Day
+
+Time Slot
+
+Impressions
+
+Interactions
+
+Interaction Rate
+
+Avg. CPC (ZAR)
+
+Cost (ZAR)
+
+Monday
+
+08:00 - 17:00
+
+211
+
+45
+
+21.33%
+
+21.27
+
+957.16
+
+Tuesday
+
+08:00 - 17:00
+
+174
+
+31
+
+17.82%
+
+17.36
+
+538.26
+
+Wednesday
+
+08:00 - 17:00
+
+192
+
+34
+
+17.71%
+
+22.24
+
+756.05
+
+Thursday
+
+08:00 - 17:00
+
+135
+
+18
+
+13.33%
+
+20.50
+
+368.97
+
+Friday
+
+08:00 - 17:00
+
+175
+
+31
+
+17.71%
+
+18.13
+
+562.16
+
+Saturday
+
+08:00 - 12:00
+
+104
+
+18
+
+17.31%
+
+31.73
+
+571.18
+
+The Monday Anomaly: Monday is the apex predator of the week, delivering 45 interactions with a conversion-likely interaction rate of 21.33%.2 This aligns with automotive behavior patterns where vehicles left idle over the weekend fail to start on Monday morning. The battery discharges due to parasitic draw or simply cold temperatures, leading to a surge in "distress" searches between 07:00 and 09:00 AM.5
+
+The Saturday Trap: Saturday generates traffic, but at a premium. The average cost per interaction is ZAR 31.73, compared to a Tuesday low of ZAR 17.36.1 This suggests an "auction war" on weekends, likely against major chains like Battery Centre and Tyres & More who bid aggressively for the short trading window.2 The cost is nearly double that of the most efficient weekdays.
+
+Strategic Implication: By eliminating Saturday bidding, we save the most expensive clicks and can reinvest that budget into Monday and Tuesday, potentially acquiring 40% more leads for the same spend. This explicitly satisfies the user's request to "maybe only focus on monday to friday" by proving it is the superior financial decision.
+
+2.3 Asset Performance & Value Proposition
+
+The Asset association report.csv provides a blueprint for what the "flawless" ad copy must look like.
+
+Mobile Dominance: The sitelink "Mobile Battery" is the star performer, achieving interaction rates up to 16.00%.1 This confirms that the primary driver for the Alberton demographic is convenience, not just price. Users do not want to tow their cars; they want the solution to come to them.7
+
+Commercial Lag: The "Commercial Batteries" assets are underperforming with a 3.84% CTR.1 This indicates that the current messaging ("Shop Commercial & Truck Batteries") is too passive for the B2B market in industrial hubs like Alrode. A "flawless" campaign must separate this traffic and speak directly to fleet managers about downtime and VAT invoices.8
+
+3. Geographic Micro-Targeting Strategy: The 15km Radius
+
+The request specifies a 15km radius around the New Redruth store. In Google Ads, a simple radius is often insufficient because it bleeds into areas that may be geographically close but logistically difficult to service (e.g., across major highway bottlenecks). To achieve "flawless" targeting, we must layer the radius with specific named locations to ensure we are bidding aggressively where it matters most.
+
+3.1 Defining the "Kill Zone": Suburb-Level Analysis
+
+Based on the provided location data and standard Alberton geography, the service area can be segmented into three distinct tiers of value.9
+
+Table 2: Strategic Geographic Segmentation for Alberton Battery Mart
+
+Tier
+
+Suburbs
+
+Customer Profile
+
+Bidding Strategy
+
+Tier 1: Core (Hyper-Local)
+
+New Redruth, Meyersdal, Alberton North, Florentia, Randhart, Raceview
+
+High-income residential & immediate store proximity. Users here value speed and convenience.
+
++30% Bid Adjustment. These are the most profitable calls; low travel time, high conversion probability.
+
+Tier 2: Secondary Residential
+
+Brackenhurst, Brackendowns, Verwoerdpark, Dinwiddie, South Crest, Mayberry Park
+
+Middle-income residential density. Likely price-sensitive but value the "We Come to You" service to avoid towing costs.
+
++10% Bid Adjustment. Standard service area.
+
+Tier 3: Industrial Hub
+
+Alrode, Alrode South, Wadeville
+
+Heavy industrial zone. Users here are fleet managers or business owners looking for truck and heavy-duty batteries.
+
++15% Bid Adjustment (Specific Campaign Only). Target only with "Truck/Commercial" keywords.
+
+Exclusion Zone
+
+Germiston Central, JHB CBD, Katlehong (Deep)
+
+Areas technically within 15km but logistically inefficient or lower intent for premium mobile service.
+
+Exclude. Prevent budget leakage to areas with lower ROI or higher security risks for mobile drivers.
+
+3.2 The "Near Me" Signal and Radius Implementation
+
+Data shows the "Urgency" campaign targeting "Alberton" and "Near Me" queries drives the highest CTR (17.86%).1 By layering named locations over the radius, we can ensure that a user in Meyersdal searching for "battery replacement" sees an ad headline that dynamically inserts "Meyersdal" or "Alberton," increasing relevance and CTR.
+
+Implementation Setting:
+
+Target: Radius 15km around Google My Business Location (28 St Columb Rd, New Redruth).
+
+Targeting Method: "Presence: People in or regularly in your targeted locations" must be changed to "Presence: People in your targeted locations". This is a crucial "flawless" setting. We do not want people interested in Alberton (e.g., someone in Cape Town searching for a battery for their mom in Alberton) clicking our ads. We only want people physically in the 15km radius who need a battery now.12
+
+4. The Core Keyword Architecture: Automotive-Only
+
+This is the engine of the campaign. To achieve "flawless" performance, we must strip away all ambiguity. The user explicitly stated: "I dont want to focus on other products, so I want to focus on automotive batteries allone." The keyword strategy is divided into three high-intent silos: Urgency, Product/Inventory, and Service/Mobile.
+
+4.1 Silo A: The Distress Signals (Urgency)
+
+These users are stranded. They need a battery now. Price is secondary to speed. This silo corresponds to the high-performing A-Auto-Urgency campaign logic.1
+
+Primary Keywords (Phrase & Exact Match):
+
+"car battery dead"
+
+"dead battery replacement"
+
+"car battery replacement near me"
+
+"mobile battery replacement alberton"
+
+"roadside battery assistance"
+
+"car battery delivery alberton"
+
+"same day car battery"
+
+"we come to you battery"
+
+Insight: Terms like "jump start service" should be used cautiously. While relevant, users searching for a jump start often just want a R200 service, not a R2,000 battery. We will target it but with ad copy that qualifies the user: "Jump Start Service? If Your Battery is Dead, We Replace It On-Site."
+
+4.2 Silo B: The Inventory Hunters (Product Specifics)
+
+These users know what they need. They are searching by battery code or brand. This is where the Search - Alberton - Battery Sales campaign historically found volume.1 The data explicitly highlights codes 652, 646, and 628 as the volume drivers.1 These codes correspond to the most popular vehicles in South Africa (VW Polo, Toyota Hilux, Ford Ranger).14
+
+Primary Keywords (Phrase & Exact Match):
+
+"Willard 652 battery price"
+
+"646 battery price"
+
+"628 car battery"
+
+"Exide 652 battery"
+
+"Willard battery specials"
+
+"cheap car batteries 646"
+
+"buy car battery online"
+
+"Willard 619 battery" (Common for smaller cars like Toyota Etios/Ford Fiesta).16
+
+Strategic Nuance: Many competitors bid on generic "car battery" terms. By bidding specifically on "652 battery price" or "Willard 646," we bypass the generic competition and target users who have likely already checked their battery size or owner's manual. These users are further down the funnel and closer to purchasing.
+
+4.3 Silo C: The Industrial Pivot (Alrode Focus)
+
+To capture the B2B market in Alrode without wasting budget on consumers, we need specific truck and fleet keywords. This aligns with the "Truck & Fleet Battery" asset finding.1
+
+Primary Keywords (Phrase & Exact Match):
+
+"truck batteries for sale"
+
+"heavy duty truck battery"
+
+"Willard 689 battery" (Heavy commercial).17
+
+"fleet battery maintenance"
+
+"commercial vehicle batteries alberton"
+
+"bus battery replacement"
+
+4.4 The Negative Keyword Firewall
+
+This is the most critical component for a "flawless" campaign. We must aggressively exclude all non-target intent. The paused campaign wasted spend on "motorcycle" terms, which the user explicitly wants removed.1
+
+Universal Negative List (Apply to All Campaigns):
+
+Non-Automotive Types: solar, inverter, deep cycle, lithium, ups, gate motor, alarm, hearing aid, watch, aa, aaa, 9v, rechargeable (consumer electronics context).1
+
+Vehicles Excluded: motorcycle, bike, scooter, boat, marine, jet ski, golf cart, forklift, lawnmower, toyota prius hybrid battery (unless stocking hybrid packs - usually dealership only).
+
+Services Excluded: repair (you replace, don't fix), reconditioning, refurbished, second hand, used, scrap, recycling (unless buying scrap).18
+
+Educational/Info: how to, diy, diagram, course, training, job, vacancy.
+
+Irrelevant Competitors: Terms like battery centre phone number are navigational. Unless we are running a specific conquesting campaign, these often lead to wasted clicks from brand loyalists.
+
+5. Ad Copy & Creative Strategy: Engineering the Perfect Click
+
+The ad copy must mirror the user's psychological state. We will utilize Responsive Search Ads (RSAs) but pin headlines to ensure the "flawless" message structure is maintained. The user emphasized: "people dont just buy a car battery becasue its on sale, they only buy it once they need it". This dictates a strategy of Problem/Solution over Discount/Promo.
+
+5.1 The "Urgency" RSA (For Distress Keywords)
+
+Targeting: "dead battery", "roadside", "mobile fitment"
+
+Headline 1 (The Hook): Stranded in Alberton? / Dead Battery? / Car Won't Start? 1
+
+Headline 2 (The Solution - Pinned): We Come To You - Fast / Mobile Battery Fitment / Fast Battery Delivery 1
+
+Headline 3 (The Trust/Brand): Alberton Battery Mart / Official Willard Stockist / Rated #1 in Alberton
+
+Description 1: Don't Tow! We deliver & fit new car batteries at your home or office anywhere in Alberton. 1
+
+Description 2: Card machine on site. Best prices on Willard & Exide 652, 646 & 628. Call Now. 1
+
+Why this works: It addresses the pain ("Stranded?"), offers the immediate cure ("We Come To You"), and removes friction ("Card machine on site").
+
+5.2 The "Price/Inventory" RSA (For Product Keywords)
+
+Targeting: "652 battery price", "Willard prices", "Exide battery"
+
+Headline 1 (The Product): Best 652 Battery Price / 646 Battery Specials / Willard & Exide Batteries 1
+
+Headline 2 (The Value): Free Fitment & Testing / Prices Include Vat / We Beat Any Quote
+
+Headline 3 (Location): Walk-In: New Redruth / Serving Alberton Area 1
+
+Description 1: Best prices on Willard & Exide. Stocking all sizes (652, 646, 628). Free alternator test included.
+
+Description 2: 24-Month Warranty Guaranteed. Visit us in New Redruth or let us come to you. 1
+
+Why this works: It validates the user's research (mentioning the specific battery codes 652/646) and adds value (Free Fitment).
+
+5.3 Sitelink Strategy
+
+We will retire the underperforming "Commercial" sitelinks and replace them with high-CTR variants found in the audit.1
+
+Mobile Fitment: "We Come To You" - Description: "Fast, reliable mobile delivery. We fit at your home or work." (CTR: 16.00%)
+
+Price Check: "View Battery Prices" - Description: "Instant pricing on Willard, Exide & Sabat. Call for a quote."
+
+Free Testing: "Free Alternator Test" - Description: "Don't guess. We test your battery & alternator for free."
+
+Truck/Fleet (Alrode only): "Fleet Battery Accounts" - Description: "Heavy duty batteries for trucks. VAT invoices provided." (Modified to address B2B pain points).
+
+6. Technical Account Configuration & Bidding
+
+6.1 Campaign Structure: The "Alpha/Beta" Split
+
+To maintain "flawless" control, we will split the account into two distinct campaigns based on intent.
+
+Campaign 1: Search - Auto - Urgency (Mobile)
+
+Goal: Leads (Phone Calls).
+
+Keywords: "dead battery", "mobile replacement", "near me", "roadside".
+
+Location: Alberton + 15km Radius (Strict).
+
+Bidding: Target CPA (Cost Per Acquisition). Since we know the "Monday Peak" has high conversion rates, we want the algorithm to chase conversions, not just clicks.
+
+Schedule: Mon-Fri, 07:00 - 18:00 (Extending slightly to catch the pre/post-work rush).
+
+Campaign 2: Search - Auto - Inventory (Price)
+
+Goal: Sales / Store Visits.
+
+Keywords: "652 price", "willard battery price", "car battery shop".
+
+Location: Alberton + 15km Radius.
+
+Bidding: Maximize Clicks with a Bid Cap. These users are comparing prices. We want to be visible but not overpay for "shoppers." A bid cap prevents overspending on competitive terms like "car battery price" which have high volume but lower immediate urgency.19
+
+Schedule: Mon-Fri, 08:00 - 17:00.
+
+6.2 Bidding Strategy & Budget Allocation
+
+Budget Split: Allocate 60% of the budget to the Urgency campaign (higher CTR, higher conversion probability) and 40% to the Inventory campaign.
+
+Ad Schedule Bid Adjustments:
+
+Monday: +15% Bid Adjustment (Capitalize on the 21% CTR peak).2
+
+Tue-Wed: 0% (Base bid).
+
+Thu-Fri: -10% (Thursday is a known trough; reduce aggression slightly to conserve budget for Monday).2
+
+Sat-Sun: -100% (Ad scheduling off).
+
+6.3 Conversion Tracking (The "Flawless" Metric)
+
+The current account reports show "Interactions" but not necessarily specific "Conversions" (Calls vs. Leads). To be flawless, we must distinguish between a click and a customer.20
+
+Primary Conversion: Click-to-Call (Mobile). This is the gold standard for a "dead battery" user.
+
+Secondary Conversion: "Get Directions" (Google Maps click for the New Redruth store).
+
+Tertiary Conversion: Website Form Fill ("Request a Quote").
+
+7. Competitive Landscape & Counter-Strategy
+
+Alberton is a contested battleground. Major national players like Battery Centre, Tyres & More, and SABAT Xpress operate in the area.21 Their strategy relies on brand dominance and massive budgets.
+
+7.1 The Competitor Weakness
+
+Competitors like Battery Centre often run national campaigns that lack local nuance. They bid on "battery replacement" broadly.
+
+Our Advantage: Local Specificity. By using headlines like "We Come To You - Alberton" and "Walk-In: New Redruth", we signal local relevance that a national chain cannot match. A user in New Redruth trusts a "New Redruth" ad more than a generic "Johannesburg" ad.22
+
+7.2 Brand Positioning
+
+Willard vs. Sabat: Consumers are often confused between these brands. Our ad copy should simplify this: "Official Willard & Exide Stockist." We position Alberton Battery Mart as the unbiased expert who stocks the "Big 3" (Willard, Exide, Raylite), unlike franchise stores that may push a single house brand.23
+
+Price Leadership: While we don't want "cheap" traffic, we do want value traffic. Using the "Free Fitment" and "Free Alternator Test" hooks differentiates us from retailers (like Makro or Game) who sell batteries but don't install them.25
+
+8. Detailed Implementation Roadmap
+
+Phase 1: The Purge (Days 1-2)
+
+Pause all existing campaigns targeting "Winter" or broad "Battery" terms without automotive qualifiers.
+
+Upload the Universal Negative Keyword List (Solar, Motorcycle, etc.) to the Shared Library and apply to all campaigns.
+
+Set Ad Schedule to Mon-Fri exclusively across all active campaigns.
+
+Phase 2: The Build (Days 3-5)
+
+Create Campaign 1 (Urgency): Load "Dead Battery" keywords. Create RSA with "We Come To You" pinned headlines. Apply +30% Location Bid Adjustment for New Redruth/Meyersdal.
+
+Create Campaign 2 (Inventory): Load "Battery Code" keywords (652, 646, etc.). Create RSA with "Best Prices" pinned headlines.
+
+Setup Assets: Create the "Mobile Fitment" and "Free Testing" sitelinks. Add Call Extensions with the schedule set to Mon-Fri.
+
+Phase 3: The Launch & Monitor (Days 6-14)
+
+Launch both campaigns.
+
+Monitor "Search Terms" Daily: Aggressively add negatives for any leakage (e.g., if "toyota forklift battery" sneaks in).
+
+Check Quality Score: Ensure keywords like "652 battery" have "Average" or "Above Average" ad relevance. If not, tweak the ad copy to include "652" explicitly.20
+
+9. Conclusion: Defining Success
+
+This strategy transforms the Alberton Battery Mart Google Ads account from a passive advertising mechanism into a precision tool for capturing high-intent automotive demand. By aligning the budget with the Monday Peak, enforcing a strict Automotive-Only keyword policy, and leveraging the 15km Radius to dominate the mobile fitment niche, we create a campaign that is immune to the "Saturday Auction Wars" and the "Solar Noise."
+
+The result is not just "more traffic," but correct traffic—drivers in Alberton, with money in hand, looking for a solution between Monday and Friday. This is the definition of a flawless campaign.
+
+10. Detailed Analysis of Key Components
+
+10.1 The "Monday Peak" Phenomenon
+
+The data from the Ad schedule report is unambiguous. Monday represents the single greatest opportunity for profit.
+
+Monday Stats: 211 Impressions, 45 Interactions, 21.33% CTR.
+
+The "why": Batteries often fail after a vehicle has sat idle for 24-48 hours (the weekend). When the user attempts to start the car for work on Monday morning, the failure manifests. This creates a surge of "distress" searches between 07:00 and 09:00 AM.5
+
+Flawless Execution: The new campaign will have a "Monday Morning Boost." We will implement an automated rule or bid adjustment to increase bids by 20% specifically on Mondays to ensure we capture 100% of the Impression Share during this critical window. We will essentially "own" Monday morning in Alberton.
+
+10.2 The Irrelevance of Display Ads
+
+The user correctly noted that "display ads do not work." In this industry, display is for brand awareness (reminding people you exist), but search is for intent (solving a problem). A user does not buy a battery because they saw a banner ad; they buy it because their car won't start.
+
+Action: The Display Network will be strictly disabled for all Search campaigns. No "Search Partners" unless data proves otherwise (unlikely). The budget is 100% committed to the Search Network.
+
+10.3 The "652" and "646" Battery Economy
+
+The mention of "652" and "646" in the high-performing ads 1 is significant. These are the most common battery sizes for South Africa's most popular vehicles (VW Polo, Toyota Hilux, Ford Ranger).15
+
+Strategic Nuance: Many competitors bid on "car battery." By bidding specifically on "652 battery price" or "Willard 646," we bypass the generic competition and target users who have likely already checked their battery size or owner's manual. These users are further down the funnel and closer to purchasing.
+
+Ad Copy Tactic: The ads for these keywords will explicitly mention the price or "Best Price on 652" in the headline. This pre-qualifies the click—users looking for a specific size are looking for a deal or availability.
+
+10.4 Dealing with the "Winter" Legacy
+
+The paused winter sales 2025 campaign was likely a broad-match trap. While it generated volume, the user's frustration ("less and less traffic") stems from its pausing.
+
+Correction: We will acknowledge that traffic volume will be lower than when that campaign was running. However, the conversion rate of the new traffic will be exponentially higher. We are trading "vanity metrics" (impressions) for "sanity metrics" (profit/sales).
+
+10.5 Geographic Granularity: The Suburb List
+
+To effectively target the 15km radius, we must explicitly target the suburbs that matter. Based on the Location report insights (inferred from active ads) and standard Alberton geography 9:
+
+Tier 1 (Core - High Bid): New Redruth, Meyersdal, Alberton North, Florentia, Randhart. (These are minutes from the store/mobile dispatch).
+
+Tier 2 (Secondary - Standard Bid): Brackenhurst, Brackendowns, Verwoerdpark, Dinwiddie. (Residential density).
+
+Tier 3 (Industrial - Commercial Ad Group): Alrode, Alrode South, Wadeville. (Strictly for the "Truck Battery" keywords).
+
+By structuring the location targeting this way, we maximize the efficiency of the mobile driver's route, ensuring they aren't driving 15km for a low-margin sale, but dominating the high-density areas.
+
+This report represents the comprehensive blueprint for the requested "flawless" campaign. Every setting, keyword, and schedule recommendation is derived directly from the intersection of the user's constraints and the hard data provided.
+
+11. Appendix: Keyword & Negative Keyword Lists
+
+11.1 Primary Automotive Keyword List (Phrase Match Focus)
+
+"car battery replacement alberton"
+
+"mobile battery fitment"
+
+"willard battery prices"
+
+"exide battery prices"
+
+"652 battery price"
+
+"646 battery price"
+
+"628 battery price"
+
+"car battery shop near me"
+
+"dead battery help"
+
+"roadside battery change"
+
+"battery centre alberton" (Competitor targeting - use with caution)
+
+"truck battery for sale"
+
+"fleet battery prices"
+
+11.2 The "Flawless" Negative Keyword List (Broad Match Negatives)
+
+solar
+
+inverter
+
+lithium
+
+cycle (excludes deep cycle)
+
+motorcycle
+
+bike
+
+scooter
+
+gate
+
+remote
+
+watch
+
+toy
+
+aa
+
+aaa
+
+ups
+
+load shedding
+
+backup
+
+marine
+
+boat
+
+repair (batteries are replaced, not repaired)
+
+refurbish
+
+course (training)
+
+job
+
+This list ensures that the "flawless" standard is maintained by filtering out the noise before it ever costs a cent.
+
+12. Final Technical Recommendations
+
+12.1 Attribution Model
+
+Switch the attribution model to "Data-Driven" (if available) or "Time Decay." We want to give credit to the clicks that happened closer to the conversion, especially since the window from search to purchase for a dead battery is extremely short (usually < 2 hours).27
+
+12.2 Automated Rules
+
+Set up an automated rule to "Pause Ad Group" if the CTR drops below 3% for more than 7 days. In a high-intent campaign like this, a low CTR indicates a mismatch between the keyword and the ad, violating the "flawless" doctrine. This rule acts as a safety net.
+
+12.3 Quality Score Vigilance
+
+The user wants "flawless" ads. High Quality Scores (8-10/10) lower the CPC.19
+
+Recommendation: Ensure the keyword appears in the Headline 1, the Description, and on the Landing Page. If targeting "Willard 652," the ad must say "Willard 652" and link to a page showing Willard batteries, not the homepage. This relevance creates the "flawless" performance loop: Higher Relevance > Higher CTR > Higher Quality Score > Lower Cost > More Leads.
+
+This concludes the strategic blueprint. The architecture is sound, the data is validated, and the path to dominance in the Alberton automotive battery market is clear. Proceed with implementation.
+
+Works cited
+
+Overview_cards_combined.txt
+
+Google Ads Traffic Decline Investigation
+
+Battery Testing & Replacement | Littleton, CO - Franklynn Automotive, accessed February 13, 2026, https://franklynnauto.com/services/battery-testing-and-replacement/
+
+Car Battery Replacement - Rhino Mobile Mechanics of Cleveland, accessed February 13, 2026, https://www.clevelandmobilemechanics.com/car-battery-service/
+
+Choosing the Best Car Battery: Brands, Fit, and Tests, accessed February 13, 2026, https://manlybattery.com/choosing-the-best-car-battery-brands-fit-and-tests/
+
+New Year Car Battery Checks To Perform For 2026, accessed February 13, 2026, https://www.sabat.co.za/2026/01/28/new-year-car-battery-checks-to-perform-for-2026/
+
+Battery Replacement Alberton | Car Battery Service - Mobile Mechanics in Alberton, accessed February 13, 2026, https://mobilemechanicalberton.co.za/services/battery
+
+Auto Repair Shop Advertising Ideas To Launch Now - Conceptual-Minds, accessed February 13, 2026, https://conceptualminds.com/14-auto-repair-advertising-ideas/
+
+Alberton Area Info - NatRent, accessed February 13, 2026, https://www.natrent.co.za/area-profiles/alberton/
+
+Estate Agents in Alberton - Property24, accessed February 13, 2026, https://www.property24.com/estate-agencies/all-suburbs/alberton/gauteng/19
+
+New Redruth Area Profile | Lifestyle Property Group, accessed February 13, 2026, https://www.lifestylepg.co.za/area-profiles/alberton/new-redruth/
+
+Target ads to geographic locations - Google Ads Help, accessed February 13, 2026, https://support.google.com/google-ads/answer/1722043?hl=en
+
+Location targeting - Google Ads Help, accessed February 13, 2026, https://support.google.com/google-ads/answer/6317?hl=en
+
+SA's 15 best-selling passenger vehicles of 2025 - Cars.co.za, accessed February 13, 2026, https://www.cars.co.za/motoring-news/sas-15-best-selling-passenger-vehicles-of-2025/332159/
+
+Battery Fitment Guide - Fundi Tyres, accessed February 13, 2026, https://www.fundityres.co.za/battery-fitment-guide
+
+Vehicle Battery Listings, accessed February 13, 2026, https://www.mrbattery.co.za/wp-content/uploads/2018/09/2017-FNB_catelogue_2017.pdf
+
+All Batteries for Sale in Alberton, accessed February 13, 2026, https://www.albertonbatterymart.co.za/products/all
+
+Negative keywords : r/googleads - Reddit, accessed February 13, 2026, https://www.reddit.com/r/googleads/comments/1904h70/negative_keywords/
+
+Optimal Setup for Google Ads in the Auto Parts Industry in 2026 - SCUBE Marketing, accessed February 13, 2026, https://www.scubemarketing.com/blog/setup-for-google-ads-in-the-auto-parts-industry-2025
+
+The Ultimate 2026 Google Ads Optimization Checklist - EBS Media, accessed February 13, 2026, https://ebsmedia.us/latest/insight/google-ads-optimization-checklist/
+
+Best Battery Suppliers in Alberton | Verified by Snupit, accessed February 13, 2026, https://www.snupit.co.za/alberton/batteries
+
+3 Google Ads Best Practices for Local Services - SmartSites, accessed February 13, 2026, https://www.smartsites.com/blog/3-google-ads-best-practices-for-local-services/
+
+Willard vs. SABAT: Is There A Difference? - Alberton Battery Mart, accessed February 13, 2026, https://www.albertonbatterymart.co.za/blog/willard-vs-sabat-is-there-a-difference
+
+Willard vs. Exide vs. Raylite: An Honest Alberton Buyer's Guide, accessed February 13, 2026, https://www.albertonbatterymart.co.za/blog/willard-vs-exide-vs-raylite-alberton-guide
+
+Alberton Battery Mart | Mobile Battery Replacement & Fitment Service, accessed February 13, 2026, https://www.albertonbatterymart.co.za/
+
+Alberton, South Africa - Wikipedia, accessed February 13, 2026, https://en.wikipedia.org/wiki/Alberton,_South_Africa
+
+Google Ads Agency For Roadside Assistance Companies - Max Conversion, accessed February 13, 2026, https://www.max-conversion.com/industries/google-ads-agency-for-roadside-assistance

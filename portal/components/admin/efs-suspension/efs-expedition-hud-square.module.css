@@ -1,0 +1,298 @@
+/* EFS — Expedition HUD square 1:1. Export 1080×1080. */
+
+.root {
+  --efs-green: #1e4d2b;
+  --efs-red: #d71920;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    Inter,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: #0a0a0a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--efs-red);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.topLeft {
+  top: 20px;
+  left: 20px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.bottomRight {
+  bottom: 20px;
+  right: 20px;
+  border-left: 0;
+  border-top: 0;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brandHeader {
+  position: relative;
+  z-index: 4;
+  padding: 35px 35px 10px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.efsLogoArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandMain {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.brandMainRed {
+  color: var(--efs-red);
+}
+
+.brandAccent {
+  color: var(--efs-red);
+  font-weight: 800;
+  font-size: 0.7rem;
+  letter-spacing: 4px;
+}
+
+.estBadge {
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 900;
+  border: 1px solid var(--efs-green);
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.techSpecs {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  pointer-events: none;
+}
+
+.specItem {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left: 4px solid var(--efs-green);
+  padding: 8px 15px;
+  color: #fff;
+}
+
+.specLabel {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--efs-green);
+  letter-spacing: 1px;
+  display: block;
+}
+
+.specVal {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.productDock {
+  position: relative;
+  z-index: 4;
+  margin: 20px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 5px solid var(--efs-green);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.productInfo h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.productInfo p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.ctaAction {
+  background: var(--efs-red);
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(215, 25, 32, 0.4);
+  flex-shrink: 0;
+}
+
+.ctaAction svg {
+  width: 24px;
+  height: 24px;
+  stroke: #fff;
+  stroke-width: 3px;
+  fill: none;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080 .corner {
+  width: 72px;
+  height: 72px;
+}
+
+.root.canvas1080 .topLeft {
+  top: 36px;
+  left: 36px;
+}
+
+.root.canvas1080 .bottomRight {
+  bottom: 36px;
+  right: 36px;
+}
+
+.root.canvas1080 .brandHeader {
+  padding: 63px 63px 18px 63px;
+}
+
+.root.canvas1080 .brandMain {
+  font-size: 43px;
+}
+
+.root.canvas1080 .brandAccent {
+  font-size: 22px;
+}
+
+.root.canvas1080 .estBadge {
+  font-size: 19px;
+  padding: 7px 14px;
+}
+
+.root.canvas1080 .techSpecs {
+  left: 63px;
+  gap: 27px;
+}
+
+.root.canvas1080 .specItem {
+  padding: 14px 27px;
+}
+
+.root.canvas1080 .specLabel {
+  font-size: 17px;
+}
+
+.root.canvas1080 .specVal {
+  font-size: 27px;
+}
+
+.root.canvas1080 .productDock {
+  margin: 36px;
+  padding: 36px;
+  border-bottom-width: 9px;
+}
+
+.root.canvas1080 .productInfo h2 {
+  font-size: 43px;
+}
+
+.root.canvas1080 .productInfo p {
+  font-size: 22px;
+  margin-top: 7px;
+}
+
+.root.canvas1080 .ctaAction {
+  width: 90px;
+  height: 90px;
+}
+
+.root.canvas1080 .ctaAction svg {
+  width: 43px;
+  height: 43px;
+}

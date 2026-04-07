@@ -1,0 +1,447 @@
+﻿Comprehensive Prototype Architectural Blueprint and Synthetic Data Ecosystem for Sage Business Cloud Accounting Micro-SaaS
+The contemporary financial technology landscape is undergoing a profound structural transition, evolving from static systems of record to dynamic systems of intelligence and action.1 For decades, the accounting profession has functioned as the manual middleware between business operations—encompassing sales, procurement, and banking—and the rigid compliance requirements of global financial reporting standards.2 This historical dynamic has positioned highly skilled professionals as data entry clerks, forcing them to spend a disproportionate amount of time on low-value, repetitive tasks rather than high-value advisory services.2 The software ecosystem surrounding platforms like Sage Business Cloud Accounting (SBCA) is now ripe for a new class of Micro-SaaS applications that leverage modern technology stacks—specifically Python, Next.js, and Google’s Gemini AI—to solve specific, high-friction problems for accountants and small business owners.1
+To build a prototype that resonates with stakeholders such as accountants and business owners, the underlying data must reflect the complexity and nuance of a real-world enterprise. A sterile dataset with perfect matches and simple integers fails to demonstrate the edge-case reasoning capabilities that differentiate AI-driven automation from legacy rule-based systems.2 Therefore, this report details the creation of a comprehensive mockup company, Lumina Creative Solutions, an SME creative agency, and provides the exhaustive demo data required to validate features such as intelligent bank reconciliation, automated accounts receivable chasing, and visual financial health reporting.3
+The Strategic Imperative of Synthetic Data in Financial Prototyping
+In the realm of financial software development, the quality of the demonstration environment is the primary determinant of perceived value during the sales cycle with risk-averse professionals like accountants.1 Accountants are trained to look for discrepancies, exceptions, and "unclean" data.6 If a prototype only demonstrates "happy path" scenarios where every bank transaction has a perfectly named counterpart in the ledger, the accountant will immediately dismiss the tool as a "toy" that cannot handle the chaotic reality of their clients' books.2
+The creation of a high-fidelity synthetic data ecosystem serves three distinct functions. First, it validates the technical architecture, ensuring that the Python backend can handle the specific data types and structures required by the Sage API.2 Second, it allows for the testing of AI "reasoning" logic, particularly the ability of Gemini models to perform fuzzy matching and contextual interpretation.2 Third, it creates an emotional hook for the user; by seeing a realistic "Aged Debtors" report or a "Burn Rate" chart that mirrors their own business challenges, the stakeholder transitions from a passive observer to an active tester.11
+Theoretical Framework for Lumina Creative Solutions
+Lumina Creative Solutions is established as a mid-sized digital marketing and branding agency based in London.5 This specific industry choice is strategic: creative agencies exhibit high transaction volumes with diverse vendors (freelancers, software subscriptions, media outlets) and complex revenue models (recurring retainers combined with milestone-based project fees).5 This complexity ensures that the prototype can demonstrate varied transactional logic across the entire Sage Business Cloud Accounting API spectrum, from "Contacts" to "Banking" and "Transactions".2
+
+
+Attribute
+	Data Specification
+	Strategic Significance
+	Legal Entity Name
+	Lumina Creative Solutions Ltd
+	Professionalism and local identity 15
+	Industry Segment
+	Digital Marketing & Branding 5
+	Complexity of costs and revenue 14
+	Functional Currency
+	GBP (£) 15
+	Multi-currency testing for UK/US clients 15
+	Tax Regime
+	UK VAT (20% Standard) 3
+	Compliance automation and tax rate mapping 2
+	Staffing Model
+	12 FTEs + 15 Freelancers 13
+	Payroll and subcontractor expense tracking 13
+	Revenue Model
+	60% Retainer / 40% Project 16
+	MRR forecasting and cash flow variability 17
+	Technical Architecture and the Sage Data Substrate
+To build effective automation, an architect must possess a granular understanding of the substrate upon which the application operates.1 The Sage Business Cloud Accounting API provides the essential connectivity layer, but it possesses distinct architectural characteristics and limitations that dictate how demo data must be structured to avoid a "brittle" integration.1
+API Architecture and Resource Segmentation
+The SBCA API is a RESTful interface utilizing standard HTTP verbs and JSON formatting.1 For the Lumina Creative Solutions prototype, data must be segmented across the primary API groups to simulate a fully populated business ledger.1
+
+
+API Section
+	Primary Entities
+	Strategic Opportunity in Prototype
+	Contacts
+	Customers, Suppliers
+	CRM integration and automated vendor onboarding 1
+	Banking
+	Bank Accounts, Feed Lines
+	Automated reconciliation and cash forecasting 1
+	Sales
+	Invoices, Quotes, Credit Notes
+	Automated dunning and revenue analytics 1
+	Purchases
+	Bills, Receipts, Expenses
+	Universal parsing and vendor management 1
+	Transactions
+	Ledger Entries, Journals
+	Anomaly detection and batch processing 1
+	A critical architectural insight is the segregation of "Transactions" from "Banking." In the Sage data model, transactions represent the accounting intent—revenue recognized or debt owed—while banking endpoints represent the financial reality of cash movement.1 The friction that creates the Micro-SaaS opportunity lies almost entirely in the reconciliation of these two diverging datasets.1
+Authentication and Rate Limiting Simulation
+Building a robust SaaS requires navigating Sage's security protocols with precision.1 Sage utilizes the OAuth 2.0 standard, requiring robust token lifecycle management.1 For the prototype to be "production-ready" in its demonstration, it must implement a queue-based worker pattern using Celery and Redis to handle Sage's rate limit of 100 requests per minute per company.1
+The demo data must include "volume bursts"—simulated periods where Lumina Creative Solutions processes 200+ invoices in a single day—to show how the queue system handles throttling and exponential backoff for HTTP 429 "Too Many Requests" errors.2 This provides a technical differentiator that accountants will value: reliability during the high-stress "Year-End" or "VAT Quarter" cycles.2
+Data Layer 1: The Foundational Chart of Accounts (CoA)
+The foundational data cluster for any accounting mockup is the Chart of Accounts. For Lumina Creative Solutions, the CoA must be tailored to include industry-specific accounts that provide a realistic experience for an agency owner.5 The numbering system follows the 1000-5000 hierarchy common in professional accounting environments.5
+
+
+Account Code
+	Account Name
+	Category
+	Strategic Utility
+	1101
+	Sterling Business Checking
+	Current Asset
+	primary reconciliation testing 5
+	1102
+	Accounts Receivable (Debtors)
+	Current Asset
+	AR automation and aging reports 5
+	1105
+	Undeposited Funds
+	Current Asset
+	Demonstrating cash flow timing gaps 23
+	1201
+	Studio & Content Equipment
+	Fixed Asset
+	Depreciation and capital expenditure 5
+	2101
+	Accounts Payable (Creditors)
+	Current Liability
+	Vendor management and bill parsing 5
+	2105
+	VAT Liability Account
+	Current Liability
+	Compliance and tax reporting 2
+	3101
+	Owner's Equity / Capital
+	Equity
+	Capital position and investment 5
+	4101
+	Monthly Retainer Revenue
+	Revenue
+	Core service income (MRR) 5
+	4105
+	Project-Based Fee Revenue
+	Revenue
+	Variable income for runway testing 5
+	5101
+	Freelancer & Contractor Fees
+	Expense
+	High-volume vendor parsing tests 5
+	5110
+	SaaS & Technology Subscriptions
+	Expense
+	Recurring payment identification 5
+	5120
+	Office Rent & Utilities
+	Expense
+	Fixed overhead for burn rate 5
+	This structured CoA allows the prototype to calculate advanced financial metrics. For instance, by separating "Freelancer Fees" (Variable) from "Office Rent" (Fixed), the "Owner's Eye" dashboard can show a "True Burn" metric that ignores one-off capital expenditures, providing a more accurate forecast of business survival.2
+Data Layer 2: Master Data—Customers, Suppliers, and Personas
+The prototype must include diverse contact personas to demonstrate CRM synchronization and automated communication features.2 These records populate the GET /contacts endpoint and serve as the targets for AR automation.9
+Customer Persona Dataset
+
+
+Contact Name
+	Terms
+	Persona Profile
+	Strategic Demo Scenario
+	Global Retail Group
+	Net 30
+	High-value, reliable enterprise client
+	Demonstrate large invoice handling 30
+	Aether Tech Startups
+	Net 15
+	Fast-growing but forgetful with payments
+	EmpathicChaser "Gentle Nudge" target 2
+	Chronic Delay Media
+	Net 30
+	Frequently late, avoids correspondence
+	EmpathicChaser "Firm Demand" target 2
+	Rising Star Talent
+	CIA
+	Cash-in-advance for risky new clients
+	Credit risk analysis and dashboard flags 3
+	Supplier Persona Dataset
+
+
+Contact Name
+	Type
+	Strategic Purpose
+	Adobe Creative Cloud
+	Subscription
+	Automated match for recurring bank line 13
+	Shell Petrol Station
+	Out-of-pocket
+	VisionLedger parsing of messy thermal receipts 2
+	London Studio Space
+	Fixed Rent
+	Recurring expense for burn rate consistency 13
+	Freelance Motion Designer
+	Variable
+	Unstructured Word doc invoice for parsing tests 2
+	These personas create a "narrative" in the demo.11 When an accountant sees "Chronic Delay Media" in the aging report, they immediately understand the practical application of the tool's dunning automation.2
+Feature 1: RecAI—Intelligent Bank Reconciliation Agent
+Bank reconciliation is consistently cited as the single most time-intensive task for bookkeepers, involving tedious pattern matching that humans are forced to perform for the sake of accuracy.1 RecAI is designed to solve the "needle in a haystack" problem where the user must check every strand of hay to find exceptions.2
+Mock Bank Statement Data (The Reality)
+To demonstrate RecAI, the prototype requires a bank statement CSV containing intentionally difficult transactions.18
+
+
+Date
+	Description
+	Amount
+	Logic Check for AI
+	2026-01-05
+	BACS CR - GLOBAL RETAIL
+	£15,000.00
+	Exact Match (Invoice INV-1001) 35
+	2026-01-07
+	DD - ADOBE SYSTEMS
+	-£49.99
+	Recurring SaaS detection 13
+	2026-01-10
+	DEPOSIT - G. SMITH CONS
+	£1,250.00
+	Combinatorial Match (2 Invoices) 2
+	2026-01-12
+	BANK SERVICE FEE
+	-£15.00
+	Missing Entry (Suggest Adjusting Entry) 35
+	2026-01-15
+	STRIPE TRANSFER - AMZN
+	£485.00
+	Net of Fees Match (Inv £500 - £15 Fee) 25
+	2026-01-18
+	NSF CHQ - AETHER TECH
+	-£2,500.00
+	Bounced Payment / Reversal Logic 25
+	2026-01-20
+	POS - SHELL PETROL 104
+	-£62.50
+	Fuzzy Match to Receipt OCR 10
+	The "Knapsack Problem" Demo Scenario
+One of the most powerful aspects of RecAI is its ability to solve the Knapsack problem—matching a single bank deposit to multiple open invoices.2 The prototype demo should show the following ledger state:
+* INV-201: £500.00 (Customer: G. Smith)
+* INV-202: £750.00 (Customer: Smith Consulting)
+* INV-203: £200.00 (Customer: Jones)
+When the £1,250.00 deposit appears, standard rules fail because the name and amount don't match a single record.2 RecAI utilizes Gemini to reason: "G. Smith and Smith Consulting are semantically identical entities. The sum of INV-201 and INV-202 is exactly £1,250.00. This is a 99% probability match".2
+AI Prompt Mechanism for RecAI
+The Python backend constructs a prompt for Gemini 1.5 Flash to perform this matching.1
+Bank Line: "DEPOSIT - G. SMITH CONS" for £1,250.00
+Open Invoices:
+* INV-201: £500.00 (G. Smith)
+* INV-202: £750.00 (Smith Consulting)
+* INV-203: £200.00 (Jones)
+Task: Identify the combination of invoices that sums to the bank line.
+Output: Valid JSON matching the Pydantic schema.
+The resulting dashboard view shows a "Green" suggested match card, allowing the accountant to reconcile three records with a single click.2 This saves 2-5 hours per client per month, a metric that serves as a powerful "No-Brainer" ROI argument.1
+Feature 2: EmpathicChaser—Personalized AR Automation
+Chasing payments is an emotionally draining task for business owners who fear damaging customer relationships.1 Traditional automated tools are often disabled for sensitive clients because their robotic, templated tone can be annoying or harmful to the brand.1 EmpathicChaser uses Gemini 1.5 Pro to write context-aware emails that maintain the "warmth" of the relationship.1
+The Aged Debtors Dataset
+To mock this, the prototype needs an aging schedule with historical communication notes.33
+
+
+Customer Name
+	Invoice #
+	Amount
+	Due Date
+	Status
+	Notes Context
+	Aether Tech
+	INV-550
+	£2,500
+	2026-01-10
+	2 Days Late
+	Loyal client, just finished a big project 2
+	Chronic Delay
+	INV-490
+	£8,000
+	2025-12-15
+	30+ Days Late
+	History of ignoring emails, phone number disconnected 2
+	Global Retail
+	INV-601
+	£12,000
+	2026-01-25
+	Current
+	Always pays on the 28th of the month 30
+	The "Tone Slider" Interaction
+The prototype dashboard features a "Tone Slider" (Polite <-> Firm).2 The demo flow should show:
+   1. Scenario A (Aether Tech): The AI reads the note about the "Loyal Client" and the "Big Project." It generates a message: "Hi [Name], I hope the launch went well last week! I noticed INV-550 is just a couple of days past due—I'm sure it just slipped through the cracks in the post-launch excitement. Could you please check on this when you have a moment?".2
+   2. Scenario B (Chronic Delay): The AI detects the 30-day delay and previous ignored attempts. It shifts to a "Firm" tone: "Dear [Name], regarding INV-490, payment is now significantly past due. To avoid service interruption and potential late fees, please remit payment immediately via the link below".2
+This "Human-in-the-Loop" automation solves the emotional friction of sending the email while maintaining the security of an audit trail via the POST /contact_notes endpoint in Sage.2
+Feature 3: VisionLedger—The Universal Receipt and Invoice Parser
+Data entry remains a massive bottleneck for "shoebox" clients who provide physical receipts or unstructured PDFs.1 VisionLedger utilizes Gemini’s multimodal vision capabilities to extract data without template setups.1 Unlike traditional OCR, Gemini understands that a number next to the word "Total" is the invoice total, even if the label is obscured.1
+Demo Receipt Library
+The prototype should contain images for these specific test cases:
+   * Case 1: The Faded Receipt. A scan of a taxi receipt where the vendor name is blurry. The AI "Chat" feature allows the bookkeeper to ask: "I see the total is £12.50, but the vendor logo is cut off. Is this from Uber or Addison Lee?".2
+   * Case 2: The Multi-Page Bill. A utility invoice with complex VAT breakdowns. Gemini extracts the total liquid amount and populates the vat_lines array for the Sage API.40
+   * Case 3: The Handwritten Invoice. A contractor's handwritten note on a sheet of paper. Gemini extracts the Date, Vendor, and Total, mapping them to the "Freelancer Fees" ledger account.2
+Token Optimization and Extraction Efficiency
+To demonstrate the sustainability of the Micro-SaaS, the prototype should display a "Back-End Cost" metric.1
+
+
+Resource Type
+	Input Tokens
+	Output Tokens
+	Marginal AI Cost (Est.)
+	Single Receipt
+	2,000
+	500
+	< £0.01 1
+	Multi-Page Contract
+	10,000+
+	1,000+
+	< £0.05 1
+	Bank Statement Page
+	3,000
+	800
+	< £0.02 1
+	Using Gemini 2.5 Flash-Lite at $0.10 per million tokens ensures that even at a £9 monthly subscription tier, the application remains highly profitable.1
+Feature 4: Owner’s Eye—Financial Health Visualization
+Small business owners often find standard Sage reports designed for compliance confusing.1 Owner’s Eye is a read-only visualization layer that translates accounting terminology into business metrics like burn rate, runway, and revenue concentration.1
+Calculation Logic for SaaS/Agency Metrics
+The prototype uses Python’s pandas library to perform these calculations on data synced from GET /transactions.2
+   1. Net Burn Rate:
+  
+27
+   2. Cash Runway:
+  
+27
+   3. Revenue Concentration: Percentage of total annual revenue from a single customer.3
+Mock 12-Month Financial Dataset
+Month
+	Cash Inflow
+	Cash Outflow
+	Ending Balance
+	Net Burn
+	Runway
+	Jan 2025
+	£45,000
+	£52,000
+	£200,000
+	£7,000
+	28.5 Mos
+	Feb 2025
+	£42,000
+	£55,000
+	£187,000
+	£13,000
+	14.3 Mos
+	Mar 2025
+	£48,000
+	£58,000
+	£177,000
+	£10,000
+	17.7 Mos
+	Apr 2025
+	£50,000
+	£60,000
+	£167,000
+	£10,000
+	16.7 Mos
+	May 2025
+	£52,000
+	£62,000
+	£157,000
+	£10,000
+	15.7 Mos
+	Jun 2025
+	£45,000
+	£85,000
+	£117,000
+	£40,000
+	2.9 Mos
+	Jul 2025
+	£55,000
+	£58,000
+	£114,000
+	£3,000
+	38.0 Mos
+	In June 2025, the data shows a massive spike in outflow (£85,000). The AI summary for this month explains: "The burn rate spiked this month due to the one-off capital purchase of studio equipment (£30,000). Your operating burn remains stable at £10,000, leaving you with 11 months of operating runway".2 This demonstrates the "Insights over Reporting" value proposition.2
+Technical Edge Cases: Handling the "Sage Quirks"
+Research indicates several technical idiosyncrasies in the Sage ecosystem that a professional Micro-SaaS must handle to provide a polished experience.3 Including demo data that triggers these cases proves the application's robustness.3
+The NNBSP Filename Bug
+Accountants have reported errors when attaching documents if the filename contains a "Narrow No-Break Space" (NNBSP).3 The demo should include an invoice file named Inv_2026_ _Design.pdf. When the user attempts to upload it in the demo, the system displays a "Sanitization" message: "Non-standard characters detected. Cleaning filename for Sage API compliance..." before successfully posting it.3
+Tax Rate Idiosyncrasies and Mapping
+Specific bugs have been flagged regarding tax rates, such as the CA_GST_PST_BC_5 rate in Canadian entities.3 To demonstrate a solution, the VisionLedger module should fetch available tax rates via GET /tax_rates and perform fuzzy matching to align the AI's findings with the ledger's actual configuration.3
+The "Webhook Void" and Smart Polling
+Since the core SBCA API lacks granular webhooks for events like invoice.paid, the prototype must demonstrate a smart polling engine.2
+
+
+Client Activity Level
+	Historical Pattern
+	Polling Frequency
+	High
+	Invoices daily (Mon-Fri)
+	Every 15 Minutes 2
+	Medium
+	Monthly retainers only
+	Every 4 Hours 2
+	Low
+	Dormant or Year-End only
+	Every 24 Hours 2
+	The demo interface should show a "Last Synced: 2 Minutes Ago" badge that updates as the background worker (simulated) finds a new mock transaction in the Sage sandbox.2
+Go-to-Market: Selling to the Gatekeepers
+Selling directly to small business owners is difficult due to high acquisition costs and high churn.1 The superior strategy is selling to accountants and bookkeepers—the gatekeepers who manage dozens of client entities.1
+The Accountant-First Distribution Strategy
+An accountant typically manages between 50 and 100 clients.1 By winning over one firm, the Micro-SaaS acquires a large user block in a single sale.1 The value proposition is capacity creation: saving the firm hours per week allows them to take on more clients without increasing headcount.1
+
+
+Stakeholder
+	Key Interest in Prototype
+	Core Demo Feature
+	Accountant
+	Data integrity and time savings
+	RecAI & VisionLedger 2
+	Bookkeeper
+	Ease of data entry and cleanup
+	NNBSP sanitization & Fuzzy Matching 3
+	Business Owner
+	Cash flow visibility and relationships
+	EmpathicChaser & Owner's Eye 2
+	Pricing Strategy: Engineering the "No-Brainer"
+The pricing model must be perceived as a strategic growth tool rather than a cost.1 Tactics like price anchoring ($29 vs $30) and the "Decoy Effect" can be used to nudge users toward the professional tier.1
+
+
+Tier
+	Price
+	Included Features
+	Strategy
+	Personal
+	£9/mo
+	100 Documents, Basic Dash
+	"Foot in the door" 1
+	Professional
+	£29/mo
+	500 Documents, RecAI
+	"The Safe Choice" 1
+	Teams
+	£79/mo
+	2,000 Documents, Full Agency Suite
+	High-volume advisory 1
+	Conclusion and Strategic Outlook for 2026
+The convergence of Sage’s established cloud data ecosystem and Gemini’s reasoning capabilities creates fertile ground for Micro-SaaS innovation.1 The mundane tasks of matching numbers, chasing debts, and entering data are structural inefficiencies that cost businesses billions annually in lost productivity.1 For the developer, the path forward is clear: do not build a new accounting system, but a satellite that orbits Sage.1
+By creating a prototype using the Lumina Creative Solutions dataset, developers can demonstrate a proactive, human-centric application that doesn't just record the past but actively manages the future.2 The Move toward agentic AI means the prototype is the first step toward a system where the software notices a missing invoice or a duplicate payment and solves it before the user even logs in.1 The technology is ready, the market of overtaxed accountants is waiting, and the execution on these data-driven blueprints is the only variable remaining.1
+Works cited
+      1. Micro SaaS Business Strategy Analysis
+      2. Micro SaaS for Sage Accounting
+      3. Sage Accounting API Solutions Strategy
+      4. Fuzzy Data Matching Guide for Data-Driven Decision-Making - WinPure, accessed January 24, 2026, https://winpure.com/fuzzy-matching-guide/
+      5. Marketing & Advertising Chart of Accounts Template - Fastbooks, accessed January 24, 2026, https://fastbooks.app/resources/chart-of-accounts/for-marketing-advertising/
+      6. 7 Steps to Audit Bank Reconciliation Statements | Trintech, accessed January 24, 2026, https://www.trintech.com/blog/auditing-bank-reconciliations-statements/
+      7. The Comprehensive Guide To Data Reconciliation - Monte Carlo Data, accessed January 24, 2026, https://www.montecarlodata.com/blog-data-reconciliation/
+      8. Fuzzy Matching: definition and use cases, accessed January 24, 2026, https://www.koncile.ai/en/ressources/fuzzy-matching-definition-uses
+      9. How To Integrate Sage Business Cloud Accounting API - Apideck, accessed January 24, 2026, https://www.apideck.com/blog/how-to-integrate-sage-business-cloud-accounting-api
+      10. What is Fuzzy Matching? - Texas Society of CPAs, accessed January 24, 2026, https://www.tx.cpa/news-publications/todays-cpa-magazine/issues/article/nov-dec-2022/2022/11/08/what-is-fuzzy-matching
+      11. Mockaroo - Random Data Generator and API Mocking Tool | JSON / CSV / SQL / Excel, accessed January 24, 2026, https://www.mockaroo.com/
+      12. Financial Dashboard Examples, Insights, and Tips - Embark, accessed January 24, 2026, https://blog.embarkwithus.com/financial-dashboard-examples
+      13. Marketing Agency Running Costs: $225k Monthly to Breakeven; - Financial Models Lab, accessed January 24, 2026, https://financialmodelslab.com/blogs/operating-costs/marketing-agency
+      14. Marketing and Ad Agency Pricing and Costs | Element Three, accessed January 24, 2026, https://elementthree.com/guide-to-marketing-agencies/agency-pricing-and-costs/
+      15. Company Profile Screen - Sage 300 Resources, accessed January 24, 2026, https://help.sage300.com/en-us/2023/classic/Content/SystemManager/CommonServices/SCREENS/CompanyProfile.htm
+      16. 5 Agency Pricing Models & How to Choose the Right One - Scoro, accessed January 24, 2026, https://www.scoro.com/blog/pricing-models/
+      17. Cash Flow Forecasting for SaaS in Excel - Phoenix Strategy Group, accessed January 24, 2026, https://www.phoenixstrategy.group/blog/cash-flow-forecasting-for-saas-in-excel
+      18. Banking - Sage Developer, accessed January 24, 2026, https://developer.sage.com/accounting/reference/banking/
+      19. Sage Accounting API - Sales Transactions (3.1), accessed January 24, 2026, https://developer.sage.com/accounting/reference/invoicing-sales/
+      20. Purchase Transactions - Sage Developer, accessed January 24, 2026, https://developer.sage.com/accounting/reference/invoicing-purchases/
+      21. Posting statements - Sage Developer, accessed January 24, 2026, https://developer.sage.com/banking-service/provider-api/get-started/integrate/api-flows/posting-statements/
+      22. Chart of accounts template | Free download - BILL, accessed January 24, 2026, https://www.bill.com/business-templates/chart-of-accounts
+      23. How to Set Up Your Ecommerce Chart of Accounts (Guide) - Finaloop, accessed January 24, 2026, https://www.finaloop.com/blog/chart-of-accounts
+      24. Accounts receivable aging report: Complete guide (+ free template) - Chaser, accessed January 24, 2026, https://www.chaserhq.com/blog/understanding-aged-receivables-a-comprehensive-guide-chaser
+      25. Free Bank Reconciliation Template (Download) + Walkthrough ..., accessed January 24, 2026, https://financial-cents.com/resources/articles/free-bank-reconciliation-template/
+      26. Invoicing Purchases Endpoint Reference - Sage Developer | Accounting, accessed January 24, 2026, https://qa-developer-portal-accounting.sageaccountantscloud.com/api/invoicing_purchases/
+      27. How Burn Rate Scenarios Impact Cash Flow - Phoenix Strategy Group, accessed January 24, 2026, https://www.phoenixstrategy.group/blog/burn-rate-scenarios-impact-cash-flow
+      28. Finance guide: Cash runway (calculation, uses, examples) - Rho, accessed January 24, 2026, https://www.rho.co/blog/cash-runway
+      29. Contact and Address relationships - Sage Developer, accessed January 24, 2026, https://developer.sage.com/accounting/guides/concepts/contact_and_address_relationship/
+      30. What is an aging report for accounts receivable? - Stripe, accessed January 24, 2026, https://stripe.com/resources/more/what-is-an-aging-report-what-is-in-one-and-how-to-use-it
+      31. How to Use Dunning Emails to Improve Your Payment Process - Mailchimp, accessed January 24, 2026, https://mailchimp.com/resources/dunning-emails/
+      32. Dunning messages – the basics - Stripe, accessed January 24, 2026, https://stripe.com/ie/resources/more/dunning-messages-101-what-they-are-when-to-send-them-and-how-to-write-them
+      33. Accounts Receivable Aging Report: Definition, Examples, How to Use - Versapay, accessed January 24, 2026, https://www.versapay.com/resources/ar-aging-reports-how-to-create
+      34. Generate Your Own Business Bank Statements - LedgerDocs, accessed January 24, 2026, https://www.ledgerdocs.com/generate-your-own-business-bank-statements/
+      35. Sample bank reconciliation statements & real-world examples - Netgain, accessed January 24, 2026, https://www.netgain.tech/blog/sample-bank-reconciliation-a-practical-guide-and-examples-2025
+      36. Aging Report Template - Download Free Excel Template - Corporate Finance Institute, accessed January 24, 2026, https://corporatefinanceinstitute.com/resources/financial-modeling/aging-report-template/
+      37. Dunning Emails: Tips, Tricks, and a Template for Success | Customer.io, accessed January 24, 2026, https://customer.io/learn/lifecycle-marketing/dunning-email-examples
+      38. How To Write an Effective Dunning Letter (with Examples), accessed January 24, 2026, https://www.quadient.com/en/blog/choose-your-words-carefully-how-write-effective-dunning-letter
+      39. Payments & Receipts - Sage Accounting API, accessed January 24, 2026, https://developer.sage.com/accounting/reference/payments/
+      40. PurchaseInvoice | Sage Active Developer, accessed January 24, 2026, https://developer.sage.com/sageactive/resources/purchaseinvoices
+      41. Cash Runway Explained: Formula, Examples, and Uses in Finance, accessed January 24, 2026, https://corporatefinanceinstitute.com/resources/valuation/cash-runway-explained/
+      42. How to Calculate Cash Burn Rate & Extend Your Runway - Hiline, accessed January 24, 2026, https://www.hiline.co/ledger/i/calculate-cash-burn-rate
+      43. Settings | Sage Developer, accessed January 24, 2026, https://developer.sage.com/accounting/reference/settings/
+      44. Contacts | Sage Developer, accessed January 24, 2026, https://developer.sage.com/accounting/reference/contacts/

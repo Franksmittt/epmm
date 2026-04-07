@@ -1,0 +1,627 @@
+﻿Strategic Market Intelligence Report: The Automotive Retail Ecosystem of the East Rand and Johannesburg South
+1. Strategic Executive Summary: The Kinetic Energy of the Secondhand Market
+The automotive retail sector within the southern and eastern corridors of Gauteng—specifically the conurbation linking Alberton, Germiston, Johannesburg South, and Boksburg—represents a sprawling, high-velocity economic ecosystem. For a specialized energy storage provider such as Alberton Battery Mart (ABM), this region is not merely a collection of potential retail customers; it is a dense network of operational partnerships waiting to be activated. The 20-kilometer radius surrounding New Redruth captures one of the most diverse automotive landscapes in Southern Africa, ranging from the polished, glass-fronted franchise showrooms of Voortrekker Road to the gritty, high-volume independent traders of Jules Street and the heavy-duty industrial fleets of Alrode.
+Current macroeconomic conditions in South Africa—characterized by high interest rates, significant new vehicle price inflation, and a constrained consumer credit environment—have fundamentally altered the trajectory of the automotive market. The "buy-down" trend is accelerating, pushing middle-class consumers out of the new vehicle market and into the pre-owned sector. Consequently, the secondhand dealership has become the most critical node in the automotive value chain. These businesses are currently processing higher volumes of inventory than ever before, but they face a unique operational adversary: "Lot Rot."
+Vehicles that sit stationary on showroom floors for days or weeks suffer from inevitable battery degradation. Modern vehicles, laden with parasitic electronic loads—from alarm systems to telematics and always-on ECUs—drain batteries relentlessly. When a prospective buyer arrives for a test drive, a non-starting engine is not just a technical failure; it is a catastrophic sales failure. It shatters the illusion of quality and reliability that the dealer is trying to sell.
+This report serves as a definitive operational dossier for ABM. It moves beyond a superficial listing of businesses to provide a deep-dive analysis of every identifiable secondhand car dealership within the target zone. By synthesizing data from over 700 research snippets, we have constructed a granular picture of the market. We identify not just who the dealers are, but what they sell, where they operate, and how ABM can solve their specific pain points.
+The analysis reveals a market bifurcated into three distinct tiers:
+1. The Corporate Franchise Tier: Entities like Motus, Bidvest McCarthy, and CMH. These require high-level vendor approval but offer consistent, high-volume replacement cycles driven by "Approved Used" certification standards.
+2. The Mega-Independent Tier: Powerhouses like WeBuyCars, King of Cars, and Rifle Range Car Sales. These operators move massive volumes of stock and require a partner who can match their speed and logistics needs.
+3. The "Fat Middle" Independent Tier: The hundreds of smaller, owner-managed lots scattered through Rosettenville, Turffontein, and Boksburg. These businesses are price-sensitive, cash-flow conscious, and highly responsive to relationship-based selling.
+The following sections dissect these tiers geographically and operationally, providing a roadmap for ABM to transition from a supplier of batteries to a strategic partner in fleet uptime and sales conversion.
+________________
+2. The Physics of Inventory: Why Dealerships Bleed Revenue
+To effectively sell into this market, one must understand the technical and financial physics that govern a dealership's inventory. A car dealership is effectively a parking lot for depreciating assets. The battery is the component most vulnerable to this stasis.
+2.1 The Science of "Lot Rot" and Parasitic Draw
+In the past, a car could sit for a month and start without issue. Today, the proliferation of onboard electronics in vehicles like the BMW X5, Ford Ranger, and even the humble VW Polo means that "Dark Current" or parasitic draw is a constant threat. A standard lead-acid battery loses approximately 3-5% of its charge per month due to self-discharge alone.1 Add to this the 20-50mA draw of a modern security system, and a battery can drop below the critical 12.4V starting threshold in less than three weeks.
+For dealers in Alberton North or Germiston Central, where stock turnover might be slower for niche vehicles, this is a daily crisis. A Jump-Start Pack is a band-aid, not a cure. Jump-starting a deeply discharged battery often damages the vehicle's alternator and the battery's internal plates, leading to a "comeback" claim from the customer a week after purchase. ABM’s value proposition here is preventative maintenance and "Sales Prep" replacement—ensuring the car leaves the floor with a healthy battery, protecting the dealer's warranty liability.
+2.2 The Technical Gap: AGM and BMS Coding
+The inventory mix in affluent nodes like New Redruth and Bedfordview is heavily skewed towards German luxury marques (Audi, BMW, Mercedes-Benz) and modern SUVs with Start-Stop technology. These vehicles utilize Absorbent Glass Mat (AGM) or Enhanced Flooded Batteries (EFB).1
+* The Risk: Many independent dealers, trying to cut costs, will install a standard flooded battery in a Start-Stop car. This battery will fail within 3-6 months.
+* The Opportunity: Furthermore, these vehicles require the new battery to be "coded" or registered to the Battery Management System (BMS). If this is not done, the alternator will overcharge and destroy the new battery. Most small corner dealerships lack the diagnostic equipment to do this. ABM can position itself as the technical expert, offering BMS coding as a value-added service included with the battery purchase. This capability is a massive differentiator against generic spares shops.1
+2.3 The "Scrap Economy" Financial Lever
+Dealerships generate a significant waste stream of dead batteries. In the informal economy, these are often sold for cash to scrap collectors.
+* The Strategy: ABM can formalize this process. By offering a "Scrap Bank" account, where the value of scrap lead (approx. R8.50/kg) is credited against new stock purchases, ABM effectively lowers the unit cost for the dealer without eroding its own margin. For a high-volume dealer like Brian Motorland or EBK Auto, who might generate 50 scrap units a month, this represents thousands of Rands in recovered capital.1
+________________
+3. Market Zone 1: Alberton Central & The "Motor City" Corridor
+Alberton serves as the residential and commercial nucleus of the south-east. The dealership network here is polished, dense, and heavily concentrated along Voortrekker Road and the Raceview/Newmarket precinct. This zone is characterized by "Lifestyle Inventory"—SUVs, Crossovers, and Double-Cab Bakkies catering to the suburban families of Meyersdal and Brackenhurst.
+3.1 The Voortrekker Road Giants
+Voortrekker Road is the "Golden Mile" of Alberton’s automotive trade. The density of dealerships here allows for highly efficient sales routes.
+* Nash Nissan (South Crest): Situated at the gateway to Alberton, this dealership is an institution with over 32 years of history. As part of the Super Group, their procurement is centralized, but their used car floor (Nash Nissan Pre-Owned) operates with a degree of autonomy to prep trade-ins. Their inventory mix of Nissan Magnites and Navaras requires a steady supply of both standard DIN batteries and high-cycle commercial units.1
+* Hyundai Alberton (New Redruth): Operating under Motus, this branch is a high-volume mover of the Grand i10 and i20. These vehicles are the bread and butter of the commuter market. The "Motus Select" certification means they cannot tolerate substandard parts. ABM’s pitch here must be on "OE Quality" and rapid stock replenishment.2
+* CMH Toyota Alberton: Anchoring the premium end, their "Automark" division certifies pre-owned Hiluxes and Fortuners. These vehicles are often used for towing and off-road applications, making them prime candidates for battery upgrades (e.g., fitting a larger capacity battery than stock) which ABM can advise on.3
+3.2 The Raceview & Newmarket "Super-Node"
+The development of the Newmarket precinct has pulled gravity southwards, creating a massive cluster of new-age dealerships.
+* Raceview Motors: This is a critical target. A massive independent/franchise hybrid (GWM/Haval) with stock levels often exceeding 150 vehicles. Their inventory is diverse, ranging from older VW Polos to brand new Haval H6s. This diversity creates a complex battery requirement—they need everything from small JIS batteries for Atos/Picantos to large AGM units for BMWs. Their sheer volume makes them a "Key Account" prospect.1
+* New Market Motor Co.: A multi-brand superstore housing Chery, Haval, and Mahindra. The influx of Chinese brands (Chery Tiggo, Haval Jolion) presents a specific opportunity. These vehicles often have unique battery sizes or terminal configurations. ABM should position itself as the specialist in "Import Specification" batteries.2
+3.3 The Independent Traders of Alberton North
+Moving away from the glossy showrooms, Alberton North hosts the "Trader" market along Van Riebeeck Avenue.
+* Jhb Super Motors: A classic independent lot operating since 2010. With a stock of 20-30 mid-tier vehicles, they cater to the cash buyer. These dealers are price-sensitive but value relationships. A "Consignment Stand" model—where ABM places a rack of 5-10 batteries on their floor on consignment—could secure 100% of their business.5
+Table 1: Detailed Directory of Alberton Dealerships
+
+
+Dealership Name
+	Suburb / Location
+	Operational Profile & Inventory Focus
+	Contact Details & Address (Verified)
+	Raceview Motors
+	Raceview
+	Hybrid Franchise/Independent. Massive stock (150+). GWM/Haval plus diverse used inventory. High volume potential.
+	Addr: Cnr Voortrekker & Padstow Str, Raceview 4
+
+
+Tel: 011 724 3000 1
+	Nash Nissan
+	South Crest
+	Franchise (Super Group). 32+ years. Navara, NP200, Magnite. High service standards.
+	Addr: 3 Voortrekker Road, South Crest 1
+
+
+Tel: 010 593 4331 1
+	New Market Motor Co.
+	Raceview
+	Multi-Brand Superstore. Chery, Haval, Mahindra. SUV focus. Tech-heavy vehicles requiring good voltage stability.
+	Addr: Cnr Dante & Hesperus St, Raceview 2
+
+
+Tel: 087 803 1108 1
+	Hyundai Alberton
+	New Redruth
+	Franchise (Motus). High turnover of i20, Grand i10. Stringent "Motus Select" quality checks.
+	Addr: 7 Voortrekker Road, New Redruth 2
+
+
+Tel: 011 907 3110 1
+	CMH Toyota Alberton
+	New Redruth
+	Franchise (CMH). Automark Certified. Fortuner, Hilux, Corolla Cross. Premium pricing tier.
+	Addr: Cnr Heidelberg Road & Internal Road 3
+
+
+Tel: 011 866 3900 1
+	NMI Ford Alberton
+	New Redruth
+	Franchise (NMI). Ford Approved Ranger, Everest. Requires high-cranking amp batteries for diesels.
+	Addr: Cnr Voortrekker & Redruth Street 2
+
+
+Tel: 010 823 8385 1
+	Auto Eternity
+	New Redruth
+	Independent. RMI 5-Star rated. Diverse mid-range stock (VW, Ford, Hyundai).
+	Addr: Cnr Helston & St Columb Street 1
+
+
+Tel: 011 869 1520 1
+	Suzuki Alberton
+	Raceview
+	Franchise (iPOP). Budget/Entry-level cars (Swift, S-Presso). Requires JIS (small pole) batteries.
+	Addr: Cnr Padstow & Jubili Street, Raceview 6
+
+
+Tel: 010 109 5000 1
+	AutoCity Jetour
+	New Redruth
+	Franchise. Chinese luxury SUVs. New market entrant with specific tech needs.
+	Addr: 11 Redruth Road, New Redruth 2
+
+
+Website: autotrader.co.za/dealer/autocity-jetour-alberton 1
+	Group1 Cars
+	New Redruth
+	Multi-Franchise. JAC, BAIC, Used. Strong focus on workhorse bakkies and budget sedans.
+	Addr: Cnr Voortrekker & Eaton Terrace 7
+
+
+Tel: 010 593 4393 1
+	KIA Alberton
+	South Crest
+	Franchise. Kia Konfidence. Picanto, Rio, Sportage.
+	Addr: 3 Voortrekker Road, South Crest 8
+
+
+Tel: 011 869 3266 8
+	Jhb Super Motors
+	Alberton North
+	Independent Trader. Mid-tier/Older cars. 20-30 vehicle stock. Cash buyer focus.
+	Addr: 17 A & B Van Riebeeck Avenue 5
+
+
+Tel: 011 907 1091 1
+	Premium Selection
+	Alrode
+	Boutique Independent. High-end, low volume. Located in industrial zone. Digital lead focus.
+	Addr: 6 Combrinck Street, Alrode 9
+
+
+Tel: 083 567 3404 1
+	Motus VW Alberton
+	Newmarket Park
+	Franchise. MasterCars. Polo Vivo, T-Cross. High volume sales.
+	Addr: Cnr Leonard & Elandsfontein St 10
+
+
+Tel: 010 823 7677 10
+	Double Black Ent.
+	Alberante
+	Independent. Small scale/Niche.
+	Addr: 37 Penzance Street, Alberante 1
+
+
+Web: cars.co.za/groups/Individual-Dealers/Double-Black-Enterprises 11
+	Alrode City Motors
+	Alrode South
+	Independent/Auction. Auctions and direct sales. High turnover potential.
+	Addr: 33 Outeniqua Street, Alrode South 12
+
+
+Web: alrodecitymotors.co.za 12
+	________________
+4. Market Zone 2: The Industrial Engine (Germiston & Wadeville)
+Crossing the highway into Germiston, the market character shifts from "Lifestyle" to "Utility." Germiston is the logistics heartbeat of Gauteng, and its dealership network reflects this. The dominant inventory here consists of Light Commercial Vehicles (LCVs), panel vans, and budget commuter cars for the local workforce.
+4.1 The Airport Park "Motor City"
+Located strategically near Rand Airport and the N3, this precinct serves the heavy industry of Wadeville.
+* Motus Ford Germiston: A behemoth in the commercial space. They process fleets of Ford Rangers and Transits. Fleet managers are their key clients. ABM’s pitch here should be "Fleet Reliability"—ensuring their commercial clients don't suffer downtime due to battery failure.13
+* Premier Auto Germiston: Operating in the "G2" network (often associated with First Car Rental), this dealer handles de-fleeted rental stock. These cars are usually 2-3 years old with high mileage. Batteries are often at the end of their lifespan when these cars hit the floor.13
+4.2 The Independent Stronghold: Germiston Central & Driehoek
+The Germiston CBD and Driehoek areas are home to resilient independent dealers who service the "cash car" and sub-prime finance market.
+* Brian Motorland: A major player on President Street with stock levels reaching 200 units. This is a "volume over margin" business. They need a battery supplier who can offer a tiered product range: "Economy" batteries for budget cars and "Premium" for their better stock.13
+* Bidvest McCarthy Nissan (Driehoek): Located at a major logistics intersection, they specialize in the NP200 "half-tonner," the favorite vehicle of small contractors. This vehicle takes a specific 638 or 639 battery. ABM should ensure deep stock of this specific size to service this account.13
+* City Ride My Cars: A budget-focused dealer in the CBD. Online reviews show a mixed reputation, suggesting they might cut corners on prep. Offering them a low-cost but reliable battery solution could help them improve customer satisfaction.14
+Table 2: Detailed Directory of Germiston & Industrial Dealerships
+
+
+Dealership Name
+	Suburb / Location
+	Operational Profile & Inventory Focus
+	Contact Details & Address (Verified)
+	Motus Ford Germiston
+	Airport Park
+	Franchise. Commercial Hub. Ranger/Transit fleet sales. High service volume.
+	Addr: 7 Dakota Crescent, Airport Park 13
+
+
+Tel: 011 383 5000 1
+	Hyundai Germiston
+	Airport Park
+	Franchise. Commuter focus. Grand i10, Venue. "Hyundai Promise" warranty.
+	Addr: 4 Dakota Crescent, Airport Park 13
+
+
+Tel: 011 383 1300 1
+	Premier Auto
+	Airport Park
+	Independent (G2). Ex-rental/Fleet stock. High mileage, well-maintained vehicles.
+	Addr: Cnr Russell & Rand Airport Road 13
+
+
+Tel: 010 598 2535 1
+	Bidvest McCarthy Nissan
+	Driehoek
+	Franchise. Industrial location. NP200/Navara workhorses.
+	Addr: Cnr Jack & Refinery Roads 13
+
+
+Tel: 011 878 1800 1
+	Brian Motorland
+	Germiston Central
+	High Volume Independent. 200+ cars. Massive variety. Budget to mid-range.
+	Addr: 1 President Street, Germiston 13
+
+
+Tel: 011 568 4765 1
+	City Ride My Cars
+	Germiston Central
+	Independent. Budget/Finance focus. Mixed reputation (opportunity to improve).
+	Addr: 226 Meyer Street, Germiston 14
+
+
+Tel: 011 620 3269 14
+	Cargo Motors Pre-Owned
+	Wadeville
+	Commercial. Heavy duty focus. Mercedes/Fuso connections.
+	Addr: Cnr Osborn & Dekema Road 1
+
+
+Tel: 011 437 0300 1
+	S Auto
+	Elsburg
+	Independent. Affordable cars (<R300k). Polo Vivo, Corolla Quest.
+	Addr: 41 Voortrekker Street, Elsburg 1
+
+
+Tel: 011 383 2146 1
+	WeBuyCars Germiston
+	Gosforth Park
+	Mega-Warehouse. The biggest player. 1000s of cars. High churn.
+	Addr: 1 Suzuka Road, Gosforth Park 1
+
+
+Tel: 087 057 0000 1
+	Cubbi Germiston
+	Gosforth Park
+	Used Car Supermarket. "Car buying your way". Large warehouse format.
+	Addr: 144 Houtbaai Street, Culverwell Park 15
+
+
+Tel: 010 027 5500 15
+	GSV Armoured
+	Gosforth Park
+	Specialist. Armoured vehicles. High value, heavy security modifications.
+	Addr: 7 Indianapolis Blvd, Raceway Park 16
+
+
+Tel: 010 442 2230 16
+	EV Motors
+	Meadowdale
+	Franchise Group (Eastvaal). Certified Used. Trusted service history.
+	Addr: Cnr Kuschke & Herman St 17
+
+
+Tel: 011 487 0709 17
+	Lisacars Route 24
+	Harmelia
+	Repossessed/Bank Stock. Vehicles often stood for months. Dead battery risks high.
+	Addr: Cnr Barbara & Herman Roads 18
+
+
+Tel: 010 600 0415 18
+	City Riderz
+	Malvern East
+	Independent. Smaller operation. VW Polo/Hyundai Accent focus.
+	Addr: 79 Geldenhuis Road, Malvern East 19
+
+
+Web: autotrader.co.za/dealer/city-riderz 20
+	Cedar Motors
+	Selby/Booysens
+	Independent. Established quality used dealer.
+	Addr: Cnr Booysens & John Street 21
+
+
+Tel: 011 689 9203 21
+	Excite Auto
+	Primrose
+	Independent. Small corner dealer.
+	Addr: 72a Rietfontein Rd, Primrose 22
+
+
+Web: yep.co.za/biz/store/excite-auto 22
+	________________
+5. Market Zone 3: The "Deep South" Trader Belt (Rosettenville & Turffontein)
+This area is the heartland of the "Cash Car" economy. The dealership density along Turf Road, Main Street, and Prairie Street is staggering. These dealers serve a highly price-conscious demographic and rely on rapid turnover of affordable stock (R50,000 - R150,000).
+5.1 The Rosettenville Cluster
+* Rifle Range Car Sales: A local legend established in 1975. They dominate the area with a massive footprint (listing over 250 cars). Their longevity proves they are a stable, reliable partner. They likely have an existing battery supplier, but ABM can win on service speed and scrap pricing.23
+* EBK Auto Dealers: A powerhouse with multiple branches in Rosettenville and La Rochelle. They position themselves as "Wholesalers to the Public." With hundreds of cars across three sites, their battery management logistics are complex. ABM can offer a "Consignment Management" solution to simplify their life.24
+* Alfin Auto: Another stalwart of Main Street ("We Buy Cars" focus). They deal in a lot of older trade-ins that likely need immediate battery replacement to be saleable.26
+5.2 The Turffontein & Kenilworth Strip
+* Lima Cars: Located in La Rochelle, they hold a significant stock of over 80 vehicles. Reviews suggest a high-volume, fast-paced environment. This is a prime target for bulk sales of standard 619 and 628 batteries for entry-level cars.27
+* Auto Pedigree (Southgate/Meredale): While part of a chain, this branch handles ex-fleet stock which often sits in storage before reaching the floor. These cars frequently need fresh batteries to pass the 116-point check.28
+Table 3: Detailed Directory of Johannesburg South Dealerships
+
+
+Dealership Name
+	Suburb / Location
+	Operational Profile & Inventory Focus
+	Contact Details & Address (Verified)
+	Rifle Range Car Sales
+	Rosettenville
+	Heritage Independent (Est 1975). Massive stock (250+). Budget to mid-range.
+	Addr: 15 Ruby Street / 59 Prairie St 23
+
+
+Tel: 011 683 0512 29
+	EBK Auto Dealers
+	Rosettenville
+	Wholesaler/Independent. Multiple branches. High volume turnover.
+	Addr: 111 Main Street, Rosettenville 24
+
+
+Tel: 010 593 2291 24
+	EBK Auto (La Rochelle)
+	La Rochelle
+	Branch of EBK. Extension of main stock.
+	Addr: 7 9th Street, La Rochelle 25
+
+
+Web: ebkautodealers.co.za 25
+	Suzuki JHB South
+	Rosettenville
+	Franchise. Entry level (S-Presso, Swift). Small terminal (JIS) batteries needed.
+	Addr: Cnr Rifle Range & Ruby Ave 30
+
+
+Tel: 010 590 9974 30
+	Alfin Auto
+	Rosettenville
+	Independent. "We Buy Cars" specialists. Older trade-in stock.
+	Addr: 109 Main Street, Rosettenville 26
+
+
+Tel: 011 683 4341 26
+	Southside Motors
+	Rosettenville
+	Independent. Bakkies, SUVs, sports cars.
+	Addr: 103 Main Street, Rosettenville 31
+
+
+Tel: 011 683 7822 31
+	Lima Cars
+	La Rochelle
+	High Volume Independent. 80+ cars. Affordable/Budget focus.
+	Addr: 236 Turf Road, La Rochelle 27
+
+
+Tel: 010 023 1949 27
+	Kaloo Motors
+	Ormonde
+	Premium Independent. 45 years experience. Luxury/Premium stock (Volvo, Audi).
+	Addr: 119 Booysens Reserve Rd 32
+
+
+Tel: 011 835 2277 32
+	Auto Pedigree
+	Meredale
+	Chain (Southgate). Ex-Fleet/Rental. Rigorous quality checks.
+	Addr: Cnr Colombine & Main Rd 33
+
+
+Tel: 011 942 7700 33
+	Southgate Wheels
+	Roodepoort/South
+	Independent. Serves the Southgate area.
+	Addr: (Office HQ Florida) 34
+
+
+Tel: 011 326 0812 34
+	KIA The Glen
+	Oakdene
+	Franchise Used. Premium used stock. High traffic location.
+	Addr: 1 Boundary Lane, Oakdene 35
+
+
+Tel: 011 682 6000 35
+	The Glen Volkswagen
+	Oakdene
+	Franchise/MasterCars. High volume sales. Polo, T-Cross.
+	Addr: Cnr Boundary & Comaro St 36
+
+
+Tel: 011 869 0762 36
+	BMW Joburg South
+	Oakdene
+	Premium Franchise. Certified Used. AGM batteries essential.
+	Addr: Cnr Middle Ln & Oak Ave 37
+
+
+Tel: 011 681 4100 37
+	Rand Stadium Toyota
+	Oakdene
+	Franchise (Automark). The Glen Shopping Centre area.
+	Addr: The Glen area 38
+
+
+Web: cars.co.za/search-dealer/Gauteng/Oakdene/ 38
+	Mister Motor
+	Malvern
+	Independent. Corner dealer. Budget cars.
+	Addr: 365 Jules Street, Malvern 39
+
+
+Web: autotrader.co.za/dealer/mister-motor 40
+	Trans Africa Motors
+	Malvern
+	Truck Specialist. 38 years experience. Heavy duty commercial (Hino/Isuzu).
+	Addr: 484 Jules Street, Malvern 41
+
+
+Tel: 011 615 0917 41
+	Deron Motors
+	Malvern
+	Independent. Small corner dealer.
+	Addr: 147 Jules Street, Malvern 42
+
+
+Web: cars.co.za/groups/Individual-Dealers/Deron-Motors 42
+	Adorable Motors
+	Turffontein
+	Independent. Affordable used cars. Stock ~40 vehicles.
+	Addr: 2 Turf Club Street, West Turffontein 43
+
+
+Web: cars.co.za/groups/Individual-Dealers/Adorable-Motors 43
+	________________
+6. Market Zone 4: Boksburg & The Strategic Periphery
+While slightly further out, Boksburg (specifically North Rand Road and Cason Road) acts as the "East Rand Powerhouse." It is a destination shopping node for cars, drawing buyers from all over Gauteng.
+6.1 The Cason Road & North Rand Road Strip
+* Boksburg Car Sales: A massive independent with two branches and over 30 years in the game. Their stock is premium and diverse. They are large enough to buy batteries in bulk and hold stock.44
+* Signature Motors: Located on North Rand Road, this dealer has its own workshop. This is a double opportunity: supply the sales floor and the service center. They sell high-end vehicles (Mercedes, BMW) requiring AGM tech.45
+* King of Cars: A multi-branch giant. Their "Premium" branch deals in luxury cars, while their other branches handle volume. They are a sophisticated operation that will respond to a TCO (Total Cost of Ownership) pitch.46
+Table 4: Detailed Directory of Boksburg & Periphery Dealerships
+
+
+Dealership Name
+	Suburb / Location
+	Operational Profile & Inventory Focus
+	Contact Details & Address (Verified)
+	Boksburg Car Sales
+	Eveleigh
+	Veteran Independent. 2 Branches. 30+ years. High quality used.
+	Addr: 624 Trichardt Road 44
+
+
+Tel: 011 918 5260 44
+	Signature Motors
+	Beyers Park
+	Large Independent + Workshop. Premium stock. Workshop supply opportunity.
+	Addr: 152 North Rand Road 45
+
+
+Tel: 011 918 0040 45
+	S4 Auto Boksburg
+	Boksburg North
+	Luxury/High-Performance. BMW, Mercedes. AGM/BMS coding required.
+	Addr: Cnr North Rand & Wiek St 47
+
+
+Tel: 087 256 5549 47
+	King of Cars
+	Ravenswood
+	Multi-branch Independent. High Volume. "Premium" and standard branches.
+	Addr: 82 Trichardts Road 46
+
+
+Tel: 011 894 5233 46
+	Revival Quality Cars
+	Boksburg North
+	Independent. Cason Road strip. Budget/Mid-range.
+	Addr: Cason Road 48
+
+
+Tel: 087 184 6654 48
+	Quadable Auto
+	Boksburg North
+	Independent. Cason Road strip.
+	Addr: 88b Cason Road 49
+
+
+Web: cars.co.za/groups/Individual-Dealers/Quadable-Auto 49
+	Kondakov Cars
+	Ravenswood
+	Independent. 20 years experience. Certified vehicles.
+	Addr: 84 Trichardt Road 50
+
+
+Tel: 011 894 3335 50
+	CBK Motors
+	Ravenswood
+	Independent. Highly rated (4.3 stars). Customer service focus.
+	Addr: 573 Trichardt Road 51
+
+
+Tel: 010 449 3410 51
+	AAG Motors
+	Bardene
+	Commercial & Cars. Trucks and passenger vehicles. Mixed fleet needs.
+	Addr: 164 Oosthuizen Road 52
+
+
+Tel: 087 892 0496 52
+	Auto Deal Boksburg
+	Witfield
+	Independent. Verified service history focus.
+	Addr: (Serves Boksburg Area) 53
+
+
+Web: autotrader.co.za/dealer/auto-deal-boksburg 53
+	Auto View Pre-Owned
+	Eveleigh
+	Independent. Online-focused showroom.
+	Addr: 7 North Road 54
+
+
+Tel: 011 918 0271 54
+	Autosport Motorcity
+	Beyers Park
+	Prestige/Performance. Classic & Performance cars. High value assets.
+	Addr: Shop 8 VMax Sq, 7 North Road 55
+
+
+Tel: 011 420 0063 55
+	Botha & Deysel
+	Boksburg
+	Large Independent. Wide range of stock. Family oriented.
+	Addr: 23 North Rand Road 56
+
+
+Tel: 011 918 4725 56
+	M5 Auto
+	Boksburg
+	Commercial & Passenger. Bakkies and executive cars.
+	Addr: Cnr Cynthia & Ponds Road 57
+
+
+Tel: 011 230 5220 57
+	M Drive Auto
+	Edenvale
+	Boutique Independent. German car specialist (Audi/BMW).
+	Addr: Eastleigh, Edenvale 58
+
+
+Web: autotrader.co.za/dealer/m-drive-auto 58
+	Kolev Motors
+	Edenvale
+	Independent + Service Centre. Sales and repairs.
+	Addr: 97 Van Riebeeck Avenue 59
+
+
+Tel: 087 701 0957 59
+	________________
+7. Strategic Synthesis and Actionable Roadmap
+The landscape analysis confirms that the automotive sector in the East Rand is not a monolith but a series of distinct micro-economies. The New Redruth dealer needs technical partnership for their BMWs; the Rosettenville dealer needs cheap, reliable batteries to get budget cars off the floor; the Wadeville dealer needs heavy-duty cranking power for their trucks.
+Actionable Roadmap for Alberton Battery Mart:
+1. Deploy the "Dealer Rescue" Service: Create a specific SLA for independent dealers (e.g., Rifle Range, EBK, Raceview). "We will be at your dealership within 45 minutes to replace a dead battery." This solves their most immediate pain point—the lost test drive.
+2. Monetize the Scrap Stream: Approach the high-volume dealers (Brian Motorland, EBK, WeBuyCars) with a formal scrap buy-back proposal. Provide them with ABM-branded collection bins. The credit generated from their scrap can be used to subsidize the purchase of new stock, effectively lowering their price point without ABM lowering its margins.
+3. Technical Partnership: For the premium dealers (S4 Auto, M Drive, CMH Toyota), pitch the "BMS Coding Service." Position ABM as the expert who ensures the car’s electronics are safe. Carry the diagnostic tools to do it on-site.
+4. Target the Commercial Niche: Dedicate specific sales efforts to the heavy-duty dealers in Wadeville (Cargo Motors, Motus Ford) and Alrode. Ensure stock of high-vibration commercial batteries (688, 689 sizes) is available for immediate delivery to these zones.
+By executing this segmented strategy—offering price to the traders, service to the volume players, and technical expertise to the premium dealers—Alberton Battery Mart can effectively "encircle" the market, becoming the indispensable power partner for the region’s automotive retail ecosystem.
+Works cited
+1. Battery Business Strategy and Pricing.txt
+2. Find car dealers in Alberton - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/car-dealers/gauteng/alberton/c-19
+3. CMH Toyota Alberton | New and Pre-Owned Toyota Cars, accessed January 27, 2026, https://cmhtoyota.co.za/cmh-toyota-alberton/
+4. Raceview Motors: RVM Home, accessed January 27, 2026, https://raceviewmotors.co.za/
+5. JHB Super Motors | Home, accessed January 27, 2026, https://www.jhbsupermotors.co.za/
+6. Suzuki Car Dealership | Suzuki Cars for Sale Alberton, accessed January 27, 2026, https://www.suzukialberton.co.za/
+7. Cars for Sale in Alberton - Affordable Pre-owned Cars - Group1 Cars, accessed January 27, 2026, https://www.group1cars.co.za/cars-for-sale-alberton/
+8. Kia Alberton - New and Used Cars For Sale | Kia South Africa, accessed January 27, 2026, https://www.kia.co.za/dealerships/kia-alberton
+9. Find car dealers in Alrode - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/car-dealers/gauteng/alberton/alrode/s-1872
+10. Kia Alberton Car Dealership in Brackenhurst, accessed January 27, 2026, https://www.motusselect.co.za/dealerships/kia-alberton/brackenhurst
+11. Car Dealers in Alberton, Gauteng - Cars.co.za, accessed January 27, 2026, https://www.cars.co.za/search-dealer/Gauteng/Alberton/
+12. Alrode City Motors: Home | Find Your Perfect car, accessed January 27, 2026, https://alrodecitymotors.co.za/
+13. Find car dealers in Germiston - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/car-dealers/gauteng/germiston/c-13
+14. City Ride My Cars – Just 2Ways About Cars, accessed January 27, 2026, https://cityridemycars.co.za/
+15. Used Cars for Sale in Germiston, Johannesburg - cubbi cars, accessed January 27, 2026, https://www.cubbicars.co.za/our-locations/warehouse/5/gauteng/cubbi-germiston
+16. Vehicle Production - GSV – GLOBAL SPECIALISED VEHICLES, accessed January 27, 2026, https://www.gsv.co.za/vehicles/
+17. Contact EV Motors • Get in Touch Today, accessed January 27, 2026, https://www.ev-motors.co.za/contact-us/
+18. Route24 - LisaCars, accessed January 27, 2026, https://lisacars.co.za/route24/
+19. City Riderz - 79 Geldenhuis Road, Malvern East, Gauteng, South Africa - Cars.co.za, accessed January 27, 2026, https://www.cars.co.za/groups/Individual-Dealers/City-Riderz/8069/
+20. City Riderz dealership in Germiston - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/dealer/city-riderz/153048
+21. Contact Us - Cedar Motors, accessed January 27, 2026, https://www.cedarmotors.co.za/contact-us/
+22. Excite Auto | 72a Rietfontein Rd, Primrose, Germiston 1401, Gauteng - Yep.co.za, accessed January 27, 2026, https://www.yep.co.za/biz/store/excite-auto/442441
+23. Rifle Range Car Sales, accessed January 27, 2026, https://www.riflerangecarsales.co.za/
+24. EBK AUTO DEALERS - Looking 4 Spares, accessed January 27, 2026, https://www.looking4spares.co.za/directory/used-car-dealerships-/gauteng/rosettenville/ebk-auto-dealers
+25. EBK Auto Dealers: Home, accessed January 27, 2026, https://ebkautodealers.co.za/
+26. ALFIN AUTO - looking for spares, accessed January 27, 2026, https://www.looking4spares.co.za/directory/used-car-dealerships-/gauteng/rosettenville/alfin-auto
+27. Lima Cars: Home, accessed January 27, 2026, https://www.limacars.co.za/
+28. Used Car Dealership in Southgate, Gauteng - Auto Pedigree, accessed January 27, 2026, https://www.autopedigree.co.za/dealers/gauteng/southgate/23
+29. Contact Us - Rifle Range Car Sales, accessed January 27, 2026, https://www.riflerangecarsales.co.za/contact/
+30. Rosettenville: All Listings - looking for spares, accessed January 27, 2026, https://looking4spares.co.za/directory/used-car-dealerships-/gauteng/rosettenville/all
+31. SOUTHSIDE MOTORS - Looking 4 Spares, accessed January 27, 2026, https://www.looking4spares.co.za/directory/used-car-dealerships-/gauteng/rosettenville/southside-motors
+32. XXXXXX, accessed January 27, 2026, https://www.kaloomotors.co.za/
+33. Print AUTO PEDIGREE JOHANNESBURG - Looking 4 Spares, accessed January 27, 2026, https://www.looking4spares.co.za/directory/used-car-dealerships-/gauteng/johannesburg/auto-pedigree-johannesburg/print?tmpl=component
+34. Contact - Southgate Wheels, accessed January 27, 2026, https://southgatewheels.co.za/contact/
+35. Kia The Glen - New and Used Cars For Sale | Kia South Africa, accessed January 27, 2026, https://www.kia.co.za/dealerships/kia-the-glen
+36. The Glen Volkswagen | Find Your Dream Car - CFAO Mobility, accessed January 27, 2026, https://www.cfaomobility.co.za/volkswagen/find-a-dealer/the-glen-volkswagen/
+37. BMW Joburg South, accessed January 27, 2026, https://www.bmw.co.za/en/retailers-pages/bmw_joburg_south.html
+38. Find car dealers in Oakdene - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/car-dealers/gauteng/johannesburg/oakdene/s-4323
+39. Mister Motor - 365 Jules Street Malvern, Malvern, Gauteng, South Africa - Cars.co.za, accessed January 27, 2026, https://www.cars.co.za/groups/Individual-Dealers/Mister-Motor/4865/
+40. Mister Motor dealership in Johannesburg - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/dealer/mister-motor/148358
+41. TRANS AFRICA MOTORS - Looking 4 Spares, accessed January 27, 2026, https://www.looking4spares.co.za/directory/used-car-dealerships-/gauteng/malvern/trans-africa-motors
+42. Deron Motors - 147 Jules Street, Malvern, Johannesburg, Gauteng, South Africa - Cars.co.za, accessed January 27, 2026, https://www.cars.co.za/groups/Individual-Dealers/Deron-Motors/4219/
+43. Adorable Motors - 2 Turf Club Street, West Turffontein, Gauteng, South Africa - Cars.co.za, accessed January 27, 2026, https://www.cars.co.za/groups/Individual-Dealers/Adorable-Motors/4444/
+44. Contact Us for Quality Used Cars - Boksburg Car Sales, accessed January 27, 2026, https://boksburgcarsales.co.za/contact-us/
+45. Contact Us - Signature Motors, accessed January 27, 2026, https://signature-motors.co.za/contact-us/
+46. King of Cars: Used Cars | Pre-owned Vehicles, accessed January 27, 2026, https://www.kingofcars.co.za/
+47. Home | Pre-Owned Vehicles Sale | S4Auto Boksburg, accessed January 27, 2026, https://s4auto.co.za/
+48. Revival Quality Cars | South Africa, accessed January 27, 2026, https://www.revivalqualitycars.co.za/
+49. Quadable Auto - 88b Cason Road, Boksburg North, Gauteng, South Africa - Cars.co.za, accessed January 27, 2026, https://www.cars.co.za/groups/Individual-Dealers/Quadable-Auto/7091/
+50. Contact us - Kondakov Cars, accessed January 27, 2026, https://kondakovcars.co.za/Pages/Contact-us.asp
+51. Contact - CBK Motors, accessed January 27, 2026, https://www.cbkmotors.co.za/pages/contact
+52. AAG Motors | South Africa, accessed January 27, 2026, https://www.aagmotors.co.za/
+53. Auto Deal Boksburg - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/dealer/auto-deal-boksburg/147185
+54. Auto View: Used Car Dealer, accessed January 27, 2026, https://autoview.co.za/
+55. Imprint - Autosport Motorcity | Vehicles for Sale Gauteng, accessed January 27, 2026, https://autosportmc.co.za/en/imprint
+56. Welcome to BothaDeysel, accessed January 27, 2026, https://bothadeysel.co.za/
+57. M5 Auto - Pre-Owned Vehicles - Boksburg & Umhlanga, accessed January 27, 2026, https://m5auto.co.za/
+58. M Drive Auto dealership in Edenvale - AutoTrader, accessed January 27, 2026, https://www.autotrader.co.za/dealer/m-drive-auto/66251
+59. Kolev Motors, accessed January 27, 2026, https://kolevmotors.co.za/

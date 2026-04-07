@@ -1,0 +1,65 @@
+Invoice for Alberton Tyre Clinic
+
+Detail
+
+Value
+
+Invoice Number
+
+INV-0014
+
+Date
+
+January 31, 2026
+
+Billed By:
+
+Company: Loony Lighting Pty Ltd T/A Endpoint Media
+
+Contact: Frank Smit
+
+Phone: 0769724559
+
+Email: solo9t9@gmail.com
+
+Note: This is a standard Invoice. Not registered for VAT/Tax.
+
+Billed To:
+
+Company: Alberton Tyre Clinic
+
+Address: 26 St Columb Rd, New Redruth, Alberton, 1449
+
+Phone: 011 907 8495
+
+
+
+Service Details
+
+Description
+
+Amount (ZAR)
+
+Social Media Advertising Services (3 ads per week for 1 month)
+
+R3000.00
+
+TOTAL DUE
+
+R3000.00
+
+
+
+Payment Details
+
+Bank: First National Bank (FNB)
+
+Account Name: *LOOMY LIGHTING (PTY) LTD
+
+Account No: 62942747132
+
+Account Type: Gold Business
+
+Branch Code: 255355
+
+Reference: ALBERTONTC

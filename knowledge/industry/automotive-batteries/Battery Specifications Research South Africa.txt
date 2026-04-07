@@ -1,0 +1,368 @@
+﻿Comprehensive Analysis of Automotive Energy Storage Specifications: A Comparative Study of Exide and Willard Product Architectures in the South African Context
+1. Executive Intelligence and Strategic Market Overview
+The South African automotive aftermarket represents a complex ecosystem of localized manufacturing standards, legacy nomenclatures, and evolving international compatibilities. Within this landscape, the selection of lead-acid energy storage units is governed not merely by brand preference but by a rigid, often misunderstood, system of three-digit identification codes. This report provides an exhaustive, expert-level analysis of six critical battery designations—619/618, 628, 646, 652, 668, and 658—benchmarking the physical architectures of the two dominant market incumbents: Exide and Willard.
+The analysis is driven by a requirement to determine precise physical dimensions (Length, Breadth, Height) and mass metrics. However, beyond the raw data, this report investigates the implications of these specifications on vehicle integration, electrochemical performance, and supply chain logistics. A critical finding of this research is the significant divergence in engineering philosophy between the two manufacturers, particularly within the intermediate product codes, where nominal identifiers mask substantial physical differences. Furthermore, a consistent trend in gravimetric density—weight per unit volume—emerges, serving as a vital proxy for active material content and projected service life in the rugged operating conditions characterizing the Southern African topography.
+The data synthesized herein draws from extensive technical catalogues, warranty documentation, and retail specification sheets associated with Auto-X (manufacturing Willard) and First National Battery (manufacturing Exide), providing a definitive reference for procurement and technical fitment.1
+1.1 The South African Battery Code Taxonomy
+Unlike the Battery Council International (BCI) group sizes used in the Americas or the pure EN (European Norm) codes used in Europe, South Africa utilizes a proprietary three-digit numbering system (e.g., 652, 628). While these codes often align with DIN (Deutsches Institut für Normung) casing standards, they are not strictly regulated regarding external dimensions, leading to manufacturer-specific interpretations.
+* The Compact Series (618/619): Designed for restricted engine bays in A-segment and B-segment Asian and European hatchbacks.
+* The Intermediate/Divergent Series (628): A code characterized by significant dimensional ambiguity between manufacturers.
+* The Standard Series (646): The universal "workhorse" size for mid-sized sedans.
+* The Performance Series (652/668): High-capacity units for executive saloons and SUVs, increasingly featuring AGM and EFB technologies.
+* The Commercial Series (658): Extended-length units designed for light commercial vehicles and high-reserve applications.
+1.2 Manufacturing Origin and Brand Positioning
+Understanding the physical specifications requires context regarding the manufacturing origins. Willard Batteries, produced by Auto-X in Port Elizabeth, emphasizes a design philosophy centered on "Africa's rugged conditions," often prioritizing robust case construction and vibration resistance.1 Their product literature highlights technologies such as the "PowerFrame® grid" (derived from their association with Clarios/VARTA) which impacts the internal weight distribution and grid corrosion resistance.1
+Conversely, Exide, manufactured by First National Battery, positions itself as a premier OEM supplier. Their technical literature often reflects a heavier-duty construction in terms of pure lead content, a fact borne out by the comparative weight analysis in subsequent sections. The Exide "Premium" and "EFB" ranges often utilize high-density active materials to support the "It All Starts" brand promise, necessitating different internal volumes and resulting in heavier unit weights.2
+________________
+2. Technical Analysis of the Compact Segment: Codes 619 and 618
+The 618 and 619 battery codes represent the entry-level tier of the automotive battery market in South Africa. These units are ubiquitous in smaller displacement vehicles (typically 1.0L to 1.6L engines) where engine bay space is at a premium and the parasitic electrical load is relatively low. Despite their small stature, the dimensional precision of these units is critical due to the often cramped nature of modern compact vehicle engine compartments.
+2.1 Willard 618/619: Physical Specifications
+The Willard offering in this segment is designed to offer maximum compatibility with the popular "NS40" and "NS50" footprints common in Japanese and Korean vehicles sold in South Africa.
+* Length: The Willard 619 is precision-molded to a length of 207 mm. This specific dimension is a standard cut-off for the "L1" or "LB1" case size in the DIN system.5
+* Breadth (Width): The width is standardized at 175 mm. This dimension is critical as it corresponds to the base hold-down clamps (B13 or B3) found in most vehicle battery trays. Any deviation here would compromise the security of the battery installation.6
+* Height: The height is listed at 175 mm. This "low profile" height is essential for avoiding contact with the bonnet in aerodynamically designed small cars where the hood line is low.5
+* Weight: The nominal weight for the Willard 619 is 11.5 kg. This weight is indicative of a standard flooded lead-acid construction with a capacity in the region of 43 Ah. The consistent citation of this weight across multiple sources suggests tight manufacturing tolerances at the Port Elizabeth facility.5
+Note on the 618 Variant: The code "618" is often used interchangeably with "619" in retail contexts, primarily differing in terminal polarity orientation (Right Hand Positive vs. Left Hand Positive) or slight rim configurations. Some technical data suggests the Willard 618 may have a length of 208 mm—a negligible 1 mm difference likely attributable to the inclusion of a handle mechanism or slight mold variation.7
+2.2 Exide 619 (619CE): Physical Specifications
+Exide's interpretation of the 619 code, often carrying the suffix "CE" (denoting their Calcium/EFB or specific automotive range), aligns closely with the industry standard but with slight variations in mass that hint at internal chemistry differences.
+* Length: Exide maintains the standard 207 mm length, ensuring that their product can directly replace a Willard unit in the same tray.9
+* Breadth (Width): Standardized at 175 mm.9
+* Height: Standardized at 175 mm.9
+* Weight: The Exide 619CE is documented with a wet weight range of 10.6 kg to 11.3 kg, with a specific reference point at 11.3 kg.9
+   * Insight: The dry weight is listed at roughly 6.8–7.3 kg, implying that the electrolyte (dilute sulfuric acid) contributes approximately 4 kg to the total mass. The slightly lower maximum weight compared to the Willard (11.3 kg vs 11.5 kg) could suggest a slightly different internal plate thickness or a variation in the specific gravity of the acid used, although functionally they are in the same class.
+2.3 Comparative Synthesis: The 618/619 Cluster
+The data indicates a high degree of standardization in the 619/618 category. Both manufacturers adhere to the 207 mm x 175 mm x 175 mm form factor. This adherence is driven by the strict constraints of the "L1 Low" (LB1) casing standard.
+Table 1: Comparative Physical Data for 618/619 Codes
+Manufacturer
+	Product Code
+	Length (mm)
+	Width (mm)
+	Height (mm)
+	Weight (kg)
+	Est. Volume (L)
+	Density (kg/L)
+	Willard
+	619
+	207
+	175
+	175
+	11.50
+	6.34
+	1.81
+	Willard
+	618
+	208
+	175
+	175
+	11.50
+	6.37
+	1.81
+	Exide
+	619CE
+	207
+	175
+	175
+	11.30
+	6.34
+	1.78
+	Average
+	--
+	207.3
+	175
+	175
+	11.43
+	6.35
+	1.80
+	Analysis: The uniform width and height across brands confirm that for the consumer or technician, the choice between Exide and Willard in this size category is largely one of brand loyalty, warranty preference (25 months for Willard vs. 24 months for Exide often seen), or price, rather than physical fitment constraints.
+________________
+3. Technical Analysis of the Divergent Segment: Code 628
+The analysis of the 628 battery code reveals the most significant technical finding of this research: a fundamental "Standardization Schism" between Willard and Exide. Unlike the 619, where dimensions are harmonized, the 628 represents two entirely different battery case standards depending on the manufacturer. This divergence poses a substantial risk for procurement errors.
+3.1 Willard 628: The "Compact High" Philosophy
+Willard manufactures the 628 as a taller version of the 619. This design philosophy maximizes electrolyte volume above the plates (acid head) without increasing the footprint, effectively creating a "High L1" case.
+* Length: 207 mm. This is identical to the 619.11
+* Breadth (Width): 175 mm.
+* Height: 190 mm. This is 15 mm taller than the 619 and the Exide 628 equivalent.11
+* Weight: Approximately 12.5 kg.11
+* Design Implications: By keeping the length at 207 mm but increasing height to 190 mm, Willard creates a battery that fits in short trays but requires more vertical clearance. This is typical of the standard DIN L1 format.
+3.2 Exide 628 (628CE): The "Intermediate Low" Philosophy
+Exide interprets the 628 code as a lower-profile version of the longer 646 battery. This effectively categorizes their 628 as an "LB2" (Low L2) case.
+* Length: 242 mm. This is 35 mm longer than the Willard 628.12
+* Breadth (Width): 175 mm.
+* Height: 175 mm. This is 15 mm shorter than the Willard 628.13
+* Weight: Ranges from 13.6 kg to 13.9 kg.13
+* Design Implications: Exide’s unit requires a longer battery tray (242 mm vs 207 mm). A user replacing a Willard 628 with an Exide 628 might find the battery physically does not fit in the plastic tray or metal bracket of the vehicle. Conversely, the Exide unit is heavier (approx. 1.4 kg more), suggesting higher capacity or plate mass due to the larger internal volume provided by the extra length.
+3.3 The "628 Trap" and Fitment Risks
+The discrepancy in the 628 code is a critical insight for the South African market.
+* Risk A: Replacing a Willard 628 with an Exide 628. The Exide is 35mm longer. If the battery tray is rigid (e.g., a plastic box), the Exide will not fit.
+* Risk B: Replacing an Exide 628 with a Willard 628. The Willard is 15mm taller. If the battery sits under a cowl or air intake pipe, the terminals of the Willard might contact the vehicle structure, causing a short circuit.
+Table 2: The 628 Divergence Matrix
+Manufacturer
+	Length (mm)
+	Width (mm)
+	Height (mm)
+	Weight (kg)
+	Volume (L)
+	Profile Description
+	Willard 628
+	207
+	175
+	190
+	12.50
+	6.88
+	Short & Tall (DIN L1)
+	Exide 628
+	242
+	175
+	175
+	13.90
+	7.41
+	Long & Low (DIN LB2)
+	Difference
+	+35 mm
+	0 mm
+	-15 mm
+	+1.4 kg
+	+0.53 L
+	Incompatible
+	Strategic Insight: The "Average" size for a 628 is a statistical fallacy. Calculating an average (224.5mm length) produces a phantom battery that exists in neither catalog. Users must prioritize specific dimensions over the code "628" when switching brands.
+________________
+4. Technical Analysis of the Mid-Range Standard: Code 646
+The 646 code represents the standard "DIN L2" battery size. This is arguably the most common battery size for passenger vehicles in South Africa, fitting a vast array of compact and mid-sized sedans (e.g., VW Polo, Ford Fiesta, Toyota Corolla). Here, standardization returns, but weight differences hint at performance characteristics.
+4.1 Willard 646: The Baseline
+Willard's 646 is a staple of their "maintenance-free" lineup.
+* Length: 242 mm.17
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight: Approximately 13.5 kg.18
+* Construction: The unit typically features a sealed maintenance-free (SMF) cover, utilizing calcium-calcium plate technology to reduce water loss.
+4.2 Exide 646 (646CE): The Heavyweight Contender
+Exide's version of the 646 matches the Willard in dimensions but diverges significantly in mass.
+* Length: 242 mm.20
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight: Listed at 14.85 kg (Wet Max).20
+* Insight: The Exide unit is approximately 1.35 kg (10%) heavier than the Willard equivalent. In lead-acid battery engineering, mass is a direct function of the amount of lead in the grids and the active material paste. A 10% weight advantage often correlates with:
+   * Thicker Grids: Enhanced resistance to corrosion and mechanical vibration.
+   * Higher Density Paste: Increased cycling capability, which is consistent with the "CE" (Calcium/EFB) designation often applied to this Exide code.
+Table 3: Comparative Physical Data for 646 Code
+Manufacturer
+	Product Code
+	Length (mm)
+	Width (mm)
+	Height (mm)
+	Weight (kg)
+	Willard
+	646
+	242
+	175
+	190
+	13.50
+	Exide
+	646CE
+	242
+	175
+	190
+	14.85
+	Average
+	--
+	242
+	175
+	190
+	14.18
+	________________
+5. Technical Analysis of the Performance Segment: Code 652
+The 652 (DIN L3) is the standard specification for larger passenger vehicles, including executive sedans (BMW 3-Series, Audi A4) and compact SUVs. This segment has seen a significant shift in technology, with both brands introducing AGM (Absorbent Glass Mat) and EFB (Enhanced Flooded Battery) variants under this code to support Start-Stop vehicles.
+5.1 Willard 652: Specifications and Technology
+Willard offers the 652 in both standard SMF and AGM variants, reflecting the need to service high-load modern vehicles.
+* Length: 278 mm.21
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight: The standard SMF unit is listed at approximately 16.35 kg.24
+   * Note: While AGM versions exist, the baseline weight for the 652 code refers to the flooded SMF version. AGM units in this size would typically weigh closer to 20kg due to the glass mat compression, but standard catalog data primarily lists the SMF weight.
+5.2 Exide 652 (652C / 652AGM): Specifications
+Exide's technical sheets often cite a length of 276 mm. This 2 mm difference from the 278 mm standard is a nominal variance in the measurement of the lid rim versus the base hold-down and does not affect tray fitment.
+* Length: 276 mm (Functionally L3/278mm).25
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight: Approximately 17.36 kg.25
+* Insight: Continuing the trend observed in the 646 class, the Exide 652 is roughly 1.0 kg heavier than the Willard 652. This consistent weight premium across the Exide range suggests a corporate engineering standard that prioritizes higher lead content, potentially offering higher Cold Cranking Amps (CCA) reserves (often 515A+ for Exide vs standard ranges for Willard).
+Table 4: Comparative Physical Data for 652 Code
+Manufacturer
+	Product Code
+	Length (mm)
+	Width (mm)
+	Height (mm)
+	Weight (kg)
+	Willard
+	652
+	278
+	175
+	190
+	16.35
+	Exide
+	652C
+	276
+	175
+	190
+	17.36
+	Average
+	--
+	277
+	175
+	190
+	16.86
+	________________
+6. Technical Analysis of the Heavy-Duty Passenger Segment: Code 668
+The 668 code corresponds to the DIN L5 standard. This size is prevalent in large SUVs (Toyota Fortuner, Ford Everest) and luxury German automobiles where the battery is often trunk-mounted. The 668 is a critical size for "overlanding" setups common in South Africa due to its balance of cranking power and reserve capacity.
+6.1 Willard 668: Dual Technology Standards
+Willard's 668 range is notable for the clear distinction between their standard SMF and their AGM offering.
+* Length: 315 mm.29
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight (Standard SMF): Listed at 17.0 kg.29
+* Weight (AGM): The AGM variant is significantly heavier, listed between 20.0 kg and 21.2 kg.32
+   * Mechanism: AGM batteries require the plates to be tightly compressed against the glass mats to facilitate ion transfer and prevent active material shedding. This compression allows for more plates per cell, drastically increasing density and weight.
+6.2 Exide 668 (668P): The Heavyweight Champion
+Exide's offering in this segment appears to compete directly with the upper tier of the market.
+* Length: 314 mm.34
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight: Approximately 21.51 kg.34
+* Insight: The Exide 668P, even in its standard automotive configuration, weighs 4.5 kg more than the standard Willard 668 SMF. In fact, the Exide standard battery is heavier than the Willard AGM battery. This implies that the Exide 668P is built with an exceptionally robust grid structure, making it highly suitable for South African conditions where vibration (corrugated roads) and heat are battery killers.
+Table 5: Comparative Physical Data for 668 Code
+Manufacturer
+	Product Code
+	Length (mm)
+	Width (mm)
+	Height (mm)
+	Weight (kg)
+	Technology
+	Willard
+	668
+	315
+	175
+	190
+	17.00
+	SMF (Flooded)
+	Willard
+	668 AGM
+	315
+	175
+	190
+	21.20
+	AGM
+	Exide
+	668P
+	314
+	175
+	190
+	21.51
+	SMF (High Duty)
+	Average
+	--
+	314.7
+	175
+	190
+	19.90
+	--
+	________________
+7. Technical Analysis of the Commercial Segment: Code 658
+The 658 code represents the DIN L6 standard, the largest common form factor in the 12V automotive lineup before transitioning to specific heavy commercial truck sizes (Code 689/674). These batteries are designed for vehicles with massive electrical demands or light commercial trucks.
+7.1 Willard 658: Conflicting Data and Reality
+The analysis of Willard's 658 reveals a data integrity issue in several retail feeds. Some sources list the weight at 16.35 kg—identical to the 652 and 668.35 This is physically impossible for a battery that is 355 mm long (77 mm longer than a 652).
+* Length: 355 mm.35
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight Analysis: While some feeds claim ~16 kg, credible data for the "Class A" or "CV" (Commercial Vehicle) variants places the weight at 21.1 kg.36 This aligns with the volumetric expectations of a 90Ah–100Ah battery.
+* Variant: The "658 CV" (Commercial Vehicle) variant often features side-mounted terminals or specific hold-downs for truck applications, though the dimensions remain L6.37
+7.2 Exide 658 (658C): The Ultra-Heavyweight
+Exide's 658 offering is a massive unit, clearly designed for high-stress applications.
+* Length: 352 mm.38
+* Breadth (Width): 175 mm.
+* Height: 190 mm.
+* Weight: 24.23 kg.38
+* Insight: The Exide 658 is over 3 kg heavier than the realistic estimate for the Willard 658. This 24kg mass indicates a battery that is packed with active material, likely achieving a true 100Ah rating with high Cold Cranking Amperage (800A+), whereas lighter variants might only offer 90Ah.
+Table 6: Comparative Physical Data for 658 Code
+Manufacturer
+	Product Code
+	Length (mm)
+	Width (mm)
+	Height (mm)
+	Weight (kg)
+	Willard
+	658
+	355
+	175
+	190
+	21.10 (Corr.)
+	Exide
+	658C
+	352
+	175
+	190
+	24.23
+	Average
+	--
+	353.5
+	175
+	190
+	22.67
+	________________
+8. Aggregate Analysis and Future Outlook
+The synthesis of physical data across these six product codes reveals distinctive trends in the South African battery market.
+8.1 The "Exide Mass Premium"
+Across all "Standard" and "Heavy Duty" codes (646, 652, 668, 658), Exide products consistently exhibit a higher mass than their Willard counterparts.
+* Mechanism: This is likely due to the use of thicker lead-calcium grids or a higher density of active paste material in the First National Battery manufacturing process.
+* Implication: For users in extreme heat environments (e.g., the Northern Cape) or those driving on corrugated dirt roads, the heavier Exide units may offer marginal gains in durability due to the mechanical robustness implied by the extra mass.
+8.2 The "Willard Standardization"
+Willard's adherence to standard weights (e.g., the 16.35 kg figure appearing frequently) suggests a highly streamlined manufacturing process optimized for the high-volume replacement market. Their extensive warranty (25 months) 1 suggests that despite the lower mass, their chemical engineering (additives, separators) is sufficiently advanced to guarantee longevity, relying on "Smart" chemistry rather than brute force mass.
+8.3 Average Size and Weight Summary
+Per the user's request, the following table synthesizes the average physical characteristics of these product codes in the South African market. Note: The average for the 628 is provided but flagged for its divergent nature.
+Table 7: Aggregate Market Averages (Exide & Willard Combined)
+Battery Code
+	Avg Length (mm)
+	Avg Width (mm)
+	Avg Height (mm)
+	Avg Weight (kg)
+	Primary Application
+	618/619
+	207.3
+	175
+	175
+	11.43
+	Entry-level Hatchbacks (e.g., Kia Picanto)
+	628
+	224.5 (Divergent)
+	175
+	182.5 (Divergent)
+	13.20
+	Compact Sedans (Fitment verification required)
+	646
+	242.0
+	175
+	190
+	14.18
+	Mid-size Sedans (e.g., VW Polo, Toyota Corolla)
+	652
+	277.0
+	175
+	190
+	16.86
+	Exec Sedans/Compact SUVs (e.g., BMW 3, Audi Q3)
+	668
+	314.5
+	175
+	190
+	19.25
+	Large SUVs/Bakkies (e.g., Toyota Hilux/Fortuner)
+	658
+	353.5
+	175
+	190
+	22.67
+	Light Commercial/Heavy 4x4 (e.g., Land Cruiser)
+	8.4 Conclusion and Recommendation
+For the South African consumer or fleet manager, the choice between Exide and Willard involves a trade-off between mass-based robustness and standardized efficiency.
+* Critical Action: When replacing a 628 battery, physical measurement of the existing battery is mandatory. Do not rely on the code alone.
+* Performance Selection: For heavy-duty applications (towing, off-road) utilizing codes 668 or 658, the Exide variants offer a significant advantage in active material mass.
+* Standard Selection: For standard passenger vehicles (codes 619, 646, 652), both brands offer dimensionally interchangeable solutions, where the decision should likely be driven by warranty terms (Willard's 25 months vs Exide's typical 24 months) and local pricing availability.

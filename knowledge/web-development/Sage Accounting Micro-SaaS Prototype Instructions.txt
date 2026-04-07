@@ -1,0 +1,463 @@
+﻿Strategic Architecture and Implementation Directives for the "Automator's Ledger": A Sage Accounting Micro-SaaS Prototype
+Executive Summary: The Structural Shift from Record to Action
+The global financial technology landscape is currently navigating a profound and irreversible structural transition. We are witnessing the evolution of accounting software from static Systems of Record—traditional ledgers, journals, and historical reporting repositories—to dynamic Systems of Intelligence and Action.1 For decades, the accounting profession has functioned as the manual middleware between the operational reality of a business (sales, procurement, banking) and the rigid compliance requirements of global financial reporting standards. This historical dynamic has positioned highly skilled professionals—accountants, bookkeepers, and CFOs—as glorified data entry clerks, forcing them to allocate disproportionate resources to low-value, repetitive tasks such as transaction matching and invoice parsing, rather than high-value advisory services.3
+The software ecosystem surrounding platforms like Sage Business Cloud Accounting (SBCA) is now ripe for a new class of "Micro-SaaS" applications. These are not monolithic ERP replacements but specialized, high-fidelity satellite applications that leverage modern technology stacks—specifically Python, Next.js, and Google’s multimodal Gemini AI—to solve specific, high-friction problems.4 The opportunity lies not in replacing the ledger, but in automating the "last mile" of data movement where human cognitive load is highest and most wasteful.
+This report serves as the authoritative, deep-research context file and architectural blueprint for Cursor AI. Its purpose is to instruct the AI coding assistant to generate a comprehensive, self-contained project prototype. Unlike traditional technical specifications that focus on live API connectivity—which introduces fragility, authentication hurdles, and data privacy concerns during the demo phase—this directive prioritizes the simulation of reality. To build a prototype that genuinely resonates with risk-averse stakeholders like accountants, the underlying data must reflect the complexity, nuance, and "messiness" of a real-world enterprise.1 A sterile dataset with perfect string matches and simple integers fails to demonstrate the edge-case reasoning capabilities that differentiate Agentic AI from legacy rule-based systems.
+Therefore, this research establishes the "Lumina Creative Solutions" ecosystem—a fully realized, mock mid-sized digital marketing agency. This synthetic organization serves as the data substrate upon which four distinct Micro-SaaS modules will be prototyped: RecAI (Intelligent Reconciliation), EmpathicChaser (Context-Aware AR Automation), VisionLedger (Multimodal Receipt Parsing), and Owner’s Eye (Financial Health Visualization). The following sections detail the strategic architecture, the granular mock data schemas, and the precise prompt engineering required to guide Cursor AI in building a system that feels indistinguishable from a production application.
+________________
+1. The Strategic Architecture: Simulating the "Satellite" Relationship
+To successfully prototype a Micro-SaaS for the Sage ecosystem, one must first understand and simulate the architectural relationship between the satellite (the app) and the core (the ledger). The core strategic insight driving this prototype is that developers should not attempt to build a new accounting system. Sage possesses "data gravity"—it holds the single source of truth for the business. The Micro-SaaS must function as a specialized agent that extracts data, adds intelligence, and pushes action back into the core.4
+1.1 The Philosophy of Mock-Driven Development
+For this prototype, we are adopting a Mock-Driven Development (MDD) strategy. This approach decouples the frontend and business logic from the vagaries of a live sandbox environment. However, to ensure the prototype is technically valid, the architecture must strictly enforce a separation of concerns. The "Mock API Client" must be distinct from the "Business Logic," simulating the exact constraints of the real Sage API.
+The "Cursor Instructions" will explicitly mandate a Service Repository Pattern. The application will not simply import a JSON file into a React component. Instead, it will call a Python/FastAPI endpoint which, in turn, queries a simulated database (JSON store). This allows us to simulate network latency, rate limits, and data validation failures—the very texture of a real-world integration.2
+1.2 Simulating the "Webhook Void" and Polling Dynamics
+A critical characteristic of the Sage Business Cloud Accounting API is its reliance on polling for data synchronization. Unlike platforms like Stripe, which offer granular webhooks for every event (e.g., invoice.paid), the Sage ecosystem often requires the satellite application to periodically check for updates.3 This creates the "Webhook Void."
+To create a realistic prototype, the mock data layer must not be instant. The simulation must include a Latency Injector and a Smart Polling Simulator.
+* Latency Injection: When the user clicks "Sync with Sage" in the prototype, the system must strictly enforce a delay (e.g., 1.5 to 2.0 seconds) to demonstrate the UI's loading states and skeleton screens. This manages user expectations regarding the speed of legacy financial APIs.
+* Rate Limit Simulation: The real Sage API enforces a limit of 100 requests per minute per company.2 A naive implementation that attempts to fetch 500 mock invoices instantly should trigger a simulated HTTP 429 "Too Many Requests" error. The prototype must then demonstrate the "Exponential Backoff" recovery logic, visually showing the user that the system is handling the throttle intelligently.
+1.3 The Transition from Automation to Agentic AI
+The prototype must demonstrate the paradigm shift from simple automation to Agentic AI. Traditional automation follows a deterministic rule: "If the description contains 'Starbucks', categorize as 'Meals'." Agentic AI, driven by Large Language Models (LLMs) like Gemini, engages in reasoning: "I see a transaction for 'Starbucks', but it is for $500, which is unusually high for a meal. I also see a calendar invite for a 'Client Gift Card Purchase' on the same day. I recommend categorizing this as 'Client Gifts' rather than 'Meals', but I have drafted both options for your review".2
+The mock data provided in this report is specifically engineered to trigger these agentic behaviors. We have included "fuzzy" matches, slight discrepancies in vendor names, and complex multi-invoice payments that would break standard "If/Then" rules, forcing the AI to demonstrate its reasoning capabilities.1
+________________
+2. The Simulation Substrate: Lumina Creative Solutions Ltd
+To validate the Micro-SaaS features, the underlying data must tell a coherent business story. Random data generators (like Lorem Ipsum) are insufficient for demonstrating financial logic. We establish Lumina Creative Solutions Ltd as the mock entity.
+2.1 Strategic Industry Selection
+Lumina is established as a mid-sized digital marketing and branding agency based in London.1 This industry choice is deliberate and strategic for several reasons:
+1. High Transaction Volume: Agencies process hundreds of small transactions (software subscriptions, stock photo purchases, freelancer payments) and few large transactions (client retainers), creating a "high noise" environment perfect for testing reconciliation AI.1
+2. Complex Revenue Models: Lumina operates on a hybrid model of Recurring Retainers (60%) and One-Off Projects (40%).1 This complexity is required to demonstrate the advanced charting capabilities of the Owner's Eye module, specifically the ability to forecast "Monthly Recurring Revenue" (MRR) separately from volatile project income.
+3. Complex Cost Structures: The agency relies heavily on freelancers (Variable Costs) and expensive office space (Fixed Costs). This distinction is vital for calculating the "True Burn" metric, which differs from standard GAAP accounting.1
+2.2 Corporate Profile and Configuration
+The following attributes must be hard-coded into the prototype's company_settings.json file to serve as the global configuration state.
+
+
+Attribute
+	Data Specification
+	Strategic Significance in Demo
+	Legal Entity Name
+	Lumina Creative Solutions Ltd
+	Establishes a professional, realistic corporate identity.
+	Industry Segment
+	Digital Marketing & Branding
+	Justifies the complexity of costs and revenue streams.
+	Functional Currency
+	GBP (£)
+	The prototype defaults to Sterling, aligning with the UK-centric VAT examples.1
+	Tax Regime
+	UK VAT (20% Standard)
+	Critical for demonstrating the tax parsing capabilities of VisionLedger.
+	Staffing Model
+	12 FTEs + 15 Freelancers
+	Justifies the high volume of "Freelancer Fee" invoices in the mock ledger.1
+	Fiscal Year End
+	December 31st
+	Establishes the timeline for "Year-End" reporting demos.
+	Sage API Version
+	v3.1 (Simulated)
+	Ensures the mock endpoints align with current Sage documentation architecture.
+	2.3 The Narrative Hook
+The demo data tells a story: Lumina is successful but chaotic. They have high-value clients ("Global Retail Group") who pay well but slowly, creating cash flow gaps. They have a "Burn Rate" problem due to high freelance costs in June. They have a "Shoebox" problem with receipts from their creative directors who lose paper trails. This narrative allows the demonstrator to say, "Lumina is just like your clients—growing fast, but drowning in admin".1
+________________
+3. Technical Architecture and Stack Specifications
+The user has explicitly requested a stack comprising Python, Next.js, and Google Gemini. This section details how these technologies must be structured within the prototype's codebase to ensure scalability and realism.
+3.1 Backend Architecture: Python (FastAPI) & Pydantic
+Python is chosen for its dominance in financial engineering and AI integration. The backend serves as the "Orchestrator," handling data validation and logic before it reaches the frontend.
+FastAPI Implementation:
+The Cursor instructions must specify the use of FastAPI. Even though the data is local, using a robust framework allows for:
+* Asynchronous Handling: Simulating non-blocking I/O, which is critical when processing large batches of invoices.
+* Dependency Injection: Allowing for the easy swapping of the "Mock Data Service" with a "Real Sage Service" in a future production build.
+Pydantic Data Models:
+Financial data requires strict validation. In a real integration, the Sage API might return nulls or unexpected strings. To simulate professional-grade robustness, the prototype must use Pydantic to enforce schemas.
+* Instruction: Create models for Invoice, BankLine, Contact, and LedgerEntry.
+* Validation Rule: Ensure that the total_amount of an invoice always equals the sum of its line_items. If the mock data contains a discrepancy (simulating a corrupted file), the Pydantic validator should raise a visible error.3
+3.2 Frontend Architecture: Next.js (App Router)
+The frontend must provide the "data-dense" experience accountants expect.
+* App Router: Utilizing the app/ directory for routing (e.g., /dashboard/reconciliation, /dashboard/invoices).
+* Server Components: We must simulate the security best practice of keeping API keys (even mock ones) on the server. The data fetching should happen in Server Components, passing serialized data to Client Components for interaction.3
+* State Management: Use Zustand or React Context to manage the global state of the "Sage Sync" status (e.g., Synced, Syncing, Error).
+3.3 UI Design System: Tailwind CSS & ShadcnUI
+The visual presentation determines the perceived value. The prototype must adhere to modern SaaS aesthetic standards.2
+* Color Palette:
+   * Primary (Trust): Classic Blue #288cfa.2
+   * Secondary (Growth): Performance Green #C6F4D6.2
+   * Alert (Urgency): Bold Red #FF0000 (for "Runway < 3 Months").2
+   * Neutral: Grayscale #333333.2
+* Branding: The prototype must display the "Sage Partner" badge in Sage Brilliant Green (Height: 35px), placed secondarily to the Lumina logo.2
+* Layout: Adhere to the F-Pattern layout, placing the most critical number (Runway Countdown) in the top-left quadrant of the dashboard.2
+________________
+4. Data Layer Specification: The Mock JSON Stores
+The heart of this prototype is the data. The Cursor instructions will direct the creation of a data/ directory containing the following JSON files. These files act as the "Source of Truth," replacing the Sage API.
+4.1 The Chart of Accounts (CoA)
+The CoA is the skeleton of the financial system. We must simulate a specific, industry-relevant CoA for a creative agency.
+
+
+Account Code
+	Account Name
+	Category
+	Strategic Utility in Prototype
+	1101
+	Sterling Business Checking
+	Current Asset
+	Primary source for RecAI reconciliation testing.
+	1102
+	Accounts Receivable (Debtors)
+	Current Asset
+	Source data for EmpathicChaser aging reports.
+	1105
+	Undeposited Funds
+	Current Asset
+	Demonstrates cash flow timing gaps (payments received vs. banked).
+	1201
+	Studio & Content Equipment
+	Fixed Asset
+	CapEx: Crucial for exclusion from "True Burn" calculations.1
+	2101
+	Accounts Payable (Creditors)
+	Current Liability
+	Target for vendor management features.
+	2105
+	VAT Liability Account
+	Current Liability
+	Demonstrates compliance automation.
+	3101
+	Owner's Equity / Capital
+	Equity
+	Represents initial investment.
+	4101
+	Monthly Retainer Revenue
+	Revenue
+	MRR: Used for stability forecasting.
+	4105
+	Project-Based Fee Revenue
+	Revenue
+	Variable Revenue: Used for cash runway stress testing.
+	5101
+	Freelancer & Contractor Fees
+	Expense
+	Variable Cost: High volume, messy parsing targets.
+	5110
+	SaaS & Technology Subscriptions
+	Expense
+	Recurring payment identification (e.g., Adobe).
+	5120
+	Office Rent & Utilities
+	Expense
+	Fixed Cost: Establishes baseline burn rate.
+	Strategic Insight: The separation of 5101 (Freelancers) and 5120 (Rent) is the key to the Owner's Eye module. A standard P&L lumps these as "Expenses." Our prototype will separate them to calculate "True Burn" (Fixed + Variable) versus "CapEx" (Account 1201).1
+4.2 Customer Personas (CRM Data)
+We need specific customer archetypes to drive the EmpathicChaser logic. These records populate customers.json.
+Customer Name
+	Terms
+	Persona Profile
+	Strategic Demo Scenario
+	Email (Mock)
+	Global Retail Group
+	Net 30
+	High-value, reliable enterprise client.
+	Demonstrate handling of large, multi-line invoices.
+	finance@globalretail.co.uk
+	Aether Tech Startups
+	Net 15
+	Fast-growing, forgetful.
+	Target for "Gentle Nudge" tone (EmpathicChaser).
+	founders@aethertech.io
+	Chronic Delay Media
+	Net 30
+	Frequently late, avoids contact.
+	Target for "Firm Demand" tone (EmpathicChaser).
+	accounts@chronicdelay.com
+	Rising Star Talent
+	CIA
+	Cash-in-Advance (Risky).
+	Used for Credit Risk dashboard flags.
+	newbiz@risingstar.co.uk
+	4.3 Supplier Personas
+These records populate suppliers.json and are used for expense categorization logic.
+Supplier Name
+	Type
+	Strategic Purpose
+	Default Account
+	Adobe Creative Cloud
+	Subscription
+	Automated match for recurring bank lines.
+	5110
+	Shell Petrol Station
+	Out-of-Pocket
+	VisionLedger parsing of messy thermal receipts.
+	5200
+	London Studio Space
+	Fixed Rent
+	Recurring expense for burn rate consistency.
+	5120
+	Freelance Motion Designer
+	Variable
+	Unstructured invoice parsing tests.
+	5101
+	________________
+5. Feature Deep Dive: RecAI (Intelligent Bank Reconciliation)
+RecAI is the flagship efficiency module. Bank reconciliation is the "needle in a haystack" problem where humans must match internal records to external bank statements.
+5.1 The Core Logic: Solving the Knapsack Problem
+Standard rule-based systems fail when a single bank deposit covers multiple invoices. This is the "Knapsack Problem." RecAI uses a simulated Gemini Agent to perform combinatorial math.
+The Mock Scenario (Data State):
+We must instruct Cursor to seed the data with this specific discrepancy:
+* Bank Line: 2026-01-10 | DEPOSIT - G. SMITH CONS | £1,250.00
+* Ledger (Open Invoices):
+   * INV-201: £500.00 (Customer: G. Smith)
+   * INV-202: £750.00 (Customer: Smith Consulting)
+   * INV-203: £200.00 (Customer: Jones)
+The AI Reasoning Simulation:
+The prototype should simulate the AI's "Chain of Thought":
+1. Semantic Match: "G. Smith"    "Smith Consulting".
+2. Combinatorial Check: Does any subset of open invoices sum to £1,250?
+3. Calculation:   .
+4. Conclusion: "Match Found (99% Confidence)."
+5.2 Comprehensive Bank Statement Dataset (bank_transactions.json)
+The prototype needs a realistic, messy bank statement to demo various AI capabilities.1
+Date
+	Description
+	Amount
+	AI Logic Trigger
+	2026-01-05
+	BACS CR - GLOBAL RETAIL
+	£15,000.00
+	Exact Match: The "Happy Path" (Matches INV-1001).
+	2026-01-07
+	DD - ADOBE SYSTEMS
+	-£49.99
+	Recurring SaaS: AI suggests Account 5110.
+	2026-01-10
+	DEPOSIT - G. SMITH CONS
+	£1,250.00
+	Knapsack Match: The scenario described above.
+	2026-01-12
+	BANK SERVICE FEE
+	-£15.00
+	Missing Entry: AI suggests creating a new transaction.
+	2026-01-15
+	STRIPE TRANSFER - AMZN
+	£485.00
+	Net of Fees: Matches £500 invoice; AI identifies £15 fee.
+	2026-01-18
+	NSF CHQ - AETHER TECH
+	-£2,500.00
+	Reversal: Bounced check logic; AI alerts user.
+	2026-01-20
+	POS - SHELL PETROL 104
+	-£62.50
+	Fuzzy Match: Matches VisionLedger receipt scan.
+	5.3 Cursor Implementation Directives
+   * File: services/rec_ai.py
+   * Class: ReconciliationEngine
+   * Method: find_matches(bank_line, open_invoices)
+   * Logic: Iterate through all subsets of open_invoices. If sum(subset) == bank_line.amount, return a MatchCandidate object.
+   * Mocking: Use a time.sleep(1.0) to simulate the AI processing time.
+________________
+6. Feature Deep Dive: EmpathicChaser (Context-Aware AR)
+EmpathicChaser addresses the emotional friction of debt collection. Business owners fear damaging relationships by asking for money. This tool uses context-aware AI to draft emails with the appropriate tone.
+6.1 The Tone Slider Mechanism
+The user interface must feature a "Tone Slider" ranging from "Polite/Nudge" to "Firm/Demand." The prototype will not generate text dynamically (to save API calls) but will fetch pre-written "Mock AI Responses" based on the slider position and the customer persona.1
+6.2 The Aged Debtors Dataset (aged_debtors.json)
+This data drives the logic.
+Customer
+	Invoice
+	Amount
+	Status
+	Context Note
+	Aether Tech
+	INV-550
+	£2,500
+	2 Days Late
+	"Loyal client, just finished big project."
+	Chronic Delay
+	INV-490
+	£8,000
+	30+ Days Late
+	"Ignores emails, disconnected phone."
+	Global Retail
+	INV-601
+	£12,000
+	Current
+	"Pays on the 28th."
+	6.3 Mock Email Generation Logic
+The prototype must contain the following hard-coded drafts to demonstrate the "Context-Aware" capability.1
+Scenario A: Aether Tech (Polite Tone)
+"Hi [Name], I hope the launch went well last week! I noticed INV-550 is just a couple of days past due—I'm sure it just slipped through the cracks in the post-launch excitement. Could you please check on this when you have a moment?"
+Scenario B: Chronic Delay (Firm Tone)
+"Dear [Name], regarding INV-490, payment is now significantly past due. To avoid service interruption and potential late fees, please remit payment immediately via the link below."
+6.4 Cursor Implementation Directives
+   * Component: ToneSlider.tsx
+   * Logic: When the slider value changes (0-100), update the emailDraft state.
+   * Backend: POST /api/generate-chaser. Accepts invoice_id and tone_score. Returns the mapped string from the mock store.
+________________
+7. Feature Deep Dive: VisionLedger (Multimodal Receipt Parsing)
+VisionLedger solves the "Shoebox Problem." It replaces template-based OCR with Multimodal AI that "sees" the document layout.
+7.1 Demo Cases (Mock Images)
+The prototype should include a drag-and-drop zone. We will simulate the upload of three specific file types, triggering distinct logic paths.1
+   1. The Faded Receipt (Ambiguity Resolution):
+   * Input: taxi_receipt_faded.jpg
+   * Simulation: The AI extracts "£12.50" but cannot read the vendor.
+   * Interaction: The system initiates a Chat Interface: "I see the total is £12.50, but the logo is cut off. Is this Uber or Addison Lee?"
+   * User Action: User clicks "Uber." System updates the record.
+   2. The Multi-Page Bill (Compliance):
+   * Input: utility_bill_vat.pdf
+   * Simulation: AI correctly extracts the "Total Liquid Amount" and populates the vat_lines array for Sage compliance.
+   3. The Handwritten Note (Unstructured):
+   * Input: contractor_note.jpg
+   * Simulation: AI reads handwriting: "For design work - £500". Maps to Account 5101 (Freelancers).
+7.2 Token Economics Visualization
+To prove business viability, the dashboard must display a "Cost Per Document" widget using the Gemini Flash-Lite pricing model.1
+Document Type
+	Input Tokens
+	Output Tokens
+	Est. Cost
+	Single Receipt
+	2,000
+	500
+	< £0.01
+	Multi-Page Contract
+	10,000+
+	1,000+
+	< £0.05
+	7.3 Cursor Implementation Directives
+   * Component: ReceiptUploader.tsx
+   * Logic: On file drop, simulate a progress bar (processing). Then, verify the file name. If filename == 'taxi_receipt.jpg', trigger the "Ambiguity" modal.
+   * Backend: POST /api/parse-receipt. Validate file type. Return the pre-canned JSON extraction result.
+________________
+8. Feature Deep Dive: Owner’s Eye (Financial Health Visualization)
+This module shifts the value proposition from compliance (Reporting) to advisory (Insight).
+8.1 The "True Burn" Logic
+The prototype must implement a calculation engine that differs from standard accounting.
+   * True Burn Formula:   .
+   * Implementation: The code must filter transactions. Include Accounts 5110, 5120, 5101. Explicitly exclude Account 1201 (Studio Equipment).
+   * Runway Formula:   .
+8.2 The 12-Month Financial Dataset (financial_history.json)
+The user requested a 12-month dataset. While the research only provided partial data, we have extrapolated the missing months to create a complete narrative arc: Stability    Crisis (June)    Recovery.
+Month
+	Cash Inflow (Revenue)
+	Cash Outflow (Total)
+	Net Burn (True)
+	Ending Balance
+	Runway (Mos)
+	Narrative
+	Jan 25
+	£45,000
+	£52,000
+	£7,000
+	£200,000
+	28.5
+	Stable start.
+	Feb 25
+	£42,000
+	£55,000
+	£13,000
+	£187,000
+	14.3
+	Variable costs rise.
+	Mar 25
+	£48,000
+	£58,000
+	£10,000
+	£177,000
+	17.7
+	Revenue recovers.
+	Apr 25
+	£50,000
+	£60,000
+	£10,000
+	£167,000
+	16.7
+	Steady state.
+	May 25
+	£52,000
+	£62,000
+	£10,000
+	£157,000
+	15.7
+	Growth phase.
+	Jun 25
+	£45,000
+	£85,000
+	£10,000*
+	£117,000
+	2.9
+	CRISIS: Huge CapEx (£30k) + drop in revenue.
+	Jul 25
+	£55,000
+	£58,000
+	£3,000
+	£114,000
+	38.0
+	Recovery begins.
+	Aug 25
+	£53,000
+	£55,000
+	£2,000
+	£112,000
+	56.0
+	Lean operations.
+	Sep 25
+	£49,000
+	£57,000
+	£8,000
+	£104,000
+	13.0
+	Seasonal dip.
+	Oct 25
+	£51,000
+	£59,000
+	£8,000
+	£96,000
+	12.0
+	Stabilizing.
+	Nov 25
+	£54,000
+	£60,000
+	£6,000
+	£90,000
+	15.0
+	Strong Q4 push.
+	Dec 25
+	£58,000
+	£62,000
+	£4,000
+	£86,000
+	21.5
+	Year-end bonus impact.
+	*Note: In June, Total Outflow is £85k, but "Net Burn" (True Burn) is only £10k because the system identifies £30k as One-Off CapEx (Studio Equipment) and excludes it from the operational burn calculation.
+8.3 Cursor Implementation Directives
+      * Chart Library: Use Recharts for the visualization.
+      * Component: FinancialHealthChart.tsx.
+      * Logic: Fetch the 12-month array. Map the data to a Composed Chart (Line for Cash Balance, Bar for Outflow).
+      * Alerting: If Runway < 3, render a "Critical Alert" banner using the color #FF0000.2
+      * AI Summary: Display the text: "The burn rate spiked in June due to the one-off capital purchase... Your operating burn remains stable.".1
+________________
+9. Implementation Guide: The Cursor AI "Meta-Prompt"
+This section consolidates the research into a structured prompt sequence for the user to copy-paste into Cursor.
+Step 1: Project Scaffolding
+"Act as a Senior Full-Stack Architect. Initialize a Next.js 14 project (App Router) with a Python FastAPI backend. Structure the project to simulate a Sage Accounting Micro-SaaS.
+      1. Create a data/ directory in the root. This will hold our mock JSON databases.
+      2. Initialize a mock_sage_client.py service in the backend that reads from these JSON files with a configurable latency (default 1.5s).
+      3. Configure Tailwind CSS with the following palette: Primary #288cfa, Secondary #C6F4D6, Alert #FF0000.
+      4. Create a Pydantic model CompanySettings and populate it with the 'Lumina Creative Solutions' profile."
+Step 2: Data Ingestion
+"Create a script seed_data.py. I will provide you with the JSON schemas for chart_of_accounts, customers, suppliers, and bank_transactions. Use the specific data points I provide (e.g., the £1,250 Knapsack match scenario, the Aether Tech persona) to populate these files. Do not use random data; use the specific 'Lumina' narrative data."
+Step 3: Feature Implementation (RecAI)
+"Implement the RecAI module.
+      1. Create a Python function find_knapsack_match(target_amount, invoices).
+      2. It must identify if any combination of open invoices sums to the target.
+      3. If a match is found, return a MatchResult with confidence=0.99.
+      4. In the frontend, display this as a 'Smart Suggestion' card with the reasoning: 'G. Smith + Smith Consulting = £1,250'."
+Step 4: Feature Implementation (Owner's Eye)
+"Implement the OwnersEye dashboard.
+      1. Fetch the financial_history.json data.
+      2. Create a utility function calculate_true_burn() that filters out Account 1201 (CapEx).
+      3. Visualize the result using Recharts. Ensure June 2025 is highlighted to show the anomaly.
+      4. Add the 'Sage Partner' badge (35px height, Brilliant Green) to the footer."
+________________
+Conclusion
+This architectural blueprint provides the exhaustive context required to build a high-fidelity prototype for a Sage Accounting Micro-SaaS. By focusing on the Lumina Creative Solutions mock dataset, we ensure the prototype demonstrates complex, Agentic AI reasoning—solving the Knapsack problem in reconciliation, navigating emotional nuance in debt collection, and visualizing true financial health.
+This approach moves beyond simple connectivity to simulate a sophisticated, value-add "Satellite" application. The result will be a demonstration environment that not only functions technically but also tells a compelling business story, effectively de-risking the solution for stakeholders and proving the value of the "Automator's Ledger." The technology is ready, the data is structured, and the instructions are precise—the execution is the only variable remaining.
+Works cited
+      1. Creating Demo Data for SaaS Prototype
+      2. Micro SaaS Business Strategy Analysis
+      3. Micro SaaS for Sage Accounting
+      4. Sage Accounting API Solutions Strategy

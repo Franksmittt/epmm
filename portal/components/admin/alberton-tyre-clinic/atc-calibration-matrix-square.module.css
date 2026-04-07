@@ -1,0 +1,237 @@
+/* Alberton Tyre Clinic — Calibration Matrix square 1:1. Export 1080×1080 (×1.8 from 600). */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --emergency-orange: #ff5500;
+  --tech-teal: #00d1ff;
+  --glass-base: rgba(12, 12, 14, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 40px 80px rgba(255, 85, 0, 0.08);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.sensorBracket {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(255, 85, 0, 0.4);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.sensorTl {
+  top: 25px;
+  left: 25px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.sensorTr {
+  top: 25px;
+  right: 25px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.breakoutHeadline {
+  position: relative;
+  z-index: 15;
+  padding: 0 35px;
+  margin-bottom: -15px;
+  color: var(--pure-white);
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.headlineOutline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--pure-white);
+  display: block;
+}
+
+.horizonDock {
+  position: relative;
+  z-index: 10;
+  margin: 0 25px 25px 25px;
+  background: var(--glass-base);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  clip-path: polygon(0 0, 95% 0, 100% 25%, 100% 100%, 0 100%);
+  border: 1px solid var(--glass-border);
+  border-bottom: none;
+  padding: 40px 30px 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.dockInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 60%;
+  min-width: 0;
+}
+
+.telemetry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pulseBar {
+  width: 30px;
+  height: 3px;
+  background: var(--emergency-orange);
+  box-shadow: 0 0 8px var(--emergency-orange);
+  flex-shrink: 0;
+}
+
+.telemetryText {
+  color: var(--emergency-orange);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.btnAction {
+  background: var(--pure-white);
+  color: var(--pure-black);
+  padding: 0 24px;
+  height: 50px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btnAction svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 3px;
+  fill: none;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adCanvas {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080 .sensorBracket {
+  width: 108px;
+  height: 108px;
+  border-width: 4px;
+}
+
+.root.canvas1080 .sensorTl {
+  top: 45px;
+  left: 45px;
+}
+
+.root.canvas1080 .sensorTr {
+  top: 45px;
+  right: 45px;
+}
+
+.root.canvas1080 .breakoutHeadline {
+  padding: 0 63px;
+  margin-bottom: -27px;
+  font-size: 162px;
+  letter-spacing: -4px;
+}
+
+.root.canvas1080 .horizonDock {
+  margin: 0 45px 45px 45px;
+  padding: 72px 54px 45px 54px;
+}
+
+.root.canvas1080 .pulseBar {
+  width: 54px;
+  height: 5px;
+}
+
+.root.canvas1080 .telemetryText {
+  font-size: 19px;
+}
+
+.root.canvas1080 .subtext {
+  font-size: 27px;
+}
+
+.root.canvas1080 .btnAction {
+  height: 90px;
+  padding: 0 43px;
+  border-radius: 22px;
+  font-size: 27px;
+  gap: 14px;
+}
+
+.root.canvas1080 .btnAction svg {
+  width: 29px;
+  height: 29px;
+}

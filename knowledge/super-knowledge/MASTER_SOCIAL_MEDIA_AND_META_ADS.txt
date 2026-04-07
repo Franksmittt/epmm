@@ -1,0 +1,466 @@
+================================================================================
+MASTER KNOWLEDGE: SOCIAL MEDIA, META (FACEBOOK / INSTAGRAM), AND PAID SOCIAL
+================================================================================
+Generic reference synthesized from internal research across multiple clients and
+verticals. No single business is named; adapt examples to your brand, offer, and
+service area. Last consolidated from repository knowledge files (2026).
+
+HOW TO USE THIS FILE
+- Use it as the default playbook when planning organic posts, Meta ads, creative
+  specs, calendars, and account structure.
+- Pair with your own: brand voice guide, offer ladder, compliance rules, and
+  first-party data (CRM, pixel events, customer lists).
+- Verify current Meta UI labels and specs in official Meta documentation; the
+  industry moves fast.
+
+================================================================================
+SECTION 1 — ECOSYSTEM MAP
+================================================================================
+
+Platforms in scope
+- Facebook, Instagram, Messenger, WhatsApp (ads and organic touchpoints), Audience
+  Network placements where enabled.
+
+Core tools (typical division of labour)
+- Meta Business Suite: organic publishing (Planner), unified inbox (comments / DMs
+  / WhatsApp where connected), light boosting, Lead Center (lightweight CRM),
+  high-level Insights, commerce/shops integration.
+- Meta Ads Manager: full paid structure — campaigns, ad sets, ads, budgets,
+  detailed targeting (where available), experiments, granular reporting.
+- Business Manager (backend): assets, domains, billing, partner access, Pixel /
+  dataset and Conversions API setup — governance layer.
+
+Strategic idea
+- Organic social feeds the algorithm signals (what people respond to). Paid
+  social amplifies and tests. Lead ads and messaging ads close loops without a
+  site visit. Treat them as one system, not silos.
+
+================================================================================
+SECTION 2 — HOW META AD DELIVERY WORKS (CONCEPTUAL)
+================================================================================
+
+Total Value auction (simplified)
+- Inventory is auctioned per impression. Winning is not “highest bid only.”
+  Meta optimizes for Total Value to the ecosystem, combining roughly:
+  - Advertiser bid (what you are willing to pay / automated bid strategy).
+  - Estimated action rate (EAR): predicted chance the user takes your desired
+    action after seeing the ad (click, lead, purchase, etc.).
+  - User value / quality: post-click experience, hide rates, engagement bait,
+    misleading creative, slow landings — all can tax delivery.
+
+Creative-as-targeting (modern default)
+- The system infers who should see the ad from creative semantics (what the
+  image/video shows, what the copy claims) plus behavioral data. Hyper-narrow
+  interest stacks can sometimes limit learning; broad geo + age + gender with
+  strong creative is a common winning pattern when conversion volume exists.
+
+Entity clustering (practical implication)
+- Many near-duplicate creatives (tiny text swaps, same layout, same hook) may
+  be treated as one “concept” for exploration. Meaningful tests need meaningful
+  visual and narrative divergence — not 20 shades of the same idea.
+
+GEM / sequencing (conceptual)
+- The system may learn which format or sequence works for different users
+  (e.g., short video then static retarget). Feed it a diverse asset library.
+
+Signal engineering mindset
+- Your job is to supply: clear offers, fast destinations, honest creative,
+  conversion signal (Pixel / Conversions API / offline conversions / CRM uploads),
+  and creative breadth — so the ML can learn.
+
+================================================================================
+SECTION 3 — ACCOUNT STRUCTURE PRINCIPLES
+================================================================================
+
+Classic hierarchy
+- Campaign: objective / budget type (often CBO — campaign budget optimization).
+- Ad set: audience, placements, optimization event, schedule, sometimes bid cap.
+- Ad: creative + copy + destination.
+
+Consolidation vs fragmentation
+- Many tiny ad sets starve learning. Prefer fewer, broader ad sets when budgets
+  are small, unless a segment truly needs isolation (different offer, geo, or
+  margin).
+
+Practical patterns
+- Testing lane: prospecting broad + new angles (creative diversity).
+- Scaling lane: proven winners, sometimes Advantage+ catalog or consolidated
+  shopping-style setups for e-commerce.
+- Retargeting lane: site visitors, engagers, lead lists — usually smaller
+  budgets, different message.
+
+“Four peaks” calendar thinking (cash flow + signal)
+- Plan several major commercial peaks per year (seasonal, cultural, industry).
+  Peaks inject conversion volume that retrains the system; valleys need lighter
+  spend or brand/content maintenance.
+
+================================================================================
+SECTION 4 — OBJECTIVES (CHOOSE TO MATCH THE REAL CONVERSION)
+================================================================================
+
+Match the optimization event to business truth
+- If you optimize for traffic but need leads, you get cheap clicks, not leads.
+- If you optimize for purchases without purchase volume, the system cannot learn.
+
+Common mappings
+- Awareness / reach: new categories, launches, narrative shifts.
+- Engagement: social proof building, community growth (watch cost per meaningful
+  engagement, not vanity).
+- Traffic: only when the landing experience is excellent or you need mid-funnel
+  education clicks.
+- Leads: lead forms or messaging destinations — great when speed matters.
+- Sales / catalog: e-commerce with catalog and purchase events firing reliably.
+
+Messaging / WhatsApp / Instagram DMs
+- Conversion location set to messaging when conversation is the product (high
+  consideration, appointment booking, custom quotes).
+- Pre-filled prompts + instant auto-reply + qualification quick replies reduce
+  drop-off. Human handoff for complex sales.
+
+================================================================================
+SECTION 5 — CREATIVE FORMATS: SPECS, RATIOS, SAFE ZONES
+================================================================================
+
+Image (feed / general)
+- Common ratios: 1:1 square, 4:5 vertical (often strong mobile feed presence),
+  1.91:1 landscape (some placements).
+- Practical minimum: 1080 px on the short edge for many placements; avoid soft
+  or over-compressed JPEGs.
+- Copy guidance (platform truncates): primary text ~125 chars visible before
+  “See more”; headline ~40 chars; description short (often ~30 chars).
+
+Video / Reels / Stories
+- Vertical 9:16 (e.g., 1080×1920) for Reels/Stories-first creative.
+- Feed video often 4:5 or 1:1; long runtimes allowed technically, but short ads
+  frequently outperform for DR.
+- Sound-off design: captions, readable supers, visual story without audio.
+- Thumb-stop: first 1–3 seconds decide retention; platform uses early retention
+  as a quality signal.
+
+Safe zones (critical)
+- Reels: dense UI (caption, buttons, side stack). Keep key text/logo OUT of the
+  bottom ~35% and respect top/right margins — “UI collision” kills readability
+  and performance.
+- Stories: similar 9:16 canvas but typically less bottom obstruction than Reels;
+  still keep bottom ~20% cautious for CTA/swipe UI.
+- Universal discipline: “center safe” — place hero message and product in a
+  central box (roughly square region in a 9:16 canvas) so one master asset can
+  survive multiple placements.
+
+Carousel
+- Cards: minimum 2, maximum 10 (platform limits).
+- Cards should share ONE aspect ratio within the ad (commonly 1:1; some teams
+  prefer 4:5 vertical cards for feed dominance — check current ad-level support
+  in Ads Manager).
+- Headlines per card short; use carousel for story steps, comparisons, bundles,
+  or seamless panoramic slices.
+
+Collection / Instant Experience
+- Mobile-first catalog storytelling; hero + product grid; opens fast native
+  experience — strong when mobile site is weak (still eventually convert on site
+  or messaging).
+
+Lead ads
+- Instant forms reduce friction; add qualifying questions for quality. CRM sync
+  or webhook automation matters — speed-to-lead wins.
+
+================================================================================
+SECTION 6 — COPY AND CREATIVE PSYCHOLOGY (PLATFORM-NATIVE)
+================================================================================
+
+Hooks
+- Pattern interrupt: break the visual monotony of the feed (unexpected stillness
+  can work in a sea of noise, or bold contrast / motion).
+- Zeigarnik / open loops: carousel card 1 starts a thought finished on swipe.
+- Curiosity gap: promise specific knowledge (“the hidden reason X fails”) with
+  ethical delivery.
+
+Frameworks
+- AIDA on carousel progression: Attention → Interest → Desire → Action.
+- PAS for services: Problem → Agitate → Solution.
+- Mini-headlines on each slide: 4–7 words, skimmable.
+
+Social proof & specificity
+- Numbers, timelines, guarantees (where legal), certifications, reviews,
+  before/after (honest, compliant).
+
+Creative diversity checklist (for real tests)
+- Change at least two of: format (static vs UGC vs motion type), persona shown,
+  environment/scene, primary benefit angle (save time vs status vs safety).
+
+Budget split idea (portfolio)
+- ~60% proven control creatives, ~30% structured iterations on winners, ~10%
+  wildcards — protects revenue while hunting new Entity-level concepts.
+
+================================================================================
+SECTION 7 — TARGETING AND AUDIENCES (GENERIC PLAYBOOK)
+================================================================================
+
+Broad vs narrow
+- Start broad when learning is the goal and creative encodes the audience (“for
+  fleet managers hauling max load” calls in the right people).
+- Narrow when legal/compliance, geography, or offer truly requires it.
+
+Custom audiences
+- Site visitors (Pixel), engagers, video viewers, customer lists, offline
+  purchasers — use for retargeting and exclusions (“already bought”).
+
+Lookalikes
+- Work best with clean seed lists (high-LTV purchasers, not mixed junk).
+
+Exclusions (often overlooked)
+- Exclude impossible customers (wrong geography, incompatible housing for bulk
+  delivery, job seekers clicking ads, etc.) when your data proves waste.
+
+Location strategy
+- Radius around store / service area; layered saved locations for testing;
+  compare performance by zone and reallocate budget.
+
+================================================================================
+SECTION 8 — MEASUREMENT, PIXEL, AND DATA HYGIENE
+================================================================================
+
+Pixel / dataset
+- Install base code; fire standard events (Lead, Purchase, ViewContent, etc.)
+  accurately; dedupe with Conversions API where possible.
+
+Event match quality
+- Better customer data parameters → better attribution and optimization.
+
+Reporting
+- Ads Manager for paid diagnostics (CPM, CTR, CPA, ROAS where applicable).
+- Business Suite for organic + holistic trends. Do not compare unrelated KPIs
+  across tools without context.
+
+Fatigue signals
+- Rising CPM with flat results, declining CTR, rising frequency — refresh
+  creative or expand net-new concepts.
+
+================================================================================
+SECTION 9 — ORGANIC SOCIAL: PLANNING AND OPERATIONS
+================================================================================
+
+Planner / scheduling
+- Batch produce; schedule FB + IG with per-platform caption tweaks (tone,
+  hashtags on IG, shorter on FB if needed).
+
+Active times
+- Use account insights to see when followers are online; post slightly before
+  peak windows for early velocity.
+
+Content pillars (rotate weekly)
+- Educate (why problems happen), Prove (process, data, guarantees), Humanize
+  (team, humor, culture), Convert (offer, urgency, CTA), Community (local
+  events, partners).
+
+B2B vs B2C split (when both exist)
+- Week start: operational pain / uptime / ROI for commercial buyers.
+- Midweek: technical authority and risk reduction.
+- Week end: lifestyle, weekend use, family safety, leisure gear.
+
+Local relevance
+- Roads, weather, infrastructure, regional holidays, school calendar, local
+  markets — these are “free” hooks that increase shareability.
+
+================================================================================
+SECTION 10 — HOW TO BUILD A 30-DAY SOCIAL CALENDAR (METHOD)
+================================================================================
+
+Step 1 — Define the month’s strategic lens
+- Pick ONE primary commercial push (e.g., preventive maintenance before peak
+  season, not the obvious season when everyone advertises — invert the narrative
+  if science supports it).
+- List secondary lenses (B2B lane, premium lane, entry product lane).
+
+Step 2 — Map real-world calendar
+- Public holidays, pay cycles, major sports/school breaks, industry events,
+  weather patterns, local events.
+
+Step 3 — Week themes
+- Week 1: education + myth busting.
+- Week 2: proof + identity + topical tie-ins.
+- Week 3: lifestyle + niche use cases + partner/community.
+- Week 4: offer recap + urgency + social proof sprint.
+
+Step 4 — Day-of-week choreography
+- Sunday: longer captions / educational carousels.
+- Monday: B2B / operational.
+- Tuesday–Wednesday: technical deep dives, diagnostics, “mistakes to avoid.”
+- Thursday: anxiety-relief, prep, “before the weekend.”
+- Friday: weekend activation (hobbies, travel, toys, sport).
+- Saturday: community events, open hours, DIY tips, human stories.
+
+Step 5 — Asset discipline
+- For each day define: format (static / reel / carousel), primary ratio(s)
+  (produce 1:1 + 9:16 when budget allows), hook line, CTA, landing or DM path.
+
+Step 6 — QA
+- Safe zones, legibility on small screens, brand color/contrast, offer accuracy,
+  legal/compliance (claims, disclaimers, regulated industries).
+
+================================================================================
+SECTION 11 — PAID SOCIAL CREATIVE ANGLES (CROSS-INDUSTRY)
+================================================================================
+
+Angle: phased story
+- Card or scene 1 problem → 2 mechanism → 3 outcome; works for physical products
+  and services.
+
+Angle: proof of quality
+- Instrument readouts, certifications, process photos, before/after (honest).
+
+Angle: logistics trust
+- Delivery narrative, inspection-before-pay (if true), clear payment methods,
+  realistic timelines.
+
+Angle: risk reversal
+- Guarantees, warranties, trials, transparent pricing — only if enforceable.
+
+Angle: neighbor / share
+- Bulk purchases split across households — when operationally valid.
+
+Angle: dual-use customer
+- Same product, weekday vs weekend story (commuter + adventure) for SUVs,
+  contractors, family vehicles.
+
+================================================================================
+SECTION 12 — NAVIGATING ADS MANAGER (GENERIC MAP)
+================================================================================
+
+You typically work across:
+- Campaigns list: budgets, status, objectives.
+- Ad sets: audiences, placements, optimization, schedules.
+- Ads: creatives, copy variants, URLs, tracking.
+- Audiences: saved, custom, lookalike.
+- Events Manager: data sources (Pixel/CAPI).
+- Billing & account settings: thresholds, roles.
+- Reports: breakdowns by placement, age/gender, region, creative — use to
+  decide what to cut vs scale.
+
+Note: Some third-party checklists mix Google Ads navigation with Meta. Always
+confirm you are in business.facebook.com Ads Manager, not another ad platform.
+
+================================================================================
+SECTION 13 — CHECKLISTS
+================================================================================
+
+Pre-launch (paid)
+- Objective matches business outcome.
+- Pixel fires on key pages; test events validated.
+- Creative sizes produced; safe zones checked.
+- Primary text within truncation strategy; CTA matches destination.
+- Exclusions applied (existing customers where appropriate).
+- UTMs or tracking params for web destinations (your analytics standard).
+
+Weekly
+- Top ads by ROAS/CPA; losers paused.
+- Frequency and CPM trends.
+- New creative batches entering test lane.
+- Inbox / lead follow-up SLA (minutes/hours, not days).
+
+Organic
+- 3–5 posts/week minimum for most SMBs (adjust to capacity); consistency beats
+  sporadic bursts.
+- Reply to DMs/comments quickly — affects trust and signals.
+
+================================================================================
+SECTION 14 — COMPLIANCE AND REPUTATION (REMINDERS)
+================================================================================
+- No engagement bait (“like if you agree”) — weak and policy-risky.
+- Substantiate claims (pricing, performance, certifications).
+- Respect housing/employment/special ad category rules where applicable.
+- WhatsApp / messaging: obtain consent culture; avoid spammy broadcasts.
+
+================================================================================
+SECTION 15 — SOURCE PATTERNS THIS MASTER DRAWS FROM (INTERNAL)
+================================================================================
+- Cross-client Meta channel research: auction mechanics, Business Suite vs Ads
+  Manager, formats, Advantage+ concepts, Andromeda/GEM framing, Manus-style agent
+  assistance trends.
+- Creative research: Facebook ad psychology, carousel architecture, CTWA flows,
+  automation + human handoff.
+- Operational calendars: 30-day grids with weekly themes, day-of-week logic,
+  dual B2B/B2C lanes, local hooks, education vs humor vs proof mix, multi-ratio
+  asset planning.
+- Vertical patterns: automotive (distress + fleet), lifestyle retail, outdoor /
+  technical product education, hospitality / lodges (seasonality + dual audiences).
+
+================================================================================
+SECTION 16 — RETAIL / MULTI-SKU SOCIAL AD TABLE (PATTERN)
+================================================================================
+For shops with many SKUs (tyres, parts, product lines), maintain a spreadsheet or
+database with columns such as:
+- Product / SKU name
+- Ad goal (safety, mileage, performance, seasonal)
+- Headline hook (short, feed-safe)
+- Primary text (benefits + proof + local trust)
+- CTA block: quote / visit / WhatsApp / web (consistent formatting)
+- Hashtags: mix of brand + category + geo tags (avoid over-stuffing)
+
+Re-use the pattern: hook emoji line → story → benefit bullets → soft CTA →
+contact block → hashtags. Keeps production scalable and brand-consistent.
+
+================================================================================
+SECTION 17 — AI CONTENT PIPELINE (GENERIC ARCHITECTURE)
+================================================================================
+When scaling organic posts with LLM + image models:
+- Output structured payloads (e.g., JSON) with separate fields for:
+  image_prompt_1_1, image_prompt_9_16, overlay_subtext, facebook_caption,
+  content_pillar.
+- Dual prompts must differ in spatial framing: square = tight centered subject;
+  vertical = wider vertical padding and explicit top/bottom negative space so
+  overlays and UI safe zones do not cover the product.
+- Optional compositing layer: fixed header/footer brand frame + dynamic subtext
+  + CTA footer — yields consistent exports without manual design per post.
+- Randomize pillars (product showcase, education, myth bust, seasonal) but keep
+  brand environment tokens consistent (your real workshop, lighting, colors).
+
+================================================================================
+SECTION 18 — HIGH-END STATIC PRODUCT ADS (SQUARE + VERTICAL PAIRS)
+================================================================================
+Pattern used for premium physical goods:
+- Always generate paired 1:1 and 9:16 from the same concept; align typography
+  hierarchy (headline, offer container, footer contacts).
+- Specify material truth in prompts (bag mesh opacity, product proportions) to
+  reduce “AI drift” and refund risk from misleading imagery.
+- Visual fusion styles (examples): “precision product on void background” +
+  “cinematic teal/orange grade” — pick ONE hybrid aesthetic per brand and run
+  consistently for recognition.
+
+================================================================================
+SECTION 19 — FACEBOOK / IG PAGE TRUST LAYER (ORGANIC)
+================================================================================
+- About: complete categories, hours, service areas, compliance statements where
+  relevant (regulated products, safety, warranties).
+- Pin posts that answer top objections (delivery, payment, guarantees, returns).
+- Albums/Reels highlights: proof, process, team, reviews.
+- When scams are common in your category, publish verification content (how to
+  identify your official page, order flow, invoice pattern).
+
+================================================================================
+SECTION 20 — HOSPITALITY / EXPERIENCE ADS (PATTERN)
+================================================================================
+- Often two decision paths: primary buyer (e.g., activity-led) and veto-holder
+  (comfort, safety, amenities). Creative and retargeting can emphasize different
+  benefits while staying honest.
+- Seasonality: align paid bursts with booking windows (holidays, weather, local
+  school terms in your markets).
+- Geo testing: wealthy pockets and travel corridors; measure by zone before
+  consolidating budget.
+
+================================================================================
+SECTION 21 — FILE INDEX (REPO) — SOCIAL / META–RELATED KNOWLEDGE
+================================================================================
+Review these paths when extending this master file:
+- knowledge/channels/facebook-ads/  (core Meta strategy, carousel, audience
+  tables, menu notes, Meta Business Suite deep dive, 2026 strategy docs)
+- knowledge/creative-direction/  (Facebook ads research, ad creation, visuals)
+- knowledge/web-development/  (social plan creation, social mgmt systems,
+  automating social, AI social pipelines)
+- knowledge/clients/*/  Social Media Plan*, *Facebook*, *Ad*, calendars
+- knowledge/industry/firewood-braai/  (ad prompts, lifestyle concepts)
+- knowledge/industry/automotive-batteries/  (tutorials where paid search overlaps
+  social offer strategy)
+- knowledge/industry/misc-brand-social/  (brand-specific social research)
+
+END OF MASTER FILE

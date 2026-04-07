@@ -1,0 +1,269 @@
+/* EFS — Expedition HUD / Overlander vertical 9:16. Export 1080×1920. */
+
+.root {
+  --efs-green: #1e4d2b;
+  --efs-red: #d71920;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    Barlow,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  background-color: #080808;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.scrimBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.topBrand {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.efsLogoVertical {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.brandMain {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.brandMainRed {
+  color: var(--efs-red);
+}
+
+.brandAccent {
+  color: var(--efs-red);
+  font-weight: 800;
+  font-size: 0.55rem;
+  letter-spacing: 3px;
+}
+
+.seriesBadge {
+  background: var(--efs-green);
+  color: #fff;
+  font-size: 0.5rem;
+  font-weight: 900;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.blueprintDock {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.dockHeadline h1 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.dockHeadlineMuted {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+}
+
+.specSpine {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.specSpine::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(30, 77, 43, 0.3);
+}
+
+.specEntry {
+  position: relative;
+  padding-left: 15px;
+}
+
+.specEntry::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 8px;
+  width: 10px;
+  height: 2px;
+  background: var(--efs-green);
+}
+
+.spineLabel {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+  display: block;
+}
+
+.spineValue {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.1px;
+  line-height: 1.2;
+}
+
+.ctaFull {
+  background: var(--efs-red);
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border: none;
+  height: 52px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 10px 20px rgba(215, 25, 32, 0.4);
+}
+
+.ctaFull svg {
+  width: 18px;
+  height: 18px;
+  stroke: #fff;
+  stroke-width: 3px;
+  fill: none;
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1920 (×3 from 360) ─── */
+
+.root.canvas1080x1920 .adContainer {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080x1920 .topBrand {
+  top: 75px;
+  left: 60px;
+  right: 60px;
+}
+
+.root.canvas1080x1920 .brandMain {
+  font-size: 58px;
+}
+
+.root.canvas1080x1920 .brandAccent {
+  font-size: 25px;
+}
+
+.root.canvas1080x1920 .seriesBadge {
+  font-size: 25px;
+  padding: 12px 24px;
+}
+
+.root.canvas1080x1920 .blueprintDock {
+  padding: 60px;
+  gap: 75px;
+}
+
+.root.canvas1080x1920 .dockHeadline h1 {
+  font-size: 99px;
+}
+
+.root.canvas1080x1920 .specSpine {
+  gap: 45px;
+}
+
+.root.canvas1080x1920 .specEntry {
+  padding-left: 45px;
+}
+
+.root.canvas1080x1920 .spineLabel {
+  font-size: 25px;
+}
+
+.root.canvas1080x1920 .spineValue {
+  font-size: 36px;
+}
+
+.root.canvas1080x1920 .ctaFull {
+  height: 156px;
+  font-size: 36px;
+  gap: 30px;
+}
+
+.root.canvas1080x1920 .ctaFull svg {
+  width: 54px;
+  height: 54px;
+}

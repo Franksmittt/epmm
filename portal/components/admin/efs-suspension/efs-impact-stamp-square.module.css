@@ -1,0 +1,185 @@
+/* EFS — Impact Stamp square 1:1. Archivo Black + Inter subline. Export 1080×1080. */
+
+.root {
+  --efs-green: #1e4d2b;
+  --efs-red: #d71920;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.root {
+  font-family: var(--font-archivo-black), "Arial Black", system-ui, sans-serif;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: #111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.hardwareTag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--efs-red);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
+  z-index: 5;
+}
+
+.bgText {
+  position: absolute;
+  top: 10%;
+  left: -5%;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 0.8;
+  pointer-events: none;
+  z-index: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.verticalBrand {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: center center;
+  color: #fff;
+  font-size: 0.6rem;
+  letter-spacing: 8px;
+  opacity: 0.5;
+  white-space: nowrap;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.footerBlock {
+  position: relative;
+  z-index: 5;
+  background: var(--efs-green);
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.headlineGroup h1 {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 0.85;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.headlineGroup p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family:
+    Inter,
+    -apple-system,
+    system-ui,
+    sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+.actionSquare {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  background: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.actionSquare svg {
+  stroke: #000;
+  width: 35px;
+  height: 35px;
+}
+
+.actionSquare:hover {
+  background: var(--efs-red);
+}
+
+.actionSquare:hover svg {
+  stroke: #fff;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080 .hardwareTag {
+  padding: 27px 54px;
+  font-size: 22px;
+}
+
+.root.canvas1080 .bgText {
+  font-size: 216px;
+}
+
+.root.canvas1080 .verticalBrand {
+  left: 36px;
+  font-size: 19px;
+}
+
+.root.canvas1080 .footerBlock {
+  padding: 54px;
+}
+
+.root.canvas1080 .headlineGroup h1 {
+  font-size: 90px;
+}
+
+.root.canvas1080 .headlineGroup p {
+  font-size: 22px;
+  margin-top: 18px;
+}
+
+.root.canvas1080 .actionSquare {
+  width: 144px;
+  height: 144px;
+}
+
+.root.canvas1080 .actionSquare svg {
+  width: 63px;
+  height: 63px;
+}

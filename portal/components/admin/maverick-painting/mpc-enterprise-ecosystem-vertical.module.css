@@ -1,0 +1,334 @@
+/* Maverick — Enterprise Ecosystem vertical 9:16. Base 450×800 → 1080×1920 (×2.4). */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --resin-violet: #7c3aed;
+  --trust-blue: #0a84ff;
+  --pill-violet-text: #a78bfa;
+  --stealth-grey: #8e8e93;
+  --glass-base: rgba(10, 10, 14, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 60px rgba(10, 132, 255, 0.08);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.companyShield {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--trust-blue);
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 20px rgba(10, 132, 255, 0.2);
+  max-width: calc(100% - 40px);
+}
+
+.shieldIcon {
+  color: var(--trust-blue);
+  flex-shrink: 0;
+}
+
+.shieldIcon svg {
+  display: block;
+}
+
+.companyName {
+  color: var(--pure-white);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  min-width: 0;
+}
+
+.trustMetrics {
+  position: absolute;
+  top: 90px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  max-width: 55%;
+}
+
+.trustBadge {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-right: 3px solid var(--trust-blue);
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.trustVal {
+  color: var(--pure-white);
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.trustLbl {
+  color: var(--stealth-grey);
+  font-size: 0.5rem;
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.serviceConsole {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  z-index: 10;
+  background: var(--glass-base);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 28px;
+  padding: 30px;
+  border-top: 1px solid var(--glass-border);
+  border-left: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.techRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.techPill {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--pill-violet-text);
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.headline {
+  color: var(--pure-white);
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.actionDock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.companyGuarantee {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.cgVal {
+  color: var(--trust-blue);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.cgLbl {
+  color: var(--pure-white);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.btnSquircle {
+  background: var(--pure-white);
+  color: var(--pure-black);
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ─── 1080×1920 (×2.4) ─── */
+
+.root.canvas1080x1920 .companyShield {
+  top: 60px;
+  left: 48px;
+  padding: 19px 38px;
+  border-radius: 48px;
+  gap: 24px;
+  max-width: calc(100% - 96px);
+}
+
+.root.canvas1080x1920 .companyShield svg {
+  width: 34px;
+  height: 34px;
+}
+
+.root.canvas1080x1920 .companyName {
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.root.canvas1080x1920 .trustMetrics {
+  top: 216px;
+  right: 48px;
+  gap: 24px;
+}
+
+.root.canvas1080x1920 .trustBadge {
+  padding: 19px 34px;
+  border-radius: 19px;
+  border-right-width: 7px;
+}
+
+.root.canvas1080x1920 .trustVal {
+  font-size: 34px;
+}
+
+.root.canvas1080x1920 .trustLbl {
+  font-size: 17px;
+}
+
+.root.canvas1080x1920 .serviceConsole {
+  bottom: 48px;
+  left: 36px;
+  right: 36px;
+  border-radius: 67px;
+  padding: 72px;
+}
+
+.root.canvas1080x1920 .techRow {
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.root.canvas1080x1920 .techPill {
+  font-size: 22px;
+  padding: 14px 29px;
+  border-radius: 29px;
+}
+
+.root.canvas1080x1920 .headline {
+  font-size: 101px;
+  letter-spacing: -4px;
+  margin-bottom: 29px;
+}
+
+.root.canvas1080x1920 .subtext {
+  font-size: 29px;
+  margin-bottom: 60px;
+}
+
+.root.canvas1080x1920 .actionDock {
+  padding-top: 48px;
+  gap: 38px;
+}
+
+.root.canvas1080x1920 .cgVal {
+  font-size: 29px;
+}
+
+.root.canvas1080x1920 .cgLbl {
+  font-size: 22px;
+}
+
+.root.canvas1080x1920 .btnSquircle {
+  height: 115px;
+  padding: 0 48px;
+  border-radius: 34px;
+  font-size: 29px;
+}

@@ -1,0 +1,262 @@
+/* Maverick Painting — Zenith Industrial Monolith square 1:1. Export 1080×1080 (×1.8 from 600). */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --industrial-cyan: #00e5ff;
+  --safety-yellow: #ffd600;
+  --stealth-grey: #8e8e93;
+  --glass-base: rgba(10, 10, 12, 0.8);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
+  padding: 35px;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.topLayer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.breakoutHeadline {
+  color: var(--pure-white);
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  min-width: 0;
+}
+
+.headlineOutline {
+  display: block;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--pure-white);
+}
+
+.floatingMetric {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--industrial-cyan);
+  padding: 10px 15px;
+  border-radius: 12px;
+  text-align: right;
+  box-shadow: 0 10px 20px rgba(0, 229, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.metricVal {
+  display: block;
+  color: var(--industrial-cyan);
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.metricLbl {
+  display: block;
+  color: var(--stealth-grey);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.commandStrip {
+  position: relative;
+  z-index: 10;
+  background: var(--glass-base);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.stripInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 60%;
+  min-width: 0;
+}
+
+.brandName {
+  color: var(--pure-white);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brandName::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--safety-yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.btnAction {
+  background: var(--safety-yellow);
+  color: var(--pure-black);
+  height: 54px;
+  padding: 0 28px;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  box-shadow: 0 10px 25px rgba(255, 214, 0, 0.3);
+}
+
+.btnAction svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 3px;
+  fill: none;
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adCanvas {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+  padding: 63px;
+}
+
+.root.canvas1080 .topLayer {
+  gap: 29px;
+}
+
+.root.canvas1080 .breakoutHeadline {
+  font-size: 126px;
+  letter-spacing: -4px;
+}
+
+.root.canvas1080 .floatingMetric {
+  padding: 18px 27px;
+  border-radius: 22px;
+}
+
+.root.canvas1080 .metricVal {
+  font-size: 38px;
+}
+
+.root.canvas1080 .metricLbl {
+  font-size: 16px;
+}
+
+.root.canvas1080 .commandStrip {
+  border-radius: 36px;
+  padding: 36px 45px;
+}
+
+.root.canvas1080 .brandName {
+  font-size: 27px;
+  gap: 14px;
+}
+
+.root.canvas1080 .brandName::before {
+  width: 11px;
+  height: 11px;
+}
+
+.root.canvas1080 .subtext {
+  font-size: 27px;
+}
+
+.root.canvas1080 .btnAction {
+  height: 97px;
+  padding: 0 50px;
+  border-radius: 29px;
+  font-size: 27px;
+  gap: 18px;
+}
+
+.root.canvas1080 .btnAction svg {
+  width: 32px;
+  height: 32px;
+}

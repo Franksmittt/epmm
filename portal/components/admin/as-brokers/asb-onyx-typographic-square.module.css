@@ -1,0 +1,353 @@
+/* AS Brokers — Onyx Typographic square 1:1 (text-only). Export 1080×1080. */
+
+.root {
+  --void-black: #010308;
+  --trust-blue: #0088cc;
+  --electric-blue: #00a8ff;
+  --slate-text: #8a95a5;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--void-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dataGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.ambientGlow {
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 168, 255, 0.15) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.topHud {
+  position: relative;
+  z-index: 4;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.firmBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.trustTag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--electric-blue);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pulseDot {
+  width: 6px;
+  height: 6px;
+  background: var(--electric-blue);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--electric-blue);
+  flex-shrink: 0;
+  animation: pulseDot 2s infinite;
+}
+
+.firmName {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.contactPlate {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.megaTextContainer {
+  position: absolute;
+  top: 25%;
+  left: 30px;
+  right: 20px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.megaText {
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2.5px;
+  text-transform: uppercase;
+}
+
+.megaLine1 {
+  color: #ffffff;
+  display: block;
+}
+
+.megaLine2 {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    var(--electric-blue) 60%,
+    var(--trust-blue) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.glassDatacard {
+  position: relative;
+  z-index: 5;
+  margin: auto 20px 20px 20px;
+  margin-top: auto;
+  background: rgba(10, 15, 25, 0.55);
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(0, 168, 255, 0.4);
+  border-radius: 24px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+  flex-shrink: 0;
+}
+
+.datacardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 60%;
+  min-width: 0;
+}
+
+.serviceTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.serviceDesc {
+  font-size: 0.8rem;
+  color: var(--slate-text);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.dataPoints {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.dataPoint {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--electric-blue);
+  padding-left: 10px;
+}
+
+.dpValue {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.dpLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--electric-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.actionPill {
+  background: #ffffff;
+  color: var(--void-black);
+  border: none;
+  height: 52px;
+  padding: 0 24px;
+  border-radius: 26px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.actionPill svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080 .topHud {
+  padding: 54px;
+}
+
+.root.canvas1080 .trustTag {
+  font-size: 19px;
+  gap: 11px;
+}
+
+.root.canvas1080 .pulseDot {
+  width: 11px;
+  height: 11px;
+}
+
+.root.canvas1080 .firmName {
+  font-size: 29px;
+  letter-spacing: 4px;
+}
+
+.root.canvas1080 .contactPlate {
+  font-size: 22px;
+  padding: 14px 29px;
+  border-radius: 11px;
+}
+
+.root.canvas1080 .megaTextContainer {
+  left: 54px;
+  right: 36px;
+}
+
+.root.canvas1080 .megaText {
+  font-size: 138px;
+  letter-spacing: -5px;
+}
+
+.root.canvas1080 .glassDatacard {
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-bottom: 36px;
+  border-radius: 43px;
+  padding: 54px;
+  gap: 29px;
+}
+
+.root.canvas1080 .datacardInfo {
+  gap: 22px;
+}
+
+.root.canvas1080 .serviceTitle {
+  font-size: 34px;
+}
+
+.root.canvas1080 .serviceDesc {
+  font-size: 23px;
+}
+
+.root.canvas1080 .dataPoints {
+  gap: 27px;
+}
+
+.root.canvas1080 .dpValue {
+  font-size: 34px;
+}
+
+.root.canvas1080 .dpLabel {
+  font-size: 19px;
+}
+
+.root.canvas1080 .actionPill {
+  height: 94px;
+  padding: 0 43px;
+  border-radius: 47px;
+  font-size: 28px;
+  gap: 14px;
+}
+
+.root.canvas1080 .actionPill svg {
+  width: 29px;
+  height: 29px;
+}
+
+.root.canvas1080 .dataGrid {
+  background-size: 72px 72px;
+}

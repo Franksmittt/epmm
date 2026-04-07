@@ -1,0 +1,365 @@
+================================================================================
+ABSOLUTE OFFROAD — 30 ORGANIC SOCIAL POSTS
+================================================================================
+Generated from: (1) all themes and technical facts across
+`knowledge/clients/absolute-offroad/*.txt` (EFS suspension tiers, armour,
+exhaust, tyres/wheels, audience, calendars, brand strategy), and
+(2) execution rules in `knowledge/super-knowledge/MASTER_SOCIAL_MEDIA_AND_META_ADS.txt`
+(formats, safe zones, hooks, pillar rotation, CTAs).
+
+Brand contact (from client knowledge — verify before publishing):
+  Absolute Offroad
+  28 St Columb Road, New Redruth, Alberton
+  WhatsApp / tel: 079 507 0901
+  Web: absoluteoffroad.co.za
+
+Visual system (from client docs): “Highveld Steel” — precision product on deep
+black or storm backdrop, teal/orange grade, rim light on metal, optional
+particles (mud/water/spray). Keep key text in the CENTER SAFE zone on 9:16
+(Reels/Stories): avoid bottom ~35% on Reels.
+
+Standard asset ask per feed post: 1080×1080 (1:1) AND 1080×1920 (9:16) variant
+for Stories/Reels; captions can shorten for Story stickers.
+
+================================================================================
+DAY 1 — BRAND ANCHOR
+================================================================================
+Pillar: Trust + locality
+Format: Feed 1:1 + Story 9:16 (workshop twilight)
+Hook: “New Redruth. Real fitment. Real engineering.”
+Caption:
+Not a parts lottery — a fitment centre. We spec EFS suspension and integrated
+4×4 upgrades for how you actually use your bakkie: Monday potholes, Saturday
+corrugations. Pop in for a suspension health check and an honest chat.
+📍 28 St Columb Rd, New Redruth, Alberton
+📱 WhatsApp 079 507 0901
+🌐 absoluteoffroad.co.za
+#AbsoluteOffroad #Alberton4x4 #EFSSuspension #NewRedruth #Hilux #Ranger
+
+================================================================================
+DAY 2 — DUAL-USE NARRATIVE
+================================================================================
+Pillar: Problem / insight
+Format: Carousel (4× 1:1) OR single 4:5 if supported
+Hook: “One bakkie. Two jobs.”
+Caption:
+Commute on broken tar. Weekend on gravel. Stock suspension is tuned for neither
+extreme. Upgrades aren’t only “for trails” — they’re for the physics of daily
+JHB South + loaded weekends. Swipe: commute → load → trail → solution.
+CTA: Save this. Send your vehicle model on WhatsApp for a spec conversation.
+
+================================================================================
+DAY 3 — POTHOLES + DMC (ELITE)
+================================================================================
+Pillar: Education
+Format: Reel 9:16 (15s, captions on — sound optional)
+Hook: “Fast hit vs slow roll — your shock should know the difference.”
+Caption:
+EFS Elite uses Dynamic Motion Control (DMC): high piston speed → valve opens to
+swallow the pothole; low speed → control for roll and dive. That’s the dual-use
+logic in hardware.
+Book a quote: 079 507 0901 | absoluteoffroad.co.za
+#DMC #EFSElite #SuspensionScience #AlbertonTraffic
+
+================================================================================
+DAY 4 — THERMAL FADE (WHY SHOCKS “GO OFF”)
+================================================================================
+Pillar: Education / fear → fix
+Format: Feed 1:1 infographic style
+Hook: “Heat is the enemy of damping.”
+Caption:
+Corrugations cycle your shocks fast. Energy becomes heat. Oil thins. Foam
+forms. Damping disappears — “fade.” Bigger oil volume + nitrogen help fight
+this. That’s why tube volume matters in SA conditions.
+Ask us which EFS tier matches your weight and terrain.
+
+================================================================================
+DAY 5 — EFS RANGE MAP (GOOD / BETTER / BEST)
+================================================================================
+Pillar: Education + product ladder
+Format: Carousel 1:1 (5 cards)
+Cards: (1) Enforcer — fleet/daily, 51mm tube, wall thickness vs stone peening
+(2) Elite — DMC all-rounder (3) X-Treme / heavy constant load — hydraulic
+rebound stop + 20mm rod (4) XTR — 64mm body / 40mm piston heat sink narrative
+(5) MRP 2.5 — monotube + remote res, adjustability, “zero fade” positioning
+CTA: “Reply with your build list — we’ll place you on the ladder.”
+
+================================================================================
+DAY 6 — ENFORCER = COMMERCIAL GRADE, NOT “CHEAP”
+================================================================================
+Pillar: Reframe value
+Format: Feed 1:1
+Hook: “Fleet-grade isn’t entry-level thinking.”
+Caption:
+Enforcer’s larger tube vs typical OEM sizing helps thermal headroom; wall
+thickness matters when stones pepper rear shocks on gravel. Position it as
+work-truck insurance, not “budget vibes.”
+#EFSEnforcer #Fleet #Bakkie #4x4
+
+================================================================================
+DAY 7 — X-TREME: HEAVY RIG REALITY
+================================================================================
+Pillar: Proof / safety
+Format: Before/after stance photo (honest, same lighting)
+Hook: “Bullbar + winch + drawers ≠ stock damping.”
+Caption:
+Permanent weight changes droop, braking, and top-out events. X-Treme’s
+hydraulic rebound stop helps prevent metal-on-metal top-out when the suspension
+unloads hard. Match spring rate to real mass — we weigh the story, not guesses.
+
+================================================================================
+DAY 8 — LEAF SPRINGS: LEVEL UNDER LOAD
+================================================================================
+Pillar: Workhorse / B2B-leaning
+Format: 1:1 side profile loaded vehicle
+Hook: “Level isn’t looks. It’s geometry.”
+Caption:
+Sagging rear = light aim + steering feel off under brakes. EFS leaf packs:
+tapered leaves, liners, military wrap story (safety redundancy). From depot to
+site, keep the nose where engineering expects it.
+
+================================================================================
+DAY 9 — COIL METALLURGY (SHOT PEENING / SCRAGGING)
+================================================================================
+Pillar: Deep technical credibility
+Format: Carousel macro metal + short copy
+Hook: “Springs fail from fatigue, not boredom.”
+Caption:
+Shot peening introduces compressive stress; scragging sets permanent shape
+before install. This is the “why premium springs” story without hype words.
+
+================================================================================
+DAY 10 — JIMNY: SMALL FOOTPRINT, BIG GEOMETRY
+================================================================================
+Pillar: Vehicle-specific
+Format: Reel 9:16 walkaround
+Hook: “Ground clearance is the Jimny’s cheat code.”
+Caption:
+Lift + caster correction conversation (death wobble / vague steering are
+search terms). Keep copy responsible: we diagnose, we don’t guess from memes.
+Jimny owners — WhatsApp photos of your current setup.
+
+================================================================================
+DAY 11 — TORSION BARS (OLDER HILUX / HARDBODY)
+================================================================================
+Pillar: Niche authority
+Format: 1:1 split: cranked OE vs upgraded bar concept
+Hook: “Cranking stock bars isn’t free height.”
+Caption:
+Front weight (bar, winch) nose-dives OE geometry. Upgraded torsion bars =
+spring rate for the weight without turning the ride into concrete.
+
+================================================================================
+DAY 12 — ONCA: AIRBAG COMPATIBILITY STORY
+================================================================================
+Pillar: Safety trust (armour)
+Format: Carousel — problem → crumple zone → solution
+Hook: “A bar can be too rigid for airbags.”
+Caption:
+Modern chassis are designed to deform in a crash pulse. Onca engineering
+targets brackets that deform like OE supports so sensors see the right timing.
+Steel is only “strong” if the crash physics are right.
+
+================================================================================
+DAY 13 — ROCK SLIDERS: STEP VS STRUCTURE
+================================================================================
+Pillar: Education
+Format: 1:1 chassis-mount diagram style
+Hook: “If it’s only a step, it won’t save the sill.”
+Caption:
+Structural sliders transfer hits into rails; jacking points matter for
+recovery. We fit protection that earns the name.
+
+================================================================================
+DAY 14 — DE GRAAF EXHAUST: 441 + MANDREL
+================================================================================
+Pillar: Technical differentiation
+Format: Carousel 3 cards
+Hook: “Bends aren’t all equal.”
+Caption:
+441 stainless vs 409 tea-staining story. Mandrel bends preserve diameter —
+laminar flow, turbo response, EGT narrative (keep claims factual to your sku).
+Performance without the fairy tales.
+
+================================================================================
+DAY 15 — TYRES: RT / KO3 TREND (2026 CONVERSATION)
+================================================================================
+Pillar: Trend + recommendation frame
+Format: Poll Story + Feed summary
+Hook: “80% tar / 20% dirt? The tyre world changed.”
+Caption:
+Rough-terrain hybrids balance MT look with AT manners. We help match load
+index, speed, and real use — not forum flex.
+
+================================================================================
+DAY 16 — WHEELS: FLOW FORMED VS CAST
+================================================================================
+Pillar: Unsprung mass education
+Format: 1:1 comparison graphic
+Hook: “Lighter wheels aren’t vanity for 4×4.”
+Caption:
+Less unsprung mass = suspension can follow the road faster; brakes work
+easier. Flow forming aligns grain structure — strength with less mass.
+
+================================================================================
+DAY 17 — GVM / PAYLOAD COMPLIANCE ANGLE
+================================================================================
+Pillar: Legal + safety (no fearmongering)
+Format: Feed text + authority link to “ask us”
+Hook: “Upgrades should match paperwork, not just Instagram.”
+Caption:
+GVM conversations are rising. If you’re building heavy, ask about compliant
+paths — springs, ratings, and what your insurer expects. We guide; we don’t
+bluff.
+
+================================================================================
+DAY 18 — FITMENT TRUST: TORQUE + ALIGNMENT
+================================================================================
+Pillar: BTS competence
+Format: Reel 15s B-roll + captions
+Hook: “The internet installs. We measure.”
+Caption:
+Torque specs, post-lift angles, alignment on laser — show the workshop doing
+“boring” right. Consistency builds more trust than another mud photo.
+
+================================================================================
+DAY 19 — MAINTENANCE: GREASE AFTER RAIN
+================================================================================
+Pillar: Service tip (non-salesy)
+Format: Story checklist + Feed 1:1 macro grease
+Hook: “February storms wash grease away.”
+Caption:
+Poly bushes + greasable shackles need love. Rinse grit, regrease, reduce squeak
+and binding. Tag a mate who “will do it later.”
+
+================================================================================
+DAY 20 — WEEKEND TRIP CTA (VAAL / BERGE / HENNOPS)
+================================================================================
+Pillar: Lifestyle + community
+Format: 1:1 scenic rig (user photo if permitted)
+Hook: “Where are you pointing the nose this weekend?”
+Caption:
+Vaal, Berg, Hennops, Bass Lake — local geography from your research. We’re
+here Monday to help you not regret Saturday’s ruts.
+
+================================================================================
+DAY 21 — TOWING & SAG
+================================================================================
+Pillar: Problem / solution
+Format: Carousel: empty vs loaded + WDH note if applicable
+Hook: “The boat shouldn’t steer the bakkie.”
+Caption:
+Load-leveling springs, shocks tuned for constant tongue weight — match
+hardware to trailer mass and hitch setup.
+
+================================================================================
+DAY 22 — “ASK AN EXPERT” THREAD
+================================================================================
+Pillar: Engagement
+Format: Feed post + pin comment
+Hook: “Drop your vehicle + mods. One question each.”
+Caption:
+We’ll answer lift vs tyre vs bar priority honestly. Builds trust and trains
+social search (“Hilux lift Alberton”).
+
+================================================================================
+DAY 23 — UGC / TAG US
+================================================================================
+Pillar: Evangelism
+Format: Repost customer (with permission)
+Hook: “Customer rigs > stock renders.”
+Caption:
+We want your finished truck in the wild. Tag @AbsoluteOffroad — best flex
+photo this month gets [you decide prize: cap / discount / feature].
+
+================================================================================
+DAY 24 — WOMEN / FAMILY DECISION MAKERS (INCLUSIVE SEGMENT)
+================================================================================
+Pillar: Safety + comfort angle
+Format: 1:1 family road trip
+Hook: “Comfort isn’t soft. It’s control.”
+Caption:
+Better damping reduces fatigue on long family hauls; protection gear isn’t
+only aesthetic — it’s radiator and occupant risk. Inclusive copy: speak to
+drivers, not stereotypes.
+
+================================================================================
+DAY 25 — VIRTUAL GARAGE / “WILL IT FIT?”
+================================================================================
+Pillar: Product + digital journey
+Format: Screen record short Reel
+Hook: “Stop guessing part numbers.”
+Caption:
+We’re building journeys around “select vehicle → see compatible suspension /
+armour.” Until then, WhatsApp model, year, trim — we confirm fitment like
+engineers, not guessers.
+
+================================================================================
+DAY 26 — CINEMATIC TIP (FROM CONTENT STRATEGY DOC)
+================================================================================
+Pillar: Creator education + brand love
+Format: Reel tutorial 20s
+Hook: “Pan slow — show the shock working.”
+Caption:
+1/60 pan + compression in frame reads as “controlled” suspension. Tag us in
+your pan attempts; we’ll duet the best.
+
+================================================================================
+DAY 27 — LIGHT PAINTING NIGHT SHOT CHALLENGE
+================================================================================
+Pillar: Community / aesthetic
+Format: Still 1:1 + Story behind-the-scenes
+Hook: “Highveld thunderstorm + LED wand = poster.”
+Caption:
+Light-paint the silhouette; sell the feeling of self-sufficient travel. Safety
+first on roadsides — staged lot only.
+
+================================================================================
+DAY 28 — WARRANTY / LONG-TERM OWNERSHIP
+================================================================================
+Pillar: Risk reversal
+Format: Clean product hero 1:1
+Hook: “Five years of bad roads.”
+Caption:
+Elite/XTR warranty story (unlimited km framing per supplier — confirm current
+terms). Long warranties only matter when install and spec are correct — that’s
+why you use a fitment centre.
+
+================================================================================
+DAY 29 — SEASONAL “PRE-LONG-WEEKEND” CHECKLIST
+================================================================================
+Pillar: Converting calendar peaks
+Format: Carousel checklist 1:1
+Hook: “Long weekend in 10 days — 6 checks.”
+Caption:
+Bolts, spare, brakes, tyres, shocks warm, recovery. Book pre-trip inspection
+slot now (creates urgency without fake discounts).
+
+================================================================================
+DAY 30 — DIRECT RESPONSE / WHATSAPP
+================================================================================
+Pillar: Convert
+Format: Static 1:1 offer-style (no fake % unless real)
+Hook: “WhatsApp ‘BUILD’ + a photo of your rig.”
+Caption:
+We reply with: (1) suggested tier Enforcer/Elite/XTR/MRP (2) spring strategy
+(3) booking next step. Fast replies win leads — see Master file messaging SLAs.
+079 507 0901 | absoluteoffroad.co.za | 28 St Columb Rd, New Redruth
+
+================================================================================
+BOOSTING / PAID REMINDER (FROM MASTER + AOR CAROUSEL DOC)
+================================================================================
+- Leads or Engagement objective; conversion location WhatsApp or Calls; 50 km
+  radius on “people who live here” is a documented pattern for this shop.
+- Carousel: 1080×1080 cards; fixed story order if narrative sequence matters.
+- Advantage+ placements acceptable; refresh creative when CPM rises.
+
+================================================================================
+NOTES
+================================================================================
+- Verify all specs, warranties, and pricing with supplier sheets before ads.
+- Replace @ handle with your real Instagram handle if different.
+- Duplicate posts are not intended to replace the February 2026 calendar file;
+  this pack is cross-sourced from the whole client folder + master playbook.
+
+END

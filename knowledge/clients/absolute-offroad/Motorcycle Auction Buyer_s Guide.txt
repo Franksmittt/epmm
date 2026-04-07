@@ -1,0 +1,643 @@
+Strategic Asset Acquisition: The Definitive Guide to South African Motorcycle Auctions
+
+1. The Macro-Economic Landscape of Vehicle Disposal in South Africa
+
+The South African automotive landscape operates as a dual-stream economy. On one side lies the regulated, retail dealership network, characterized by consumer protections, warranties, and premium pricing. On the other exists the secondary disposal market—the domain of the auction house. This sector, often opaque to the uninitiated, serves as the primary liquidation channel for the country’s major financial institutions, insurance conglomerates, and corporate fleet operators. For the astute investor, the asset flipper, or the motorcycle enthusiast seeking value, the auction floor represents an arena of significant arbitrage opportunity, provided one possesses the requisite operational intelligence to navigate its inherent risks.
+
+The ecosystem is driven by the necessity of rapid asset liquidation. South African banks, including WesBank (a division of FirstRand Bank Ltd), MFC (a division of Nedbank), ABSA, and Standard Bank, hold vast portfolios of financed assets. When credit agreements fail—a frequent occurrence in the volatile economic climate of the 2020s—these institutions must recover capital swiftly. They are not retailers; they are financial entities. Consequently, they utilize auctioneers to convert distressed metal into liquidity. Simultaneously, insurance underwriters face a constant influx of salvage stock—vehicles deemed uneconomical to repair due to accident damage, theft recovery stripping, or water damage. These assets flow into the same auction ecosystem, creating a mixed inventory stream that requires forensic capability to categorize effectively.
+
+Understanding the distinction between these inventory sources is the first step in professional auction buying. A bank repossession (Repo) typically represents a financial failure by the previous owner, whereas insurance salvage represents a mechanical or structural failure of the asset itself. The former suggests a vehicle that may be mechanically sound but potentially neglected in terms of service history due to the owner's financial distress. The latter suggests trauma—collision, sliding, or theft-related stripping. The professional buyer does not view these as "cheap bikes"; they view them as assets with specific risk-adjusted valuations. The "correct ratio" for acquisition—the core metric of success—depends entirely on accurately diagnosing the origin of the asset and calculating the hidden friction costs required to restore it to a marketable condition.
+
+This report provides an exhaustive analysis of this marketplace. It moves beyond the superficial mechanics of bidding to establish a rigorous financial and technical framework for acquisition. It details the operational nuances of the major auction houses, the specific fee structures that erode margins, the technical inspection protocols necessary to avoid catastrophic losses, and the supply chain logistics required for cost-effective rehabilitation. The ultimate objective is to equip the reader with the institutional knowledge necessary to operate not as a gambler, but as a strategic asset manager within the South African auction circuit.
+
+2. Institutional Architecture: The Major Auction Houses
+
+The South African auction sector is consolidated around a handful of dominant players, each holding exclusive or semi-exclusive disposal mandates with specific banks and insurers. Understanding the specific character, rules, and inventory profile of each house is essential for targeting the right stock.
+
+2.1 WesBank Auctions
+
+WesBank is the 800-pound gorilla of the vehicle finance space, and its auction disposal arm is arguably the most critical source of high-quality stock for the used vehicle trade.
+
+Mandate and Inventory: WesBank auctions predominantly handle bank repossessions. This inventory is legally classified as "unencumbered," meaning the bank sells the asset free of debt.1 The stock profile is broad, ranging from high-end adventure motorcycles (BMW GS series, KTM Adventures) to commuter fleets.
+
+Operational Footprint: Auctions are held weekly, with major centers in Midrand (Gauteng), Epping (Cape Town), and Durban (KZN). The schedule is regimented, typically with catalogues released on Tuesdays for Thursday auctions.1
+
+Buyer Profile: These auctions are heavily attended by dealerships restocking their floors. Consequently, prices for "clean" stock often reach near-trade values. The opportunity for the private buyer lies in the "niche" units or those with cosmetic imperfections that dealers avoid due to reconditioning time constraints.
+
+Digital Interface: WesBank has transitioned aggressively to online platforms, utilizing proprietary systems and partnerships with auctioneers like Auction Operation and Tirhani to facilitate digital bidding.1
+
+2.2 MFC Auction House (Nedbank)
+
+MFC, the vehicle finance division of Nedbank, operates the largest dedicated auction facility in the country, the MFC Auction House in Pretoria.
+
+Inventory Profile: Similar to WesBank, MFC deals largely in finance repossessions. However, their sheer volume often leads to a higher frequency of "runner" class vehicles—bikes that start and drive but may need minor work. They are a primary source for "budget" inventory, including delivery bikes and entry-level commuters.3
+
+The "Popcorn" Effect: MFC auctions are notorious for intense last-minute bidding wars. Their online systems often utilize "soft close" technologies (discussed in Section 4) which extend bidding times, testing the discipline of the buyer.4
+
+Finance On-Site: Unlike many other houses that require cash/EFT, MFC often facilitates finance on the floor for qualifying buyers, which increases competition by allowing retail buyers (who need finance) to bid against cash buyers.3
+
+2.3 Aucor
+
+Aucor is a diversified auction giant. While they handle bank repossessions, they are also a dominant player in the salvage and fleet disposal space.
+
+The Segmentation Strategy: Aucor distinctly separates its auctions. A "Bank Repo" auction will function differently from a "Salvage/Non-Runner" auction.
+
+Commercial & Salvage: Aucor is a key venue for finding "Code 3" (built-up/accident damaged) bikes and non-runners. For the rebuilder or the parts merchant, Aucor’s salvage auctions are the primary hunting ground.
+
+Fees Structure: It is critical to note that Aucor often applies different buyer's premiums to different asset classes. A commercial vehicle or non-runner might attract a higher commission (e.g., 8-10%) compared to a standard runner (6%).5
+
+Logistics: With branches in Bloemfontein, Johannesburg, Durban, Cape Town, and Port Elizabeth, they cover the national footprint. Their "loose asset" auctions often include motorcycle gear and accessories, an overlooked value stream.1
+
+2.4 GoBid
+
+GoBid has emerged as a significant disruptor, focusing heavily on the insurance and salvage sector.
+
+Inventory: Their stock lists are heavily populated with insurance claim disposals. This includes "stolen and recovered" units (often stripped of plastics or ignition barrels) and accident-damaged units.
+
+The Platform: GoBid operates almost exclusively online. Their platform is designed for the "rebuilder." The listings are transparent about the "Code" status (Code 2 vs. Code 3), allowing buyers to filter specifically for repairable salvage versus scrap.7
+
+Pricing Dynamics: Because the inventory is often distressed, starting bids can be incredibly low (e.g., R500 for a wreck). This appeals to the buyer looking for parts or a project bike.7
+
+2.5 Auction Nation
+
+Auction Nation specializes in salvage management. They are the terminal for vehicles that insurers have written off.
+
+The "Scrap" Specialist: While they sell repairable runners, a significant portion of their inventory is Code 3 or Code 4 (permanently demolished).
+
+Target Audience: This is not the place for a novice looking for a "ride and go" bike. This is the domain of the professional mechanic and the breaker yard owner. The "correct ratio" here is calculated strictly on the breakup value of the parts, not the resale value of the bike.8
+
+3. The Financial Engineering of Acquisition: The Calculator
+
+The most common failure mode for new auction buyers is the "Hammer Price Fallacy." This occurs when a buyer calculates their profit based solely on the bid amount, ignoring the compounding friction costs that follow. To operate professionally, one must utilize a Total Cost of Acquisition (TCA) calculator. This model works backwards from the Realizable Market Value to determine the Maximum Allowable Bid.
+
+3.1 The Cost Layering Architecture
+
+The invoice you receive will be significantly higher than the price the auctioneer calls out. The layering works as follows:
+
+3.1.1 The Buyer’s Premium (Commission)
+
+The auctioneer does not work for free. They charge a commission, usually to the buyer, on top of the hammer price.
+
+Variable Rates: The standard rate for vehicles is 6% to 10%.
+
+WesBank/MFC: Often lower for bank assets (approx. 0-6%).
+
+Commercial/Salvage: Often higher (8-10% or even 12% for loose assets).
+
+Aucor Specifics: 6% on runners, 8% on non-runners/trucks.5
+
+The Calculation: This percentage is added to the hammer price before VAT.
+
+3.1.2 Value Added Tax (VAT)
+
+The South African Revenue Service (SARS) takes its 15% cut.
+
+The Compounding Effect: VAT is charged on the total invoice value, not just the hammer price.
+
+VAT is charged on the Hammer Price (unless the seller is non-VAT registered, which is rare for banks).
+
+VAT is charged on the Buyer's Premium.
+
+VAT is charged on the Documentation Fee.
+
+Trap: Most bids are "Exclusive of VAT." If you bid R10,000, you are actually committing to R11,500 immediately.9
+
+3.1.3 The Administration / Documentation Fee
+
+Every vehicle sold attracts a "Doc Fee" or "Handling Fee." This covers the administrative cost of processing the NaTIS change of ownership documents.
+
+Fixed Cost: In 2025/2026, this fee ranges from R2,500 to R2,900 excluding VAT per unit.4
+
+The Ratio Killer: For a high-value bike (e.g., R150,000 BMW GS), a R2,500 fee is negligible (1.6%). For a cheap delivery bike (e.g., R7,000 Big Boy), that same R2,500 fee represents 35% of the asset value. This fee disproportionately punishes the low-end of the market.
+
+Cash Handling Fees: If you attempt to pay cash (which is discouraged), additional percentage fees (1-2%) apply.12
+
+3.1.4 Registration and Activation Capital
+
+Before you can even bid, you must place capital at risk.
+
+Refundable Deposit: Standard deposits are R5,000 to R10,000.6
+
+Liquidity Constraint: If you do not win, this money can be tied up for 7-10 working days while the refund processes. A professional buyer must have sufficient float to keep deposits active across multiple houses simultaneously.13
+
+3.2 The Professional Buyer’s Calculator (The Algorithm)
+
+To buy correctly, you must determine your Maximum Hammer Price ($H_{max}$).
+
+Inputs:
+
+$MV$ (Market Value): The conservative resale price (Trade Value, not Retail).
+
+$PM$ (Profit Margin): Minimum required return (e.g., 20% or flat R3,000).
+
+$RC$ (Repair Cost): Parts + Labour + Tyres + Licensing.
+
+$F_{doc}$ (Doc Fee): R2,600 (avg).
+
+$C_{rate}$ (Commission Rate): 10% (0.10).
+
+$V$ (VAT Rate): 15% (0.15).
+
+Step 1: Determine Net Budget ($B_{net}$)
+
+
+
+
+
+$$B_{net} = \frac{MV}{1 + PM} - RC$$
+
+Step 2: Strip VAT ($B_{exVAT}$)
+
+
+
+
+
+$$B_{exVAT} = \frac{B_{net}}{1.15}$$
+
+Step 3: Remove Fixed Fees
+
+
+
+
+
+$$B_{bid} = B_{exVAT} - F_{doc}$$
+
+Step 4: Remove Commission to find Hammer Price
+
+
+
+
+
+$$H_{max} = \frac{B_{bid}}{1 + C_{rate}}$$
+
+3.3 Case Study: The "Delivery Bike" Flip (Low Value, High Volume)
+
+Let's apply this to a 2023 Big Boy Velocity 150.
+
+Market Value ($MV$): R15,000 (Conservative used price).15
+
+Target Profit: R4,000.
+
+Repair Cost ($RC$): R1,500 (Battery, basic service, roadworthy).
+
+Doc Fee: R2,500.
+
+Commission: 10%.
+
+Calculation:
+
+Net Realizable: R15,000 - R4,000 = R11,000.
+
+Less Repairs: R11,000 - R1,500 = R9,500 (This is the max Total Cost of Acquisition).
+
+Remove VAT: R9,500 / 1.15 = R8,260.
+
+Remove Doc Fee: R8,260 - R2,500 = R5,760.
+
+Remove Commission: R5,760 / 1.10 = R5,236.
+
+The Verdict: Your paddle must stay down if the bidding goes over R5,250.
+
+Insight: Notice how the Doc Fee (R2,500) consumes nearly 50% of the available bid budget. On low-value bikes, the "hidden fees" are the primary barrier to profitability. You cannot buy a R5,000 runner at auction and make money unless you are buying in bulk or stripping for parts. The math forces you to buy non-runners or bulk lots in this segment to dilute the fees.
+
+3.4 Case Study: The "Adventure" Flip (High Value)
+
+Let's apply this to a 2015 BMW R1200 GS.
+
+Market Value ($MV$): R120,000.16
+
+Target Profit: R15,000.
+
+Repair Cost ($RC$): R10,000 (Major service, tyres, potential shaft drive seal).
+
+Doc Fee: R2,500.
+
+Commission: 6% (Bank Repo rate).
+
+Calculation:
+
+Net Realizable: R120,000 - R15,000 = R105,000.
+
+Less Repairs: R105,000 - R10,000 = R95,000.
+
+Remove VAT: R95,000 / 1.15 = R82,608.
+
+Remove Doc Fee: R82,608 - R2,500 = R80,108.
+
+Remove Commission: R80,108 / 1.06 = R75,573.
+
+The Verdict: You can bid up to R75,500.
+
+Insight: On high-value assets, the Doc Fee becomes irrelevant. The critical variables here are the Repair Cost (BMW parts are expensive) and the Commission Rate.
+
+4. The Mechanics of Bidding: Strategy and Timing
+
+Winning an auction is not about having the most money; it is about psychological discipline and understanding the platform's algorithms.
+
+4.1 Digital Warfare: Proxy Bidding and Soft Closes
+
+The majority of vehicle auctions in SA are now "Timed Online" or "Live Webcast."
+
+Proxy Bidding (The "Set and Forget" Strategy): This is the professional's primary tool. Instead of watching the screen and clicking "Bid" every time you are outbid (which induces emotional "auction fever"), you enter your calculated $H_{max}$ as a "Proxy Bid" early in the auction.
+
+Mechanism: The system holds your maximum secret. If the current bid is R10,000 and your proxy is R15,000, the system will bid R10,500 for you. If someone bids R12,000, the system counters at R12,500. It stops only when your R15,000 cap is breached.
+
+Advantage: It removes emotion. It also secures the "tie-breaker." If two people bid R15,000, the one who placed the proxy first wins.17
+
+The "Soft Close" / Auto-Extend: Unlike eBay, where an auction ends precisely at a set time (allowing "sniping"), SA auctioneers use a soft close. If a bid is placed in the final 2-3 minutes, the clock resets (usually adding 2 minutes).
+
+Strategy: Do not wait for the last second; it yields no advantage. It only prolongs the pain. Place your calculated proxy bid and walk away. If the market values the bike higher than your calculator allowed, let them have it. The professional accepts losing 90% of auctions to win the 10% that are profitable.19
+
+4.2 The "Voetstoots" Doctrine
+
+Every bid is binding. Every sale is "Voetstoots" (as is). There is no "cooling off" period for auction vehicles.
+
+Duty to Repair: The auctioneer has zero duty to repair. If the engine block is cracked, you own a cracked engine block.
+
+The Consumer Protection Act (CPA): While the CPA offers some protection, Section 45 explicitly creates exemptions for auctions. The implied warranty of quality is largely negated by the conditions of sale which you sign upon registration. The onus is entirely on the buyer to inspect.14
+
+5. Asset Selection Strategy: Identifying the "Goldilocks" Inventory
+
+Not all motorcycles are viable flip candidates. The professional buyer segments the market into three specific categories, each with a different risk/reward profile.
+
+5.1 Segment A: The Delivery Economy (High Velocity)
+
+This is the most liquid segment in South Africa. The explosion of last-mile delivery services (Checkers Sixty60, Uber Eats, Mr D) has created infinite demand for 150cc utility bikes.
+
+Target Models:
+
+Big Boy Velocity 150: The ubiquitous workhorse.
+
+Honda Ace 125: The premium commercial option.
+
+Bajaj Boxer: Durability focused.
+
+The Play: Buy fleets. Often, courier companies de-fleet 10-20 bikes at once. These are high mileage but often have service records.
+
+Parts Advantage: The Big Boy Velocity is a "GY6" based Chinese motorcycle. Parts are generic and absurdly cheap. A full engine replacement can be done for under R5,000. This makes "Non-Runners" in this segment highly attractive. You can buy a non-runner for R2,000, spend R3,000 on parts, and sell for R12,000.22
+
+5.2 Segment B: The Lifestyle Adventure (High Value)
+
+South Africa is "GS Country." Adventure bikes hold value better than superbikes or cruisers.
+
+Target Models:
+
+BMW F800GS / R1200GS: High liquidity.
+
+Yamaha Tenere 700: Very high demand, rare at auction.
+
+Honda Africa Twin: Strong resale.
+
+The Play: Look for "Cosmetic Write-offs." An adventure bike that falls over often scratches the crash bars, fairings, and exhausts. Insurers write them off because OEM replacement parts are astronomical. However, a buyer can sand and repaint crash bars, or live with scratches. The mechanicals are usually untouched.
+
+The Risk: Electronics. A BMW with a failed ABS pump or ESA shock is a financial black hole. Diagnostic tools (GS-911) are essential for inspection.7
+
+5.3 Segment C: The Salvage Stripper (Parts Only)
+
+This involves buying Code 3 or Code 4 wrecks specifically to strip for parts.
+
+The Play: Buy a wrecked superbike (e.g., Yamaha R1, Kawasaki ZX-10R). The front end might be destroyed, but the rear subframe, wheel, swingarm, and engine casing might be intact.
+
+The Math: The sum of the parts is often 3x the value of the whole. However, this requires storage space, mechanical labour, and patience to sell individual parts on Gumtree/Facebook.8
+
+6. Technical Due Diligence: The Inspection Checklist
+
+Since you cannot test drive the vehicle (bikes are sold "static"), you must perform a forensic static inspection. This must happen on the viewing day, usually the day before the auction.
+
+6.1 The "Kill Shot" Checks (Walk Away Immediately)
+
+If you see these, do not bid.
+
+Steering Stop Damage: Look at the "stops" (little metal tabs) on the lower triple clamp or the frame neck. If they are sheared off, bent, or show signs of fresh paint/welding, the bike has suffered a violent "tank slapper" or heavy front-end impact. This usually means the frame is twisted. A twisted frame is unfixable and dangerous.25
+
+Cracked Headstock Paint: Look for hairline cracks in the paint around the welding of the steering head. This indicates frame stress/bending.27
+
+Engine Case Cracks: Inspect the engine mountings. A crash often cracks the engine casing where it bolts to the frame. This is effectively a written-off engine.
+
+6.2 The Mechanical Health Checks
+
+Cold Start Audit: Arrive early. Touch the exhaust headers. If they are hot, the auction staff warmed the bike up to hide cold-start smoke (valve stem seals) or rattles (cam chain tensioner). You want to hear a cold start.21
+
+The Oil Sight Glass:
+
+Milky/Grey Oil: Water in the oil. Blown head gasket. Walk away.
+
+Metallic Flakes: Bearing failure. Engine needs a rebuild.
+
+Black Sludge: Poor maintenance, but potentially salvageable with a flush (risky).
+
+Consumables Audit (The Negotiation Points):
+
+Tyres: Check the date code (DOT). Old tyres are hard and dangerous. A set of bike tyres costs R4,000 - R6,000. Factor this into your $RC$.28
+
+Chain/Sprockets: Pull the chain at the rear sprocket. If you can pull it off the teeth, it's stretched. A "hooked" sprocket means replacement. Cost: R1,500 - R2,500.30
+
+Fork Seals: Run your finger down the chrome fork stanchion. If it comes up oily, the seals are blown. Cost: R1,500 to fix.
+
+6.3 The Electrical Audit
+
+Digital Dashboards: On modern bikes (Ducati, BMW), a dead dashboard is a catastrophe. These units are coded to the ECU and keys. Replacing a dash often means replacing the ECU and locks, costing R30,000+. If the dash doesn't light up with the ignition, assume the worst.31
+
+7. Operational Logistics: Repair and Supply Chain
+
+To maximize the "Correct Ratio," you must minimize the Repair Cost ($RC$). You cannot afford OEM dealer labour rates (R850-R1,200/hour). You must build a supply chain.
+
+7.1 Sourcing Parts: The "Chinese" Advantage
+
+For the Big Boy/Jonway segment, parts are interchangeable. A "GY6" engine part fits almost all 150cc scooters.
+
+The Price Reality:
+
+Complete Engine Rebuild Kit (Piston/Rings/Gaskets): ~R800 - R1,200.32
+
+Tyres (17 inch commercial): R400 - R600 each.33
+
+Chain and Sprocket Kit: R400 - R600.35
+
+The Supplier: "Bike Parts SA" and local importers in industrial hubs (Jet Park, Strydom Park) are cheaper than dealers.
+
+7.2 The Scrapyard Network
+
+For Japanese and European bikes, new parts destroy margins. You must use the scrapyard network.
+
+Key Players:
+
+Bike Hospital (Pretoria/JHB): Massive inventory of accident-damaged Japanese bikes. Critical for sourcing fairings, headlights, and ECUs.36
+
+N and R Motorcycles (Johannesburg): Specialists in rebuilds and hard-to-find bits.38
+
+Bike Salvage Centre (Pretoria): A veteran player (est 2001) for used spares.39
+
+ACME Salvage: Specializes in BMW spares, crucial for fixing those expensive GS models.41
+
+7.3 Service Costs and Labour
+
+Major Service: On a big bike (Triumph Tiger/BMW GS), a major service (valve clearances, plugs, fluids) is expensive.
+
+Dealer Cost: R6,000 - R10,000.
+
+DIY/Independent Cost: R2,500 (Parts) + R2,000 (Labour) = R4,500.28
+
+The Lesson: If you cannot perform basic maintenance (oil changes, brake pads, chain tensioning) yourself, the auction margins will be consumed by mechanics. Basic mechanical competence is a prerequisite for profitability.
+
+8. Regulatory Compliance: The Paperwork Minefield
+
+The vehicle is not yours until the papers say it is.
+
+8.1 NaTIS Codes Explained
+
+Code 1 (New): Rare at auction.
+
+Code 2 (Used): The holy grail. Bank repos are usually Code 2. These can be financed and insured easily.
+
+Code 3 (Built-up/Unfit): The vehicle has been de-registered due to theft or damage.
+
+The Cost: To put this back on the road, you need a Request for Police Clearance (RPC).
+
+The Value Hit: A Code 3 bike trades at 20-30% less than a Code 2 bike. Do not pay Code 2 prices for Code 3 stock.43
+
+Code 4 (Demolished): Spares only. The chassis must be destroyed. Never buy this hoping to put it on the road.43
+
+8.2 The Police Clearance Process (RPC)
+
+If you buy a Code 3 bike, or one with an engine change:
+
+Microdot: You must have the bike microdotted (DataDot). Cost: ~R500.44
+
+RPC Form: Obtain from licensing department.
+
+SAPS Inspection: Take the bike (on a trailer) to a SAPS Vehicle Identification Section. They check for stolen parts.
+
+Wait Time: This can take weeks.
+
+Cost: Using a queuing service (e.g., Clearance Pros, Apostil) costs R2,500 - R3,500 but saves immense time. Doing it yourself costs <R200 but costs days of your life.44
+
+8.3 Roadworthy
+
+Every vehicle needs a Roadworthy Certificate (COR) to transfer ownership to a new private owner.
+
+Cost: ~R500 - R700 at DEKRA or private test stations.
+
+Requirement: The bike must be mechanically sound. No leaks, working lights, good tyres. This is part of your $RC$.
+
+9. Insurance and Resale
+
+9.1 Insuring Auction Bikes
+
+Code 2: Insurable as normal.
+
+Code 3: Many insurers refuse Comprehensive cover. Some specialist brokers or specific products (like King Price) may cover them, often at a higher premium or with an "Agreed Value" clause rather than Retail Value.46
+
+9.2 The Resale Channel
+
+Platforms: Facebook Marketplace is king for sub-R50,000 bikes. AutoTrader is better for high-end (BMW/Harley) stock.24
+
+Listing Strategy: Be honest about the origin. "Bank Repo" is a positive keyword—it implies the previous owner ran out of money, not that the bike was wrecked. "Code 3/Rebuild" must be disclosed to avoid CPA liability later.
+
+10. Conclusion: The Roadmap to Professionalism
+
+Becoming a professional auction buyer is an exercise in risk management, not gambling. The market rewards those who:
+
+Rigourously apply the TCA Calculator to every bid, ensuring fees don't eat the margin.
+
+Specialize in specific segments (e.g., "The Delivery Flip" or "The GS Rebuild") rather than buying randomly.
+
+Build a supply chain of cheap parts and reliable mechanics/scrapyards.
+
+Discipline themselves to walk away when the bidding exceeds the calculated Strike Zone.
+
+The "Correct Ratio" is simple: Total Cost of Acquisition (Hammer + Fees + Repairs) must never exceed 70% of the Conservative Trade Value. If you adhere to this rule, the South African auction floor is a goldmine. If you ignore it, it is a casino.
+
+Appendix A: Summary of Auction Fees (2025 Estimates)
+
+Fee Type
+
+Amount / Percentage
+
+Notes
+
+Registration Deposit
+
+R5,000 - R10,000
+
+Refundable (7-10 days)
+
+Buyer's Premium (Comm)
+
+6% - 10%
+
+Add VAT to this amount
+
+Documentation Fee
+
+R2,500 - R2,900
+
+Per vehicle, Add VAT
+
+VAT
+
+15%
+
+Calculated on (Hammer + Comm + Doc Fee)
+
+Cash Deposit Fee
+
+1.0% - 2.0%
+
+Avoid by using EFT
+
+Storage Fee
+
+R250 / day
+
+If not collected within 48 hours
+
+5
+
+Appendix B: Key Scrapyard & Parts Contacts
+
+
+
+Name
+
+Location
+
+Speciality
+
+Bike Hospital
+
+JHB / Pretoria
+
+Japanese & Superbikes 36
+
+N and R Motorcycles
+
+JHB (Robertsham)
+
+Rebuilds & Used Spares 38
+
+Bike Salvage Centre
+
+Pretoria Gardens
+
+General Spares (Est 2001) 39
+
+ACME Salvage
+
+JHB
+
+BMW Specialists 41
+
+Bike Parts SA
+
+Online / Gauteng
+
+Chinese/Delivery Bike Spares 49
+
+Enduro Shop
+
+Online
+
+Dirt Bike / KTM Spares 50
+
+Works cited
+
+Vehicle auctions - WesBank, accessed January 12, 2026, https://www.wesbank.co.za/auctions/
+
+Tirhani Auctioneers, accessed January 12, 2026, https://bid.tirhani.co.za/ui/auctions/114584/14659469
+
+MFC approved dealerships, Avo Auto & auctions | Nedbank, accessed January 12, 2026, https://www.mfc.co.za/find-a-car.html
+
+FAQ | NedbankMFC - MFC Auction House, accessed January 12, 2026, https://www.mfcauctions.co.za/frequently-asked-questions
+
+Upcoming Auctions | Aucor, accessed January 12, 2026, https://aucor-webmodule.auctionmobility.com/
+
+BUYERS GUIDE - Aucor, accessed January 12, 2026, https://aucor.com/sites/default/files/download_catalogue/v1_-_timed_online_buyers_catalogue.pdf
+
+Motorcycle | Lowest prices, 61 found - GoBid, accessed January 12, 2026, https://www.gobid.co.za/search?p=1&sm=s&ac=0&vc=26409
+
+Bike Listings - Auction Nation, accessed January 12, 2026, https://www.auctionnation.co.za/Listings/Auction/399275
+
+Auction Information Guide, accessed January 12, 2026, https://www.auctioneering.co.za/uploads/documents/Auction_Information_Booklet.pdf
+
+Upcoming Auctions | WH Auctioneers l Truck Auctions, Construction Plant Auctions, Parkhome Auctions, Catering Auctions, Online Auctions. Auction bidding from your PC or mobile phone., accessed January 12, 2026, https://www.whauctions.com/
+
+Terms and Conditions | Cars from R30 000 - GoBid, accessed January 12, 2026, https://www.gobid.co.za/termsandconditions
+
+Auction Guide - Aucor, accessed January 12, 2026, https://aucor.com/auction-guide
+
+Online Auction Quick Guide Viewing days Auction Auction registration Registration fee - Cloudinary, accessed January 12, 2026, https://res.cloudinary.com/bidlogix/raw/upload/fl_attachment/v1595326669/bdx/Online_WesBank_Auction_Quick_Guide_awwyme.pdf
+
+auction rules, accessed January 12, 2026, https://www.auctionoperation.co.za/auction_rules.aspx
+
+Big Boy Velocity 150 Bikes for Sale - Auto Mart, accessed January 12, 2026, https://www.automart.co.za/bikes/big-boy-velocity-150/11k/10m
+
+Bikes for Sale - ZA Bikers, accessed January 12, 2026, https://www.zabikers.co.za/bikes-for-sale/
+
+What Is a Proxy Bid? A Guide for Bidders | Auction Streaming, accessed January 12, 2026, https://auctionstreaming.com/what-is-a-proxy-bid
+
+Proxy Bid Auction: What Is It? - AuctionMethod, accessed January 12, 2026, https://www.auctionmethod.com/blog/what-is-a-proxy-bid-auction
+
+What is Auto-Extend/Soft Close During an Online Auction?, accessed January 12, 2026, https://www.targetauction.com/blog/detail/what-is-auto-extend-soft-close-of-an-online-auction
+
+Bid Extension For Bidders - Auctria Academy, accessed January 12, 2026, https://academy.auctria.com/online_experience/placing_bids/bid_extension_for_bidders/
+
+Buying Vehicles at an Auction - Arrive Alive, accessed January 12, 2026, https://www.arrivealive.mobi/buying-vehicles-at-an-auction
+
+Are Big Boy scooters reliable? : r/capetown - Reddit, accessed January 12, 2026, https://www.reddit.com/r/capetown/comments/1fgjmbg/are_big_boy_scooters_reliable/
+
+How reliable are big boy bikes : r/capetown - Reddit, accessed January 12, 2026, https://www.reddit.com/r/capetown/comments/1ff9qx9/how_reliable_are_big_boy_bikes/
+
+New & used bikes for sale in South Africa - AutoTrader, accessed January 12, 2026, https://www.autotrader.co.za/bikes-for-sale
+
+Thread: Broken steering stop (frame) - ApriliaForum, accessed January 12, 2026, https://www.apriliaforum.com/forums/showthread.php?306507-Broken-steering-stop-(frame)
+
+Broken steering stops? : r/motorcycles - Reddit, accessed January 12, 2026, https://www.reddit.com/r/motorcycles/comments/11q2vqm/broken_steering_stops/
+
+How to check if a frame is ok : r/motorcycles - Reddit, accessed January 12, 2026, https://www.reddit.com/r/motorcycles/comments/iu8eu5/how_to_check_if_a_frame_is_ok/
+
+What are the maintenance costs associated with owning a motorcycle in South Africa? - Bike Ownership - AutoTrader, accessed January 12, 2026, https://www.autotrader.co.za/bikes/news-and-advice/bike-ownership/what-are-the-maintenance-costs-associated-with-owning-a-motorcycle-in-south-africa/14981
+
+On Road Tyres | Just Bike Tyre, accessed January 12, 2026, https://www.justbiketyre.co.za/collections/on-road-tyres
+
+PBR Sprocket & Chain Kits - Race Parts, accessed January 12, 2026, https://www.raceparts.co.za/68-pbr-sprocket-chain-kits
+
+Used & Salvage Motorcycles for Sale by Auction - IAA, accessed January 12, 2026, https://www.iaai.com/Vehiclelisting/Motorcycles
+
+Velocity 150 - Motoshed, accessed January 12, 2026, https://motoshed.co.za/product-category/parts/bigboy/velocity-150/
+
+Motorcycle tyres - Bike Parts SA, accessed January 12, 2026, https://www.bikeparts-sa.co.za/tyres-and-tubes/tyres.html
+
+Big Boy Velocity Tyres - Bike Parts SA, accessed January 12, 2026, https://www.bikepartssa.co.za/Big-Boy-Velocity-Tyres
+
+Chains & Sprockets - Pocketbike SA, accessed January 12, 2026, https://pocketbikesa.co.za/collections/sprockets
+
+BIKE HOSPITAL MOTORCYCLE SCRAP YARD - Looking 4 Spares, accessed January 12, 2026, https://www.looking4spares.co.za/directory/scrap-yards-/gauteng/scrap-yards--pretoria--scrapyards--gauteng/bike-hospital-motorcycle-scrap-yard
+
+BIKE HOSPITAL MOTORCYCLE SCRAP YARD - Looking 4 Spares, accessed January 12, 2026, https://www.looking4spares.co.za/directory/scrap-yards-/gauteng/scrap-yards--johannesburg--scrapyards--gauteng/bike-hospital-motorcycle-scrap-yard
+
+N AND R MOTORCYCLES SCRAP YARD - Looking 4 Spares, accessed January 12, 2026, https://www.looking4spares.co.za/directory/used-motor-spares/gauteng/johannesburg/nar-motorcycles-scrap-yard
+
+Bike Salvage Center, accessed January 12, 2026, https://bikesalvage.za.live/
+
+Contact Us | Bike Salvage Centre | second hand new spares motor cycles quads scooter, accessed January 12, 2026, https://www.bikesalvage.co.za/wcontact.php
+
+ACME Salvage – Welcome To Acme Salvage Online!, accessed January 12, 2026, https://acmesalvage.co.za/
+
+Services - BestBikes, accessed January 12, 2026, https://www.bestbikes.co.za/services/
+
+eNaTiS Codes expalined - Automotive News - AutoTrader, accessed January 12, 2026, https://www.autotrader.co.za/cars/news-and-advice/automotive-news/enatis-codes-expalined/14178
+
+View our prices and all pricing options - Apostil.co.za, accessed January 12, 2026, https://apostil.co.za/pricing/
+
+How Much Does a Police Clearance Certificate Cost in South Africa?, accessed January 12, 2026, https://clearancepros.co.za/how-much-does-a-police-clearance-certificate-cost-in-south-africa/
+
+Motorbike insurance South Africa | King Price Insurance, accessed January 12, 2026, https://www.kingprice.co.za/personal-insurance/motorbike-insurance
+
+Motorcyle Insurance Tailored To Your Needs | OMNI Group Pty Ltd, accessed January 12, 2026, https://omnigroup.co.za/motorcycle-insurance/
+
+New & Used Motorbikes For Sale | South Africa - ChangeCars, accessed January 12, 2026, https://www.changecars.co.za/motorbikes
+
+Motorcycle spares for chinese bikes @ Www.bikeparts-sa.co.za, accessed January 12, 2026, https://www.looking4spares.co.za/looking4spares-classifieds/Ad/spares-accessories-979/motorcycle-spares-for-chinese-bikes-www-bikeparts-sa-co-za-7406
+
+EnduroShop | SA's Leading Online Motorcycle Specialist Store - Enduroshop, accessed January 12, 2026, https://enduroshop.co.za/

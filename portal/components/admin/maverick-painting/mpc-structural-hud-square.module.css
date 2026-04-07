@@ -1,0 +1,285 @@
+/* Maverick — Structural HUD square 1:1. Base 600×600 → export 1080×1080 (×1.8). */
+
+.root {
+  --obsidian: #050508;
+  --pure-white: #ffffff;
+  --blueprint-cyan: #00d1ff;
+  --thermal-orange: #ff3b30;
+  --stealth-grey: #8e8e93;
+  --glass-terminal: rgba(10, 10, 14, 0.75);
+  --glass-border: rgba(0, 209, 255, 0.2);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--obsidian);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  box-shadow:
+    0 0 0 1px #111,
+    0 40px 80px rgba(0, 209, 255, 0.08);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.blueprintGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 209, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 209, 255, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scrimTl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 0, 0, 0.8) 0%,
+    transparent 70%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scrimBr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(
+    circle at bottom right,
+    rgba(0, 0, 0, 0.8) 0%,
+    transparent 70%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.heroCard {
+  position: relative;
+  z-index: 10;
+  background: var(--glass-terminal);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--glass-border);
+  border-left: 3px solid var(--blueprint-cyan);
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 65%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  align-self: flex-start;
+  min-width: 0;
+}
+
+.brandIdentifier {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.idBox {
+  background: var(--pure-white);
+  color: var(--obsidian);
+  font-size: 0.5rem;
+  font-weight: 900;
+  padding: 3px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.idText {
+  color: var(--stealth-grey);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.headline {
+  color: var(--pure-white);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.actionWidget {
+  position: relative;
+  z-index: 10;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 10px 10px 10px 25px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 100%;
+}
+
+.widgetData {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  min-width: 0;
+}
+
+.wVal {
+  color: var(--blueprint-cyan);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.wLbl {
+  color: var(--pure-white);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.btnCircle {
+  background: var(--blueprint-cyan);
+  color: var(--obsidian);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 10px 20px rgba(0, 209, 255, 0.3);
+}
+
+.btnCircle svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2.5px;
+  fill: none;
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adCanvas {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+  padding: 54px;
+}
+
+.root.canvas1080 .blueprintGrid {
+  background-size: 54px 54px;
+}
+
+.root.canvas1080 .heroCard {
+  border-radius: 36px;
+  padding: 45px;
+  border-left-width: 5px;
+}
+
+.root.canvas1080 .brandIdentifier {
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.root.canvas1080 .idBox {
+  font-size: 14px;
+  padding: 5px 11px;
+  border-radius: 7px;
+}
+
+.root.canvas1080 .idText {
+  font-size: 17px;
+}
+
+.root.canvas1080 .headline {
+  font-size: 92px;
+  letter-spacing: -3px;
+  margin-bottom: 18px;
+}
+
+.root.canvas1080 .subtext {
+  font-size: 26px;
+}
+
+.root.canvas1080 .actionWidget {
+  gap: 27px;
+  padding: 18px 18px 18px 45px;
+  border-radius: 54px;
+}
+
+.root.canvas1080 .wVal {
+  font-size: 29px;
+}
+
+.root.canvas1080 .wLbl {
+  font-size: 17px;
+}
+
+.root.canvas1080 .btnCircle {
+  width: 90px;
+  height: 90px;
+}
+
+.root.canvas1080 .btnCircle svg {
+  width: 36px;
+  height: 36px;
+}

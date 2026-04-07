@@ -1,0 +1,352 @@
+/* Maverick — Forensic Matrix square 1:1. Base 600×600 → 1080×1080 (×1.8). */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --forensic-green: #00ff66;
+  --alert-amber: #ffb800;
+  --stealth-grey: #8e8e93;
+  --panel-bg: rgba(12, 12, 14, 0.85);
+  --panel-border: rgba(255, 255, 255, 0.1);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.companyGrid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+  align-items: start;
+}
+
+.corpIdentity {
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--panel-border);
+  padding: 15px 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.corpName {
+  color: var(--pure-white);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.corpTag {
+  color: var(--stealth-grey);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+.trustBadge {
+  background: rgba(0, 255, 102, 0.1);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+  color: var(--forensic-green);
+  padding: 15px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 0;
+  max-width: 140px;
+}
+
+.trustBadge svg {
+  margin-bottom: 6px;
+  display: block;
+}
+
+.trustText {
+  font-size: 0.55rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.35;
+}
+
+.serviceConsole {
+  position: relative;
+  z-index: 10;
+  background: var(--panel-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--panel-border);
+  border-bottom: 3px solid var(--forensic-green);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  min-height: 0;
+}
+
+.consoleInfo {
+  flex: 1;
+  padding-right: 20px;
+  min-width: 0;
+}
+
+.cHeader {
+  color: var(--alert-amber);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 700;
+}
+
+.headline {
+  color: var(--pure-white);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  max-width: 90%;
+}
+
+.consoleAction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+  flex-shrink: 0;
+}
+
+.dataPoint {
+  text-align: right;
+}
+
+.dpVal {
+  display: block;
+  color: var(--pure-white);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.dpLbl {
+  display: block;
+  color: var(--stealth-grey);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.btnCore {
+  background: var(--pure-white);
+  color: var(--pure-black);
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 12px;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adCanvas {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+  padding: 45px;
+}
+
+.root.canvas1080 .companyGrid {
+  gap: 27px;
+}
+
+.root.canvas1080 .corpIdentity {
+  padding: 27px 36px;
+  border-radius: 29px;
+}
+
+.root.canvas1080 .corpName {
+  font-size: 38px;
+}
+
+.root.canvas1080 .corpTag {
+  font-size: 17px;
+}
+
+.root.canvas1080 .trustBadge {
+  padding: 27px;
+  border-radius: 29px;
+  max-width: 252px;
+}
+
+.root.canvas1080 .trustBadge svg {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 11px;
+}
+
+.root.canvas1080 .trustText {
+  font-size: 17px;
+}
+
+.root.canvas1080 .serviceConsole {
+  border-radius: 36px;
+  padding: 45px;
+  gap: 29px;
+  border-bottom-width: 5px;
+}
+
+.root.canvas1080 .consoleInfo {
+  padding-right: 36px;
+}
+
+.root.canvas1080 .cHeader {
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+.root.canvas1080 .headline {
+  font-size: 63px;
+  margin-bottom: 18px;
+}
+
+.root.canvas1080 .subtext {
+  font-size: 26px;
+}
+
+.root.canvas1080 .consoleAction {
+  gap: 27px;
+  padding-left: 36px;
+}
+
+.root.canvas1080 .dpVal {
+  font-size: 38px;
+}
+
+.root.canvas1080 .dpLbl {
+  font-size: 17px;
+}
+
+.root.canvas1080 .btnCore {
+  height: 86px;
+  padding: 0 43px;
+  border-radius: 22px;
+  font-size: 27px;
+}

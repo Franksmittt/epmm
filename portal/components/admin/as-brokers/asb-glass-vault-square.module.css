@@ -1,0 +1,334 @@
+/* AS Brokers — Master Finance square 1:1 (Glass Vault). Export 1080×1080. */
+
+.root {
+  --trust-blue: #0088cc;
+  --glow-blue: #00a8ff;
+  --obsidian: #02050a;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--obsidian);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.wealthAura {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 50%;
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(0, 168, 255, 0.18) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scrimTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 5, 10, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.advisorHud {
+  position: relative;
+  z-index: 2;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.firmIdentity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.firmName {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.firmCredentials {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.trustShield {
+  width: 11px;
+  height: 11px;
+  color: var(--glow-blue);
+  flex-shrink: 0;
+}
+
+.contactPill {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contactPillHighlight {
+  color: var(--glow-blue);
+}
+
+.heroStage {
+  flex-grow: 1;
+  z-index: 2;
+  min-height: 0;
+}
+
+.vaultConsole {
+  position: relative;
+  z-index: 3;
+  margin: 0 25px 25px 25px;
+  background: rgba(5, 8, 14, 0.95);
+  backdrop-filter: blur(40px) saturate(120%);
+  -webkit-backdrop-filter: blur(40px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.growthLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--glow-blue),
+    transparent
+  );
+  opacity: 0.7;
+  border-top-left-radius: 28px;
+  border-top-right-radius: 28px;
+}
+
+.vaultInfo {
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  min-width: 0;
+}
+
+.serviceCategory {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--glow-blue);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.headlineLight {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.valueProp {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+.secureButton {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--trust-blue) 0%, #005f99 100%);
+  color: #ffffff;
+  border: none;
+  height: 52px;
+  padding: 0 8px 0 20px;
+  border-radius: 26px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 136, 204, 0.25);
+  white-space: nowrap;
+}
+
+.btnIconCircle {
+  width: 38px;
+  height: 38px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.btnIconCircle svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--trust-blue);
+  stroke-width: 2.5px;
+  fill: none;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080 .advisorHud {
+  padding: 45px 54px;
+}
+
+.root.canvas1080 .firmName {
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+.root.canvas1080 .firmCredentials {
+  font-size: 19px;
+  gap: 11px;
+}
+
+.root.canvas1080 .trustShield {
+  width: 20px;
+  height: 20px;
+}
+
+.root.canvas1080 .contactPill {
+  padding: 11px 29px;
+  border-radius: 36px;
+  font-size: 20px;
+  gap: 11px;
+}
+
+.root.canvas1080 .vaultConsole {
+  margin: 0 45px 45px 45px;
+  border-radius: 50px;
+  padding: 43px 50px;
+  gap: 36px;
+}
+
+.root.canvas1080 .growthLine {
+  height: 3px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.root.canvas1080 .serviceCategory {
+  font-size: 22px;
+  letter-spacing: 4px;
+  margin-bottom: 11px;
+}
+
+.root.canvas1080 .headline {
+  font-size: 58px;
+  letter-spacing: -2px;
+  margin-bottom: 14px;
+}
+
+.root.canvas1080 .valueProp {
+  font-size: 23px;
+}
+
+.root.canvas1080 .secureButton {
+  height: 94px;
+  padding: 0 14px 0 36px;
+  border-radius: 47px;
+  font-size: 28px;
+  gap: 22px;
+}
+
+.root.canvas1080 .btnIconCircle {
+  width: 68px;
+  height: 68px;
+}
+
+.root.canvas1080 .btnIconCircle svg {
+  width: 29px;
+  height: 29px;
+}

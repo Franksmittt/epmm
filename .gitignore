@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Knowledge — do not track (large / policy)
+knowledge/archive/
+knowledge/audiences/
+knowledge/channels/
+knowledge/creative-direction/
+
+# Environment & secrets (repo root)
+.env
+.env.local
+.env.*.local
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+
+# Cursor (local IDE state / transcripts)
+.cursor/

@@ -1,0 +1,238 @@
+/* EFS — Overland Scanner vertical 9:16. Export 1080×1920. */
+
+.root {
+  --efs-green: #1e4d2b;
+  --efs-red: #d71920;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Barlow Condensed",
+    "Arial Narrow",
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.scannerHeader {
+  position: relative;
+  padding: 30px;
+  z-index: 5;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  flex-shrink: 0;
+}
+
+.scannerHeaderInner {
+  border-left: 3px solid var(--efs-green);
+  padding-left: 15px;
+}
+
+.scannerHeaderPrimary {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.scannerHeaderSecondary {
+  color: var(--efs-green);
+  font-size: 0.6rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.dataFrame {
+  position: relative;
+  z-index: 5;
+  margin: 20px;
+  padding: 25px;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.statusLight {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 8px;
+  height: 8px;
+  background: var(--efs-red);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--efs-red);
+  pointer-events: none;
+}
+
+.efsTag {
+  color: var(--efs-green);
+  font-weight: 900;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+}
+
+.mainTitle {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  margin-top: 5px;
+}
+
+.mainTitleMuted {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 300;
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.gridLabel {
+  color: var(--efs-green);
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.gridValue {
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.ctaWide {
+  background: var(--efs-red);
+  color: #fff;
+  width: 100%;
+  height: 55px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 900;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.ctaWide svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  stroke-width: 3px;
+  fill: none;
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1920 (×3) ─── */
+
+.root.canvas1080x1920 .adContainer {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080x1920 .scannerHeader {
+  padding: 90px;
+}
+
+.root.canvas1080x1920 .scannerHeaderInner {
+  padding-left: 45px;
+  border-left-width: 9px;
+}
+
+.root.canvas1080x1920 .scannerHeaderPrimary {
+  font-size: 36px;
+}
+
+.root.canvas1080x1920 .scannerHeaderSecondary {
+  font-size: 27px;
+}
+
+.root.canvas1080x1920 .dataFrame {
+  margin: 60px;
+  padding: 75px;
+  border-radius: 12px;
+}
+
+.root.canvas1080x1920 .statusLight {
+  top: 45px;
+  right: 45px;
+  width: 24px;
+  height: 24px;
+}
+
+.root.canvas1080x1920 .efsTag {
+  font-size: 31px;
+}
+
+.root.canvas1080x1920 .mainTitle {
+  font-size: 113px;
+  margin-top: 15px;
+}
+
+.root.canvas1080x1920 .specGrid {
+  gap: 60px;
+  margin: 75px 0;
+  padding-top: 60px;
+}
+
+.root.canvas1080x1920 .gridLabel {
+  font-size: 25px;
+}
+
+.root.canvas1080x1920 .gridValue {
+  font-size: 38px;
+}
+
+.root.canvas1080x1920 .ctaWide {
+  height: 165px;
+  font-size: 48px;
+  gap: 30px;
+}
+
+.root.canvas1080x1920 .ctaWide svg {
+  width: 60px;
+  height: 60px;
+}

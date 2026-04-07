@@ -1,0 +1,155 @@
+Here is a comprehensive strategy for your Facebook vertical ads. I noticed you mentioned "vertical 16:9"—I have adjusted this to the correct vertical format for mobile, which is 9:16 (1080x1920 pixels), as this is the standard aspect ratio for Facebook Stories and Reels.
+
+To merge the aesthetics of Apple and Samsung, we will combine Apple’s hyper-realistic, minimalist "monolith" lighting with Samsung’s vibrant, high-contrast cinematic grading and UI elements.
+
+From Apple: We will use Rim/Edge Lighting at a 135° angle and Negative Fill to carve the product out of a pitch-black void. We will also use Focus Stacking to ensure the bags and wood grain have an "infinite depth of field" so every detail is perfectly sharp.
+
+From Samsung: We will apply their "Nightography" Teal and Orange cinematic color grading to make the flames and wood pop against the shadows. We will also integrate "Squircle" (square-circle) UI elements and floating particle effects (like glowing embers) in their signature "Supernova Yellow" or "Cerulean" blue.
+
+1. AI Image Generation Prompts (JSON Format)
+
+You can feed these highly detailed prompts directly into an AI image generator (like Midjourney) to get the exact products wrapped in this merged aesthetic.
+
+
+
+JSON
+
+
+
+
+
+[  {    "product_name": "Geelhaak Hardwood — 12 kg bag",    "prompt": "A hyper-realistic, macro 9:16 vertical product shot of a premium 12kg mesh bag of Geelhaak firewood resting on a sleek black reflective surface. Apple-style low-key photography: the background is a pitch-black void, with a sharp, liquid-gradient rim-light at 135 degrees tracing the edges of the wood and the bag to create a monolith effect. Samsung-style Nightography: cinematic teal and orange color grading, with subtle, glowing 'Supernova Yellow' embers floating around the bag like dynamic digital particles. Focus-stacked for infinite depth of field so every wood grain and crackling bright flame is critically sharp. Sleek, premium, technological aesthetic."  },  {    "product_name": "The Ultimate Braai Mix — 12 kg bag",    "prompt": "A hyper-realistic 9:16 vertical shot of a premium 12kg bag containing a curated mix of Snuifpeul, Knoppiesdoring, Geelhaak, and Sekelbos hardwoods. Apple-style aesthetic: shot against pure black negative space using precise strip box grid lighting to create an aggressive specular edge highlight along the wood. Samsung-style aesthetic: a holographic, glowing 'Squircle' (rounded square) UI element hovers subtly near the bag, bathed in teal and orange cinematic contrast. A wisp of aromatic smoke curls upward, illuminated by a warm, underlying glow. 8k, photorealistic, pristine product staging."  },  {    "product_name": "Premium Sekelbos — 30 kg bulk bag",    "prompt": "A dramatic, imposing 9:16 vertical photo of a massive 30kg bulk bag of dense, dry Sekelbos wood. Apple-style product photography: the shot uses negative fill to crush the shadows, making the massive bag look like a sleek architectural monument floating in a dark studio. Samsung-style visual identity: dynamic, fluid motion is suggested by vibrant, high-contrast orange heat radiating from the wood's core against a deep cerulean blue shadow backdrop. The wood's texture is intensely sharp through focus stacking. Authoritative, minimalist, highly commercial."  },  {    "product_name": "The Ultimate Braai Mix (Bulk) — 30 kg bulk bag",    "prompt": "A cinematic 9:16 vertical hero shot of a 30kg bulk bag filled with premium mixed braai hardwood. Apple-style lighting: a continuous, seamless highlight runs down the side of the bag, reflecting off the packaging like polished glass. Samsung-style energy: the scene features bold, playful depth with blurred, glowing orange embers in the foreground and a deep teal void in the background. The texturing is hyper-detailed, showing the low-moisture cracks in the wood. A perfect fusion of technological precision and raw, natural energy."  }]
+
+2. Design Firm Creative Brief & Specs Table
+
+This table gives your design team exactly what they need to assemble the final ads for Facebook Stories and Reels.
+
+For maximum conversion, these should be set up as Click-to-WhatsApp (CTWA) campaigns, which Meta's algorithm rewards with cheaper reach due to a "Zero Latency" user experience.
+
+Note on Safe Zones: It is critical that your designers do not put text in the danger zones. For Reels specifically, you must leave the top 14% and the bottom 35% completely clear of text or logos so Facebook's interface does not cover them up. You also need a 6% margin on the sides.
+
+Product & Price
+
+Ad Format
+
+Aspect Ratio & Safe Zones
+
+Headline (Apple Style: Short, Fragmented)
+
+Body Copy & Caption (Samsung Style: Bold, Playful)
+
+Visual UI Notes
+
+Geelhaak (12kg)
+
+
+
+R30 / MOQ: 50
+
+FB Reels / Stories (CTWA)
+
+Ratio: 9:16 (1080x1920)
+
+
+
+Top Safe: Leave 270px (14%) clear.
+
+
+
+Bottom Safe: Leave 670px (35%) clear.
+
+
+
+Sides: 65px (6%) margin.
+
+Bright flames. Steady heat. Perfect.
+
+Caption: Weekend braais will never be the same. Crackling flames that defy the cold front. R30 a bag. (Min 50). Order now via WhatsApp. 🔥
+
+Place the R30 price tag inside a translucent Samsung "Squircle" shape in the center-left safe zone.
+
+Ultimate Braai Mix (12kg)
+
+
+
+R30 / MOQ: 50
+
+FB Reels / Stories (CTWA)
+
+Ratio: 9:16 (1080x1920)
+
+
+
+Top Safe: Leave 270px (14%) clear.
+
+
+
+Bottom Safe: Leave 670px (35%) clear.
+
+
+
+Sides: 65px (6%) margin.
+
+Strong aroma. Easy light.
+
+Caption: Why choose one when you can have the ultimate mix? Snuifpeul meets Sekelbos for coals that outlast the night. 🪵 Tap to secure your 50 bags.
+
+Use Apple's San Francisco (SF Pro) font in Bold White for the headline.
+
+Premium Sekelbos (30kg)
+
+
+
+R70 / MOQ: 20
+
+FB Reels / Stories (CTWA)
+
+Ratio: 9:16 (1080x1920)
+
+
+
+Top Safe: Leave 270px (14%) clear.
+
+
+
+Bottom Safe: Leave 670px (35%) clear.
+
+
+
+Sides: 65px (6%) margin.
+
+Pure heat. Zero moisture.
+
+Caption: The Braai Master's secret weapon. 30kg of pure, clean-burning Sekelbos. Stock up for the season at just R70/bag (Min 20). ⚡ WhatsApp us directly!
+
+Left-align all text to match Samsung's modern UI hierarchy.
+
+Ultimate Braai Mix (Bulk 30kg)
+
+
+
+R70 / MOQ: 20
+
+FB Reels / Stories (CTWA)
+
+Ratio: 9:16 (1080x1920)
+
+
+
+Top Safe: Leave 270px (14%) clear.
+
+
+
+Bottom Safe: Leave 670px (35%) clear.
+
+
+
+Sides: 65px (6%) margin.
+
+Go big. Stay warm.
+
+Caption: For the big braais and the long weekends. We’ve scaled up the Ultimate Mix so you never run out of fire. 🛒 Secure your bulk delivery today!
+
+Use a stark "Teal and Orange" cinematic gradient behind the text to separate it from the deep black background.
+
+If you would like, I can actively run one of these prompts through my image generation tool right now so you can see a prototype of this merged Apple/Samsung aesthetic. Let me know which product you'd like to see!

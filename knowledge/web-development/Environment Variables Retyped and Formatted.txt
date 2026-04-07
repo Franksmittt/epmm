@@ -1,0 +1,301 @@
+Cleaned Text
+
+ADMIN_PASSWORD
+
+All Environments
+
+MiwesuTest24
+
+Added 21h ago
+
+MIWESU_ADMIN_EMAIL
+
+All Environments
+
+info@miwesu.co.za
+
+Added Mar 2
+
+MIWESU_ADMIN_CC
+
+All Environments
+
+admin@miwesu.co.za,bookings@miwesu.co.za
+
+Added Mar 2
+
+MIWESU_CONTACT_TO
+
+All Environments
+
+info@miwesu.co.za
+
+Added Mar 2
+
+MIWESU_CONTACT_CC
+
+All Environments
+
+admin@miwesu.co.za,bookings@miwesu.co.za
+
+Added Mar 2
+
+WOOD_ORDER_EMAIL
+
+All Environments
+
+info@miwesu.co.za
+
+Added Mar 2
+
+DATABASE_URL
+
+All Environments
+
+postgresql://postgres.gtfopwqlnmqjrnyxwvrr:LkA7b.Aj%2BG%3F%40gR5@aws-1-eu-west-1.pooler.supabase.com:5432/postgres?schema=public&sslmode=require
+
+Added Mar 2
+
+RESEND_API_KEY
+
+All Environments
+
+re_cavdeiyc_A5xU9ZdsiYTPcdyhfThnxD6t
+
+Added Mar 2
+
+MIWESU_BOOKING_FROM_EMAIL
+
+All Environments
+
+bookings@miwesu.co.za
+
+Added Mar 2
+
+.env Format
+
+
+
+Code snippet
+
+
+
+
+
+ADMIN_PASSWORD="MiwesuTest24"MIWESU_ADMIN_EMAIL="info@miwesu.co.za"MIWESU_ADMIN_CC="admin@miwesu.co.za,bookings@miwesu.co.za"MIWESU_CONTACT_TO="info@miwesu.co.za"MIWESU_CONTACT_CC="admin@miwesu.co.za,bookings@miwesu.co.za"WOOD_ORDER_EMAIL="info@miwesu.co.za"DATABASE_URL="postgresql://postgres.gtfopwqlnmqjrnyxwvrr:LkA7b.Aj%2BG%3F%40gR5@aws-1-eu-west-1.pooler.supabase.com:5432/postgres?schema=public&sslmode=require"RESEND_API_KEY="re_cavdeiyc_A5xU9ZdsiYTPcdyhfThnxD6t"MIWESU_BOOKING_FROM_EMAIL="bookings@miwesu.co.za"
+
+Afrihost (DOmain)admin@miwesu.co.za100@Miwesu85879
+
+bookings@miwesu.co.za100@Miwesu85879
+
+info@miwesu.co.za
+
+102@Miwesu85879
+
+Record
+
+Type
+
+TTL
+
+Content
+
+miwesu.co.za
+
+SOA
+
+7200
+
+ns.dns1.co.za support.afrihost.com 2026030201 28800 3600 2419200 86400
+
+miwesu.co.za
+
+NS
+
+86400
+
+ns.dns1.co.za
+
+miwesu.co.za
+
+NS
+
+86400
+
+ns.dns2.co.za
+
+miwesu.co.za
+
+NS
+
+86400
+
+ns.otherdns.com
+
+miwesu.co.za
+
+NS
+
+86400
+
+ns.otherdns.net
+
+miwesu.co.za
+
+MX
+
+7200
+
+10 mx7564341105.spe.ucebox.co.za
+
+send.miwesu.co.za
+
+MX
+
+28800
+
+10 feedback-smtp.eu-west-1.amazonses.com
+
+ftp.miwesu.co.za
+
+A
+
+7200
+
+102.222.124.25
+
+cpanel.miwesu.co.za
+
+A
+
+7200
+
+102.222.124.25
+
+webmail.miwesu.co.za
+
+A
+
+7200
+
+102.222.124.25
+
+mail.miwesu.co.za
+
+A
+
+7200
+
+102.222.124.25
+
+*.miwesu.co.za
+
+A
+
+7200
+
+102.222.124.25
+
+miwesu.co.za
+
+A
+
+7200
+
+216.198.79.1
+
+autoconfig.miwesu.co.za
+
+CNAME
+
+7200
+
+envoy.aserv.co.za
+
+autodiscover.miwesu.co.za
+
+CNAME
+
+7200
+
+envoy.aserv.co.za
+
+www.miwesu.co.za
+
+CNAME
+
+28800
+
+fa516ad2ab9dbec2.vercel-dns-017.com
+
+miwesu.co.za
+
+TXT
+
+7200
+
+mailconf=https://envoy.aserv.co.za/mail/config-v1.1.xml
+
+miwesu.co.za
+
+TXT
+
+7200
+
+v=spf1 include:spf.aserv.co.za +a +mx -all
+
+_dmarc.miwesu.co.za
+
+TXT
+
+7200
+
+v=DMARC1; p=none; fo=0; adkim=s; aspf=s
+
+default._domainkey.miwesu.co.za
+
+TXT
+
+7200
+
+v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1sz51hlfQbWLThacsjEvNHTMlewdijQfb0pG9pTlWI6B8r9DmhKpZb9sVVNXidj0kGbfzwcdZz+VQEp3D39o6i/OryU5HYYzbEw2h5kEdo+BnWgqeByyxmbx6ZC3+XkeBQOAQWanLPWXMq50U6NHREgQPiXomwEG2W+9Sc/fxbKSLe6sX+m1Wy2GqJkcyIrFZ90FIXgCYltArNqjxvJvrv2aIW3a3VFl/+WiiWC8ieoO5kNItGfs6Us3sb/S9tlhdOiB6Sm3c47DQldbKNe2chi+igUtpdEapnch62WFEIJZ9n5CDQS2A56Fe2yxA4gIhg3NspGe9Wiilo1UCcOJEQIDAQAB;
+
+resend._domainkey.miwesu.co.za
+
+TXT
+
+28800
+
+p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCVbjZBHrqwZdqEhzEULgeboYqkFFZgMjwAksiJIYfx0n4WV6l5/I9s3+EfFWO/CPNXQA3PBB9kUKf69j5b4z+Mm1KDfzArBLjqrD4xS3y1zuVcEBYrasyzZ6Kf2DZE9zaZJeebtcFkQo294vT1BW1HjYirBNEJqGe+4FyJeQCX3wIDAQAB
+
+send.miwesu.co.za
+
+TXT
+
+28800
+
+v=spf1 include:amazonses.com ~all
+
+_imaps._tcp.miwesu.co.za
+
+SRV
+
+7200
+
+0 1 993 envoy.aserv.co.za
+
+_autodiscover._tcp.miwesu.co.za
+
+SRV
+
+7200
+
+0 0 443 envoy.aserv.co.za
+
+_submission._tcp.miwesu.co.za
+
+SRV
+
+7200
+
+0 1 25 envoy.aserv.co.za

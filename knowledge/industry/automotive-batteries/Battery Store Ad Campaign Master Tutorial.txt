@@ -1,0 +1,641 @@
+Strategic Dominance in the Alberton Battery Market: A Comprehensive Google Ads Framework (2025)
+
+
+
+
+
+1. Executive Market Analysis and Geo-Commercial Context
+
+
+
+The digital advertising landscape for automotive and industrial energy storage in Alberton, Gauteng, represents a complex theatre of commercial warfare. It is not merely a competitive auction for keywords; it is a multifaceted battleground defined by distinct consumer psychologies, hyper-localized industrial needs, and rapidly evolving platform algorithms. To engineer a Google Ads account that systematically outranks established franchise competitors like Battery Centre and Supa Quick, while simultaneously fending off agile mobile disruptors like Michanic, one must first deconstruct the unique socio-economic fabric of the target territory.
+
+The operational environment in 2025 is defined not merely by the sale of a commodity—stored energy—but by the service of mobility assurance and energy security. For a battery retailer situated in this region, the digital advertising strategy must bifurcate to address two fundamentally different customer archetypes: the distressed motorist facing an immediate breakdown in a residential suburb, and the calculated industrial procurement officer managing a logistics fleet in the heavy industrial zones.
+
+
+
+1.1 The Dual-Economy of Alberton: Residential Panic vs. Industrial Precision
+
+
+
+Alberton operates as a unique dual-economy node within the Johannesburg South framework. The advertising strategy must be engineered to address these two distinct user archetypes, each requiring distinct campaign structures, bidding strategies, and creative messaging.
+
+
+
+The Residential "Distress" Economy (B2C)
+
+
+
+The residential suburbs of New Redruth, Meyersdal, Brackenhurst, and Verwoerdpark house a middle-to-upper-income demographic that is heavily reliant on private transport. For these consumers, a battery failure is a distress event. The search query "car battery Alberton" is rarely research-oriented; it is transactional, urgent, and often emotionally charged. The user is likely stranded, anxious, and browsing on a mobile device with high intent but low patience.
+
+Psychological Trigger: Immediate mobility restoration and safety. The fear of being stranded, particularly in the context of South African security concerns, drives a need for rapid, trusted intervention.
+
+Primary Competitors: Mobile mechanics like Michanic, which leverage a "we come to you" value proposition 1, and franchise fitment centres like Supa Quick and Battery Centre.2
+
+Google Ads Implication: This necessitates high-velocity Search campaigns with aggressive "Call-Only" or Call Asset strategies. Hyper-local radius targeting is essential to ensure the "30-minute arrival" promise is operationally viable. The ad copy must function as a tranquilizer, offering immediate resolution to the distress signal.4
+
+
+
+The Industrial "Logistics" Economy (B2B)
+
+
+
+Conversely, the Alrode and Alrode South industrial precincts represent one of the densest logistics hubs in the Southern Hemisphere. Home to industrial giants like SAB Brewery, Henkel SA, and vast transport fleets, this area demands a sophisticated B2B advertising approach.5 Here, the purchase is not a single unit for a passenger vehicle, but potentially a bulk contract for heavy-duty truck batteries (sizes 674, 682, 689) or specialized traction batteries for forklift fleets.
+
+Psychological Trigger: Fleet uptime, Total Cost of Ownership (TCO), supplier reliability, and credit facilities.
+
+Primary Competitors: Specialized industrial suppliers like Chase Technologies and Probe, along with OEM distributors.7
+
+Google Ads Implication: This sector requires tech-heavy Search campaigns targeting specific part numbers and specifications. Display remarketing to procurement officers and geo-fenced campaigns specifically drawn around the Alrode industrial polygon are critical to ensure ad spend is directed solely at commercial decision-makers.9
+
+
+
+1.2 The "Scrap Economy" Threat Vector
+
+
+
+A critical, often overlooked variable in the South African battery market is the robust "cash for scrap" economy. With lead recycling prices fluctuating between R6.00 and R10.00 per kilogram, a significant volume of search traffic for "battery prices" is driven by sellers looking to dispose of old units, not buyers seeking new ones.11
+
+The Risk: If an ad account does not aggressively filter for this intent, the budget will be hemorrhaged by clicks from users looking to sell their "scrap" or "old battery" (local slang often refers to "dread lead" or "condemned" batteries).12
+
+The Opportunity: Smart campaigns can leverage this dynamic by advertising "Trade-in" discounts. By framing the scrap value as a discount on a new unit, the retailer can lower the perceived price point of new stock, effectively capturing the price-sensitive buyer who might otherwise resort to a scrapyard or second-hand dealer.13
+
+
+
+1.3 The 2025 Platform Shift: From Keywords to Signals
+
+
+
+The 2025 Google Ads ecosystem has fundamentally shifted away from manual keyword control toward AI-driven signal management. The deprecation of pure "Call-Only" ads in favor of Responsive Search Ads (RSAs) with call assets requires a holistic rethink of ad copy.14 Furthermore, the integration of "Waze Ads" inventory into Performance Max (PMax) for store goals—while currently in phased rollout globally—offers a massive future opportunity to intercept motorists navigating through Alberton's high-traffic arteries like the R59 and N3.15
+
+This report outlines a "Master" account structure designed to exploit these local nuances while leveraging the full power of Google's AI automation to dominate the Alberton market.
+
+
+
+2. Competitive Intelligence and "White Space" Analysis
+
+
+
+To effectively outrank competitors, a granular understanding of their strengths and vulnerabilities is required. The Alberton market is saturated but segmented, creating distinct opportunities for a well-positioned entrant.
+
+
+
+2.1 The Franchise Incumbents (The "Trust" Wall)
+
+
+
+Key Players: Battery Centre (Raylite), Supa Quick (Willard), Tiger Wheel & Tyre.
+
+Strategic Strengths: These entities possess massive brand equity and nationwide warranty networks. Their "Raylite" and "Willard" associations act as powerful trust signals.2 Their organic visibility is high, often dominating generic search terms.
+
+Operational Weaknesses: They often suffer from rigid pricing structures and a slow adaptation to hyper-local trends. Their digital advertising strategies frequently employ generic, "spray-and-pray" national campaigns that lack suburb-specific relevance. They often bid on broad terms like "battery" without narrowing down to specific vehicle needs or industrial applications.
+
+Tactical Attack Vector: We will counter their broad reach with hyper-specificity. Where they bid on "Car Battery," we will bid on "Willard 652 Battery New Redruth Delivered." We will leverage the "Local Store" agility to offer faster, on-site service than the queue-heavy franchises, positioning the client as the "neighbourhood expert" rather than a faceless corporate entity.
+
+
+
+2.2 The Mobile Disrupters (The "Speed" Merchants)
+
+
+
+Key Players: Michanic, Battery Mobile Services, Battery On Call.
+
+Strategic Strengths: These competitors excel in convenience ("We come to you") and have strong mobile user experiences (UX). Their Google Business Profiles are often heavy with reviews emphasizing speed and the elimination of towing costs.1
+
+Operational Weaknesses: There is a persistent perceived lack of longevity and trust associated with mobile-only operators. They often have limited stock depth for specialized industrial applications and may charge higher premiums to cover travel costs.
+
+Tactical Attack Vector: We will match their convenience with dedicated "Mobile Fitment" ad groups but crush them on "Trust" by highlighting the physical showroom presence in Alberton. The hybrid model (Physical Store + Mobile Unit) is the ultimate trust signal in this industry, assuring customers of warranty recourse.18
+
+
+
+2.3 The Industrial Specialists (The "Alrode" Heavyweights)
+
+
+
+Key Players: Chase Technologies, Deltec Energy Solutions, Probe.
+
+Strategic Strengths: These players hold deep technical expertise in forklift, traction, and solar batteries. They have strong, established B2B networks within the Alrode industrial zone.7
+
+Operational Weaknesses: They often neglect the consumer automotive market, leaving a gap for a "One-Stop" energy shop. Their digital presence is often dry, technical, and lacks the urgency required for emergency automotive replacements.
+
+Tactical Attack Vector: We will use "Technical Authority" campaigns to capture the smaller industrial clients (SME logistics fleets) that the big players might ignore. Offering "Free Fleet Battery Health Checks" can serve as a potent lead magnet to enter these accounts.
+
+
+
+2.4 Competitive Gap Analysis Table
+
+
+
+Competitor Tier
+
+Representative Players
+
+Google Ads Strategy Weakness
+
+Our Counter-Strategy
+
+National Franchise
+
+Battery Centre, Supa Quick
+
+Broad, national keywords; generic ad copy; slow reaction to local events (e.g., load shedding spikes).
+
+Hyper-Local SNAGs: Single Keyword Ad Groups focused on Alberton suburbs (Meyersdal, Brackenhurst) and specific battery sizes to capture high-intent traffic.
+
+Mobile-Only
+
+Michanic, Battery On Call
+
+Heavy reliance on "convenience" keywords; lacks "industrial/heavy duty" visibility; trust deficit regarding warranties.
+
+Hybrid Trust: Emphasize "Physical Store + Mobile Unit" to build trust. Target industrial terms they ignore (e.g., "truck battery 674").
+
+Scrap Dealers
+
+Maiden Electronics, Cash 4 Scrap
+
+Aggressive on "price" terms; attracts low-quality "seller" traffic looking to dispose of old units.
+
+Negative Keyword Firewall: Aggressively exclude "scrap," "buying," "cash for" to filter waste. Use "Trade-In" messaging to convert price-sensitive buyers.
+
+Industrial Specialist
+
+Chase Technologies, Probe
+
+Technical jargon; low visibility on consumer search engines; rigid B2B focus often ignores SME fleets.
+
+Accessible B2B: Use plain language for fleet managers (e.g., "Truck won't start" vs "Traction maintenance"). Use geo-fencing to target Alrode specifically.
+
+
+
+3. Strategic Platform Architecture: The "Tri-Vector" Account Structure
+
+
+
+To effectively penetrate the Alberton market, the Google Ads account cannot be a monolith. A "one-campaign-fits-all" approach will lead to budget inefficiencies where high-cost emergency clicks cannibalize the budget for high-value industrial leads. We will construct a "Tri-Vector" account structure, isolating traffic by intent and geography.
+
+
+
+3.1 Campaign A: "Red-Line" Auto Urgency (Search Network Only)
+
+
+
+Objective: Leads (Phone Calls, Directions).
+
+Geography: Strict radius (10-15km) around Alberton CBD. Included suburbs: New Redruth, Meyersdal, Brackenhurst, Verwoerdpark, Florentia, Alberante.
+
+Targeting: High-intent "Emergency" and "Near Me" queries.
+
+Bidding Strategy: Maximize Clicks (with bid cap) initially to gather data, migrating to Target CPA once 30 conversions are recorded.
+
+Rationale: These users are stranded. They need a solution now. The ad copy must scream speed and proximity. This campaign targets the "distress" purchase.4
+
+
+
+3.2 Campaign B: "Heavy Metal" Industrial B2B (Search + Display)
+
+
+
+Objective: Leads (Quote Requests, Fleet Account Applications).
+
+Geography: Polygon targeting specifically covering Alrode and Alrode South industrial zones. Specific street targeting (e.g., Bosworth Street, Potgieter Street) will be used via radius targeting or custom location groups.
+
+Targeting: Technical terms (Forklift battery, 674 Truck Battery, Fleet Maintenance).
+
+Bidding Strategy: Maximize Conversions (high value leads).
+
+Rationale: These are procurement officers at companies like SAB, Henkel, or transport logistics firms. They search during office hours on desktops. This campaign requires a "Desktop" bid adjustment to capture professional search traffic.9
+
+
+
+3.3 Campaign C: "Energy Independence" Leisure & Solar (Performance Max)
+
+
+
+Objective: Sales / Store Visits.
+
+Geography: Broader Johannesburg South (Alberton + 20km radius).
+
+Targeting: Audience signals (Solar interest, Camping, 4x4 owners, Load Shedding app users).
+
+Bidding Strategy: Target ROAS (Return on Ad Spend).
+
+Rationale: Solar and leisure batteries (Lithium/Deep Cycle) are research-heavy purchases. PMax allows us to follow the user across YouTube, Discover, and Search as they research "Lithium vs Lead Acid" and "Inverter Battery Prices".15
+
+
+
+4. Deep Research: Keyword Engineering & Negative Lists
+
+
+
+The battle is won or lost in the keyword list. For 2025, we must move beyond simple keywords to "Intent Clusters" that align with the specific psychographics of the Alberton population.
+
+
+
+4.1 The "Positive" Keyword Arsenal
+
+
+
+Cluster 1: The "Stranded Motorist" (High Urgency)
+
+"car battery replacement near me"
+
+"mobile battery fitment alberton"
+
+"jump start service new redruth"
+
+"willard 652 battery price"
+
+"raylite battery dealers alberton"
+
+Note: Include specific battery sizes (619, 628, 638, 646, 652) as these indicate specific vehicle knowledge and high intent. Users searching for "652 battery" know exactly what they need and are ready to buy.21
+
+Cluster 2: The "Alrode Industrialist" (B2B)
+
+"forklift battery suppliers alrode"
+
+"heavy duty truck batteries 674"
+
+"commercial vehicle battery 682"
+
+"fleet battery maintenance johannesburg"
+
+"traction battery repair"
+
+Note: Target specific truck brands seen in Alrode fleets (Volvo, Scania, Mercedes Actros, FAW, UD) + "battery" to capture fleet maintenance searches.23
+
+Cluster 3: The "Leisure Upgrader" (High Value)
+
+"deep cycle battery for camping"
+
+"lithium iron phosphate battery price"
+
+"100ah gel battery south africa"
+
+"inverter battery replacement"
+
+"gate motor battery 7ah" (This serves as a loss leader to get customers in-store, creating an opportunity for upsells).18
+
+Cluster 4: The "Vernacular" Market (Afrikaans)
+
+Given that approximately 42% of Alberton's population speaks Afrikaans, neglecting this demographic is a strategic error.25
+
+"motor battery vervang"
+
+"kar battery prys"
+
+"sleepdiens alberton"
+
+"trok batterye te koop"
+
+Rationale: Afrikaans speakers are often loyal to local businesses that communicate in their language. These keywords often have lower competition and CPCs.27
+
+
+
+4.2 The "Negative" Keyword Defense Protocol (Critical)
+
+
+
+This is where budget efficiency is secured. The South African market is unique due to the "scrap" value of lead, creating a "negative search intent" hazard.
+
+The "Scrap" Filter (Exclude Sellers)
+
+"scrap", "we buy", "selling", "cash for", "recycling price", "per kg", "old battery price".
+
+Context: Users searching "battery price per kg" are looking to sell to recyclers like Maiden Electronics or We Buy Batteries SA. You do not want to pay R30 for this click.11
+
+The "Consumer Electronics" Filter
+
+"AA", "AAA", "watch", "phone", "laptop", "drone", "toy", "vape", "remote", "hearing aid".
+
+Context: Prevents ads from showing for irrelevant low-value items like "battery for samsung phone".28
+
+The "Informational" Filter
+
+"how to", "diagram", "wiring", "repair", "recondition", "fix", "course", "training".
+
+Context: Users looking to fix a battery themselves or looking for training courses are not immediate buyers.29
+
+
+
+5. Creative Engineering: Ad Copy & Assets (2025 Standards)
+
+
+
+Google has deprecated text-only ads. The standard is now the Responsive Search Ad (RSA). We must feed the algorithm distinct psychological triggers to maximize Click-Through Rate (CTR) and Conversion Rate (CVR).
+
+
+
+5.1 RSA Strategy: The "Alberton" Hook
+
+
+
+Ad 1: The "Emergency" Hook (Target: Residential)
+
+Headline 1: Stuck in Alberton? Dead Battery?
+
+Headline 2: We Come To You - 30 Min Arrival.
+
+Headline 3: Official Willard & Raylite Stockist.
+
+Description 1: Don't Tow! We deliver & fit car batteries at your home or office in New Redruth & Meyersdal.
+
+Description 2: Best Prices on 652 & 646 Batteries. Card machine on site. Call Now for Express Service.
+
+Assets:
+
+Call Asset: Essential. Linked to a verified local number (011...) rather than a generic 0860 number if possible, to build local trust.
+
+Location Asset: Linked to Google Business Profile to show "1.2 km away".31
+
+Sitelinks: "Mobile Fitment," "Truck Batteries," "Free Alternator Test," "Get A Quote."
+
+Ad 2: The "Fleet" Hook (Target: Alrode Industrial)
+
+Headline 1: Alrode Heavy Duty Batteries.
+
+Headline 2: Fleet & Forklift Battery Supply.
+
+Headline 3: Bulk Pricing for Logistics.
+
+Description 1: Minimise downtime. We supply & fit heavy duty 674 & 682 batteries in Alrode Industrial.
+
+Description 2: 30-Day accounts for businesses. VAT invoices supplied. Call for a fleet assessment.
+
+
+
+5.2 Visual Assets & Performance Max
+
+
+
+For the Performance Max campaign, high-quality visuals are non-negotiable.
+
+Images: Show the branded delivery vehicle (a "bakkie" with branding) in a recognizable Alberton street. This builds immense subconscious trust compared to generic stock photos.
+
+Waze Inventory: Ensure location assets are verified. While Waze Ads are fully integrating into PMax, having "Promoted Pins" on Google Maps is a massive "interception" tactic for drivers on the R59 passing Alrode.15
+
+
+
+6. Technical Implementation: The "Flawless" Setup Tutorial
+
+
+
+This section acts as a step-by-step manual for setting up the account to ensure flawless execution.
+
+
+
+Phase 1: Foundation & Tracking
+
+
+
+Step 1: Google Business Profile (GBP) Optimization
+
+Action: Claim and verify the GBP at the physical address.
+
+Category: Select "Car Battery Store" as the primary category. Secondary categories should include "Auto Electrical Service" and "Car Repair and Maintenance".32
+
+Alberton Specifics: Ensure the service area includes specific suburbs: "Alberton," "Alrode," "Meyersdal," "Johannesburg South," "Brackenhurst."
+
+Link: Navigate to Google Ads > Ads & Assets > Assets > + Location > Link to Business Profile Manager.
+
+Step 2: Conversion Tracking (The Lifeblood)
+
+Action: You must track Phone Calls. In the South African market, 70%+ of battery leads are phone calls.
+
+Setup:
+
+Go to Goals > Conversions > Summary.
+
+New Conversion Action > Phone Calls.
+
+Select "Calls from ads using call assets".
+
+Crucial Setting: Set "Call Length" to 60 seconds. A 10-second call is likely a stock query ("Do you have stock?"). A 60-second call indicates a booking or negotiation. Optimizing for 60s leads trains Google's AI to find serious buyers.4
+
+Create a secondary conversion for "Directions" (Store Visits) if eligible, or "Local Actions - Directions" for PMax.
+
+Step 3: Local Services Ads (LSA) Feasibility Check
+
+Context: While LSAs are rolling out in EMEA, the "Auto Repair" vertical may have specific restrictions in South Africa.33
+
+Action: Attempt to register for LSAs under "Auto Repair" or "Towing". Even if "Battery Store" isn't a primary LSA vertical yet, adjacent verticals can sometimes be used if the business license allows.
+
+Verification: Prepare for the Google Screened/Guaranteed check. This requires proof of insurance and business registration (CIPC).34 Getting this badge is a massive competitive advantage as it places the ad above standard search ads.
+
+
+
+Phase 2: Campaign Construction (Click-by-Click)
+
+
+
+Step 4: Building Campaign A (Search - Auto)
+
+Create Button > Campaign > Leads.
+
+Select Goals: Phone Call (60s), Directions. Remove "Form Fills" for this campaign (too slow for emergency users).
+
+Campaign Type: Search.
+
+Networks: Uncheck "Display Network". Uncheck "Search Partners" initially (test later).
+
+Locations: Select "Enter another location" > Advanced Search.
+
+Radius: Enter address > Select "10km".
+
+Location Options: Select "Presence: People in or regularly in your targeted locations." Do not select "Interest" – you don't want someone in Cape Town searching "Alberton battery" unless they are physically present.36
+
+Languages: English, Afrikaans (Crucial for Alberton).25
+
+Budget: Start with R300 - R500/day.
+
+Bidding:
+
+Select "Maximize Clicks".
+
+Check "Set a maximum cost per click bid limit".
+
+Set Limit: R25.00. (Industry average is R15-R40; start conservative).37
+
+Strategy Note: After 30 days, switch to "Maximize Conversions" with a Target CPA of R150.00.
+
+Step 5: Ad Group Structure
+
+Ad Group 1: Generic Emergency -> Keywords: car battery, battery replacement, jump start.
+
+Ad Group 2: Brand Specific -> Keywords: Willard battery, Raylite battery, Sabat battery.
+
+Ad Group 3: Location Specific -> Keywords: battery alberton, battery meyersdal, battery alrode.
+
+Ad Group 4: Vernacular -> Keywords: motor battery, kar battery.
+
+
+
+Phase 3: The Merchant Center (Shopping Ads)
+
+
+
+Step 6: Setting up Google Shopping for Batteries
+
+Policy Alert: Batteries are classified as "Dangerous Goods." However, automotive batteries are generally permitted if handled correctly and not flagged as "explosives" or "weapons".39
+
+Feed Attributes:
+
+google_product_category: Use Vehicles & Parts > Vehicle Parts & Accessories > Vehicle Batteries.
+
+product_detail: You must specify attributes like Voltage (12V), Amp Hours (652 = 60Ah), and CCA (Cold Cranking Amps).41
+
+vehicle_fulfillment: Use in_store:store_code if you want to drive local traffic using Local Inventory Ads (LIA).42
+
+Warning: Do not use words like "explosive," "acid," or "hazardous" aggressively in the description. Focus on "Maintenance Free," "Sealed," "Warranty" to avoid automated disapproval flags.44
+
+
+
+7. Financial Framework: Budgets, Bids & ROI
+
+
+
+To "spend as little as possible for extreme ROI," we must understand the math of the Alberton auction and allocate resources efficiently.
+
+
+
+7.1 Benchmarks (South Africa Automotive 2025)
+
+
+
+Average CPC (Search): R15.00 - R25.00.37
+
+Conversion Rate (Calls): 15% - 25% (Emergency intent is high).37
+
+Cost Per Lead (CPL): Target R100.00 - R150.00.
+
+Average Order Value (AOV): R2,200 (Average battery price).
+
+Target ROAS: 10:1 (R10 revenue for every R1 ad spend).
+
+
+
+7.2 Budget Allocation Strategy
+
+
+
+Total Monthly Budget (Example): R15,000.
+
+Allocation:
+
+60% (R9,000): Campaign A (Residential Search). This is the cash flow engine. High volume, daily sales.
+
+25% (R3,750): Campaign B (Industrial Alrode). Lower volume, but one "Fleet" conversion can be worth R50k+.
+
+15% (R2,250): Campaign C (PMax/Remarketing). Brand awareness and "Leisure" sales.
+
+
+
+7.3 The "New Account" Promo Code
+
+
+
+Action: As a new advertiser in South Africa in 2025, you are eligible for the "Spend R6,000, Get R6,000" credit.45
+
+Execution: Ensure the billing address is in SA. Apply the code before launching. You must spend the first R6,000 within 60 days to trigger the credit. This effectively doubles your first month's aggression capability, allowing you to bid more aggressively to capture initial market share.
+
+
+
+8. Advanced Tactics for "Outranking Everyone"
+
+
+
+
+
+8.1 The "Competitor Conquest" Method
+
+
+
+We will create a specific Ad Group targeting competitor names.
+
+Keywords: battery centre alberton, supa quick alrode, tiger wheel and tyre battery.
+
+Ad Copy: Do not use their name in your headline (trademark violation).
+
+Copy Example: "Why Wait in a Queue? We Come To You. Cheaper & Faster than the Franchise."
+
+Strategy: Bid slightly higher here. You are stealing a customer who is already looking to buy from a rival.
+
+
+
+8.2 The "Load Shedding" Script
+
+
+
+Context: While load shedding intensity fluctuates, "grid anxiety" remains a potent driver.
+
+Tactic: Use a script or manual rule to increase bids on "Inverter Battery" and "Gate Motor Battery" keywords during Stage 3+ load shedding announcements.
+
+Insight: Gate motor batteries (7Ah) fail en masse during intense load shedding. This is a low-value item (R300) but brings a customer into your ecosystem, allowing you to upsell them on car or solar batteries later.
+
+
+
+8.3 The "Alrode" Geo-Fence Polygon
+
+
+
+Action: Don't just target "Alberton." Go to Google Earth, map the exact coordinates of the Alrode Industrial area.
+
+Specific Streets: Create a custom location group targeting the major industrial arteries: Bosworth Street, Potgieter Street, JG Strijdom Road, Dekenah Street, and Chloor Street.46
+
+Logistics Targets: Create "Custom Intent" audiences targeting people who visit the websites of major logistics firms in the area, such as Overnight Logistics, Anderson Transport, and Unitrans.49
+
+Implementation: Create a "Polygon" target in Google Ads.
+
+Bid Adjustment: Set a +25% Bid Adjustment for this polygon during working hours (08:00 - 16:00). You want to dominate every search coming from inside those factories.
+
+
+
+9. Conclusion and Execution Roadmap
+
+
+
+This research confirms that the Alberton battery market is winnable not by simply outspending the national franchises, but by out-maneuvering them with local relevance and segmentation. By treating the "Distressed Resident in New Redruth" and the "Fleet Manager in Alrode" as two separate species, you avoid budget cannibalization and maximize relevance.
+
+Your Immediate "To-Do" List:
+
+Fix the Website: Ensure you have a "Sticky" Call Button on mobile. If the user can't click-to-call in 2 seconds, you lose.
+
+Claim GBP: Verify the Alberton location to unlock "Location Assets" and "Local Search" inventory.
+
+Load Negative Lists: Upload the "Scrap" and "Consumer Electronics" lists immediately to protect your wallet.
+
+Launch Campaign A (Search): Start with "Maximize Clicks" capped at R25.00.
+
+Apply Promo Code: Secure your R6,000 free credit.
+
+By executing this "Tri-Vector" strategy, you will build a digital moat around Alberton that competitors—reliant on generic, national campaigns—cannot breach. You will own the emergency, penetrate the industrial hub, and lead the leisure market.
+
+
+
+10. Appendix: Master Negative Keyword List (South Africa Specific)
+
+
+
+Copy and paste this into your "Shared Library" > "Negative Keyword Lists".
+
+Scrap & Recycling (The Budget Killers):
+
+scrap, recycling, we buy, cash for, per kg, price per kg, old battery price, sell my battery, disposal, waste, kilogram price, condemned, dread lead, lead price, copper, iron, metal.
+
+Consumer Electronics (Irrelevant):
+
+AA, AAA, watch, remote, phone, samsung, iphone, laptop, dell, hp, vape, toy, drone, camera, hearing aid, coin cell, button, cr2032, 9v.
+
+Informational (Non-Buyer):
+
+how to, diagram, wiring, fix, repair, recondition, refurbish, course, training, job, vacancy, salary, internship, diy, video, tutorial, book, pdf.
+
+Low Value/Cheap:
+
+free, cheap, second hand, used, gumtree, facebook marketplace, cheapest.
+
+Competitor Brands (Optional - if budget is tight):
+
+(If you want to conquer them, keep these. If you want to save money, exclude them)
+
+battery centre, supa quick, tiger wheel, michanic, willard xpress.

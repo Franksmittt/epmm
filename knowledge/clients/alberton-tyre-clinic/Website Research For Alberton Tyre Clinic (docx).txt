@@ -1,0 +1,451 @@
+Strategic Digital Blueprint and Operational Due Diligence Report for Alberton Tyre Clinic
+
+
+
+
+
+I. Executive Summary: The Digital Mandate for Alberton Tyre Clinic
+
+
+
+
+
+I.A. Synopsis of Market Position and Core Strengths
+
+
+
+Alberton Tyre Clinic (ATC) occupies a strong, value-driven position in the Gauteng fitment market, fundamentally characterized by its profound operational history and comprehensive service depth. The company’s primary competitive advantage is its family heritage, having been established in 1996, which translates to over 28 years of continuous operation and specialized knowledge.1 This longevity provides a foundation of trust that franchises often struggle to replicate. Furthermore, ATC operates as a comprehensive automotive service center, transcending the role of a standard tyre shop. Its service catalog extends robustly into high-value mechanical areas, including the inspection and replacement of shocks, suspension components, specialized brake replacement using premium brands like ATE, and full battery supply and fitment.2 The inventory breadth is highly competitive, indexing eight major international tyre brands, and ATC holds confirmed dealer status with premium global suppliers such as Pirelli.3 These operational factors confirm ATC’s capability to compete with larger, national chains on quality and service scope.
+
+
+
+I.B. Identification of Digital Gaps and Strategic Opportunities
+
+
+
+Despite its robust physical operation and established market tenure, ATC’s current online presence presents critical functional deficiencies that impede modern customer conversion. The existing digital interface relies heavily on a basic contact form that mandates manual entry of vehicle details for quotation requests.5 This low level of digital friction stands in sharp contrast to industry standards. Crucially, the online structure currently lacks essential modern conversion tools, specifically online appointment scheduling, real-time quoting functionalities, and transparent pricing catalogs.6 This deficiency forces potential customers to initiate telephone contact during limited business hours or rely on competitors that offer instant digital transactions. The absence of these tools prevents ATC from capturing leads outside of operating hours and creates unnecessary friction for high-intent visitors.
+
+
+
+I.C. High-Level Website Recommendations
+
+
+
+The strategic mandate for the new digital platform is clear: it must implement advanced digital functionality to achieve parity with local franchise competitors while simultaneously leveraging ATC's unique selling proposition (USP) of expertise, quality, and personalized family trust. The primary content focus must center on the "Why Choose Us" narrative, detailing the 1996 foundation, the depth of staff expertise, and the commitment to quality products.1 Functionally, the priority must be converting leads through the highly valuable "FREE Vehicle Assessment".2 This should be integrated as a low-commitment, high-value lead magnet. Technically, implementation should prioritize deep product indexing across all 18+ brands and must explore integration potential with key supplier digital platforms, particularly Pirelli’s dealer technology, to enable real-time stock checks and targeted product recommendations.8 The successful deployment of these strategic elements will redefine ATC as a modern, high-trust fitment center capable of sustained digital competitiveness.
+
+
+
+II. Foundational Business Profile and Operational Data
+
+
+
+This section establishes the verified physical and historical identity of Alberton Tyre Clinic, forming the indispensable basis for the website’s "About Us" and "Contact" pages. Accuracy and detail in this foundational information are paramount for local search engine optimization (SEO) and customer verification.
+
+
+
+II.A. Company History and Heritage Narrative
+
+
+
+Alberton Tyre Clinic holds a significant operational advantage derived from its history. Data confirms the establishment of ATC in 1996 as a family business.1 This 28-year timeline signifies substantial institutional stability and specialized experience within the automotive sector, positioning ATC not as a transient branch, but as a local fixture. This deep history immediately supports the company's claim that customers "are in good hands" due to their many years of knowledge.1
+
+The importance of this longevity extends beyond a simple date reference. The longevity acts as a powerful, trust-based narrative that is fundamentally superior to generic franchise messaging, which often struggles to convey personalized service. This narrative is further reinforced by the explicit quality commitment: the company affirms that its entire team is qualified and trained to the maximum to ensure the best advice and service.1 The fact that customer testimonials specifically reference staff by name, such as Alwyn, Magda, and Jaco 2, validates the personalized, family-oriented service model. By linking the claim "Experience Is Key" 1 directly to its staff and its founding date, ATC effectively showcases deep, institutional knowledge and qualified personnel, making the "About Us" page a critical trust-building mechanism and a primary landing page for high-value engagement.
+
+
+
+II.B. Operational Contact and Location Analysis
+
+
+
+Precise operational details must be clearly documented and integrated throughout the new website to maximize user experience and local search performance.
+
+The verified physical address is 26 St Columb Street, New Redruth, Alberton 1450.1 This is sometimes referred to as St Columb Avenue in external dealer listings.4 The geographical setting is crucial: ATC is situated in a central location in Alberton, positioned near the main roads leading into and out of the area.1 This centrality should be explicitly leveraged on the new location page, integrating an interactive map and explicit directions/access points to maximize local SEO visibility for commuters and residents in New Redruth and the broader Johannesburg South region.1
+
+The critical contact matrix is confirmed across multiple sources. The primary phone number for appointments and queries is +27 11 907 8495.5 The business maintains an active email address for general correspondence and quote requests: info@albertontyreclinic.co.za.1
+
+Operational constraints are defined by the trading hours. ATC confirms six-day operations, open Monday through Saturday. Specific hours are confirmed as 08:00 to 17:00.9 Crucially, the business confirms it is closed on Sundays.5 This data must be clearly displayed on the contact page, the footer of every page, and integrated into the online booking system to prevent scheduling errors.
+
+Table II.A: Verified Operational Data Summary
+
+
+
+Parameter
+
+Details
+
+Source Reference
+
+Company Status
+
+Family Business, Established 1996
+
+1
+
+Physical Address
+
+26 St Columb Street, New Redruth, Alberton 1450
+
+1
+
+Primary Contact Number
+
++27 11 907 8495
+
+5
+
+Email Address
+
+info@albertontyreclinic.co.za
+
+1
+
+Trading Hours
+
+Monday – Saturday: 08:00 – 17:00
+
+9
+
+Sunday Operation
+
+Closed
+
+5
+
+
+
+III. The Core Offering: Products, Services, and Inventory Depth
+
+
+
+The depth and quality of ATC’s inventory and service catalog are central pillars of its competitive strategy. The new website must comprehensively document and index this entire portfolio to capture specialized search queries and validate the company's commitment to using top quality products.1
+
+
+
+III.A. Comprehensive Brand Portfolio Analysis
+
+
+
+Alberton Tyre Clinic maintains an extensive inventory across five major automotive product categories, minimizing the risk of customer walkaways due to stock limitations or unavailability of a preferred brand.
+
+In the Car Tyres category, ATC stocks a formidable eight major international brands: Pirelli, Dunlop, Yokahama, Kumho, Michelin, Bridgestone, BF Goodrich, and Falken.3 Significantly, ATC is a confirmed, recognized dealer for Pirelli, underscoring its relationship with one of the global leaders in performance and luxury tyres.4 This broad portfolio caters to general commuter needs, but the inclusion of brands like BF Goodrich also signals capability in serving the 4x4 and off-road enthusiast market.
+
+The inventory extends seamlessly into complementary component categories. Car Mags and Wheels include Lenso, A-Line Wheels, and Black Rhino.3 Black Rhino, in particular, reinforces the company's ability to cater to truck, SUV, and specialized off-road vehicle wheel upgrades. In the crucial areas of safety and performance, ATC stocks Shocks and Suspension from Bilstein, Monroe, and Gabriel.3 Bilstein represents the high-end, performance segment, while Monroe and Gabriel provide durable, high-quality replacement parts. Similarly, the Brake category features ATE, Textar, and Safeline.3 The inclusion of ATE, a brand trusted by international car manufacturers and recognized for setting benchmarks in braking technology 11, reinforces ATC's claim of using only top quality products for safety-critical systems.2 Finally, the Car Batteries segment is serviced by prominent suppliers: Willard, Exide, Atlas, and Raylite.3
+
+The combination of globally premium brands (Pirelli, Michelin, ATE, Bilstein) alongside specialized brands (BF Goodrich, Black Rhino) indicates a sophisticated market position. This variety ensures ATC can cater to standard replacement needs while also serving high-performance and enthusiast vehicle owners, validating the company's ability to work on all sizes of cars and supply durable products.2 Listing these brands explicitly on the website, particularly the premium partnerships, reinforces the quality claim and provides necessary justification for the company’s competitive pricing strategy, highlighting the value of high-end components.
+
+Table III.A: Alberton Tyre Clinic Comprehensive Brand Portfolio
+
+
+
+Product Category
+
+Key Brands Stocked (Exhaustive List)
+
+Quality/Niche Focus
+
+Source Reference
+
+Car Tyres
+
+Pirelli, Dunlop, Yokahama, Kumho, Michelin, Bridgestone, BF Goodrich, Falken
+
+Premium performance, global reputation, off-road (BF Goodrich), Pirelli Dealer
+
+3
+
+Car Mags / Wheels
+
+Lenso, A-Line Wheels, Black Rhino
+
+Aesthetic upgrades, performance, 4x4/Truck (Black Rhino)
+
+3
+
+Car Brakes
+
+ATE, Textar, Safeline
+
+Premium OEM quality and safety (ATE), reliable aftermarket options
+
+3
+
+Car Shocks / Suspension
+
+Bilstein, Monroe, Gabriel
+
+High-end performance (Bilstein), standard durability and replacement parts
+
+3
+
+Car Batteries
+
+Willard, Exide, Atlas, Raylite
+
+Leading South African and global battery suppliers
+
+3
+
+
+
+III.B. Detailed Service Offerings and Value-Added Services
+
+
+
+ATC’s service offerings are extensive, fully supporting the assertion that the business is "More than just tyres & mags".2 Core fitment services include wheel alignment and wheel balancing, which are standard for the industry.2 However, the strategic differentiators lie in the repair and refurbishment capabilities, which are crucial components of the 'Clinic' designation.
+
+The company explicitly offers not only new tyres and new mags but also refurbished tyres and specialized mag repairs from scratches or dents for all sizes.2 They also handle routine tyre repairs stemming from punctures.2 This commitment to repairs and refurbishment services captures a significant market segment that is either budget-conscious or focused on vehicle restoration. These niche services are often overlooked by large chain stores that prioritize new unit sales, defining ATC's strategic advantage as a comprehensive service provider rather than just a retail outlet.
+
+Beyond tyres and wheels, ATC offers full fitment services for critical vehicle systems: replacement or refurbishment of excellent quality brakes, replacement of shocks with durable products, and the supply and fitment of all car battery sizes.2
+
+Two services are particularly valuable for lead generation and conversion. Firstly, the company frequently offers promotional incentives, such as combo deals for tyres and mags 2, and recent promotions have included "15% Off Wheel Alignment & Fitment," an "8% Off Tyre Set & Mag Set Combo," and "10% Off Car Battery Replacement".1 These discounts encourage an increased transaction basket size and provide immediate motivation for customer booking. Secondly, the most important service differentiator for lead generation is the explicit offering of a FREE Vehicle Assessment.1 This high-value service lowers the entry barrier for potential customers, allowing the clinic to conduct diagnostics before recommending necessary parts or major repair work. To maximize conversion on the new website, dedicated landing pages for "Mag Repairs" and "Tyre Refurbishment" should be created, utilizing visual evidence (e.g., before-and-after imagery) to demonstrate expertise and the value proposition in these unique areas.
+
+Table III.B: Strategic Service Differentiation
+
+
+
+Service Category
+
+Service Detail
+
+Strategic Value
+
+Source Reference
+
+Diagnostic/Pre-Sale
+
+FREE Vehicle Assessment
+
+High-value lead magnet; captures customers needing diagnostics before purchase.
+
+2
+
+Budget/Repair
+
+Refurbished Tyres/Mags, Puncture/Mag Repairs
+
+Captures price-sensitive market; leverages 'Clinic' expertise over new unit sales.
+
+2
+
+Promotional Incentives
+
+Combo deals, battery/alignment discounts
+
+Encourages basket size increase and short-term conversion.
+
+1
+
+Fitment Depth
+
+Full Brakes, Shocks, Batteries, Alignment
+
+Positions ATC as a comprehensive maintenance center, increasing repeat business potential.
+
+2
+
+
+
+IV. Strategic Positioning and Competitive Environment
+
+
+
+Understanding Alberton Tyre Clinic’s core identity and mapping it against the regional competitive landscape is essential for developing a digital strategy that ensures long-term market sustainability.
+
+
+
+IV.A. Unique Selling Proposition (USP) Mapping
+
+
+
+ATC’s unique selling proposition is built on the interplay between its history, quality assurance, and customer service ethos. The company’s stated unique attributes include high experience (over 20 years), qualified and trained staff, the use of top quality products, competitive pricing (Great Prices/affordability), comprehensive service scope, central location, and assurance of stock availability.1
+
+Customer feedback validates this service model. Testimonials consistently describe the experience as featuring "Best assistance ever!! People that care!!" and "Fast, efficient and professional!!!".2 This reinforces the family business ethos and commitment to high-touch, personalized service.
+
+While the company claims both great prices and affordability 1, the strong commitment to premium, Original Equipment (OE) quality brands such as ATE Brakes (known for uncompromising safety and performance 11) and Pirelli suggests a refined market position. The primary value proposition is competing on value, which is defined as offering the highest quality components (backed by warranties) and expert fitment at a competitive price point, rather than attempting to be the absolute lowest-cost provider. The new website must articulate this high-value positioning clearly, distinguishing ATC from lower-tier shops that compromise on component quality.
+
+
+
+IV.B. Local Competitor Benchmarking and Digital Gap Analysis
+
+
+
+The fitment market in Alberton is highly contested by established national franchise chains. Key competitors identified in the immediate area include Supa Quick (operating centers in New Redruth), Tyremart Alberton, Tiger Wheel & Tyre (at Newmarket and the Life Style Centre), and Tyres & More Alberton.4 These competitors have significant corporate backing and established digital footprints.
+
+Competitor analysis reveals that these franchise operators possess sophisticated digital interfaces. Major competitors offer specific product promotions, detailed menus for products like 4x4 and SUV tyres, and often include value-added programs such as guarantees, warranties (e.g., Bridgestone & Firestone Tyre Damage Guarantee), and services like credit applications or national fleet services.13 Crucially, they actively integrate high-friction conversion methods like requesting customer contact information for callback quotes or direct online booking functionality.13
+
+ATC’s current online operation suffers from a significant digital deficit in comparison. The use of a simple contact form requiring manual entry of vehicle details 5 results in a high-friction user journey. The single largest barrier to market share growth is this lack of digital transactionality. Customers seeking immediate gratification (e.g., instant quotes or 24/7 appointment scheduling) are likely routed to competitors who offer these services.6 Therefore, the digital strategic imperative dictates that ATC must adopt advanced online tools—specifically an online appointment scheduler and a dedicated tyre/parts finder—to compete effectively with larger retailers.7
+
+Furthermore, the digital social proof disparity is notable. While ATC provides internal customer testimonials 2, competitors like Supa Quick in Alberton display consolidated external review scores, such as 4.3/5 based on 491 reviews.13 This high volume of external validation is essential for building digital trust, requiring ATC to prioritize the establishment and promotion of its own Google Business Profile (GBP) to capture and display social proof.
+
+Table IV.B: Digital Feature Benchmarking: ATC vs. Competitive Standards
+
+
+
+Website Feature
+
+ATC Current Status (Implied)
+
+Industry Standard / Competitor Status
+
+Strategic Importance for New Site
+
+Online Appointment Booking
+
+Request Quote form only 5
+
+CRITICAL. Offered by sophisticated solutions and competitors 6
+
+Essential for conversion efficiency, reducing phone traffic, and 24/7 service access.
+
+Transparent Price Catalog
+
+No explicit list 7
+
+Emerging standard, crucial for building customer trust 7
+
+Must implement dynamic pricing tools or extensive service price estimates.
+
+Online Tyre/Parts Finder
+
+Manual vehicle/size input on contact form 1
+
+Standard practice in the industry; enables immediate consumer gratification
+
+Must implement a dedicated, interactive search tool linked to inventory.
+
+Digital Reviews/Testimonials
+
+Few internal testimonials 2
+
+Competitors display high-volume external reviews (e.g., 491 reviews) 13
+
+CRITICAL. Requires Google Business Profile integration and prominent display of social proof.
+
+
+
+IV.C. Dealer Program Leverage and Technical Integration Opportunities
+
+
+
+ATC’s strategic brand partnerships provide unique opportunities for technical integration that can bypass some of the complexities faced by independent operators. As a recognized Pirelli dealer 4, ATC gains access to advanced digital infrastructure provided by the supplier. Pirelli actively invests in B2B digital tools for its dealer network, including platforms that offer CRM insights, geomarketing capabilities, and real-time information on tyre stock and availability.8 These tools allow dealers to identify which vehicles are prevalent in their operational area and predict upcoming tyre replacement needs, providing immediate data on stock availability.8
+
+This Pirelli dealer status is not merely a branding opportunity; it is a gateway to potentially integrating sophisticated digital infrastructure. The new website development team must prioritize investigating API or feed integration with Pirelli’s dealer system. If successful, this integration would directly support the "Stock On-Hand" USP 1 by providing accurate, up-to-the-minute stock information to customers, which is fundamental for building a best-in-class online tyre finder tool and minimizing stock uncertainty, a common vulnerability for smaller operations.
+
+Similarly, the strong relationship with ATE Brakes 3 offers content marketing advantages. ATE provides detailed fitment instructions and professional resources.16 These high-authority materials can be leveraged on the new website to create educational, trust-building content (e.g., "Why ATE Brakes are superior for your safety") that demonstrates ATC’s deep technical expertise and commitment to correct, professional installation.
+
+
+
+V. Website Development Blueprint and Strategic Recommendations
+
+
+
+The following architectural and content blueprint is necessary to convert Alberton Tyre Clinic into a high-performance digital fitment center, translating its operational strengths into quantifiable online conversions.
+
+
+
+V.A. Content Strategy and Information Architecture (IA)
+
+
+
+The content architecture must be structured logically, prioritizing the conversion funnel and the trust narrative. The Homepage must immediately establish the 1996 Family Business heritage and prominently feature the call-to-action (CTA) for the FREE Vehicle Assessment. Clear visual navigation should lead customers to the full range of service categories (Tyres, Mags, Brakes, Shocks, Batteries).
+
+The About Us page is critical for establishing trust, providing a deep dive into the 1996 history, the family ethos, and celebrating the expertise of the specific, qualified staff.1 The Services section must function as a comprehensive hub, offering detailed sub-pages for specific high-value services. These must include a detailed breakdown of the unique Tyre & Mag repair and refurbishment services 2, dedicated pages for Brakes & Suspension systems, and essential operational pages for Wheel Alignment/Balancing.
+
+A robust Brands hub page is required to index the exhaustive list of 18+ brands.3 Dedicated authority pages must be created for premium partners (e.g., Pirelli Dealer Status, ATE Brakes Specialist) to capture specific brand search traffic and reinforce the quality commitment.4 Finally, a dedicated Promotions/Deals section must clearly house current incentive offers, such as the 15% Alignment discount or the Combo Deals 1, to ensure they are easily discovered and redeemable.
+
+
+
+V.B. Conversion and Lead Generation Strategy
+
+
+
+The digital transformation hinges on implementing features that eliminate transactional friction.
+
+Priority 1: Online Booking System: Implementation of a dedicated, reliable, cloud-based scheduling platform is required (potentially utilizing a system that integrates appointment features, as demonstrated by industry solutions 6). This system must provide real-time availability for technicians and allow clients to book complex fitment services and, most importantly, the high-value FREE Vehicle Assessment instantly, 24 hours a day.
+
+Priority 2: The Assessment Funnel: The FREE Vehicle Assessment must be repurposed as the website’s primary lead magnet. The corresponding form must be streamlined to minimize friction, capturing necessary data fields such as Name, Contact Number, Vehicle Make/Model, and a simple message describing the issue.5 This funnel should be linked directly to the new booking system, automating the scheduling process.
+
+Priority 3: Instant Quoting Tool: To address the competitive mandate for pricing transparency 7, an integrated tool must be developed. This tool should allow customers to search for tyres or mags either by vehicle model or by specific size criteria. By leveraging ATC’s extensive brand portfolio 3, the tool can offer comparative pricing instantly across different quality tiers, fostering trust and immediate conversion.
+
+
+
+V.C. Technical Implementation Priorities and SEO Strategy
+
+
+
+The technical framework must support aggressive local search performance and reliable inventory management.
+
+The SEO strategy must be focused on high-intent local searches. Targeted keywords must explicitly combine the service with the location (e.g., "Tyre Repairs Alberton," "Mag Repairs Johannesburg South," "ATE Brakes Alberton," and "Bilstein Shocks Alberton").
+
+For product authority, every single brand stocked (Pirelli, ATE, Willard, etc.) must have dedicated, indexed product pages referencing ATC's precise capability to supply and fit them. This deep product indexing capitalizes on the extensive inventory depth 3 and ensures maximum visibility for specialized searches.
+
+A critical technical directive is the investigation of Supplier Integration (Advanced). The project should allocate resources to explore API or feed integration to leverage real-time stock data from major suppliers, particularly Pirelli.8 Success in this area would allow the online quoting tool to reflect immediate stock availability, reinforcing the "Stock On-Hand" promise 1 with reliable data. Furthermore, all technical components must ensure robust Mobile Responsiveness, which is essential for maximizing user experience, given that the majority of online searches for automotive services occur via mobile devices.
+
+
+
+V.D. Post-Launch Digital Integration and Review Management
+
+
+
+Successful website deployment requires active integration into the broader digital ecosystem and a proactive review strategy.
+
+Although direct social media links were not available in the core website assets 1, establishing and actively managing a Google Business Profile (GBP) and appropriate social media channels (Facebook/Instagram) is mandatory for local visibility.
+
+The Review Management Strategy is critical for closing the trust gap identified during competitive analysis. The new website must feature an integrated feed or link to the GBP reviews and implement automated systems to solicit customer testimonials immediately post-service. This active pursuit of social proof is essential for bridging the high review volume advantage currently held by local competitors, such as Supa Quick’s hundreds of displayed reviews.13
+
+Finally, all contact forms, quote requests, and the online booking system must be linked to a central CRM (Customer Relationship Management) system. This integration ensures that every lead is managed efficiently and allows the business to execute targeted digital promotions—for instance, automatically offering the 10% battery replacement discount 1 specifically to customers who booked a Free Vehicle Assessment, leveraging the data collected to drive repeat business and increase transaction value.
+
+
+
+VI. Conclusions and Recommendations
+
+
+
+Alberton Tyre Clinic maintains a strong foundation built on decades of family experience, comprehensive service offerings (including niche repairs), and a dedication to quality through premium brand partnerships. The primary barrier to scalable growth and increased market penetration is the current reliance on antiquated digital lead generation methods.
+
+The path forward requires immediate and aggressive implementation of transactional web features. The new website must serve not merely as a digital brochure, but as an always-on sales and booking platform.
+
+Key Actionable Recommendations:
+
+Mandate Online Transactionality: Immediately deploy an online appointment scheduling system and a dedicated tyre/parts quoting tool to eliminate the friction associated with the current manual contact form. This is the single most critical factor for achieving digital parity with leading national franchises.
+
+Amplify the Family Narrative: Reposition the 1996 founding date and the personalized service provided by named staff members into the core content strategy, utilizing the "About Us" page as a high-trust anchor, contrasted with the generic nature of competitor franchises.
+
+Leverage Supplier Technology: Prioritize the technical exploration of integrating Pirelli’s B2B digital tools to enhance the online inventory and quoting reliability, validating the "Stock On-Hand" promise with real-time data accuracy.
+
+Maximize Lead Capture with High-Value Offers: Design the website around the conversion of the FREE Vehicle Assessment, ensuring it is highly visible and linked directly to the new online booking funnel.
+
+Build Digital Social Proof: Establish and actively manage the Google Business Profile, integrating review feeds directly onto the new website to rapidly accumulate and display external customer validation, closing the trust gap observed in the competitive landscape.
+
+Works cited
+
+Alberton Tyre Clinic | Tyres, Mags and More, accessed October 29, 2025, https://albertontyreclinic.co.za/
+
+About Us | Alberton Tyre Clinic, accessed October 29, 2025, https://albertontyreclinic.co.za/about-us/
+
+Brands | Alberton Tyre Clinic, accessed October 29, 2025, https://albertontyreclinic.co.za/brands/
+
+ALBERTON TYRE CLINIC, 26STR COLUMB AVE, NEW REDRUTH ALBERTON | Pirelli, accessed October 29, 2025, https://www.pirelli.com/tyres/en-za/car/find-your-dealer/dealer-locator/south%20africa/alberton/za0002400679
+
+Contact Us - Alberton Tyre Clinic, accessed October 29, 2025, https://albertontyreclinic.co.za/contact-us/
+
+Online Booking Software for Tire Fitting Services - EasyWeek, accessed October 29, 2025, https://easyweek.io/solutions/tyre-service
+
+Challenge: Pricing Transparency | Net Driven®, accessed October 29, 2025, https://www.netdriven.com/challenge-pricing-transparency/
+
+The digital tools that bring Pirelli and dealers closer to motorists, accessed October 29, 2025, https://www.pirelli.com/global/en-ww/life/people/work/the-digital-tools-that-bring-pirelli-and-dealers-closer-to-motorists-53440/
+
+Driving directions to alberton tyre clinic, Alberton - Waze, accessed October 29, 2025, https://www.waze.com/live-map/directions/alberton-tyre-clinic?to=place.w.18417153.184302605.7548916
+
+ALBERTON TYRE CLINIC, 26STR COLUMB AVE, NEW REDRUTH ALBERTON | Pirelli, accessed October 29, 2025, https://www.pirelli.com/tyres/en-za/car/find-your-dealer/dealer-locator/south-africa/elandsfontein/za0002400679
+
+About Us - Alfred Teves Brake Systems, accessed October 29, 2025, https://www.ate.co.za/about
+
+Find Car Tyre Dealers in Alberton, South Africa, accessed October 29, 2025, https://africa.michelin.com/en/auto/dealer-locator/alberton
+
+Tyre Fitment Experts in Gauteng, Alberton | Supa Quick, accessed October 29, 2025, https://www.supaquick.com/tyre-fitment-centres/gauteng/alberton
+
+Tyres & More Alberton Alberton - {{Address details}} | MICHELIN South Africa, accessed October 29, 2025, https://www.michelin.co.za/auto/dealer-locator/alberton/tyres-more-alberton-1148569078
+
+Supa Quick: Full Service Fitment Centre, Tyre Shop, accessed October 29, 2025, https://www.supaquick.com/
+
+Fitment Instructions - Alfred Teves Brake Systems, accessed October 29, 2025, https://www.ate.co.za/fitment-instructions

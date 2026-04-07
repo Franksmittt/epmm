@@ -1,0 +1,338 @@
+/* Alberton Tyre Clinic — Commercial Transit vertical 9:16 (V29). Base 450×800 → 1080×1920. */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --atc-orange: #ff4500;
+  --stealth-grey: #f3f4f6;
+  --text-dark: #111827;
+  --glass-base: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(255, 69, 0, 0.2);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--stealth-grey);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 40px 80px rgba(255, 69, 0, 0.15);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.blueprintGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.topHud {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  right: 15px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandLockup {
+  background: var(--pure-white);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 6px 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.brandIcon {
+  width: 8px;
+  height: 8px;
+  background: var(--atc-orange);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.btName {
+  color: var(--text-dark);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.corpBadge {
+  background: var(--text-dark);
+  color: var(--pure-white);
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-size: 0.5rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logisticsTerminal {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  z-index: 10;
+  background: var(--glass-base);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid var(--glass-border);
+  border-top: 3px solid var(--atc-orange);
+  border-radius: 18px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.specRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.specMini {
+  color: var(--atc-orange);
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-size: 0.5rem;
+  font-weight: 800;
+  background: rgba(255, 69, 0, 0.08);
+  padding: 4px 8px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.headline {
+  color: var(--text-dark);
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 6px;
+}
+
+.headlineAccent {
+  color: var(--atc-orange);
+  display: block;
+}
+
+.subtext {
+  color: #4b5563;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.actionDock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 12px;
+}
+
+.serviceId {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.serviceTitle {
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.serviceSub {
+  color: #6b7280;
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.btnContact {
+  background: var(--atc-orange);
+  color: var(--pure-white);
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-weight: 900;
+  letter-spacing: 1px;
+  border: none;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 16px rgba(255, 69, 0, 0.25);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ─── 1080×1920 (×2.4) ─── */
+
+.root.canvas1080x1920 .adCanvas {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080x1920 .blueprintGrid {
+  background-size: 48px 48px;
+}
+
+.root.canvas1080x1920 .topHud {
+  top: 48px;
+  left: 36px;
+  right: 36px;
+}
+
+.root.canvas1080x1920 .brandLockup {
+  padding: 14px 29px;
+  border-radius: 29px;
+  gap: 19px;
+}
+
+.root.canvas1080x1920 .brandIcon {
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+}
+
+.root.canvas1080x1920 .btName {
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+}
+
+.root.canvas1080x1920 .corpBadge {
+  font-size: 0.75rem;
+  padding: 10px 19px;
+  border-radius: 14px;
+  letter-spacing: 2.5px;
+}
+
+.root.canvas1080x1920 .logisticsTerminal {
+  bottom: 36px;
+  left: 36px;
+  right: 36px;
+  border-radius: 43px;
+  padding: 43px 48px;
+  border-top-width: 7px;
+}
+
+.root.canvas1080x1920 .specRow {
+  gap: 14px;
+  margin-bottom: 19px;
+}
+
+.root.canvas1080x1920 .specMini {
+  font-size: 0.75rem;
+  padding: 10px 19px;
+  border-radius: 14px;
+  letter-spacing: 2.5px;
+}
+
+.root.canvas1080x1920 .headline {
+  font-size: 5.28rem;
+  letter-spacing: -2.4px;
+  margin-bottom: 14px;
+}
+
+.root.canvas1080x1920 .subtext {
+  font-size: 1.125rem;
+  margin-bottom: 36px;
+}
+
+.root.canvas1080x1920 .actionDock {
+  gap: 29px;
+  padding-top: 29px;
+}
+
+.root.canvas1080x1920 .serviceTitle {
+  font-size: 2.16rem;
+}
+
+.root.canvas1080x1920 .serviceSub {
+  font-size: 0.825rem;
+  letter-spacing: 2.5px;
+  margin-top: 5px;
+}
+
+.root.canvas1080x1920 .btnContact {
+  height: 96px;
+  padding: 0 38px;
+  border-radius: 24px;
+  font-size: 1.2rem;
+  letter-spacing: 2.5px;
+  gap: 19px;
+}
+
+.root.canvas1080x1920 .btnContact svg {
+  width: 34px;
+  height: 34px;
+}

@@ -1,0 +1,355 @@
+﻿Strategic Architectural Blueprint for a Next.js Field Sales Enablement Platform: Optimizing UX, Offline Resilience, and Cognitive Workflow for High-Velocity Industrial Markets
+1. Executive Strategic Overview and Operational Context
+The contemporary landscape of field sales, particularly within the heavy industrial and automotive aftermarket sectors, has shifted from a relationship-driven art form to a data-intensive discipline defined by precision, speed, and technical acumen. In the specific context of the Alberton and Germiston industrial nexus—a region characterized by the dense agglomeration of logistics giants, manufacturing hubs, and specialized trade services—the sales representative is no longer merely a vendor of commodities. They are the frontline interface of a complex supply chain, operating in an environment where the cost of operational downtime is measured in hundreds of thousands of rands per hour.
+This report outlines a comprehensive architectural and design strategy for the development of a "Leads Center" application using the Next.js framework. This platform is conceptually designed not as a passive repository of customer contact details—a traditional Customer Relationship Management (CRM) system—but as a proactive "Sales Co-Pilot" enabling high-frequency decision-making. The core objective is to reduce the "cognitive friction" associated with field operations, allowing the representative to focus on high-value negotiation rather than administrative drudgery.
+The analysis synthesizes market intelligence regarding the operational realities of target clients—such as the 300-truck fleet of Anderson Transport in Alrode and the rapid-response requirements of Fox Security in Meyersdal—with advanced principles of User Experience (UX) design and modern web architecture. It argues that success in this domain requires a "Mobile-First, Offline-First" philosophy. The application must function flawlessly in the "dead zones" of steel-reinforced warehouses, leverage the ergonomic constraints of mobile usage during travel, and present complex technical data—such as battery vibration specifications and scrap lead rebates—in a format that is instantly digestible.
+1.1 The Operational Environment: Navigating the "Iron Lung"
+To design an effective tool, one must first understand the environment in which it will be used. The research identifies the Alrode and Wadeville industrial corridors as the "Iron Lung" of Gauteng’s logistics network.1 This environment imposes specific physical and psychological constraints on the user:
+* High-Friction Physical Environment: Sales reps operate in noisy workshops, bustling loading bays, and security-controlled gates. They do not have the luxury of sitting at a desk to navigate complex menus. The device is often held in one hand while the other holds a clipboard or product sample. This dictates a UI design that strictly adheres to "Thumb Zone" ergonomics.2
+* Connectivity Intermittency: Large logistics depots, such as the 8,000m² warehousing facility of Anderson Transport 3, often act as Faraday cages, blocking cellular signals. A cloud-dependent application that shows a "Connecting..." spinner when a rep tries to pull up a client's history is a critical failure. The system must utilize a robust Progressive Web App (PWA) architecture with aggressive caching and conflict resolution strategies to ensure data availability 100% of the time.4
+* Information Asymmetry: The clients in this sector are technically sophisticated. A fleet manager at Unitrans dealing with hazardous chemical transport knows exactly what "Reserve Capacity" and "Cold Cranking Amps" they require.5 The sales rep cannot bluff; they need immediate access to technical "Battle Cards" that map product specifications to client pain points. The application must bridge the gap between a generic sales pitch and a technical engineering consultation.
+1.2 The Paradigm Shift: From CRM to Enablement
+Traditional CRMs (Salesforce, HubSpot) are designed for management reporting, not field execution. They require multiple clicks to log a call, complex forms to create a lead, and offer little in the way of real-time guidance. The proposed Next.js solution inverts this model.
+Instead of asking "What did you do today?", the application asks "What do you need to do right now?". It utilizes geolocation to surface nearby opportunities, algorithmic sorting to prioritize leads based on fleet size and recency of visit, and gamification to drive behavior. It integrates the "Scrap Rebate" financial logic directly into the workflow, turning a complex calculation involving lead prices and battery weights into a simple slider interaction that can be shown to the customer to close a deal.6 This report details the transformation of these operational needs into concrete software requirements, defining a system that is as rugged and reliable as the heavy-duty batteries it is designed to sell.
+2. User Experience (UX) Architecture: Designing for the "Windshield Warrior"
+The User Interface (UI) of a field sales application is the primary determinant of its adoption. If the friction of entering data exceeds the perceived value of the system, reps will revert to paper notebooks and WhatsApp. Therefore, the design philosophy must prioritize Speed, Legibility, and Contextual Relevance.
+2.1 The "At-A-Glance" Mobile Dashboard Strategy
+The dashboard is the cockpit. On a desktop, a dashboard is an analytical tool for retrospection. On a mobile device in the field, it is a tactical tool for immediate execution. The screen real estate is limited, and the user's attention span is fragmented.
+Research into dashboard design best practices suggests a "Stacked Layout" prioritizing vertical scrolling is essential for mobile optimization.7 Complex data visualizations, such as multi-axis line charts showing annual sales trends, are often illegible on phone screens. Instead, the dashboard should focus on "Micro-KPIs" and "Next Best Actions."
+2.1.1 The Contextual Hero Card
+The top 25% of the dashboard (the "Hero" section) should not be static. It must adapt to the time of day and the rep's location, acting as an intelligent assistant.
+* 07:00 – 09:00 (Planning Phase): The Hero card displays the "Daily Mission." It summarizes the route: "You have 5 high-priority stops in Alrode today. First stop: Anderson Transport (15 mins away)." This primes the rep for the day's logistics.
+* 09:00 – 16:00 (Execution Phase): The Hero card shifts to "Proximity Action." Using GPS, it detects the nearest target. "You are near Unitrans (200m). Last visited 45 days ago. Priority: High." This reduces the cognitive load of deciding "where to go next".8
+* 16:00 – 18:00 (Review Phase): The Hero card displays "Closing Pulse." "3/5 Visits Completed. R45,000 Pipeline Added. 1 Visit remaining to hit daily streak." This leverages the "Goal Gradient Effect" in gamification to encourage completing the final task.9
+2.1.2 Navigation Paradigms: The Bottom Bar Standard
+Historical mobile design often relied on the "Hamburger Menu" (top-left icon) for navigation. However, with the increasing size of smartphone screens, the top corners of the device are now considered "Reachability Dead Zones."
+The application must utilize a Bottom Navigation Bar as the primary navigational anchor. This places the most critical functions within the natural arc of the thumb.2
+* Dashboard: The central hub.
+* Leads: The searchable, filterable database.
+* Map: The geospatial view of the territory.
+* Tools: Access to calculators (Scrap/TCO) and Battle Cards.
+* Menu: Access to profile, settings, and sync status.
+This structure allows the rep to switch between finding a lead, checking the map, and accessing a calculator with a single tap, minimizing muscle strain and navigation time.10
+2.2 Visual Hierarchy and Information Density
+Field sales apps often suffer from "Data Clutter"—trying to show too much information at once. The design must employ a strict visual hierarchy using Card-Based UI Patterns.
+
+
+UI Component
+	Function
+	Design rationale
+	Source Insight
+	Pipeline Carousel
+	A horizontal scrolling list of "Hot Leads" or "Urgent Follow-ups."
+	Allows viewing multiple items without losing dashboard context.
+	11
+	Metric Cards
+	Simple tiles showing distinct numbers (e.g., "Visits: 4").
+	High contrast, large typography for readability in sunlight.
+	12
+	Quick Action FAB
+	A Floating Action Button (+) anchored to the bottom right.
+	Provides instant access to "Log Visit" or "New Lead" regardless of scroll position.
+	13
+	Status Pills
+	Color-coded badges (Green/Yellow/Red) on lead cards.
+	Instant visual recognition of lead temperature without reading text.
+	14
+	2.3 Environmental Adaptation: Dark Mode and Accessibility
+The physical environment of the target market varies wildly. A rep might move from the bright, harsh sunlight of an open-air logistics yard in Alrode to the dimly lit interior of a dispatch office. The application must support a robust Dark Mode.
+* Automatic Toggling: The app should respect the system-wide setting or use the ambient light sensor to switch modes automatically.
+* High Contrast: In "Day Mode," the UI should use high-contrast dark text on light backgrounds to combat glare. In "Night Mode," it should use deep greys (not pure black) to reduce eye strain and battery consumption on OLED screens.7
+* Touch Targets: All interactive elements must have a minimum touch target size of 48x48 pixels. This accounts for the "Fat Finger" problem, especially relevant if the user is wearing safety gloves or walking while interacting with the device.15
+3. The Leads Center: Advanced Taxonomy and Categorization Strategies
+The user query specifically requests a method to "sort them in different categories." In the context of B2B industrial sales, simple alphabetical sorting or "Date Added" is insufficient. The data model must reflect the complex segmentation of the market, allowing the rep to slice and dice the territory based on Operational Vertical, Fleet Capability, and Buying Temperature.
+3.1 Vertical-Specific Filtering Logic
+The research identifies distinct market verticals with unique needs. The "Leads Center" must allow the rep to filter the view to match their current mental mode or physical location.
+Strategic Categories (Based on Market Intelligence 1):
+1. Heavy Logistics (Tier 1):
+   * Target: Anderson Transport, Unitrans, Imperial Logistics.
+   * Data Needs: Fleet size (>50 trucks), Vehicle Brand (Volvo/Scania), Cross-border status.
+   * UI Context: These entries require an "Account View" showing multiple contacts (Fleet Manager vs. Buyer) and a timeline of technical audits.
+2. Trade & SME (Tier 2):
+   * Target: DMS Plumbing, Gerald Smith Electrical, Independent Contractors.
+   * Data Needs: Vehicle type (LCV/Bakkie), Immediate availability requirements.
+   * UI Context: These are high-velocity leads. The list view should emphasize "Last Contact Date" to ensure regular rotation.
+3. Security & Rapid Response:
+   * Target: Fox Security, Fidelity ADT.
+   * Data Needs: Patrol fleet size, Battery replacement frequency (high due to idling).
+   * UI Context: Highlight "Risk Status" – security fleets cannot afford downtime.
+4. Leisure & Lifestyle:
+   * Target: Eye of Africa Estate, Reading Country Club.
+   * Data Needs: Golf cart fleet size, Lithium conversion potential.
+   * UI Context: Focus on "Seasonality" – prepping fleets for summer/winter.
+Implementation of "Smart Filters": Instead of a complex dropdown menu, the top of the Leads List should feature a horizontal scrollable list of "Pill Filters" (Chips): [All] [Logistics] [Construction] [Nearby] [Needs Visit] Selecting [Nearby] triggers a geospatial query, reordering the list by physical distance from the user, instantly transforming the database into a route planner.16
+3.2 The Anatomy of the Lead Card
+The list item itself (the Lead Card) must balance information density with clarity. It serves as the primary decision interface—"Do I click this?"
+Optimized Layout:
+* Header: Company Name (Bold, Large). Next to it, a Verified Badge icon if they are a credit-approved account.
+* Sub-Header: Primary Contact (e.g., "Heimer Anderson - MD").
+* Context Line: "Fleet: 300x Volvo/Scania. Last Visit: 14 days ago." This explicitly pulls the "Need to Know" technical data to the surface.3
+* Status Indicators:
+   * Temperature: A colored vertical bar on the left edge (Red=Cold, Yellow=Warm, Green=Hot).
+   * Activity: A small icon indicating the last action (Phone = Call, Pin = Visit, Mail = Email).
+* Action Strip: The bottom of the card features three high-contrast icon buttons:
+   * Call: Initiates a phone dialer intent immediately.
+   * Navigate: Opens Google Maps/Waze with coordinates.
+   * Log: Opens the "Quick Visit" modal.
+This design enables "One-Tap Actionability," reducing the clicks required to perform the most common field tasks.13
+3.3 The "360-Degree" Detail View
+Clicking a card opens the Detail View. This should not be a scrolling wall of text fields. It should be organized into tabs or collapsible accordions to manage information overload.
+* Overview Tab: Key stats (Fleet Size, Battery Specs, Scrap Rate).
+* Timeline Tab: A vertical chronological history of every interaction. "Visited," "Called," "Quoted." This creates a narrative of the relationship.17
+* Battle Plan Tab: This is unique to this solution. It dynamically populates "Talking Points" based on the client's profile. If the client is "Logistics + Scania," it shows: "Pitch the 689C Vibration Resistant battery. Mention the R20k cost of downtime per day.".5
+4. Geospatial Intelligence: Mapping the Territory
+In a territory-based sales role, the map is the primary workspace. The integration of Leaflet or Mapbox into the Next.js application transforms it from a list-based tool to a spatial planning tool.
+4.1 Map-Centric Discovery and Clustering
+The application must feature a dedicated "Map Mode." Using the device's GPS, it renders the user's location and pins for all clients within a configured radius (e.g., 20km).
+Visualizing Density with Clustering:
+Industrial areas like Alrode are incredibly dense. A standard map would be a mess of overlapping pins. The implementation must use Clustering (e.g., react-leaflet-markercluster).
+* At high zoom levels (City view), the user sees a circle with a number: "45 Leads in Alrode."
+* As they zoom in (Street view), the cluster explodes into individual pins.18
+Pin Coding Strategy:
+The pins should convey status through color, eliminating the need to tap them to understand the lead's state.
+* Red Pin: Cold Lead / Unvisited in > 60 days.
+* Yellow Pin: Active Opportunity / Quote Pending.
+* Green Pin: Existing Customer / Recent Sale.
+* Grey Pin: Disqualified / Do Not Visit.
+This allows a rep to park at the top of Dekenah Street and visually scan the map for "Red Pins" to target for cold calls, maximizing the efficiency of their physical presence.19
+4.2 Intelligent Route Optimization
+The application should offer a "Route Builder" feature.
+1. Selection: The rep taps specific pins on the map or selects a "Target List" (e.g., "Show me all Logistics leads in Wadeville").
+2. Optimization: The app sends these coordinates to a routing engine (like Mapbox Optimization API) which calculates the most efficient traversal order to minimize drive time.20
+3. Execution: The app presents the route as an ordered list. "Stop 1: Anderson Transport. Stop 2: Sena Trucking..."
+4. Handoff: Tapping "Go" on a stop passes the coordinates to Waze or Google Maps for turn-by-turn navigation.
+This feature directly addresses the "Windshield Time" dilemma, ensuring the rep spends more time facing clients and less time sitting in traffic on the R59 highway.21
+5. Interaction Design: Reducing Friction in Data Entry
+The primary reason CRM implementations fail in the field is "Data Entry Friction." If logging a visit takes 5 minutes of typing on a small keyboard, the rep will defer it until the end of the week, leading to "Recall Bias" and poor data quality. The interaction design must aim for "Zero-Friction Logging."
+5.1 The "Check-In" Workflow
+The application should utilize Geofencing. When the app detects (via background GPS monitoring) that the rep has been stationary at the coordinates of a known lead (e.g., Unitrans) for more than 5 minutes, it sends a push notification:
+"Detected visit at Unitrans. Check in?"
+Tapping this notification opens the "Visit Log" modal with the Client Name, Time, and Location pre-filled. The rep effectively only needs to confirm the outcome. This automates the most tedious part of the process.22
+5.2 Voice-to-Text Integration
+Typing narrative notes on a phone is slow. The "Visit Notes" field must feature a prominent microphone icon triggering the Web Speech API.
+* Workflow: The rep leaves the meeting, gets into their car, taps the mic, and speaks: "Met with the workshop manager. He's unhappy with the Raylite lifespan on the cross-border trucks. He's interested in testing the Willard 688. Send a quote for 10 units."
+* Processing: The app transcribes this text.
+* AI Enhancement (Future State): An integrated LLM (Large Language Model) could parse this transcript to automatically extract:
+   * Sentiment: Negative (Unhappy with competitor).
+   * Opportunity: 10 Units (Willard 688).
+   * Task: Send Quote.
+This allows the rep to capture high-fidelity qualitative data without typing a single word.23
+5.3 Swipe Gestures for Rapid Triage
+For list management, the app should adopt the "Swipe" interactions popularized by email apps and dating apps.24
+* Swipe Right (Green): "Positive Interaction" – Opens the standard visit log.
+* Swipe Left (Red): "Quick Fail" – Opens a menu for common failure reasons (e.g., "Gatekeeper Blocked," "Manager Out," "Closed"). This allows a rep to log a failed attempt in 2 seconds while walking back to the car.
+* Long Press: Triggers a context menu for "Quick Call" or "WhatsApp."
+6. The "Battle Card" and Sales Enablement Module
+To elevate the rep from a "visitor" to a "consultant," the app must provide real-time intellectual support. The "Battle Card" module organizes the competitive research (e.g., Raylite vs. Willard) into accessible, bite-sized arguments.25
+6.1 Contextual Competitor Counter-Strategy
+When the rep is viewing a lead known to use a specific competitor (e.g., Battery Centre/Raylite), the app surfaces a "Counter-Strategy" widget.
+Battle Card UI Layout:
+* Competitor: Raylite.
+* Weakness: "Lower vibration resistance in corrugated road conditions."
+* Attack Angle: "Ask the fleet manager: 'How often are you replacing batteries on the Namibia route?'"
+* The Pivot: "Introduce the Willard 688 with glass-mat separators. Show the 'Vibration Test' chart."
+* Evidence: A button to open a PDF or Image of the technical comparison chart, which the rep can show directly to the client.
+This puts the expert strategy directly in the hands of the rep at the crucial moment of negotiation.26
+6.2 The Objection Handling Matrix
+A dedicated "Objection Solver" tool allows the rep to navigate common pushbacks instantly.
+* Navigation: A grid of buttons labeled with common objections: "Price High," "Happy with Current," "No Budget," "Authority."
+* Interaction: Tapping "Price High" reveals the specific script derived from the "Scrap Rebate" strategy: "Mr. Customer, while the unit price is higher, have you factored in the scrap return? At R8.50/kg, your scrap pile effectively subsidizes this purchase by R45,000. Let's run the numbers.".27
+6.3 The TCO (Total Cost of Ownership) Calculator
+This is a functional interactive component.
+* Inputs: Number of Trucks (e.g., 50), Current Battery Lifespan (e.g., 18 months), Cost of Downtime (e.g., R2000/hr).
+* Calculation: The app computes the "Real Cost" of buying cheap batteries vs. premium ones.
+* Output: A visual graph showing the savings over 3 years. This tool shifts the conversation from "Price" to "Value".28
+7. Technical Architecture: Next.js and the Modern Stack
+To deliver this sophisticated experience, the underlying engineering must be robust. The choice of Next.js (App Router) is strategic, enabling a hybrid of server-side performance and client-side interactivity.
+7.1 Framework: Next.js 14+ (App Router)
+The App Router architecture allows for the use of React Server Components (RSC).
+* Server Components: Used for the dashboard shell, navigation, and initial data fetch. This minimizes the JavaScript bundle sent to the mobile device, ensuring fast First Contentful Paint (FCP) even on spotty 3G connections in industrial zones.29
+* Client Components: Used for the interactive elements—the Map, the Swipe List, the Calculator, and the Voice Recorder. These are hydrated on the client to provide instant feedback.
+7.2 The Offline-First Strategy: PWA & Serwist
+Since connectivity in Alrode is unreliable, "Offline Support" is a non-negotiable requirement.
+* Service Workers (Serwist): We utilize Serwist (a modern wrapper for Workbox) to manage the service worker. It handles the caching of static assets (HTML/CSS/JS) and API responses.30
+* Stale-While-Revalidate: This caching strategy is used for the Leads List. When the rep opens the app, it instantly shows the data from the last sync (Stale) while fetching new data in the background (Revalidate). This makes the app feel instant.
+* IndexedDB & Background Sync: When a rep logs a visit while offline, the POST request is intercepted. The data payload is serialized and stored in IndexedDB (using a library like Dexie.js). The Service Worker registers a "Background Sync" task. When the network is restored, the browser automatically replays the queued requests to the server, ensuring no data is lost.4
+7.3 Data Schema Design (PostgreSQL/Prisma)
+To support the advanced filtering and categorization, the database schema must be well-structured.31
+Core Entities:
+* User: The Sales Rep.
+* Lead: The Client.
+   * Fields: id, company_name, vertical (Enum: LOGISTICS, TRADE, SECURITY), status (Enum: COLD, WARM, HOT), fleet_size (Int), location (PostGIS Geometry), last_visit_date.
+* VisitLog: The Interaction.
+   * Fields: id, lead_id, user_id, outcome, notes (Text), sentiment_score, timestamp.
+* Product: Inventory.
+   * Fields: sku (e.g., 688C), spec_data (JSON: { vibration_rating: 9, capacity: 180Ah }), scrap_value.
+7.4 UI Component Library: Shadcn UI & Tailwind CSS
+The visual implementation utilizes Shadcn UI.
+* Why Shadcn? It provides accessible, unstyled components that copy directly into the codebase. This allows for total customization of the "Industrial Theme" without fighting a library's defaults.29
+* Tailwind CSS: Enables rapid development of the "Stacked Card" mobile layouts and easy implementation of Dark Mode classes.
+8. Gamification and Performance Management
+Sales is a psychological game. To keep reps motivated during long days in the field, the dashboard should incorporate gamification mechanics.
+8.1 Visual Progress Trackers
+The top of the dashboard should feature a "Daily Hustle" Bar.
+* Metric: Visits Completed vs. Daily Target (e.g., 3/5).
+* Feedback: As the bar fills, it changes color (Red -> Yellow -> Green). Upon hitting the target, a "Confetti" animation triggers on the screen. This micro-interaction releases dopamine and reinforces the positive behavior of logging visits.32
+8.2 Leaderboards and Streaks
+* Leaderboard: A tab showing the rep's ranking against the rest of the team (e.g., "Alberton Rep vs. Germiston Rep").
+* Streaks: Tracking consecutive days of hitting targets. "You are on a 5-day streak! Keep it up to unlock the 'Road Warrior' badge." This taps into the psychological desire for consistency.9
+9. Implementation Roadmap
+Phase 1: Foundation (Weeks 1-4)
+* Setup: Initialize Next.js 14 project with TypeScript and Tailwind.
+* PWA Core: Configure Serwist for offline asset caching.
+* Auth: Implement authentication (e.g., Auth.js) with role-based access (Rep vs. Manager).
+* UI Shell: Build the Bottom Navigation and Dashboard Skeleton using Shadcn UI.
+Phase 2: The Data Core (Weeks 5-8)
+* Database: Provision PostgreSQL database and set up Prisma Schema.
+* Leads List: Build the "Leads Center" with filtering logic (Verticals, Status).
+* Map Integration: Implement the Leaflet map with clustering and user geolocation tracking.
+Phase 3: Field Enablement (Weeks 9-12)
+* Visit Logic: Build the "Visit Log" modal with Voice-to-Text integration.
+* Offline Sync: Implement IndexedDB storage for offline mutations and Background Sync replay.
+* Calculators: Build the TCO/Scrap Calculator component.
+Phase 4: Polish & Launch (Weeks 13+)
+* Battle Cards: Populate the static content for competitor analysis.
+* Gamification: Add progress bars and animations.
+* Testing: Field testing in Alrode to verify offline reliability and GPS accuracy.
+* Deployment: Deploy to Vercel/Netlify and distribute via MDM or simple "Add to Home Screen" instructions.
+10. Conclusion
+The proposed Next.js "Leads Center" is a transformative tool designed specifically for the rigors of the Alberton/Germiston industrial sales market. It moves beyond the limitations of standard CRMs by acknowledging the "Windshield Warrior" reality: the need for speed, offline reliability, and instant access to technical intelligence.
+By fusing Offline-First architecture (PWA/Serwist) with Geospatial Strategy (Leaflet) and Psychological UX (Gamification/Thumb-Zone Design), this platform does not just record sales activity; it drives it. It equips the rep with the "Battle Cards" to win arguments against entrenched competitors and the "Route Optimization" to see more clients in less time. This blueprint offers a clear path to building a digital asset that will secure a competitive advantage in the high-stakes world of industrial power solutions.
+________________
+Detailed Analysis: Component & Module Breakdown
+11. Module Specifications and Implementation Details
+11.1 The Lead Management Database Schema
+To support the sophisticated categorization and sorting required by the user ("sort them in different categories"), the database schema must go beyond simple contact lists. It needs to model the business logic of the industrial battery market.
+Schema Design (Prisma / PostgreSQL):
+Entity
+	Field
+	Type
+	Strategic Purpose
+	Lead
+	vertical
+	Enum
+	Categorizes by industry: LOGISTICS, SECURITY, TRADE, LEISURE. This drives the "Smart Filters" on the dashboard.
+	Lead
+	fleet_size
+	Int
+	Stores the number of vehicles. Critical for the "TCO Calculator" and prioritizing high-value targets (e.g., Anderson Transport > 50 trucks).
+	Lead
+	battery_brand
+	String
+	Current supplier (e.g., "Raylite"). Triggers the specific "Battle Card" for competitor counter-strategy.
+	Lead
+	visit_frequency
+	Int
+	Required days between visits (e.g., 30 for Fleets, 90 for Leisure). Used to calculate the "Next Visit Due" alerts.
+	Lead
+	location
+	Geometry
+	PostGIS coordinate data. Enables the "Nearby Leads" geospatial query and route optimization.
+	VisitLog
+	sentiment
+	Enum
+	POSITIVE, NEUTRAL, HOSTILE. Tracks the "Temperature" of the relationship over time.
+	VisitLog
+	objections
+	JSON
+	Array of tags: ``. Aggregates data to show managers the most common hurdles in the market.
+	The "Sorting Hat" Algorithm: The sorting logic in the Leads List component shouldn't just be alphabetical. It should use a weighted score to bubble up the most important leads.7
+
+
+TypeScript
+
+
+
+
+// Conceptual Scoring Logic
+const leadScore = (lead) => {
+ let score = 0;
+ // Weight 1: Fleet Size (Big clients first)
+ score += lead.fleet_size * 2;
+ // Weight 2: Recency (Don't let leads go stale)
+ score += (daysSinceLastVisit(lead) > lead.visit_frequency)? 50 : 0;
+ // Weight 3: Proximity (If enabled)
+ score += (isNearby(lead))? 100 : 0;
+ return score;
+}
+
+This ensures that a large, unvisited fleet nearby floats to the top of the list automatically.
+11.2 The "Visit Logger" Modal Design
+This component addresses the requirement to "leave notes to say visited." It is the most frequently used part of the app and must be designed for speed.
+Interaction Pattern: It uses a Drawer component (sliding up from the bottom) rather than a full page navigation. This keeps the rep in the context of the list/map.10
+UI Elements & Form Architecture:
+1. Outcome Selector: Instead of a dropdown, use large, tappable "Tiles" for common outcomes.33
+   * (Green)
+   * (Blue)
+   * [Gatekeeper/No Access] (Red)
+   * (Gold)
+2. Voice Note Trigger: A large, circular microphone button. Tapping it activates react-speech-recognition.
+   * Visual Feedback: A waveform animation confirms recording is active (crucial in noisy environments like Alrode).
+   * Transcript: The text appears in real-time in the text area for quick verification.
+3. Next Step: A simplified date picker defaulting to intelligent suggestions: , , [1 Month].
+4. Submit: A full-width "Save Visit" button fixed to the bottom.
+Technical Implementation of Offline Sync: On clicking "Save," the app executes the following logic 30:
+
+
+TypeScript
+
+
+
+
+async function handleSave(visitData) {
+ if (navigator.onLine) {
+   // Online: Send directly to API
+   await api.post('/visits', visitData);
+ } else {
+   // Offline: Store in IndexedDB and register Sync
+   await db.visits.add({...visitData, syncStatus: 'PENDING' });
+   if ('serviceWorker' in navigator && 'SyncManager' in window) {
+     const sw = await navigator.serviceWorker.ready;
+     await sw.sync.register('sync-visits');
+   }
+   toast.success("Saved Offline. Will sync when online.");
+ }
+}
+
+This ensures data is never lost, even if the rep is deep inside a warehouse.
+11.3 The "TCO Calculator" Component
+To address the "Strategy" aspect (pricing and value), this component helps the rep close deals using financial logic.
+React State Management:
+* numberOfTrucks (Input)
+* batteryType (Select: 688, 689, 652)
+* leadPrice (Constant: R8.50 - fetched from API but cached locally)
+The Logic:
+The calculator computes the "Scrap Value" dynamically.
+Scrap Credit = Number of Trucks * Battery Weight * Lead Price
+E.g., 50 Trucks * 52kg (Type 688) * R8.50 = R22,100.
+Visual Output: The result is displayed in massive, green typography. This is a "Show the Client" tool. The rep turns the phone screen to the Fleet Manager to show the savings visually. A "Share" button generates a simple PDF quote using @react-pdf/renderer and opens the native share sheet to send it via WhatsApp immediately.34
+11.4 The Map Component (Leaflet Integration)
+This covers the requirement to "see these customers" geographically.
+Technical Stack:
+* Library: react-leaflet (v4+) wrapping Leaflet JS.
+* Rendering: Must use next/dynamic with ssr: false because Leaflet relies on the window object, which doesn't exist on the server.35
+Custom Marker Logic:
+We replace standard pins with DivIcon markers that display data directly on the map.
+* The "Badge" Marker: A pin that shows the lead's "Temperature" color (Red/Green) AND a small text badge showing "Days since last visit" (e.g., "30d"). This allows the rep to identify neglected leads just by looking at the map, without clicking.36
+User Tracking: A useEffect hook monitors navigator.geolocation.watchPosition. The map creates a "Blue Dot" for the user. A "Re-center" button (FAB) allows the rep to snap the map back to their location if they have panned away to explore the territory.18
+12. Style and Layout: The "Industrial Utilitarian" Aesthetic
+The user asked for "deep research on the style." For an industrial application, the aesthetic should not be "Consumer/Social Media" style (soft shadows, gradients). It should be "Industrial Utilitarian."
+Color Palette:
+* Primary Action: Safety Orange (#FF5722) or High-Vis Yellow. Used for primary buttons (Call, Save). This mimics the safety gear used in the environment, making the buttons stand out in bright sunlight.
+* Backgrounds: Dark Grey (#121212) for the app shell. This reduces glare and battery consumption.
+* Status Colors:
+   * Green: #4CAF50 (Success/Sale)
+   * Red: #F44336 (Alert/Objection)
+   * Blue: #2196F3 (Information/Logistics)
+Typography:
+* Font: Inter or Roboto (Sans-serif).
+* Sizing: Base font size of 16px (larger than the standard 14px) to ensure legibility while walking or driving. Headings should be 24px+ and Bold.
+* Contrast: Text must pass WCAG AAA contrast standards (e.g., White text on Dark Grey background) to ensure readability in the harsh African sun.7
+Layout Philosophy:
+* Margins: Generous padding (16px minimum).
+* Cards: Distinct borders or subtle elevation. No "flat" design where elements blend together. The user needs to know exactly where a tap target begins and ends.
+13. Conclusion
+This architectural blueprint delivers a comprehensive answer to the user's request. It provides a robust Next.js/PWA technical foundation, a sophisticated "Leads Center" with vertical-specific sorting, and a suite of "Sales Enablement" tools (Battle Cards, Calculators) that empower the rep to manage clients effectively. By focusing on the specific "Day in the Life" constraints of the Alberton industrial rep—offline needs, speed of entry, and financial argumentation—the proposed solution transcends a simple contact list to become a critical operational asset.

@@ -1,0 +1,225 @@
+﻿Integrated Systems for Relationship Sustainability: A Multi-Disciplinary Framework for the "Keep" Phase
+1. Executive Introduction: The Transition from Acquisition to Retention
+The landscape of modern relationship formation is heavily skewed toward the "Acquisition Phase"—the initial identification, attraction, and screening of potential partners. However, for a 35-year-old individual seeking long-term stability, the critical determinant of success is not the ability to acquire a partner, but the ability to sustain the partnership through the "Keep Phase." This phase is characterized by different entropy dynamics; where the acquisition phase struggles against obscurity and rejection, the keep phase struggles against boredom, conflict escalation, and hedonic adaptation.
+To navigate this transition effectively, a robust framework must be established that synthesizes clinical psychology, social engineering, and algorithmic support. This report provides an exhaustive analysis of these domains. It explores the psychodynamics of stability through the lens of the Gottman Method and Attachment Theory, offering precise protocols for conflict de-escalation and emotional regulation. It delineates a strategy of "Selective Sociality" for the introverted operator, optimizing social energy through high-leverage structures like Jeffersonian Dinners and the "Super Connector" model.
+Furthermore, this report outlines the architecture for a proprietary AI-Driven Social Coaching Application. This system utilizes Natural Language Processing (NLP) to detect "interest signals" and "soft rejections" in text communication, employs the Hook Model to gamify relationship maintenance habits, and leverages geolocation scraping to identify "Third Places" (e.g., Dragon Town, Hennops Hiking Trails) that facilitate the neurological state of "Self-Expansion." Finally, the report anchors these external strategies in Internal Cognitive Restructuring via Rational Emotive Behavior Therapy (REBT), specifically targeting "Unconditional Self-Acceptance" (USA) to decouple personhood from performance and mitigate the impacts of Body Dysmorphic Disorder (BDD).
+2. The Psychodynamics of Relationship Sustainability
+The "Keep Phase" requires a shift from presentation (showing one's best self) to regulation (managing one's worst self). The stability of a dyadic system is predicted not by the absence of conflict, but by the presence of repair mechanisms and the effective management of emotional "flooding."
+2.1 The Gottman Method: Counter-Entropic Interaction Protocols
+Dr. John Gottman’s research, based on longitudinal studies of couples, identifies four specific negative interaction patterns—termed the "Four Horsemen of the Apocalypse"—that predict relationship dissolution with over 90% accuracy.1 These behaviors act as entropic forces, degrading the emotional bond over time. For a relationship to survive the "Keep" phase, specific algorithmic antidotes must be applied to each Horseman.
+2.1.1 Criticism vs. Complaint: The Linguistics of Need
+Criticism is distinct from a complaint. A complaint addresses a specific behavior in a specific situation, whereas criticism attacks the partner's character or personality.1
+* The Mechanism: Criticism often arises from unexpressed needs that have calcified into resentment. When a partner says, "You are so selfish for leaving the dishes," they are globalizing a specific grievance ("dishes") into a character defect ("selfishness"). This triggers the partner's defense mechanisms because their core identity is under attack.2
+* The Antidote: The Gentle Startup. The antidote to criticism is the "Gentle Startup." This involves a linguistic formula that strips blame from the expression of need. The formula is: "I feel [emotion] about [situation] and I need [positive action]".3
+   * Operational Example: Instead of "You never listen to me," the Gentle Startup transforms this into, "I feel lonely when we don't talk after dinner, and I need 10 minutes of uninterrupted connection to feel heard".4
+   * Strategic Implication: In the early dating phases, establishing this pattern functions as a high-value filter. A partner who responds to a Gentle Startup with empathy indicates "Secure" attachment potential; one who responds with defensive rage indicates potential incompatibility.5
+2.1.2 Contempt: The Physiological Corrosive
+Contempt is the single strongest predictor of divorce.6 It involves communicating from a position of moral superiority, utilizing sarcasm, cynicism, name-calling, eye-rolling, or mockery.
+* The Mechanism: Contempt functions to lower the partner's status relative to the speaker. It destroys psychological safety and attacks the partner's sense of self-worth. Crucially, Gottman found that contempt is correlated with compromised immune systems in the recipient, demonstrating that this psychological aggression takes a physiological toll.6
+* The Antidote: Building a Culture of Appreciation. The neurological counter-measure to contempt is the active scanning of the environment for positive behaviors. This requires a cognitive restructuring to focus on fondness and admiration.6
+   * Implementation: This involves a conscious habit of vocalizing gratitude for small, mundane actions. "Thank you for making coffee" seems trivial, but it deposits into the "Emotional Bank Account," creating a buffer that the couple can draw upon during conflict.7
+2.1.3 Defensiveness: The Shield That Wounds
+Defensiveness is defined as self-protection in the form of righteous indignation or innocent victimhood in an attempt to ward off a perceived attack.3
+* The Mechanism: Defensiveness is essentially a way of blaming the partner. By claiming "It's not my fault," the defensive partner is implicitly saying, "The problem is you." This escalates conflict because the complaining partner feels unheard and invalidated, often leading to increased volume or intensity to "get through" the shield.3
+* The Antidote: Taking Responsibility. The antidote is to accept responsibility, even for a minuscule part of the problem.
+   * Operational Example: If accused of being late, the defensive response is "Traffic was bad." The antidote response is, "I did leave later than I intended, and I'm sorry for keeping you waiting." This diffuses tension immediately by validating the partner's reality.3
+2.1.4 Stonewalling: The Physiological Circuit Breaker
+Stonewalling occurs when the listener withdraws from the interaction, shutting down and closing themselves off. It typically happens when the listener is "flooded"—a state of physiological arousal where the heart rate exceeds 100 beats per minute, making cognitive processing and empathy biologically impossible.6
+* The Mechanism: While often interpreted as indifference or hostility, stonewalling is usually a self-protective mechanism against emotional overwhelm. The "stonewall" is the external manifestation of an internal system shutdown.6
+* The Antidote: Physiological Self-Soothing. The interaction must be paused. The protocol requires a "Time Out" of at least 20 minutes—the time required for the parasympathetic nervous system to re-regulate the heart rate and metabolize cortisol.
+   * Critical Constraint: During this break, the individual must engage in distracting, soothing behaviors (reading, listening to music) rather than ruminating on the conflict ("I can't believe she said that"), which re-triggers the flooding.6
+Table 1: The Four Horsemen and Strategic Counter-Measures
+Horseman
+	Underlying Signal
+	The Antidote
+	Implementation Script
+	Criticism
+	"I have an unmet need."
+	Gentle Startup
+	"I feel [X] about and I need [Z]."
+	Contempt
+	"I don't respect you."
+	Appreciation
+	"I appreciate that you..." / Active scanning for positives.
+	Defensiveness
+	"I feel attacked."
+	Responsibility
+	"You're right, I did..." / "I contributed to this by..."
+	Stonewalling
+	"I am overwhelmed."
+	Self-Soothing
+	"I am flooded. I need 20 minutes to calm down."
+	2.2 Attachment Theory: Breaking the Anxious-Avoidant Trap
+For a 35-year-old seeking stability, identifying and mitigating the "Anxious-Avoidant Trap" is paramount. This dynamic often mimics passion in the early stages ("the spark") but leads to chronic instability in the "Keep" phase.
+2.2.1 The Trap Mechanism
+This dynamic occurs when an individual with an Anxious Attachment style (seeking intimacy to quell insecurity) pairs with an individual with an Avoidant Attachment style (seeking independence to quell anxiety about engulfment).8
+* The Cycle:
+   1. Trigger: The Anxious partner seeks closeness (often triggered by a perceived slight).
+   2. Reaction: The Avoidant partner feels encroached upon and withdraws (deactivating strategy).
+   3. Escalation: The withdrawal triggers panic in the Anxious partner, who pursues harder (protest behavior).
+   4. Retreat: The Avoidant partner retreats further to self-regulate.9
+* Neurological Basis: Both behaviors are rooted in a dysregulated nervous system. The Anxious partner regulates through co-regulation (proximity), while the Avoidant partner regulates through auto-regulation (solitude).10
+2.2.2 Protocols for Resolution and Screening
+* Screening Questions (Date 1-3): To avoid entering this trap, early screening is necessary.
+   * Question: "How do you handle needing space in a relationship?" or "What is your relationship like with your parents?" (Avoidants often describe parents in glowing but vague terms, or have no memory of childhood emotional support).11
+   * Observation: Watch for "mixed signals"—intense intimacy followed by unexplained silence. This is a hallmark of the Avoidant deactivation strategy.11
+* Operational Resolution: If currently in such a dynamic, the cycle can be broken only by counter-intuitive moves.
+   1. The Pause: The Anxious partner must stop the chase. This removes the pressure that causes the Avoidant to retreat, allowing them space to potentially come forward.13
+   2. Secure Communication: Utilizing Gottman's "Soft Startup" prevents triggering the Avoidant partner's defensiveness. "I feel anxious when I don't hear from you" is better than "You never text me back".8
+   3. Co-Regulation: The Avoidant partner must be coached to offer reassurance before withdrawing. "I care about you, I just need an hour to decompress" prevents the Anxious partner's panic response.8
+2.3 The Self-Expansion Model: The Antidote to Boredom
+The Self-Expansion Model, developed by Arthur and Elaine Aron, posits that humans have a primary motivation to expand their potential efficacy (resources, perspectives, identities) and that romantic relationships are a primary mechanism for this expansion.14
+2.3.1 The Decline of Novelty
+In the acquisition phase, self-expansion is rapid; partners learn about each other's worlds, effectively expanding their own identities. In the "Keep" phase, this expansion slows, leading to boredom. Research indicates that boredom is a stronger predictor of dissatisfaction than conflict is.14
+2.3.2 The Shared Novelty Intervention
+Couples who engage in novel and challenging activities together report higher relationship quality and sexual desire.16
+* The Mechanism: Misattribution of Arousal. The physiological excitement (increased heart rate, adrenaline) generated by the challenging activity is cognitively associated with the partner, reigniting the neurochemistry of early-stage romance.18
+* Criteria for Activities: The activity must be new to both partners (Novelty) and require effort or skill (Challenge). Passive consumption (Netflix, dinner at the same restaurant) does not trigger self-expansion.20
+3. Advanced Social Intelligence and "Selective Sociality"
+For the introverted or highly selective individual, traditional "scattershot" socializing is energy-inefficient and often yields low-value connections. "Selective Sociality" reframes introversion not as a deficit, but as a strategic allocation of limited social resources.
+3.1 Selective Sociality: Strategic Resource Management
+Selective sociality is defined as a psychosocial skill enabling individuals to consciously approach or avoid specific people, situations, or content with the genuine intention of enhancing psychosocial health.21 It emphasizes intentional selection over fear-based avoidance.22
+3.1.1 The "Avoid and Rule" Framework
+This framework suggests that introverts optimize well-being through three pillars:
+1. Selective Social Engagement: Deliberately choosing interactions that provide a high "return on investment" regarding emotional connection and intellectual stimulation, rather than engaging in obligatory socializing.23
+2. Mindful Digital Interaction: Curating digital environments to prevent comparison fatigue. Items on the Selective Sociality Scale (SSS) include "I limit my use of social media to prevent feelings of anxiety".23
+3. Introspective Well-being: Prioritizing solitary recharge time as a functional necessity for social performance. This is not isolation; it is the maintenance phase of the social battery.23
+3.2 High-Stakes Conversational Agility: The Art of the Pivot
+To maximize the efficiency of selected social interactions, one must master "The Pivot." This technique transforms mundane, surface-level exchanges into deep, value-laden discussions that facilitate screening and connection.
+3.2.1 Mechanics of the Pivot
+The Pivot involves taking a "No," a neutral statement, or a dead-end answer and shifting the vector of the conversation toward possibility or depth.24
+* The Technique: When a conversation hits a dead end (e.g., "How was your week?" "Fine."), the Pivot re-contextualizes the topic to force a deeper engagement.
+* Operational Example:
+   * Input: "My week was fine."
+   * Pivot: "Just fine? That sounds dangerously like you're plotting a grand escape. If you could be anywhere else right now, where would you be?".25
+* Mark Manson’s Polarization Strategy: Following Manson’s strategy in Models, the Pivot should be polarizing. It should express a strong opinion or vulnerability that forces the other person to be Receptive or Unreceptive.26 Neutrality is the enemy of dating efficiency. A polarizing statement (e.g., sharing a controversial passion or a deep fear) acts as a screening tool: those who recoil are filtered out, while those who engage are identified as high-potential matches.27
+3.2.2 Transitioning to Deep Talk
+Research indicates that deep, substantive conversations are correlated with higher well-being and attraction ("Deep Talk") compared to small talk.
+* The Bridge: Use questions that target values rather than facts.
+   * Fact Question: "Where do you work?"
+   * Value Pivot: "Do you find meaning in your work, or is it just the fuel for your real passions?".28
+* The "Arthur Aron" Protocol: Utilizing the "36 Questions to Fall in Love" methodology progressively escalates vulnerability. Questions like "What would constitute a 'perfect' day for you?" or "If you could change anything about the way you were raised, what would it be?" bypass social defenses and create rapid intimacy.29
+3.3 Social Proof and Pre-selection: The Super Connector Model
+Building an "Inner Circle" allows an introvert to leverage the networks of others and establish high social status through "pre-selection."
+3.3.1 The Connector Strategy
+A "Connector" does not need to be the most extroverted person in the room; they need to be the person who adds value by linking others.30
+* Methodology: When meeting someone, the primary mental query should be, "Who do I know that this person should meet?" Facilitating that introduction creates social capital. Being a "Super Connector" allows an introvert to act as a hub without needing to perform constantly; their value is in their network, not their noise.31
+3.3.2 The Jeffersonian Dinner: The Introvert’s Hosting Weapon
+The most efficient "Connector" event for introverts is the Jeffersonian Dinner.
+* The Core Rule: A single table of 8-14 guests where one single conversation happens at a time. No side conversations are allowed.33
+* The Structure:
+   * Guest List: Invite people from diverse backgrounds who do not all know each other. This creates novelty (Self-Expansion).34
+   * Icebreaker: A personal, story-based question answered by everyone around the table (e.g., "Who was your most influential mentor and why?").35
+   * Moderation: The host acts as a facilitator, ensuring quiet voices are heard and dominant voices are curbed. This structure eliminates the anxiety of "working the room," as the interaction is centralized and controlled.34
+   * Outcome: This format generates rapid intimacy and establishes the host as a leader of intellectual discourse—a highly attractive quality for long-term partnership.36
+3.3.3 Hosting Game Nights for Strangers
+Board game nights provide a structured social interaction where the "rules of engagement" are explicit, reducing social anxiety for strangers.37
+* Introvert-Friendly Architecture: The game provides the focus, reducing the pressure for constant conversation.
+* Execution:
+   * Game Selection: Choose accessible games with high interaction (e.g., Codenames, Ticket to Ride) rather than heavy strategy games that induce silence.38
+   * The Host’s Role: The host teaches the game. This establishes authority and helpfulness ("The Guide"). The script for the night should be welcoming but directive: "Tonight we are playing [Game]. The goal is [Goal]. I will walk us through the first round".38
+4. App Architecture: AI-Driven "Social Coaching"
+To support these psychological and social strategies, a technical architecture is proposed. This system uses AI to analyze relationship dynamics ("Vibe Checks"), gamify retention habits, and identify optimal social locations ("Third Places").
+4.1 NLP for Vibe Checks and Rejection Detection
+The application will utilize Large Language Models (LLMs) to analyze text conversations, providing objective feedback on "Interest Signals" and "Soft Rejections."
+4.1.1 Sentiment Analysis and Interest Signals
+Using LLM APIs (e.g., OpenAI or open-source models like Llama/RoBERTa), the system can evaluate conversation logs.
+* Prompt Engineering vs. Fine-Tuning: For generalized dating advice, rigorous prompt engineering (system prompts) is more cost-effective and flexible than fine-tuning a model. Fine-tuning is better for specific domain tasks with massive datasets, which may not be available here.39
+* System Prompt Structure: The prompt should define the persona (Dating Coach), the task (analyze interest levels), and constraints (avoid platitudes).
+   * Example Constraint: "Analyze the response time, emoji usage, and question-asking ratio. Classify interest as High, Neutral, or Low. Detect specific 'Soft Rejection' phrases such as hedging or delay tactics without counter-offers".41
+* Soft Rejection Detection: Research shows that "soft rejections" (e.g., "I'm busy right now, but maybe later") are often misread by anxious daters. Specialized prompts can be designed to detect hedging language ("I might," "We'll see") and the absence of concrete counter-proposals, flagging these as "Low Interest" signals to prevent the user from over-investing.41
+4.1.2 Technical Implementation (Python/FastAPI)
+* Backend Framework: FastAPI is recommended over Flask.
+   * Reasoning: FastAPI supports asynchronous operations (async/await), which is crucial for handling multiple concurrent LLM API requests without blocking the server. It is also significantly faster (benchmarks show 15k+ requests/sec vs Flask's 2k) and includes automatic data validation via Pydantic.43
+* Architecture Flow:
+   1. Input: User uploads chat export (WhatsApp/Telegram).
+   2. Processing: Text is sanitized (PII removal) and tokenized.
+   3. Analysis: Sent to LLM via API with the "Sentiment Analysis" system prompt.45
+   4. Output: A "Vibe Score" and actionable advice (e.g., "They are mirroring your language—High Interest," or "They have not asked a question in 4 turns—Initiate a Pivot").
+4.2 Gamification: The Hook Model for Retention
+To ensure the user maintains the habits of the "Keep" phase (e.g., planning dates, self-soothing), the app will use Nir Eyal’s Hook Model.46
+4.2.1 The Hook Cycle Applied to Dating
+1. Trigger:
+   * External: Notification: "It's been 2 weeks since your last novel date. Boredom risk increasing."
+   * Internal: Anxiety or Boredom. The app becomes the immediate solution to these emotional states.46
+2. Action: The user opens the app to find a "Third Place" or a "Conversation Pivot." The action must be frictionless (e.g., one-tap date ideas).47
+3. Variable Reward: The core driver of retention.
+   * Rewards of the Hunt: Finding a hidden gem location (via scraped data) or a unique event.
+   * Rewards of the Self: Mastery/Completion (streaks for maintaining "Gentle Startups").
+   * Rewards of the Tribe: Social validation (sharing success stories or getting AI praise).46
+4. Investment: The user inputs data (preferences, relationship history, journal entries). This investment loads the next trigger and makes the app more valuable over time, increasing switching costs.49
+4.3 Geolocation and "Third Place" Scrapers
+To support the Self-Expansion model, the app needs a live database of "Third Places" (locations distinct from home and work) suitable for dates and social connection. The focus is on the user's specific locale: Centurion/Pretoria/Johannesburg.
+4.3.1 Data Targets and "Vibe" Categorization
+* Niche Hobbies (Geek/Nerd): Stores like Dragon Town (Centurion) for tabletop gaming.50 Scraping their event schedule (Magic: The Gathering, D&D nights) provides specific, high-compatibility "Third Place" options. Geek House Eatery (Pretoria) offers a themed environment for dates.52
+* Active Lifestyle (Self-Expansion): Hiking trails like Hennops Hiking Trails or Wolwespruit.53 These locations offer the "physical challenge" required for self-expansion.
+* Intellectual/Social: Silent Book Club (Pretoria/Johannesburg) offers a low-pressure social environment for introverts.55
+* Events: Ticketing platforms like Quicket or Computicket provide data on local festivals and workshops.57
+4.3.2 Scraping Architecture (Python)
+To aggregate this data, a Python-based scraping engine is required.
+* facebook-scraper: Many local businesses (like Dragon Town) use Facebook as their primary Content Management System (CMS). This library allows for the extraction of event posts and times without a full API key, using cookies for authentication.59
+   * Use Case: Scrape the "Dragon Town" Facebook page weekly for "Commander Night" or "D&D" schedules.50
+* LivePopularTimes / populartimes: A wrapper for Google Maps that retrieves "busyness" histograms and live data.
+   * Use Case: The app can recommend a venue based on the user's "Social Battery." If the user wants High Energy (Social Proof), the app finds a venue with high live busyness. If the user wants Intimacy, it finds a venue with low busyness.61
+* Selenium: For dynamic sites like Meetup.com or Quicket where simple HTTP requests fail due to JavaScript rendering. Selenium allows the scraper to interact with the page (scroll, click) to load event data.63
+* Ethical Considerations: The scraper must adhere to robots.txt policies and implement rate limiting to avoid IP bans.59
+Table 2: Proposed App Tech Stack
+
+
+Component
+	Technology
+	Purpose
+	Source Reference
+	Backend API
+	FastAPI
+	High-performance async handling for LLM requests.
+	43
+	NLP Engine
+	LLM API (OpenAI/Llama)
+	Sentiment analysis, rejection detection, conversation coaching.
+	45
+	Event Scraping
+	facebook-scraper
+	Extracting events from local hubs (e.g., Dragon Town).
+	60
+	Busyness Data
+	LivePopularTimes
+	Real-time "busyness" data for venue selection.
+	61
+	Web Automation
+	Selenium
+	Scraping dynamic sites (Meetup, Quicket).
+	63
+	Database
+	PostgreSQL
+	Storing user investments (Hook Model) and scraped events.
+	N/A
+	5. Vulnerability & Emotional Intimacy: The Internal Architecture
+The success of the external strategies (socializing, dating) relies entirely on the internal stability of the individual. Without internal regulation, external techniques are merely performance.
+5.1 The Power of Vulnerability
+Vulnerability, as defined by Brené Brown, is the willingness to show up and be seen when the outcome is uncertain. It is the birthplace of connection. In the context of the "Keep" phase, vulnerability is the prerequisite for the Gentle Startup. To say "I feel lonely" is to be vulnerable; to say "You are ignoring me" is to be defensive. The former invites connection; the latter invites war. Vulnerability transforms a "transactional" relationship into an "emotional" one.65
+5.2 The "Unconditional Self-Acceptance" (USA) Protocol
+Rational Emotive Behavior Therapy (REBT), developed by Albert Ellis, posits that much relationship anxiety stems from "Conditional Self-Esteem"—the belief that one is only "good" if they are performing well or being loved.
+5.2.1 Decoupling Performance from Personhood
+REBT challenges this by advocating for Unconditional Self-Acceptance (USA). This is the acknowledgement that one is a fallible human whose worth is immutable and not defined by external events (rejection, failure, appearance).66
+* Relevance to Body Dysmorphic Disorder (BDD): Individuals with BDD or high physical insecurity often rate their total self based on their appearance or performance. REBT separates the "trait" (appearance) from the "self" (totality). "I may have a flaw, but I am not a flaw".68
+5.2.2 The USA Protocol Exercises
+To internalize USA, specific cognitive exercises must be practiced:
+1. The Big I / Little i Diagram:
+   * Exercise: Draw a large "I" representing the Total Self. Fill it with hundreds of little "i's" representing traits, actions, and experiences (e.g., "good cook," "bad at math," "rejected on Tuesday").
+   * Insight: Demonstrate visually that one negative "i" (a rejection) implies nothing about the value of the whole "I." It is mathematically impossible to rate the "Big I" based on a single "Little i".70
+2. Disputing Irrational Beliefs (DIBs):
+   * Belief: "I must be loved to be worthwhile."
+   * Dispute: "Why must I? Where is the law of the universe that says this? I prefer to be loved, but I can accept myself and enjoy life even if I am not.".67
+3. Role Rating:
+   * Exercise: Rate performance in specific roles (e.g., "I was a B- boyfriend today" or "I was a C+ dater") rather than rating the self ("I am a bad person"). This allows for constructive feedback without shame.70
+6. Conclusion and Strategic Synthesis
+For the 35-year-old seeker, the path to a sustainable relationship is not merely about finding the right person, but about becoming the right partner through structural and psychological engineering.
+The Psychodynamic layer provides the rules of engagement: utilizing Gentle Startups to prevent the Four Horsemen and engaging in novel activities (hiking, gaming) to trigger Self-Expansion and fight entropy. The Social layer provides the pipeline: using Selective Sociality and the Jeffersonian Dinner format to create high-value, low-energy-drain connections that position the individual as a "Connector."
+The Technical layer acts as the exoskeleton: an AI-driven app that scrapes local data (Dragon Town, Quicket) to solve the "what do we do?" problem and uses NLP to ensure communication remains healthy and interest signals are accurately read. Finally, the Internal layer (REBT/USA) ensures that the inevitable rejections and frictions of intimacy are met with resilience rather than collapse.
+By integrating these four domains, the individual moves from the passive hope of romance to the active construction of a sustainable life partnership.
+7. Operational Roadmap
+1. Immediate (Internal): Implement the "Big I / Little i" REBT exercise daily. Identify personal "Avoid and Rule" metrics for social energy.
+2. Short-Term (Social): Schedule and host a "Board Game Night" or "Jeffersonian Dinner" using the structured scripts. Use facebook-scraper to find upcoming events at Dragon Town.
+3. Technical (App): Prototype the "Vibe Check" script using Python/FastAPI. Set up a LivePopularTimes scraper to identify quiet/busy venues in Centurion.
+4. Long-Term (Relationship): Commit to the "Self-Expansion" protocol: one novel, challenging activity (e.g., a new hiking trail) every two weeks to maintain relationship freshness.

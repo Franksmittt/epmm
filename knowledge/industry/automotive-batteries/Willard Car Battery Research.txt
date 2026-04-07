@@ -1,0 +1,199 @@
+﻿Strategic Analysis and Technical Evaluation of Willard Batteries: An Assessment of South African Automotive Energy Storage
+1. Executive Context and Historical Trajectory
+The evolution of the South African automotive component manufacturing sector is inextricably linked to the history of Willard Batteries. As a brand that has navigated the transition from colonial import dependency to autonomous local industrialization, Willard serves as a case study in the adaptation of global electrochemical standards to the specific rigors of the African market. Operating under the corporate stewardship of AutoX (Pty) Ltd, Willard has established itself not merely as a product provider but as a vertically integrated energy storage entity. This report offers an exhaustive analysis of the Willard automotive battery ecosystem, specifically isolating its core Lead-Acid, Sealed Maintenance-Free (SMF), and Enhanced Flooded Battery (EFB) technologies, while excluding Absorbed Glass Mat (AGM) architectures to focus on the volume segments of the passenger and commercial vehicle fleet.
+1.1 Origins and the Licensing Era (1920s–1980)
+The genesis of the Willard presence in Southern Africa dates to the 1920s, a period characterized by the importation of automotive components to service a nascent vehicle park.1 During this pre-industrial phase, the brand established its reputation for reliability, yet it remained tethered to international supply chains and foreign intellectual property. The critical inflection point in the brand's trajectory occurred in 1954 with the commencement of local manufacturing in Port Elizabeth (now Gqeberha). This facility, established under license from the ESB International Corporation of America, marked the transfer of industrial capability to South African soil.1
+The significance of the ESB licensure cannot be overstated. It introduced standardized lead-acid production methodologies—specifically regarding grid casting and paste formulation—to the local market. This era defined the initial technical DNA of the brand: a reliance on robust, American-derived engineering standards adapted for a market where road quality and high ambient temperatures demanded exceptional durability. For nearly three decades, the brand operated under this licensed model, building a manufacturing base that employed local labor and utilized increasingly localized raw materials.4
+1.2 The Transition to Indigenous Ownership (1981–2017)
+The shifting geopolitical and economic landscape of the 1980s precipitated a move towards corporate autonomy. In 1981, Willard Batteries underwent a fundamental structural change, transitioning to 100% South African ownership through its acquisition by Power Technologies (Powertech), a division of the industrial conglomerate Altron Limited.1 This acquisition was not merely a financial transaction; it was a strategic consolidation of the South African battery industry.
+Under the Powertech umbrella, the manufacturing landscape was rationalized. The company acquired the Lucas Battery factory in Roodepoort and, crucially, the SABAT Battery Company.1 This merger brought the two dominant market players—Willard and SABAT—under a single corporate entity. Rather than merging the brands, Powertech opted for a dual-brand strategy that persists to this day: Willard was cultivated as the "premium" and "responsible" brand, while SABAT was positioned as the "lifestyle" and "motorsport" alternative.5
+The Powertech era also saw the expansion of the Port Elizabeth facility's capabilities. In 1987, it became the first battery manufacturing plant in South Africa to be awarded the South African Bureau of Standards (SABS) Quality Management System 0157 Part II accreditation.1 This period also marked the introduction of Sealed Maintenance-Free (SMF) batteries, a technological leap that moved the market away from accessible batteries requiring regular distilled water top-ups to the "fit-and-forget" units that dominate the modern passenger vehicle sector.1
+1.3 The Modern Corporate Era: AutoX and Trinitas (2017–Present)
+The most recent phase of corporate evolution began with the divestment of the battery division by Altron. The operations were consolidated into AutoX (Pty) Ltd, which was subsequently acquired by Trinitas Private Equity.1 This separation from a diversified technology conglomerate allowed AutoX to focus exclusively on energy storage solutions.
+Today, AutoX operates as a focused battery manufacturer and distributor. The corporate structure supports a robust export market, with the "HiFase" brand manufactured in Port Elizabeth exclusively for export, while Willard remains the domestic flagship.1 The strategic partnership with Clarios (formerly Johnson Controls Power Solutions), the world's largest battery manufacturer, allows AutoX to supplement its local manufacturing with imported technologies where necessary (such as high-end AGM units), although the core Willard range remains proudly South African.3
+2. Industrial Infrastructure and Manufacturing Excellence
+The credibility of a lead-acid battery manufacturer is defined by the sophistication of its production facility. Willard’s manufacturing hub in Port Elizabeth represents a convergence of legacy experience—spanning over seven decades—and modern process engineering. This facility is the heart of the AutoX operation, providing the strategic advantage of supply chain localization and product "tropicalization."
+2.1 The Port Elizabeth Manufacturing Facility
+Located in the Eastern Cape, an automotive hub of South Africa, the Port Elizabeth plant has been continuously upgraded to meet evolving international standards. The facility is not merely an assembly point but a primary manufacturer involved in the chemical and metallurgical transformation of raw materials into finished energy storage units.1
+The plant holds a suite of critical accreditations that validate its processes:
+* ISO 9001 Quality Management: The facility was the first in Africa to achieve this standard, indicating a rigorous consistency in production output.1
+* IATF 16949:2016: This specific automotive quality management system standard is a prerequisite for supplying Original Equipment Manufacturers (OEMs). It requires stringent defect prevention and waste reduction protocols, ensuring that a battery supplied to a Toyota or Volkswagen assembly line meets the same standards as one sold in the aftermarket.7
+* ISO 14001:2015 Environmental Management: Given the toxicity of lead and sulfuric acid, this accreditation is vital. It governs the facility's emissions, waste handling, and resource efficiency.3
+* ISO 45001:2018 Health and Safety: This standard ensures the protection of the workforce from the hazardous environment inherent in battery manufacturing.7
+2.2 Advanced Manufacturing Processes
+The production of a Willard battery involves several proprietary and standardized steps that determine the unit's final performance characteristics.
+2.2.1 Lead Alloy Metallurgy and Grid Production
+The structural backbone of any battery is the lead grid. AutoX utilizes high-grade lead alloys, specifically tailored for the maintenance-free market.7
+* Calcium-Calcium Technology: For the SMF range, the grids are cast from a lead-calcium alloy. The addition of calcium strengthens the lead (replacing the antimony used in older designs) and, critically, raises the overvoltage threshold for hydrogen evolution. This chemistry virtually eliminates water consumption during normal operation, enabling the "sealed" nature of the battery.8
+* Expanded Metal vs. Cast Grids: The research suggests a differentiation in grid manufacturing. While traditional heavy-duty batteries may use gravity-cast grids for sheer mass and durability, modern SMF batteries often utilize expanded metal technology. This process involves slitting and stretching a rolled lead sheet into a diamond-pattern mesh.9 Expanded metal grids are typically lighter, have a more uniform grain structure (reducing corrosion), and conduct electricity more efficiently for high-current cold cranking applications.
+* Strap Moulding: AutoX employs patented moulding processes for the lead straps that connect the plate groups. These straps must be lightweight to improve energy density but robust enough to withstand the severe vibrations typical of South African roads. A failure in the strap (cracking) leads to an open circuit and immediate battery death.7
+2.2.2 Paste Formulation and Curing
+The "active material"—the energy-storing component—is applied to the grids in the form of a paste. The positive plates receive a lead dioxide ($PbO_2$) precursor, while the negative plates receive a sponge lead ($Pb$) precursor.
+* Controlled Mixing: The stability of the paste density is paramount. AutoX controls the mixing method to ensure consistency from batch to batch. Variations in paste density can lead to uneven charging or premature shedding of the active material.7
+* Additives: The inclusion of specialized additives (likely carbon black, lignosulfonates, and expanders) improves the battery's charge acceptance and cold cranking performance.7
+* Curing: Once pasted, the plates undergo a "curing" process in humidity-controlled chambers. This step bonds the paste to the grid and establishes the crystal structure of the lead sulfate. AutoX has customized this process to optimize the adhesion of the paste, preventing it from shaking loose during vehicle operation.7
+2.3 Research and Development (R&D)
+Unlike many local distributors who simply rebrand imported product, AutoX maintains a substantive R&D capability. The company has established a partnership with Nelson Mandela University to operate an independent test facility.7 This collaboration focuses on:
+* OEM Process Development: Ensuring production meets the evolving requirements of vehicle manufacturers.
+* Algorithm Development: Pioneering innovative charging algorithms that set international benchmarks. This is particularly relevant for smart alternators and start-stop systems where the battery must accept charge rapidly.11
+* Tropicalization: Investigating failure modes specific to the high-temperature, high-vibration African environment, allowing for engineering adjustments that European-spec batteries might lack.11
+3. Technical Architecture of the Willard Automotive Range
+The Willard automotive portfolio is segmented by technology to address the diverse requirements of the South African car park, which ranges from older carbureted vehicles to modern start-stop SUVs. This analysis focuses on the three primary non-AGM technologies: Standard Flooded, Sealed Maintenance-Free (SMF), and Enhanced Flooded Battery (EFB).
+3.1 Vented (Flooded) Lead-Acid Technology
+The traditional vented battery represents the foundational technology of the automotive industry. Although largely superseded by SMF technology in the passenger vehicle segment, it remains relevant for specific applications.
+* Mechanism: These batteries contain a liquid electrolyte solution of sulfuric acid ($H_2SO_4$) and distilled water. The cell is not sealed; it features removable caps that allow gases (hydrogen and oxygen) generated during the charging process to vent to the atmosphere.8
+* Maintenance Requirement: Because the gases escape, the water component of the electrolyte is gradually depleted. These batteries require periodic topping up with distilled water to prevent the plates from drying out and sustaining permanent damage.8
+* Applications: While less common for modern passenger cars, this technology is robust and often favored for older vehicles, agricultural machinery, and stationary applications where the user has the discipline to perform maintenance. The ability to check specific gravity via a hydrometer remains a diagnostic advantage for fleet mechanics.12
+3.2 Sealed Maintenance-Free (SMF) Technology
+The SMF battery is the flagship of the Willard automotive range, representing the standard for the majority of passenger vehicles in South Africa.
+* Chemistry and Water Retention: The "sealed" designation refers to the battery's ability to retain electrolyte, not that it is hermetically sealed like a VRLA battery. The use of Calcium-Calcium grid alloys significantly reduces the gassing voltage. Under normal alternator charging conditions (13.8V – 14.4V), the battery generates minimal gas.8
+* Labyrinth Lid Design: A critical mechanical innovation in SMF batteries is the labyrinth lid. Any electrolyte that vaporizes during operation rises into the lid structure. The labyrinth channels cool the vapor, condensing it back into liquid form, which then drains back into the cell reservoir. This internal reflux cycle prevents fluid loss, negating the need for topping up.8
+* Performance Benefits:
+   * Zero Maintenance: Eliminates the risk of user error (under or over-filling).
+   * Shelf Life: The calcium alloy grids have a lower self-discharge rate than antimony grids, allowing the batteries to sit on shelf for longer periods without requiring a recharge.8
+   * Safety: The sealed design reduces the risk of acid spills and terminal corrosion caused by acid mist.
+3.3 Enhanced Flooded Battery (EFB) Technology
+The introduction of Start-Stop engine technology necessitated a battery more robust than the standard SMF but more cost-effective than AGM. Willard's EFB range addresses this mid-tier requirement.
+* Operational Challenge: In a Start-Stop vehicle, the engine cuts out when the vehicle is stationary (e.g., at a traffic light). The battery must continue to power the lights, air conditioning, and infotainment systems. When the driver presses the accelerator, the battery must instantly restart the engine. This cycle creates a "micro-cycling" load that would rapidly destroy a standard battery's active material.8
+* Technical Enhancements:
+   * Polyester Scrim: The defining feature of the EFB is the addition of a polyester scrim (fleece) layer on the positive plate surface. This material acts as a mechanical retainer, holding the active material paste against the grid and preventing it from shedding during the frequent discharge-charge cycles.8
+   * Thicker Plates: EFB batteries often utilize thicker plates to increase the reserve capacity and durability.13
+   * Dynamic Charge Acceptance: EFB batteries are engineered to accept charge more rapidly than standard batteries. This is essential to recover energy quickly from the alternator (or regenerative braking systems) during the short periods the engine is running between stops.13
+* Application Rules: Willard explicitly notes that EFB batteries are suitable for entry-level Start-Stop vehicles. However, they are not interchangeable with AGM batteries. If a vehicle was originally fitted with an AGM battery, it must be replaced with an AGM. If it came with an EFB, it can be replaced with a Willard EFB.13
+3.4 Technology Comparison Matrix
+Table 1: Comparative Analysis of Willard Non-AGM Automotive Technologies
+Feature
+	Vented (Flooded)
+	Sealed Maintenance-Free (SMF)
+	Enhanced Flooded Battery (EFB)
+	Grid Alloy
+	Low Antimony / Hybrid
+	Calcium-Calcium
+	Calcium-Calcium (High Tin)
+	Water Loss
+	Moderate (Requires Top-up)
+	Ultra-Low (Condensing Lid)
+	Ultra-Low (Condensing Lid)
+	Cycle Life
+	Standard
+	Standard
+	approx. 2x Standard
+	Vibration Resistance
+	Standard
+	High
+	High
+	Start-Stop Capable
+	No
+	No
+	Yes (Entry Level)
+	Key Component
+	Removable Caps
+	Labyrinth Lid
+	Polyester Scrim on Plates
+	Primary Use
+	Vintage, Agriculture, Heavy Duty
+	Modern Passenger, SUV, LCV
+	Start-Stop Vehicles
+	4. Product Portfolio and Market Segmentation
+Willard's product range is extensive, covering passenger, commercial, leisure, and industrial applications. The branding strategy utilizes casing colors and numerical codes to differentiate product lines, although the underlying technology often spans across these visual identifiers.
+4.1 Passenger Vehicle Solutions
+The core of the Willard business is the replacement market for passenger cars and light commercial vehicles (LCVs).
+* The "Blue" and "White" Ranges: Historically, casing colors distinguished performance tiers. However, the current lineup focuses on the SMF range, which typically features a dark casing with distinct labeling.
+* Common Specifications:
+   * Code 619 / 628: Smaller capacity batteries (35-40Ah) for compact hatchbacks.14
+   * Code 646 / 652: The "standard" mid-size batteries (50-70Ah) used in the majority of sedans and bakkies (e.g., Toyota Hilux, VW Polo). The 652 is a ubiquitously popular size in South Africa.14
+   * Code 668: A larger capacity (80Ah, 590 CCA) unit designed for larger sedans and executive vehicles requiring higher cranking power.15
+* Limited Edition Campaigns: Willard uniquely utilizes its casing production to run cause-marketing campaigns. These batteries are technically identical to standard units (e.g., a "Pink" battery is often a re-cased 646 or 652) but carry a social message.
+   * Pink Battery: Supports breast cancer awareness.
+   * Camo/Rhino Battery: Supports anti-poaching initiatives.
+   * Red Battery: Promotes blood donation (SANBS).
+   * Dream Battery: Supports the Reach for a Dream Foundation.16
+4.2 Commercial and Heavy-Duty Range
+The commercial sector demands batteries that can withstand high mileage and extreme mechanical stress.
+* Vibration Engineering: Batteries in trucks and tractors are subjected to intense G-forces. Willard's commercial range emphasizes "Durable and Robust" construction.18 This often involves anchor bonding—gluing the bottom of the plate pack to the container floor to prevent movement that could cause short circuits.
+* Key Models:
+   * Code 674: A 100Ah, 840 CCA battery. This unit is a staple for light trucks and large agricultural machinery. It is an SMF design, reducing maintenance downtime for fleet operators.18
+   * Code 689: A massive 140Ah, 925 CCA unit. Designed for heavy commercial vehicles (HCVs), its high reserve capacity is critical for powering sleeper cab accessories during rest periods.19
+4.3 Leisure and Specialist Batteries
+While excluding AGM, Willard offers specialized flooded lead-acid batteries for leisure applications.
+* Deep Cycle vs. Starter: Unlike automotive batteries which use thin plates to maximize surface area for high current (Cold Cranking Amps), Willard's leisure batteries use thicker plates. This density allows the battery to withstand deep discharges (down to 50% Depth of Discharge) without rapidly degrading the active material.6
+* Applications: Marine (boats), Camping (fridges/lights), and 4x4 auxiliary systems.
+* Golf Cart Batteries: Willard produces specific 8V and 12V flooded batteries for golf carts, designed for the rigorous daily charge-discharge cycle required by these vehicles.6
+5. Commercial Strategy and Market Positioning
+The South African battery market is a competitive duopoly dominated by AutoX (Willard/Sabat) and First National Battery (Raylite/Exide). Understanding Willard’s position requires analyzing its brand architecture and service ecosystem.
+5.1 The Willard vs. SABAT Dual-Brand Strategy
+A common point of consumer confusion—and strategic brilliance—is the relationship between Willard and SABAT. Both brands are owned by AutoX and manufactured in the same Port Elizabeth facility.1
+* Manufacturing Reality: Technical analysis and consumer feedback confirm that batteries with corresponding codes (e.g., Willard 652 and SABAT 652) are produced on the same lines using identical internal components and technologies.5
+* Brand Segmentation:
+   * Willard: Positioned as the "Rational Choice." The branding (green/nature/technology) appeals to the responsible head of the household, the fleet manager, and the safety-conscious driver. It is marketed on "reliability," "heritage," and "environmental stewardship".5
+   * SABAT: Positioned as the "Emotional Choice." The branding (red/aggressive) targets the motorsport enthusiast, the 4x4 adventurer, and the younger demographic.
+* Strategic Benefit: This allows AutoX to dominate shelf space and capture different psychographic segments of the market without cannibalizing its own sales, effectively blocking competitors from establishing a foothold.5
+5.2 The Warranty as a Differentiator
+Willard utilizes its warranty terms as a primary tool to signal quality and justify its price premium over imported budget brands.
+* 25-Month Coverage: Willard offers a 25-month nationwide warranty on its automotive range.20 This is a strategic deviation from the standard 12 or 24-month warranties common in the industry. The extra month serves as a psychological marker of superior durability.
+* Registration Requirement: To activate the warranty, the end-user must register the battery within 30 days of purchase via the "Register My Battery" online portal or call center.21
+   * Data Strategy: This registration process is not merely bureaucratic; it provides AutoX with direct access to consumer data (vehicle type, location, replacement frequency), allowing for highly accurate demand forecasting and production planning at the PE plant.
+* Exclusions: The warranty covers manufacturing defects (short circuits, dead cells) but strictly excludes abuse. This includes sulfation (caused by leaving a battery discharged), physical damage, or using a starter battery for cycling applications.21
+5.3 Distribution Network
+Willard's market penetration is supported by a multi-channel distribution strategy:
+* Willard Battery Xpress: A network of over 50 franchised specialist stores. These outlets provide expert fitment and testing, ensuring the brand controls the customer experience.20
+* Retail Partnerships: Extensive presence in major automotive parts retailers (Midas, AutoZone), ensuring availability in every town in South Africa.
+* Battery On Call: A mobile delivery and fitment service that responds to the "distress purchase" nature of battery failure, meeting the consumer at their home or roadside.1
+6. Corporate Social Responsibility and Environmental Stewardship
+In the lead-acid battery industry, environmental responsibility is an operational license to trade. Willard has successfully transformed this regulatory burden into a core brand pillar through its "Go Green, Go Willard" philosophy.
+6.1 Closed-Loop Recycling Economy
+South Africa lacks indigenous lead deposits; consequently, the entire industry relies on the recycling of spent batteries ("urban mining") to source raw material. Willard champions a "closed-loop" economy:
+* Collection Mechanism: A scrap deposit surcharge is added to the price of every new battery. This deposit is refunded when the consumer returns the old unit, ensuring a high collection rate.22
+* Material Recovery: The recycling process is highly efficient. The plastic cases are chipped, washed, and pelletized to create new battery casings. The lead grids and paste are smelted and refined to produce new lead alloys. The sulfuric acid is neutralized and converted into sodium sulfate for use in the glass and textile industries.17
+* Economic Impact: This system reduces the nation's reliance on expensive lead imports (which are priced in USD), protecting the local manufacturing sector from currency volatility and creating jobs in the collection and recycling chain.22
+6.2 The "Dream It, Do It" and "Go Green" Campaigns
+Willard integrates its CSI initiatives directly into its product marketing, creating a virtuous cycle of consumption and contribution.
+* The "Dream Battery": This limited-edition battery range is a partnership with the Reach for a Dream Foundation. Proceeds from sales go towards fulfilling the dreams of children with life-threatening illnesses. The campaign also includes consumer competitions (e.g., bush getaways) to drive engagement.16
+* Food & Trees for Africa (FTFA): The "Go Green" campaign involves a long-standing partnership with FTFA. Willard donates a portion of its recycling proceeds to plant trees in underprivileged communities.
+   * Specific Initiatives: Recent projects include planting 750 fruit trees in Buhle Park (Gauteng) and greening projects at Villa Liza Primary School and Oaklands High. These trees provide shade, improve air quality, and in the case of fruit trees, contribute to food security.24
+* Marine Conservation: The "Blue Battery" campaign supported The Beach Co-op and Captain Fanplastic, funding beach clean-ups and marine plastic education in the Western Cape and Nelson Mandela Bay.17
+7. Strategic Outlook and Conclusion
+The analysis of Willard Batteries reveals a brand that has successfully insulated itself against the volatility of the South African economy through vertical integration and astute brand management. By controlling the manufacturing process in Port Elizabeth, AutoX mitigates the supply chain risks that plague importers. By maintaining dual brands (Willard and Sabat), they maximize market share.
+The primary challenge facing the brand is the technological shift in the global automotive park. As Start-Stop technology becomes ubiquitous, the demand for standard SMF batteries will plateau, while the demand for EFB and AGM units will accelerate. Willard's investment in EFB manufacturing positions it well for the entry-level segment of this shift. However, the brand must continue to educate consumers on the specific application of these technologies to prevent the reputational damage that occurs when a standard battery is incorrectly installed in a high-demand vehicle.
+In summary, Willard Batteries represents the benchmark for automotive energy storage in South Africa. It offers a product that is technically tailored for African conditions, supported by a warranty that exceeds industry norms, and produced by a company that is deeply embedded in the social and environmental fabric of the nation. For the consumer, the choice of a Willard battery is a choice for localized engineering resilience and proven reliability.
+Table 2: Strategic SWOT Analysis of Willard Batteries
+Strengths
+	Weaknesses
+	Local Manufacturing: PE plant allows for rapid supply adjustment and "tropicalization."
+	Cost Structure: Local manufacturing costs (labor, energy) can be higher than cheap Asian imports.
+	Brand Equity: High consumer trust and "heritage" status (70+ years).
+	Market Confusion: Consumer awareness of the identical nature of Willard/Sabat could dilute brand premium.
+	Distribution: Massive network (Xpress, Midas, Mobile).
+	Tech Limit: Reliance on Clarios for top-tier AGM implies a gap in local high-tech manufacturing.
+	Opportunities
+	Threats
+	EFB Growth: Increasing penetration of Start-Stop vehicles in the mid-market.
+	EV Transition: Long-term decline of ICE vehicles (though 12V aux batteries remain).
+	Export: Expansion into Sub-Saharan Africa via the "HiFase" brand.
+	Exchange Rate: Lead prices are dollar-denominated, impacting raw material costs despite local recycling.
+	Works cited
+1. COMPANY PROFILE - Auto-X, accessed December 6, 2025, https://auto-x.co.za/wp-content/uploads/2019/04/AutoX-Company-Profile_2019.pdf
+2. A local brand that has stood the test of time | ProAgri, accessed December 6, 2025, https://proagri.co.za/a-local-brand-that-has-stood-the-test-of-time/
+3. COMPANY PROFILE, accessed December 6, 2025, https://cisp.cachefly.net/assets/articles/attachments/94693_autox_company_profile_mrc-2025.pdf
+4. About Williard Batteries - Willard Batteries, accessed December 6, 2025, https://willard.co.za/about-willard/
+5. Willard vs. SABAT: Is There A Difference? - Alberton Battery Mart, accessed December 6, 2025, https://www.albertonbatterymart.co.za/blog/willard-vs-sabat-is-there-a-difference
+6. Willard Battery Xpress Products | Buy Willard Products Online, accessed December 6, 2025, https://willardbatteryxpress.co.za/products/
+7. Manufacturing | Auto X, accessed December 6, 2025, https://auto-x.co.za/manufacturing/
+8. Willard Battery Brochure PDF | PDF | Chemistry | Electrical Engineering - Scribd, accessed December 6, 2025, https://www.scribd.com/document/644338541/82938-willard-battery-brochure-pdf
+9. Lead Acid Battery Development Guide | PDF | Chemistry - Scribd, accessed December 6, 2025, https://www.scribd.com/document/405538086/180111-Uni-Ulm-Lecture-EST3-ZSW-Lead-Acid-Batteries-1
+10. US4982482A - Method for the manufacture of lead-acid batteries and an associated ... - Google Patents, accessed December 6, 2025, https://patents.google.com/patent/US4982482A/en
+11. Tech Research & Development Lab - Auto-X, accessed December 6, 2025, https://auto-x.co.za/research-development/
+12. 82938_willard-battery-brochure.pdf, accessed December 6, 2025, https://cisp.cachefly.net/assets/articles/attachments/82938_willard-battery-brochure.pdf
+13. Automotive Batteries | Car Batteries For Sale | Auto-X, accessed December 6, 2025, https://auto-x.co.za/battery-product-range/automotive-batteries/
+14. Willard & Varta Car Batteries | Buy Online South Africa - Modern Auto Parts, accessed December 6, 2025, https://modernautoparts.co.za/collections/car-batteries-willard-varta
+15. Willard 668 Car Battery | 12V 80Ah 590CCA | Maintenance-Free, accessed December 6, 2025, https://globalbatteriesvdb.co.za/products/willard-668-smf-battery
+16. Willard's DREAM Battery for Children Turns Dreams into Reality, accessed December 6, 2025, https://willard.co.za/willards-dream-battery-for-children/
+17. How Willard Batteries Is Driving Sustainability Through Battery ..., accessed December 6, 2025, https://willard.co.za/how-willard-batteries-is-driving-sustainability-through-battery-recycling/
+18. Willard Battery – 674-100 - Montana Batteries, accessed December 6, 2025, https://montanabatteries.co.za/product/willard-battery-674-100/
+19. Willard Commercial Vehicle Battery 689, accessed December 6, 2025, https://venseq.co.za/product/willard-commercial-vehicle-battery-689/
+20. Home 2 - Willard Batteries, accessed December 6, 2025, https://willardbatteryxpress.co.za/home-2/
+21. Warranty - Willard Batteries, accessed December 6, 2025, https://willard.co.za/warranty/
+22. Recycling your car battery - Willard Batteries, accessed December 6, 2025, https://willard.co.za/recycling-lead-acid-batteries/
+23. Win a Bush Holiday with Willard® DREAM Battery, accessed December 6, 2025, https://willard.co.za/win-a-bush-holiday-with-willard-dream-battery/
+24. Recycle Your Battery for Environment Month - Willard Batteries, accessed December 6, 2025, https://willard.co.za/willard-presents-the-importance-of-recycling-your-battery-this-environmental-month/
+25. Farmer'S Diary - Sabinet African Journals, accessed December 6, 2025, https://journals.co.za/doi/pdf/10.10520/ejc-farmweek_v2025_n25034_a3

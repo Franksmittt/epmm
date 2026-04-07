@@ -1,0 +1,611 @@
+Strategic Pricing Architecture and Financial Operations Dossier: Optimizing the Automotive and Commercial Energy Storage Portfolio in the Alberton Industrial Nexus
+
+1. Executive Strategic Overview
+
+The South African automotive aftermarket, specifically the sub-sector of electrochemical energy storage, is currently navigating a period of profound structural volatility and opportunity. This sector is not merely defined by the transactional exchange of lead-acid accumulators but is intrinsically linked to the macroeconomic heartbeat of the nation’s logistics and commuter transport networks. For a specialized distributor operating within the greater Alberton region—a unique economic geography characterized by the juxtaposition of the Alrode heavy industrial corridor and the affluent residential belts of Johannesburg South—the path to sustainable market dominance requires a sophisticated recalibration of inventory strategy, pricing architecture, and financial modelling.
+
+The strategic imperative for Alberton Battery Mart (ABM) is to transition from a passive retail stance, often characterized by "box-moving," to a proactive "Total Cost of Ownership" (TCO) management model. The Alrode industrial hub, home to mega-fleets such as Anderson Transport and Unitrans, represents a high-stakes environment where the battery is a critical component of operational continuity.1 A single non-start event for a cross-border super-link truck, often carrying time-sensitive perishable goods or hazardous petrochemicals, can incur consequential losses exceeding R20,000 per day in penalties, missed slot bookings, and driver downtime.1 Consequently, the commercial pricing strategy must move beyond simple unit cost competition to encompass availability guarantees, vibration durability, and scrap recovery logistics.
+
+Simultaneously, the automotive segment faces a bifurcation of demand. The commuter economy, driven by the ubiquitous Toyota Quantum minibus taxi, demands extreme value and durability under high-cycle conditions. Conversely, the residential market in estates like Meyersdal and Eye of Africa is shifting toward advanced Start-Stop vehicle technologies requiring Absorbent Glass Mat (AGM) and Enhanced Flooded Battery (EFB) architectures.2 The failure to service modern Battery Management Systems (BMS) with the correct coding and technical specifications represents a significant reputational risk.
+
+This comprehensive operational dossier provides a rigorous, MBA-level analysis of the Alberton market. It identifies the "Core 12" battery portfolio—split evenly between commercial and automotive applications—necessary to capture the "Fat Middle" of the market.3 Furthermore, it articulates a financial framework for calculating Gross Profits (GP) that integrates the complex variables of scrap lead rebates, core deposits, and inventory turnover rates, ensuring that ABM can navigate the financial pitfalls of inventory obsolescence and warranty fraud that plague the industry.4
+
+2. The Commercial Battery Portfolio: Strategic Selection and Market Benchmarking
+
+The commercial vehicle sector in Alrode acts as the primary revenue stabilizer for a battery distributor. Unlike the seasonal fluctuations of the passenger car market, logistics fleets operate on a continuous consumption cycle, driven by mileage and engine hours. However, the commercial market is heterogeneous, requiring a nuanced inventory mix that addresses specific European and Asian truck specifications. Based on the operational profiles of key targets identified in the market intelligence, the following six commercial battery sizes constitute the essential stock profile.
+
+2.1 The 689 / 689C (The European Logistics Standard)
+
+Technical Profile and Application Analysis The 689 group size, often enhanced to the 689C (Calcium) specification, is the definitive energy storage unit for the modern European heavy-duty fleet. Specifically, this battery is the standard fitment for Volvo and Scania heavy commercial vehicles (HCVs).1 These trucks dominate the long-haul corridors extending from Alrode to neighboring SADC countries like Namibia, Botswana, and Zambia. The technical requirement here is not merely capacity—typically ranging from 140Ah to 150Ah with Cold Cranking Amps (CCA) between 900A and 950A 6—but vibration resistance.
+
+Fleets like Anderson Transport, which operates over 300 super-link vehicles, require batteries that can withstand the high-frequency vibration of corrugated roads and the thermal stress of cross-border haulage.1 The "C" designation indicates calcium-calcium plate technology, which significantly reduces water consumption, a critical factor for trucks traveling long distances where maintenance intervals are extended.
+
+Market Pricing Benchmark and Positioning
+
+The market pricing for the 689 varies significantly based on brand equity and technology levels (Standard vs. Sealed Maintenance Free).
+
+Premium Segment (Willard/Exide): The average retail price for a premium 689C typically sits between R3,500 and R4,600.6 These units are marketed on their "Rough Road" capabilities and extended warranties.
+
+Mid-Range Segment (Atlas/Dixon): Competitive offerings from brands like Atlas and Dixon range from R2,800 to R3,500.9 These are attractive to owner-drivers but may lack the reserve capacity required for fleets running extensive hotel loads (in-cab fridges/AC).
+
+Scrap Economics: A standard 689 battery weighs approximately 40kg.7 At a benchmark scrap lead price of R8.50/kg, this unit carries an embedded "Core Value" of R340.00. This value must be leveraged in fleet negotiations as a discount mechanism for bulk exchanges.
+
+2.2 The 688 (The Industry Workhorse)
+
+Technical Profile and Application Analysis The 688 is arguably the highest-volume heavy-duty battery in the South African market. With a capacity of 180Ah to 200Ah and CCA ratings exceeding 1000A to 1200A 12, this unit is the powerhouse for Mercedes Benz Actros, MAN TGS, and Freightliner trucks.1 These vehicles often utilize a 24V system (two 688s in series), doubling the sales volume per vehicle.
+
+The strategic relevance of the 688 lies in its reserve capacity (RC). Modern logistics trucks are mobile offices and homes; drivers spend mandatory rest periods in the cab, utilizing power for climate control, microwaves, and entertainment systems. A 688 with insufficient RC will succumb to deep cycling damage rapidly. Therefore, the stock profile must prioritize units with glass-mat separators or plate-lock technology to prevent shedding during these deep discharge cycles.
+
+Market Pricing Benchmark and Positioning
+
+Premium Segment: Top-tier units like the Exide 688C or Willard 688 trade between R5,200 and R6,000.12 The price premium is justified by the high lead content required to achieve 200Ah.
+
+Economy Segment: Lower spec units (often 180Ah labeled as 688 equivalent) can be found for R4,200 to R4,800.12
+
+Scrap Economics: The 688 is a massive unit, weighing between 52kg and 56kg.13 This translates to a scrap rebate value of roughly R440 to R476. This is a significant financial lever; a fleet returning ten scrap 688s generates nearly R5,000 in credit, which can be applied to the purchase of new stock or specific maintenance tools.
+
+2.3 The 696 / 696C (The Super-Link Specialist)
+
+Technical Profile and Application Analysis While similar in capacity to the 688, the 696 (typically 180Ah, 1100A CCA) is distinguished by its physical dimensions and hold-down configurations, specifically designed for certain Volvo FH series and later model Scania trucks.16 It often features a lower profile or specific terminal layout that prevents the use of a standard 688.
+
+For mega-fleets, standardization is key, but the specific engineering of the battery box in newer European trucks necessitates stocking the 696. It is a "Rough Road" specialist, often reinforced internally to handle the extreme G-forces experienced on the rear chassis of a truck traversing the potholes of the N3 or R59 corridors.1
+
+Market Pricing Benchmark and Positioning
+
+Premium Segment: Due to its specialized nature, the 696 commands a premium, retailing between R4,500 and R5,750.17
+
+Scrap Economics: Weighing approximately 45kg 19, the 696 yields a scrap credit of ~R382.
+
+2.4 The 682 / 683 (The Urban Distribution Unit)
+
+Technical Profile and Application Analysis Moving down from the long-haul heavyweights, the 682 (and its reverse-polarity twin, the 683) is the standard for Medium Commercial Vehicles (MCVs). With a capacity of 115Ah to 125Ah and CCA of 705A to 800A 20, these batteries power the Isuzu F-Series, Hino 500, and UD Trucks that perform local distribution tasks.1
+
+The operational cycle for these vehicles differs significantly from long-haul trucks. They perform "Urban Delivery Cycles," characterized by frequent starts and stops (delivery drops) and shorter running times between stops, which challenges the alternator's ability to fully recharge the battery. Thermal cycling is also a major factor as these trucks often operate in congested city traffic with high under-bonnet temperatures.
+
+Market Pricing Benchmark and Positioning
+
+Premium Segment: Prices range from R2,800 to R3,800 8, reflecting the need for robust cycling ability.
+
+Scrap Economics: With a weight of 32kg to 35kg 20, the scrap return is approximately R270 to R300.
+
+2.5 The 674 (The SME Logistics Backbone)
+
+Technical Profile and Application Analysis The 674 group size (100Ah – 105Ah, 650A – 700A CCA) is the backbone of the SME logistics sector. It fits the pervasive Isuzu NPR 400, Toyota Dyna, and FAW 8.140 trucks.24 These vehicles are favored by furniture removal companies (like Ebenezer Logistics), independent hardware delivery fleets, and small construction contractors.
+
+For companies like Ebenezer Logistics, the 674 must support hydraulic tail-lifts. Operating a tail-lift with the engine off places a massive strain on the battery, requiring deep-cycle capabilities that standard starting batteries lack.
+
+Market Pricing Benchmark and Positioning
+
+Premium Segment: Retails between R2,350 and R2,900.26
+
+Economy Segment: Available for R1,900 to R2,100 28, though these cheaper units often fail prematurely under tail-lift loads.
+
+Scrap Economics: Weighing 23kg to 26kg 29, the scrap value sits around R200.
+
+2.6 The 695 (Mega-Plant and Mining Power)
+
+Technical Profile and Application Analysis The 695 is a giant among batteries, offering 225Ah to 230Ah capacity and massive cranking power of 1150A to 1350A.31 Its application is specific: Yellow Metal (Excavators, Loaders, Dump Trucks) and large industrial generators. Clients like Temi Plant Hire in Alrode South rely on these units for earthmoving equipment.1
+
+The key stressor here is vibration and shock. An excavator slamming into rock sends G-force shockwaves through the chassis. Standard batteries suffer "plate collapse" under these conditions. The 695 must be constructed with anchored plates and hot-melt gluing to survive.
+
+Market Pricing Benchmark and Positioning
+
+Premium Segment: This is a high-ticket item, ranging from R5,500 to R7,500.31
+
+Scrap Economics: It is also the most valuable scrap item, weighing 56kg to 63kg 32, yielding a rebate of R475 to R535.
+
+Commercial Battery Inventory Summary Table
+
+Battery Size
+
+Capacity (Ah)
+
+CCA (Amps)
+
+Est. Weight
+
+Avg. Market Price (Premium)
+
+Avg. Market Price (Economy)
+
+Strategic Target Client
+
+688
+
+180-200
+
+1000-1150
+
+52kg
+
+R 5,600
+
+R 4,500
+
+Heavy Haulage (Unitrans)
+
+689
+
+140-150
+
+900-950
+
+40kg
+
+R 4,200
+
+R 3,200
+
+Volvo/Scania Fleets (Anderson)
+
+696
+
+180
+
+1100-1175
+
+45kg
+
+R 5,100
+
+R 4,200
+
+Cross-Border Logistics
+
+682
+
+120-125
+
+705-800
+
+33kg
+
+R 3,200
+
+R 2,500
+
+Local Distribution (Hino/Isuzu)
+
+674
+
+100-105
+
+650-700
+
+24kg
+
+R 2,600
+
+R 2,000
+
+SME Logistics (Toyota Dyna)
+
+695
+
+225-230
+
+1150-1350
+
+60kg
+
+R 6,800
+
+R 5,500
+
+Construction/Plant Hire
+
+3. The Automotive Battery Portfolio: High-Velocity Stock Profile
+
+While the commercial sector provides volume and scrap leverage, the automotive sector offers higher margins and faster inventory turnover. The Alberton automotive market is distinct, split between the high-intensity "Commuter Economy" (taxis) and the affluent residential market requiring technical assurance.
+
+3.1 The 652 / 652C (The European Standard)
+
+Technical Profile and Application Analysis The 652 is the ubiquitous battery for the modern South African car park. With a capacity of 65Ah to 70Ah and 500A to 600A CCA, it fits the VW Polo, VW Golf, Toyota Fortuner, and Ford Ranger (non-Stop/Start models).34 This battery accounts for a massive percentage of daily replacement demand.
+
+Strategic Relevance
+
+For independent workshops like F1 AutoTech, "Just-in-Time" availability of the 652 is critical. Mechanics cannot afford to have a vehicle occupying a lift while waiting for a battery delivery. The 652 is the "bread and butter" unit; stock-outs here are inexcusable.
+
+Market Pricing Benchmark
+
+Retail Price: R1,850 – R2,650.8
+
+Scrap Weight: ~17kg 36, yielding a rebate of R145.
+
+3.2 The 638 / 639 (The Taxi Special)
+
+Technical Profile and Application Analysis The 638 (and 639) is the lifeblood of the commuter economy. Rated at 60Ah with 450A to 500A CCA, it is the standard fitment for the Toyota Quantum minibus taxi and the Nissan NP200 bakkie.2 The operating environment for these batteries is brutal: constant cranking, idling in ranks, and often powering aftermarket sound systems.
+
+Strategic Relevance
+
+This is a volume game. Taxi owners are extremely price-sensitive. The pitch to the Greater Alberton Taxi Association must focus on "Cost per Start." A premium battery costing R200 more but lasting 6 months longer offers a better ROI.
+
+Market Pricing Benchmark
+
+Retail Price: R1,350 – R1,750.26
+
+Scrap Weight: ~16kg 38, yielding a rebate of R136.
+
+3.3 The 619 (Entry Level Compact)
+
+Technical Profile and Application Analysis The 619 is the smallest of the core range (35Ah – 40Ah, 300A – 350A CCA). It powers the VW Polo Vivo, Hyundai i10/i20, and Kia Picanto.39 These are popular rental cars, student vehicles, and second family cars.
+
+Strategic Relevance
+
+Because these vehicles are often entry-level, owners are price-sensitive. However, the sheer volume of Polo Vivos on the road ensures high turnover.
+
+Market Pricing Benchmark
+
+Retail Price: R1,100 – R1,500.39
+
+Scrap Weight: ~11kg 41, yielding a rebate of R93.
+
+3.4 The 646 (The Compact Workhorse)
+
+Technical Profile and Application Analysis Often confused with the 619, the 646 is slightly larger (55Ah – 60Ah, 400A – 480A CCA) and fits the Ford Fiesta, Ford Figo, and older VW models.42 It bridges the gap between the small 619 and the standard 652.
+
+Strategic Relevance
+
+This size is critical for the secondary used car market. Many dealership trade-ins require a fresh 646 to be sale-ready.
+
+Market Pricing Benchmark
+
+Retail Price: R1,500 – R2,000.42
+
+Scrap Weight: ~14kg 44, yielding a rebate of R119.
+
+3.5 The 628 (The Japanese/Korean Standard)
+
+Technical Profile and Application Analysis The 628 (45Ah – 50Ah, 330A – 400A CCA) is the standard for Asian manufacturers: Toyota Corolla, Toyota Yaris, and Honda Jazz.45
+
+Strategic Relevance
+
+Owners of these vehicles typically prioritize reliability and longevity. They are less likely to buy the cheapest option and more likely to buy a trusted brand like Willard or Exide.
+
+Market Pricing Benchmark
+
+Retail Price: R1,300 – R1,800.45
+
+Scrap Weight: ~13kg 47, yielding a rebate of R110.
+
+3.6 The 668 / 658 AGM (The High-Tech Premium)
+
+Technical Profile and Application Analysis The 668 AGM (and 658) represents the future of the battery market. These are Absorbent Glass Mat batteries (70Ah – 90Ah, 760A – 850A CCA) designed for vehicles with Start-Stop technology and intelligent charging systems (IBS).2 Primary applications include the BMW 3-Series (F30), Mercedes C-Class, and Ford Ranger T6.
+
+Strategic Relevance This is the highest margin automotive item. However, selling an AGM battery requires technical competence. The battery must be "registered" or coded to the vehicle's BMS (Battery Management System). If a standard flooded battery is installed, or if the new AGM is not coded, the alternator will overcharge and destroy the battery within months. ABM's ability to offer BMS coding is a critical differentiator against generalist spares shops.2
+
+Market Pricing Benchmark
+
+Retail Price: R4,500 – R5,700.8
+
+Scrap Weight: ~23kg 50, yielding a rebate of R195.
+
+Automotive Battery Inventory Summary Table
+
+Battery Size
+
+Tech
+
+Capacity (Ah)
+
+Est. Weight
+
+Avg. Market Price
+
+Strategic Application
+
+652
+
+Flooded
+
+65-70
+
+17kg
+
+R 2,100
+
+VW Polo / Fortuner
+
+638
+
+Flooded
+
+60
+
+16kg
+
+R 1,550
+
+Toyota Quantum (Taxi)
+
+619
+
+Flooded
+
+35-40
+
+11kg
+
+R 1,300
+
+Hyundai i10 / Vivo
+
+646
+
+Flooded
+
+55-60
+
+14kg
+
+R 1,750
+
+Ford Figo / Fiesta
+
+628
+
+Flooded
+
+45-50
+
+13kg
+
+R 1,500
+
+Toyota Corolla
+
+668
+
+AGM
+
+80
+
+23kg
+
+R 5,100
+
+BMW F30 / Ranger T6
+
+4. MBA-Level Business Analysis: Financial Engineering for Battery Retail
+
+To successfully pivot Alberton Battery Mart from a retail outlet to a strategic energy partner, the financial model must evolve. The traditional "Cost-Plus" pricing model is insufficient in an industry where the waste product (scrap lead) holds significant value and inventory holding costs can destroy margins through degradation. The following analysis outlines the financial mechanics required for high-performance profitability.
+
+4.1 The Core Deposit and Scrap Rebate Mechanism
+
+In the battery industry, the "Core" (the old battery) is a financial instrument, not waste. Lead is a globally traded commodity, and its local scrap value in South Africa tracks the London Metal Exchange (LME) and currency fluctuations. Currently, scrap lead prices hover around R15.00 - R18.00 per kg for clean lead, translating to an effective buying rate for scrap batteries (which contain plastic and acid) of R7.50 - R8.50 per kg.1
+
+The Economics of the Core:
+
+688 Truck Battery: ~52kg × R8.50 = R442.00
+
+652 Car Battery: ~17kg × R8.50 = R144.50
+
+Strategic Application:
+
+Most retailers treat the scrap rebate purely as a discount for the customer. A strategic retailer treats it as a Cost of Goods Sold (COGS) reduction or a Secondary Revenue Stream. By aggregating scrap and selling directly to smelters rather than middlemen, ABM can improve the scrap yield, effectively subsidizing the front-end pricing to win competitive fleet tenders.
+
+4.2 Calculating Gross Profit (GP) and Blended Margins
+
+A standard GP calculation is:
+
+
+
+
+
+However, for a battery retailer, this formula is deceptive because it ignores the scrap asset. We must calculate the Blended Margin, which includes the profit realized from the scrap stream.
+
+Scenario A: Standard Retail Sale (No Core Retention Strategy)
+
+Item: Willard 652
+
+Wholesale Cost: R 1,400
+
+Retail Price: R 2,100
+
+GP: R 700
+
+GP Margin: 33.3%
+
+Scenario B: Strategic Sale with Core Capture
+
+Item: Willard 652
+
+Wholesale Cost: R 1,400
+
+Retail Price: R 2,100
+
+Core Collected: Yes (17kg)
+
+Scrap Revenue (Smelter Payout): R 145 (at R8.50/kg)
+
+Total Revenue: R 2,100 (Customer) + R 145 (Scrap) = R 2,245
+
+Total Cost: R 1,400
+
+Adjusted GP: R 845
+
+Blended GP Margin: 37.6%
+
+Insight: By effectively capturing the core, the margin increases by 4.3% without raising the price to the consumer. For commercial batteries like the 688, capturing the core adds nearly R450 to the transaction. Across a fleet of 100 trucks, this represents R45,000 in "hidden" revenue that can be used to subsidize aggressive front-end pricing to undercut competitors.
+
+4.3 Pricing Strategies for Market Penetration
+
+1. The "Scrap-Subsidized" Fleet Price (B2B)
+
+For high-volume clients like Sena Trucking or Anderson Transport, price sensitivity is high. ABM can use the scrap value to subsidize the unit price, offering a lower invoice price in exchange for a guaranteed 1-for-1 scrap return.
+
+Competitor Price (688): R 4,600
+
+ABM "Scrap-Subsidized" Price: R 4,500 (Undercutting competition)
+
+Condition: Valid only with exchange of equal weight scrap.
+
+Financial Outcome: Even at the lower price, the back-end scrap revenue (R442) preserves the total profit margin, allowing ABM to win volume contracts without sacrificing viability.
+
+2. The "Consignment Stock" Model (Vertical D) For workshops like F1 AutoTech, ABM places a stock stand (10 units) at zero upfront cost.3
+
+Mechanism: ABM retains title to the stock. The workshop is invoiced only when a unit is sold.
+
+Financial Benefit: Eliminates the workshop's cash flow barrier.
+
+Risk: Inventory obsolescence. To mitigate this, a strict stock rotation policy is required (see 4.4).
+
+Premium Pricing: Because ABM bears the holding cost, consignment units can be priced at a premium (e.g., Trade Price + 5%), increasing the margin to cover the cost of capital.
+
+4.4 Managing Margins and Avoiding Financial Pitfalls
+
+Pitfall 1: The "VAT on Core" Trap
+
+Handling core deposits creates a Value Added Tax (VAT) complexity. If a core charge is invoiced as a simple line item, it attracts output VAT. When refunded, it requires a credit note.
+
+Correct Process: Invoice the Battery (R2,000) + Core Deposit (R300) = Total R2,300 (VAT applicable).
+
+Refund: When the customer returns the scrap, issue a Credit Note for the Core Deposit (R300) including VAT.
+
+Risk: Treating scrap returns as a "buy-back" from a non-VAT registered vendor (private individual) prevents the claiming of input VAT, while output VAT was paid on the sale. The "Deposit Refund" mechanism is cleaner and compliant with South African tax laws regarding "Trade-In Allowances".52
+
+Pitfall 2: Inventory Sulfation (The Silent Killer) Lead-acid batteries self-discharge. A battery sitting on a shelf for 6 months without maintenance will succumb to sulfation (lead sulfate crystals hardening on the plates), rendering it unsellable or drastically reducing its lifespan.5
+
+Financial Impact: Writing off a single R2,000 truck battery destroys the profit of three successful sales (assuming a R700 GP).
+
+Mitigation Strategy: Implement a strict First-In-First-Out (FIFO) system. Any battery in stock for >90 days must be boosted/recharged. The target Inventory Turnover Ratio should be between 4.0 and 6.0 turns per year.53 A ratio below 4.0 indicates overstocking and high sulfation risk; above 6.0 indicates potential stock-outs.
+
+Pitfall 3: Warranty Fraud (Policy Claims) The South African market is rife with warranty abuse. Customers often attempt to claim warranties on batteries damaged by negligence (e.g., security vehicles idling for hours causing acid stratification, or alternators overcharging).4
+
+Financial Impact: Replacing a battery under warranty that was not a factory fault is a 100% loss of the unit cost plus logistics.
+
+Mitigation Strategy: Rigorous testing using digital analyzers (e.g., Midtronics) that print a "State of Health" report. Claims must be adjudicated based on data, distinguishing between a "Dead Cell" (Factory Fault - Warranty Valid) and "Discharged/Sulfated" (User Abuse - Claim Denied). Differentiating between a "Warranty Claim" and a "Policy Claim" (Goodwill replacement) is essential for accurate P&L reporting.4
+
+5. Implementation Roadmap: The First 90 Days
+
+Month 1: The Audit & Clean-Up
+
+Conduct a full physical stock count. Identify any units older than 4 months and launch a "Manager's Special" to liquidate them before they sulfate.
+
+Establish a formal "Scrap Bin" accounting ledger. Every kilogram of lead must be weighed and recorded as a financial asset.
+
+Month 2: The Core Bank & Pricing Alignment
+
+Standardize the pricelist with the "Core Exchange" vs. "No Core" pricing tiers.
+
+Roll out the "Scrap-Subsidized" offer to a pilot group of 5 SMEs in Alrode South.
+
+Month 3: The Fleet Pivot
+
+Approach Anderson Transport and Unitrans with the TCO proposal, emphasizing the 696 Rough Road specification and the scrap rebate value proposition.
+
+Deploy the first 3 consignment stands to high-volume workshops (e.g., F1 AutoTech), supported by a signed consignment agreement and weekly rotation schedule.
+
+6. Conclusion
+
+The battery business in the Alberton industrial nexus is not a simple retail operation; it is a complex management of lead assets, technical assurance, and operational continuity. Success lies not in being the cheapest seller of a commodity, but in being the most effective manager of the client's uptime and the lead lifecycle. By focusing on the high-vibration 689/688 commercial units and high-margin AGM automotive units, and by treating scrap lead as a strategic financial instrument rather than waste, Alberton Battery Mart can achieve blended margins that far exceed the industry average. The path forward requires discipline: discipline in stock rotation to prevent sulfation, discipline in warranty adjudication to stop leakage, and discipline in enforcing core exchanges to unlock the hidden revenue of the scrap stream.
+
+Disclaimer: All pricing and scrap rates cited in this report are based on available South African market data as of early 2026. These figures are subject to commodity price fluctuations (LME Lead) and currency exchange volatility.
+
+Works cited
+
+Door-to-Door Battery Sales Strategy
+
+Battery Sales Rep Strategy Research
+
+SME Battery Sales Strategy Refinement
+
+THE INS AND OUTS OF BATTERY WARRANTY CLAIMS AND POLICY CLAIMS - Probe Group, accessed January 22, 2026, https://www.probegroup.co.za/the-ins-and-outs-of-battery-warranty-claims-and-policy-claims/
+
+What is a sulfated battery and how do you prevent it? - Power-Sonic, accessed January 22, 2026, https://www.power-sonic.com/what-is-a-sulfated-battery-and-how-do-you-prevent-it/
+
+689-BLC 12V 150Ah Enertec Blue Lead Calcium truck, mining, and construction battery, accessed January 22, 2026, https://batterypowerzone.co.za/products/689-blc-12v-150ah-enertec-blue-lead-calcium-truck-mining-and-construction-battery
+
+Exide 689C Truck Battery | 12V 132Ah 825CCA | Maintenance-Free, accessed January 22, 2026, https://globalbatteries.co.za/product/exide-689c-truck-battery-12v-132ah-810cca-maintenance-free/
+
+Willard, Sabat and Vartra Batteries - Midas Woodmead, accessed January 22, 2026, https://midas-woodmead.co.za/car-batteries/car-batteries-willard-sabat-vartra/
+
+689 – Atlas Battery, accessed January 22, 2026, https://atlasbattery.co.za/product/689-atlas-battery/
+
+Universal Battery Dixon 689 Battery Heavy Duty - Ace Auto | Buy Car Parts Online, accessed January 22, 2026, https://aceauto.co.za/parts/new/AC-28988/universal/battery-dixon-689-battery-heavy-duty
+
+689 MF Battery For Sale - Kariba Batteries, accessed January 22, 2026, https://www.karibabatteries.co.za/product/battery-689-kariba-mf/
+
+Dixon 688 LM CaCa 12V 200Ah, 1330 CCA - Battery Pitstop, accessed January 22, 2026, https://batterypitstop.co.za/product/dixon-688-lm-caca-12v-200ah-1330-cca/
+
+Deltec 688B Heavy-Duty Truck Battery, accessed January 22, 2026, https://deltecbatteries.com/deltec-688b-heavy-duty-truck-battery/
+
+Exide Maintenance Free - Errol's Tyres, accessed January 22, 2026, https://www.errolstyres.co.za/battery/exide/maintenance-free/10041/F690C
+
+688 MF Battery For Sale - Kariba Batteries, accessed January 22, 2026, https://www.karibabatteries.co.za/product/battery-688-kariba-mf/
+
+Q+ Batteries - SAC Trucks, accessed January 22, 2026, https://www.sactrucks.co.za/wp-content/uploads/2024/09/Battery-Catalogue.pdf
+
+Exide Battery 696 - Midas Woodmead, accessed January 22, 2026, https://midas-woodmead.co.za/product/exide-battery-696/
+
+Exide 696C Truck Battery | 12V 180Ah 1175CCA | Maintenance-Free, accessed January 22, 2026, https://globalbatteries.co.za/product/exide-696c-truck-battery-12v-180ah-1150cca-maintenance-free/
+
+696 MF Battery For Sale - Kariba Batteries, accessed January 22, 2026, https://www.karibabatteries.co.za/product/battery-696-kariba-mf/
+
+Exide 682C Truck Battery | 12V 115Ah 705CCA | Maintenance-Free, accessed January 22, 2026, https://globalbatteries.co.za/product/exide-682c-truck-battery-12v-115ah-690cca-maintenance-free/
+
+F683C - First Battery, accessed January 22, 2026, https://www.battery.co.za/product/f683c/
+
+Willard 681/682 Truck Battery - Battery24, accessed January 22, 2026, https://battery24.co.za/products/willard-681-682
+
+F682C - First Battery, accessed January 22, 2026, https://www.battery.co.za/product/f682c/
+
+Commercial Vehicle & Truck Battery Finder - Kariba Batteries, accessed January 22, 2026, https://www.karibabatteries.co.za/find-a-battery/commercial-vehicles/
+
+ISUZU NPR400 BATTERY - AfintaPart, accessed January 22, 2026, https://www.afintapart.co.za/product/isuzu-npr400-battery/
+
+Car Batteries - Evolution Wheel & Tyre, accessed January 22, 2026, https://evolutionwheelandtyre.com/collections/car-batteries
+
+Willard Commercial Vehicle Battery 674, accessed January 22, 2026, https://venseq.co.za/product/willard-commercial-vehicle-battery-674/
+
+674 – Atlas Battery, accessed January 22, 2026, https://atlasbattery.co.za/product/674-atlas-battery/
+
+Global 12V 100Ah 700CCA Truck Battery (674), accessed January 22, 2026, https://globalbatteries.co.za/product/global-674-truck-battery-12v-100ah-410cca-maintenance-free/
+
+Taurus 674-MF Battery - VIPS Trading, accessed January 22, 2026, https://www.vipstrading.co.za/product-page/taurus-674-mf-battery
+
+Exide 695cz - Commercial Battery, accessed January 22, 2026, https://batterypitstop.co.za/product/exide-695cz-exide-battery-commercial-battery/
+
+695 Deltec Blue Battery for Commercial Vehicle Applications, accessed January 22, 2026, https://www.deltecenergysolutions.co.za/product/695b/
+
+695 AGM 12VOLT 230AH 1200A - Atlas Battery, accessed January 22, 2026, https://atlasbattery.co.za/product/695-agm-12volt-230ah-1200a/
+
+Battery Fitment Guide - Fundi Tyres, accessed January 22, 2026, https://www.fundityres.co.za/battery-fitment-guide
+
+674 Willard -90Ah positive right - eBattery, accessed January 22, 2026, https://ebattery.co.za/product/willard-674-90ah-positive-right/
+
+652 MF Battery For Sale - Kariba Batteries, accessed January 22, 2026, https://www.karibabatteries.co.za/product/battery-652-kariba-mf/
+
+638 – Atlas Battery, accessed January 22, 2026, https://atlasbattery.co.za/product/638-atlas-battery/
+
+638B - First Battery, accessed January 22, 2026, https://www.battery.co.za/product/638b/
+
+Willard 619 12V Car Battery – 36Ah | Left Positive Terminal - Modern Auto Parts, accessed January 22, 2026, https://modernautoparts.co.za/products/willard-619-12v-36ah-car-battery-left-positive
+
+619 – Atlas Battery, accessed January 22, 2026, https://atlasbattery.co.za/product/619-atlas-battery/
+
+accessed January 22, 2026, https://www.battery.co.za/product/619ce/#:~:text=With%20a%20length%20of%20207mm,lightweight%20without%20compromising%20on%20power.
+
+Exide Battery 646 - Midas Midrand, accessed January 22, 2026, https://midasparts.co.za/product/exide-battery-646/
+
+Willard 646 12V Car Battery – 50Ah | Left Positive Terminal - Modern Auto Parts, accessed January 22, 2026, https://modernautoparts.co.za/products/willard-646-12v-50ah-car-battery-left-positive
+
+646 SMF CaCa 12V 60Ah, 500 CCA, LWH: 240x175x190 - Dixon Batteries, accessed January 22, 2026, https://www.dixonbatteries.co.za/index.php?route=product/product&product_id=164
+
+Osaka Vehicle Battery 628 size – 50AH - Autostyle Motorsport South Africa, accessed January 22, 2026, https://www.autostyle.co.za/product/osaka-vehicle-battery-628-size-50ah/
+
+The 628 12V 53Ah Energizer Lead-Acid Automotive Battery | BatteryPower-Zone, accessed January 22, 2026, https://batterypowerzone.co.za/products/the-628-12v-53ah-energizer-lead-acid-automotive-battery
+
+628 MF Battery For Sale - Kariba Batteries, accessed January 22, 2026, https://www.karibabatteries.co.za/product/battery-628-kariba-mf/
+
+Battery For BMW 3 Series F30 F80 328i Exide AGM 12V 72Ah 760CCA Type AGM096, accessed January 22, 2026, https://www.ebay.co.uk/itm/116418735551
+
+VARTA 668-64-I AGM Battery 12V 80Ah 800CCA – Silver Dynamic F21 - Modern Auto Parts, accessed January 22, 2026, https://modernautoparts.co.za/products/varta-668-agm-battery-70ah-12v
+
+accessed January 22, 2026, https://www.deltecenergysolutions.co.za/product/668agm/#:~:text=The%20Deltec%20AGM%20668%20is,315mm%C3%97%20175mm%20%C3%97%20190mm.
+
+Non-Ferrous Metal Prices | Fine Scrap Metals SA Buying Rates, accessed January 22, 2026, https://www.finemetals.co.za/products/non-ferrous-metal-products/non-ferrous-metal-buying-prices/
+
+1. Whether the return of the battery core fee to the customer should be considered a trade-in allowance. 2. - Florida Department of Revenue, accessed January 22, 2026, https://floridarevenue.com/TaxLaw/Documents/TAA%2012A-007.pdf
+
+How to Calculate Your Parts Turn - Training - Auto Dealer Today, accessed January 22, 2026, https://www.autodealertodaymagazine.com/311055/how-to-calculate-your-parts-turn

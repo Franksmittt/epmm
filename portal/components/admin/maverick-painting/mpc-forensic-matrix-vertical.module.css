@@ -1,0 +1,392 @@
+/* Maverick — Forensic Matrix vertical 9:16. Base 450×800 → 1080×1920 (×2.4). */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --forensic-green: #00ff66;
+  --alert-amber: #ffb800;
+  --stealth-grey: #8e8e93;
+  --panel-bg: rgba(10, 10, 10, 0.85);
+  --panel-border: rgba(0, 255, 102, 0.25);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 60px rgba(0, 255, 102, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.authorityBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  padding: 30px 25px 40px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.companyIdentity {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.corpName {
+  color: var(--pure-white);
+  font-size: 1.1rem;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.corpCreds {
+  color: var(--forensic-green);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.trustShield {
+  border: 1px solid var(--panel-border);
+  background: rgba(0, 255, 102, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--pure-white);
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  max-width: 42%;
+}
+
+.trustShield svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+.edgeTelemetry {
+  position: absolute;
+  top: 35%;
+  right: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
+  max-width: 48%;
+}
+
+.dataNode {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+  border-right: 2px solid var(--forensic-green);
+}
+
+.nodeVal {
+  color: var(--pure-white);
+  font-size: 1rem;
+  font-weight: 800;
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+}
+
+.nodeLbl {
+  color: var(--stealth-grey);
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.diagnosticCard {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  background: var(--panel-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--forensic-green);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+}
+
+.diagnosticHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.badgeWarning {
+  color: var(--alert-amber);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  background: rgba(255, 184, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.headline {
+  color: var(--pure-white);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+}
+
+.specLabel {
+  color: var(--pure-white);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 0;
+}
+
+.specSub {
+  display: block;
+  color: var(--stealth-grey);
+  font-size: 0.5rem;
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  margin-top: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btnForensic {
+  background: var(--pure-white);
+  color: var(--pure-black);
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 8px;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* ─── 1080×1920 (×2.4) ─── */
+
+.root.canvas1080x1920 .authorityBlock {
+  padding: 72px 60px 96px 60px;
+}
+
+.root.canvas1080x1920 .corpName {
+  font-size: 38px;
+}
+
+.root.canvas1080x1920 .corpCreds {
+  font-size: 22px;
+}
+
+.root.canvas1080x1920 .trustShield {
+  padding: 14px 29px;
+  border-radius: 14px;
+  gap: 19px;
+  font-size: 22px;
+}
+
+.root.canvas1080x1920 .trustShield svg {
+  width: 29px;
+  height: 29px;
+}
+
+.root.canvas1080x1920 .edgeTelemetry {
+  right: 48px;
+  gap: 36px;
+}
+
+.root.canvas1080x1920 .dataNode {
+  padding: 19px;
+  border-right-width: 5px;
+}
+
+.root.canvas1080x1920 .nodeVal {
+  font-size: 34px;
+}
+
+.root.canvas1080x1920 .nodeLbl {
+  font-size: 17px;
+}
+
+.root.canvas1080x1920 .diagnosticCard {
+  bottom: 60px;
+  left: 48px;
+  right: 48px;
+  border-radius: 29px;
+  padding: 60px;
+  border-left-width: 7px;
+}
+
+.root.canvas1080x1920 .diagnosticHeader {
+  margin-bottom: 36px;
+}
+
+.root.canvas1080x1920 .badgeWarning {
+  font-size: 22px;
+  padding: 10px 19px;
+  border-radius: 10px;
+}
+
+.root.canvas1080x1920 .headline {
+  font-size: 86px;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.root.canvas1080x1920 .subtext {
+  font-size: 29px;
+  margin-bottom: 48px;
+}
+
+.root.canvas1080x1920 .actionRow {
+  padding-top: 36px;
+  gap: 29px;
+}
+
+.root.canvas1080x1920 .specLabel {
+  font-size: 22px;
+}
+
+.root.canvas1080x1920 .specSub {
+  font-size: 17px;
+}
+
+.root.canvas1080x1920 .btnForensic {
+  height: 106px;
+  padding: 0 48px;
+  border-radius: 19px;
+  font-size: 29px;
+}

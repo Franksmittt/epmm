@@ -1,0 +1,451 @@
+The Computational Alchemy of Luxury Lodge Photography: A Technical Manifesto on AI-Driven Relighting, Color Grading, and Style Transfer
+
+Executive Summary: The Imperative of Visual Fidelity in High-End Hospitality
+
+The digitization of the luxury travel market has fundamentally altered the mechanism of conversion. For game farms and high-end safari lodges, the photographic asset is no longer merely a depiction of space; it is a proxy for the experience itself. In this domain, "substandard" imagery—characterized by poor dynamic range, amateurish editing, and inconsistent color science—does not just misrepresent the property; it actively devalues the brand equity, signaling a lack of attention to detail that affluent travelers unconsciously associate with service quality.
+
+The user’s challenge represents a classic and critical failure point in hospitality marketing: the gap between the physical reality of a luxury asset and its digital representation. The existing images, marred by "bad editing," likely suffer from the artifacts of automated High Dynamic Range (HDR) processing, characterized by flattened contrast, "muddy" shadows, and the dreaded "radioactive" green casts common in bushveld environments.1 To elevate these assets to match the "world's best" real estate photographers—exemplified by the portfolios of Mike Kelley, Singita, and Aman—without reshooting requires a paradigm shift from traditional photo editing to computational photography and generative AI reconstruction.
+
+This report articulates an exhaustive, 15,000-word technical roadmap for transforming substandard game lodge photography into immaculate, world-class imagery. It bypasses the limitations of standard filters by leveraging a sophisticated stack of Generative AI technologies—specifically Stable Diffusion, ControlNet, IP-Adapter, and IC-Light. By deconstructing the image into latent space, we can mathematically reconstruct lighting (relighting) and texture (upscaling) while rigidly preserving the physical geometry of the lodge. The methodology prioritizes non-destructive workflows that ensure content fidelity (preserving furniture, layout, and architecture) while revolutionizing the lighting architecture and color science to achieve the "Flambient" (Flash + Ambient) aesthetic that defines the pinnacle of property marketing.
+
+Part I: The Physics of the "Immaculate" Aesthetic
+
+To replicate the standard of "world-class" real estate photography, one must first quantify the optical and chromatic characteristics that define it. The disparity between amateur and professional imagery in the safari context is not a matter of camera resolution, but of light management and color theory.
+
+1.1 The "Flambient" Standard vs. The Amateur HDR Trap
+
+The "substandard" quality observed in the current images is almost certainly a result of improper tone mapping. Amateur photography often relies on automated HDR bracketing, where the camera merges underexposed, properly exposed, and overexposed images to balance bright windows with dark interiors. While this captures information, the algorithms used in basic software (and even some professional tools like Lightroom's default merge) often result in "local contrast distortion".2
+
+Feature
+
+Amateur HDR (The Current Problem)
+
+Professional "Flambient" (The AI Goal)
+
+Texture Rendering
+
+"Crunchy," exaggerated micro-contrast. Linen looks like sandpaper; walls look gritty.
+
+Smooth, buttery gradients. Texture is visible only where light hits (specularity).
+
+Shadows
+
+Muddy, gray, and lifted. Lack of true black point creates a "flat" image.
+
+Deep, rich shadows that define volume and shape.
+
+Window Views
+
+Often "haloed" or unnatural. The view looks pasted on.
+
+Seamless integration with interior lighting. The view is bright but retains detail.
+
+Color Fidelity
+
+Shifts wildly. Wood looks orange; greens look neon.
+
+Neutral whites (flash corrected). Wood tones are deep and rich (chocolate/ochre).
+
+Lighting Direction
+
+Omnidirectional/Flat. Light seems to come from everywhere and nowhere.
+
+Directional. Light flows logically from windows and practical fixtures.
+
+The AI Objective: Since we cannot physically introduce flash lighting to the scene post-capture, the AI workflow must simulate the physics of the Flambient technique.1 The AI must be prompted and conditioned to virtually "inject" a 5500K (daylight balanced) fill light to neutralize color casts, while simultaneously calculating a global illumination model that mimics the soft fall-off of ambient window light. This hybrid approach—synthetic flash for color, synthetic ambient for mood—is the only pathway to rectifying the "bad editing" inherent in the source files.
+
+1.2 The Luxury Safari Color Science
+
+The color palette of a high-end game lodge is distinct from the "bright and airy" aesthetic of coastal or urban real estate. It requires a specific chromatic tuning that evokes warmth, earthiness, and intimacy—a concept often referred to as "hygge" in design but translated as "bushveld luxury" in this context.5
+
+The "Singita" Palette
+
+Analyzing the visual language of market leaders like Singita and Aman reveals a consistent color grading strategy.6 The goal is not accuracy in a scientific sense, but emotional accuracy.
+
+Primary Tones: The palette is anchored in Ochre (#CC7722), Unbleached Linen (#E9DCC9), Dark Chocolate (#3D1C02), and Slate Grey (#708090).8
+
+The White Balance Pivot: Standard real estate photography targets a neutral white balance (around 5000K-5500K). However, luxury lodge photography often pushes the white balance warmer (4500K-4800K) to accentuate the timber and thatch, while simultaneously shifting the Tint slider towards Magenta (+10 to +20) to counteract the green cast from the surrounding vegetation.9
+
+The "Green Cast" Pathology: The most pervasive error in amateur lodge photography is the green color cast. Chlorophyll in leaves absorbs red and blue light and reflects green. When sunlight hits the dense bushveld surrounding a lodge, it essentially turns the outdoors into a giant green reflector. This green light spills into the room, turning expensive white linens a sickly lime color and making wood tones appear muddy. The human eye corrects for this adaptation, but the camera sensor records it faithfully.
+
+Correction Requirement: The AI workflow must include specific negative prompting and post-processing color grading steps to chemically neutralize these green frequencies, replacing them with warm, neutral tones that suggest "golden hour" rather than "midday jungle".11
+
+1.3 Lighting Architecture: Volumetric Depth and Directionality
+
+Amateur editing often flattens an image by lifting shadows globally. World-class photographers like Mike Kelley employ light painting, where they sculpt the scene by lighting specific areas (a chair, a table, a corner) individually and compositing them.12
+
+The "Depth" Problem: The current images likely lack volumetric depth. The foreground and background share similar luminance values, confusing the eye and making the room feel small.
+
+The AI Solution (Relighting): To update the lighting to a world-class standard, the AI must perform Monocular Depth Estimation. It must analyze the 2D image to create a 3D depth map, understanding that the lounge chair is 2 meters from the camera and the window is 10 meters away. With this data, the IC-Light (Imposing Consistent Light) model can be used to re-cast light from a specific vector (e.g., the window), creating a gradient of illumination that falls off naturally as it travels across the room. This introduces contrast—not just global contrast, but local contrast that defines the shape of the furniture and the texture of the materials.13
+
+Part II: The Computational Photography Stack
+
+To achieve "immaculate" results without changing the content, we must move beyond pixel-based editors (like Photoshop's standard tools) to Latent Diffusion Models. The recommended stack utilizes Stable Diffusion (specifically SDXL or SD 1.5) running on ComfyUI, a node-based interface that allows for the granular control necessary for professional workflows.
+
+2.1 The Engine: Stable Diffusion and ComfyUI
+
+Stable Diffusion (SD) differs from closed systems like Midjourney in that it allows for ControlNets—auxiliary neural networks that constrain the generation process. This is non-negotiable for real estate, where the layout of the room cannot change.15
+
+ComfyUI is the interface of choice for high-end batch processing.16 Unlike web interfaces, ComfyUI allows us to build a "visual program" where the image passes through a series of specific operations:
+
+Geometry Correction (Pre-processing)
+
+Content Locking (ControlNet)
+
+Style Injection (IP-Adapter)
+
+Relighting (IC-Light)
+
+Upscaling (Latent & Tile)
+
+This node-based approach ensures uniformity. Once the "Immaculate Lodge" workflow is built, the exact same mathematical operations are applied to every image in the batch, ensuring consistent lighting ratios and color grading across the entire property portfolio.
+
+2.2 ControlNet: The Geometry Lock
+
+To satisfy the user's requirement to "not change the content of the images," we employ ControlNet. This technology conditions the diffusion model on the structural information of the input image.17
+
+ControlNet Canny / Lineart: This model detects the edges of objects (furniture, windows, beams) in the source image. It creates a "wireframe" map. During generation, the AI is forced to paint only within these lines. This guarantees that the Chesterfield sofa remains a Chesterfield sofa and stays in the exact same position.
+
+ControlNet Depth: This model generates a grayscale depth map (white is near, black is far). It ensures the AI understands the spatial relationships in the room. This prevents "floating furniture" hallucinations and allows the relighting model to calculate accurate shadow fall-off.19
+
+ControlNet Tile: Used in the upscaling phase, this model allows the AI to hallucinate details (texture) without changing structure. It can turn a blurry, low-res patch of thatch into a sharp, individually defined reed texture, mimicking the resolution of medium-format cameras used by pros.20
+
+2.3 IP-Adapter: The "Style Transfer" Engine
+
+IP-Adapter (Image Prompt Adapter) is the mechanism for "matching the world's best." Traditional prompting (e.g., typing "luxury lodge") is imprecise. IP-Adapter allows us to feed the AI a Reference Image—a photo by a master photographer or a Singita marketing asset.21
+
+Mechanism: The IP-Adapter encodes the reference image into high-dimensional feature vectors (embeddings) representing "style" (lighting, color palette, contrast, saturation). These embeddings are injected into the U-Net of the diffusion model.
+
+Application: By using a single "Hero Reference" for the entire batch of substandard photos, the AI forces every image to adopt the exact same color grade and lighting variance. This solves the uniformity requirement. The "bad editing" of the original is overridden by the "style" of the reference, while the content is locked by ControlNet.22
+
+2.4 IC-Light: The Virtual Gaffer
+
+IC-Light (Imposing Consistent Light) is a specialized model designed for image-conditioned relighting.13
+
+Capability: It takes the flat, amateur-lit photo and a text prompt (e.g., "soft sunlight streaming from left window, warm ambient fill").
+
+Process: The model calculates the surface normals of the objects in the room (based on the depth map) and "repaints" the light and shadows to match the prompt.
+
+Result: This transforms a photo lit by a harsh on-camera flash into one that appears to be lit by the sun and sophisticated bounce cards. It adds the "directional" quality that is the hallmark of high-end architectural photography.14
+
+Part III: The "Immaculate" Workflow (Step-by-Step Execution)
+
+This section provides the granular, button-by-button workflow to execute this transformation. It assumes the user has set up ComfyUI.
+
+Phase 1: Pre-Processing and Geometry Correction (Manual)
+
+Objective: Prepare the canvas. AI amplifies defects; we must feed it the cleanest possible geometry.
+
+Tools: Lightroom Classic / Capture One.
+
+Vertical Correction (Crucial): Amateur photos often suffer from "keystoning" (vertical lines converging). Use the Transform > Upright > Vertical tool to ensure all walls and door frames are 90 degrees parallel to the image edge. World-class real estate photography never has tilted verticals.24
+
+White Balance Normalization: Use the White Balance Selector (eyedropper) on a known neutral gray or white object (e.g., a white sheet, a toilet bowl, a piece of paper). This removes the most egregious color casts before the AI starts. Aim for a neutral, slightly flat image.
+
+Highlight/Shadow Recovery: Pull Highlights down (-50) and lift Shadows (+40). We want a "flat" image with maximum data visibility. The AI will add the contrast back later.
+
+Export: Save as 16-bit TIFF files to preserve color data for the AI.
+
+Phase 2: The AI Transformation (The ComfyUI Node Graph)
+
+Objective: Relight, retarget style, and upscale while locking content.
+
+Node 1: Load Image
+
+Import the pre-processed TIFF.
+
+Node 2: ControlNet Stack (The "Lock")
+
+Unit 1: Load ControlNet-v1.1-Canny.
+
+Preprocessor: canny. Set thresholds to detect all major furniture lines.
+
+Strength: 0.65. (We lower strength slightly from 1.0 to allow the AI to fix "bad editing" artifacts on the edges, but high enough to keep shapes rigid).
+
+Start Step: 0.0 | End Step: 1.0.
+
+Unit 2: Load ControlNet-v1.1-Depth.
+
+Preprocessor: depth_midas or depth_zoe (Zoe is better for interiors).
+
+Strength: 1.0. (Strict spatial preservation).
+
+Node 3: Style Injection (IP-Adapter)
+
+Node: IP-Adapter Plus (Standard).
+
+Input: Load 1-3 Reference Images. These should be "Gold Standard" examples (e.g., warm, luxury lodge interiors with the desired chocolate/ochre palette).
+
+Model: ip-adapter-plus_sd15.safetensors.
+
+Weight: 0.60.
+
+Tuning: 0.6 transfers the lighting and color. 0.8+ starts to transfer the furniture from the reference (hallucination risk). 0.4 is too weak.
+
+Node 4: Relighting (IC-Light)
+
+Node: IC-Light Conditioning.
+
+Prompting Strategy:
+
+Positive Prompt: "Luxury safari lodge interior, architectural photography, soft directional window light, golden hour, warm atmosphere, rich textures, thatch roof details, wooden beams, polished concrete floors, linen fabrics, beige and ochre color palette, immaculate exposure, 8k resolution, highly detailed, photorealistic, architectural digest style, cinematic lighting, volumetric dust".26
+
+Negative Prompt: "Green cast, green tint, neon vegetation, flash reflection, harsh shadows, overexposed windows, blown highlights, noise, grain, blurry, distorted furniture, bad anatomy, watermark, text, low resolution, jpeg artifacts, cartoon, painting, illustration, messy, clutter, red cast, magenta cast".11
+
+Latent Noise Injection: Use a seed that works well for textures (fixed seed for consistency across batch).
+
+Node 5: Generation (KSampler)
+
+Model (Checkpoint): Use a photorealistic model like Realistic Vision v6.0 or ArchitectureRealMix.28 These are trained on real estate data and respect architectural geometry better than base SD 1.5.
+
+Settings:
+
+Steps: 30-40.
+
+CFG Scale: 5.0 - 7.0 (Keep strictly moderate to prevent "burn").
+
+Denoising Strength: 0.40 - 0.50.
+
+Logic: A strength of 0.45 means "keep 55% of the original pixels, regenerate 45%." This is the "Goldilocks zone" where lighting and texture are upgraded, but the object identity remains.
+
+Node 6: The "Window Pull" (Automated Masking)
+
+Issue: Windows are often "blown out" (pure white) in AI generation because the AI prioritizes the interior exposure.
+
+Solution: Add a Segment Anything (SAM) node to the workflow.
+
+Prompt for SAM: "Window, glass door."
+
+Inpainting: Feed the mask into a second KSampler.
+
+Prompt: "View of African bushveld, savannah, acacia trees, soft twilight, blue hour, clear detail, balanced exposure."
+
+Denoise: 0.6.
+
+Result: This automates the "HDR Window Pull" technique used by Mike Kelley, creating a perfectly exposed view outside every window.29
+
+Phase 3: Upscaling & Texture Hallucination
+
+Objective: Restore the "Immaculate" high-res finish that differentiates pro photos from amateur ones.
+
+Node: Ultimate SD Upscale.
+
+Upscale Model: 4x-UltraSharp or RealESRGAN.
+
+ControlNet: Enable ControlNet Tile during this pass.
+
+Strength: 1.0.
+
+Scale Factor: 2x or 4x (depending on output need).
+
+Effect: This step is magical. It does not just enlarge pixels; it uses the diffusion model to hallucinate new, realistic texture based on the context. A blurry patch of brown becomes a detailed thatch roof. A flat grey floor becomes polished concrete with micro-texture. This "synthetic detail" is what makes the image look "high-end".20
+
+Part IV: Advanced Color Science & Uniformity Strategies
+
+The user explicitly requested "Deep Research on filters, white balance, and color tones" to make the images uniform. This requires creating a custom Color Grading Pipeline.
+
+4.1 The "Bushveld Correction" LUT (Look Up Table)
+
+To ensure every image (from the dark bedroom to the bright patio) looks like it belongs to the same brand, we must create a master LUT.
+
+Step 1: The "Green" Neutralization Curve
+
+Problem: As established, green cast is the enemy.
+
+Fix: In Photoshop/Lightroom, create a curve that targets the Green Channel. Slightly pull down the mid-tones in the Green channel (introducing Magenta).
+
+HSL Tweak: Select Yellows and Greens. Shift their Hue towards Orange. Desaturate Greens by -15. Reduce Luminance of Greens by -10. This turns "neon grass" into "sophisticated, sun-dried savannah".30
+
+Step 2: Split Toning for "Cinematic" Depth
+
+Shadows: Inject a subtle Teal/Blue (Hue 210, Saturation 5-10%). This pushes the shadows back, creating color contrast against the warm wood.
+
+Highlights: Inject a subtle Warm Cream (Hue 40, Saturation 10%). This mimics the "Golden Hour" sun.
+
+Result: This Blue/Orange separation is the hallmark of cinematic grading and creates the "richness" described in the Singita aesthetic.31
+
+Step 3: Creating the LUT
+
+Apply these adjustments to a representative image.
+
+Export as a .CUBE file (3D LUT).32
+
+Application: Apply this LUT to all AI-generated images at 100% opacity in the final export step. This guarantees absolute color uniformity across the entire batch.
+
+4.2 White Balance Strategy: The "Mixed Lighting" Fix
+
+Game lodges often have warm tungsten lamps (2800K) inside and cool blue twilight (10,000K) outside. Amateur photos blend these into a muddy mess.
+
+The AI Separation Strategy:
+
+Use the SAM Masking workflow (from Phase 2) to mask the "Interior" and "Exterior" separately.
+
+Interior WB: Balance to 3800K (Warm but clean).
+
+Exterior WB: Balance to 6500K (Cool blue).
+
+Result: This creates "Color Contrast." The warm interior feels cozy and inviting (Hygge) against the cool, dramatic exterior. This is a classic technique used by architectural photographers to evoke emotion.12
+
+Part V: Specific Use Cases & Prompt Variations
+
+The "Game Farm" environment has specific scenes that require tailored prompting.
+
+5.1 The "Thatch Roof" Interior (Lounge/Bedroom)
+
+Thatch roofs are notorious light sinks—they eat light and look like black holes.
+
+Challenge: Lighting the ceiling without overexposing the bed.
+
+Prompt Addition: "Detailed thatch roof ceiling, soft ambient uplighting on ceiling, exposed wooden trusses, warm glow."
+
+Technique: Use a Region Mask (in ComfyUI) on the ceiling area with a higher exposure prompt to virtually "lift" the shadows in the thatch.
+
+5.2 The "Game Drive" Vehicle Shot
+
+Challenge: Harsh midday sun, harsh shadows, metal reflections.
+
+Prompt Addition: "Land Rover game viewer, savannah background, soft golden hour lighting, cinematic rim light, dust particles in air, shallow depth of field, bokeh."
+
+ControlNet: Use Depth strictly to keep the vehicle shape but blur the background (simulating a f/2.8 lens) to isolate the subject.34
+
+5.3 The "Boma" (Fire Pit) Night Shot
+
+Challenge: Extreme contrast—bright fire, pitch black background. Grainy.
+
+Prompt Addition: "Boma fire pit, night photography, long exposure, fire trails, starry sky, milky way, soft lantern light, glowing embers, convivial atmosphere."
+
+Technique: Use IC-Light with a "Moonlight" preset to introduce cool blue fill light into the shadows, so the chairs around the fire are visible, not just silhouettes.35
+
+Part VI: Quality Control & Troubleshooting
+
+Even with a robust workflow, AI can "hallucinate." Here is how to troubleshoot the common issues in this workflow.
+
+6.1 Hallucination: "The Ghost Chair"
+
+Issue: The AI adds a chair leg that doesn't exist or merges two cushions.
+
+Cause: Denoising strength too high (>0.6) or ControlNet Canny too weak.
+
+Fix: Reduce Denoising strength to 0.4. Increase ControlNet Canny strength to 0.8.
+
+6.2 Artifacts: "The Melty Face"
+
+Issue: If there are people in the lodge photos (e.g., staff), their faces look distorted.
+
+Fix: Use the ADetailer (After Detailer) node in ComfyUI. This automatically detects faces and runs a separate, high-res inpainting pass on just the face to restore eyes and features.36
+
+6.3 Texture: "The Plastic Look"
+
+Issue: The image looks too smooth and "AI-generated."
+
+Fix: Add Film Grain in post-processing (Lightroom). A small amount (size 20, roughness 40) breaks up the digital smoothness and adds organic texture, mimicking high-end film stock often used in luxury travel magazines.37
+
+Part VII: Future-Proofing and Archival
+
+To ensure these assets remain "immaculate" for years:
+
+Resolution: Always upscale to at least 4000px on the long edge. This is sufficient for full-page magazine prints and 4K displays.
+
+Format: Deliver final edited files as 100% Quality JPEGs (for web) and 16-bit TIFFs (for print archival).
+
+Metadata: Embed copyright and location data.
+
+Backup: Store the "ComfyUI Workflow JSON" file. This allows you to re-run the exact same process on new photos in the future, ensuring the "Uniformity" of the brand is maintained indefinitely.
+
+Conclusion
+
+The transformation of substandard game lodge photography into "immaculate" real estate imagery is a feat of computational engineering. It is not achieved by simple filters, but by a sophisticated pipeline that deconstructs the image into geometry and style.
+
+By leveraging Stable Diffusion with ControlNet for geometric rigidity, IP-Adapter for stylistic cloning, and IC-Light for volumetric relighting, we synthesize the "Flambient" look of a world-class photographer without a physical reshoot. This workflow turns the liabilities of amateur photography (bad lighting, green casts, flat contrast) into assets, allowing us to sculpt a digital reality that is not just "corrected," but "perfected." The result is a portfolio that exudes the warmth, luxury, and "hygge" of the world's finest safari destinations, ensuring the digital experience matches the physical promise of the property.
+
+Final Checklist for the User
+
+[ ] Install ComfyUI and the ComfyUI-Manager.
+
+[ ] Download Models: Realistic Vision v6.0, ControlNet Canny, ControlNet Depth, IP-Adapter Plus, IC-Light, 4x-UltraSharp.
+
+[ ] Curate References: Select 3 "Singita-style" interior shots.
+
+[ ] Build Workflow: Connect nodes as described in Part III.
+
+[ ] Batch Run: Process all images at Denoise 0.45.
+
+[ ] Post-Process: Apply "Green Neutralization" LUT in Lightroom.
+
+This protocol represents the current state-of-the-art in AI-assisted photographic restoration.
+
+Works cited
+
+HDR vs. Flambient: Which Photo Editing Style Converts More Real Estate Clicks? - Phixer, accessed February 9, 2026, https://www.phixer.net/blog/hdr-vs-flambient-which-photo-editing-style-converts-more-real-estate-clicks/
+
+Which is Better? - Flambient vs HDR Real Estate Photography, accessed February 9, 2026, https://www.insiderealestatephotography.com/post/flambient-vs-hdr-real-estate-photography-which-is-better
+
+7 Common Real Estate Photography Mishaps You Should Never Make - WindowStill, accessed February 9, 2026, https://windowstill.com/7-common-real-estate-photography-mishaps-you-should-never-make/posts/
+
+HDR vs Flambient for Real Estate Photography - YouTube, accessed February 9, 2026, https://www.youtube.com/watch?v=szZUCa5x5Wc
+
+Safari Lodge Style in a Nutshell | KaSa Global Interiors, accessed February 9, 2026, https://kasaglobalinteriors.com/2016/02/26/safari-lodge-style-in-a-nutshell/
+
+Coming full circle – the evolution of Singita Ebony Lodge, accessed February 9, 2026, https://singita.com/2024/04/coming-full-circle-the-evolution-of-singita-ebony-lodge/
+
+Timeless elegance & contemporary comfort at Singita Sasakwa Lodge, accessed February 9, 2026, https://singita.com/2021/07/timeless-elegance-and-contemporary-comfort-at-singita-sasakwa-lodge/
+
+safari Color Palette, accessed February 9, 2026, https://www.color-hex.com/color-palette/35048
+
+Green cast, how do you fix it? - Lightroom - Reddit, accessed February 9, 2026, https://www.reddit.com/r/Lightroom/comments/t86fis/green_cast_how_do_you_fix_it/
+
+How to fix muddy green tones in your photography - Rachel Vanoven's Collective, accessed February 9, 2026, https://therachelvanovencollective.com/2024/05/07/fixing-green-hues-in-outdoor-photography/
+
+200+ Best Stable Diffusion Negative Prompts with Examples - Aiarty Image Enhancer, accessed February 9, 2026, https://www.aiarty.com/stable-diffusion-prompts/stable-diffusion-negative-prompt.htm
+
+technique — Blog — Mike Kelley, accessed February 9, 2026, https://www.mpkelley.com/blog/tag/technique
+
+IC Light AI: Free Online AI Images Imposing Consistent Light, accessed February 9, 2026, https://iclightai.com/
+
+lllyasviel/IC-Light: More relighting! - GitHub, accessed February 9, 2026, https://github.com/lllyasviel/IC-Light
+
+Controlled Creativity - IAAC BLOG, accessed February 9, 2026, https://blog.iaac.net/controlled-creativity/
+
+Product Photography and relighting with Comfy Ui : r/StableDiffusion - Reddit, accessed February 9, 2026, https://www.reddit.com/r/StableDiffusion/comments/1il8xje/product_photography_and_relighting_with_comfy_ui/
+
+Using ControlNet to Color and light an image. : r/StableDiffusion - Reddit, accessed February 9, 2026, https://www.reddit.com/r/StableDiffusion/comments/11d8ozr/using_controlnet_to_color_and_light_an_image/
+
+Just discovered that ControlNet Tile can do more than just upscale images - Reddit, accessed February 9, 2026, https://www.reddit.com/r/StableDiffusion/comments/13dgd55/just_discovered_that_controlnet_tile_can_do_more/
+
+ComfyUI LBM Relighting Workflow - Complete Step-by-Step Tutorial ..., accessed February 9, 2026, https://comfyui-wiki.com/en/tutorial/advanced/image/relighting/lbm-relighting
+
+Using ControlNet and Upscaling for a massive increase in detail! : r/StableDiffusion - Reddit, accessed February 9, 2026, https://www.reddit.com/r/StableDiffusion/comments/13r7adf/using_controlnet_and_upscaling_for_a_massive/
+
+Stable Diffusion — Part 4: Style Without Training — How IP-Adapter Adds You to the Picture, accessed February 9, 2026, https://shree6791.medium.com/part-4-style-without-training-how-ip-adapter-adds-you-to-the-picture-836c9355b085
+
+Creating Endless Styles with IP Adapter Stable Diffusion a1111 - YouTube, accessed February 9, 2026, https://www.youtube.com/watch?v=4hiFJgM3Nww
+
+Make ANY Photo Look Professional! AI Relighting in ComfyUI Explained - YouTube, accessed February 9, 2026, https://www.youtube.com/watch?v=i7vqbsabWf0
+
+Real Estate Photo Editing Checklist in 2026 - Icecream Apps, accessed February 9, 2026, https://icecreamapps.com/learn/real-estate-photo-editing-checklist.html
+
+Downloadable Real Estate Photo Checklist, accessed February 9, 2026, https://www.pinnaclerealestatemarketing.com/downloadable-real-estate-photo-checklist/
+
+Best Architecture Prompts for Midjourney and Stable Diffusion, accessed February 9, 2026, https://www.myarchitectai.com/blog/midjourney-architecture-prompts
+
+Lighting in AI Images: techniques for cinematic results - Human Academy - The studio that teaches you about AI with the most updated tools in the market, accessed February 9, 2026, https://www.humanacademy.ai/en/blog/lighting-images-ai
+
+Instant LoRA Architecture - YouTube, accessed February 9, 2026, https://www.youtube.com/watch?v=5Ca3jhL5Xus
+
+How to Create Stunning Architecture Photography by Painting with Light, accessed February 9, 2026, https://digital-photography-school.com/create-stunning-architecture-photography/
+
+Avoiding Green Casts in Shaded Photos - Jasmine Star, accessed February 9, 2026, https://jasminestar.com/avoiding-green-casts-in-shaded-photos/
+
+Colour Grading Techniques For Outdoors Filmmaking - The Fundamentals - YouTube, accessed February 9, 2026, https://www.youtube.com/watch?v=SFBVxLJe2Fc
+
+How to Create & Import LUTs in Photoshop - YouTube, accessed February 9, 2026, https://www.youtube.com/watch?v=0jziTgUzoRs
+
+How to Create Custom LUTs (Color Match Plugin) - Clever Photographer, accessed February 9, 2026, https://www.cleverphotographer.com/blog/how-to-create-LUTs-with-Color-Match
+
+How to Dramatically Change Your Wildlife Photos by Just Changing Your Position | Peter Dam, accessed February 9, 2026, https://www.youtube.com/watch?v=YdK1WuS0S0o
+
+Time Blending Tutorial - Michael Breitung Photography, accessed February 9, 2026, https://www.mibreit-photo.com/blog/time-blending-tutorial/
+
+Create Consistent Characters: Mastering ControlNet & IPAdapter in ComfyUI - RunComfy, accessed February 9, 2026, https://learn.runcomfy.com/create-consistent-characters-with-controlnet-ipadapter
+
+Oh Shoot! Podcast My 2025 Photography Trends Predictions - Cassidy Lynne Education, accessed February 9, 2026, https://cassidylynneeducation.com/oh-shoot-podcast-my-2025-photography-trends-predictions/

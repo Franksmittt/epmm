@@ -1,0 +1,338 @@
+/* Master Battery — Tactical Square 1:1. Sharp geometry, #FF0000 accents. Export 1080×1080. */
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: #030303;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.bracket {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-color: #ff0000;
+  border-style: solid;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bTopLeft {
+  top: 20px;
+  left: 20px;
+  border-width: 3px 0 0 3px;
+}
+
+.bTopRight {
+  top: 20px;
+  right: 20px;
+  border-width: 3px 3px 0 0;
+}
+
+.bBottomLeft {
+  bottom: 20px;
+  left: 20px;
+  border-width: 0 0 3px 3px;
+}
+
+.bBottomRight {
+  bottom: 20px;
+  right: 20px;
+  border-width: 0 3px 3px 0;
+}
+
+.scannerGrid {
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(255, 0, 0, 0.15);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scrimTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scrimBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dealerBlock {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  border-left: 3px solid #ff0000;
+  padding-left: 12px;
+  max-width: 55%;
+}
+
+.dealerLabel {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+
+.dealerName {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.dealerContact {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ff0000;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+.heroStage {
+  flex-grow: 1;
+  width: 100%;
+  z-index: 2;
+  min-height: 0;
+}
+
+.tacticalConsole {
+  position: absolute;
+  bottom: 35px;
+  left: 35px;
+  right: 35px;
+  z-index: 3;
+  background: rgba(10, 10, 10, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 2px solid #ff0000;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.consoleData {
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  flex: 1;
+}
+
+.productCode {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #ff0000;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.techSpec {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  max-width: 90%;
+  line-height: 1.35;
+}
+
+.strikeAction {
+  width: 140px;
+  flex-shrink: 0;
+  background: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.strikeText {
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.strikeAction svg {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080 .bracket {
+  width: 81px;
+  height: 81px;
+}
+
+.root.canvas1080 .bTopLeft {
+  top: 36px;
+  left: 36px;
+  border-width: 5px 0 0 5px;
+}
+
+.root.canvas1080 .bTopRight {
+  top: 36px;
+  right: 36px;
+  border-width: 5px 5px 0 0;
+}
+
+.root.canvas1080 .bBottomLeft {
+  bottom: 36px;
+  left: 36px;
+  border-width: 0 0 5px 5px;
+}
+
+.root.canvas1080 .bBottomRight {
+  bottom: 36px;
+  right: 36px;
+  border-width: 0 5px 5px 0;
+}
+
+.root.canvas1080 .scannerGrid {
+  inset: 36px;
+}
+
+.root.canvas1080 .dealerBlock {
+  top: 63px;
+  left: 63px;
+  border-left-width: 5px;
+  padding-left: 22px;
+}
+
+.root.canvas1080 .dealerLabel {
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-bottom: 4px;
+}
+
+.root.canvas1080 .dealerName {
+  font-size: 32px;
+}
+
+.root.canvas1080 .dealerContact {
+  font-size: 23px;
+  margin-top: 7px;
+}
+
+.root.canvas1080 .tacticalConsole {
+  bottom: 63px;
+  left: 63px;
+  right: 63px;
+  border-top-width: 4px;
+  box-shadow: 0 36px 72px rgba(0, 0, 0, 0.8);
+}
+
+.root.canvas1080 .consoleData {
+  padding: 36px 45px;
+}
+
+.root.canvas1080 .productCode {
+  font-size: 22px;
+  letter-spacing: 5px;
+  margin-bottom: 9px;
+}
+
+.root.canvas1080 .headline {
+  font-size: 58px;
+  letter-spacing: -2px;
+}
+
+.root.canvas1080 .techSpec {
+  font-size: 23px;
+  margin-top: 14px;
+}
+
+.root.canvas1080 .strikeAction {
+  width: 252px;
+  gap: 9px;
+}
+
+.root.canvas1080 .strikeText {
+  font-size: 27px;
+}
+
+.root.canvas1080 .strikeAction svg {
+  width: 36px;
+  height: 36px;
+}

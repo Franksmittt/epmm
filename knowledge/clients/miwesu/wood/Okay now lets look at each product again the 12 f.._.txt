@@ -1,0 +1,343 @@
+RESIN & QUILL: The Indigenous Collection - Visual Directives
+
+MASTER STYLE TOKENS (Append to all prompts)
+
+Technique: Hyper-realistic macro photography, 100mm macro lens, f/2.8 depth of field, sharp focus on the subject, soft cinematic lighting, 8k resolution, Unreal Engine 5 render style.
+
+Vibe: Old money, heritage craftsmanship, biological precision, expensive textures (brass, leadwood, glass, water).
+
+1. THE OBSIDIAN PERDIGON (The Kinetic Assassin)
+
+Visual Signature: Sleek, bullet-shaped, black glass, gold bead.
+
+Image 1: The Hero (Studio Void)
+
+Concept: The fly floating in a pitch-black void. Rim-lit to show the perfect smoothness of the resin coating. The gold bead should catch a sharp "ping" of light.
+
+Prompt: A hyper-realistic macro shot of a single "Perdigon" fly fishing nymph floating in a black void. The body is sleek, jet-black, and encased in thick, glass-like UV resin. The head is a faceted 24k gold tungsten bead that glints brightly. Rim lighting highlights the smooth curves of the resin. High contrast, minimalist, jewelry photography. --ar 4:5
+
+Image 2: The Element (The Plunge)
+
+Concept: The fly sinking rapidly through turbulent water bubbles. Shows its hydrodynamic function.
+
+Prompt: A dynamic underwater macro shot of a black Perdigon nymph sinking rapidly through dark, bubbly water. Motion blur on the bubbles, but the fly is in sharp focus. The gold bead leads the descent. Deep blue and green ambient tones. The feeling of heavy density and speed. --ar 16:9
+
+Image 3: The Macro (Gold & Resin)
+
+Concept: Extreme close-up of the bead meeting the body. Showing the transition from metal to thread to resin.
+
+Prompt: Extreme macro close-up of a gold tungsten fly tying bead. Focus on the facets of the metal and the tiny scratch marks of craftsmanship. Below the bead, show the transition to smooth, black, resin-coated thread. The texture difference between cold metal and organic resin. --ar 1:1
+
+Image 4: The Heirloom (Slate & Brass)
+
+Concept: The fly resting on a piece of dark, wet river slate next to an antique brass caliper.
+
+Prompt: A moody still life photography shot. A black Perdigon fly rests on a piece of dark, wet slate rock. Next to it is the edge of an antique brass measuring tool. Soft, moody lighting. The gold bead reflects the brass. Old world scientific atmosphere. --ar 4:5
+
+2. THE KALAHARI MUSTARD CADDIS (The Expedition Standard)
+
+Visual Signature: Rugged, yellow/ochre dubbing, dark shellback, fuzzy texture.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Profile view showing the segmentation. The yellow dubbing should look fibrous and organic against the black background.
+
+Prompt: A hyper-realistic macro studio shot of a "Mustard Caddis" fly. The body is made of fuzzy, mustard-yellow synthetic dubbing, tightly spun. A dark brown pheasant tail shellback covers the top. The background is a soft, deep charcoal gradient. Sharp focus on the fibrous texture of the body. --ar 4:5
+
+Image 2: The Element (The Riverbed)
+
+Concept: The fly resting on a sandy/rocky river bottom, blending in but visible.
+
+Prompt: An underwater macro shot of a yellow caddis larva fly resting on a bed of coarse orange sand and pebbles (Orange River substrate). Sunlight ripples across the bottom, illuminating the yellow body of the fly. Biological realism. --ar 16:9
+
+Image 3: The Macro (The Shellback)
+
+Concept: Top-down view focusing on the epoxy-coated pheasant tail fibers.
+
+Prompt: Extreme macro top-down view of a fly fishing fly. Focus on the "shellback" made of pheasant tail fibers coated in clear epoxy. Visible segmentation and natural feather patterns under the glossy coating. The yellow dubbing pokes out from the sides. --ar 1:1
+
+Image 4: The Heirloom (The Driftwood)
+
+Concept: The fly hooked into a piece of dry, sun-bleached driftwood.
+
+Prompt: A sun-bleached piece of African driftwood with a Mustard Caddis fly hooked into the grain. Harsh, warm lighting (desert sun). Sharp shadows. The texture of the dry wood contrasts with the soft dubbing of the fly. --ar 4:5
+
+3. THE SHADOW STREAMER (The Apex Silhouette)
+
+Visual Signature: Large, jet black, marabou feathers, jungle cock eyes.
+
+Image 1: The Hero (Studio Void)
+
+Concept: The fly looks like a living creature. The black marabou feathers are flowing. The Jungle Cock eye is a bright focal point.
+
+Prompt: A hyper-realistic studio shot of a large black "Streamer" fly. The tail is made of soft, flowing black marabou feathers. The body is black chenille. A bright yellow and black "Jungle Cock" feather eye is visible at the head. The background is pure black, making the fly look like a shadow. Rembrand lighting. --ar 4:5
+
+Image 2: The Element (The Ambush)
+
+Concept: Silhouette view from below, looking up at the surface (fish's POV).
+
+Prompt: Underwater photography looking up towards the surface of the water. A large black fly silhouette is suspended against the bright light of the surface. The feathers are pulsing in the water current. Ominous, predatory atmosphere. --ar 16:9
+
+Image 3: The Macro (The Eye)
+
+Concept: Extreme close-up on the "Jungle Cock" eye feather.
+
+Prompt: Extreme macro close-up of a "Jungle Cock" feather on a fishing fly. The enamel-like texture of the yellow and black spot. The individual barbs of the feather are visible. High definition texture. --ar 1:1
+
+Image 4: The Heirloom (Leather)
+
+Concept: The fly resting on an old, worn leather field journal.
+
+Prompt: A black streamer fly resting on the cover of a worn, brown leather notebook. The leather has scratches and patina. Soft, warm window light illuminates the soft feathers of the fly. Indiana Jones style aesthetic. --ar 4:5
+
+4. THE SPECTRAL WOOLLY BUGGER (The Tetrachromatic Trigger)
+
+Visual Signature: Dark olive, silver wire rib, subtle UV flash/purple sheen.
+
+Image 1: The Hero (Studio UV)
+
+Concept: The fly lit with a hint of purple/UV light to show its reflective properties.
+
+Prompt: A hyper-realistic macro shot of a "Woolly Bugger" fly. Olive green body with a silver wire rib. The lighting includes a subtle UV/Purple backlight that makes the synthetic fibers in the tail glow slightly. Scientific documentation style. --ar 4:5
+
+Image 2: The Element (Murky Water)
+
+Concept: The fly pushing through slightly green/stained water.
+
+Prompt: Underwater macro shot of a woolly bugger fly swimming through murky, green-tinted water. The silver wire rib catches a glint of light. The marabou tail is trailing behind in a swimming motion. --ar 16:9
+
+Image 3: The Macro (The Hackle)
+
+Concept: Close up of the feather wrapped around the body (hackle) standing up.
+
+Prompt: Extreme macro side profile of a woolly bugger fly. Focus on the "hackle" feather wrapped around the chenille body. The individual fibers of the feather stand up like bristles. The silver wire pins the feather down. Intricate detail. --ar 1:1
+
+Image 4: The Heirloom (The Cork)
+
+Concept: The fly hooked into the high-grade cork handle of a fly rod.
+
+Prompt: Close up of a high-grade cork fly rod handle. A Woolly Bugger fly is hooked into the cork. The texture of the cork pits and grain is sharp. Shallow depth of field blurring the rod blank in the background. --ar 4:5
+
+5. THE APEX DRAGONFLY / PAPA ROACH (The Caloric Bomb)
+
+Visual Signature: Big, ugly, olive-brown, spun deer hair head, rubber legs.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Top-down view showing the broad, flat head and the sprawling rubber legs. Looks like an insect specimen.
+
+Prompt: A hyper-realistic top-down studio shot of a "Papa Roach" dragonfly nymph fly. Large, blocky head made of spun deer hair (olive/brown). Rubber legs sprawling out to the sides. Large black monofilament eyes. Isolated on a dark grey background. Looks like a pinned insect specimen. --ar 4:5
+
+Image 2: The Element (The Weeds)
+
+Concept: The fly hovering just above aquatic grass/weeds.
+
+Prompt: Underwater shot of a dragonfly nymph fly suspended just above a bed of green aquatic weeds. Dappled light filtering through the water. The rubber legs hang down naturally. --ar 16:9
+
+Image 3: The Macro (Deer Hair)
+
+Concept: Close up of the spun deer hair head. Showing the hollow hair ends packed tightly.
+
+Prompt: Extreme macro close-up of spun deer hair on a fishing fly. The hollow ends of the hair are packed tightly together and trimmed to a shape. Texture looks like a dense, coarse brush. Olive and brown color variation. --ar 1:1
+
+Image 4: The Heirloom (The Net)
+
+Concept: The fly caught in the mesh of a wooden landing net.
+
+Prompt: A close up of a wooden fly fishing net with soft rubber mesh. The large Dragonfly nymph fly is lying in the mesh. Water droplets on the fly and the net. The wood frame of the net is visible in the corner. --ar 4:5
+
+6. THE ROYAL BLOB (The Aggression Catalyst)
+
+Visual Signature: Bright Sunburst Orange, amorphous sphere, translucent fibers.
+
+Image 1: The Hero (Studio Void)
+
+Concept: The fly looks like a glowing ember or piece of coral. Backlit to show translucency.
+
+Prompt: A hyper-realistic macro shot of a "Blob" fly. A dense sphere of translucent "Sunburst Orange" fibers. Backlighting makes the fly glow from within like a piece of hot coal or coral. The hook is gold. Stark black background. --ar 4:5
+
+Image 2: The Element (The Strike)
+
+Concept: The bright orange blob contrasting against deep blue water.
+
+Prompt: Underwater shot of a bright orange "Blob" fly suspended in deep, clear blue water. The color contrast is intense. The fibers are fanned out perfectly. --ar 16:9
+
+Image 3: The Macro (The Fiber)
+
+Concept: Extreme zoom on the synthetic fibers. They look like optical fibers.
+
+Prompt: Extreme macro close-up of translucent orange synthetic fly tying fibers ("Fritz"). They look like chaotic optical fibers. Some fibers catch the light, creating starbursts. Intense color saturation. --ar 1:1
+
+Image 4: The Heirloom (The Row)
+
+Concept: A row of 3 Blobs in the wooden box. Repetition of color.
+
+Prompt: A close up high-angle shot of a wooden fly box with silicone slits. Three identical bright orange Blob flies are slotted in a perfect row. The contrast between the neon fly and the dark wood box is striking. --ar 4:5
+
+7. THE MIRROR PARACHUTE ADAMS (The Surface Mathematician)
+
+Visual Signature: Delicate, grey body, white post vertical, horizontal grizzly hackle.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Eye-level side profile. The fly resting on a glass surface to show the reflection (Mirror).
+
+Prompt: A hyper-realistic macro side-profile shot of a "Parachute Adams" dry fly resting on a black mirrored surface. The white wing post stands vertical. The grizzly (black and white) hackle fibers lay flat on the mirror. The reflection is perfectly visible. Delicate and precise. --ar 4:5
+
+Image 2: The Element (The Surface Film)
+
+Concept: View from underwater looking UP. Showing the "footprint" of the fly on the surface tension.
+
+Prompt: Underwater photography looking straight up at the surface film. A dry fly sits on top of the water. The legs create indentations in the surface tension that look like glowing points of light (starburst pattern). The body of the fly is silhouetted. --ar 16:9
+
+Image 3: The Macro (The Hackle Barring)
+
+Concept: Close up of the Grizzly feather. Black and white stripes.
+
+Prompt: Extreme macro close-up of a "Grizzly" rooster saddle feather. Distinct black and white barring stripes. The fibers are stiff and glassy. Biological pattern detail. --ar 1:1
+
+Image 4: The Heirloom (The Bamboo)
+
+Concept: The fly resting on a vintage split-cane (bamboo) rod.
+
+Prompt: A tiny dry fly resting on the varnished hexagonal shaft of a vintage bamboo fly rod. The honey-colored bamboo complements the grey fly. Shallow depth of field. Antique aesthetic. --ar 4:5
+
+8. THE ESTUARY JAM FLY (The Suspended Illusion)
+
+Visual Signature: Tan/Ginger foam & hair, looks like a prawn/shrimp, realistic antennae.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Top down view on a white background (clinical). Shows the shrimp profile.
+
+Prompt: A hyper-realistic top-down macro shot of a "JAM Fly" prawn imitation. The body is tan and ginger, made of foam and deer hair. Realistic long antennae curve backwards. Isolated on a clean, soft grey background (clinical study style). --ar 4:5
+
+Image 2: The Element (The Film)
+
+Concept: Sitting low in the water film, half in, half out.
+
+Prompt: A split-level waterline shot (over/under). A prawn fly is sitting in the surface film. The foam back is above water (dry), the legs and tail are hanging below the surface (wet). Calm, glassy estuary water. --ar 16:9
+
+Image 3: The Macro (The Antennae)
+
+Concept: Focus on the head and the monofilament antennae.
+
+Prompt: Extreme macro close-up of the head of a prawn fly. Focus on the attachment point of the realistic antennae. The texture of the folded foam body is visible. --ar 1:1
+
+Image 4: The Heirloom (Sand & Shell)
+
+Concept: The fly resting on wet estuary sand next to a broken seashell.
+
+Prompt: A prawn fly resting on wet, rippled sand. A fragment of a white seashell is next to it. Natural lighting, morning sun. The fly blends slightly with the sand tones. --ar 4:5
+
+9. THE BENTHIC TURD (The Subsurface Cheat)
+
+Visual Signature: Ugly, tan/orange, heavy, epoxy back, silicone legs.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Upside down (Hook point up). Shows the belly and the weight.
+
+Prompt: A hyper-realistic macro shot of a "Turds" crustacean fly. The fly is positioned hook-point up. The belly is tan dubbing. The legs are barred silicone rubber. Heavy dumbbell eyes are visible. Industrial, functional aesthetic. --ar 4:5
+
+Image 2: The Element (The Mud Cloud)
+
+Concept: The fly resting on the bottom, kicking up a tiny puff of mud (illusion of life).
+
+Prompt: Underwater shot of a shrimp fly resting on a muddy bottom. A tiny puff of sediment/dust is rising from where it landed, suggesting movement. The rubber legs are floating upwards in the current. --ar 16:9
+
+Image 3: The Macro (The Epoxy Shell)
+
+Concept: Close up of the UV resin back.
+
+Prompt: Extreme macro close-up of the back of a shrimp fly. A thick layer of clear UV resin covers the dubbing, creating a smooth, segmented shell. Air bubbles are trapped inside the resin. Wet, glossy look. --ar 1:1
+
+Image 4: The Heirloom (The Skiff)
+
+Concept: The fly resting on the fiberglass deck of a flats skiff.
+
+Prompt: A close up of a saltwater fly resting on the textured, white non-slip deck of a boat. Intense tropical sunlight. A coil of blue fly line is visible in the background out of focus. --ar 4:5
+
+10. THE HYDROCYNUS BRUSH FLY (The Hydraulic Displacement)
+
+Visual Signature: Red and Black, bulky head, long synthetic fibers, big hook.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Profile view. Aggressive. The red fibers look like blood/muscle. The hook looks dangerous.
+
+Prompt: A hyper-realistic macro shot of a large "Brush Fly" for Tigerfish. Color scheme is Red and Black. The head is bulky and coated in epoxy. Long, synthetic fibers stream back. The heavy-gauge steel hook is sharp and prominent. Aggressive, predatory lighting. --ar 4:5
+
+Image 2: The Element (The Murk)
+
+Concept: The fly pushing water in dark, reddish/brown water.
+
+Prompt: Underwater shot of a large red and black streamer fly moving through dark, tannic (red-brown) water. A trail of bubbles comes off the bulky head (cavitation). Dynamic motion. --ar 16:9
+
+Image 3: The Macro (The Hook Point)
+
+Concept: Extreme focus on the point of the Tiemco 600SP hook.
+
+Prompt: Extreme macro close-up of the point of a heavy-duty Tiemco 600SP fly hook. The metal is thick, grey, and chemically sharpened. The barb is prominent. The red fibers of the fly are blurred in the background. Industrial steel texture. --ar 1:1
+
+Image 4: The Heirloom (The Jaw)
+
+Concept: The fly resting on a bleached Tigerfish skull/jaw (or just teeth).
+
+Prompt: A Red and Black brush fly resting on a bleached, white animal skull with sharp teeth (Tigerfish jaw). High contrast. The red fly creates a stark visual against the white bone. Savage beauty. --ar 4:5
+
+11. THE VELOCITY CLOUSER (The Speed Demon)
+
+Visual Signature: Chartreuse over White bucktail, dumbbell eyes, sleek.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Top down view. Perfectly straight bucktail hairs. Symmetrical eyes.
+
+Prompt: A hyper-realistic top-down studio shot of a "Clouser Minnow" fly. Chartreuse (neon green) hair over white hair. The painted yellow dumbbell eyes are perfectly symmetrical. The bucktail hairs are straight and streamlined. Clean, minimalist composition. --ar 4:5
+
+Image 2: The Element (The Strip)
+
+Concept: The fly darting through clear water. Motion blur background.
+
+Prompt: Action underwater shot of a Clouser Minnow darting diagonally through clear blue water. The hairs are swept back by the speed. Background is a motion-blurred reef or sand. --ar 16:9
+
+Image 3: The Macro (The Thread Wrap)
+
+Concept: Focus on the red thread wraps holding the eyes. Glossy varnish finish.
+
+Prompt: Extreme macro close-up of the head of a Clouser Minnow. Focus on the red thread that cross-wraps the heavy lead dumbbell eyes. The thread is coated in thick, glossy varnish. The painted pupil of the eye is visible. --ar 1:1
+
+Image 4: The Heirloom (The Salt)
+
+Concept: The fly with salt crystals dried on it, resting on a reel.
+
+Prompt: A Clouser minnow fly resting on the spool of a silver anodized aluminum fly reel. The fly is dry, and tiny white salt crystals have formed on the chartreuse hairs. Used, authentic gear aesthetic. --ar 4:5
+
+12. THE ANCHOR CONTROL FLY (The Delivery System)
+
+Visual Signature: Oversized Silver Tungsten Bead, thin brown body, minimalist.
+
+Image 1: The Hero (Studio Void)
+
+Concept: Focus on the massive bead. It should look like a ball bearing.
+
+Prompt: A hyper-realistic macro shot of a "Control Nymph". A massive, slotted silver tungsten bead dominates the image. The body of the fly is incredibly thin and sparse. The hook is a "Jig" style. Cool, metallic lighting. --ar 4:5
+
+Image 2: The Element (The Stones)
+
+Concept: The fly wedged between two river stones underwater.
+
+Prompt: Underwater macro shot of a heavy nymph fly wedged between two smooth grey river stones on the bottom. The current is pushing the thin tail. The silver bead reflects the grey rocks. --ar 16:9
+
+Image 3: The Macro (The Slot)
+
+Concept: Looking into the slot of the tungsten bead.
+
+Prompt: Extreme macro close-up of a slotted tungsten bead on a fly hook. Focus on the mechanical "slot" where the hook passes through. The texture of the machined tungsten metal. Industrial precision. --ar 1:1
+
+Image 4: The Heirloom (The Scale)
+
+Concept: The fly sitting on a jeweler's digital scale (showing weight).
+
+Prompt: A single Control Nymph fly sitting on the metal pan of a digital jeweler's scale. The screen reads "0.8g". Shallow depth of field. High-tech laboratory aesthetic. --ar 4:5

@@ -1,0 +1,228 @@
+/* EFS — Grid-Lock square 1:1. Inter. Export 1080×1080. */
+
+.root {
+  --efs-green: #1e4d2b;
+  --efs-red: #d71920;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    Inter,
+    -apple-system,
+    system-ui,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adContainer {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1;
+  background-color: #0a0a0a;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.specHeader {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.brandBox {
+  background: var(--efs-green);
+  color: #fff;
+  padding: 10px 20px;
+  border-left: 6px solid var(--efs-red);
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.projectRef {
+  color: #fff;
+  font-size: 0.6rem;
+  text-align: right;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.node {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.node1 {
+  top: 30%;
+  left: 60%;
+}
+
+.node2 {
+  top: 45%;
+  left: 20%;
+}
+
+.nodeDot {
+  width: 8px;
+  height: 8px;
+  background: var(--efs-red);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--efs-red);
+  flex-shrink: 0;
+}
+
+.nodeText {
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 2px 6px;
+}
+
+.dataDock {
+  position: relative;
+  z-index: 5;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.headlineText {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.headlineGreen {
+  color: var(--efs-green);
+}
+
+.btnAction {
+  background: var(--efs-red);
+  color: #fff;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(215, 25, 32, 0.3);
+}
+
+.btnAction svg {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+  stroke-width: 4px;
+  fill: none;
+}
+
+/* ─── 1080×1080 (×1.8) ─── */
+
+.root.canvas1080 .adContainer {
+  width: 1080px;
+  height: 1080px;
+  max-width: none;
+  aspect-ratio: auto;
+  padding: 45px;
+}
+
+.root.canvas1080 .gridOverlay {
+  background-size: 72px 72px;
+}
+
+.root.canvas1080 .brandBox {
+  padding: 18px 36px;
+  border-left-width: 11px;
+  font-size: 29px;
+}
+
+.root.canvas1080 .projectRef {
+  font-size: 19px;
+}
+
+.root.canvas1080 .node1 {
+  top: 30%;
+  left: 60%;
+}
+
+.root.canvas1080 .node2 {
+  top: 45%;
+  left: 20%;
+}
+
+.root.canvas1080 .nodeDot {
+  width: 14px;
+  height: 14px;
+}
+
+.root.canvas1080 .nodeText {
+  font-size: 19px;
+  padding: 4px 11px;
+}
+
+.root.canvas1080 .dataDock {
+  padding: 36px;
+}
+
+.root.canvas1080 .headlineText {
+  font-size: 58px;
+}
+
+.root.canvas1080 .btnAction {
+  width: 108px;
+  height: 108px;
+}
+
+.root.canvas1080 .btnAction svg {
+  width: 50px;
+  height: 50px;
+}

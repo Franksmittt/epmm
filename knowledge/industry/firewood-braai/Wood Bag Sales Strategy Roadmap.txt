@@ -1,0 +1,443 @@
+Strategic Disposition Roadmap: Accelerated Liquidation of 30-Tonne Hardwood Inventory in Gauteng
+
+1. Executive Strategic Overview
+
+The immediate and profitable disposition of 3,000 bags—equivalent to 30 tonnes—of premium African hardwood inventory within the Gauteng province represents a complex commercial undertaking that requires a sophisticated integration of supply chain logistics, regulatory compliance, and consumer psychology. The inventory, comprising high-density species such as Kameeldoring (Vachellia erioloba), Swarthaak (Senegalia mellifera), and Geel Haak (Vachellia erioloba var.), possesses intrinsic metallurgical and thermal properties that position it as a superior energy source. However, the current market dynamics in South Africa, characterized by the post-festive season liquidity crunch known as "Januworry," necessitate a deviation from standard retail distribution models.1
+
+The core value proposition of the current offer is a volume-based arbitrage: 50 bags (500kg) for R1,250.00, delivered. This effectively prices the commodity at R2.50 per kilogram, a rate that undercuts the prevailing retail market average of R60.00 to R100.00 per 10kg bag by a statistically significant margin of approximately 58% to 75%.2 While the unit economics are compelling, the minimum order quantity (MOQ) of half a tonne introduces logistical and storage friction for the average residential consumer. Consequently, the strategy must pivot from a purely Business-to-Consumer (B2C) focus to a hybrid model that heavily leverages Business-to-Business (B2B) channels, specifically independent wood-fired pizzerias and high-volume Shisa Nyama establishments, which view firewood not as a discretionary leisure purchase but as a critical operational input.3
+
+Furthermore, the operational landscape is heavily constrained by biological and environmental regulations. The movement of firewood is a primary vector for the Polyphagous Shot Hole Borer (PSHB) beetle, an invasive pest threatening South Africa's urban and natural forests.4 Simultaneously, the National Forests Act strictly regulates the transport of protected species like Kameeldoring to prevent illegal harvesting.6 Failure to adhere to these regulatory frameworks exposes the operation to existential risks, including asset seizure and criminal prosecution.
+
+This comprehensive report provides a granular, step-by-step roadmap for liquidating the 30-tonne stockpile. It synthesizes biophysical data on wood combustion, regulatory gazettes regarding pest control, and hyperlocal market intelligence on Gauteng's dining and residential sectors. By implementing a "Trust Funnel" marketing approach to counter prevalent digital scams and optimizing "last-mile" logistics through geographic clustering, this strategy aims to convert the physical inventory into liquid capital within a condensed 4 to 6-week timeframe.
+
+2. The Macro-Economic and Consumer Landscape: "Januworry" 2026
+
+To effectively structure a sales campaign of this magnitude, one must first analyze the economic environment in which the transaction will occur. January and February in South Africa are defined by specific financial behaviors driven by the misalignment of income cycles and the compounding of annual expenses.
+
+2.1 The Liquidity Trap and Inflationary Psychology
+
+The phenomenon colloquially termed "Januworry" refers to the extended period between the early December salary payments and the late January pay cycle, creating a cash-flow gap that can last up to six weeks.1 During this period, household discretionary spending is severely curtailed as funds are diverted to non-negotiable expenses such as school fees, uniforms, and debt servicing. Research from NielsenIQ's 2026 Consumer Outlook suggests that while long-term consumer optimism exists, immediate behavior is characterized by extreme caution and value-seeking.1
+
+In this context, a "luxury" item like premium braai wood is typically the first expenditure to be cut. However, the analysis reveals a critical psychological lever: the fear of inflation. South African consumers have become desensitized to gradual price increases but are hyper-reactive to opportunities for value preservation. The proposed price point of R25.00 per bag represents a massive discount against the retail forecourt price of R80.00+.1 The marketing narrative must therefore reframe the purchase. It is not an expense for a weekend leisure activity; it is an "inflation hedge." By purchasing a bulk stockpile now, the consumer effectively secures their winter energy requirements at 2020 prices, insulating themselves from the inevitable mid-year price hikes associated with winter demand and electricity tariff increases.1
+
+2.2 Energy Security as a Primary Driver
+
+The instability of the national power grid remains a persistent driver of consumer behavior. While Eskom has reported improvements in the Energy Availability Factor (EAF), the grid remains fragile, and localized infrastructure failures due to summer storms frequently leave affluent suburbs without power for extended periods.1 For households equipped with closed-combustion fireplaces or internal braai areas, firewood transcends its role as a cooking fuel and becomes a strategic energy reserve.
+
+The "Prepper" mindset, prevalent in the middle-to-upper income demographic (LSM 8-10), dictates that a household must be self-sufficient. The dense hardwoods in this inventory (Kameeldoring and Mopane) offer superior thermal efficiency compared to softwoods, acting as long-duration heat sources during blackouts.2 The sales strategy must explicitly position the 500kg load as "Energy Security Infrastructure," comparable to investing in a backup battery or solar panels, but at a fraction of the capital outlay.
+
+2.3 Fuel Price Dynamics and Logistical Implications
+
+A significant variable in the viability of the "delivered" price model is the cost of fuel. As of January 2026, the Department of Mineral Resources and Energy announced a decrease in fuel prices, with Diesel (0.05% sulphur) dropping by approximately R1.37 per litre.1 This reduction fundamentally alters the unit economics of the delivery model. With diesel prices hovering around R18.42 per litre inland, the operational cost of a 1-ton delivery vehicle is marginally reduced, improving the profit margin per kilometer.
+
+However, the "last mile" remains the most expensive component of the supply chain. Delivery vehicles in the 1-ton category typically incur running costs of R6.00 to R8.00 per kilometer when factoring in fuel, maintenance, and labor.1 A non-clustered delivery model, where a driver travels 50km for a single drop, destroys profitability. The strategy must therefore enforce strict "zoning" of deliveries—servicing Pretoria East on Tuesdays and the West Rand on Thursdays, for example—to ensure that the vehicle runs at full capacity, amortizing the fixed travel costs across multiple orders.3
+
+3. Regulatory Compliance: Biosecurity and Forestry Law
+
+The trade of firewood in South Africa operates within a tightly regulated environment designed to protect the country's biodiversity. The two primary regulatory frameworks that must be navigated are the control measures for the Polyphagous Shot Hole Borer (PSHB) and the protection of specific tree species under the National Forests Act.
+
+3.1 The Polyphagous Shot Hole Borer (PSHB) Threat
+
+The PSHB beetle (Euwallacea fornicatus) and its fungal symbiont (Fusarium euwallaceae) have caused widespread devastation to urban forests in major South African cities, including Johannesburg, George, and Knysna.4 The beetle bores into trees, introducing a fungus that blocks the vascular system, leading to dieback and death. The economic impact of unmitigated spread is estimated at R275 billion over ten years.8
+
+3.1.1 Mechanisms of Spread and Control Zones
+
+Current research indicates that the PSHB invasion in South Africa is the largest geographical outbreak of this pest globally.9 The beetle spreads primarily through the movement of infested wood, which acts as a vector transporting the pest across long distances. It has been confirmed in eight of the nine provinces, with Limpopo being the notable exception as of recent data, although this status requires constant verification.10
+
+The Department of Agriculture, Land Reform and Rural Development (DALRRD) has promulgated Control Measures under the Agricultural Pests Act, 1983 (Act No. 36 of 1983), specifically Regulation R.725 of 13 August 2021, and subsequent amendments.11 These regulations establish:
+
+Quarantine Areas: Areas where the pest is detected are declared quarantine zones.
+
+Prohibition on Movement: No user of land may remove any infested or suspected infested plant material from a demarcated area without a permit.13
+
+Destruction Orders: The executive officer has the power to order the destruction of infested plants or wood products found to be in contravention of the regulations.12
+
+3.1.2 Operational Compliance for Firewood
+
+Since the inventory originates in Thabazimbi (Limpopo), which is historically a PSHB-free or low-prevalence zone, moving it into Gauteng (a high-infestation zone) requires vigilance to ensure the wood does not become a host upon arrival or, conversely, that it is not already infested.
+
+Verification: The user must verify the specific PSHB status of the farm in Thabazimbi. If the area is PSHB-free, this serves as a massive competitive advantage and marketing tool ("Certified Beetle-Free Bushveld Wood").
+
+Inspection Protocol: Every load must be visually inspected for PSHB signs: small, perfectly round entry holes (approx. 2mm diameter, size of a sesame seed) and staining or gumming on the bark.8
+
+Treatment: If wood is suspected of infestation, it cannot be sold. It must be treated via solarization (covering with plastic sheeting in direct sun to raise temperatures above 50°C) or chipping.15 Burning infested wood is risky as beetles can fly away; solarization is the preferred method for firewood.15
+
+3.2 National Forests Act: Protected Tree Licensing
+
+Kameeldoring (Vachellia erioloba) is a protected tree species under the National Forests Act of 1998 (Act 84 of 1998).6 This status means that even dead wood cannot be harvested, transported, or sold without a valid license.
+
+3.2.1 The Licensing Requirement
+
+Section 15(1) of the Act strictly prohibits the cutting, disturbing, damaging, destroying, possessing, collecting, removing, transporting, exporting, purchasing, selling, donating, or in any other manner acquiring or disposing of any protected tree species without a license issued by the Department of Forestry, Fisheries and the Environment (DFFE).17
+
+Criminal Offense: Contravention of this section is a first-category offense. Offenders can face a fine or imprisonment for a period of up to three years.17
+
+Chain of Custody: The user, as a seller and transporter, must be in possession of a certified copy of the validity license issued to the landowner or the primary harvester.6
+
+Documentation: When transporting the wood from Limpopo to Gauteng, the driver must carry this license. The South African Police Service (SAPS) and forestry officials conduct regular roadblocks to inspect wood shipments. A "receipt of purchase" is insufficient; the actual Section 15 license is required.7
+
+3.2.2 Application Procedure
+
+If the user or their supplier does not have a current license, an application must be submitted immediately to the nearest DFFE forestry office.
+
+Forms: The application requires "Application for a Licence Regarding Protected Trees".6
+
+Supporting Documents: ID copies, proof of ownership of the land, a map with GPS coordinates of the harvesting site, and a motivation letter stating the purpose (sale of firewood).6
+
+Turnaround Time: The application process can take up to 60 working days, meaning immediate action is required if permits are not already in hand.18
+
+3.3 Municipal By-Laws and Informal Trading
+
+In addition to national laws, local municipal by-laws in Johannesburg and Tshwane regulate the sale of goods.
+
+Roadside Trading: Selling wood on the side of the road without a hawker's license is illegal in most Gauteng municipalities. The City of Johannesburg's Informal Trading By-laws prohibit trading on verges contiguous to residential buildings without consent.7
+
+Strategic Implication: The business model must strictly adhere to a delivery-only mechanism. Transactions should be concluded digitally (WhatsApp/EFT), and the physical interaction should be strictly a delivery fulfillment, avoiding the classification of "street trading."
+
+4. Product Analysis: The Science of Combustion
+
+To differentiate this inventory from the generic "garage wood" or "roadside wattle," the marketing must articulate the superior metallurgical and chemical properties of the product. The 30 tonnes of wood are not merely fuel; they are a premium energy product.
+
+4.1 The Physics of the "Blue Flame"
+
+The "Blue Flame" concept identified in the ad creative research 19 is scientifically grounded in the principles of complete combustion.
+
+Combustion Phases: Wood combustion occurs in phases. First, moisture evaporates. Second, volatile gases (hydrocarbons) are released and burn (pyrolysis). Third, the remaining carbon (charcoal) burns.
+
+The Blue Flame Mechanism: A blue flame indicates that the combustion is efficient and complete, meaning there is sufficient oxygen and high enough temperature to burn the fuel completely without producing soot (unburnt carbon), which glows yellow/orange.19
+
+The Hardwood Advantage: Kameeldoring and Mopane are exceptionally dense (>930 kg/m³) and, when sourced from the arid Kalahari or Bushveld regions, have extremely low moisture content (<2%).2 This allows the fire to reach the high temperatures required for complete combustion, reducing smoke and creosote buildup.
+
+Marketing Application: The "Blue Flame" serves as a visual proxy for dryness and density. "Yellow flames mean you are burning water and bark. Blue flames mean you are burning pure energy." This appeals to the technical pride of the "Braai Master".19
+
+4.2 Species Profiling and the "Mix" Strategy
+
+The inventory consists of a mix, which should be marketed as a curated "Bushveld Blend" rather than a random assortment.
+
+Kameeldoring (The Engine): Known as the "King of Braai Wood," it produces the longest-lasting coals. It is difficult to ignite but burns with intense, stable heat. It is the "anthracite" of the braai world.2
+
+Swarthaak (The Flavor): Senegalia mellifera creates intense heat and a distinct, smoky aroma prized for grilling meat. It complements Kameeldoring by providing the initial high heat for searing.2
+
+Geel Haak (The Filler): A solid hardwood that provides bulk and consistent burning.
+
+The "Mix" Value: Marketing the wood as a mix allows the user to educate the consumer on the "Three-Stage Fire": Use Swarthaak/Sekelbos (if available in mix) to start the fire and create aroma, and add Kameeldoring to sustain the coals for the long haul. This prevents the user from being "cherry-picked" for only the most famous species.2
+
+5. Market Segmentation and Target Audience
+
+To move 30 tonnes, the sales strategy must target consumers who have the specific combination of storage space, liquidity, and need.
+
+5.1 The "Estate Prepper" (Residential)
+
+Profile: High-Net-Worth Individuals (HNWIs) living in secure estates like Dainfern, Waterfall, Silver Lakes, and Mooikloof.2
+
+Psychographics: They fear load shedding and grid collapse. They view firewood as essential backup energy, not just leisure fuel. They have large double garages and staff to handle the stacking.
+
+Buying Trigger: Scarcity and Security. "Don't get caught in the dark this winter. Stock up now while prices are low."
+
+Value Proposition: The delivery service removes the hassle of transporting dirty wood in their luxury vehicles.
+
+5.2 The "Social Braai Master" (Residential)
+
+Profile: Men aged 30-50, owners of premium grills (Weber, Big Green Egg), active on social media.
+
+Psychographics: Driven by status and competence. They fear the embarrassment of a fire that won't light or wet wood that smokes out their guests.19
+
+Buying Trigger: Quality and Performance. "The Blue Flame" guarantee.
+
+Value Proposition: Access to "Export Grade" wood that isn't available at the local garage.
+
+5.3 The "Commercial Consumer" (B2B)
+
+Profile: Independent pizzeria owners, Shisa Nyama operators, and boutique hotels.
+
+Psychographics: Cost-conscious and operationally driven. They need consistent heat to maintain food quality and throughput.
+
+Buying Trigger: Price Arbitrage. They are likely paying R3.50 – R4.50 per kg. The offer of R2.50/kg is a direct bottom-line saving.3
+
+Value Proposition: Consistency of supply and the "dryness guarantee" which ensures their ovens maintain 400°C+ without fluctuation.
+
+6. Comprehensive Sales & Marketing Strategy
+
+The marketing strategy employs a "Trust Funnel" to overcome the skepticism inherent in the Facebook Marketplace ecosystem, utilizing visual proof and community validation.
+
+6.1 B2C: The "Trust Funnel" Digital Campaign
+
+The South African digital firewood market is rife with scams where sellers take deposits and never deliver.21
+
+Step 1: Visual Verification (The Hook):
+
+Create raw, unedited videos of the wood stockpile. Do not use stock footage.
+
+The "Ring Test": Film two logs being banged together. Dry Kameeldoring emits a sharp, ceramic "clink" or ring. Wet wood creates a dull "thud." This is auditory proof of quality.1
+
+Pareidolia Contest: Launch a "Faces in the Fire" contest on social media. Ask users to post photos of shapes they see in their fires. This boosts engagement algorithms and creates an emotional connection ("Bush TV").19
+
+Step 2: The Offer (The value):
+
+"Clearance Deal: 50 Bags (500kg) for R1,250. Delivered. COD Only."
+
+Emphasize the Cash On Delivery (COD) aspect. This is the strongest trust signal possible. "Pay only when you have inspected the wood."
+
+Step 3: Hyper-Local Targeting (The Community Drop):
+
+Utilize Facebook Community Groups (e.g., "I Love Fourways," "Pretoria East Trading").
+
+Route-Based Drops: "We are in Centurion this Tuesday. We have 4 slots left on the truck. Who wants them?" This creates scarcity and social proof.3
+
+Stokvel/Group Buying: Market to neighbors: "Too much wood for you? Split a load with your neighbor. R625 each for 250kg." This lowers the barrier to entry.1
+
+6.2 B2B: The "High Volume" Direct Sales Pivot
+
+To clear 30 tonnes quickly, retail sales must be supplemented by bulk commercial orders.
+
+The Pizza Offensive: Target independent wood-fired pizzerias.
+
+Targets: Toni's Pizza (Rietfontein) 23, Cafe 28 (Sandton - authentic Neapolitan) 24, Alfie's Pizzeria (Hazelwood) 25, Piccola Italia.26
+
+Tactic: Do not email. Visit in person between 10:00 AM and 11:00 AM (pre-service). Drop a free 10kg sample bag. Challenge the chef: "Burn this. If it's hotter than what you have, call me. I'm R1.00/kg cheaper."
+
+The Shisa Nyama "Coal" Strategy:
+
+Targets: Imbizo Shisanyama (Midrand) 27, Chaf Pozi (Soweto).28
+
+Requirement: These venues need coals that last 12 hours. Kameeldoring is ideal.
+
+Tactic: Offer a bulk "trial load" of 200kg.
+
+The "Dark Kitchen" Hubs:
+
+Targets: Dark kitchen facilities in Wynberg and Birdhaven (Sandton) often house multiple brands in one location.29
+
+Tactic: One delivery drop here can service 3-4 different restaurants, maximizing logistical efficiency.
+
+7. Operational Roadmap and Schedule
+
+This 4-week execution plan is designed to clear the stock by the end of February, capitalizing on the pre-winter "stock up" mentality.
+
+Phase 1: Compliance & Foundation (Days 1-5)
+
+Action 1 (Regulatory): Verify the PSHB status of the Thabazimbi source farm. Ensure the driver has a certified copy of the DFFE Protected Tree License for Vachellia erioloba.6
+
+Action 2 (Digital Asset Setup):
+
+Set up a WhatsApp Business account. Verify it if possible.31
+
+Update the profile with a Google Maps location of the farm/depot to build trust.1
+
+Record the "Ring Test" video and the "Stockpile Walkthrough" video.
+
+Action 3 (Route Planning): Define delivery zones.
+
+Tuesday: Pretoria East (Waterkloof/Mooikloof).
+
+Wednesday: Centurion/Midrand (Estates & Imbizo Shisanyama).
+
+Thursday: Northern Suburbs (Sandton/Fourways).
+
+Friday: East Rand.
+
+Phase 2: The Commercial Offensive (Week 2)
+
+Objective: Secure base-load volume to cover fixed costs.
+
+Action: Physical visits to top 10 independent pizzerias in the Northern Suburbs and Pretoria East.
+
+Offer: "The 500kg Drop." Price at R1,250. This is small enough for them to store but large enough to clear 5-10 tonnes if 10-20 restaurants sign up.
+
+Phase 3: The Residential "Community Drop" (Weeks 2-4)
+
+Objective: Maximize margin with residential buyers.
+
+Action: Post in Facebook community groups 48 hours before the scheduled delivery day for that zone.
+
+Copy: "CENTURION: The truck is coming Tuesday. 50 Bags Kameeldoring Mix. R1,250 delivered. COD. DM to book your slot."
+
+Action: Incentivize "Split Loads" to overcome storage objections.
+
+Phase 4: Logistics & Last Mile Optimization
+
+Vehicle: Use a 1-ton bakkie or small truck. Capacity: 100 bags (1,000kg) per trip.
+
+Efficiency Rule: Never leave the depot with less than 2 orders (1,000kg).
+
+Clustering: Ensure all deliveries for the day are within a 10km radius to keep fuel costs under R100/order.
+
+Safety: Drivers must carry a portable card machine (Yoco/iKhokha). No cash to be accepted in high-risk areas to prevent robbery.1
+
+8. Comparative Competitor Pricing Analysis
+
+To arm the sales team, a clear understanding of the price gap is essential.
+
+
+
+Competitor
+
+Product
+
+Price (per unit)
+
+Price (per kg)
+
+Service Model
+
+Your Offer
+
+50 x 10kg Mix
+
+R 25.00
+
+R 2.50
+
+Included
+
+Firewood Joburg 32
+
+32 x ~8kg Load
+
+~R 39.00
+
+~R 5.00
+
+Included
+
+The Firewood Co 33
+
+20kg Bag
+
+R 93.00
+
+R 4.65
+
+Excluded
+
+Rand Wood 34
+
+100 Bags (800kg)
+
+R 40.00
+
+R 5.00
+
+Included
+
+Retail Forecourts
+
+7-8kg Bag
+
+R 60.00 - R 80.00
+
+R 8.00+
+
+Cash & Carry
+
+Insight: The offer is approximately 50% cheaper than the nearest bulk competitor (Rand Wood/Firewood Joburg) and 70% cheaper than forecourt convenience rates. This is the primary closing argument for the "Stockpile" sales pitch.
+
+9. Conclusion
+
+Liquidation of the 30-tonne inventory requires a shift in perspective: this is not just "selling wood," it is distributing energy security. By anchoring the campaign in regulatory compliance (PSHB/Forestry permits) to ensure longevity and utilizing the "Blue Flame" science to prove quality, the brand separates itself from the informal "bakkie brigade."
+
+The critical success factor is logistical discipline. Route clustering must be enforced to protect margins, and the "Trust Funnel" (COD payment, video verification) must be strictly adhered to in order to convert skeptical online buyers. If these protocols are followed, the price point of R2.50/kg is mathematically irresistible to both the commercial pizzeria and the suburban "prepper," ensuring rapid clearance of the stock.
+
+10. Appendix: Reference Data
+
+10.1 Key Regulatory Forms & Contacts
+
+DFFE Protected Tree License: Download Form.6
+
+PSHB Reporting: Invasive.species@capetown.gov.za (for reference on national protocols).16
+
+Permit Office: DFFE Pretoria - Tel: 012 309 5700.36
+
+10.2 Target Zone Clusters
+
+Zone A (Pretoria East): Waterkloof, Mooikloof, Silver Lakes. (Target: Toni's Pizza, Forti Grill).
+
+Zone B (North): Sandton, Bryanston, Fourways, Dainfern. (Target: Cafe 28, Dark Kitchens Birdhaven).
+
+Zone C (Midrand): Waterfall Estate, Kyalami. (Target: Imbizo Shisanyama).
+
+10.3 PSHB Identification Guide for Staff
+
+Hole Size: 1-2mm (tip of a ballpoint pen/toothpick).
+
+Shape: Perfectly round.
+
+Symptoms: Wet staining ("gumming") around the hole; white powder (frass).14
+
+Action: If found, isolate wood immediately. Do not transport. Solarize under plastic for 6 weeks.15
+
+Report compiled by [Expert Persona redacted] for immediate strategic implementation.
+
+Works cited
+
+Researching Firewood Sales Strategy
+
+Wood Bag Sales and Marketing Plan
+
+Wood Sales Plan For Gauteng
+
+Polyphagous shot-hole borer | Department of Primary Industries and Regional Development, accessed January 15, 2026, https://www.dpird.wa.gov.au/businesses/pests-weeds-and-diseases/animal-pests-diseases/pest-insects/polyphagous-shot-hole-borer/
+
+The polyphagous shot hole borer beetle: Current status of a perfect invader in South Africa, accessed January 15, 2026, https://scielo.org.za/scielo.php?script=sci_arttext&pid=S0038-23532021000600013
+
+REPUBLIC OF SOUTH AFRICA - Department of Forestry, Fisheries and the Environment, accessed January 15, 2026, https://www.dffe.gov.za/sites/default/files/docs/forms/forestry/protectedtreeslicence2025.doc
+
+Notes to assist with the correct completion of application forms with regard to protected trees., accessed January 15, 2026, https://www.dffe.gov.za/sites/default/files/Pdf-Files/guidelines-and-policies/notesguidelinetocompletionof_protectedtreesform.pdf
+
+PSHB-HostedSite - FABI - University of Pretoria, accessed January 15, 2026, https://www.fabinet.up.ac.za/index.php/102-hosted-sites/pshb?start=4
+
+pshb - Forestry and Agricultural Biotechnology Institute (FABI) - University of Pretoria, accessed January 15, 2026, https://www.fabinet.up.ac.za/pshb
+
+The Polyphagous Shot Hole Borer (PSHB) and its fungus in South Africa - Forestry and Agricultural Biotechnology Institute (FABI), accessed January 15, 2026, https://www.fabinet.up.ac.za/index.php/research/7
+
+forestry, fisheries - & the environment - Department, accessed January 15, 2026, https://pmg.org.za/files/RNW2570-2022-09-08.pdf
+
+Amendment of the Control Measures relating to Polyphagous Shot Hole Borer R. 5908 of 28 February 2025 - Department of Agriculture, accessed January 15, 2026, https://nda.gov.za/images/Branches/AgricProducHealthFoodSafety/PlantProductionHealth/PlantHealth/Legislation-and-Regulations/Control-Measures-Polyphagous/amendments-of-the-control-measures-relating-to-polyphagous-shot-hole-borer-r_-5908-of-28-february-20_p21054.pdf
+
+Control Measures relating to Polyphagous Shot Hole Borer - Department of Agriculture, accessed January 15, 2026, https://www.nda.gov.za/images/outbreaks/Polyphagous%20Shot%20Hole%20Borer-PSHB/Control%20Measures%20relating%20to%20Polyphagous%20Shot%20Hole%20Borer.pdf
+
+Polyphagous Shot Hole Borer Beetle 2025 Update - Krige Tree Services, accessed January 15, 2026, https://krigetrees.co.za/polyphagous-shot-hole-borer-beetle-2025-update/
+
+Got wood? Need wood? Local is lekker. Shot. - AfrikaBurn | Invent the World Anew, accessed January 15, 2026, https://www.afrikaburn.org/leave-no-trace/got-wood-need-wood-local-is-lekker-shot/
+
+Management of Polyphagous Shot Hole Borer (PSHB), accessed January 15, 2026, https://www.dffe.gov.za/sites/default/files/docs/nisw25_22Oct25_pshbmanagement_cot.pdf
+
+Licence Regarding Protected Trees - Coast KZN, accessed January 15, 2026, https://www.coastkzn.co.za/how-do-i/apply-for-permits/licence-regarding-protected-trees/
+
+TOPS permit and registration application process for the carrying out of restricted activities in terms of the NEMBA 10 of 2004, accessed January 15, 2026, https://www.dffe.gov.za/tops-permit-and-registration-application-process-carrying-out-restricted-activities-terms-nemba-10
+
+Ad Creative Deep Dive: Vaalpenskraal Braai Mix
+
+PERMIT APPLICATION FORM - Department of Forestry, Fisheries and the Environment, accessed January 15, 2026, https://www.dffe.gov.za/sites/default/files/docs/forms/biodviersity/permitapplication_invasivespeciesregulations.pdf
+
+Beware of scammers on Facebook! : r/firewood - Reddit, accessed January 15, 2026, https://www.reddit.com/r/firewood/comments/1on08a0/beware_of_scammers_on_facebook/
+
+Tips to avoid getting scammed buying firewood - Reddit, accessed January 15, 2026, https://www.reddit.com/r/firewood/comments/1oipns6/tips_to_avoid_getting_scammed_buying_firewood/
+
+The Best Wood-Fired Pizza in Pretoria East, accessed January 15, 2026, https://discoverpretoriaeast.co.za/the-best-wood-fired-pizza-in-pretoria-east/
+
+The 24 best pizza spots in Sandton - Wanderlog, accessed January 15, 2026, https://wanderlog.com/list/geoCategory/1860992/best-pizza-spots-in-sandton
+
+The 7 Best Pizzas In Pretoria | Enjoy Travel, accessed January 15, 2026, https://www.enjoytravel.com/en/travel-news/food-and-drink/pizzas-in-pretoria
+
+Pretoria East Pizzas Restaurants - Dining-out.co.za, accessed January 15, 2026, https://www.dining-out.co.za/restaurants/Pizzas-Pretoria-East/1061-81
+
+Midrand Mall - Imbizo Shisanyama, accessed January 15, 2026, https://imbizoshisanyama.co.za/imbizo-shisanyama-midrand-mall-branch/
+
+Shisa nyama: the vibe, the food, the spirit (GL) - South African Tourism, accessed January 15, 2026, https://www.southafrica.net/gl/en/travel/article/shisa-nyama-the-vibe-the-food-the-spirit
+
+Driving directions to The Dark Kitchen (Birdhaven, JHB), 64 Wrenrose Ave, Johannesburg, accessed January 15, 2026, https://www.waze.com/live-map/directions/za/gp/johannesburg/the-dark-kitchen-(birdhaven,-jhb)?to=place.ChIJlalqj30NlR4RDWYExkImdo4
+
+Food for thought! The global rise of dark kitchens and stores | Inospace Blog, accessed January 15, 2026, https://www.inospace.com/blog/food-for-thought-the-global-rise-of-dark-kitchens-and-stores
+
+How to create a verified channel on the WhatsApp Business app, accessed January 15, 2026, https://faq.whatsapp.com/2613314448830863
+
+Firewood Johannesburg 2026, accessed January 15, 2026, https://www.firewood.joburg/
+
+The Firewood Company Cape Town | Buy Firewood Online, accessed January 15, 2026, https://thefirewoodcompany.co.za/
+
+Firewood For Sale in Roodepoort Gauteng - Rand Wood, accessed January 15, 2026, https://www.randwood.co.za/firewood-roodepoort
+
+Application for a licence regarding indigenous trees or indigenous vegetation in a natural forests - Department of Forestry, Fisheries and the Environment, accessed January 15, 2026, https://www.dffe.gov.za/sites/default/files/docs/forms/forestry/naturalforests_indigenoustrees.vegetation2025.doc
+
+Branch - FOM Home | Department of Forestry, Fisheries and the Environment, accessed January 15, 2026, https://www.dffe.gov.za/fom_home

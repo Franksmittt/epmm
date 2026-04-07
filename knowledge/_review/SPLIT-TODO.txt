@@ -1,0 +1,8 @@
+Batch 2+ — files that may need IN-FILE splitting (same doc talks to both Miwesu + Vaalpenskraal with different angles):
+
+- Review anything under industry/firewood-braai/ that names both brands or uses “we” ambiguously.
+- After splitting, move extracts into clients/miwesu/wood or clients/vaalpenskraal/wood (or farm folders).
+
+Near-duplicate titles (e.g. “Aggressive SEO…” .txt vs “(docx).txt” vs “(1).txt”): diff and merge when you have time.
+
+Game farm vertical: no dedicated farm docs were in batch 1 — add Miwesu Farm / Vaalpenskraal Farm research into clients/*/farm/ as you create it.

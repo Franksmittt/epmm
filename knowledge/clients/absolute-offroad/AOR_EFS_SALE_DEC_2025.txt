@@ -1,0 +1,135 @@
+02.12.25📞 Part 1: Revised Facebook Ad Objective & Copywriting
+
+We will pivot the Facebook objective to Engagement (specifically Messages) or Lead Generation using a pre-filled contact form, and ensure the Call-to-Action (CTA) is direct and immediate.
+
+Ad Objective & Copywriting (Call/WhatsApp Focus)
+
+Component
+
+Content
+
+Rationale
+
+Campaign Objective
+
+Messages (for direct WhatsApp chat) or Traffic (optimized for the Call/WhatsApp CTA).
+
+Bypasses the website entirely to drive immediate, low-friction contact.
+
+Primary Text (Above Cards)
+
+LC79 Owners: Stop Scrolling. The EFS Suspension Sale is LIVE. 🇿🇦 Upgrade your Land Cruiser for the bush TODAY. Our Alberton specialists are standing by on WhatsApp right now to quote your Elite, XTR, or Xtreme Series kit. This sale is limited time. Don't miss out!
+
+Uses urgency ("TODAY," "limited time") and explicitly names the platform ("WhatsApp") and the location ("Alberton specialists") to build trust and immediate action.
+
+Call-to-Action (CTA)
+
+"Send Message" (Connects directly to WhatsApp) or "Call Now" (using your 079 507 0901 number).
+
+Maximizes direct communication with the customer, positioning you as the "expert service partner".
+
+Carousel Card Sequencing (Refined for Call/WhatsApp)
+
+Keep the sequence for the visual impact, but ensure the description points directly to the action.
+
+Card
+
+Image
+
+Headline
+
+Description
+
+1 (Hook)
+
+LC79 Lifestyle Shot
+
+LC79 EFS Suspension SALE!
+
+Don't wait! WhatsApp your vehicle details for a direct quote.
+
+2 (Value)
+
+Price Comparison Card
+
+ELITE Series: Save R6,880!
+
+35mm Bore. Perfect for daily use. Call 079 507 0901 now to lock in this price.
+
+3 (Upsell)
+
+Price Comparison Card
+
+XTREME Series: Our Toughest Kit
+
+45mm Bore. Built for your heavy Land Cruiser. We handle the logistics. Call or WhatsApp.
+
+4 (Action)
+
+EFS Logo Card
+
+Absolute Offroad: LC79 Experts
+
+28 St Columb Rd, Alberton. Call/WhatsApp: 079 507 0901 for guaranteed fitment availability.
+
+🎯 Part 2: Low-Budget Targeting for Maximum Local Impact
+
+The targeting remains hyper-focused on the high-value Land Cruiser Purist within your 50 km operational radius.
+
+1. Geo-Targeting: The 50 km Radius
+
+Action: Set the target location to a 50 km radius around 28 St Columb Rd, Alberton, 1449.
+
+Crucial Refinement: Select "People who live in this location" to avoid wasting budget on tourists or commuters who are just passing through.
+
+2. Detailed Targeting: Precision Over Volume
+
+Focus your limited budget on the interests that prove the customer owns the vehicle and is ready to modify it.
+
+Targeting Category
+
+Specific Interests / Behaviors
+
+Rationale
+
+Vehicle Owners (Highest Intent)
+
+Toyota Land Cruiser (must-have), Toyota Land Cruiser 70 Series (extremely high-value target).
+
+This customer segment has the budget (less price-sensitive) and prioritizes absolute reliability.
+
+Suspension/Parts Research
+
+Old Man Emu (OME) (primary competitor for EFS), 4x4 Community (major SA forum), 4x4 Accessories, Off-roading.
+
+Captures people actively comparing premium suspension brands and seeking technical information.
+
+Affluence & Lifestyle
+
+Luxury Goods (as an income proxy), Safari or Overlanding, Frequent International Travelers (high disposable income/touring interest).
+
+LC79 owners are highly valuable and their purchase is driven by a high-value lifestyle.
+
+Demographics
+
+Age: 35-65+ ("The Oom" Purist). Gender: Male.
+
+Ensures your budget is not spent on demographics less likely to own or modify this specific, high-cost vehicle.
+
+3. Maximum-Impact Budgeting: The "Rank ASAP" Local Strategy
+
+The core principle here is to out-target the competition on local intent, which is cheaper than national brand awareness.
+
+Split Test (If Budget Allows): Use a small daily budget (e.g., R250/day) split between two Ad Sets:
+
+Ad Set A (LC79 Purist): Land Cruiser + Old Man Emu + 4x4 Community.
+
+Ad Set B (High-Value Bakkies): Toyota Hilux + Ford Ranger + Ironman 4x4.
+
+The LC79 owner is the least price-sensitive and is the goal of "The Purist" segmentation, so focus most of your energy here.
+
+Monitor Performance: After 48 hours, look for the Ad Set with the lowest Cost Per Message/Call. Immediately reallocate 80% of your remaining budget to the winner.
+
+Frequency Cap: Ensure your campaign is set to optimize for reach with a tight frequency cap (e.g., no more than 3-4 impressions per person per week). This prevents the ad from annoying your hyper-local, high-value audience, which is critical for local trust.
+
+Integration of the Address: By prominently featuring your Alberton address and phone number, the ad legitimately ranks for high-intent, local service-based keywords (e.g., "Land Cruiser Suspension Fitment Pretoria" or "LC79 suspension Alberton") without requiring the website, directly challenging high-trust local specialists.

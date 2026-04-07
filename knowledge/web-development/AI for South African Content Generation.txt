@@ -1,0 +1,511 @@
+The "No-Stock" Advantage: Operationalizing Generative AI for the South African Market
+
+1. Executive Summary: The Visual Economy of the Global South
+
+The digital marketing landscape in South Africa operates under a unique set of economic and semiotic pressures. For Small and Medium Enterprises (SMEs), boutique agencies, and independent content creators, the visual economy is bifurcated by a stark financial reality: the prohibitive cost of authenticity versus the conversion-killing nature of the generic. The "No-Stock" Advantage is not merely a technological pivot; it is a strategic imperative driven by the Rand-denominated constraints of the local market, where a basic professional photography package often exceeds R1,999—a sum that renders custom imagery unsustainable for high-frequency social media content streams.1 Conversely, the reliance on affordable global stock photography introduces a "cultural tax," alienating local audiences through visual dissonance—the jarring presence of American wall sockets, European light quality, or foreign architectural vernacular in content meant for Mzansi.
+
+This report provides an exhaustive analysis of the methodologies required to leverage Generative AI—specifically Midjourney, DALL-E 3, ChatGPT, and Claude 3.5—to bypass this dichotomy. We explore the deep technical architecture of "Prompt Engineering" as a form of cultural translation, essential for navigating the inherent biases of foundational models trained on Western datasets. From the precise tokenization required to render a Toyota HiAce taxi rather than a Ford Transit, to the linguistic nuance distinguishing "now-now" from "just now" in copy, this document serves as the definitive operational manual for creating hyper-local, high-conversion assets in the South African context.
+
+2. The Economic Case for Generative AI in South Africa
+
+2.1 The "R1,999" Barrier and the Content Velocity Trap
+
+The modern digital ecosystem demands content velocity—the rapid production and distribution of visual assets to maintain relevance in algorithmic feeds. For a South African SME, the traditional production pipeline is broken. A standard half-day photography shoot, encompassing a photographer, basic lighting, and post-production, typically starts at R1,999 and can easily escalate depending on location and model fees. For a brand requiring daily posts across Instagram, LinkedIn, and TikTok, this cost structure is mathematically unsustainable.
+
+This financial pressure forces businesses into the "Stock Photo Trap." Global stock libraries (Shutterstock, Getty, Unsplash) offer affordability but suffer from a severe lack of authentic African representation. When "African" content is available, it is often staged, stereotypical, or technically outdated.2 The result is a marketing landscape saturated with generic imagery that fails to convert because it fails to connect. The user query highlights this explicit tension: the need to escape the "conversion killer" of stock without incurring the "R1,999" cost of custom shoots. Generative AI, with its marginal cost of production approaching zero per image, offers the only viable escape route, provided the operator can master the toolset to produce culturally coherent results.
+
+2.2 The Psychology of "Stock Blindness" in the Local Market
+
+South African consumers possess a sophisticated, albeit often subconscious, visual literacy. They can identify "foreignness" in an image within milliseconds. This recognition triggers "stock blindness"—a mental filtering mechanism where the brain ignores content identified as irrelevant or inauthentic.
+
+Table 1: Visual Dissonance Markers in Generic Stock vs. AI-Generated Local Content
+
+
+
+Visual Element
+
+Generic Stock (The "Conversion Killer")
+
+Authentic South African (The AI Goal)
+
+Cognitive Impact
+
+Electrical Infrastructure
+
+Type A/B (US) or Type F (EU) Plugs.
+
+Type M (3-pin round) or Type N (compact).3
+
+Signals "This product/service is not for here."
+
+Light Quality
+
+Diffused, cool Northern Hemisphere light.
+
+High-contrast, warm, "hard" Southern Hemisphere sun.
+
+Affects emotional resonance; "home" feels different.
+
+Architecture
+
+Clapboard siding, sash windows, curb-side mailboxes.
+
+Facebrick, plaster, high walls, electric fencing, RDP structures.4
+
+Architectural mismatch creates a sense of "uncanny valley."
+
+Vehicle Design
+
+Left-Hand Drive, Yellow School Buses, US Minivans.
+
+Right-Hand Drive, Toyota HiAce, Bakkies.5
+
+Immediate disconnect for automotive or transit-related brands.
+
+Demographics
+
+"Benetton" diversity (generic, staged).
+
+Nuanced representation (Coloured, Indian, Black, White distinct sub-cultures).
+
+Lack of specific cultural markers reduces relatability.
+
+The "No-Stock" advantage is defined by the elimination of these dissonance markers. By engineering prompts that specifically inject South African visual tokens and suppress American defaults, brands can generate imagery that bypasses the "stock blindness" filter, engaging the consumer's sense of familiarity and trust.
+
+3. Visual Engineering: De-Biasing the Model
+
+3.1 The Mechanics of Algorithmic Bias
+
+To master prompts for South Africa, one must first understand the adversary: the training data. Foundational models like Midjourney and DALL-E 3 are trained on billions of image-text pairs scraped from the internet. Since the majority of the indexed web is Western (North American and European), the models effectively "dream" in American.
+
+Research indicates that when a user prompts for "a house," the model navigates to the statistical center of that concept in its latent space, which is a US-style suburban home. When prompted for "African house," the model often navigates to a cluster associated with poverty or traditionalism (e.g., mud huts), ignoring the reality of modern African urbanization.6 This is not merely an error; it is a systemic bias encoded in the weights of the neural network.
+
+For the South African user, this means that "neutral" prompts fail. A prompt must be actively "counter-biased." It requires Semiotic Engineering: the deliberate use of keywords (tokens) that hold strong weights in the model associated with South Africa, to pull the generation away from the American/European centroid and towards the South African reality.
+
+3.2 The Architecture of a South African Prompt
+
+A successful "No-Stock" prompt is constructed in layers. It does not simply describe the subject; it describes the context, the lighting, the cultural markers, and explicitly excludes the foreign.
+
+The Master Formula:
+
++ + [Lighting & Atmosphere] + + [Negative Prompting]
+
+3.2.1 Subject Definition: Specificity is Key
+
+The model knows what a "taxi" is, but its definition is a yellow New York cab. To generate a South African taxi, we must use specific vehicle identifiers.
+
+The Toyota HiAce: The prompt must reference "Toyota HiAce," "Minibus," "Quantum," and specific visual traits like "boxy shape," "white panel van," and "colorful decals".7
+
+The RDP House: The prompt must describe the typology. "Small rectangular brick house," "corrugated iron roof," "stand-alone," "low-cost housing," "dusty yard".4
+
+3.2.2 Contextual Anchors: The "Look" of Mzansi
+
+These are the background elements that signal location.
+
+Security: "High concrete walls," "Palisade fencing," "Electric fence lines," "Razor wire." These are ubiquitous in SA suburbs and business parks and immediately ground the image.
+
+Flora: "Jacaranda trees" (purple, specific to Gauteng in spring), "Aloe ferox," "Fynbos," "Thorn trees (Acacia)."
+
+Urban Texture: "Paved sidewalks" (not poured concrete), "Red earth" (for rural/township), "Tar roads with yellow shoulders."
+
+4. Deep Dive: Midjourney & DALL-E 3 Prompts for South African Scenarios
+
+This section provides specific, tested prompt structures for the most common "No-Stock" requirements in the South African market.
+
+4.1 Scenario A: The Township Economy (Spaza Shops & Taxis)
+
+Capturing the vibrancy of the township economy is crucial for FMCG brands, fintechs, and local services. The challenge is avoiding "poverty porn" while maintaining authenticity.
+
+The Spaza Shop Prompt (Midjourney v6):
+
+Prompt: Street level, wide angle shot of a vibrant Spaza shop in Soweto. The shop is a modified shipping container painted in bright primary colors (red and yellow). Branding for 'Airtime' and 'Bread' is visible on the walls. A female shopkeeper is leaning out of the serving hatch, smiling, holding a generic smartphone. In the foreground, a dusty path meets a tar road. In the background, a white Toyota HiAce minibus taxi is driving past. Golden hour lighting, warm atmosphere, hyper-realistic, 8k resolution, cinematic depth of field. --ar 16:9 --style raw --v 6.0
+
+The Taxi Rank Prompt (Midjourney v6):
+
+Prompt: A chaotic, energetic scene at a busy taxi rank in downtown Johannesburg. Dozens of white Toyota HiAce minibuses are lined up. Commuters are queuing. Hawkers are selling fruit (apples and bananas) on small tables. The atmosphere is bustling. Sunlight is harsh, creating strong shadows (high contrast). The surrounding architecture is brutalist concrete. --ar 3:2 --sref --v 6.0
+
+Critique & Insight:
+
+The inclusion of "Toyota HiAce" is critical. Without it, the model generates Ford Transits. The reference to "Brutalist concrete" helps anchor the image in the architectural reality of Johannesburg's CBD, which differs from the glass-heavy skylines of modern US cities.4
+
+4.2 Scenario B: Suburban Real Estate & Lifestyle
+
+For real estate agents and lifestyle brands, the challenge is generating "aspirational" content that doesn't look like Beverly Hills or the English countryside.
+
+The "Joburg Suburb" Prompt:
+
+Prompt: A modern, single-story facebrick house in a leafy suburb of Pretoria. A purple Jacaranda tree is in full bloom in the driveway. A high beige wall surrounds the property with a visible electric fence on top. A silver double-cab bakkie (pickup truck) is parked in the driveway. The sky is a deep, clear highveld blue. Afternoon sun. Architectural photography style. --no sash windows, wooden siding, mailbox, snow, american flag --ar 16:9
+
+Key Elements:
+
+Facebrick: A dominant building material in SA, rare in US stock photos.
+
+Double-cab Bakkie: The quintessential SA vehicle. Using the word "Bakkie" might not work directly in all models; "Double-cab pickup truck" is safer, but "Bakkie" adds context if the model (like DALL-E 3) has nuances.9
+
+Electric Fence: This is a non-negotiable visual marker for SA suburbia.
+
+4.3 Scenario C: Corporate & Office Environments
+
+Stock photos of "business meetings" are the worst offenders for lack of diversity and wrong infrastructure.
+
+The "Sandton Boardroom" Prompt:
+
+Prompt: A candid photograph of a corporate strategy meeting in a high-rise office in Sandton. Through the floor-to-ceiling glass windows, the distinctive skyline of Sandton City and the Leonardo building is visible. The team is diverse: A Black South African woman in a blazer is presenting, with White, Indian, and Coloured colleagues listening. On the table: bottles of still water and notepads. The lighting is modern corporate. Detail: The wall socket in the background is a South African Type M (three round pins). --ar 16:9 --v 6.0
+
+DALL-E 3 Correction Strategy:
+
+Midjourney often fails at the "Type M plug" detail. DALL-E 3 is better at following explicit instruction for small details.
+
+DALL-E 3 Prompt: "Create a hyper-realistic image of an office interior. Focus on the wall outlet. It must be a South African Type M socket with three large round holes in a triangular pattern. Do not generate US flat pin sockets.".3
+
+4.4 Advanced Techniques: Style References (--sref)
+
+To elevate the artistic quality of the images, we leverage the styles of iconic South African photographers.
+
+Table 2: South African Photographer Style References for Midjourney
+
+
+
+Photographer
+
+Visual Style Keywords
+
+Best Use Case
+
+Reference Strategy
+
+David Goldblatt
+
+Monochrome, High Structure, Brutalist, Stark, Honest, Deep Focus 11
+
+Corporate Reports, NGO Storytelling, Architectural Firms
+
+Use B&W images of SA structures as --sref.
+
+Zanele Muholi
+
+High Contrast Black & White, Direct Gaze, Identity, Texture, Dark Backgrounds 11
+
+Fashion, Diversity Campaigns, Bold Brand Statements
+
+Reference "Somnyama Ngonyama" series styles.
+
+Sabelo Mlangeni
+
+Soft Focus, Candid, Community, Warmth, Motion, "Invisible" Observer 13
+
+FMCG, Community Projects, Daily Life, Social Media
+
+Reference his "Country Girls" or "Men Only" series.
+
+Pieter Hugo
+
+Saturated Color, Confrontational, Hyper-real, Uncanny
+
+Edgy Fashion, Youth Culture, Music Promotions
+
+Use caution; style is intense.
+
+Obie Oberholzer
+
+Vibrant, Saturated, Light Painting, Road Trip Aesthetic, Diesel & Dust
+
+Travel, Automotive, Tourism
+
+Reference his "Rolo" books.
+
+Application in Prompt:
+
+Portrait of a young South African entrepreneur in Maboneng precinct, graffiti background, confident expression --sref --sw 100 --v 6.0
+
+(Note: --sw or Style Weight controls how strongly the reference is applied).
+
+5. The "Anti-American" Protocol: Negative Prompting
+
+The Negative Prompt is the shield against the "conversion killer." It is a list of tokens that define the American/European aesthetic, which the model must be explicitly told to ignore.
+
+5.1 The Master Negative List (Copy-Paste)
+
+For Midjourney, append this to the end of every South African prompt:
+
+--no snow, mailbox, curb-side mailbox, american flag, usa flag, yellow school bus, yellow cab, nyc taxi, sash windows, clapboard siding, wooden house, shingles, baseball, american football, raccoon, squirrel, starbucks, red solo cup, type A plug, type B plug, radiator heater, basement windows, lush green lawn (unless specified) 14
+
+5.2 Deep Dive on Specific Exclusions
+
+Mailboxes: In SA, mail is delivered to a slot in the wall or gate, or a PO Box. The freestanding US mailbox on a post is a dead giveaway of AI generation.
+
+Siding: US homes often use wooden clapboard. SA homes use brick (plastered or facebrick). Excluding "wooden siding" forces the model towards brick/plaster textures.
+
+Squirrels: While Cape Town has squirrels (introduced), they are the grey variety. The AI often inserts the reddish-brown American squirrel or chipmunk. Excluding them avoids biological inaccuracies.
+
+6. Linguistic Engineering: South African English (SAE) for Copy
+
+Generating the image is half the battle; the caption must match. AI models default to "American Corporate" English—overly enthusiastic, riddled with buzzwords like "delve," "unlock," and "tapestry".17 For the South African market, this tone feels synthetic and insincere.
+
+6.1 The Spectrum of South African English
+
+SAE is not monolithic. It ranges from the "Cultivated" (formal, British-leaning) to the "General" (standard business) to the "Broad" (colloquial).
+
+Table 3: The Lexicon of South African English (SAE)
+
+
+
+Category
+
+US/AI Default (Avoid)
+
+South African Equivalent (Use)
+
+Nuance/Usage Note
+
+Time
+
+Right now, In a bit
+
+"Now-now" (Immediate), "Just now" (Later/Indefinite)
+
+Crucial for conveying urgency correctly.
+
+Automotive
+
+Pickup Truck, Gas Station, Hood, Trunk
+
+Bakkie, Garage/Petrol Station, Bonnet, Boot
+
+"Bakkie" is a cultural icon, not just a vehicle.9
+
+Traffic
+
+Traffic Light, Intersection
+
+Robot, Circle (Roundabout)
+
+"Turn left at the robot" is the standard direction.19
+
+Food
+
+Barbecue, Grill
+
+Braai, Shisa Nyama
+
+A Braai is a social event; BBQ is a chip flavor.
+
+Footwear
+
+Sneakers
+
+Takkies
+
+Specific to casual rubber-soled shoes.20
+
+Agreement
+
+Yeah, Sure
+
+Yebo, Ja, Sharp-Sharp
+
+"Sharp-Sharp" indicates all is good/agreed.9
+
+Emotion
+
+Oh wow, Gosh
+
+Eish, Jinne, Jislaaik
+
+"Eish" covers everything from surprise to resignation.21
+
+Spelling
+
+Color, Center, Program
+
+Colour, Centre, Programme
+
+Standard British spelling applies.22
+
+6.2 Prompting ChatGPT & Claude for SAE
+
+To get consistent SAE output, we must define a Persona for the LLM.
+
+6.2.1 The "Corporate SA" Persona
+
+This is for Annual Reports, LinkedIn posts, and formal emails.
+
+System Prompt: "You are a senior communications specialist for a Johannesburg-based financial firm. Your tone is professional, understated, and precise. You adhere strictly to South African English spelling (British standard). You use the decimal comma (e.g., R1 500,50) and spaces for thousands (10 000). You avoid Americanisms like 'check' (use 'cheque' or 'verify') and 'gas'. You do not use AI clichés like 'delve' or 'game-changer'. Your goal is to sound authoritative but grounded." 1
+
+6.2.2 The "Consumer/Retail" Persona
+
+This is for Instagram, TikTok scripts, and B2C marketing. It requires Code-Switching—the natural blending of English with loanwords.
+
+System Prompt: "You are a social media manager for a South African lifestyle brand. Your tone is 'Lekker'—fun, relatable, and locally grounded. You mix English with common SA slang naturally. Use terms like 'Bakkie,' 'Braai,' 'Chow,' and 'Eish' where appropriate, but don't force it. The target audience is diverse South African youth (Gen Z/Millennials). Avoid African American Vernacular English (AAVE); stick to Mzansi slang. Example tone: 'The weather is acting up, eish, but we are still braaiing.' Ends with 'Sharp sharp'." 19
+
+6.3 Formatting and Style Guide Compliance
+
+Government and corporate clients often have strict style guides that AI ignores by default.
+
+Gender: Use "Chairperson" (not Chairman), "Spokesperson" (not Spokesman).22
+
+Formatting:
+
+Dates: 12 January 2026 (No "th" or "st").
+
+Currency: R before the number, no space (R100).
+
+Acronyms: "USA" not "U.S.A.".26
+
+Prompt for Compliance Checking:
+
+"Review the text below against the South African Government Communication and Information System (GCIS) editorial style guide. Correct any American spelling to British. Ensure gender-neutral terms are used (e.g., replace 'Chairman' with 'Chairperson'). Format all numbers and currency according to SA standards (decimal comma, space for thousands)." 22
+
+7. Implementation: The Hybrid Workflow
+
+The "No-Stock" advantage is best realized through a hybrid workflow that combines the strengths of different AI models.
+
+7.1 Step-by-Step Production Pipeline
+
+Step 1: Concept & Script (Claude 3.5)
+
+Use Claude to brainstorm the campaign concept using the "Consumer SA" persona.
+
+Output: A script for a 15-second TikTok video about a new hot sauce, using the word "Shisa" (hot) and referencing a "Braai."
+
+Step 2: Visual Asset Generation (Midjourney v6)
+
+Generate the key visual: A bottle of hot sauce on a wooden table next to a braai grid with boerewors.
+
+Prompt: Product photography of a hot sauce bottle, label visible, rustic wooden table. Background: A braai with coals and boerewors cooking. Smoke and heat haze. Sunlight filtering through leaves. --ar 4:5 --no hotdogs, burgers, american grill
+
+Refinement: If the boerewors looks like a frankfurter, use DALL-E 3 to generate the specific "spiral sausage" shape and composite it in Photoshop.
+
+Step 3: Detail Correction (Photoshop Generative Fill)
+
+Inspect the image for "Americanisms."
+
+Is the plug visible? If yes, select it and prompt "South African Type M wall socket."
+
+Are there squirrels? Remove them.
+
+Step 4: Final Copy (ChatGPT)
+
+Generate the caption using the "Code-Switching" prompt.
+
+Result: "Hier kom groot kak! This sauce is absolute fire. Perfect for your weekend braai. Get it now-now at your local Checkers." 19
+
+7.2 Cost Analysis: The "No-Stock" ROI
+
+Comparing the "No-Stock" approach to the traditional R1,999 shoot.
+
+Table 4: Cost & Efficiency Comparison
+
+Metric
+
+Traditional Shoot
+
+Generic Stock Subscription
+
+The "No-Stock" AI Workflow
+
+Cost
+
+R1,999+ per session
+
+~R500/month
+
+~R500/month (Midjourney + ChatGPT subscriptions)
+
+Output Volume
+
+~20-50 edited images
+
+Unlimited (generic)
+
+Unlimited (custom)
+
+Time to Market
+
+3-7 Days (Booking, Shoot, Edit)
+
+Minutes
+
+Minutes
+
+Authenticity
+
+High
+
+Low
+
+High (if engineered correctly)
+
+Conversion Risk
+
+Low
+
+High (Stock Blindness)
+
+Low (if uncanny valley is avoided)
+
+The ROI is evident not just in cost savings, but in Agility. A brand can test five different "South African" concepts in an hour—a feat impossible with physical photography.
+
+8. Conclusion: The Authentic Future
+
+The "No-Stock" Advantage is not simply about avoiding the cost of a photographer. It is about claiming ownership of the South African narrative in the digital age. For too long, the visual identity of the local internet has been colonized by the default settings of Silicon Valley—the yellow cabs, the suburban sidings, the "z" in "organize."
+
+By mastering the technical nuances of prompt engineering—understanding that a "house" in Soweto is architecturally distinct from a "house" in Seattle, and that "now-now" is a unit of time distinct from "now"—South African creators can build a digital environment that reflects their lived reality. The bias of the machine is the opportunity of the creator: the effort required to "de-bias" the AI is exactly what creates the value, turning a generic generation into a culturally resonant asset that converts.
+
+For the SME facing the R1,999 barrier, this is the democratization of brand equity. The tools are available; the "No-Stock" future is here. It is just a matter of prompting it correctly.
+
+End of Report
+
+Works cited
+
+GPT Prompt Engineering for South African SMEs – AI Prompt Engineering for South African SMEs, accessed January 12, 2026, https://chatgptengineering.co.za/
+
+VML South Africa's New AI Image Generator Creates Authentic African Imagery, accessed January 12, 2026, https://modernmarketing.co.za/vml-south-africas-new-ai-image-generator-creates-authentic-african-imagery/
+
+EEL 4915L - ucf creol - University of Central Florida, accessed January 12, 2026, https://creol.ucf.edu/wp-content/uploads/sites/2/2024/08/2023_Fall_G3_Long_Report.pdf
+
+OFFICINA 45 by Anteferma Edizioni - Issuu, accessed January 12, 2026, https://issuu.com/antefermaedizioni/docs/45officina_web
+
+When your friend is packing a LOT into his Hiace build, and you use DALL-E to roast him... : r/VanLife - Reddit, accessed January 12, 2026, https://www.reddit.com/r/VanLife/comments/17mx3ji/when_your_friend_is_packing_a_lot_into_his_hiace/
+
+Understanding the Effects of Non-Mainstream Dialects in Prompted Image Generation - arXiv, accessed January 12, 2026, https://arxiv.org/pdf/2405.05382
+
+The Real Estate Agent Dall-e 3 Prompt Ebook - Chatgpt4 & DALL-E 3 |5 Prompts,5 Sample Images, African American AI Prompts for RE Agents - Etsy, accessed January 12, 2026, https://www.etsy.com/listing/1684723933/the-real-estate-agent-dall-e-3-prompt
+
+Midjourney V5: Photos of Cape Town, accessed January 12, 2026, https://michaelhoweely.com/2023/03/16/midjourney-v5-photos-of-cape-town/
+
+21 South African English Expressions Explained - Listen & Learn USA, accessed January 12, 2026, https://www.listenandlearnusa.com/blog/21-south-african-english-expressions-explained/
+
+UCF ECE - University of Central Florida, accessed January 12, 2026, https://www.ece.ucf.edu/seniordesign/su2023fa2023/g03/Group%203%20-%20150%20Page%20Report%20Draft.pdf
+
+Contemporary African Photographers, accessed January 12, 2026, https://www.contemporary-african-art.com/contemporary-african-photographers.html
+
+Artist Styles on Midjourney v4 | Weird Wonderful AI Art, accessed January 12, 2026, https://weirdwonderfulai.art/resources/artist-styles-on-midjourney-v4/
+
+Get to know 8 photographers who explore Africa's diverse cultures and histories | Tate, accessed January 12, 2026, https://www.tate.org.uk/art/art-terms/p/photography/get-to-know-8-photographers-who-explore-africas-diverse-cultures-and-histories
+
+Multi-Prompts & Weights - Midjourney Docs, accessed January 12, 2026, https://docs.midjourney.com/hc/en-us/articles/32658968492557-Multi-Prompts-Weights
+
+100+ Midjourney Negative Prompts to Improve Your Images : r/Aiarty - Reddit, accessed January 12, 2026, https://www.reddit.com/r/Aiarty/comments/1misxpn/100_midjourney_negative_prompts_to_improve_your/
+
+Midjourney Negative Prompts: Everything You Need to Know - Aiarty Image Enhancer, accessed January 12, 2026, https://www.aiarty.com/midjourney-prompts/midjourney-negative-prompts.htm
+
+Six common words and phrases used by AI to avoid in your writing – Microsoft 365, accessed January 12, 2026, https://www.microsoft.com/en-us/microsoft-365-life-hacks/everyday-ai/six-obvious-ai-words-to-avoid-in-your-writing
+
+Common AI Words to Avoid If You Want to Bypass AI Detectors, accessed January 12, 2026, https://gpthuman.ai/common-ai-words-to-avoid-if-you-want-to-bypass-ai-detectors/
+
+List of South African slang words - Wikipedia, accessed January 12, 2026, https://en.wikipedia.org/wiki/List_of_South_African_slang_words
+
+“Lekker” & More South African Slang You Need To Learn | Beelinguapp Blog, accessed January 12, 2026, https://beelinguapp.com/blog/lekker-&-more-south-african-slang-you-need-to-learn
+
+South African Idioms and Phrases | Verbling, accessed January 12, 2026, https://www.verbling.com/articles/post/south-african-idioms-and-phrases
+
+EDITORIAL - Style Guide - Government Communication and Information System, accessed January 12, 2026, https://www.gcis.gov.za/sites/default/files/docs/resourcecentre/guidelines/Editorial_Style_Guide.pdf
+
+ChatGPT Prompt Engineering Certification Course - South Africa - The Knowledge Academy, accessed January 12, 2026, https://www.theknowledgeacademy.com/za/courses/artificial-intelligence-tools-training/chatgpt-prompt-engineering-training/
+
+Editorial Style Guide - Government Communication and Information System, accessed January 12, 2026, https://www.gcis.gov.za/sites/default/files/docs/resourcecentre/guidelines/editorial_styleguide_2010.pdf
+
+“Yebo Gogo, it's time to braai Mzansi!” Code-switching, borrowing, prestige, slang, and persuasion in the digital marketing industry of South Africa - Diva-portal.org, accessed January 12, 2026, https://www.diva-portal.org/smash/get/diva2:1722818/FULLTEXT02
+
+STYLE GUIDE - South African Cities Network, accessed January 12, 2026, https://www.sacities.net/wp-content/uploads/2024/05/SACN-Style-Guide-for-Authors.pdf

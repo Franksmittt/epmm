@@ -1,0 +1,275 @@
+/* Alberton Tyre Clinic — Apex Interface vertical 9:16. Base 450×800 → 1080×1920. */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --emergency-orange: #ff5500;
+  --neon-teal: #00e5ff;
+  --glass-bg: rgba(10, 10, 12, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow:
+    0 0 0 1px #222,
+    0 30px 60px rgba(255, 85, 0, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dynamicIsland {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background: #000000;
+  border: 1px solid var(--glass-border);
+  padding: 8px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+.islandDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--neon-teal);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--neon-teal);
+  flex-shrink: 0;
+}
+
+.islandText {
+  color: var(--pure-white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.centerReticle {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.centerReticle::before,
+.centerReticle::after {
+  content: "";
+  position: absolute;
+  background: var(--emergency-orange);
+  opacity: 0.7;
+}
+
+.centerReticle::before {
+  top: -10px;
+  bottom: -10px;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+}
+
+.centerReticle::after {
+  left: -10px;
+  right: -10px;
+  top: 50%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.bottomConsole {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: var(--glass-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-top: 1px solid var(--glass-border);
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dataBadges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 85, 0, 0.4);
+  color: var(--emergency-orange);
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.headline {
+  color: var(--pure-white);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 90%;
+}
+
+.btnWide {
+  background: var(--pure-white);
+  color: var(--pure-black);
+  width: 100%;
+  padding: 18px 0;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ─── 1080×1920 (×2.4) ─── */
+
+.root.canvas1080x1920 .adCanvas {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080x1920 .dynamicIsland {
+  top: 60px;
+  padding: 19px 48px;
+  border-radius: 72px;
+  gap: 29px;
+}
+
+.root.canvas1080x1920 .islandDot {
+  width: 19px;
+  height: 19px;
+}
+
+.root.canvas1080x1920 .islandText {
+  font-size: 26px;
+  letter-spacing: 5px;
+}
+
+.root.canvas1080x1920 .centerReticle {
+  width: 528px;
+  height: 528px;
+}
+
+.root.canvas1080x1920 .centerReticle::before {
+  top: -24px;
+  bottom: -24px;
+}
+
+.root.canvas1080x1920 .centerReticle::after {
+  left: -24px;
+  right: -24px;
+}
+
+.root.canvas1080x1920 .bottomConsole {
+  border-top-left-radius: 84px;
+  border-top-right-radius: 84px;
+  padding: 84px 72px;
+}
+
+.root.canvas1080x1920 .dataBadges {
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.root.canvas1080x1920 .badge {
+  font-size: 22px;
+  padding: 14px 29px;
+  border-radius: 48px;
+}
+
+.root.canvas1080x1920 .headline {
+  font-size: 115px;
+  letter-spacing: -4px;
+  margin-bottom: 29px;
+}
+
+.root.canvas1080x1920 .subtext {
+  font-size: 34px;
+  margin-bottom: 72px;
+}
+
+.root.canvas1080x1920 .btnWide {
+  padding: 43px 0;
+  border-radius: 48px;
+  font-size: 34px;
+}
