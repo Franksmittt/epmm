@@ -1,0 +1,358 @@
+/* Alberton Battery Mart — Rejuvenation Cell (charging) vertical 9:16. Export 1080×1920. No motion — static power accents only. */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --abm-red: #e61919;
+  --stealth-grey: #8e8e93;
+  --glass-carbon: rgba(12, 10, 10, 0.85);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 40px 80px rgba(230, 25, 25, 0.15);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.powerCore {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px dashed rgba(230, 25, 25, 0.2);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.powerPulse {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(230, 25, 25, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.topHud {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandLockup {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  border-left: 3px solid var(--abm-red);
+  min-width: 0;
+}
+
+.btName {
+  color: var(--pure-white);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.techBadge {
+  background: rgba(230, 25, 25, 0.15);
+  border: 1px solid rgba(230, 25, 25, 0.3);
+  color: var(--abm-red);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.chargeTerminal {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  z-index: 10;
+  background: var(--glass-carbon);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid var(--abm-red);
+  border-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+}
+
+.specGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.specTag {
+  background: rgba(230, 25, 25, 0.1);
+  border: 1px solid rgba(230, 25, 25, 0.3);
+  color: var(--abm-red);
+  font-size: 0.55rem;
+  font-weight: 800;
+  padding: 5px 10px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.headline {
+  color: var(--pure-white);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+
+.headlineOutline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--pure-white);
+  display: block;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.actionDock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+}
+
+.serviceId {
+  display: flex;
+  flex-direction: column;
+  max-width: 55%;
+  min-width: 0;
+}
+
+.serviceTitle {
+  color: var(--pure-white);
+  font-size: 1.15rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.serviceSub {
+  color: var(--stealth-grey);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+.btnCall {
+  background: var(--abm-red);
+  color: var(--pure-white);
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 10px 20px rgba(230, 25, 25, 0.3);
+}
+
+.btnCall svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* ─── 1080×1920 export (×2.4 from 450×800 logic) ─── */
+
+.root.canvas1080x1920 .adCanvas {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+}
+
+.root.canvas1080x1920 .powerCore {
+  width: 600px;
+  height: 600px;
+  border-width: 5px;
+}
+
+.root.canvas1080x1920 .powerPulse {
+  width: 360px;
+  height: 360px;
+}
+
+.root.canvas1080x1920 .topHud {
+  top: 60px;
+  left: 48px;
+  right: 48px;
+}
+
+.root.canvas1080x1920 .brandLockup {
+  padding: 24px 38px;
+  border-radius: 29px;
+  border-left-width: 7px;
+}
+
+.root.canvas1080x1920 .btName {
+  font-size: 19px;
+}
+
+.root.canvas1080x1920 .techBadge {
+  font-size: 13px;
+  padding: 14px 24px;
+  border-radius: 19px;
+}
+
+.root.canvas1080x1920 .chargeTerminal {
+  bottom: 48px;
+  left: 36px;
+  right: 36px;
+  border-radius: 48px;
+  padding: 60px;
+  border-top-width: 7px;
+}
+
+.root.canvas1080x1920 .specGrid {
+  gap: 19px;
+  margin-bottom: 29px;
+}
+
+.root.canvas1080x1920 .specTag {
+  font-size: 13px;
+  padding: 12px 24px;
+  border-radius: 14px;
+}
+
+.root.canvas1080x1920 .headline {
+  font-size: 72px;
+  letter-spacing: -5px;
+  margin-bottom: 29px;
+}
+
+.root.canvas1080x1920 .headlineOutline {
+  -webkit-text-stroke-width: 4px;
+}
+
+.root.canvas1080x1920 .subtext {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.root.canvas1080x1920 .actionDock {
+  padding-top: 36px;
+}
+
+.root.canvas1080x1920 .serviceTitle {
+  font-size: 28px;
+}
+
+.root.canvas1080x1920 .serviceSub {
+  font-size: 14px;
+}
+
+.root.canvas1080x1920 .btnCall {
+  height: 106px;
+  padding: 0 38px;
+  border-radius: 24px;
+  font-size: 20px;
+  gap: 19px;
+}
+
+.root.canvas1080x1920 .btnCall svg {
+  width: 38px;
+  height: 38px;
+}

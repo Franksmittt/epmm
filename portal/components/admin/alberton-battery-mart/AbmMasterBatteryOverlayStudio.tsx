@@ -10,12 +10,18 @@ import ignitionSquare from "./abm-ignition-square.module.css";
 import ignitionVertical from "./abm-ignition-vertical.module.css";
 import surgeSquare from "./abm-surge-matrix-square.module.css";
 import surgeVertical from "./abm-surge-matrix-vertical.module.css";
+import rejuvenationSquare from "./abm-rejuvenation-cell-square.module.css";
+import rejuvenationVertical from "./abm-rejuvenation-cell-vertical.module.css";
+import dataMatrixSquare from "./abm-data-matrix-square.module.css";
+import dataMatrixVertical from "./abm-data-matrix-vertical.module.css";
 
 export type AbmOverlayPresetId =
   | "energy-core"
   | "tactical"
   | "ignition-core"
-  | "surge-matrix";
+  | "surge-matrix"
+  | "rejuvenation-cell"
+  | "data-matrix";
 
 export const ABM_OVERLAY_PRESETS: {
   id: AbmOverlayPresetId;
@@ -34,10 +40,20 @@ export const ABM_OVERLAY_PRESETS: {
     label: "Surge Matrix — industrial hash + jumper strip",
     short: "Surge Matrix",
   },
+  {
+    id: "rejuvenation-cell",
+    label: "Rejuvenation Cell — charging vertical + slim square (static)",
+    short: "Rejuvenation Cell",
+  },
+  {
+    id: "data-matrix",
+    label: "Data Matrix — Did You Know (SLA vs AGM compare)",
+    short: "Data Matrix",
+  },
 ];
 
 export const BATTERY_OVERLAY_JSON_TEMPLATE_ID = "alberton-battery-mart-overlay";
-export const BATTERY_OVERLAY_JSON_VERSION = 3;
+export const BATTERY_OVERLAY_JSON_VERSION = 5;
 
 const ENERGY_KEYS = [
   "clinicName",
@@ -107,10 +123,50 @@ const SURGE_KEYS = [
   "surgeVerticalPhone",
 ] as const;
 
+const REJUVENATION_KEYS = [
+  "rejBrandName",
+  "rejTechBadge",
+  "rejVerticalSpec1",
+  "rejVerticalSpec2",
+  "rejHeadlineL1",
+  "rejHeadlineL2",
+  "rejVerticalSubtext",
+  "rejVerticalServiceTitle",
+  "rejVerticalServiceSub",
+  "rejSquareSpec1",
+  "rejSquareSpec2",
+  "rejSquareServiceTitle",
+  "rejSquareServiceSub",
+  "rejPhone",
+] as const;
+
+const DATA_MATRIX_KEYS = [
+  "dmBrandName",
+  "dmSquareBrandSub",
+  "dmHeadlineL1",
+  "dmHeadlineL2",
+  "dmVerticalInsightBadge",
+  "dmVerticalHeroSub",
+  "dmLeftTitle",
+  "dmLeftSpec1",
+  "dmLeftSpec2",
+  "dmLeftSpec3",
+  "dmRightTitle",
+  "dmRightSpec1",
+  "dmRightSpec2",
+  "dmRightSpec3",
+  "dmVsLabel",
+  "dmSquareFootnote",
+  "dmSquarePhone",
+  "dmVerticalCallLabel",
+] as const;
+
 type EnergyCopyKey = (typeof ENERGY_KEYS)[number];
 type TacticalCopyKey = (typeof TACTICAL_KEYS)[number];
 type IgnitionCopyKey = (typeof IGNITION_KEYS)[number];
 type SurgeCopyKey = (typeof SURGE_KEYS)[number];
+type RejuvenationCopyKey = (typeof REJUVENATION_KEYS)[number];
+type DataMatrixCopyKey = (typeof DATA_MATRIX_KEYS)[number];
 
 const DEFAULTS_ENERGY: Record<EnergyCopyKey, string> = {
   clinicName: "YOUR BATTERY CLINIC",
@@ -184,12 +240,55 @@ const DEFAULTS_SURGE: Record<SurgeCopyKey, string> = {
   surgeVerticalPhone: "010 109 6211",
 };
 
+const DEFAULTS_REJUVENATION: Record<RejuvenationCopyKey, string> = {
+  rejBrandName: "Alberton Battery Mart",
+  rejTechBadge: "Service Centre",
+  rejVerticalSpec1: "Deep Cycle Charging",
+  rejVerticalSpec2: "Desulfation Tech",
+  rejHeadlineL1: "Flat?",
+  rejHeadlineL2: "Charged.",
+  rejVerticalSubtext:
+    "Advanced battery diagnostics and professional capacity recovery. We don't just charge it; we condition it for maximum lifespan.",
+  rejVerticalServiceTitle: "Professional Charging",
+  rejVerticalServiceSub: "Drop-off & Collect",
+  rejSquareSpec1: "Deep Cycle Charging",
+  rejSquareSpec2: "Capacity Recovery",
+  rejSquareServiceTitle: "Professional Charging",
+  rejSquareServiceSub: "Drop-off & Collect Service",
+  rejPhone: "010 109 6211",
+};
+
+const DEFAULTS_DATA_MATRIX: Record<DataMatrixCopyKey, string> = {
+  dmBrandName: "Alberton Battery Mart",
+  dmSquareBrandSub: "Tech Insight Center",
+  dmHeadlineL1: "Did You",
+  dmHeadlineL2: "Know?",
+  dmVerticalInsightBadge: "Tech Insight",
+  dmVerticalHeroSub:
+    "Not all batteries are created equal. Upgrading your tech changes everything.",
+  dmLeftTitle: "Standard Lead Acid",
+  dmLeftSpec1: "Basic Cranking Power",
+  dmLeftSpec2: "Vibration Sensitive",
+  dmLeftSpec3: "Requires Maintenance",
+  dmRightTitle: "AGM Technology",
+  dmRightSpec1: "Massive CCA Output",
+  dmRightSpec2: "100% Vibration Proof",
+  dmRightSpec3: "Up to 3x Longer Life",
+  dmVsLabel: "VS",
+  dmSquareFootnote:
+    "Upgrading to an AGM battery completely changes your vehicle's reliability.",
+  dmSquarePhone: "010 109 6211",
+  dmVerticalCallLabel: "Upgrade to AGM: 010 109 6211",
+};
+
 function initialCopyByPreset(): Record<AbmOverlayPresetId, Record<string, string>> {
   return {
     "energy-core": { ...DEFAULTS_ENERGY },
     tactical: { ...DEFAULTS_TACTICAL },
     "ignition-core": { ...DEFAULTS_IGNITION },
     "surge-matrix": { ...DEFAULTS_SURGE },
+    "rejuvenation-cell": { ...DEFAULTS_REJUVENATION },
+    "data-matrix": { ...DEFAULTS_DATA_MATRIX },
   };
 }
 
@@ -211,7 +310,9 @@ function isPresetId(v: unknown): v is AbmOverlayPresetId {
     v === "energy-core" ||
     v === "tactical" ||
     v === "ignition-core" ||
-    v === "surge-matrix"
+    v === "surge-matrix" ||
+    v === "rejuvenation-cell" ||
+    v === "data-matrix"
   );
 }
 
@@ -220,6 +321,12 @@ function inferPresetFromBlock(
   block: Record<string, unknown>,
 ): AbmOverlayPresetId | null {
   const keys = Object.keys(block);
+  const rejHit = keys.some((k) =>
+    (REJUVENATION_KEYS as readonly string[]).includes(k),
+  );
+  const dmHit = keys.some((k) =>
+    (DATA_MATRIX_KEYS as readonly string[]).includes(k),
+  );
   const surgeHit = keys.some((k) =>
     (SURGE_KEYS as readonly string[]).includes(k),
   );
@@ -232,12 +339,31 @@ function inferPresetFromBlock(
   const energyHit = keys.some((k) =>
     (ENERGY_KEYS as readonly string[]).includes(k),
   );
-  if (surgeHit && !ignitionHit && !tacticalHit && !energyHit)
+  if (rejHit && !dmHit && !surgeHit && !ignitionHit && !tacticalHit && !energyHit)
+    return "rejuvenation-cell";
+  if (dmHit && !rejHit && !surgeHit && !ignitionHit && !tacticalHit && !energyHit)
+    return "data-matrix";
+  if (
+    surgeHit &&
+    !ignitionHit &&
+    !tacticalHit &&
+    !energyHit &&
+    !rejHit &&
+    !dmHit
+  )
     return "surge-matrix";
-  if (ignitionHit && !tacticalHit && !energyHit && !surgeHit)
+  if (
+    ignitionHit &&
+    !tacticalHit &&
+    !energyHit &&
+    !surgeHit &&
+    !rejHit &&
+    !dmHit
+  )
     return "ignition-core";
-  if (tacticalHit && !energyHit && !ignitionHit && !surgeHit) return "tactical";
-  if (energyHit && !tacticalHit && !ignitionHit && !surgeHit)
+  if (tacticalHit && !energyHit && !ignitionHit && !surgeHit && !rejHit && !dmHit)
+    return "tactical";
+  if (energyHit && !tacticalHit && !ignitionHit && !surgeHit && !rejHit && !dmHit)
     return "energy-core";
   return null;
 }
@@ -330,6 +456,20 @@ export function AbmMasterBatteryOverlayStudio() {
     }));
   };
 
+  const setRejuvenation = (key: RejuvenationCopyKey, value: string) => {
+    setCopyByPreset((prev) => ({
+      ...prev,
+      "rejuvenation-cell": { ...prev["rejuvenation-cell"], [key]: value },
+    }));
+  };
+
+  const setDataMatrix = (key: DataMatrixCopyKey, value: string) => {
+    setCopyByPreset((prev) => ({
+      ...prev,
+      "data-matrix": { ...prev["data-matrix"], [key]: value },
+    }));
+  };
+
   const [bgSquareDataUrl, setBgSquareDataUrl] = useState<string | null>(null);
   const [bgVerticalDataUrl, setBgVerticalDataUrl] = useState<string | null>(
     null,
@@ -410,7 +550,11 @@ export function AbmMasterBatteryOverlayStudio() {
           ? TACTICAL_KEYS
           : targetPreset === "surge-matrix"
             ? SURGE_KEYS
-            : IGNITION_KEYS;
+            : targetPreset === "rejuvenation-cell"
+              ? REJUVENATION_KEYS
+              : targetPreset === "data-matrix"
+                ? DATA_MATRIX_KEYS
+                : IGNITION_KEYS;
     const picked: Record<string, string> = {};
     let any = false;
     for (const key of keys) {
@@ -465,6 +609,16 @@ export function AbmMasterBatteryOverlayStudio() {
       setCopyByPreset((p) => ({ ...p, tactical: { ...DEFAULTS_TACTICAL } }));
     } else if (preset === "surge-matrix") {
       setCopyByPreset((p) => ({ ...p, "surge-matrix": { ...DEFAULTS_SURGE } }));
+    } else if (preset === "rejuvenation-cell") {
+      setCopyByPreset((p) => ({
+        ...p,
+        "rejuvenation-cell": { ...DEFAULTS_REJUVENATION },
+      }));
+    } else if (preset === "data-matrix") {
+      setCopyByPreset((p) => ({
+        ...p,
+        "data-matrix": { ...DEFAULTS_DATA_MATRIX },
+      }));
     } else {
       setCopyByPreset((p) => ({
         ...p,
@@ -532,6 +686,9 @@ export function AbmMasterBatteryOverlayStudio() {
   const ct = copyByPreset.tactical;
   const ci = copyByPreset["ignition-core"];
   const cs = copyByPreset["surge-matrix"] as typeof DEFAULTS_SURGE;
+  const crj =
+    copyByPreset["rejuvenation-cell"] as typeof DEFAULTS_REJUVENATION;
+  const cdm = copyByPreset["data-matrix"] as typeof DEFAULTS_DATA_MATRIX;
 
   const energySquareCanvas = (
     <div
@@ -1004,6 +1161,289 @@ export function AbmMasterBatteryOverlayStudio() {
     </div>
   );
 
+  const rejuvenationSquareCanvas = (
+    <div
+      ref={squareRef}
+      className={`${rejuvenationSquare.root} ${rejuvenationSquare.canvas1080}`}
+      aria-label="Rejuvenation Cell square export"
+    >
+      <div className={rejuvenationSquare.adCanvas}>
+        {bgSquareDataUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className={rejuvenationSquare.heroBg}
+            src={bgSquareDataUrl}
+            alt=""
+          />
+        ) : null}
+        <div className={rejuvenationSquare.scrimTop} />
+        <div className={rejuvenationSquare.scrimBottom} />
+        <div className={rejuvenationSquare.topPerimeter}>
+          <div className={rejuvenationSquare.brandPill}>{crj.rejBrandName}</div>
+          <h1 className={rejuvenationSquare.heroType}>
+            {crj.rejHeadlineL1}
+            <br />
+            <span className={rejuvenationSquare.heroOutline}>
+              {crj.rejHeadlineL2}
+            </span>
+          </h1>
+        </div>
+        <div className={rejuvenationSquare.slimTerminal}>
+          <div className={rejuvenationSquare.serviceInfo}>
+            <span className={rejuvenationSquare.serviceTitle}>
+              {crj.rejSquareServiceTitle}
+            </span>
+            <span className={rejuvenationSquare.serviceSub}>
+              {crj.rejSquareServiceSub}
+            </span>
+          </div>
+          <div className={rejuvenationSquare.techTags}>
+            <span className={rejuvenationSquare.specMini}>
+              {crj.rejSquareSpec1}
+            </span>
+            <span className={rejuvenationSquare.specMini}>
+              {crj.rejSquareSpec2}
+            </span>
+          </div>
+          <div className={rejuvenationSquare.actionBlock}>
+            <button type="button" className={rejuvenationSquare.btnCall}>
+              <PhoneHandsetSvg size={18} />
+              {crj.rejPhone}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const rejuvenationVerticalCanvas = (
+    <div
+      ref={verticalRef}
+      className={`${rejuvenationVertical.root} ${rejuvenationVertical.canvas1080x1920}`}
+      aria-label="Rejuvenation Cell vertical export"
+    >
+      <div className={rejuvenationVertical.adCanvas}>
+        {bgVerticalDataUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className={rejuvenationVertical.heroBg}
+            src={bgVerticalDataUrl}
+            alt=""
+          />
+        ) : null}
+        <div className={rejuvenationVertical.powerCore} />
+        <div className={rejuvenationVertical.powerPulse} />
+        <div className={rejuvenationVertical.scrim} />
+        <div className={rejuvenationVertical.topHud}>
+          <div className={rejuvenationVertical.brandLockup}>
+            <span className={rejuvenationVertical.btName}>
+              {crj.rejBrandName}
+            </span>
+          </div>
+          <div className={rejuvenationVertical.techBadge}>
+            {crj.rejTechBadge}
+          </div>
+        </div>
+        <div className={rejuvenationVertical.chargeTerminal}>
+          <div className={rejuvenationVertical.specGrid}>
+            <div className={rejuvenationVertical.specTag}>
+              {crj.rejVerticalSpec1}
+            </div>
+            <div className={rejuvenationVertical.specTag}>
+              {crj.rejVerticalSpec2}
+            </div>
+          </div>
+          <h1 className={rejuvenationVertical.headline}>
+            {crj.rejHeadlineL1}
+            <br />
+            <span className={rejuvenationVertical.headlineOutline}>
+              {crj.rejHeadlineL2}
+            </span>
+          </h1>
+          <p className={rejuvenationVertical.subtext}>
+            {crj.rejVerticalSubtext}
+          </p>
+          <div className={rejuvenationVertical.actionDock}>
+            <div className={rejuvenationVertical.serviceId}>
+              <span className={rejuvenationVertical.serviceTitle}>
+                {crj.rejVerticalServiceTitle}
+              </span>
+              <span className={rejuvenationVertical.serviceSub}>
+                {crj.rejVerticalServiceSub}
+              </span>
+            </div>
+            <button type="button" className={rejuvenationVertical.btnCall}>
+              <PhoneHandsetSvg size={16} />
+              {crj.rejPhone}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const dataMatrixSquareCanvas = (
+    <div
+      ref={squareRef}
+      className={`${dataMatrixSquare.root} ${dataMatrixSquare.canvas1080}`}
+      aria-label="Data Matrix square export"
+    >
+      <div className={dataMatrixSquare.adCanvas}>
+        {bgSquareDataUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className={dataMatrixSquare.heroBg}
+            src={bgSquareDataUrl}
+            alt=""
+          />
+        ) : null}
+        <div className={dataMatrixSquare.diagnosticGrid} />
+        <div className={dataMatrixSquare.ambientGlow} />
+        <div className={dataMatrixSquare.topPerimeter}>
+          <div className={dataMatrixSquare.brandLockup}>
+            <span className={dataMatrixSquare.btName}>{cdm.dmBrandName}</span>
+            <span className={dataMatrixSquare.btSub}>
+              {cdm.dmSquareBrandSub}
+            </span>
+          </div>
+          <h1 className={dataMatrixSquare.heroType}>
+            {cdm.dmHeadlineL1}
+            <br />
+            <span className={dataMatrixSquare.heroAccent}>
+              {cdm.dmHeadlineL2}
+            </span>
+          </h1>
+        </div>
+        <div className={dataMatrixSquare.comparisonSplit}>
+          <div className={`${dataMatrixSquare.techCol} ${dataMatrixSquare.colSla}`}>
+            <div className={dataMatrixSquare.techTitle}>{cdm.dmLeftTitle}</div>
+            <div className={dataMatrixSquare.specList}>
+              <div className={dataMatrixSquare.specMini}>{cdm.dmLeftSpec1}</div>
+              <div className={dataMatrixSquare.specMini}>{cdm.dmLeftSpec2}</div>
+              <div className={dataMatrixSquare.specMini}>{cdm.dmLeftSpec3}</div>
+            </div>
+          </div>
+          <div className={dataMatrixSquare.vsBadge}>{cdm.dmVsLabel}</div>
+          <div className={`${dataMatrixSquare.techCol} ${dataMatrixSquare.colAgm}`}>
+            <div className={dataMatrixSquare.techTitle}>{cdm.dmRightTitle}</div>
+            <div className={dataMatrixSquare.specList}>
+              <div className={dataMatrixSquare.specMini}>
+                {cdm.dmRightSpec1}
+              </div>
+              <div className={dataMatrixSquare.specMini}>
+                {cdm.dmRightSpec2}
+              </div>
+              <div className={dataMatrixSquare.specMini}>
+                {cdm.dmRightSpec3}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={dataMatrixSquare.slimTerminal}>
+          <div className={dataMatrixSquare.insightText}>
+            {cdm.dmSquareFootnote}
+          </div>
+          <button type="button" className={dataMatrixSquare.btnCall}>
+            <PhoneHandsetSvg size={18} />
+            {cdm.dmSquarePhone}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
+  const dataMatrixVerticalCanvas = (
+    <div
+      ref={verticalRef}
+      className={`${dataMatrixVertical.root} ${dataMatrixVertical.canvas1080x1920}`}
+      aria-label="Data Matrix vertical export"
+    >
+      <div className={dataMatrixVertical.adCanvas}>
+        {bgVerticalDataUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className={dataMatrixVertical.heroBg}
+            src={bgVerticalDataUrl}
+            alt=""
+          />
+        ) : null}
+        <div className={dataMatrixVertical.diagnosticGrid} />
+        <div className={dataMatrixVertical.ambientGlow} />
+        <div className={dataMatrixVertical.topHud}>
+          <div className={dataMatrixVertical.brandLockup}>
+            <span className={dataMatrixVertical.btName}>
+              {cdm.dmBrandName}
+            </span>
+          </div>
+          <div className={dataMatrixVertical.insightBadge}>
+            {cdm.dmVerticalInsightBadge}
+          </div>
+        </div>
+        <div className={dataMatrixVertical.headerSection}>
+          <h1 className={dataMatrixVertical.heroType}>
+            {cdm.dmHeadlineL1}
+            <br />
+            <span className={dataMatrixVertical.heroAccent}>
+              {cdm.dmHeadlineL2}
+            </span>
+          </h1>
+          <p className={dataMatrixVertical.heroSub}>
+            {cdm.dmVerticalHeroSub}
+          </p>
+        </div>
+        <div className={dataMatrixVertical.comparisonBoard}>
+          <div
+            className={`${dataMatrixVertical.techCard} ${dataMatrixVertical.cardSla}`}
+          >
+            <div className={dataMatrixVertical.cardHeader}>
+              <span className={dataMatrixVertical.techTitle}>
+                {cdm.dmLeftTitle}
+              </span>
+            </div>
+            <div className={dataMatrixVertical.specList}>
+              <div className={dataMatrixVertical.specMini}>
+                {cdm.dmLeftSpec1}
+              </div>
+              <div className={dataMatrixVertical.specMini}>
+                {cdm.dmLeftSpec2}
+              </div>
+              <div className={dataMatrixVertical.specMini}>
+                {cdm.dmLeftSpec3}
+              </div>
+            </div>
+          </div>
+          <div className={dataMatrixVertical.vsBadge}>{cdm.dmVsLabel}</div>
+          <div
+            className={`${dataMatrixVertical.techCard} ${dataMatrixVertical.cardAgm}`}
+          >
+            <div className={dataMatrixVertical.cardHeader}>
+              <span className={dataMatrixVertical.techTitle}>
+                {cdm.dmRightTitle}
+              </span>
+            </div>
+            <div className={dataMatrixVertical.specList}>
+              <div className={dataMatrixVertical.specMini}>
+                {cdm.dmRightSpec1}
+              </div>
+              <div className={dataMatrixVertical.specMini}>
+                {cdm.dmRightSpec2}
+              </div>
+              <div className={dataMatrixVertical.specMini}>
+                {cdm.dmRightSpec3}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={dataMatrixVertical.actionDock}>
+          <button type="button" className={dataMatrixVertical.btnCall}>
+            <PhoneHandsetSvg size={18} />
+            {cdm.dmVerticalCallLabel}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+
   const squareCanvas =
     preset === "energy-core"
       ? energySquareCanvas
@@ -1011,7 +1451,11 @@ export function AbmMasterBatteryOverlayStudio() {
         ? tacticalSquareCanvas
         : preset === "surge-matrix"
           ? surgeSquareCanvas
-          : ignitionSquareCanvas;
+          : preset === "rejuvenation-cell"
+            ? rejuvenationSquareCanvas
+            : preset === "data-matrix"
+              ? dataMatrixSquareCanvas
+              : ignitionSquareCanvas;
   const verticalCanvas =
     preset === "energy-core"
       ? energyVerticalCanvas
@@ -1019,7 +1463,11 @@ export function AbmMasterBatteryOverlayStudio() {
         ? tacticalVerticalCanvas
         : preset === "surge-matrix"
           ? surgeVerticalCanvas
-          : ignitionVerticalCanvas;
+          : preset === "rejuvenation-cell"
+            ? rejuvenationVerticalCanvas
+            : preset === "data-matrix"
+              ? dataMatrixVerticalCanvas
+              : ignitionVerticalCanvas;
 
   const expectedKeysHint =
     preset === "energy-core"
@@ -1028,7 +1476,11 @@ export function AbmMasterBatteryOverlayStudio() {
         ? TACTICAL_KEYS.join(", ")
         : preset === "surge-matrix"
           ? SURGE_KEYS.join(", ")
-          : IGNITION_KEYS.join(", ");
+          : preset === "rejuvenation-cell"
+            ? REJUVENATION_KEYS.join(", ")
+            : preset === "data-matrix"
+              ? DATA_MATRIX_KEYS.join(", ")
+              : IGNITION_KEYS.join(", ");
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
@@ -1112,11 +1564,14 @@ export function AbmMasterBatteryOverlayStudio() {
             JSON includes <code className="text-white/80">preset</code> (
             <code className="text-white/80">energy-core</code>,{" "}
             <code className="text-white/80">tactical</code>,{" "}
-            <code className="text-white/80">ignition-core</code>, or{" "}
-            <code className="text-white/80">surge-matrix</code>) and{" "}
+            <code className="text-white/80">ignition-core</code>,{" "}
+            <code className="text-white/80">surge-matrix</code>,{" "}
+            <code className="text-white/80">rejuvenation-cell</code>, or{" "}
+            <code className="text-white/80">data-matrix</code>) and{" "}
             <code className="text-white/80">copy</code>. v
-            {BATTERY_OVERLAY_JSON_VERSION}: infer Surge → Ignition → Tactical →
-            Energy if preset omitted.
+            {BATTERY_OVERLAY_JSON_VERSION}: infer Rejuvenation (rej*) → Data
+            Matrix (dm*) → Surge → Ignition → Tactical → Energy if preset
+            omitted.
           </p>
           <div className="space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1133,7 +1588,12 @@ export function AbmMasterBatteryOverlayStudio() {
               readOnly
               value={exportJson}
               rows={
-                preset === "ignition-core" || preset === "surge-matrix" ? 26 : 18
+                preset === "ignition-core" ||
+                preset === "surge-matrix" ||
+                preset === "rejuvenation-cell" ||
+                preset === "data-matrix"
+                  ? 26
+                  : 18
               }
               className="w-full resize-y rounded-md border border-white/15 bg-black/60 px-2 py-2 font-mono text-[11px] leading-relaxed text-[#D1D1D6] focus:outline-none"
               spellCheck={false}
@@ -1380,6 +1840,196 @@ export function AbmMasterBatteryOverlayStudio() {
               label="Dock — phone number"
               value={cs.surgeVerticalPhone}
               onChange={(v) => setSurge("surgeVerticalPhone", v)}
+            />
+          </>
+        ) : preset === "rejuvenation-cell" ? (
+          <>
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Shared
+            </p>
+            <Field
+              label="Brand name (vertical lockup + square pill)"
+              value={crj.rejBrandName}
+              onChange={(v) => setRejuvenation("rejBrandName", v)}
+            />
+            <Field
+              label="Vertical — tech badge (top right)"
+              value={crj.rejTechBadge}
+              onChange={(v) => setRejuvenation("rejTechBadge", v)}
+            />
+            <Field
+              label="Headline — line 1"
+              value={crj.rejHeadlineL1}
+              onChange={(v) => setRejuvenation("rejHeadlineL1", v)}
+            />
+            <Field
+              label="Headline — line 2 (outline)"
+              value={crj.rejHeadlineL2}
+              onChange={(v) => setRejuvenation("rejHeadlineL2", v)}
+            />
+            <Field
+              label="Phone (square + vertical)"
+              value={crj.rejPhone}
+              onChange={(v) => setRejuvenation("rejPhone", v)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Vertical · Rejuvenation Cell
+            </p>
+            <Field
+              label="Spec tag 1"
+              value={crj.rejVerticalSpec1}
+              onChange={(v) => setRejuvenation("rejVerticalSpec1", v)}
+            />
+            <Field
+              label="Spec tag 2"
+              value={crj.rejVerticalSpec2}
+              onChange={(v) => setRejuvenation("rejVerticalSpec2", v)}
+            />
+            <Field
+              label="Subtext (body)"
+              value={crj.rejVerticalSubtext}
+              onChange={(v) => setRejuvenation("rejVerticalSubtext", v)}
+              rows={4}
+            />
+            <Field
+              label="Dock — service title"
+              value={crj.rejVerticalServiceTitle}
+              onChange={(v) => setRejuvenation("rejVerticalServiceTitle", v)}
+            />
+            <Field
+              label="Dock — service sub (mono)"
+              value={crj.rejVerticalServiceSub}
+              onChange={(v) => setRejuvenation("rejVerticalServiceSub", v)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Square · Rejuvenation Cell (slim ribbon)
+            </p>
+            <Field
+              label="Ribbon — service title"
+              value={crj.rejSquareServiceTitle}
+              onChange={(v) => setRejuvenation("rejSquareServiceTitle", v)}
+            />
+            <Field
+              label="Ribbon — service sub"
+              value={crj.rejSquareServiceSub}
+              onChange={(v) => setRejuvenation("rejSquareServiceSub", v)}
+            />
+            <Field
+              label="Spec mini 1"
+              value={crj.rejSquareSpec1}
+              onChange={(v) => setRejuvenation("rejSquareSpec1", v)}
+            />
+            <Field
+              label="Spec mini 2"
+              value={crj.rejSquareSpec2}
+              onChange={(v) => setRejuvenation("rejSquareSpec2", v)}
+            />
+          </>
+        ) : preset === "data-matrix" ? (
+          <>
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Shared
+            </p>
+            <Field
+              label="Brand name"
+              value={cdm.dmBrandName}
+              onChange={(v) => setDataMatrix("dmBrandName", v)}
+            />
+            <Field
+              label="Square — lockup subline (mono)"
+              value={cdm.dmSquareBrandSub}
+              onChange={(v) => setDataMatrix("dmSquareBrandSub", v)}
+            />
+            <Field
+              label="Headline — line 1"
+              value={cdm.dmHeadlineL1}
+              onChange={(v) => setDataMatrix("dmHeadlineL1", v)}
+            />
+            <Field
+              label="Headline — line 2 (red)"
+              value={cdm.dmHeadlineL2}
+              onChange={(v) => setDataMatrix("dmHeadlineL2", v)}
+            />
+            <Field
+              label="VS badge label"
+              value={cdm.dmVsLabel}
+              onChange={(v) => setDataMatrix("dmVsLabel", v)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Vertical only
+            </p>
+            <Field
+              label="Top insight badge"
+              value={cdm.dmVerticalInsightBadge}
+              onChange={(v) => setDataMatrix("dmVerticalInsightBadge", v)}
+            />
+            <Field
+              label="Subhead under headline"
+              value={cdm.dmVerticalHeroSub}
+              onChange={(v) => setDataMatrix("dmVerticalHeroSub", v)}
+              rows={3}
+            />
+            <Field
+              label="Full-width CTA button text"
+              value={cdm.dmVerticalCallLabel}
+              onChange={(v) => setDataMatrix("dmVerticalCallLabel", v)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Square only
+            </p>
+            <Field
+              label="Bottom insight line"
+              value={cdm.dmSquareFootnote}
+              onChange={(v) => setDataMatrix("dmSquareFootnote", v)}
+              rows={3}
+            />
+            <Field
+              label="Square — phone (button)"
+              value={cdm.dmSquarePhone}
+              onChange={(v) => setDataMatrix("dmSquarePhone", v)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Compare columns (both layouts)
+            </p>
+            <Field
+              label="Left column title"
+              value={cdm.dmLeftTitle}
+              onChange={(v) => setDataMatrix("dmLeftTitle", v)}
+            />
+            <Field
+              label="Left spec 1"
+              value={cdm.dmLeftSpec1}
+              onChange={(v) => setDataMatrix("dmLeftSpec1", v)}
+            />
+            <Field
+              label="Left spec 2"
+              value={cdm.dmLeftSpec2}
+              onChange={(v) => setDataMatrix("dmLeftSpec2", v)}
+            />
+            <Field
+              label="Left spec 3"
+              value={cdm.dmLeftSpec3}
+              onChange={(v) => setDataMatrix("dmLeftSpec3", v)}
+            />
+            <Field
+              label="Right column title"
+              value={cdm.dmRightTitle}
+              onChange={(v) => setDataMatrix("dmRightTitle", v)}
+            />
+            <Field
+              label="Right spec 1"
+              value={cdm.dmRightSpec1}
+              onChange={(v) => setDataMatrix("dmRightSpec1", v)}
+            />
+            <Field
+              label="Right spec 2"
+              value={cdm.dmRightSpec2}
+              onChange={(v) => setDataMatrix("dmRightSpec2", v)}
+            />
+            <Field
+              label="Right spec 3"
+              value={cdm.dmRightSpec3}
+              onChange={(v) => setDataMatrix("dmRightSpec3", v)}
             />
           </>
         ) : (

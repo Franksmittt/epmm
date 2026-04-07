@@ -120,10 +120,12 @@ export default async function AdminClientSchedulePage({
               Overlay studio · templates
             </h2>
             <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
-              Four presets: Energy Core, Tactical HUD, Ignition Core (emergency red
-              glass strip + terminal), and Surge Matrix (industrial hash, static
-              surge line, jumper strip / terminal). Separate square/vertical heroes,
-              copy + JSON per preset, export 1080×1080 and 1080×1920.
+              Six presets: Energy Core, Tactical HUD, Ignition Core (emergency red
+              glass strip + terminal), Surge Matrix (industrial hash, static surge
+              line, jumper strip / terminal), Rejuvenation Cell (charging vertical +
+              glass terminal; slim square ribbon), and Data Matrix (“Did you know”
+              SLA vs AGM comparison, grid + VS badge). Separate square/vertical
+              heroes, copy + JSON per preset, export 1080×1080 and 1080×1920.
             </p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">
