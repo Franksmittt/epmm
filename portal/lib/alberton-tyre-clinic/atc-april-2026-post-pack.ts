@@ -81,8 +81,6 @@ ${LOC}
 #Dunlop #Grandtrek #AllTerrain #BakkieLife #AlbertonTyreClinic`,
     copyPatch: {
       gripVerticalPartnerBadge: "Dunlop Zone",
-      gripVerticalSpecTag1: "Grandtrek AT5",
-      gripVerticalSpecTag2: "All-Terrain",
       gripVerticalHeadlineSolid: "Terrain.",
       gripVerticalHeadlineOutline: "Tamed.",
       gripVerticalSubtext:
@@ -95,9 +93,6 @@ ${LOC}
       gripSquareHeroOutline: "Grip.",
       gripSquareProductTitle: "Dunlop Grandtrek AT5",
       gripSquareProductSub: "Bakkie & SUV AT",
-      gripSquareSpecMini1: "Dunlop Sure",
-      gripSquareSpecMini2: "Stone Ejectors",
-      gripSquareAuthTag: "Dunlop Zone",
       gripSquarePhone: "011 907 8495",
     },
   },
@@ -152,6 +147,7 @@ ${LOC}
 
 #Bridgestone #Dueler #AllTerrain #AlbertonTyreClinic`,
     copyPatch: {
+      duelSquareBrandBadge: "Bridgestone",
       duelSquareHeroL1: "Lamborghini DNA.",
       duelSquareHeroL2Outline: "Bakkie Brawn.",
       duelSquareProductTitle: "Bridgestone Dueler A/T 002",
@@ -257,8 +253,6 @@ ${LOC}
 #Dunlop #SPSport #AlbertonTyreClinic`,
     copyPatch: {
       gripVerticalPartnerBadge: "Dunlop Zone",
-      gripVerticalSpecTag1: "SP Sport LM705",
-      gripVerticalSpecTag2: "Wet grip",
       gripVerticalHeadlineSolid: "Daily.",
       gripVerticalHeadlineOutline: "Sorted.",
       gripVerticalSubtext:
@@ -271,9 +265,6 @@ ${LOC}
       gripSquareHeroOutline: "Grip.",
       gripSquareProductTitle: "Dunlop SP Sport LM705",
       gripSquareProductSub: "Comfort touring",
-      gripSquareSpecMini1: "Dunlop Zone",
-      gripSquareSpecMini2: "Fast fitment",
-      gripSquareAuthTag: "Alberton",
       gripSquarePhone: "011 907 8495",
     },
   },
@@ -330,6 +321,7 @@ ${LOC}
 
 #Bridgestone #Potenza #PerformanceTyres #AlbertonTyreClinic`,
     copyPatch: {
+      duelSquareBrandBadge: "Bridgestone",
       duelSquareHeroL1: "Potenza.",
       duelSquareHeroL2Outline: "On rails.",
       duelSquareProductTitle: "Bridgestone Potenza Sport",
@@ -432,8 +424,6 @@ ${LOC}
 #Maxxis #AllTerrain #AlbertonTyreClinic`,
     copyPatch: {
       gripVerticalPartnerBadge: "AT Specialist",
-      gripVerticalSpecTag1: "Maxxis AT",
-      gripVerticalSpecTag2: "Weekend ready",
       gripVerticalHeadlineSolid: "Trail.",
       gripVerticalHeadlineOutline: "Ready.",
       gripVerticalSubtext:
@@ -446,9 +436,6 @@ ${LOC}
       gripSquareHeroOutline: "Grip.",
       gripSquareProductTitle: "Maxxis AT options",
       gripSquareProductSub: "Bakkie & SUV",
-      gripSquareSpecMini1: "Trail pattern",
-      gripSquareSpecMini2: "Tar friendly",
-      gripSquareAuthTag: "Ask in store",
       gripSquarePhone: "011 907 8495",
     },
   },

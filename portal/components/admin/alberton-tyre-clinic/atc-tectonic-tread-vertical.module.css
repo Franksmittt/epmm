@@ -1,12 +1,14 @@
-/* Alberton Tyre Clinic — Tectonic Tread / Bridgestone Dueler vertical 9:16 (V36). Export 1080×1920. */
+/* Alberton Tyre Clinic — Tectonic Tread vertical 9:16 (Fusion · Apple × Samsung hybrid). Export 1080×1920. */
 
 .root {
-  --pure-black: #000000;
-  --pure-white: #ffffff;
-  --atc-orange: #ff4500;
-  --stealth-grey: #8e8e93;
-  --glass-carbon: rgba(12, 10, 10, 0.85);
-  --glass-border: rgba(255, 69, 0, 0.25);
+  --void: #030304;
+  --surface: rgba(16, 16, 20, 0.78);
+  --surface-edge: rgba(255, 255, 255, 0.1);
+  --text: #f5f5f7;
+  --text-dim: #a1a1a6;
+  --atc: #ff4500;
+  --rim-cyan: #5ac8fa;
+  --rim-violet: #bf5af2;
 }
 
 .root * {
@@ -27,11 +29,14 @@
   width: 100%;
   max-width: 450px;
   aspect-ratio: 9 / 16;
-  background-color: var(--pure-black);
+  background: radial-gradient(
+      ellipse 100% 55% at 50% 88%,
+      rgba(30, 45, 85, 0.28) 0%,
+      transparent 50%
+    ),
+    var(--void);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 40px 80px rgba(255, 69, 0, 0.15);
+  box-shadow: 0 48px 100px rgba(0, 0, 0, 0.65);
 }
 
 .heroBg {
@@ -44,200 +49,233 @@
   pointer-events: none;
 }
 
-.terrainGrid {
+.ambientMesh {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    rgba(255, 69, 0, 0.1) 2px,
-    transparent 2px
-  );
-  background-size: 25px 25px;
   z-index: 1;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    radial-gradient(rgba(191, 90, 242, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px, 36px 36px;
+  background-position:
+    0 0,
+    12px 18px;
   pointer-events: none;
 }
 
-.scrim {
+.vignette {
   position: absolute;
   inset: 0;
+  z-index: 2;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0) 30%,
-    rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.95) 100%
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0) 32%,
+    rgba(0, 0, 0, 0) 48%,
+    rgba(0, 0, 0, 0.88) 100%
   );
-  z-index: 2;
+  pointer-events: none;
+}
+
+.rimLight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--rim-cyan) 24%,
+    var(--rim-violet) 52%,
+    var(--atc) 80%,
+    transparent 100%
+  );
+  opacity: 0.88;
   pointer-events: none;
 }
 
 .topHud {
   position: absolute;
-  top: 25px;
-  left: 20px;
-  right: 20px;
+  top: 22px;
+  left: 18px;
+  right: 18px;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
-.brandLockup {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 10px 16px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  border-left: 3px solid var(--atc-orange);
+.clinicLockup {
+  flex: 1;
   min-width: 0;
+  padding: 11px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--surface-edge);
+  border-left: 3px solid var(--atc);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
 }
 
-.btName {
-  color: var(--pure-white);
-  font-size: 0.8rem;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-.brandBadge {
-  background: rgba(255, 69, 0, 0.15);
-  border: 1px solid rgba(255, 69, 0, 0.3);
-  color: var(--atc-orange);
-  font-family: ui-monospace, "SF Mono", monospace;
-  font-size: 0.55rem;
+.clinicName {
+  display: block;
+  color: var(--text);
+  font-size: 0.78rem;
   font-weight: 800;
-  padding: 6px 10px;
-  border-radius: 8px;
-  letter-spacing: 1px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  flex-shrink: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.techTerminal {
+.brandChip {
+  flex-shrink: 0;
+  color: var(--atc);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 69, 0, 0.09);
+  border: 1px solid rgba(255, 69, 0, 0.28);
+  border-right: 2px solid var(--rim-cyan);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.fusionTerminal {
   position: absolute;
-  bottom: 20px;
-  left: 15px;
-  right: 15px;
+  bottom: 18px;
+  left: 16px;
+  right: 16px;
   z-index: 10;
-  background: var(--glass-carbon);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 3px solid var(--atc-orange);
-  border-radius: 20px;
-  padding: 25px;
+  padding: 26px 22px 24px;
+  border-radius: 22px;
+  background: var(--surface);
+  border: 1px solid var(--surface-edge);
+  border-top: 1px solid rgba(90, 200, 250, 0.22);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
-  box-sizing: border-box;
+  gap: 18px;
+  box-shadow:
+    0 28px 64px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.specGrid {
+.specRail {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 12px;
 }
 
-.specTag {
-  background: rgba(255, 69, 0, 0.1);
-  border: 1px solid rgba(255, 69, 0, 0.3);
-  color: var(--atc-orange);
-  font-size: 0.55rem;
-  font-weight: 800;
-  padding: 5px 10px;
-  border-radius: 6px;
-  letter-spacing: 1px;
+.specPill {
+  color: rgba(255, 255, 255, 0.95);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 69, 0, 0.11);
+  border: 1px solid rgba(255, 69, 0, 0.24);
 }
 
 .headline {
-  color: var(--pure-white);
-  font-size: 2.8rem;
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -1.5px;
-  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.headlineSolid {
+  color: var(--text);
+  font-size: 2.28rem;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
 }
 
 .headlineOutline {
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--pure-white);
-  display: block;
+  -webkit-text-stroke: 1.25px var(--text);
+  font-size: 2.28rem;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.035em;
 }
 
 .subtext {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.85rem;
-  line-height: 1.4;
-  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: 450;
+  letter-spacing: 0.01em;
 }
 
-.actionDock {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 15px;
-}
-
-.serviceId {
+.featuredBlock {
   display: flex;
   flex-direction: column;
-  max-width: 55%;
-  min-width: 0;
+  gap: 5px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .serviceTitle {
-  color: var(--pure-white);
-  font-size: 1.1rem;
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
+  color: var(--text);
+  font-size: 1.12rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 
 .serviceSub {
-  color: var(--stealth-grey);
+  color: var(--text-dim);
   font-family: ui-monospace, "SF Mono", monospace;
-  font-size: 0.6rem;
-  font-weight: 700;
+  font-size: 0.58rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 2px;
+  letter-spacing: 0.14em;
 }
 
-.btnCall {
-  background: var(--atc-orange);
-  color: var(--pure-white);
-  height: 44px;
-  padding: 0 16px;
-  border-radius: 10px;
-  font-size: 0.85rem;
-  font-family: ui-monospace, "SF Mono", monospace;
-  font-weight: 900;
-  letter-spacing: 0.5px;
+.phoneCta {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 18px;
   border: none;
-  cursor: default;
-  display: flex;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ff5a1f 0%, var(--atc) 100%);
+  color: #fff;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.88rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
+  justify-content: center;
+  gap: 10px;
+  cursor: default;
+  box-shadow:
+    0 14px 32px rgba(255, 69, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.btnCall svg {
+.phoneCta svg {
   flex-shrink: 0;
   stroke: currentColor;
   fill: none;
 }
 
-/* ─── 1080×1920 export (×2.4) ─── */
+/* ─── 1080×1920 (×2.4 from 450) ─── */
 
 .root.canvas1080x1920 .adCanvas {
   width: 1080px;
@@ -246,88 +284,91 @@
   aspect-ratio: auto;
 }
 
-.root.canvas1080x1920 .terrainGrid {
-  background-size: 60px 60px;
+.root.canvas1080x1920 .ambientMesh {
+  background-size:
+    58px 58px,
+    86px 86px;
 }
 
 .root.canvas1080x1920 .topHud {
-  top: 60px;
-  left: 48px;
-  right: 48px;
+  top: 53px;
+  left: 43px;
+  right: 43px;
+  gap: 29px;
 }
 
-.root.canvas1080x1920 .brandLockup {
-  padding: 24px 38px;
-  border-radius: 29px;
+.root.canvas1080x1920 .clinicLockup {
+  padding: 26px 38px;
+  border-radius: 34px;
   border-left-width: 7px;
 }
 
-.root.canvas1080x1920 .btName {
+.root.canvas1080x1920 .clinicName {
   font-size: 19px;
 }
 
-.root.canvas1080x1920 .brandBadge {
-  font-size: 13px;
-  padding: 14px 24px;
-  border-radius: 19px;
+.root.canvas1080x1920 .brandChip {
+  font-size: 14px;
+  padding: 24px 34px;
+  border-radius: 999px;
 }
 
-.root.canvas1080x1920 .techTerminal {
-  bottom: 48px;
-  left: 36px;
-  right: 36px;
-  border-radius: 48px;
-  padding: 60px;
-  border-top-width: 7px;
+.root.canvas1080x1920 .fusionTerminal {
+  bottom: 43px;
+  left: 38px;
+  right: 38px;
+  padding: 56px 48px 52px;
+  border-radius: 53px;
+  gap: 40px;
 }
 
-.root.canvas1080x1920 .specGrid {
+.root.canvas1080x1920 .specRail {
   gap: 19px;
-  margin-bottom: 29px;
 }
 
-.root.canvas1080x1920 .specTag {
+.root.canvas1080x1920 .specPill {
   font-size: 13px;
-  padding: 12px 24px;
-  border-radius: 14px;
+  padding: 12px 22px;
 }
 
 .root.canvas1080x1920 .headline {
-  font-size: 72px;
-  letter-spacing: -5px;
-  margin-bottom: 29px;
+  gap: 10px;
+}
+
+.root.canvas1080x1920 .headlineSolid,
+.root.canvas1080x1920 .headlineOutline {
+  font-size: 95px;
 }
 
 .root.canvas1080x1920 .headlineOutline {
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 3.2px;
 }
 
 .root.canvas1080x1920 .subtext {
   font-size: 20px;
-  margin-bottom: 60px;
 }
 
-.root.canvas1080x1920 .actionDock {
-  padding-top: 36px;
+.root.canvas1080x1920 .featuredBlock {
+  gap: 12px;
+  padding-top: 10px;
 }
 
 .root.canvas1080x1920 .serviceTitle {
-  font-size: 28px;
+  font-size: 29px;
 }
 
 .root.canvas1080x1920 .serviceSub {
   font-size: 14px;
 }
 
-.root.canvas1080x1920 .btnCall {
-  height: 106px;
-  padding: 0 38px;
-  border-radius: 24px;
-  font-size: 20px;
+.root.canvas1080x1920 .phoneCta {
+  min-height: 115px;
+  border-radius: 29px;
+  font-size: 22px;
   gap: 19px;
 }
 
-.root.canvas1080x1920 .btnCall svg {
-  width: 38px;
-  height: 38px;
+.root.canvas1080x1920 .phoneCta svg {
+  width: 40px;
+  height: 40px;
 }

@@ -1,0 +1,163 @@
+/* Endpoint Media — Cinematic full-bleed square 1080×1080 */
+
+.root {
+  width: 1080px;
+  height: 1080px;
+  flex-shrink: 0;
+  font-family: var(--font-emm-framed), -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow:
+    0 86px 173px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  pointer-events: none;
+}
+
+.topFade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bottomFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(
+    to top,
+    #000000 0%,
+    #000000 35%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.oledAura {
+  position: absolute;
+  bottom: 43px;
+  left: 0;
+  width: 756px;
+  height: 324px;
+  background: #00f2fe;
+  filter: blur(173px);
+  opacity: 0.18;
+  z-index: 3;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.topBadge {
+  position: absolute;
+  top: 52px;
+  left: 52px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.partnerName {
+  font-size: 24px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 4.3px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.8);
+}
+
+.content {
+  position: absolute;
+  bottom: 65px;
+  left: 52px;
+  right: 52px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.subBrand {
+  font-size: 24px;
+  color: #00f2fe;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 6.5px;
+  margin-bottom: 13px;
+}
+
+.productTitle {
+  font-size: 91px;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: -3.2px;
+  line-height: 1;
+  margin-bottom: 17px;
+}
+
+.bottomActionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 9px;
+  gap: 24px;
+}
+
+.productTagline {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  max-width: 60%;
+  line-height: 1.35;
+  white-space: pre-line;
+}
+
+.ctaBtn {
+  flex-shrink: 0;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 26px 60px;
+  border-radius: 86px;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: default;
+  font-family: inherit;
+  white-space: nowrap;
+}

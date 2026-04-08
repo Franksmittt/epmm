@@ -1,0 +1,163 @@
+/* Everest Wealth — Titanium & sapphire square 1080×1080 */
+
+.root {
+  width: 1080px;
+  height: 1080px;
+  flex-shrink: 0;
+  font-family: var(--font-evw-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 52px;
+  overflow: hidden;
+  box-shadow:
+    0 86px 173px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  padding: 69px;
+}
+
+.ambientGlow {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translateY(-50%);
+  width: 648px;
+  height: 648px;
+  background: #0a84ff;
+  filter: blur(360px);
+  opacity: 0.2;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.dashboardUi {
+  position: relative;
+  z-index: 10;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.brandName {
+  color: #f5f5f7;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 4.3px;
+  text-transform: uppercase;
+}
+
+.badge {
+  background: rgba(10, 132, 255, 0.15);
+  border: 1px solid rgba(10, 132, 255, 0.3);
+  color: #0a84ff;
+  font-size: 19px;
+  font-weight: 700;
+  padding: 12px 17px;
+  border-radius: 13px;
+}
+
+.dataDisplay {
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolioLabel {
+  font-size: 26px;
+  color: #86868b;
+  text-transform: uppercase;
+  letter-spacing: 4.3px;
+  font-weight: 600;
+  margin-bottom: 17px;
+}
+
+.yieldNumber {
+  font-size: 208px;
+  font-weight: 900;
+  color: #f5f5f7;
+  letter-spacing: -6.5px;
+  line-height: 1;
+  margin-bottom: 26px;
+}
+
+.tagline {
+  font-size: 30px;
+  color: #a1a1a6;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 95%;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  background: #f5f5f7;
+  color: #000000;
+  border: none;
+  text-decoration: none;
+  padding: 30px 60px;
+  border-radius: 86px;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  cursor: default;
+  font-family: inherit;
+}
+
+.feeLabel {
+  font-size: 24px;
+  color: #0a84ff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+}
+
+.imageWidget {
+  position: absolute;
+  top: 69px;
+  right: 69px;
+  width: 38%;
+  height: calc(100% - 138px);
+  border-radius: 69px;
+  background-size: cover;
+  background-position: center;
+  z-index: 10;
+  box-shadow:
+    0 65px 130px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.imageWidgetImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 69px;
+}

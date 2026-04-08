@@ -1,0 +1,195 @@
+/* Miwesu Wood — Braai mix vertical 1080×1920 (ref 360×640 ×3) */
+
+.root {
+  width: 1080px;
+  height: 1920px;
+  flex-shrink: 0;
+  font-family: var(--font-mww-thermal), -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow:
+    0 120px 240px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    transparent 30%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.topBar {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.weightBadge {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 18px 36px;
+  border-radius: 24px;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.glassCard {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  right: 48px;
+  background: rgba(15, 15, 15, 0.65);
+  backdrop-filter: blur(72px);
+  -webkit-backdrop-filter: blur(72px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 72px;
+  padding: 72px 60px;
+  z-index: 10;
+  box-shadow: 0 60px 120px rgba(0, 0, 0, 0.5);
+}
+
+.mixLabel {
+  color: #ffb700;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.productTitle {
+  font-size: 108px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #ffb700 0%, #ff3c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.tagline {
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  margin-bottom: 60px;
+  line-height: 1.4;
+}
+
+.blendSpecs {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.blendItem {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 36px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-width: 0;
+}
+
+.woodType {
+  color: #fff;
+  font-size: 33px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.woodTrait {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 27px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.priceCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 66px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.logistics {
+  font-size: 27px;
+  color: #ffb700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 12px;
+}
+
+.ctaBtn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 36px 60px;
+  border-radius: 36px;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: default;
+  font-family: inherit;
+}

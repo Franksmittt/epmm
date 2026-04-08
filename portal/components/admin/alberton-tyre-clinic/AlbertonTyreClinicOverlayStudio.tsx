@@ -42,7 +42,7 @@ export const ATC_OVERLAY_PRESETS: { id: AtcOverlayPresetId; label: string }[] =
     },
     {
       id: "tectonic-tread",
-      label: "Tectonic Tread · Bridgestone Dueler (V36)",
+      label: "Tectonic Tread · Fusion (clinic + brand + product)",
     },
     { id: "kinetic-monolith", label: "Kinetic Monolith" },
     { id: "apex-interface", label: "Apex Interface" },
@@ -51,8 +51,8 @@ export const ATC_OVERLAY_PRESETS: { id: AtcOverlayPresetId; label: string }[] =
 
 export const TYRE_CLINIC_OVERLAY_JSON_TEMPLATE_ID =
   "alberton-tyre-clinic-overlay";
-/** v5: velocity vertical dock is single `verticalProductLine` (replaces badge trio). v4: laser/spec removed. v3: tectonic-tread. */
-export const TYRE_CLINIC_OVERLAY_JSON_VERSION = 5;
+/** v8: tectonic-tread fusion revamp + `duelSquareBrandBadge`; v7: kinetic grip subline removed. */
+export const TYRE_CLINIC_OVERLAY_JSON_VERSION = 8;
 
 const VELOCITY_KEYS = [
   "brandName",
@@ -73,10 +73,7 @@ const VELOCITY_KEYS = [
 
 const GRIP_KEYS = [
   "gripVerticalClinicName",
-  "gripVerticalClinicSub",
   "gripVerticalPartnerBadge",
-  "gripVerticalSpecTag1",
-  "gripVerticalSpecTag2",
   "gripVerticalHeadlineSolid",
   "gripVerticalHeadlineOutline",
   "gripVerticalSubtext",
@@ -88,9 +85,6 @@ const GRIP_KEYS = [
   "gripSquareHeroOutline",
   "gripSquareProductTitle",
   "gripSquareProductSub",
-  "gripSquareSpecMini1",
-  "gripSquareSpecMini2",
-  "gripSquareAuthTag",
   "gripSquarePhone",
 ] as const;
 
@@ -168,6 +162,7 @@ const CALIBRATION_KEYS = [
 
 const DUELER_KEYS = [
   "duelSquareBrandPill",
+  "duelSquareBrandBadge",
   "duelSquareHeroL1",
   "duelSquareHeroL2Outline",
   "duelSquareProductTitle",
@@ -215,15 +210,12 @@ const DEFAULTS_VELOCITY: Record<VelocityCopyKey, string> = {
 
 const DEFAULTS_GRIP: Record<GripCopyKey, string> = {
   gripVerticalClinicName: "Alberton Tyre Clinic",
-  gripVerticalClinicSub: "Fitment Centre",
   gripVerticalPartnerBadge: "Dunlop Zone",
-  gripVerticalSpecTag1: "Grandtrek AT5",
-  gripVerticalSpecTag2: "18-Month Insurance",
   gripVerticalHeadlineSolid: "Terrain.",
   gripVerticalHeadlineOutline: "Mastered.",
   gripVerticalSubtext:
     "Uncompromising all-terrain grip engineered for South African roads. Fitted by the experts with exclusive Dunlop Sure protection.",
-  gripVerticalProductBrand: "Dunlop Tyres",
+  gripVerticalProductBrand: "Brand",
   gripVerticalProductSub: "Premium Fitment",
   gripVerticalPhone: "011 907 8495",
   gripSquareBrandPill: "Alberton Tyre Clinic",
@@ -231,9 +223,6 @@ const DEFAULTS_GRIP: Record<GripCopyKey, string> = {
   gripSquareHeroOutline: "Grip.",
   gripSquareProductTitle: "Dunlop Grandtrek AT5",
   gripSquareProductSub: "All-Terrain Dominance",
-  gripSquareSpecMini1: "18-Month Sure Insurance",
-  gripSquareSpecMini2: "Stone Ejector Tech",
-  gripSquareAuthTag: "Authorized Fitment",
   gripSquarePhone: "011 907 8495",
 };
 
@@ -318,23 +307,24 @@ const DEFAULTS_CALIBRATION: Record<CalibrationCopyKey, string> = {
 
 const DEFAULTS_DUELER: Record<DuelerCopyKey, string> = {
   duelSquareBrandPill: "Alberton Tyre Clinic",
-  duelSquareHeroL1: "Lamborghini DNA.",
-  duelSquareHeroL2Outline: "Bakkie Brawn.",
+  duelSquareBrandBadge: "Bridgestone",
+  duelSquareHeroL1: "Grip.",
+  duelSquareHeroL2Outline: "Elevated.",
   duelSquareProductTitle: "Bridgestone Dueler A/T 002",
-  duelSquareProductSub: "Premium All-Terrain Fitment",
-  duelSquareSpec1: "Free Damage Guarantee",
-  duelSquareSpec2: "40% Improved Mileage",
+  duelSquareProductSub: "Featured all-terrain fitment",
+  duelSquareSpec1: "All-terrain confidence",
+  duelSquareSpec2: "Mileage focus",
   duelSquarePhone: "011 907 8495",
   duelVerticalLockupName: "Alberton Tyre Clinic",
   duelVerticalBrandBadge: "Bridgestone",
-  duelVerticalSpec1: "Free Damage Guarantee",
-  duelVerticalSpec2: "40% Improved Mileage",
-  duelVerticalHeadlineL1: "Lamborghini DNA.",
-  duelVerticalHeadlineL2Outline: "Bakkie Brawn.",
+  duelVerticalSpec1: "Dueler A/T 002",
+  duelVerticalSpec2: "SUV & bakkie",
+  duelVerticalHeadlineL1: "Precision.",
+  duelVerticalHeadlineL2Outline: "In motion.",
   duelVerticalSubtext:
-    "The Bridgestone Dueler A/T 002. Supercar-derived engineering meets aggressive all-terrain dominance for your bakkie or SUV.",
+    "Premium tread, expert fitment, and a team that answers the phone. Alberton Tyre Clinic — your featured Bridgestone line, mounted and balanced to spec.",
   duelVerticalServiceTitle: "Dueler A/T 002",
-  duelVerticalServiceSub: "Premium Fitment",
+  duelVerticalServiceSub: "Featured product",
   duelVerticalPhone: "011 907 8495",
 };
 
@@ -422,6 +412,7 @@ function inferPresetFromBlock(
   const keys = Object.keys(block);
   if (
     keys.includes("duelSquareBrandPill") ||
+    keys.includes("duelSquareBrandBadge") ||
     keys.includes("duelVerticalBrandBadge") ||
     keys.includes("duelSquareProductTitle")
   ) {
@@ -875,11 +866,11 @@ export function AlbertonTyreClinicOverlayStudio({
     preset === "velocity-premium"
       ? 27
       : preset === "kinetic-grip"
-        ? 34
+        ? 28
         : preset === "commercial-transit"
           ? 38
           : preset === "tectonic-tread"
-            ? 28
+            ? 30
             : preset === "kinetic-monolith"
             ? 36
             : preset === "apex-interface"
@@ -974,23 +965,11 @@ export function AlbertonTyreClinicOverlayStudio({
                   {g.gripSquareProductSub}
                 </span>
               </div>
-              <div className={gripSquare.specRow}>
-                <span className={gripSquare.specMini}>
-                  {g.gripSquareSpecMini1}
-                </span>
-                <span className={gripSquare.specMini}>
-                  {g.gripSquareSpecMini2}
-                </span>
-              </div>
             </div>
-            <div className={gripSquare.divider} />
-            <div className={gripSquare.stripCompany}>
-              <span className={gripSquare.authTag}>{g.gripSquareAuthTag}</span>
-              <button type="button" className={gripSquare.btnCall}>
-                <PhoneIcon size={18} />
-                {g.gripSquarePhone}
-              </button>
-            </div>
+            <button type="button" className={gripSquare.btnCall}>
+              <PhoneIcon size={18} />
+              {g.gripSquarePhone}
+            </button>
           </div>
         </div>
       </div>
@@ -1067,21 +1046,22 @@ export function AlbertonTyreClinicOverlayStudio({
               alt=""
             />
           ) : null}
-          <div className={duelSquare.terrainGrid} />
-          <div className={duelSquare.scrimTop} />
-          <div className={duelSquare.scrimBottom} />
-          <div className={duelSquare.topPerimeter}>
-            <div className={duelSquare.brandPill}>{d.duelSquareBrandPill}</div>
-            <h1 className={duelSquare.heroType}>
-              {d.duelSquareHeroL1}
-              <br />
-              <span className={duelSquare.heroOutline}>
+          <div className={duelSquare.ambientMesh} aria-hidden />
+          <div className={duelSquare.vignette} aria-hidden />
+          <div className={duelSquare.rimLight} aria-hidden />
+          <div className={duelSquare.topZone}>
+            <div className={duelSquare.clinicLockup}>{d.duelSquareBrandPill}</div>
+            <div className={duelSquare.brandChip}>{d.duelSquareBrandBadge}</div>
+          </div>
+          <div className={duelSquare.imageSafeZone} aria-hidden />
+          <div className={duelSquare.fusionDock}>
+            <h1 className={duelSquare.dockHero}>
+              <span className={duelSquare.dockHeroSolid}>{d.duelSquareHeroL1}</span>
+              <span className={duelSquare.dockHeroOutline}>
                 {d.duelSquareHeroL2Outline}
               </span>
             </h1>
-          </div>
-          <div className={duelSquare.slimTerminal}>
-            <div className={duelSquare.productInfo}>
+            <div className={duelSquare.productStack}>
               <span className={duelSquare.productTitle}>
                 {d.duelSquareProductTitle}
               </span>
@@ -1089,20 +1069,18 @@ export function AlbertonTyreClinicOverlayStudio({
                 {d.duelSquareProductSub}
               </span>
             </div>
-            <div className={duelSquare.techTags}>
-              <span className={duelSquare.specMini}>{d.duelSquareSpec1}</span>
-              <span className={duelSquare.specMini}>{d.duelSquareSpec2}</span>
+            <div className={duelSquare.specRail}>
+              <span className={duelSquare.specPill}>{d.duelSquareSpec1}</span>
+              <span className={duelSquare.specPill}>{d.duelSquareSpec2}</span>
             </div>
-            <div className={duelSquare.actionBlock}>
-              <button type="button" className={duelSquare.btnCall}>
-                <PhoneIcon size={18} />
-                {d.duelSquarePhone}
-              </button>
-            </div>
+            <button type="button" className={duelSquare.phoneCta}>
+              <PhoneIcon size={20} />
+              {d.duelSquarePhone}
+            </button>
           </div>
         </div>
       </div>
-    ) : (
+    ) : preset === "kinetic-monolith" ? (
       <div
         ref={squareRef}
         className={`${kineticSquare.root} ${kineticSquare.canvas1080}`}
@@ -1153,6 +1131,87 @@ export function AlbertonTyreClinicOverlayStudio({
                 {k.kineticSquareCta}
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    ) : preset === "apex-interface" ? (
+      <div
+        ref={squareRef}
+        className={`${apexSquare.root} ${apexSquare.canvas1080}`}
+        aria-label="ATC Apex Interface square 1080 export"
+      >
+        <div className={apexSquare.adCanvas}>
+          {bgSquareDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={apexSquare.heroBg}
+              src={bgSquareDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={apexSquare.scrim} />
+          <div className={apexSquare.dynamicIsland}>
+            <div className={apexSquare.islandDot} />
+            <span className={apexSquare.islandText}>
+              {a.apexSquareIslandText}
+            </span>
+          </div>
+          <div className={apexSquare.centerReticle}>
+            <div className={apexSquare.reticleDot} />
+          </div>
+          <div className={apexSquare.commandStrip}>
+            <div className={apexSquare.textGroup}>
+              <span className={apexSquare.subBadge}>{a.apexSquareSubBadge}</span>
+              <span className={apexSquare.headline}>{a.apexHeadline}</span>
+            </div>
+            <button type="button" className={apexSquare.btnAction}>
+              <PhoneIcon size={18} />
+              {a.apexSquareCta}
+            </button>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div
+        ref={squareRef}
+        className={`${calSquare.root} ${calSquare.canvas1080}`}
+        aria-label="ATC Calibration Matrix square 1080 export"
+      >
+        <div className={calSquare.adCanvas}>
+          {bgSquareDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={calSquare.heroBg}
+              src={bgSquareDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div
+            className={`${calSquare.sensorBracket} ${calSquare.sensorTl}`}
+          />
+          <div
+            className={`${calSquare.sensorBracket} ${calSquare.sensorTr}`}
+          />
+          <h1 className={calSquare.breakoutHeadline}>
+            {cal.calSquareHeadlineSolid}
+            <span className={calSquare.headlineOutline}>
+              {cal.calSquareHeadlineOutline}
+            </span>
+          </h1>
+          <div className={calSquare.horizonDock}>
+            <div className={calSquare.dockInfo}>
+              <div className={calSquare.telemetry}>
+                <div className={calSquare.pulseBar} />
+                <span className={calSquare.telemetryText}>
+                  {cal.calSquareTelemetryText}
+                </span>
+              </div>
+              <p className={calSquare.subtext}>{cal.calSquareSubtext}</p>
+            </div>
+            <button type="button" className={calSquare.btnAction}>
+              <PhoneIcon size={16} />
+              {cal.calSquareCta}
+            </button>
           </div>
         </div>
       </div>
@@ -1233,24 +1292,15 @@ export function AlbertonTyreClinicOverlayStudio({
           <div className={gripVertical.scrim} />
           <div className={gripVertical.topHud}>
             <div className={gripVertical.brandLockup}>
-              <div className={gripVertical.brandText}>
-                <span className={gripVertical.btName}>
-                  {g.gripVerticalClinicName}
-                </span>
-                <span className={gripVertical.btSub}>
-                  {g.gripVerticalClinicSub}
-                </span>
-              </div>
+              <span className={gripVertical.btName}>
+                {g.gripVerticalClinicName}
+              </span>
             </div>
             <div className={gripVertical.partnerBadge}>
               {g.gripVerticalPartnerBadge}
             </div>
           </div>
           <div className={gripVertical.performanceTerminal}>
-            <div className={gripVertical.specGrid}>
-              <div className={gripVertical.specTag}>{g.gripVerticalSpecTag1}</div>
-              <div className={gripVertical.specTag}>{g.gripVerticalSpecTag2}</div>
-            </div>
             <h1 className={gripVertical.headline}>
               {g.gripVerticalHeadlineSolid}{" "}
               <span className={gripVertical.headlineOutline}>
@@ -1352,49 +1402,53 @@ export function AlbertonTyreClinicOverlayStudio({
               alt=""
             />
           ) : null}
-          <div className={duelVertical.terrainGrid} />
-          <div className={duelVertical.scrim} />
+          <div className={duelVertical.ambientMesh} aria-hidden />
+          <div className={duelVertical.vignette} aria-hidden />
+          <div className={duelVertical.rimLight} aria-hidden />
           <div className={duelVertical.topHud}>
-            <div className={duelVertical.brandLockup}>
-              <span className={duelVertical.btName}>
+            <div className={duelVertical.clinicLockup}>
+              <span className={duelVertical.clinicName}>
                 {d.duelVerticalLockupName}
               </span>
             </div>
-            <div className={duelVertical.brandBadge}>
+            <div className={duelVertical.brandChip}>
               {d.duelVerticalBrandBadge}
             </div>
           </div>
-          <div className={duelVertical.techTerminal}>
-            <div className={duelVertical.specGrid}>
-              <div className={duelVertical.specTag}>{d.duelVerticalSpec1}</div>
-              <div className={duelVertical.specTag}>{d.duelVerticalSpec2}</div>
+          <div className={duelVertical.fusionTerminal}>
+            <div className={duelVertical.specRail}>
+              <span className={duelVertical.specPill}>
+                {d.duelVerticalSpec1}
+              </span>
+              <span className={duelVertical.specPill}>
+                {d.duelVerticalSpec2}
+              </span>
             </div>
             <h1 className={duelVertical.headline}>
-              {d.duelVerticalHeadlineL1}
-              <br />
+              <span className={duelVertical.headlineSolid}>
+                {d.duelVerticalHeadlineL1}
+              </span>
               <span className={duelVertical.headlineOutline}>
                 {d.duelVerticalHeadlineL2Outline}
               </span>
             </h1>
             <p className={duelVertical.subtext}>{d.duelVerticalSubtext}</p>
-            <div className={duelVertical.actionDock}>
-              <div className={duelVertical.serviceId}>
-                <span className={duelVertical.serviceTitle}>
-                  {d.duelVerticalServiceTitle}
-                </span>
-                <span className={duelVertical.serviceSub}>
-                  {d.duelVerticalServiceSub}
-                </span>
-              </div>
-              <button type="button" className={duelVertical.btnCall}>
-                <PhoneIcon size={16} />
-                {d.duelVerticalPhone}
-              </button>
+            <div className={duelVertical.featuredBlock}>
+              <span className={duelVertical.serviceTitle}>
+                {d.duelVerticalServiceTitle}
+              </span>
+              <span className={duelVertical.serviceSub}>
+                {d.duelVerticalServiceSub}
+              </span>
             </div>
+            <button type="button" className={duelVertical.phoneCta}>
+              <PhoneIcon size={20} />
+              {d.duelVerticalPhone}
+            </button>
           </div>
         </div>
       </div>
-    ) : (
+    ) : preset === "kinetic-monolith" ? (
       <div
         ref={verticalRef}
         className={`${kineticVertical.root} ${kineticVertical.canvas1080x1920}`}
@@ -1452,6 +1506,100 @@ export function AlbertonTyreClinicOverlayStudio({
           </div>
         </div>
       </div>
+    ) : preset === "apex-interface" ? (
+      <div
+        ref={verticalRef}
+        className={`${apexVertical.root} ${apexVertical.canvas1080x1920}`}
+        aria-label="ATC Apex Interface vertical 1080 export"
+      >
+        <div className={apexVertical.adCanvas}>
+          {bgVerticalDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={apexVertical.heroBg}
+              src={bgVerticalDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={apexVertical.scrim} />
+          <div className={apexVertical.dynamicIsland}>
+            <div className={apexVertical.islandDot} />
+            <span className={apexVertical.islandText}>
+              {a.apexVerticalIslandText}
+            </span>
+          </div>
+          <div className={apexVertical.centerReticle} />
+          <div className={apexVertical.bottomConsole}>
+            <div className={apexVertical.dataBadges}>
+              <span className={apexVertical.badge}>{a.apexVerticalBadge1}</span>
+              <span className={apexVertical.badge}>{a.apexVerticalBadge2}</span>
+            </div>
+            <h1 className={apexVertical.headline}>{a.apexHeadline}</h1>
+            <p className={apexVertical.subtext}>{a.apexVerticalSubtext}</p>
+            <button type="button" className={apexVertical.btnWide}>
+              {a.apexVerticalCta}
+            </button>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div
+        ref={verticalRef}
+        className={`${calVertical.root} ${calVertical.canvas1080x1920}`}
+        aria-label="ATC Calibration Matrix vertical 1080 export"
+      >
+        <div className={calVertical.adCanvas}>
+          {bgVerticalDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={calVertical.heroBg}
+              src={bgVerticalDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={calVertical.edgeGlow} aria-hidden />
+          <div className={calVertical.telemetryBar}>
+            <div className={calVertical.sysStatus}>
+              <div className={calVertical.pulseDot} />
+              {cal.calVerticalSysStatus}
+            </div>
+            <div className={calVertical.geoTag}>{cal.calVerticalGeoTag}</div>
+          </div>
+          <div className={calVertical.glassVault}>
+            <div className={calVertical.macroData} aria-hidden>
+              {cal.calVerticalMacroData}
+            </div>
+            <div className={calVertical.vaultContent}>
+              <div className={calVertical.specBadge}>
+                {cal.calVerticalSpecBadge}
+              </div>
+              <h1 className={calVertical.headline}>
+                {cal.calVerticalHeadlineL1}
+                <br />
+                {cal.calVerticalHeadlineL2}
+              </h1>
+              <p className={calVertical.subtext}>{cal.calVerticalSubtext}</p>
+              <div className={calVertical.actionRow}>
+                <div className={calVertical.brandLockup}>
+                  <span className={calVertical.brandName}>
+                    {cal.calVerticalBrandName}
+                  </span>
+                  <span className={calVertical.brandSub}>
+                    {cal.calVerticalBrandSub}
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  className={calVertical.btnCore}
+                  aria-label={cal.calVerticalCtaAria}
+                >
+                  <PhoneIcon size={24} />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     );
 
   const previewSquareLabel =
@@ -1463,7 +1611,11 @@ export function AlbertonTyreClinicOverlayStudio({
           ? "Commercial Transit · 1:1"
           : preset === "tectonic-tread"
             ? "Tectonic Tread · 1:1"
-            : "Kinetic Monolith · 1:1";
+            : preset === "kinetic-monolith"
+              ? "Kinetic Monolith · 1:1"
+              : preset === "apex-interface"
+                ? "Apex Interface · 1:1"
+                : "Calibration Matrix · 1:1";
   const previewVertLabel =
     preset === "velocity-premium"
       ? "Fitment Laboratory · 9:16"
@@ -1473,7 +1625,11 @@ export function AlbertonTyreClinicOverlayStudio({
           ? "Commercial Transit · 9:16"
           : preset === "tectonic-tread"
             ? "Tectonic Tread · 9:16"
-            : "Kinetic Monolith · 9:16";
+            : preset === "kinetic-monolith"
+              ? "Kinetic Monolith · 9:16"
+              : preset === "apex-interface"
+                ? "Apex Interface · 9:16"
+                : "Calibration Matrix · 9:16";
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
@@ -1703,24 +1859,9 @@ export function AlbertonTyreClinicOverlayStudio({
               onChange={(x) => patchGrip("gripVerticalClinicName", x)}
             />
             <Field
-              label="Clinic subline (orange mono)"
-              value={g.gripVerticalClinicSub}
-              onChange={(x) => patchGrip("gripVerticalClinicSub", x)}
-            />
-            <Field
               label="Partner badge (top right)"
               value={g.gripVerticalPartnerBadge}
               onChange={(x) => patchGrip("gripVerticalPartnerBadge", x)}
-            />
-            <Field
-              label="Spec tag 1"
-              value={g.gripVerticalSpecTag1}
-              onChange={(x) => patchGrip("gripVerticalSpecTag1", x)}
-            />
-            <Field
-              label="Spec tag 2"
-              value={g.gripVerticalSpecTag2}
-              onChange={(x) => patchGrip("gripVerticalSpecTag2", x)}
             />
             <Field
               label="Headline — line 1 (solid)"
@@ -1739,7 +1880,7 @@ export function AlbertonTyreClinicOverlayStudio({
               rows={3}
             />
             <Field
-              label="Product brand"
+              label="Brand (dock)"
               value={g.gripVerticalProductBrand}
               onChange={(x) => patchGrip("gripVerticalProductBrand", x)}
             />
@@ -1757,7 +1898,7 @@ export function AlbertonTyreClinicOverlayStudio({
               Square 1:1 — grip strip
             </p>
             <Field
-              label="Brand pill (top left)"
+              label="Brand pill (top left, single line)"
               value={g.gripSquareBrandPill}
               onChange={(x) => patchGrip("gripSquareBrandPill", x)}
             />
@@ -1780,21 +1921,6 @@ export function AlbertonTyreClinicOverlayStudio({
               label="Product subtitle"
               value={g.gripSquareProductSub}
               onChange={(x) => patchGrip("gripSquareProductSub", x)}
-            />
-            <Field
-              label="Spec mini 1"
-              value={g.gripSquareSpecMini1}
-              onChange={(x) => patchGrip("gripSquareSpecMini1", x)}
-            />
-            <Field
-              label="Spec mini 2"
-              value={g.gripSquareSpecMini2}
-              onChange={(x) => patchGrip("gripSquareSpecMini2", x)}
-            />
-            <Field
-              label="Auth tag (mono)"
-              value={g.gripSquareAuthTag}
-              onChange={(x) => patchGrip("gripSquareAuthTag", x)}
             />
             <Field
               label="Phone (square button)"
@@ -1911,25 +2037,25 @@ export function AlbertonTyreClinicOverlayStudio({
         ) : preset === "tectonic-tread" ? (
           <>
             <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
-              Vertical 9:16 — tech terminal
+              Vertical 9:16 — fusion panel
             </p>
             <Field
-              label="Lockup name (HUD)"
+              label="Clinic (top HUD)"
               value={d.duelVerticalLockupName}
               onChange={(x) => patchDueler("duelVerticalLockupName", x)}
             />
             <Field
-              label="Brand badge (top right)"
+              label="Featured brand (top right)"
               value={d.duelVerticalBrandBadge}
               onChange={(x) => patchDueler("duelVerticalBrandBadge", x)}
             />
             <Field
-              label="Spec tag 1"
+              label="Highlight line 1"
               value={d.duelVerticalSpec1}
               onChange={(x) => patchDueler("duelVerticalSpec1", x)}
             />
             <Field
-              label="Spec tag 2"
+              label="Highlight line 2"
               value={d.duelVerticalSpec2}
               onChange={(x) => patchDueler("duelVerticalSpec2", x)}
             />
@@ -1967,20 +2093,25 @@ export function AlbertonTyreClinicOverlayStudio({
               onChange={(x) => patchDueler("duelVerticalPhone", x)}
             />
             <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
-              Square 1:1 — slim ribbon
+              Square 1:1 — fusion dock
             </p>
             <Field
-              label="Brand pill (top left)"
+              label="Clinic (top bar, left)"
               value={d.duelSquareBrandPill}
               onChange={(x) => patchDueler("duelSquareBrandPill", x)}
             />
             <Field
-              label="Hero line 1 (solid)"
+              label="Featured brand (top bar, right)"
+              value={d.duelSquareBrandBadge}
+              onChange={(x) => patchDueler("duelSquareBrandBadge", x)}
+            />
+            <Field
+              label="Hero line 1 (solid, bottom dock — centre stays for image)"
               value={d.duelSquareHeroL1}
               onChange={(x) => patchDueler("duelSquareHeroL1", x)}
             />
             <Field
-              label="Hero line 2 (outline)"
+              label="Hero line 2 (outline, bottom dock)"
               value={d.duelSquareHeroL2Outline}
               onChange={(x) => patchDueler("duelSquareHeroL2Outline", x)}
             />
@@ -1995,12 +2126,12 @@ export function AlbertonTyreClinicOverlayStudio({
               onChange={(x) => patchDueler("duelSquareProductSub", x)}
             />
             <Field
-              label="Spec mini 1"
+              label="Highlight 1 (dock)"
               value={d.duelSquareSpec1}
               onChange={(x) => patchDueler("duelSquareSpec1", x)}
             />
             <Field
-              label="Spec mini 2"
+              label="Highlight 2 (dock)"
               value={d.duelSquareSpec2}
               onChange={(x) => patchDueler("duelSquareSpec2", x)}
             />
@@ -2010,7 +2141,7 @@ export function AlbertonTyreClinicOverlayStudio({
               onChange={(x) => patchDueler("duelSquarePhone", x)}
             />
           </>
-        ) : (
+        ) : preset === "kinetic-monolith" ? (
           <>
             <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
               Shared hero type (square + vertical)
@@ -2105,6 +2236,151 @@ export function AlbertonTyreClinicOverlayStudio({
               label="Square CTA"
               value={k.kineticSquareCta}
               onChange={(x) => patchKinetic("kineticSquareCta", x)}
+            />
+          </>
+        ) : preset === "apex-interface" ? (
+          <>
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Vertical 9:16 — Apex console
+            </p>
+            <Field
+              label="Dynamic island (clinic)"
+              value={a.apexVerticalIslandText}
+              onChange={(x) => patchApex("apexVerticalIslandText", x)}
+            />
+            <Field
+              label="Badge 1"
+              value={a.apexVerticalBadge1}
+              onChange={(x) => patchApex("apexVerticalBadge1", x)}
+            />
+            <Field
+              label="Badge 2"
+              value={a.apexVerticalBadge2}
+              onChange={(x) => patchApex("apexVerticalBadge2", x)}
+            />
+            <Field
+              label="Headline (shared with square)"
+              value={a.apexHeadline}
+              onChange={(x) => patchApex("apexHeadline", x)}
+            />
+            <Field
+              label="Subtext"
+              value={a.apexVerticalSubtext}
+              onChange={(x) => patchApex("apexVerticalSubtext", x)}
+              rows={3}
+            />
+            <Field
+              label="Vertical CTA"
+              value={a.apexVerticalCta}
+              onChange={(x) => patchApex("apexVerticalCta", x)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Square 1:1 — command strip
+            </p>
+            <Field
+              label="Island label"
+              value={a.apexSquareIslandText}
+              onChange={(x) => patchApex("apexSquareIslandText", x)}
+            />
+            <Field
+              label="Sub-badge (orange)"
+              value={a.apexSquareSubBadge}
+              onChange={(x) => patchApex("apexSquareSubBadge", x)}
+            />
+            <Field
+              label="Square CTA"
+              value={a.apexSquareCta}
+              onChange={(x) => patchApex("apexSquareCta", x)}
+            />
+          </>
+        ) : (
+          <>
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Vertical 9:16 — calibration vault
+            </p>
+            <Field
+              label="System status (left)"
+              value={cal.calVerticalSysStatus}
+              onChange={(x) => patchCalibration("calVerticalSysStatus", x)}
+            />
+            <Field
+              label="Geo / clinic tag (right)"
+              value={cal.calVerticalGeoTag}
+              onChange={(x) => patchCalibration("calVerticalGeoTag", x)}
+            />
+            <Field
+              label="Macro watermark number"
+              value={cal.calVerticalMacroData}
+              onChange={(x) => patchCalibration("calVerticalMacroData", x)}
+            />
+            <Field
+              label="Spec badge"
+              value={cal.calVerticalSpecBadge}
+              onChange={(x) => patchCalibration("calVerticalSpecBadge", x)}
+            />
+            <Field
+              label="Headline line 1"
+              value={cal.calVerticalHeadlineL1}
+              onChange={(x) => patchCalibration("calVerticalHeadlineL1", x)}
+            />
+            <Field
+              label="Headline line 2"
+              value={cal.calVerticalHeadlineL2}
+              onChange={(x) => patchCalibration("calVerticalHeadlineL2", x)}
+            />
+            <Field
+              label="Subtext"
+              value={cal.calVerticalSubtext}
+              onChange={(x) => patchCalibration("calVerticalSubtext", x)}
+              rows={3}
+            />
+            <Field
+              label="Brand name"
+              value={cal.calVerticalBrandName}
+              onChange={(x) => patchCalibration("calVerticalBrandName", x)}
+            />
+            <Field
+              label="Brand subline"
+              value={cal.calVerticalBrandSub}
+              onChange={(x) => patchCalibration("calVerticalBrandSub", x)}
+            />
+            <Field
+              label="Phone button (aria label)"
+              value={cal.calVerticalCtaAria}
+              onChange={(x) => patchCalibration("calVerticalCtaAria", x)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Square 1:1 — sensor breakout
+            </p>
+            <Field
+              label="Headline solid"
+              value={cal.calSquareHeadlineSolid}
+              onChange={(x) => patchCalibration("calSquareHeadlineSolid", x)}
+            />
+            <Field
+              label="Headline outline"
+              value={cal.calSquareHeadlineOutline}
+              onChange={(x) =>
+                patchCalibration("calSquareHeadlineOutline", x)
+              }
+            />
+            <Field
+              label="Telemetry label"
+              value={cal.calSquareTelemetryText}
+              onChange={(x) =>
+                patchCalibration("calSquareTelemetryText", x)
+              }
+            />
+            <Field
+              label="Dock subtext"
+              value={cal.calSquareSubtext}
+              onChange={(x) => patchCalibration("calSquareSubtext", x)}
+              rows={3}
+            />
+            <Field
+              label="Square CTA"
+              value={cal.calSquareCta}
+              onChange={(x) => patchCalibration("calSquareCta", x)}
             />
           </>
         )}

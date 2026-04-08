@@ -1,0 +1,213 @@
+/* Miwesu Wood — Balanced burn square 1080×1080 — amber sibling to thermal square */
+
+.root {
+  width: 1080px;
+  height: 1080px;
+  flex-shrink: 0;
+  font-family: var(--font-mww-thermal), -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 43px;
+  overflow: hidden;
+  box-shadow:
+    0 86px 173px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  display: flex;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  object-position: left center;
+  pointer-events: none;
+}
+
+.fadeLayer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    rgba(0, 0, 0, 0.82) 40%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.amberAura {
+  position: absolute;
+  top: 50%;
+  left: -108px;
+  transform: translateY(-50%);
+  width: 648px;
+  height: 648px;
+  background: #ffaa00;
+  filter: blur(300px);
+  opacity: 0.18;
+  z-index: 3;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 86px;
+  min-width: 0;
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  background: rgba(255, 170, 0, 0.15);
+  border: 1px solid rgba(255, 170, 0, 0.35);
+  padding: 13px 30px;
+  border-radius: 65px;
+  margin-bottom: 26px;
+  align-self: flex-start;
+}
+
+.statusDot {
+  width: 13px;
+  height: 13px;
+  background: #ffaa00;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #ffaa00;
+  flex-shrink: 0;
+}
+
+.statusText {
+  color: #ffaa00;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 4.3px;
+  text-transform: uppercase;
+}
+
+.weightTag {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  letter-spacing: 4.3px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+
+.productTitle {
+  font-size: 156px;
+  font-weight: 900;
+  letter-spacing: -4.3px;
+  line-height: 0.95;
+  margin-bottom: 26px;
+  background: linear-gradient(135deg, #ffea00 0%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.tagline {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+  margin-bottom: 52px;
+  line-height: 1.4;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  margin-bottom: 65px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 35px 0;
+}
+
+.specItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.specLabel {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  margin-bottom: 9px;
+}
+
+.specValue {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+  flex-wrap: wrap;
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 72px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.perBag {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  margin-top: 4px;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #ffc400 0%, #ff8c00 100%);
+  color: #000000;
+  border: none;
+  padding: 30px 60px;
+  border-radius: 86px;
+  font-size: 26px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  cursor: default;
+  font-family: inherit;
+  box-shadow: 0 22px 43px rgba(255, 140, 0, 0.35);
+}

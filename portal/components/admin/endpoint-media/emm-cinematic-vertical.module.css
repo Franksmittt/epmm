@@ -1,0 +1,162 @@
+/* Endpoint Media — Cinematic aura vertical 1080×1920 */
+
+.root {
+  width: 1080px;
+  height: 1920px;
+  flex-shrink: 0;
+  font-family: var(--font-emm-framed), -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 48px;
+  overflow: hidden;
+  box-shadow:
+    0 120px 240px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.imageStack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.imageFade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    #000000 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.oledAura {
+  position: absolute;
+  bottom: 150px;
+  left: -54px;
+  width: 750px;
+  height: 750px;
+  background: #00f2fe;
+  filter: blur(240px);
+  opacity: 0.15;
+  z-index: 3;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.topBadge {
+  position: absolute;
+  top: 72px;
+  left: 72px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.partnerName {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.content {
+  position: absolute;
+  bottom: 90px;
+  left: 72px;
+  right: 72px;
+  z-index: 10;
+}
+
+.subBrand {
+  font-size: 33px;
+  color: #00f2fe;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  margin-bottom: 24px;
+}
+
+.productTitle {
+  font-size: 138px;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: -6px;
+  line-height: 0.95;
+  margin-bottom: 36px;
+}
+
+.productTitleLine {
+  display: block;
+}
+
+.productTagline {
+  font-size: 45px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300;
+  margin-bottom: 96px;
+  max-width: 90%;
+  line-height: 1.35;
+  white-space: pre-line;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.ctaBtn {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 42px 84px;
+  border-radius: 120px;
+  font-size: 39px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: default;
+  font-family: inherit;
+}
+
+.price {
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 400;
+}

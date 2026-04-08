@@ -1,13 +1,15 @@
-/* Alberton Tyre Clinic — Tectonic Tread / Bridgestone Dueler slim square 1:1 (V36). Export 1080×1080. */
+/* Alberton Tyre Clinic — Tectonic Tread square 1:1 (Fusion). Header + image-safe center + footer dock. */
 
 .root {
-  --pure-black: #000000;
-  --pure-white: #ffffff;
-  --atc-orange: #ff4500;
-  --bridge-red: #e3000f;
-  --stealth-grey: #8e8e93;
-  --glass-carbon: rgba(12, 10, 10, 0.85);
-  --glass-border: rgba(255, 69, 0, 0.25);
+  --void: #030304;
+  --surface: rgba(18, 18, 22, 0.82);
+  --surface-edge: rgba(255, 255, 255, 0.09);
+  --text: #f5f5f7;
+  --text-dim: #a1a1a6;
+  --atc: #ff4500;
+  --rim-cyan: #5ac8fa;
+  --rim-violet: #bf5af2;
+  --glass: rgba(255, 255, 255, 0.04);
 }
 
 .root * {
@@ -28,12 +30,12 @@
   width: 100%;
   max-width: 600px;
   aspect-ratio: 1 / 1;
-  background-color: var(--pure-black);
+  background: var(--void);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
+  min-height: 0;
+  box-shadow: 0 48px 96px rgba(0, 0, 0, 0.85);
 }
 
 .heroBg {
@@ -46,202 +48,245 @@
   pointer-events: none;
 }
 
-.terrainGrid {
+/* Subtle texture — strongest toward edges, faint in the middle so the tyre photo reads. */
+.ambientMesh {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(
-    rgba(255, 69, 0, 0.05) 2px,
-    transparent 2px
-  );
-  background-size: 30px 30px;
   z-index: 1;
+  opacity: 0.42;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(90, 200, 250, 0.07) 1px, transparent 1px);
+  background-size: 28px 28px, 42px 42px;
+  background-position:
+    0 0,
+    14px 21px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 68% 68% at 50% 46%,
+    transparent 28%,
+    rgba(0, 0, 0, 0.45) 55%,
+    black 88%
+  );
+  mask-image: radial-gradient(
+    ellipse 68% 68% at 50% 46%,
+    transparent 28%,
+    rgba(0, 0, 0, 0.45) 55%,
+    black 88%
+  );
   pointer-events: none;
 }
 
-.scrimTop {
+/* Edge-only darkening: keeps the centre of the frame clear for your uploaded image. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, transparent 20%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.58) 0%, transparent 26%),
+    radial-gradient(
+      ellipse 78% 78% at 50% 48%,
+      transparent 42%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+  pointer-events: none;
+}
+
+.rimLight {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 35%;
+  right: 0;
+  z-index: 3;
+  height: 2px;
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.9) 0%,
+    90deg,
+    transparent 0%,
+    var(--rim-cyan) 22%,
+    var(--rim-violet) 52%,
+    var(--atc) 78%,
     transparent 100%
   );
-  z-index: 1;
+  opacity: 0.85;
   pointer-events: none;
 }
 
-.scrimBottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 35%;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.95) 0%,
-    transparent 100%
-  );
-  z-index: 1;
-  pointer-events: none;
-}
-
-.topPerimeter {
+.topZone {
   position: relative;
   z-index: 10;
-  padding: 20px 25px;
+  flex: 0 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 26px 10px;
+  min-width: 0;
 }
 
-.brandPill {
-  background: rgba(255, 69, 0, 0.1);
-  border: 1px solid rgba(255, 69, 0, 0.3);
-  color: var(--pure-white);
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 900;
-  letter-spacing: 1.5px;
+.clinicLockup {
+  color: var(--text);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  max-width: 48%;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--surface-edge);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  max-width: 58%;
   min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.brandPill::before {
-  content: "";
-  width: 6px;
-  height: 6px;
-  background: var(--atc-orange);
-  border-radius: 50%;
+.brandChip {
   flex-shrink: 0;
+  color: var(--atc);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(255, 69, 0, 0.08);
+  border: 1px solid rgba(255, 69, 0, 0.28);
+  border-left: 2px solid var(--rim-cyan);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
-.heroType {
-  color: var(--pure-white);
-  font-size: 2.8rem;
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -1.5px;
-  text-align: right;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  min-width: 0;
+/* Flex spacer: no overlays — your uploaded image shows through here. */
+.imageSafeZone {
+  position: relative;
+  z-index: 4;
+  flex: 1 1 auto;
+  min-height: 80px;
+  pointer-events: none;
 }
 
-.heroOutline {
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--pure-white);
-  display: block;
-}
-
-.slimTerminal {
+.fusionDock {
   position: relative;
   z-index: 10;
-  margin: 0 20px 20px 20px;
-  background: var(--glass-carbon);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid var(--glass-border);
-  border-left: 4px solid var(--atc-orange);
-  border-radius: 16px;
-  padding: 15px 20px;
+  flex: 0 0 auto;
+  margin: 0 22px 22px;
+  padding: 20px 22px 20px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--surface-edge);
+  border-top: 1px solid rgba(90, 200, 250, 0.2);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  flex-direction: column;
+  gap: 16px;
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-.productInfo {
+/* Headline lives in the footer dock so the image centre stays unobstructed. */
+.dockHero {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  flex: 1.2;
-  min-width: 0;
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.productTitle {
-  color: var(--pure-white);
-  font-size: 1.1rem;
-  font-weight: 900;
-  letter-spacing: -0.5px;
+.dockHeroSolid {
+  color: var(--text);
+  font-size: 1.28rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 
-.productSub {
-  color: var(--stealth-grey);
-  font-family: ui-monospace, "SF Mono", monospace;
-  font-size: 0.65rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.dockHeroOutline {
+  color: transparent;
+  -webkit-text-stroke: 1.1px var(--text);
+  font-size: 1.28rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
 }
 
-.techTags {
+.productStack {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 0 20px;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  flex: 0.8;
 }
 
-.specMini {
-  color: var(--atc-orange);
-  font-family: ui-monospace, "SF Mono", monospace;
-  font-size: 0.55rem;
+.productTitle {
+  color: var(--text);
+  font-size: 1.12rem;
   font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.productSub {
+  color: var(--text-dim);
+  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  background: rgba(255, 69, 0, 0.1);
-  padding: 4px 8px;
-  border-radius: 4px;
-  white-space: nowrap;
+  letter-spacing: 0.14em;
+  line-height: 1.35;
 }
 
-.actionBlock {
+.specRail {
   display: flex;
-  align-items: center;
-  padding-left: 20px;
-  flex-shrink: 0;
-}
-
-.btnCall {
-  background: var(--atc-orange);
-  color: var(--pure-white);
-  height: 44px;
-  padding: 0 20px;
-  border-radius: 10px;
-  font-size: 0.95rem;
-  font-family: ui-monospace, "SF Mono", monospace;
-  font-weight: 900;
-  letter-spacing: 0.5px;
-  border: none;
-  cursor: default;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
-  white-space: nowrap;
-  flex-shrink: 0;
-  box-shadow: 0 8px 16px rgba(255, 69, 0, 0.3);
 }
 
-.btnCall svg {
+.specPill {
+  color: rgba(255, 255, 255, 0.92);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(255, 69, 0, 0.1);
+  border: 1px solid rgba(255, 69, 0, 0.22);
+}
+
+.phoneCta {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 2px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ff5a1f 0%, var(--atc) 100%);
+  color: #fff;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 0.95rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: default;
+  box-shadow:
+    0 12px 28px rgba(255, 69, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.phoneCta svg {
   flex-shrink: 0;
   stroke: currentColor;
   fill: none;
 }
 
-/* ─── 1080×1080 export (×1.8) ─── */
+/* ─── 1080×1080 (×1.8 from 600) ─── */
 
 .root.canvas1080 .adCanvas {
   width: 1080px;
@@ -250,41 +295,48 @@
   aspect-ratio: auto;
 }
 
-.root.canvas1080 .terrainGrid {
-  background-size: 54px 54px;
+.root.canvas1080 .ambientMesh {
+  background-size:
+    50px 50px,
+    76px 76px;
+  background-position:
+    0 0,
+    25px 38px;
 }
 
-.root.canvas1080 .topPerimeter {
-  padding: 36px 45px;
+.root.canvas1080 .topZone {
+  padding: 40px 47px 18px;
+  gap: 25px;
 }
 
-.root.canvas1080 .brandPill {
-  padding: 14px 25px;
-  border-radius: 14px;
+.root.canvas1080 .clinicLockup {
   font-size: 22px;
-  gap: 14px;
+  padding: 16px 25px;
 }
 
-.root.canvas1080 .brandPill::before {
-  width: 11px;
-  height: 11px;
+.root.canvas1080 .brandChip {
+  font-size: 20px;
+  padding: 16px 25px;
 }
 
-.root.canvas1080 .heroType {
-  font-size: 84px;
-  letter-spacing: -3px;
+.root.canvas1080 .imageSafeZone {
+  min-height: 144px;
 }
 
-.root.canvas1080 .heroOutline {
-  -webkit-text-stroke-width: 3px;
+.root.canvas1080 .fusionDock {
+  margin: 0 40px 40px;
+  padding: 36px 40px 36px;
+  border-radius: 36px;
+  gap: 29px;
 }
 
-.root.canvas1080 .slimTerminal {
-  margin: 0 36px 36px 36px;
-  border-radius: 29px;
-  padding: 27px 36px;
-  border-left-width: 7px;
-  gap: 22px;
+.root.canvas1080 .dockHeroSolid,
+.root.canvas1080 .dockHeroOutline {
+  font-size: 46px;
+}
+
+.root.canvas1080 .dockHeroOutline {
+  -webkit-text-stroke-width: 2px;
 }
 
 .root.canvas1080 .productTitle {
@@ -295,29 +347,23 @@
   font-size: 22px;
 }
 
-.root.canvas1080 .techTags {
-  padding: 0 36px;
-  gap: 11px;
-}
-
-.root.canvas1080 .specMini {
-  font-size: 17px;
-  padding: 7px 14px;
-}
-
-.root.canvas1080 .actionBlock {
-  padding-left: 36px;
-}
-
-.root.canvas1080 .btnCall {
-  height: 79px;
-  padding: 0 36px;
-  border-radius: 18px;
-  font-size: 29px;
+.root.canvas1080 .specRail {
   gap: 14px;
 }
 
-.root.canvas1080 .btnCall svg {
-  width: 32px;
-  height: 32px;
+.root.canvas1080 .specPill {
+  font-size: 17px;
+  padding: 13px 20px;
+}
+
+.root.canvas1080 .phoneCta {
+  min-height: 90px;
+  border-radius: 25px;
+  font-size: 29px;
+  gap: 18px;
+}
+
+.root.canvas1080 .phoneCta svg {
+  width: 36px;
+  height: 36px;
 }

@@ -19,6 +19,9 @@ import { AsBrokersOverlayStudio } from "@/components/admin/as-brokers/AsBrokersO
 import { EfsExpeditionHudOverlayStudio } from "@/components/admin/efs-suspension/EfsExpeditionHudOverlayStudio";
 import { MaverickPaintingOverlayStudio } from "@/components/admin/maverick-painting/MaverickPaintingOverlayStudio";
 import { OtmaRelocationRadarOverlayStudio } from "@/components/admin/on-the-move-again/OtmaRelocationRadarOverlayStudio";
+import { EndpointMediaOverlayStudio } from "@/components/admin/endpoint-media/EndpointMediaOverlayStudio";
+import { MiwesuWoodOverlayStudio } from "@/components/admin/miwesu-wood/MiwesuWoodOverlayStudio";
+import { EverestWealthOverlayStudio } from "@/components/admin/everest-wealth/EverestWealthOverlayStudio";
 
 export const dynamic = "force-dynamic";
 
@@ -214,6 +217,82 @@ export default async function AdminClientSchedulePage({
               EFS — overlay studio (1:1 + 9:16)
             </p>
             <EfsExpeditionHudOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "endpoint-media" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · generic templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Four presets: framed glass, cinematic aura, tactile HUD, and
+              floating slate (legacy{" "}
+              <code className="text-white/80">endpoint-media-framed-overlay</code>{" "}
+              JSON still applies). Separate square and vertical hero
+              images, per-preset copy + JSON (
+              <code className="text-white/80">endpoint-media-overlay</code> ·{" "}
+              <code className="text-white/80">preset</code>), export 1080×1080
+              and 1080×1920. Inter typography.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Endpoint Media — generic overlays (1:1 + 9:16)
+            </p>
+            <EndpointMediaOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "miwesu-wood" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · Thermal dynamics
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Three presets: Thermal dynamics (ember Sekelbos-style), Braai mix
+              (full-bleed + glass card / gold split-title square), Balanced burn
+              (golden Geelhaak-style + companion square). Separate heroes per
+              ratio, JSON (
+              <code className="text-white/80">miwesu-wood-overlay</code> ·{" "}
+              <code className="text-white/80">preset</code>), export 1080×1080 and
+              1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Miwesu Wood — firewood / braai (1:1 + 9:16)
+            </p>
+            <MiwesuWoodOverlayStudio />
+          </div>
+        </section>
+      ) : null}
+
+      {slug === "everest-wealth" ? (
+        <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              Overlay studio · wealth templates
+            </h2>
+            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+              Five presets: gold fintech, Swiss vault (emerald + Playfair), cobalt
+              terminal, horology crystal plaque, titanium and sapphire. Separate
+              square and vertical heroes where applicable, optional vault texture,
+              JSON (
+              <code className="text-white/80">everest-wealth-overlay</code> ·{" "}
+              <code className="text-white/80">preset</code>), export 1080×1080 and
+              1080×1920.
+            </p>
+          </div>
+          <div className="rounded-md border border-white/10 bg-black/40 p-4">
+            <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Everest Wealth — overlay studio (1:1 + 9:16)
+            </p>
+            <EverestWealthOverlayStudio />
           </div>
         </section>
       ) : null}

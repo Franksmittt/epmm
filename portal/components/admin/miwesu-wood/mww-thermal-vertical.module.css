@@ -1,0 +1,207 @@
+/* Miwesu Wood — Thermal dynamics vertical 1080×1920 */
+
+.root {
+  width: 1080px;
+  height: 1920px;
+  flex-shrink: 0;
+  font-family: var(--font-mww-thermal), -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow:
+    0 120px 240px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  z-index: 1;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.cinematicFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(
+    to top,
+    #000000 0%,
+    #000000 55%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.statusPill {
+  position: absolute;
+  top: 72px;
+  left: 72px;
+  background: rgba(255, 60, 0, 0.15);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 60, 0, 0.3);
+  padding: 18px 42px;
+  border-radius: 90px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.statusDot {
+  width: 18px;
+  height: 18px;
+  background: #ff3c00;
+  border-radius: 50%;
+  box-shadow: 0 0 30px #ff3c00;
+  flex-shrink: 0;
+}
+
+.statusText {
+  color: #ff6a00;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.content {
+  position: absolute;
+  bottom: 72px;
+  left: 72px;
+  right: 72px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.weightTag {
+  font-size: 33px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.productTitle {
+  font-size: 120px;
+  font-weight: 900;
+  letter-spacing: -4.5px;
+  line-height: 1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #ff8a00 0%, #ff0000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.tagline {
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 300;
+  margin-bottom: 60px;
+  line-height: 1.35;
+}
+
+.specsGrid {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.specChip {
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  padding: 30px 36px;
+  border-radius: 36px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.chipLabel {
+  font-size: 27px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+
+.chipValue {
+  font-size: 33px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 18px 18px 18px 60px;
+  border-radius: 120px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 60px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.perBag {
+  font-size: 27px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 6px;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #ff6a00 0%, #ff3c00 100%);
+  color: #ffffff;
+  border: none;
+  padding: 36px 72px;
+  border-radius: 90px;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: default;
+  font-family: inherit;
+  box-shadow: 0 30px 60px rgba(255, 60, 0, 0.3);
+}

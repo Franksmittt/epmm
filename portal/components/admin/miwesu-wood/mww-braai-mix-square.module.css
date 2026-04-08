@@ -1,0 +1,197 @@
+/* Miwesu Wood — Braai mix square 1080×1080 (ref 500×500 ×2.16) */
+
+.root {
+  width: 1080px;
+  height: 1080px;
+  flex-shrink: 0;
+  font-family: var(--font-mww-thermal), -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #0a0a0a;
+  border-radius: 43px;
+  overflow: hidden;
+  box-shadow:
+    0 86px 173px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  display: flex;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  z-index: 1;
+  object-fit: cover;
+  object-position: right center;
+  pointer-events: none;
+}
+
+.infoPanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    #0a0a0a 60%,
+    rgba(10, 10, 10, 0.9) 75%,
+    transparent 100%
+  );
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 86px;
+}
+
+.goldGlow {
+  position: absolute;
+  top: -108px;
+  left: -108px;
+  width: 540px;
+  height: 540px;
+  background: #ffb700;
+  filter: blur(260px);
+  opacity: 0.15;
+  z-index: 3;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  min-width: 0;
+}
+
+.pillGroup {
+  display: flex;
+  gap: 17px;
+  margin-bottom: 43px;
+  flex-wrap: wrap;
+}
+
+.tagPill {
+  background: rgba(255, 183, 0, 0.1);
+  border: 1px solid rgba(255, 183, 0, 0.3);
+  color: #ffb700;
+  padding: 13px 26px;
+  border-radius: 13px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.productTitle {
+  font-size: 144px;
+  font-weight: 900;
+  letter-spacing: -4.3px;
+  line-height: 1;
+  margin-bottom: 26px;
+  background: linear-gradient(135deg, #ffffff 0%, #aaaaaa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.titleHighlight {
+  background: linear-gradient(135deg, #ffb700 0%, #ff3c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.titleLine {
+  display: block;
+}
+
+.desc {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 52px;
+  max-width: 90%;
+}
+
+.woodList {
+  margin-bottom: 65px;
+  border-left: 4px solid #ff3c00;
+  padding-left: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.woodDetail h4 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.woodDetail p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  flex-wrap: wrap;
+}
+
+.priceBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.priceBox .price {
+  font-size: 72px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.terms {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.ctaBtn {
+  background: linear-gradient(135deg, #ffb700 0%, #ff3c00 100%);
+  color: #fff;
+  border: none;
+  padding: 26px 52px;
+  border-radius: 17px;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  cursor: default;
+  font-family: inherit;
+  box-shadow: 0 22px 43px rgba(255, 60, 0, 0.2);
+}

@@ -1,0 +1,168 @@
+/* Everest Wealth — Gold fintech vertical 1080×1920 */
+
+.root {
+  width: 1080px;
+  height: 1920px;
+  flex-shrink: 0;
+  font-family: var(--font-evw-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow:
+    0 120px 240px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 215, 0, 0.15);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.goldAura {
+  position: absolute;
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  background: #d4af37;
+  filter: blur(300px);
+  opacity: 0.25;
+  z-index: 2;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.trustBadge {
+  position: absolute;
+  top: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(45px);
+  -webkit-backdrop-filter: blur(45px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 18px 48px;
+  border-radius: 90px;
+  z-index: 10;
+  color: #d4af37;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+}
+
+.content {
+  position: absolute;
+  bottom: 72px;
+  left: 60px;
+  right: 60px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.brandName {
+  font-size: 33px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.productTitle {
+  font-size: 138px;
+  font-weight: 900;
+  letter-spacing: -6px;
+  line-height: 1;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.tagline {
+  font-size: 39px;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 60px;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.dataWidget {
+  background: rgba(15, 15, 15, 0.65);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-top: 1px solid rgba(212, 175, 55, 0.4);
+  backdrop-filter: blur(75px);
+  -webkit-backdrop-filter: blur(75px);
+  padding: 42px;
+  border-radius: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.widgetLabel {
+  font-size: 27px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.widgetValue {
+  font-size: 42px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.widgetHighlight {
+  color: #d4af37;
+}
+
+.ctaBtn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+  color: #000000;
+  border: none;
+  padding: 48px;
+  border-radius: 90px;
+  font-size: 39px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  cursor: default;
+  font-family: inherit;
+  box-shadow: 0 30px 90px rgba(212, 175, 55, 0.2);
+}

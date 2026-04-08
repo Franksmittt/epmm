@@ -102,6 +102,9 @@
   gap: 8px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 100%;
 }
 
 .brandPill::before {
@@ -171,50 +174,6 @@
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-top: 2px;
-}
-
-.specRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 6px;
-}
-
-.specMini {
-  color: var(--atc-orange);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
-  font-size: 0.55rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  background: rgba(255, 69, 0, 0.1);
-  padding: 4px 8px;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 69, 0, 0.2);
-  white-space: nowrap;
-}
-
-.divider {
-  width: 1px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0 15px;
-  flex-shrink: 0;
-}
-
-.stripCompany {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-}
-
-.authTag {
-  color: var(--stealth-grey);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
-  font-size: 0.55rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
 }
 
 .btnCall {
@@ -296,32 +255,6 @@
   font-size: 0.875rem;
   letter-spacing: 2.7px;
   margin-top: 4px;
-}
-
-.root.canvas1080 .specRow {
-  gap: 14px;
-  margin-top: 11px;
-}
-
-.root.canvas1080 .specMini {
-  font-size: 0.625rem;
-  letter-spacing: 1.8px;
-  padding: 7px 14px;
-  border-radius: 7px;
-}
-
-.root.canvas1080 .divider {
-  height: 90px;
-  margin: 0 27px;
-}
-
-.root.canvas1080 .stripCompany {
-  gap: 11px;
-}
-
-.root.canvas1080 .authTag {
-  font-size: 0.625rem;
-  letter-spacing: 2.7px;
 }
 
 .root.canvas1080 .btnCall {

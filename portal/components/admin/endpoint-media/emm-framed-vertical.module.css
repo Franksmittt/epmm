@@ -1,0 +1,194 @@
+/* Endpoint Media — Ultra-premium framed vertical 9:16 (1080×1920). OLED-style gradients + glass footer. */
+
+.root {
+  width: 1080px;
+  height: 1920px;
+  flex-shrink: 0;
+  font-family: var(--font-emm-framed), -apple-system, BlinkMacSystemFont,
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow: 0 120px 240px rgba(0, 0, 0, 0.9);
+  background-color: #000;
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.topShadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bottomShadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.topHeader {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  padding: 0 48px;
+}
+
+.campaignPill {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 18px 48px;
+  border-radius: 90px;
+  font-size: 27px;
+  font-weight: 700;
+  color: #00f2fe;
+  text-transform: uppercase;
+  letter-spacing: 7.5px;
+  margin-bottom: 24px;
+}
+
+.topHeadline {
+  font-size: 48px;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.glassFooter {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 972px;
+  background: rgba(20, 20, 22, 0.45);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 84px;
+  padding: 84px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 3;
+  box-shadow: 0 60px 120px rgba(0, 0, 0, 0.5);
+}
+
+.partnershipTag {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.fitterName {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.divider {
+  width: 2px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.brandName {
+  font-size: 30px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.productTitle {
+  font-size: 102px;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -3px;
+  color: #ffffff;
+  margin-bottom: 18px;
+}
+
+.productTagline {
+  font-size: 42px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 72px;
+  letter-spacing: 0.6px;
+  line-height: 1.35;
+}
+
+.ctaRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.priceTag {
+  font-size: 54px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #000000;
+  padding: 36px 72px;
+  border-radius: 120px;
+  border: none;
+  font-size: 39px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: default;
+  white-space: nowrap;
+  font-family: inherit;
+}

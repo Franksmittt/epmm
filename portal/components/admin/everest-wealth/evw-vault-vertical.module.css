@@ -1,0 +1,206 @@
+/* Everest Wealth — Swiss vault vertical 1080×1920 */
+
+.root {
+  width: 1080px;
+  height: 1920px;
+  flex-shrink: 0;
+  font-family: var(--font-evw-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #011c12;
+  background-image: radial-gradient(circle at 50% 0%, #033a26 0%, #011c12 80%);
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow:
+    0 120px 240px rgba(0, 0, 0, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 60px;
+}
+
+.textureLayer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  mix-blend-mode: overlay;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.brandName {
+  color: #e5e4e2;
+  font-size: 33px;
+  font-weight: 700;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+}
+
+.fspBadge {
+  color: rgba(229, 228, 226, 0.5);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: 1px solid rgba(229, 228, 226, 0.2);
+  padding: 12px 24px;
+  border-radius: 12px;
+}
+
+.vaultCard {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 48px;
+  padding: 96px 72px;
+  box-shadow: 0 90px 180px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.cardSubtitle {
+  font-size: 30px;
+  color: rgba(229, 228, 226, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 24px;
+}
+
+.yieldRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.yieldNumber {
+  font-family: var(--font-evw-serif), Georgia, serif;
+  font-size: 192px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.yieldPct {
+  font-family: var(--font-evw-serif), Georgia, serif;
+  font-size: 120px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.yieldLabel {
+  font-size: 36px;
+  color: #e5e4e2;
+  font-weight: 400;
+  letter-spacing: 3px;
+  margin-bottom: 72px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  margin-bottom: 72px;
+}
+
+.ledgerSpecs {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  text-align: left;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.specTitle {
+  font-size: 33px;
+  color: rgba(229, 228, 226, 0.6);
+  font-weight: 400;
+}
+
+.specValue {
+  font-size: 33px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-align: right;
+}
+
+.footer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.tagline {
+  font-size: 36px;
+  color: rgba(229, 228, 226, 0.8);
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  max-width: 90%;
+}
+
+.ctaBtn {
+  display: block;
+  width: 100%;
+  background: #e5e4e2;
+  color: #011c12;
+  border: none;
+  text-align: center;
+  padding: 48px;
+  border-radius: 24px;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  cursor: default;
+  font-family: inherit;
+}

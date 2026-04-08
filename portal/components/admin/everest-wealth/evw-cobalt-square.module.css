@@ -1,0 +1,192 @@
+/* Everest Wealth — Terminal / cobalt square 1080×1080 */
+
+.root {
+  width: 1080px;
+  height: 1080px;
+  flex-shrink: 0;
+  font-family: var(--font-evw-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow: 0 86px 173px rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  display: flex;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fadeLayer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #000000 0%,
+    #000000 20%,
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.cobaltAura {
+  position: absolute;
+  top: 50%;
+  left: -108px;
+  transform: translateY(-50%);
+  width: 648px;
+  height: 648px;
+  background: #0066ff;
+  filter: blur(360px);
+  opacity: 0.25;
+  z-index: 3;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 86px;
+  min-width: 0;
+}
+
+.systemHeader {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 52px;
+  flex-wrap: wrap;
+}
+
+.brandName {
+  color: #c0c0c0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 6.5px;
+  text-transform: uppercase;
+}
+
+.licenseBadge {
+  font-family: var(--font-evw-mono), ui-monospace, monospace;
+  color: #0066ff;
+  font-size: 17px;
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid rgba(0, 102, 255, 0.4);
+  padding: 9px 13px;
+  border-radius: 6px;
+}
+
+.productClass {
+  font-family: var(--font-evw-mono), ui-monospace, monospace;
+  font-size: 24px;
+  color: #0066ff;
+  text-transform: uppercase;
+  letter-spacing: 4.3px;
+  margin-bottom: 17px;
+}
+
+.productTitle {
+  font-size: 138px;
+  font-weight: 900;
+  letter-spacing: -4.5px;
+  line-height: 1;
+  margin-bottom: 35px;
+  background: linear-gradient(135deg, #ffffff 0%, #888888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.titleLine {
+  display: block;
+}
+
+.tagline {
+  font-size: 26px;
+  color: #a0a0a0;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 65px;
+  max-width: 90%;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 26px;
+  margin-bottom: 65px;
+}
+
+.dataRow {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.15);
+  padding-bottom: 17px;
+}
+
+.dataLabel {
+  font-family: var(--font-evw-mono), ui-monospace, monospace;
+  font-size: 19px;
+  color: #666666;
+  text-transform: uppercase;
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.dataValue {
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.highlight {
+  color: #0066ff;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: rgba(0, 102, 255, 0.1);
+  color: #0066ff;
+  border: 1px solid #0066ff;
+  padding: 26px 60px;
+  border-radius: 9px;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4.3px;
+  cursor: default;
+  font-family: inherit;
+  align-self: flex-start;
+}

@@ -51,7 +51,17 @@ export const CLIENTS: ClientRecord[] = [
   },
   { slug: "on-the-move-again", name: "On The Move Again", accessCode: "EPMM-MOVE" },
   { slug: "efs-suspension", name: "EFS Suspension", accessCode: "EPMM-EFS" },
+  {
+    slug: "endpoint-media",
+    name: "Endpoint Media",
+    accessCode: "EPMM-ENDPOINT",
+  },
   { slug: "as-brokers", name: "AS Brokers", accessCode: "EPMM-AS-BROK" },
+  {
+    slug: "everest-wealth",
+    name: "Everest Wealth",
+    accessCode: "EPMM-EVEREST",
+  },
 ];
 
 const bySlug = new Map(CLIENTS.map((c) => [c.slug, c]));
