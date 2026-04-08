@@ -125,11 +125,11 @@
 
 .clinicLockup {
   color: var(--text);
-  font-size: 0.68rem;
+  font-size: 0.92rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 9px 14px;
+  padding: 11px 17px;
   border-radius: 999px;
   background: var(--glass);
   border: 1px solid var(--surface-edge);
@@ -187,13 +187,36 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
-/* Headline lives in the footer dock so the image centre stays unobstructed. */
+/* Hero + product block side by side above the phone CTA. */
+.dockMainRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 18px;
+  width: 100%;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dockProductCol {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Headline sits on the right; product block on the left. */
 .dockHero {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding-bottom: 2px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  flex: 0 1 auto;
+  max-width: 46%;
+  min-width: 0;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .dockHeroSolid {
@@ -310,8 +333,8 @@
 }
 
 .root.canvas1080 .clinicLockup {
-  font-size: 22px;
-  padding: 16px 25px;
+  font-size: 32px;
+  padding: 20px 32px;
 }
 
 .root.canvas1080 .brandChip {
@@ -328,6 +351,15 @@
   padding: 36px 40px 36px;
   border-radius: 36px;
   gap: 29px;
+}
+
+.root.canvas1080 .dockMainRow {
+  gap: 22px 32px;
+  padding-bottom: 8px;
+}
+
+.root.canvas1080 .dockProductCol {
+  gap: 18px;
 }
 
 .root.canvas1080 .dockHeroSolid,

@@ -17,6 +17,10 @@ import commVertical from "./atc-commercial-transit-vertical.module.css";
 import duelSquare from "./atc-tectonic-tread-square.module.css";
 import duelVertical from "./atc-tectonic-tread-vertical.module.css";
 
+/** Shipped clinic logo beside headline on vertical templates (overridable via upload). */
+export const ATC_CLINIC_VERTICAL_HEADLINE_LOGO_SRC =
+  "/clients/alberton-tyre-clinic/atclogo.png";
+
 export type AtcOverlayPresetId =
   | "velocity-premium"
   | "kinetic-grip"
@@ -210,7 +214,7 @@ const DEFAULTS_VELOCITY: Record<VelocityCopyKey, string> = {
 
 const DEFAULTS_GRIP: Record<GripCopyKey, string> = {
   gripVerticalClinicName: "Alberton Tyre Clinic",
-  gripVerticalPartnerBadge: "Dunlop Zone",
+  gripVerticalPartnerBadge: "BRAND",
   gripVerticalHeadlineSolid: "Terrain.",
   gripVerticalHeadlineOutline: "Mastered.",
   gripVerticalSubtext:
@@ -556,6 +560,8 @@ export function AlbertonTyreClinicOverlayStudio({
   const verticalRef = useRef<HTMLDivElement>(null);
   const squareFileRef = useRef<HTMLInputElement>(null);
   const verticalFileRef = useRef<HTMLInputElement>(null);
+  const tectonicVerticalLogoFileRef = useRef<HTMLInputElement>(null);
+  const kineticGripVerticalLogoFileRef = useRef<HTMLInputElement>(null);
 
   const [preset, setPreset] = useState<AtcOverlayPresetId>("velocity-premium");
   const [copyByPreset, setCopyByPreset] = useState(initialCopyByPreset);
@@ -631,6 +637,12 @@ export function AlbertonTyreClinicOverlayStudio({
   const [bgVerticalDataUrl, setBgVerticalDataUrl] = useState<string | null>(
     null,
   );
+  /** Tectonic Tread vertical: square beside headline (e.g. clinic logo). */
+  const [tectonicHeadlineLogoDataUrl, setTectonicHeadlineLogoDataUrl] =
+    useState<string | null>(null);
+  /** Kinetic Grip vertical: same logo slot beside headline. */
+  const [kineticGripHeadlineLogoDataUrl, setKineticGripHeadlineLogoDataUrl] =
+    useState<string | null>(null);
 
   const [exportError, setExportError] = useState<string | null>(null);
   const [exporting, setExporting] = useState<null | "square" | "vertical">(
@@ -778,6 +790,36 @@ export function AlbertonTyreClinicOverlayStudio({
     if (verticalFileRef.current) verticalFileRef.current.value = "";
   };
 
+  const onPickTectonicHeadlineLogo = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const file = e.target.files?.[0];
+    if (!file || !file.type.startsWith("image/")) return;
+    readFileAsDataUrl(file, setTectonicHeadlineLogoDataUrl);
+  };
+
+  const clearTectonicHeadlineLogo = () => {
+    setTectonicHeadlineLogoDataUrl(null);
+    if (tectonicVerticalLogoFileRef.current) {
+      tectonicVerticalLogoFileRef.current.value = "";
+    }
+  };
+
+  const onPickKineticGripHeadlineLogo = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const file = e.target.files?.[0];
+    if (!file || !file.type.startsWith("image/")) return;
+    readFileAsDataUrl(file, setKineticGripHeadlineLogoDataUrl);
+  };
+
+  const clearKineticGripHeadlineLogo = () => {
+    setKineticGripHeadlineLogoDataUrl(null);
+    if (kineticGripVerticalLogoFileRef.current) {
+      kineticGripVerticalLogoFileRef.current.value = "";
+    }
+  };
+
   const resetCopy = () => {
     setCopyByPreset((prev) => {
       if (preset === "velocity-premium") {
@@ -870,7 +912,7 @@ export function AlbertonTyreClinicOverlayStudio({
         : preset === "commercial-transit"
           ? 38
           : preset === "tectonic-tread"
-            ? 30
+            ? 28
             : preset === "kinetic-monolith"
             ? 36
             : preset === "apex-interface"
@@ -1055,23 +1097,33 @@ export function AlbertonTyreClinicOverlayStudio({
           </div>
           <div className={duelSquare.imageSafeZone} aria-hidden />
           <div className={duelSquare.fusionDock}>
-            <h1 className={duelSquare.dockHero}>
-              <span className={duelSquare.dockHeroSolid}>{d.duelSquareHeroL1}</span>
-              <span className={duelSquare.dockHeroOutline}>
-                {d.duelSquareHeroL2Outline}
-              </span>
-            </h1>
-            <div className={duelSquare.productStack}>
-              <span className={duelSquare.productTitle}>
-                {d.duelSquareProductTitle}
-              </span>
-              <span className={duelSquare.productSub}>
-                {d.duelSquareProductSub}
-              </span>
-            </div>
-            <div className={duelSquare.specRail}>
-              <span className={duelSquare.specPill}>{d.duelSquareSpec1}</span>
-              <span className={duelSquare.specPill}>{d.duelSquareSpec2}</span>
+            <div className={duelSquare.dockMainRow}>
+              <div className={duelSquare.dockProductCol}>
+                <div className={duelSquare.productStack}>
+                  <span className={duelSquare.productTitle}>
+                    {d.duelSquareProductTitle}
+                  </span>
+                  <span className={duelSquare.productSub}>
+                    {d.duelSquareProductSub}
+                  </span>
+                </div>
+                <div className={duelSquare.specRail}>
+                  <span className={duelSquare.specPill}>
+                    {d.duelSquareSpec1}
+                  </span>
+                  <span className={duelSquare.specPill}>
+                    {d.duelSquareSpec2}
+                  </span>
+                </div>
+              </div>
+              <h1 className={duelSquare.dockHero}>
+                <span className={duelSquare.dockHeroSolid}>
+                  {d.duelSquareHeroL1}
+                </span>
+                <span className={duelSquare.dockHeroOutline}>
+                  {d.duelSquareHeroL2Outline}
+                </span>
+              </h1>
             </div>
             <button type="button" className={duelSquare.phoneCta}>
               <PhoneIcon size={20} />
@@ -1301,12 +1353,25 @@ export function AlbertonTyreClinicOverlayStudio({
             </div>
           </div>
           <div className={gripVertical.performanceTerminal}>
-            <h1 className={gripVertical.headline}>
-              {g.gripVerticalHeadlineSolid}{" "}
-              <span className={gripVertical.headlineOutline}>
-                {g.gripVerticalHeadlineOutline}
-              </span>
-            </h1>
+            <div className={gripVertical.headlineRow}>
+              <h1 className={gripVertical.headline}>
+                {g.gripVerticalHeadlineSolid}{" "}
+                <span className={gripVertical.headlineOutline}>
+                  {g.gripVerticalHeadlineOutline}
+                </span>
+              </h1>
+              <div className={gripVertical.headlineLogoSlot}>
+                {/* eslint-disable-next-line @next/next/no-img-element -- data URL override or bundled public asset */}
+                <img
+                  className={gripVertical.headlineLogoImg}
+                  src={
+                    kineticGripHeadlineLogoDataUrl ??
+                    ATC_CLINIC_VERTICAL_HEADLINE_LOGO_SRC
+                  }
+                  alt="Alberton Tyre Clinic"
+                />
+              </div>
+            </div>
             <p className={gripVertical.subtext}>{g.gripVerticalSubtext}</p>
             <div className={gripVertical.actionDock}>
               <div className={gripVertical.productBlock}>
@@ -1416,22 +1481,27 @@ export function AlbertonTyreClinicOverlayStudio({
             </div>
           </div>
           <div className={duelVertical.fusionTerminal}>
-            <div className={duelVertical.specRail}>
-              <span className={duelVertical.specPill}>
-                {d.duelVerticalSpec1}
-              </span>
-              <span className={duelVertical.specPill}>
-                {d.duelVerticalSpec2}
-              </span>
+            <div className={duelVertical.headlineRow}>
+              <h1 className={duelVertical.headline}>
+                <span className={duelVertical.headlineSolid}>
+                  {d.duelVerticalHeadlineL1}
+                </span>
+                <span className={duelVertical.headlineOutline}>
+                  {d.duelVerticalHeadlineL2Outline}
+                </span>
+              </h1>
+              <div className={duelVertical.headlineLogoSlot}>
+                {/* eslint-disable-next-line @next/next/no-img-element -- data URL override or bundled public asset */}
+                <img
+                  className={duelVertical.headlineLogoImg}
+                  src={
+                    tectonicHeadlineLogoDataUrl ??
+                    ATC_CLINIC_VERTICAL_HEADLINE_LOGO_SRC
+                  }
+                  alt="Alberton Tyre Clinic"
+                />
+              </div>
             </div>
-            <h1 className={duelVertical.headline}>
-              <span className={duelVertical.headlineSolid}>
-                {d.duelVerticalHeadlineL1}
-              </span>
-              <span className={duelVertical.headlineOutline}>
-                {d.duelVerticalHeadlineL2Outline}
-              </span>
-            </h1>
             <p className={duelVertical.subtext}>{d.duelVerticalSubtext}</p>
             <div className={duelVertical.featuredBlock}>
               <span className={duelVertical.serviceTitle}>
@@ -1591,9 +1661,12 @@ export function AlbertonTyreClinicOverlayStudio({
                 <button
                   type="button"
                   className={calVertical.btnCore}
-                  aria-label={cal.calVerticalCtaAria}
+                  aria-label={`Call ${cal.calVerticalCtaAria}`}
                 >
                   <PhoneIcon size={24} />
+                  <span className={calVertical.btnCoreNumber}>
+                    {cal.calVerticalCtaAria}
+                  </span>
                 </button>
               </div>
             </div>
@@ -1696,6 +1769,54 @@ export function AlbertonTyreClinicOverlayStudio({
               </button>
             ) : null}
           </div>
+          {preset === "kinetic-grip" ? (
+            <div className="space-y-2 border-t border-white/10 pt-3">
+              <label className="text-xs text-[#8E8E93]">
+                Kinetic Grip · square logo beside headline (default: clinic logo;
+                upload to replace)
+              </label>
+              <input
+                ref={kineticGripVerticalLogoFileRef}
+                type="file"
+                accept="image/*"
+                onChange={onPickKineticGripHeadlineLogo}
+                className="block w-full text-sm text-[#8E8E93] file:mr-3 file:rounded-md file:border-0 file:bg-white file:px-3 file:py-2 file:text-sm file:font-medium file:text-black"
+              />
+              {kineticGripHeadlineLogoDataUrl ? (
+                <button
+                  type="button"
+                  onClick={clearKineticGripHeadlineLogo}
+                  className="text-xs text-[#8E8E93] underline hover:text-white"
+                >
+                  Remove custom logo
+                </button>
+              ) : null}
+            </div>
+          ) : null}
+          {preset === "tectonic-tread" ? (
+            <div className="space-y-2 border-t border-white/10 pt-3">
+              <label className="text-xs text-[#8E8E93]">
+                Tectonic Tread · square logo beside headline (default: clinic
+                logo; upload to replace)
+              </label>
+              <input
+                ref={tectonicVerticalLogoFileRef}
+                type="file"
+                accept="image/*"
+                onChange={onPickTectonicHeadlineLogo}
+                className="block w-full text-sm text-[#8E8E93] file:mr-3 file:rounded-md file:border-0 file:bg-white file:px-3 file:py-2 file:text-sm file:font-medium file:text-black"
+              />
+              {tectonicHeadlineLogoDataUrl ? (
+                <button
+                  type="button"
+                  onClick={clearTectonicHeadlineLogo}
+                  className="text-xs text-[#8E8E93] underline hover:text-white"
+                >
+                  Remove custom logo
+                </button>
+              ) : null}
+            </div>
+          ) : null}
         </div>
 
         <div className="space-y-3 rounded-md border border-emerald-500/25 bg-emerald-500/[0.07] p-3">
@@ -1859,7 +1980,7 @@ export function AlbertonTyreClinicOverlayStudio({
               onChange={(x) => patchGrip("gripVerticalClinicName", x)}
             />
             <Field
-              label="Partner badge (top right)"
+              label="Partner badge (top right, e.g. BRAND)"
               value={g.gripVerticalPartnerBadge}
               onChange={(x) => patchGrip("gripVerticalPartnerBadge", x)}
             />
@@ -2048,16 +2169,6 @@ export function AlbertonTyreClinicOverlayStudio({
               label="Featured brand (top right)"
               value={d.duelVerticalBrandBadge}
               onChange={(x) => patchDueler("duelVerticalBrandBadge", x)}
-            />
-            <Field
-              label="Highlight line 1"
-              value={d.duelVerticalSpec1}
-              onChange={(x) => patchDueler("duelVerticalSpec1", x)}
-            />
-            <Field
-              label="Highlight line 2"
-              value={d.duelVerticalSpec2}
-              onChange={(x) => patchDueler("duelVerticalSpec2", x)}
             />
             <Field
               label="Headline line 1 (solid)"
@@ -2345,7 +2456,7 @@ export function AlbertonTyreClinicOverlayStudio({
               onChange={(x) => patchCalibration("calVerticalBrandSub", x)}
             />
             <Field
-              label="Phone button (aria label)"
+              label="Vertical phone (shown on orange CTA)"
               value={cal.calVerticalCtaAria}
               onChange={(x) => patchCalibration("calVerticalCtaAria", x)}
             />

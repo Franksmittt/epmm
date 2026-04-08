@@ -109,11 +109,11 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--pure-white);
   font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
-  font-size: 0.55rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  padding: 6px 12px;
-  border-radius: 8px;
-  letter-spacing: 1px;
+  padding: 9px 16px;
+  border-radius: 10px;
+  letter-spacing: 1.3px;
   text-transform: uppercase;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -137,13 +137,44 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
 }
 
+.headlineRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 10px;
+}
+
+.headlineLogoSlot {
+  flex: 0 0 auto;
+  width: 6.35rem;
+  height: 6.35rem;
+  margin-left: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.headlineLogoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: rgba(0, 0, 0, 0.35);
+}
+
 .headline {
   color: var(--pure-white);
   font-size: 2.8rem;
   font-weight: 900;
   line-height: 1.08;
   letter-spacing: -1.5px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .headlineOutline {
@@ -165,6 +196,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 15px;
 }
@@ -172,7 +204,8 @@
 .productBlock {
   display: flex;
   flex-direction: column;
-  max-width: 62%;
+  flex: 0 1 auto;
+  max-width: 48%;
   min-width: 0;
 }
 
@@ -198,7 +231,7 @@
   background: var(--atc-orange);
   color: var(--pure-white);
   height: 44px;
-  padding: 0 16px;
+  padding: 0 22px;
   border-radius: 10px;
   font-size: 0.85rem;
   font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
@@ -208,9 +241,11 @@
   cursor: default;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   white-space: nowrap;
-  flex-shrink: 0;
+  flex: 1 1 auto;
+  min-width: 11rem;
   box-shadow: 0 8px 20px rgba(255, 69, 0, 0.3);
 }
 
@@ -246,10 +281,10 @@
 }
 
 .root.canvas1080x1920 .partnerBadge {
-  font-size: 0.825rem;
-  padding: 14px 29px;
+  font-size: 1.15rem;
+  padding: 18px 38px;
   border-radius: 19px;
-  letter-spacing: 2.5px;
+  letter-spacing: 2.8px;
 }
 
 .root.canvas1080x1920 .performanceTerminal {
@@ -261,10 +296,21 @@
   border-top-width: 7px;
 }
 
+.root.canvas1080x1920 .headlineRow {
+  gap: 32px;
+  margin-bottom: 19px;
+}
+
+.root.canvas1080x1920 .headlineLogoSlot {
+  width: 210px;
+  height: 210px;
+  border-radius: 30px;
+}
+
 .root.canvas1080x1920 .headline {
   font-size: 6.72rem;
   letter-spacing: -3.6px;
-  margin-bottom: 19px;
+  margin-bottom: 0;
 }
 
 .root.canvas1080x1920 .headlineOutline {
@@ -279,6 +325,11 @@
 
 .root.canvas1080x1920 .actionDock {
   padding-top: 36px;
+  gap: 29px;
+}
+
+.root.canvas1080x1920 .productBlock {
+  max-width: 44%;
 }
 
 .root.canvas1080x1920 .productBrand {
@@ -293,10 +344,11 @@
 
 .root.canvas1080x1920 .btnCall {
   height: 106px;
-  padding: 0 38px;
+  padding: 0 56px;
   border-radius: 24px;
   font-size: 1.2rem;
   gap: 19px;
+  min-width: 26rem;
 }
 
 .root.canvas1080x1920 .btnCall svg {

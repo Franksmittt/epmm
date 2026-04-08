@@ -109,10 +109,12 @@
 }
 
 .clinicLockup {
-  flex: 1;
+  flex: 0 1 auto;
+  width: fit-content;
+  max-width: min(100%, calc(100% - 180px));
   min-width: 0;
-  padding: 11px 16px;
-  border-radius: 14px;
+  padding: 8px 12px;
+  border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--surface-edge);
   border-left: 3px solid var(--atc);
@@ -124,7 +126,7 @@
 .clinicName {
   display: block;
   color: var(--text);
-  font-size: 0.78rem;
+  font-size: 1.02rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -190,10 +192,40 @@
   border: 1px solid rgba(255, 69, 0, 0.24);
 }
 
+.headlineRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+}
+
+.headlineLogoSlot {
+  flex: 0 0 auto;
+  width: 6.35rem;
+  height: 6.35rem;
+  margin-left: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.headlineLogoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: rgba(0, 0, 0, 0.35);
+}
+
 .headline {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 
 .headlineSolid {
@@ -248,21 +280,21 @@
 
 .phoneCta {
   width: 100%;
-  min-height: 48px;
+  min-height: 52px;
   padding: 0 18px;
   border: none;
   border-radius: 14px;
   background: linear-gradient(180deg, #ff5a1f 0%, var(--atc) 100%);
   color: #fff;
   font-family: ui-monospace, "SF Mono", monospace;
-  font-size: 0.88rem;
+  font-size: 1.12rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.04em;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   cursor: default;
   box-shadow:
     0 14px 32px rgba(255, 69, 0, 0.38),
@@ -298,13 +330,14 @@
 }
 
 .root.canvas1080x1920 .clinicLockup {
-  padding: 26px 38px;
-  border-radius: 34px;
+  padding: 18px 22px;
+  border-radius: 26px;
   border-left-width: 7px;
 }
 
 .root.canvas1080x1920 .clinicName {
-  font-size: 19px;
+  font-size: 32px;
+  letter-spacing: 0.12em;
 }
 
 .root.canvas1080x1920 .brandChip {
@@ -329,6 +362,16 @@
 .root.canvas1080x1920 .specPill {
   font-size: 13px;
   padding: 12px 22px;
+}
+
+.root.canvas1080x1920 .headlineRow {
+  gap: 32px;
+}
+
+.root.canvas1080x1920 .headlineLogoSlot {
+  width: 210px;
+  height: 210px;
+  border-radius: 30px;
 }
 
 .root.canvas1080x1920 .headline {
@@ -362,13 +405,14 @@
 }
 
 .root.canvas1080x1920 .phoneCta {
-  min-height: 115px;
+  min-height: 132px;
   border-radius: 29px;
-  font-size: 22px;
-  gap: 19px;
+  font-size: 46px;
+  gap: 22px;
+  padding: 0 28px;
 }
 
 .root.canvas1080x1920 .phoneCta svg {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
 }

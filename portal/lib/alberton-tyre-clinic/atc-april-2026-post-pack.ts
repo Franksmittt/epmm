@@ -80,7 +80,7 @@ ${LOC}
 
 #Dunlop #Grandtrek #AllTerrain #BakkieLife #AlbertonTyreClinic`,
     copyPatch: {
-      gripVerticalPartnerBadge: "Dunlop Zone",
+      gripVerticalPartnerBadge: "BRAND",
       gripVerticalHeadlineSolid: "Terrain.",
       gripVerticalHeadlineOutline: "Tamed.",
       gripVerticalSubtext:
@@ -252,7 +252,7 @@ ${LOC}
 
 #Dunlop #SPSport #AlbertonTyreClinic`,
     copyPatch: {
-      gripVerticalPartnerBadge: "Dunlop Zone",
+      gripVerticalPartnerBadge: "BRAND",
       gripVerticalHeadlineSolid: "Daily.",
       gripVerticalHeadlineOutline: "Sorted.",
       gripVerticalSubtext:
