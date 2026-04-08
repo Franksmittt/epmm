@@ -533,6 +533,40 @@ function exportSlugForPreset(p: AtcOverlayPresetId): string {
   return "calibration-matrix";
 }
 
+type AtcVerticalMidSlotClasses = {
+  midImageSlot: string;
+  midImageImg: string;
+  midImagePlaceholder: string;
+};
+
+/** Square 1:1 hero fills this framed slot on all 9:16 vertical previews. */
+function AtcVerticalMidSlot({
+  mod,
+  bgSquareDataUrl,
+}: {
+  mod: Record<string, string>;
+  bgSquareDataUrl: string | null;
+}) {
+  const { midImageSlot, midImageImg, midImagePlaceholder } =
+    mod as AtcVerticalMidSlotClasses;
+  return (
+    <div className={midImageSlot}>
+      {bgSquareDataUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element -- data URL from user upload
+        <img
+          className={midImageImg}
+          src={bgSquareDataUrl}
+          alt=""
+        />
+      ) : (
+        <div className={midImagePlaceholder} aria-hidden>
+          Square image
+        </div>
+      )}
+    </div>
+  );
+}
+
 function PhoneIcon({ size = 16 }: { size?: number }) {
   return (
     <svg
@@ -643,7 +677,6 @@ export function AlbertonTyreClinicOverlayStudio({
   /** Kinetic Grip vertical: same logo slot beside headline. */
   const [kineticGripHeadlineLogoDataUrl, setKineticGripHeadlineLogoDataUrl] =
     useState<string | null>(null);
-
   const [exportError, setExportError] = useState<string | null>(null);
   const [exporting, setExporting] = useState<null | "square" | "vertical">(
     null,
@@ -1208,9 +1241,6 @@ export function AlbertonTyreClinicOverlayStudio({
               {a.apexSquareIslandText}
             </span>
           </div>
-          <div className={apexSquare.centerReticle}>
-            <div className={apexSquare.reticleDot} />
-          </div>
           <div className={apexSquare.commandStrip}>
             <div className={apexSquare.textGroup}>
               <span className={apexSquare.subBadge}>{a.apexSquareSubBadge}</span>
@@ -1297,6 +1327,12 @@ export function AlbertonTyreClinicOverlayStudio({
               {v.verticalStatusPill}
             </div>
           </div>
+          <div className={velocityVertical.midColumn}>
+            <AtcVerticalMidSlot
+              mod={velocityVertical}
+              bgSquareDataUrl={bgSquareDataUrl}
+            />
+          </div>
           <div className={velocityVertical.bottomDock}>
             <p className={velocityVertical.productDock}>
               {v.verticalProductLine}
@@ -1351,6 +1387,12 @@ export function AlbertonTyreClinicOverlayStudio({
             <div className={gripVertical.partnerBadge}>
               {g.gripVerticalPartnerBadge}
             </div>
+          </div>
+          <div className={gripVertical.midColumn}>
+            <AtcVerticalMidSlot
+              mod={gripVertical}
+              bgSquareDataUrl={bgSquareDataUrl}
+            />
           </div>
           <div className={gripVertical.performanceTerminal}>
             <div className={gripVertical.headlineRow}>
@@ -1418,6 +1460,12 @@ export function AlbertonTyreClinicOverlayStudio({
               {c.commVerticalCorpBadge}
             </div>
           </div>
+          <div className={commVertical.midColumn}>
+            <AtcVerticalMidSlot
+              mod={commVertical}
+              bgSquareDataUrl={bgSquareDataUrl}
+            />
+          </div>
           <div className={commVertical.logisticsTerminal}>
             <div className={commVertical.specRow}>
               <span className={commVertical.specMini}>
@@ -1480,6 +1528,12 @@ export function AlbertonTyreClinicOverlayStudio({
               {d.duelVerticalBrandBadge}
             </div>
           </div>
+          <div className={duelVertical.midColumn}>
+            <AtcVerticalMidSlot
+              mod={duelVertical}
+              bgSquareDataUrl={bgSquareDataUrl}
+            />
+          </div>
           <div className={duelVertical.fusionTerminal}>
             <div className={duelVertical.headlineRow}>
               <h1 className={duelVertical.headline}>
@@ -1534,14 +1588,11 @@ export function AlbertonTyreClinicOverlayStudio({
             />
           ) : null}
           <div className={kineticVertical.ambientScrim} />
-          <div className={kineticVertical.telemetryAxis}>
-            <div className={kineticVertical.telemetryLine} />
-            <span className={kineticVertical.telemetryText}>
-              {k.kineticTelemetryText}
-            </span>
-          </div>
-          <div className={kineticVertical.brandTag}>
-            {k.kineticVerticalBrandTag}
+          <div className={kineticVertical.midColumn}>
+            <AtcVerticalMidSlot
+              mod={kineticVertical}
+              bgSquareDataUrl={bgSquareDataUrl}
+            />
           </div>
           <div className={kineticVertical.bottomEcosystem}>
             <h1 className={kineticVertical.heroType}>
@@ -1574,6 +1625,15 @@ export function AlbertonTyreClinicOverlayStudio({
               </div>
             </div>
           </div>
+          <div className={kineticVertical.telemetryAxis}>
+            <div className={kineticVertical.telemetryLine} />
+            <span className={kineticVertical.telemetryText}>
+              {k.kineticTelemetryText}
+            </span>
+          </div>
+          <div className={kineticVertical.brandTag}>
+            {k.kineticVerticalBrandTag}
+          </div>
         </div>
       </div>
     ) : preset === "apex-interface" ? (
@@ -1598,7 +1658,10 @@ export function AlbertonTyreClinicOverlayStudio({
               {a.apexVerticalIslandText}
             </span>
           </div>
-          <div className={apexVertical.centerReticle} />
+          <AtcVerticalMidSlot
+            mod={apexVertical}
+            bgSquareDataUrl={bgSquareDataUrl}
+          />
           <div className={apexVertical.bottomConsole}>
             <div className={apexVertical.dataBadges}>
               <span className={apexVertical.badge}>{a.apexVerticalBadge1}</span>
@@ -1634,6 +1697,12 @@ export function AlbertonTyreClinicOverlayStudio({
               {cal.calVerticalSysStatus}
             </div>
             <div className={calVertical.geoTag}>{cal.calVerticalGeoTag}</div>
+          </div>
+          <div className={calVertical.midColumn}>
+            <AtcVerticalMidSlot
+              mod={calVertical}
+              bgSquareDataUrl={bgSquareDataUrl}
+            />
           </div>
           <div className={calVertical.glassVault}>
             <div className={calVertical.macroData} aria-hidden>
@@ -1732,7 +1801,13 @@ export function AlbertonTyreClinicOverlayStudio({
             Hero images (separate per format)
           </p>
           <div className="space-y-2">
-            <label className="text-xs text-[#8E8E93]">Square 1:1</label>
+            <label className="text-xs text-[#8E8E93]">
+              Square 1:1
+              <span className="mt-1 block font-normal normal-case tracking-normal text-[#8E8E93]/85">
+                Same file fills the rounded middle frame on 9:16 vertical
+                previews.
+              </span>
+            </label>
             <input
               ref={squareFileRef}
               type="file"

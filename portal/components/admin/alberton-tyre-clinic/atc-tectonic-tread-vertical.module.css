@@ -25,6 +25,11 @@
 }
 
 .adCanvas {
+  /* Mid image aligns with fusion terminal outer edge (16px); HUD uses 18px sides. */
+  --tectonic-dock-h: 16px;
+  --tectonic-dock-b: 18px;
+  --tectonic-hud-pad-x: 18px;
+  --tectonic-hud-pad-t: 22px;
   position: relative;
   width: 100%;
   max-width: 450px;
@@ -36,6 +41,9 @@
     ),
     var(--void);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   box-shadow: 0 48px 100px rgba(0, 0, 0, 0.65);
 }
 
@@ -96,12 +104,60 @@
   pointer-events: none;
 }
 
+.midColumn {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 10px var(--tectonic-dock-h);
+  position: relative;
+  z-index: 4;
+}
+
+.midImageSlot {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 0;
+  min-height: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 69, 0, 0.35),
+    0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+.midImageSlot:has(.midImageImg) {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.midImageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.midImagePlaceholder {
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
 .topHud {
-  position: absolute;
-  top: 22px;
-  left: 18px;
-  right: 18px;
+  position: relative;
   z-index: 10;
+  padding: var(--tectonic-hud-pad-t) var(--tectonic-hud-pad-x) 0
+    var(--tectonic-hud-pad-x);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -153,11 +209,9 @@
 }
 
 .fusionTerminal {
-  position: absolute;
-  bottom: 18px;
-  left: 16px;
-  right: 16px;
+  position: relative;
   z-index: 10;
+  margin: 0 var(--tectonic-dock-h) var(--tectonic-dock-b) var(--tectonic-dock-h);
   padding: 26px 22px 24px;
   border-radius: 22px;
   background: var(--surface);
@@ -314,6 +368,10 @@
   height: 1920px;
   max-width: none;
   aspect-ratio: auto;
+  --tectonic-dock-h: 38px;
+  --tectonic-dock-b: 43px;
+  --tectonic-hud-pad-x: 43px;
+  --tectonic-hud-pad-t: 53px;
 }
 
 .root.canvas1080x1920 .ambientMesh {
@@ -323,10 +381,15 @@
 }
 
 .root.canvas1080x1920 .topHud {
-  top: 53px;
-  left: 43px;
-  right: 43px;
   gap: 29px;
+}
+
+.root.canvas1080x1920 .midColumn {
+  padding: 24px var(--tectonic-dock-h);
+}
+
+.root.canvas1080x1920 .midImageSlot {
+  border-radius: 48px;
 }
 
 .root.canvas1080x1920 .clinicLockup {
@@ -347,9 +410,7 @@
 }
 
 .root.canvas1080x1920 .fusionTerminal {
-  bottom: 43px;
-  left: 38px;
-  right: 38px;
+  margin: 0 var(--tectonic-dock-h) var(--tectonic-dock-b) var(--tectonic-dock-h);
   padding: 56px 48px 52px;
   border-radius: 53px;
   gap: 40px;

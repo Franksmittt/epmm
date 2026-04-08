@@ -23,6 +23,8 @@
 }
 
 .adCanvas {
+  /* Mid image aligns with bottom glass card outer edge (same as Velocity). */
+  --grip-dock-h: 15px;
   position: relative;
   width: 100%;
   max-width: 450px;
@@ -31,6 +33,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   box-shadow: 0 40px 80px rgba(255, 69, 0, 0.15);
 }
 
@@ -69,12 +72,60 @@
   pointer-events: none;
 }
 
+/* Fills space between top HUD and performance terminal. */
+.midColumn {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 10px var(--grip-dock-h);
+  position: relative;
+  z-index: 3;
+}
+
+.midImageSlot {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 0;
+  min-height: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 69, 0, 0.4),
+    0 12px 40px rgba(0, 0, 0, 0.55);
+}
+
+.midImageSlot:has(.midImageImg) {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.midImageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.midImagePlaceholder {
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
 .topHud {
-  position: absolute;
-  top: 20px;
-  left: 15px;
-  right: 15px;
+  position: relative;
   z-index: 10;
+  padding: 20px var(--grip-dock-h) 0 var(--grip-dock-h);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -120,11 +171,9 @@
 }
 
 .performanceTerminal {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
+  position: relative;
   z-index: 10;
+  margin: 0 var(--grip-dock-h) var(--grip-dock-h) var(--grip-dock-h);
   background: var(--glass-carbon);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
@@ -256,6 +305,7 @@
   height: 1920px;
   max-width: none;
   aspect-ratio: auto;
+  --grip-dock-h: 36px;
 }
 
 .root.canvas1080x1920 .tarmacGrid {
@@ -263,9 +313,15 @@
 }
 
 .root.canvas1080x1920 .topHud {
-  top: 48px;
-  left: 36px;
-  right: 36px;
+  padding: 48px var(--grip-dock-h) 0 var(--grip-dock-h);
+}
+
+.root.canvas1080x1920 .midColumn {
+  padding: 24px var(--grip-dock-h);
+}
+
+.root.canvas1080x1920 .midImageSlot {
+  border-radius: 48px;
 }
 
 .root.canvas1080x1920 .brandLockup {
@@ -288,9 +344,7 @@
 }
 
 .root.canvas1080x1920 .performanceTerminal {
-  bottom: 36px;
-  left: 36px;
-  right: 36px;
+  margin: 0 var(--grip-dock-h) var(--grip-dock-h) var(--grip-dock-h);
   border-radius: 48px;
   padding: 53px;
   border-top-width: 7px;
