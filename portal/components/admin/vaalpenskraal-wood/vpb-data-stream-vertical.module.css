@@ -1,0 +1,180 @@
+/* Vaalpenskraal Braai Mix — Data Stream (Overclocked) vertical 1080×1920 */
+
+.root {
+  width: 1080px;
+  height: 1920px;
+  flex-shrink: 0;
+  font-family: var(--font-vpb), -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    sans-serif;
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.edgeGradient {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 0, 0, 0.9) 0%,
+    transparent 20%,
+    transparent 75%,
+    rgba(0, 10, 20, 0.95) 100%
+  );
+  pointer-events: none;
+}
+
+.uiLayer {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topBar {
+  padding: 60px 40px 0 40px;
+}
+
+.topTicker {
+  background: linear-gradient(90deg, #ff3d00, #ff7f50);
+  padding: 15px 40px;
+  display: inline-flex;
+  gap: 40px;
+  align-items: center;
+  transform: skewX(-15deg);
+  box-shadow: 0 10px 30px rgba(255, 61, 0, 0.4);
+  border-left: 5px solid #fff;
+}
+
+.tickerText {
+  color: #000;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: skewX(15deg);
+}
+
+.heroTitle {
+  color: #fff;
+  font-size: 110px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.85;
+  margin-top: 50px;
+  text-shadow: 5px 5px 0 rgba(255, 61, 0, 0.3);
+  font-style: italic;
+  letter-spacing: -2px;
+}
+
+.bottomHud {
+  background: rgba(0, 15, 25, 0.6);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-top: 2px solid #00e5ff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  box-shadow: 0 -20px 50px rgba(0, 229, 255, 0.15);
+}
+
+.hudHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.woodsList {
+  color: #fff;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 6px;
+  opacity: 0.8;
+}
+
+.badge {
+  background: #ff3d00;
+  color: #fff;
+  font-weight: 900;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  border-top: 1px solid rgba(0, 229, 255, 0.3);
+  padding-top: 25px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricDivider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+}
+
+.mLabel {
+  color: #00e5ff;
+  font-size: 20px;
+  letter-spacing: 4px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.mVal {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.mValLarge {
+  font-size: 80px;
+}
+
+.mValDispatch {
+  font-size: 42px;
+}
+
+.mHighlight {
+  color: #ff3d00;
+  text-shadow: 0 0 30px rgba(255, 61, 0, 0.6);
+}
