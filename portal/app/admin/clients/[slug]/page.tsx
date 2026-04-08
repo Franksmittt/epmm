@@ -146,12 +146,20 @@ export default async function AdminClientSchedulePage({
             <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
               Presets include Velocity Precision / Fitment Laboratory, Kinetic
               Grip (dark kinetic HUD), Commercial Transit (light fleet / glass
-              terminal, #FF4500), Kinetic Monolith, Apex Interface, and
-              Calibration Matrix. Per-preset copy +
-              JSON (
+              terminal, #FF4500), Tectonic Tread (Bridgestone Dueler ribbon),
+              Kinetic Monolith, Apex Interface, and Calibration Matrix.
+              Per-preset copy + JSON (
               <code className="text-white/80">preset</code> +{" "}
               <code className="text-white/80">alberton-tyre-clinic-overlay</code>
               ), export 1080×1080 and 1080×1920.
+            </p>
+            <p className="mt-3">
+              <Link
+                href={`/admin/clients/${encodeURIComponent(slug)}/april-campaign`}
+                className="text-sm font-medium text-orange-400 hover:text-orange-300"
+              >
+                April 2026 post pack → pre-assigned templates + captions
+              </Link>
             </p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { toPng } from "html-to-image";
 import velocitySquare from "./atc-velocity-precision-square.module.css";
 import velocityVertical from "./atc-velocity-fitment-lab-vertical.module.css";
@@ -14,11 +14,14 @@ import gripSquare from "./atc-kinetic-grip-square.module.css";
 import gripVertical from "./atc-kinetic-grip-vertical.module.css";
 import commSquare from "./atc-commercial-transit-square.module.css";
 import commVertical from "./atc-commercial-transit-vertical.module.css";
+import duelSquare from "./atc-tectonic-tread-square.module.css";
+import duelVertical from "./atc-tectonic-tread-vertical.module.css";
 
 export type AtcOverlayPresetId =
   | "velocity-premium"
   | "kinetic-grip"
   | "commercial-transit"
+  | "tectonic-tread"
   | "kinetic-monolith"
   | "apex-interface"
   | "calibration-matrix";
@@ -37,6 +40,10 @@ export const ATC_OVERLAY_PRESETS: { id: AtcOverlayPresetId; label: string }[] =
       id: "commercial-transit",
       label: "Commercial Transit (fleet / light UI · V29)",
     },
+    {
+      id: "tectonic-tread",
+      label: "Tectonic Tread · Bridgestone Dueler (V36)",
+    },
     { id: "kinetic-monolith", label: "Kinetic Monolith" },
     { id: "apex-interface", label: "Apex Interface" },
     { id: "calibration-matrix", label: "Calibration Matrix" },
@@ -44,8 +51,8 @@ export const ATC_OVERLAY_PRESETS: { id: AtcOverlayPresetId; label: string }[] =
 
 export const TYRE_CLINIC_OVERLAY_JSON_TEMPLATE_ID =
   "alberton-tyre-clinic-overlay";
-/** v2 adds `preset`; v1 JSON without preset still applies to velocity-premium. */
-export const TYRE_CLINIC_OVERLAY_JSON_VERSION = 2;
+/** v5: velocity vertical dock is single `verticalProductLine` (replaces badge trio). v4: laser/spec removed. v3: tectonic-tread. */
+export const TYRE_CLINIC_OVERLAY_JSON_VERSION = 5;
 
 const VELOCITY_KEYS = [
   "brandName",
@@ -57,12 +64,7 @@ const VELOCITY_KEYS = [
   "squareButtonText",
   "verticalStoreLoc",
   "verticalStatusPill",
-  "laserAxisLabel",
-  "specCapsuleLabel",
-  "specCapsuleValue",
-  "verticalBadge1Highlight",
-  "verticalBadge1Line",
-  "verticalBadge2Line",
+  "verticalProductLine",
   "subtext",
   "priceLabel",
   "priceValue",
@@ -164,34 +166,51 @@ const CALIBRATION_KEYS = [
   "calSquareCta",
 ] as const;
 
+const DUELER_KEYS = [
+  "duelSquareBrandPill",
+  "duelSquareHeroL1",
+  "duelSquareHeroL2Outline",
+  "duelSquareProductTitle",
+  "duelSquareProductSub",
+  "duelSquareSpec1",
+  "duelSquareSpec2",
+  "duelSquarePhone",
+  "duelVerticalLockupName",
+  "duelVerticalBrandBadge",
+  "duelVerticalSpec1",
+  "duelVerticalSpec2",
+  "duelVerticalHeadlineL1",
+  "duelVerticalHeadlineL2Outline",
+  "duelVerticalSubtext",
+  "duelVerticalServiceTitle",
+  "duelVerticalServiceSub",
+  "duelVerticalPhone",
+] as const;
+
 type VelocityCopyKey = (typeof VELOCITY_KEYS)[number];
 type GripCopyKey = (typeof GRIP_KEYS)[number];
 type CommercialCopyKey = (typeof COMMERCIAL_KEYS)[number];
 type KineticCopyKey = (typeof KINETIC_KEYS)[number];
 type ApexCopyKey = (typeof APEX_KEYS)[number];
 type CalibrationCopyKey = (typeof CALIBRATION_KEYS)[number];
+type DuelerCopyKey = (typeof DUELER_KEYS)[number];
 
 const DEFAULTS_VELOCITY: Record<VelocityCopyKey, string> = {
-  brandName: "Velocity Tyres",
-  squareStatusPill: "Alberton Lab",
-  squareTechHighlight: "AI",
-  squareTechLine: "Road-Force Match",
+  brandName: "ALBERTON TYRE CLINIC",
+  squareStatusPill: "Brand",
+  squareTechHighlight: "Featured Product",
+  squareTechLine: "The actual product",
   headlinePrimary: "Traction.",
   headlineMuted: "Absolute.",
-  squareButtonText: "Secure Fitment",
-  verticalStoreLoc: "FITMENT LAB // ALBERTON",
-  verticalStatusPill: "Premium Fit",
-  laserAxisLabel: "BALANCING AXIS",
-  specCapsuleLabel: "Precision",
-  specCapsuleValue: "Road-Force",
-  verticalBadge1Highlight: "AI",
-  verticalBadge1Line: "Alignment",
-  verticalBadge2Line: "Adaptive Grip",
+  squareButtonText: "011 907 8495",
+  verticalStoreLoc: "ALBERTON TYRE CLINIC",
+  verticalStatusPill: "Brand",
+  verticalProductLine: "The actual product",
   subtext:
-    "Next-generation silica compounds met with sub-millimeter fitment accuracy. We don't just fit tyres; we calibrate your connection to the road.",
+    "Brief product description goes here. This placeholder copy stands in for a short blurb about the featured tyre—wet grip, comfort, sizing, or what makes it a strong pick for your car.",
   priceLabel: "Complete Service",
   priceValue: "Tyre & Fitment",
-  verticalButtonText: "Book Bay",
+  verticalButtonText: "011 907 8495",
 };
 
 const DEFAULTS_GRIP: Record<GripCopyKey, string> = {
@@ -243,58 +262,80 @@ const DEFAULTS_COMMERCIAL: Record<CommercialCopyKey, string> = {
 };
 
 const DEFAULTS_KINETIC: Record<KineticCopyKey, string> = {
-  kineticTelemetryText: "G-Force // Latitudinal Grip",
-  kineticVerticalBrandTag: "Velocity",
+  kineticTelemetryText: "ALBERTON TYRE CLINIC",
+  kineticVerticalBrandTag: "Alberton Tyre Clinic",
   kineticHeroSolid: "Grip.",
   kineticHeroOutline: "Defied.",
   kineticVerticalWidgetBefore:
     "Unlock apex performance. We fuse adaptive silica compounds with ",
   kineticVerticalWidgetStrong: "AI Road-Force balancing",
   kineticVerticalWidgetAfter: " for clinical control.",
-  kineticVerticalMetricVal: "100%",
-  kineticVerticalMetricLbl: "Contact Patch",
-  kineticVerticalCta: "Equip Now",
-  kineticSquareBrandTag: "Velocity Labs",
+  kineticVerticalMetricVal: "Expert fitment",
+  kineticVerticalMetricLbl: "Road-Force balance",
+  kineticVerticalCta: "011 907 8495",
+  kineticSquareBrandTag: "Alberton Tyre Clinic",
   kineticSquareWidgetBefore: "Adaptive silica meets ",
   kineticSquareWidgetStrong: "AI Road-Force",
   kineticSquareWidgetAfter:
     " calibration. Clinical precision for absolute control.",
-  kineticSquareMetricLbl: "Contact Patch",
-  kineticSquareMetricVal: "100% Locked",
-  kineticSquareCta: "Equip Now",
+  kineticSquareMetricLbl: "Road-Force bay",
+  kineticSquareMetricVal: "Expert fitment",
+  kineticSquareCta: "011 907 8495",
 };
 
 const DEFAULTS_APEX: Record<ApexCopyKey, string> = {
-  apexVerticalIslandText: "Velocity Hub",
+  apexVerticalIslandText: "Alberton Tyre Clinic",
   apexVerticalBadge1: "Adaptive Tread",
   apexVerticalBadge2: "Road-Force",
   apexHeadline: "Control.",
   apexVerticalSubtext:
     "Engineered for absolute symmetry. Perfected on the balancer. Dominate the asphalt.",
-  apexVerticalCta: "Initialize Fitment",
-  apexSquareIslandText: "Alberton Lab",
+  apexVerticalCta: "011 907 8495",
+  apexSquareIslandText: "Alberton Tyre Clinic",
   apexSquareSubBadge: "Road-Force Calibrated",
-  apexSquareCta: "Initialize",
+  apexSquareCta: "011 907 8495",
 };
 
 const DEFAULTS_CALIBRATION: Record<CalibrationCopyKey, string> = {
   calVerticalSysStatus: "Calibrating",
-  calVerticalGeoTag: "Alberton Lab",
+  calVerticalGeoTag: "Alberton Tyre Clinic",
   calVerticalMacroData: "0.01",
   calVerticalSpecBadge: "Sub-Millimeter Variance",
   calVerticalHeadlineL1: "Flawless.",
   calVerticalHeadlineL2: "Execution.",
   calVerticalSubtext:
     "AI-driven Road-Force balancing eliminates high-speed vibration before it starts. The ultimate fitment protocol.",
-  calVerticalBrandName: "Velocity Tyres",
+  calVerticalBrandName: "Alberton Tyre Clinic",
   calVerticalBrandSub: "Fitment Protocol",
-  calVerticalCtaAria: "Continue",
+  calVerticalCtaAria: "011 907 8495",
   calSquareHeadlineSolid: "Zero.",
   calSquareHeadlineOutline: "Tolerance.",
   calSquareTelemetryText: "Road-Force Active",
   calSquareSubtext:
-    "Uncompromising grip. Sub-millimeter calibration precision engineered at Velocity Tyres Alberton.",
-  calSquareCta: "Book Bay",
+    "Uncompromising grip. Sub-millimeter calibration precision at Alberton Tyre Clinic.",
+  calSquareCta: "011 907 8495",
+};
+
+const DEFAULTS_DUELER: Record<DuelerCopyKey, string> = {
+  duelSquareBrandPill: "Alberton Tyre Clinic",
+  duelSquareHeroL1: "Lamborghini DNA.",
+  duelSquareHeroL2Outline: "Bakkie Brawn.",
+  duelSquareProductTitle: "Bridgestone Dueler A/T 002",
+  duelSquareProductSub: "Premium All-Terrain Fitment",
+  duelSquareSpec1: "Free Damage Guarantee",
+  duelSquareSpec2: "40% Improved Mileage",
+  duelSquarePhone: "011 907 8495",
+  duelVerticalLockupName: "Alberton Tyre Clinic",
+  duelVerticalBrandBadge: "Bridgestone",
+  duelVerticalSpec1: "Free Damage Guarantee",
+  duelVerticalSpec2: "40% Improved Mileage",
+  duelVerticalHeadlineL1: "Lamborghini DNA.",
+  duelVerticalHeadlineL2Outline: "Bakkie Brawn.",
+  duelVerticalSubtext:
+    "The Bridgestone Dueler A/T 002. Supercar-derived engineering meets aggressive all-terrain dominance for your bakkie or SUV.",
+  duelVerticalServiceTitle: "Dueler A/T 002",
+  duelVerticalServiceSub: "Premium Fitment",
+  duelVerticalPhone: "011 907 8495",
 };
 
 function initialCopyByPreset(): Record<
@@ -305,16 +346,32 @@ function initialCopyByPreset(): Record<
     "velocity-premium": { ...DEFAULTS_VELOCITY },
     "kinetic-grip": { ...DEFAULTS_GRIP },
     "commercial-transit": { ...DEFAULTS_COMMERCIAL },
+    "tectonic-tread": { ...DEFAULTS_DUELER },
     "kinetic-monolith": { ...DEFAULTS_KINETIC },
     "apex-interface": { ...DEFAULTS_APEX },
     "calibration-matrix": { ...DEFAULTS_CALIBRATION },
   };
 }
 
+/** Merge campaign copy onto defaults for one preset (April pack & similar). */
+export function atcMergedCopyForPreset(
+  preset: AtcOverlayPresetId,
+  patch: Record<string, string>,
+): Record<string, string> {
+  return { ...initialCopyByPreset()[preset], ...patch };
+}
+
+export type AtcStudioCampaignPayload = {
+  applyKey: string;
+  preset: AtcOverlayPresetId;
+  copy: Record<string, string>;
+};
+
 function keysForPreset(p: AtcOverlayPresetId): readonly string[] {
   if (p === "velocity-premium") return VELOCITY_KEYS;
   if (p === "kinetic-grip") return GRIP_KEYS;
   if (p === "commercial-transit") return COMMERCIAL_KEYS;
+  if (p === "tectonic-tread") return DUELER_KEYS;
   if (p === "kinetic-monolith") return KINETIC_KEYS;
   if (p === "apex-interface") return APEX_KEYS;
   return CALIBRATION_KEYS;
@@ -338,6 +395,7 @@ function isPresetId(v: unknown): v is AtcOverlayPresetId {
     v === "velocity-premium" ||
     v === "kinetic-grip" ||
     v === "commercial-transit" ||
+    v === "tectonic-tread" ||
     v === "kinetic-monolith" ||
     v === "apex-interface" ||
     v === "calibration-matrix"
@@ -362,6 +420,13 @@ function inferPresetFromBlock(
   block: Record<string, unknown>,
 ): AtcOverlayPresetId | null {
   const keys = Object.keys(block);
+  if (
+    keys.includes("duelSquareBrandPill") ||
+    keys.includes("duelVerticalBrandBadge") ||
+    keys.includes("duelSquareProductTitle")
+  ) {
+    return "tectonic-tread";
+  }
   if (
     keys.includes("calVerticalMacroData") ||
     keys.includes("calSquareTelemetryText") ||
@@ -400,7 +465,9 @@ function inferPresetFromBlock(
   if (
     keys.includes("brandName") ||
     keys.includes("squareStatusPill") ||
-    keys.includes("laserAxisLabel")
+    keys.includes("headlinePrimary") ||
+    keys.includes("verticalStoreLoc") ||
+    keys.includes("verticalProductLine")
   ) {
     return "velocity-premium";
   }
@@ -465,6 +532,7 @@ function exportSlugForPreset(p: AtcOverlayPresetId): string {
   if (p === "velocity-premium") return "velocity-premium";
   if (p === "kinetic-grip") return "kinetic-grip";
   if (p === "commercial-transit") return "commercial-transit";
+  if (p === "tectonic-tread") return "tectonic-tread";
   if (p === "kinetic-monolith") return "kinetic-monolith";
   if (p === "apex-interface") return "apex-interface";
   return "calibration-matrix";
@@ -488,7 +556,11 @@ function PhoneIcon({ size = 16 }: { size?: number }) {
   );
 }
 
-export function AlbertonTyreClinicOverlayStudio() {
+export function AlbertonTyreClinicOverlayStudio({
+  campaignApply = null,
+}: {
+  campaignApply?: AtcStudioCampaignPayload | null;
+} = {}) {
   const squareRef = useRef<HTMLDivElement>(null);
   const verticalRef = useRef<HTMLDivElement>(null);
   const squareFileRef = useRef<HTMLInputElement>(null);
@@ -503,6 +575,17 @@ export function AlbertonTyreClinicOverlayStudio() {
   const k = copyByPreset["kinetic-monolith"];
   const a = copyByPreset["apex-interface"];
   const cal = copyByPreset["calibration-matrix"];
+  const d = copyByPreset["tectonic-tread"];
+
+  useEffect(() => {
+    if (!campaignApply) return;
+    setPreset(campaignApply.preset);
+    setCopyByPreset((prev) => ({
+      ...prev,
+      [campaignApply.preset]: campaignApply.copy,
+    }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- re-apply only when slot key changes
+  }, [campaignApply?.applyKey]);
 
   const patchVelocity = (key: VelocityCopyKey, value: string) => {
     setCopyByPreset((prev) => ({
@@ -543,6 +626,13 @@ export function AlbertonTyreClinicOverlayStudio() {
     setCopyByPreset((prev) => ({
       ...prev,
       "calibration-matrix": { ...prev["calibration-matrix"], [key]: value },
+    }));
+  };
+
+  const patchDueler = (key: DuelerCopyKey, value: string) => {
+    setCopyByPreset((prev) => ({
+      ...prev,
+      "tectonic-tread": { ...prev["tectonic-tread"], [key]: value },
     }));
   };
 
@@ -631,6 +721,34 @@ export function AlbertonTyreClinicOverlayStudio() {
         picked[key] = val == null ? "" : String(val);
       }
     }
+    if (targetPreset === "velocity-premium") {
+      const legacy = block as Record<string, unknown>;
+      const missingProduct =
+        !("verticalProductLine" in picked) ||
+        !String(picked.verticalProductLine ?? "").trim();
+      if (
+        missingProduct &&
+        (legacy.verticalBadge1Highlight != null ||
+          legacy.verticalBadge1Line != null ||
+          legacy.verticalBadge2Line != null)
+      ) {
+        const h =
+          legacy.verticalBadge1Highlight != null
+            ? String(legacy.verticalBadge1Highlight).trim()
+            : "";
+        const l1 =
+          legacy.verticalBadge1Line != null
+            ? String(legacy.verticalBadge1Line).trim()
+            : "";
+        const l2 =
+          legacy.verticalBadge2Line != null
+            ? String(legacy.verticalBadge2Line).trim()
+            : "";
+        const first = [h, l1].filter(Boolean).join(" ");
+        const parts = [first, l2].filter(Boolean);
+        picked.verticalProductLine = parts.join(" · ");
+      }
+    }
     if (!Object.keys(picked).length) {
       setJsonError(
         `No recognised fields for this preset. Try: ${keys.join(", ")}`,
@@ -682,6 +800,9 @@ export function AlbertonTyreClinicOverlayStudio() {
           ...prev,
           "commercial-transit": { ...DEFAULTS_COMMERCIAL },
         };
+      }
+      if (preset === "tectonic-tread") {
+        return { ...prev, "tectonic-tread": { ...DEFAULTS_DUELER } };
       }
       if (preset === "kinetic-monolith") {
         return { ...prev, "kinetic-monolith": { ...DEFAULTS_KINETIC } };
@@ -752,12 +873,14 @@ export function AlbertonTyreClinicOverlayStudio() {
 
   const jsonRows =
     preset === "velocity-premium"
-      ? 30
+      ? 27
       : preset === "kinetic-grip"
         ? 34
         : preset === "commercial-transit"
           ? 38
-          : preset === "kinetic-monolith"
+          : preset === "tectonic-tread"
+            ? 28
+            : preset === "kinetic-monolith"
             ? 36
             : preset === "apex-interface"
               ? 22
@@ -808,8 +931,8 @@ export function AlbertonTyreClinicOverlayStudio() {
               </h1>
             </div>
             <button type="button" className={velocitySquare.ctaBtn}>
+              <PhoneIcon size={18} />
               {v.squareButtonText}
-              <ChevronRight />
             </button>
           </div>
         </div>
@@ -835,8 +958,7 @@ export function AlbertonTyreClinicOverlayStudio() {
           <div className={gripSquare.topPerimeter}>
             <div className={gripSquare.brandPill}>{g.gripSquareBrandPill}</div>
             <h1 className={gripSquare.heroType}>
-              {g.gripSquareHeroSolid}
-              <br />
+              {g.gripSquareHeroSolid}{" "}
               <span className={gripSquare.heroOutline}>
                 {g.gripSquareHeroOutline}
               </span>
@@ -930,6 +1052,56 @@ export function AlbertonTyreClinicOverlayStudio() {
           </div>
         </div>
       </div>
+    ) : preset === "tectonic-tread" ? (
+      <div
+        ref={squareRef}
+        className={`${duelSquare.root} ${duelSquare.canvas1080}`}
+        aria-label="ATC Tectonic Tread square 1080 export"
+      >
+        <div className={duelSquare.adCanvas}>
+          {bgSquareDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={duelSquare.heroBg}
+              src={bgSquareDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={duelSquare.terrainGrid} />
+          <div className={duelSquare.scrimTop} />
+          <div className={duelSquare.scrimBottom} />
+          <div className={duelSquare.topPerimeter}>
+            <div className={duelSquare.brandPill}>{d.duelSquareBrandPill}</div>
+            <h1 className={duelSquare.heroType}>
+              {d.duelSquareHeroL1}
+              <br />
+              <span className={duelSquare.heroOutline}>
+                {d.duelSquareHeroL2Outline}
+              </span>
+            </h1>
+          </div>
+          <div className={duelSquare.slimTerminal}>
+            <div className={duelSquare.productInfo}>
+              <span className={duelSquare.productTitle}>
+                {d.duelSquareProductTitle}
+              </span>
+              <span className={duelSquare.productSub}>
+                {d.duelSquareProductSub}
+              </span>
+            </div>
+            <div className={duelSquare.techTags}>
+              <span className={duelSquare.specMini}>{d.duelSquareSpec1}</span>
+              <span className={duelSquare.specMini}>{d.duelSquareSpec2}</span>
+            </div>
+            <div className={duelSquare.actionBlock}>
+              <button type="button" className={duelSquare.btnCall}>
+                <PhoneIcon size={18} />
+                {d.duelSquarePhone}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     ) : (
       <div
         ref={squareRef}
@@ -1003,11 +1175,6 @@ export function AlbertonTyreClinicOverlayStudio() {
             />
           ) : null}
           <div className={velocityVertical.scrim} />
-          <div className={velocityVertical.laserLine}>
-            <span className={velocityVertical.laserLabel}>
-              {v.laserAxisLabel}
-            </span>
-          </div>
           <div className={velocityVertical.topHud}>
             <div className={velocityVertical.locationData}>
               <span className={velocityVertical.brandName}>{v.brandName}</span>
@@ -1019,29 +1186,12 @@ export function AlbertonTyreClinicOverlayStudio() {
               {v.verticalStatusPill}
             </div>
           </div>
-          <div className={velocityVertical.specCapsule}>
-            <span className={velocityVertical.specLabel}>
-              {v.specCapsuleLabel}
-            </span>
-            <span className={velocityVertical.specValue}>
-              {v.specCapsuleValue}
-            </span>
-          </div>
           <div className={velocityVertical.bottomDock}>
-            <div className={velocityVertical.dockHeader}>
-              <div className={velocityVertical.techBadge}>
-                <span className={velocityVertical.techBadgeHighlight}>
-                  {v.verticalBadge1Highlight}
-                </span>{" "}
-                {v.verticalBadge1Line}
-              </div>
-              <div className={velocityVertical.techBadge}>
-                {v.verticalBadge2Line}
-              </div>
-            </div>
+            <p className={velocityVertical.productDock}>
+              {v.verticalProductLine}
+            </p>
             <h1 className={velocityVertical.headline}>
-              {v.headlinePrimary}
-              <br />
+              {v.headlinePrimary}{" "}
               <span className={velocityVertical.headlineMuted}>
                 {v.headlineMuted}
               </span>
@@ -1057,8 +1207,8 @@ export function AlbertonTyreClinicOverlayStudio() {
                 </span>
               </div>
               <button type="button" className={velocityVertical.ctaBtn}>
+                <PhoneIcon size={16} />
                 {v.verticalButtonText}
-                <ChevronRight size={16} />
               </button>
             </div>
           </div>
@@ -1102,8 +1252,7 @@ export function AlbertonTyreClinicOverlayStudio() {
               <div className={gripVertical.specTag}>{g.gripVerticalSpecTag2}</div>
             </div>
             <h1 className={gripVertical.headline}>
-              {g.gripVerticalHeadlineSolid}
-              <br />
+              {g.gripVerticalHeadlineSolid}{" "}
               <span className={gripVertical.headlineOutline}>
                 {g.gripVerticalHeadlineOutline}
               </span>
@@ -1188,6 +1337,63 @@ export function AlbertonTyreClinicOverlayStudio() {
           </div>
         </div>
       </div>
+    ) : preset === "tectonic-tread" ? (
+      <div
+        ref={verticalRef}
+        className={`${duelVertical.root} ${duelVertical.canvas1080x1920}`}
+        aria-label="ATC Tectonic Tread vertical 1080 export"
+      >
+        <div className={duelVertical.adCanvas}>
+          {bgVerticalDataUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              className={duelVertical.heroBg}
+              src={bgVerticalDataUrl}
+              alt=""
+            />
+          ) : null}
+          <div className={duelVertical.terrainGrid} />
+          <div className={duelVertical.scrim} />
+          <div className={duelVertical.topHud}>
+            <div className={duelVertical.brandLockup}>
+              <span className={duelVertical.btName}>
+                {d.duelVerticalLockupName}
+              </span>
+            </div>
+            <div className={duelVertical.brandBadge}>
+              {d.duelVerticalBrandBadge}
+            </div>
+          </div>
+          <div className={duelVertical.techTerminal}>
+            <div className={duelVertical.specGrid}>
+              <div className={duelVertical.specTag}>{d.duelVerticalSpec1}</div>
+              <div className={duelVertical.specTag}>{d.duelVerticalSpec2}</div>
+            </div>
+            <h1 className={duelVertical.headline}>
+              {d.duelVerticalHeadlineL1}
+              <br />
+              <span className={duelVertical.headlineOutline}>
+                {d.duelVerticalHeadlineL2Outline}
+              </span>
+            </h1>
+            <p className={duelVertical.subtext}>{d.duelVerticalSubtext}</p>
+            <div className={duelVertical.actionDock}>
+              <div className={duelVertical.serviceId}>
+                <span className={duelVertical.serviceTitle}>
+                  {d.duelVerticalServiceTitle}
+                </span>
+                <span className={duelVertical.serviceSub}>
+                  {d.duelVerticalServiceSub}
+                </span>
+              </div>
+              <button type="button" className={duelVertical.btnCall}>
+                <PhoneIcon size={16} />
+                {d.duelVerticalPhone}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     ) : (
       <div
         ref={verticalRef}
@@ -1238,6 +1444,7 @@ export function AlbertonTyreClinicOverlayStudio() {
                   </span>
                 </div>
                 <button type="button" className={kineticVertical.btnSquircle}>
+                  <PhoneIcon size={18} />
                   {k.kineticVerticalCta}
                 </button>
               </div>
@@ -1254,7 +1461,9 @@ export function AlbertonTyreClinicOverlayStudio() {
         ? "Kinetic Grip · 1:1"
         : preset === "commercial-transit"
           ? "Commercial Transit · 1:1"
-          : "Kinetic Monolith · 1:1";
+          : preset === "tectonic-tread"
+            ? "Tectonic Tread · 1:1"
+            : "Kinetic Monolith · 1:1";
   const previewVertLabel =
     preset === "velocity-premium"
       ? "Fitment Laboratory · 9:16"
@@ -1262,7 +1471,9 @@ export function AlbertonTyreClinicOverlayStudio() {
         ? "Kinetic Grip · 9:16"
         : preset === "commercial-transit"
           ? "Commercial Transit · 9:16"
-          : "Kinetic Monolith · 9:16";
+          : preset === "tectonic-tread"
+            ? "Tectonic Tread · 9:16"
+            : "Kinetic Monolith · 9:16";
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
@@ -1343,9 +1554,12 @@ export function AlbertonTyreClinicOverlayStudio() {
             · <code className="text-white/80">preset</code>:{" "}
             <code className="text-white/80">velocity-premium</code>,{" "}
             <code className="text-white/80">kinetic-grip</code>,{" "}
-            <code className="text-white/80">commercial-transit</code>, or{" "}
-            <code className="text-white/80">kinetic-monolith</code>. Version 1
-            JSON (no preset) still applies to Velocity Premium.
+            <code className="text-white/80">commercial-transit</code>,{" "}
+            <code className="text-white/80">tectonic-tread</code>,{" "}
+            <code className="text-white/80">kinetic-monolith</code>,{" "}
+            <code className="text-white/80">apex-interface</code>, or{" "}
+            <code className="text-white/80">calibration-matrix</code>. Version
+            1 JSON (no preset) still applies to Velocity Premium.
           </p>
           <div className="space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1409,17 +1623,17 @@ export function AlbertonTyreClinicOverlayStudio() {
               onChange={(x) => patchVelocity("brandName", x)}
             />
             <Field
-              label="Square — status pill (top right)"
+              label="Square — status pill (top right, e.g. Brand)"
               value={v.squareStatusPill}
               onChange={(x) => patchVelocity("squareStatusPill", x)}
             />
             <Field
-              label="Square — tech badge highlight (orange)"
+              label="Square — label (orange, e.g. Featured Product)"
               value={v.squareTechHighlight}
               onChange={(x) => patchVelocity("squareTechHighlight", x)}
             />
             <Field
-              label="Square — tech badge rest"
+              label="Square — actual product (name line)"
               value={v.squareTechLine}
               onChange={(x) => patchVelocity("squareTechLine", x)}
             />
@@ -1447,42 +1661,17 @@ export function AlbertonTyreClinicOverlayStudio() {
               onChange={(x) => patchVelocity("verticalStoreLoc", x)}
             />
             <Field
-              label="Vertical status pill"
+              label="Vertical status pill (e.g. Brand)"
               value={v.verticalStatusPill}
               onChange={(x) => patchVelocity("verticalStatusPill", x)}
             />
             <Field
-              label="Laser axis label"
-              value={v.laserAxisLabel}
-              onChange={(x) => patchVelocity("laserAxisLabel", x)}
+              label="Vertical — product (single line above headline)"
+              value={v.verticalProductLine}
+              onChange={(x) => patchVelocity("verticalProductLine", x)}
             />
             <Field
-              label="Spec capsule — label"
-              value={v.specCapsuleLabel}
-              onChange={(x) => patchVelocity("specCapsuleLabel", x)}
-            />
-            <Field
-              label="Spec capsule — value"
-              value={v.specCapsuleValue}
-              onChange={(x) => patchVelocity("specCapsuleValue", x)}
-            />
-            <Field
-              label="Dock badge 1 — orange word"
-              value={v.verticalBadge1Highlight}
-              onChange={(x) => patchVelocity("verticalBadge1Highlight", x)}
-            />
-            <Field
-              label="Dock badge 1 — rest"
-              value={v.verticalBadge1Line}
-              onChange={(x) => patchVelocity("verticalBadge1Line", x)}
-            />
-            <Field
-              label="Dock badge 2 (full)"
-              value={v.verticalBadge2Line}
-              onChange={(x) => patchVelocity("verticalBadge2Line", x)}
-            />
-            <Field
-              label="Subtext paragraph"
+              label="Brief product description (paragraph under headline)"
               value={v.subtext}
               onChange={(x) => patchVelocity("subtext", x)}
               rows={4}
@@ -1717,6 +1906,108 @@ export function AlbertonTyreClinicOverlayStudio() {
               label="Phone (square)"
               value={c.commSquarePhone}
               onChange={(x) => patchCommercial("commSquarePhone", x)}
+            />
+          </>
+        ) : preset === "tectonic-tread" ? (
+          <>
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Vertical 9:16 — tech terminal
+            </p>
+            <Field
+              label="Lockup name (HUD)"
+              value={d.duelVerticalLockupName}
+              onChange={(x) => patchDueler("duelVerticalLockupName", x)}
+            />
+            <Field
+              label="Brand badge (top right)"
+              value={d.duelVerticalBrandBadge}
+              onChange={(x) => patchDueler("duelVerticalBrandBadge", x)}
+            />
+            <Field
+              label="Spec tag 1"
+              value={d.duelVerticalSpec1}
+              onChange={(x) => patchDueler("duelVerticalSpec1", x)}
+            />
+            <Field
+              label="Spec tag 2"
+              value={d.duelVerticalSpec2}
+              onChange={(x) => patchDueler("duelVerticalSpec2", x)}
+            />
+            <Field
+              label="Headline line 1 (solid)"
+              value={d.duelVerticalHeadlineL1}
+              onChange={(x) => patchDueler("duelVerticalHeadlineL1", x)}
+            />
+            <Field
+              label="Headline line 2 (outline)"
+              value={d.duelVerticalHeadlineL2Outline}
+              onChange={(x) =>
+                patchDueler("duelVerticalHeadlineL2Outline", x)
+              }
+            />
+            <Field
+              label="Subtext"
+              value={d.duelVerticalSubtext}
+              onChange={(x) => patchDueler("duelVerticalSubtext", x)}
+              rows={4}
+            />
+            <Field
+              label="Service title"
+              value={d.duelVerticalServiceTitle}
+              onChange={(x) => patchDueler("duelVerticalServiceTitle", x)}
+            />
+            <Field
+              label="Service sub (mono)"
+              value={d.duelVerticalServiceSub}
+              onChange={(x) => patchDueler("duelVerticalServiceSub", x)}
+            />
+            <Field
+              label="Phone (vertical)"
+              value={d.duelVerticalPhone}
+              onChange={(x) => patchDueler("duelVerticalPhone", x)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Square 1:1 — slim ribbon
+            </p>
+            <Field
+              label="Brand pill (top left)"
+              value={d.duelSquareBrandPill}
+              onChange={(x) => patchDueler("duelSquareBrandPill", x)}
+            />
+            <Field
+              label="Hero line 1 (solid)"
+              value={d.duelSquareHeroL1}
+              onChange={(x) => patchDueler("duelSquareHeroL1", x)}
+            />
+            <Field
+              label="Hero line 2 (outline)"
+              value={d.duelSquareHeroL2Outline}
+              onChange={(x) => patchDueler("duelSquareHeroL2Outline", x)}
+            />
+            <Field
+              label="Product title"
+              value={d.duelSquareProductTitle}
+              onChange={(x) => patchDueler("duelSquareProductTitle", x)}
+            />
+            <Field
+              label="Product subtitle"
+              value={d.duelSquareProductSub}
+              onChange={(x) => patchDueler("duelSquareProductSub", x)}
+            />
+            <Field
+              label="Spec mini 1"
+              value={d.duelSquareSpec1}
+              onChange={(x) => patchDueler("duelSquareSpec1", x)}
+            />
+            <Field
+              label="Spec mini 2"
+              value={d.duelSquareSpec2}
+              onChange={(x) => patchDueler("duelSquareSpec2", x)}
+            />
+            <Field
+              label="Phone (square)"
+              value={d.duelSquarePhone}
+              onChange={(x) => patchDueler("duelSquarePhone", x)}
             />
           </>
         ) : (

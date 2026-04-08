@@ -87,11 +87,15 @@
   padding: 6px 12px;
   border-radius: 8px;
   color: var(--emergency-orange);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  flex-shrink: 0;
+  flex-shrink: 1;
+  max-width: 55%;
+  white-space: normal;
+  line-height: 1.2;
+  text-align: right;
 }
 
 .bottomEcosystem {
@@ -174,6 +178,15 @@
   cursor: pointer;
   white-space: nowrap;
   box-shadow: 0 10px 25px rgba(255, 85, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnSquircle svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
 }
 
 /* ─── 1080×1080 (×1.8) ─── */

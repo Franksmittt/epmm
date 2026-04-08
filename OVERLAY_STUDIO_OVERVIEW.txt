@@ -1,0 +1,147 @@
+================================================================================
+OVERLAY STUDIO — OVERVIEW (Endpoint Media / portal)
+================================================================================
+
+WHAT IT IS
+----------
+The overlay studio is an admin-only tool inside the Next.js portal. It composes
+“social-ready” graphics: a full-bleed hero image (photo or render) with branded
+typography, CTAs, and layout chrome on top. You work in two fixed aspect ratios:
+
+  • Square  1:1   → export 1080 × 1080 px (feed posts)
+  • Vertical 9:16 → export 1080 × 1920 px (stories / reels-style)
+
+Exports are PNGs, generated in the browser with the library `html-to-image`
+(from a hidden full-size canvas in the DOM).
+
+The studio is NOT the same as the client schedule (portal/data/app-data.json).
+The schedule stores per-day captions and image URLs for download / ops. The
+overlay studio is where you *design* those images before you attach them to a
+date or upload them anywhere else.
+
+
+WHERE IT LIVES
+--------------
+Path pattern:
+
+  portal/app/admin/clients/[slug]/page.tsx
+
+Each client that has a studio gets a dedicated React component under:
+
+  portal/components/admin/<client-folder>/
+
+Examples:
+  • Alberton Battery Mart → AbmMasterBatteryOverlayStudio.tsx
+  • Absolute Offroad    → EfsAdventureOverlayStudio.tsx
+  • Alberton Tyre Clinic → AlbertonTyreClinicOverlayStudio.tsx
+  • (and others — AS Brokers, EFS, Maverick Painting, On The Move Again, etc.)
+
+Open Admin → pick the client → scroll to the overlay section.
+
+
+THE TYPICAL WORKFLOW (HTML MOCKUP → WORKING TEMPLATE)
+-----------------------------------------------------
+1) You (or design) produce static HTML/CSS mockups — usually two files or two
+   layouts: one for square, one for vertical. They define look-and-feel:
+   grids, glass panels, typography, colours, safe areas.
+
+2) That HTML is NOT dropped into the app as raw HTML. It is *translated* into:
+   • CSS Modules (e.g. `abm-data-matrix-square.module.css`) — class names are
+     camelCased; layout is tuned so a root wrapper can be forced to exactly
+     1080×1080 or 1080×1920 for export (“canvas1080”, “canvas1080x1920”, etc.).
+   • JSX in the studio component — every piece of user-visible text is wired
+     to React state (or a preset’s copy object) so it can be edited in the UI.
+
+3) Any text that should change per campaign becomes a “copy field”. Each field
+   gets a stable key (e.g. `dmHeadlineL1`, `rejPhone`). Defaults match the
+   design; the form + JSON use those keys.
+
+4) Optional: `@keyframes` animations from a mockup are often *omitted* or
+   replaced with static styling so exports are predictable and light.
+
+5) Hero images: the studio lets you upload separate images for square and
+   vertical (object-fit cover behind the overlay). Text/scrim layers sit above.
+
+6) Preview scales down the 1080 canvas in the UI; download uses true pixel
+   dimensions for Instagram/Meta-friendly assets.
+
+
+ALBERTON BATTERY MART — MULTI-PRESET EXAMPLE (MOST COMPLEX)
+-----------------------------------------------------------
+File: portal/components/admin/alberton-battery-mart/AbmMasterBatteryOverlayStudio.tsx
+
+This client has ONE studio component but SIX template presets (dropdown):
+
+  energy-core        — Master Battery “Energy Core”
+  tactical           — Master Battery “Tactical HUD”
+  ignition-core      — red glass / motorcycle product style
+  surge-matrix       — industrial / jumper cables
+  rejuvenation-cell  — charging / “Flat? Charged.” (square + vertical differ)
+  data-matrix        — “Did You Know” SLA vs AGM comparison
+
+Each preset has:
+  • Its own list of copy keys (TypeScript `* _KEYS` arrays).
+  • Default strings (`DEFAULTS_*`).
+  • Two canvas trees in JSX: square branch + vertical branch (often sharing
+    some keys, with extra keys where square vs vertical copy differs).
+  • Its own pair of CSS modules OR shared modules where layouts match.
+
+JSON workflow (AI-friendly):
+  • `BATTERY_OVERLAY_JSON_TEMPLATE_ID` = "alberton-battery-mart-overlay"
+  • `BATTERY_OVERLAY_JSON_VERSION` — bump when keys or presets change.
+  • Exported shape:
+      {
+        "template": "alberton-battery-mart-overlay",
+        "version": <number>,
+        "preset": "<preset-id>",
+        "copy": { "<key>": "value", ... }
+      }
+  • “Apply JSON” can infer `preset` from which keys appear if `preset` is
+    omitted (order matters — see `inferPresetFromBlock` in the TSX file).
+
+Prefix convention (ABM):
+  • `rej*`  → rejuvenation-cell
+  • `dm*`   → data-matrix
+  • `surge*`, `ign*`, etc. → other presets (avoids key collisions).
+
+Adding a NEW preset to ABM (checklist):
+  [ ] Pick `preset` id string and human label.
+  [ ] Add CSS modules for square and/or vertical (export classes at 1080).
+  [ ] Define `NEW_KEYS` array + `DEFAULTS_NEW` + type.
+  [ ] Extend `AbmOverlayPresetId`, `ABM_OVERLAY_PRESETS`, `initialCopyByPreset`.
+  [ ] `isPresetId`, `inferPresetFromBlock` (exclusive detection vs other keys).
+  [ ] `setNewPreset` setter; `applyJsonFromPaste` keys branch; `resetCopy`.
+  [ ] `squareCanvas` / `verticalCanvas` ternaries; `expectedKeysHint`.
+  [ ] Form fields section; JSON help text; textarea rows if needed.
+  [ ] Bump `BATTERY_OVERLAY_JSON_VERSION`.
+
+
+OTHER CLIENTS’ STUDIOS
+----------------------
+They follow the same *idea* (hero + overlay, two ratios, PNG export) but may
+use a single template or their own preset naming. Implementation details live
+next to each client under `portal/components/admin/<client>/`.
+
+If you add HTML for another client, mirror that client’s existing file
+structure and naming — don’t assume ABM’s multi-preset pattern unless you need it.
+
+
+OPERATOR TIPS
+-------------
+• Use “Copy JSON” to snapshot copy for an AI or for version control in chat;
+  paste back with “Apply JSON” after editing.
+• “Reset this preset’s text to defaults” restores only the active preset’s
+  copy, not uploaded images.
+• File names on download include preset and timestamp so batches don’t overwrite
+  each other in the Downloads folder.
+
+
+MAINTAINING THIS DOCUMENT
+-------------------------
+When you add presets or change JSON version / template id, update this file
+or the in-app hint text in the studio so operators stay aligned.
+
+================================================================================
+Last aligned with repo structure: portal (Next.js App Router), overlay studios
+under portal/components/admin/*.
+================================================================================

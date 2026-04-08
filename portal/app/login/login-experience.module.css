@@ -1,0 +1,136 @@
+/* Login shell — subtle motion + pointer-reactive glow. */
+
+.shell {
+  --mx: 50%;
+  --my: 45%;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #020203;
+}
+
+.ambient {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(
+      ellipse 55% 45% at 25% 30%,
+      rgba(88, 101, 242, 0.09),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 78% 65%,
+      rgba(139, 92, 246, 0.06),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 40% 35% at 60% 20%,
+      rgba(59, 130, 246, 0.05),
+      transparent 45%
+    );
+  animation: ambientDrift 22s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes ambientDrift {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(2%, -1.5%) scale(1.03);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translate(-1.5%, 2%) scale(1.02);
+    opacity: 1;
+  }
+}
+
+.spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 65% 55% at var(--mx) var(--my),
+    rgba(99, 102, 241, 0.11),
+    rgba(59, 130, 246, 0.04) 35%,
+    transparent 62%
+  );
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 85% 75% at 50% 48%,
+    transparent 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.cardWrap {
+  position: relative;
+  z-index: 1;
+}
+
+.cardFrame {
+  position: relative;
+  padding: 1px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.cardShimmer {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 220%;
+  height: 220%;
+  margin: 0;
+  background: conic-gradient(
+    from 0deg,
+    rgba(99, 102, 241, 0.5),
+    rgba(59, 130, 246, 0.18),
+    rgba(139, 92, 246, 0.38),
+    rgba(99, 102, 241, 0.5)
+  );
+  animation: frameSpin 16s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes frameSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 18, 22, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset,
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 50px -24px rgba(99, 102, 241, 0.1);
+}

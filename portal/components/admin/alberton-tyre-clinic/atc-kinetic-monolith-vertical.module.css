@@ -105,13 +105,18 @@
   padding: 6px 14px;
   border-radius: 20px;
   color: var(--pure-white);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 6px;
+  max-width: min(92%, 300px);
+  white-space: normal;
+  line-height: 1.2;
+  text-align: right;
+  justify-content: flex-end;
 }
 
 .brandTag::before {
@@ -218,6 +223,15 @@
   flex-shrink: 0;
   white-space: nowrap;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnSquircle svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
 }
 
 /* ─── 1080×1920 (×2.4) ─── */
@@ -249,8 +263,10 @@
   right: 60px;
   padding: 14px 34px;
   border-radius: 48px;
-  font-size: 26px;
+  font-size: 22px;
   gap: 14px;
+  max-width: min(92%, 780px);
+  line-height: 1.25;
 }
 
 .root.canvas1080x1920 .brandTag::before {

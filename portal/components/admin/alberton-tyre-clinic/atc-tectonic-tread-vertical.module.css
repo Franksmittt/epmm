@@ -1,11 +1,11 @@
-/* Alberton Tyre Clinic — Kinetic Grip vertical 9:16 (V30). Base 450×800 → 1080×1920. */
+/* Alberton Tyre Clinic — Tectonic Tread / Bridgestone Dueler vertical 9:16 (V36). Export 1080×1920. */
 
 .root {
   --pure-black: #000000;
   --pure-white: #ffffff;
   --atc-orange: #ff4500;
   --stealth-grey: #8e8e93;
-  --glass-carbon: rgba(12, 12, 14, 0.9);
+  --glass-carbon: rgba(12, 10, 10, 0.85);
   --glass-border: rgba(255, 69, 0, 0.25);
 }
 
@@ -44,12 +44,13 @@
   pointer-events: none;
 }
 
-.tarmacGrid {
+.terrainGrid {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: radial-gradient(
+    rgba(255, 69, 0, 0.1) 2px,
+    transparent 2px
+  );
   background-size: 25px 25px;
   z-index: 1;
   pointer-events: none;
@@ -60,8 +61,8 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 30%,
     rgba(0, 0, 0, 0) 50%,
     rgba(0, 0, 0, 0.95) 100%
   );
@@ -71,83 +72,68 @@
 
 .topHud {
   position: absolute;
-  top: 20px;
-  left: 15px;
-  right: 15px;
+  top: 25px;
+  left: 20px;
+  right: 20px;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .brandLockup {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 8px 14px;
+  padding: 10px 16px;
   border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 10px;
   border-left: 3px solid var(--atc-orange);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.brandText {
-  display: flex;
-  flex-direction: column;
+  min-width: 0;
 }
 
 .btName {
   color: var(--pure-white);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 900;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-.btSub {
-  color: var(--atc-orange);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
-  font-size: 0.5rem;
-  font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin-top: 2px;
 }
 
-.partnerBadge {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--pure-white);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+.brandBadge {
+  background: rgba(255, 69, 0, 0.15);
+  border: 1px solid rgba(255, 69, 0, 0.3);
+  color: var(--atc-orange);
+  font-family: ui-monospace, "SF Mono", monospace;
   font-size: 0.55rem;
   font-weight: 800;
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 8px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  flex-shrink: 0;
 }
 
-.performanceTerminal {
+.techTerminal {
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   left: 15px;
   right: 15px;
   z-index: 10;
   background: var(--glass-carbon);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-top: 3px solid var(--atc-orange);
   border-radius: 20px;
-  padding: 18px 20px 20px 20px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
 }
 
 .specGrid {
@@ -159,10 +145,9 @@
 
 .specTag {
   background: rgba(255, 69, 0, 0.1);
-  border: 1px solid rgba(255, 69, 0, 0.25);
+  border: 1px solid rgba(255, 69, 0, 0.3);
   color: var(--atc-orange);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
-  font-size: 0.5rem;
+  font-size: 0.55rem;
   font-weight: 800;
   padding: 5px 10px;
   border-radius: 6px;
@@ -174,57 +159,56 @@
   color: var(--pure-white);
   font-size: 2.8rem;
   font-weight: 900;
-  line-height: 1.08;
+  line-height: 0.95;
   letter-spacing: -1.5px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .headlineOutline {
   color: transparent;
   -webkit-text-stroke: 1.5px var(--pure-white);
-  display: inline;
-  white-space: normal;
+  display: block;
 }
 
 .subtext {
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.95rem;
-  line-height: 1.45;
-  margin-bottom: 18px;
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 25px;
 }
 
 .actionDock {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 15px;
 }
 
-.productBlock {
+.serviceId {
   display: flex;
   flex-direction: column;
-  max-width: 62%;
+  max-width: 55%;
   min-width: 0;
 }
 
-.productBrand {
+.serviceTitle {
   color: var(--pure-white);
   font-size: 1.1rem;
   font-weight: 900;
-  line-height: 1.15;
+  line-height: 1.1;
   letter-spacing: -0.5px;
 }
 
-.productSub {
+.serviceSub {
   color: var(--stealth-grey);
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-family: ui-monospace, "SF Mono", monospace;
   font-size: 0.6rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .btnCall {
@@ -234,7 +218,7 @@
   padding: 0 16px;
   border-radius: 10px;
   font-size: 0.85rem;
-  font-family: ui-monospace, "SF Mono", "Cascadia Code", monospace;
+  font-family: ui-monospace, "SF Mono", monospace;
   font-weight: 900;
   letter-spacing: 0.5px;
   border: none;
@@ -244,10 +228,16 @@
   gap: 8px;
   white-space: nowrap;
   flex-shrink: 0;
-  box-shadow: 0 8px 20px rgba(255, 69, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
 }
 
-/* ─── 1080×1920 (×2.4) ─── */
+.btnCall svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* ─── 1080×1920 export (×2.4) ─── */
 
 .root.canvas1080x1920 .adCanvas {
   width: 1080px;
@@ -256,47 +246,38 @@
   aspect-ratio: auto;
 }
 
-.root.canvas1080x1920 .tarmacGrid {
+.root.canvas1080x1920 .terrainGrid {
   background-size: 60px 60px;
 }
 
 .root.canvas1080x1920 .topHud {
-  top: 48px;
-  left: 36px;
-  right: 36px;
+  top: 60px;
+  left: 48px;
+  right: 48px;
 }
 
 .root.canvas1080x1920 .brandLockup {
-  padding: 19px 34px;
+  padding: 24px 38px;
   border-radius: 29px;
-  gap: 24px;
   border-left-width: 7px;
 }
 
 .root.canvas1080x1920 .btName {
-  font-size: 1.125rem;
-  letter-spacing: 1px;
+  font-size: 19px;
 }
 
-.root.canvas1080x1920 .btSub {
-  font-size: 0.75rem;
-  letter-spacing: 3.5px;
-  margin-top: 5px;
-}
-
-.root.canvas1080x1920 .partnerBadge {
-  font-size: 0.825rem;
-  padding: 14px 29px;
+.root.canvas1080x1920 .brandBadge {
+  font-size: 13px;
+  padding: 14px 24px;
   border-radius: 19px;
-  letter-spacing: 2.5px;
 }
 
-.root.canvas1080x1920 .performanceTerminal {
-  bottom: 36px;
+.root.canvas1080x1920 .techTerminal {
+  bottom: 48px;
   left: 36px;
   right: 36px;
   border-radius: 48px;
-  padding: 53px;
+  padding: 60px;
   border-top-width: 7px;
 }
 
@@ -306,47 +287,43 @@
 }
 
 .root.canvas1080x1920 .specTag {
-  font-size: 0.75rem;
+  font-size: 13px;
   padding: 12px 24px;
   border-radius: 14px;
-  letter-spacing: 2.5px;
 }
 
 .root.canvas1080x1920 .headline {
-  font-size: 6.72rem;
-  letter-spacing: -3.6px;
-  margin-bottom: 19px;
+  font-size: 72px;
+  letter-spacing: -5px;
+  margin-bottom: 29px;
 }
 
 .root.canvas1080x1920 .headlineOutline {
-  -webkit-text-stroke-width: 3.6px;
+  -webkit-text-stroke-width: 4px;
 }
 
 .root.canvas1080x1920 .subtext {
-  font-size: 1.42rem;
-  line-height: 1.48;
-  margin-bottom: 40px;
+  font-size: 20px;
+  margin-bottom: 60px;
 }
 
 .root.canvas1080x1920 .actionDock {
   padding-top: 36px;
 }
 
-.root.canvas1080x1920 .productBrand {
-  font-size: 2.64rem;
+.root.canvas1080x1920 .serviceTitle {
+  font-size: 28px;
 }
 
-.root.canvas1080x1920 .productSub {
-  font-size: 0.9rem;
-  letter-spacing: 2.5px;
-  margin-top: 10px;
+.root.canvas1080x1920 .serviceSub {
+  font-size: 14px;
 }
 
 .root.canvas1080x1920 .btnCall {
   height: 106px;
   padding: 0 38px;
   border-radius: 24px;
-  font-size: 1.2rem;
+  font-size: 20px;
   gap: 19px;
 }
 

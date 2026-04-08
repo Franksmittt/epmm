@@ -17,9 +17,6 @@ export function LoginForm() {
         >
           Access code
         </label>
-        <p className="text-xs leading-relaxed text-[#8E8E93]">
-          Same code each time unless your agency revokes it.
-        </p>
         <input
           id="portal-password"
           name="password"
@@ -28,7 +25,7 @@ export function LoginForm() {
           autoCorrect="off"
           spellCheck={false}
           required
-          className="box-border w-full min-h-12 rounded-md border border-white/20 bg-black/40 px-4 py-3 text-base text-white outline-none placeholder:text-[#8E8E93]/55 focus:border-white/45 focus:ring-2 focus:ring-white/15"
+          className="box-border w-full min-h-12 rounded-md border border-white/20 bg-black/50 px-4 py-3 text-base text-white outline-none placeholder:text-[#8E8E93]/55 focus:border-indigo-400/40 focus:ring-2 focus:ring-indigo-500/15"
           placeholder="Your access code"
         />
       </div>
@@ -40,12 +37,12 @@ export function LoginForm() {
       <button
         type="submit"
         disabled={pending}
-        className="min-h-12 w-full rounded-md bg-white px-4 py-3 text-sm font-semibold text-black transition-[opacity] duration-200 disabled:opacity-50"
+        className="min-h-12 w-full rounded-md bg-white px-4 py-3 text-sm font-semibold text-black transition-[opacity,transform] duration-200 hover:bg-white/95 active:scale-[0.99] disabled:opacity-50 disabled:active:scale-100"
         style={{
           transitionTimingFunction: "cubic-bezier(0.22, 0.25, 0, 1)",
         }}
       >
-        {pending ? "Checking…" : "Continue"}
+        {pending ? "Entering…" : "Enter Workspace"}
       </button>
     </form>
   );
