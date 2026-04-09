@@ -5,7 +5,7 @@
   --pure-white: #ffffff;
   --emergency-orange: #ff5500;
   --stealth-grey: #8e8e93;
-  --glass-surface: rgba(20, 20, 22, 0.7);
+  --glass-surface: rgba(15, 15, 18, 0.95);
   --glass-edge: rgba(255, 255, 255, 0.15);
 }
 
@@ -44,6 +44,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   pointer-events: none;
 }
 
@@ -98,7 +100,8 @@
 .midImageImg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -150,9 +153,9 @@
   top: 25px;
   right: 25px;
   z-index: 4;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: rgba(15, 15, 18, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-edge);
   padding: 6px 14px;
   border-radius: 20px;

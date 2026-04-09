@@ -5,7 +5,7 @@
   --pure-white: #ffffff;
   --emergency-orange: #ff5500;
   --tech-teal: #00d1ff;
-  --glass-base: rgba(12, 12, 14, 0.75);
+  --glass-base: rgba(15, 15, 18, 0.95);
   --glass-border: rgba(255, 255, 255, 0.15);
 }
 
@@ -66,6 +66,42 @@
   right: 25px;
   border-left: none;
   border-bottom: none;
+}
+
+.clinicIsland {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  background: var(--glass-base);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  padding: 8px 22px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
+}
+
+.clinicIslandDot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--emergency-orange);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--emergency-orange);
+  flex-shrink: 0;
+}
+
+.clinicIslandText {
+  color: var(--pure-white);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .breakoutHeadline {
@@ -196,6 +232,23 @@
 .root.canvas1080 .sensorTr {
   top: 45px;
   right: 45px;
+}
+
+.root.canvas1080 .clinicIsland {
+  top: 50px;
+  padding: 14px 40px;
+  gap: 18px;
+  border-radius: 999px;
+}
+
+.root.canvas1080 .clinicIslandDot {
+  width: 13px;
+  height: 13px;
+}
+
+.root.canvas1080 .clinicIslandText {
+  font-size: 19px;
+  letter-spacing: 0.12em;
 }
 
 .root.canvas1080 .breakoutHeadline {

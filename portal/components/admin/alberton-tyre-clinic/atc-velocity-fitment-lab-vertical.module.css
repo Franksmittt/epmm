@@ -5,7 +5,7 @@
   --pure-white: #ffffff;
   --emergency-orange: #ff5500;
   --stealth-grey: #888890;
-  --glass-bg: rgba(15, 15, 18, 0.65);
+  --glass-bg: rgba(15, 15, 18, 0.95);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
 
@@ -45,6 +45,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
   pointer-events: none;
 }
 
@@ -101,7 +103,8 @@
 .midImageImg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 

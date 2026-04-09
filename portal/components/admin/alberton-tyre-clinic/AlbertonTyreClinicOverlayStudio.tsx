@@ -157,6 +157,7 @@ const CALIBRATION_KEYS = [
   "calVerticalBrandName",
   "calVerticalBrandSub",
   "calVerticalCtaAria",
+  "calSquareBrandName",
   "calSquareHeadlineSolid",
   "calSquareHeadlineOutline",
   "calSquareTelemetryText",
@@ -301,6 +302,7 @@ const DEFAULTS_CALIBRATION: Record<CalibrationCopyKey, string> = {
   calVerticalBrandName: "Alberton Tyre Clinic",
   calVerticalBrandSub: "Fitment Protocol",
   calVerticalCtaAria: "011 907 8495",
+  calSquareBrandName: "Alberton Tyre Clinic",
   calSquareHeadlineSolid: "Zero.",
   calSquareHeadlineOutline: "Tolerance.",
   calSquareTelemetryText: "Road-Force Active",
@@ -425,6 +427,7 @@ function inferPresetFromBlock(
   if (
     keys.includes("calVerticalMacroData") ||
     keys.includes("calSquareTelemetryText") ||
+    keys.includes("calSquareBrandName") ||
     keys.includes("calVerticalSpecBadge")
   ) {
     return "calibration-matrix";
@@ -539,7 +542,7 @@ type AtcVerticalMidSlotClasses = {
   midImagePlaceholder: string;
 };
 
-/** Square 1:1 hero fills this framed slot on all 9:16 vertical previews. */
+/** Square 1:1 upload covers this framed slot (crop-to-fill) on all 9:16 vertical previews. */
 function AtcVerticalMidSlot({
   mod,
   bgSquareDataUrl,
@@ -1274,6 +1277,12 @@ export function AlbertonTyreClinicOverlayStudio({
           <div
             className={`${calSquare.sensorBracket} ${calSquare.sensorTr}`}
           />
+          <div className={calSquare.clinicIsland}>
+            <span className={calSquare.clinicIslandDot} />
+            <span className={calSquare.clinicIslandText}>
+              {cal.calSquareBrandName}
+            </span>
+          </div>
           <h1 className={calSquare.breakoutHeadline}>
             {cal.calSquareHeadlineSolid}
             <span className={calSquare.headlineOutline}>
@@ -2538,6 +2547,11 @@ export function AlbertonTyreClinicOverlayStudio({
             <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
               Square 1:1 — sensor breakout
             </p>
+            <Field
+              label="Square clinic / brand (top strip)"
+              value={cal.calSquareBrandName}
+              onChange={(x) => patchCalibration("calSquareBrandName", x)}
+            />
             <Field
               label="Headline solid"
               value={cal.calSquareHeadlineSolid}

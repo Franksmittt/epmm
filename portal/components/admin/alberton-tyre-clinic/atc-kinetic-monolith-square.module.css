@@ -5,7 +5,7 @@
   --pure-white: #ffffff;
   --emergency-orange: #ff5500;
   --stealth-grey: #8e8e93;
-  --glass-surface: rgba(15, 15, 18, 0.65);
+  --glass-surface: rgba(15, 15, 18, 0.95);
   --glass-edge: rgba(255, 255, 255, 0.15);
 }
 
@@ -82,8 +82,10 @@
 }
 
 .brandTag {
-  background: rgba(255, 85, 0, 0.1);
-  border: 1px solid rgba(255, 85, 0, 0.4);
+  background: rgba(15, 15, 18, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 85, 0, 0.45);
   padding: 6px 12px;
   border-radius: 8px;
   color: var(--emergency-orange);

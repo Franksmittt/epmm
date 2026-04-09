@@ -2,7 +2,7 @@
 
 .root {
   --void: #030304;
-  --surface: rgba(18, 18, 22, 0.82);
+  --surface: rgba(18, 18, 22, 0.95);
   --surface-edge: rgba(255, 255, 255, 0.09);
   --text: #f5f5f7;
   --text-dim: #a1a1a6;

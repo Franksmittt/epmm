@@ -931,7 +931,6 @@ export function VaalpenskraalWoodOverlayStudio() {
         aria-label="Vaalpenskraal Reality Distortion vertical export"
       >
         <div className={realityVertical.adCanvas}>
-          <div className={realityVertical.particleSwarm} aria-hidden />
           <div className={realityVertical.heroMaskWrap}>
             {bgVerticalDataUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
@@ -941,7 +940,9 @@ export function VaalpenskraalWoodOverlayStudio() {
                 alt=""
               />
             ) : null}
+            <div className={realityVertical.heroRadialScrim} aria-hidden />
           </div>
+          <div className={realityVertical.particleSwarm} aria-hidden />
           <div className={realityVertical.typographyLayer}>
             <div className={realityVertical.villainCopy}>{r.villainCopy}</div>
             <h1 className={realityVertical.heroCopy}>
