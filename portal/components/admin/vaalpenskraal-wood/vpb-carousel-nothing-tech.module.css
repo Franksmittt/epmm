@@ -1,0 +1,189 @@
+/* Row 4 · Nothing / dot matrix · 1080×1080 */
+
+.nothingRoot {
+  --noth-red: #e60000;
+  --noth-dark: rgba(15, 15, 15, 0.85);
+  --wa-green: #25d366;
+}
+
+.r4Mono {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.r4Box {
+  background: var(--noth-dark);
+  border: 2px dotted #555;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.r4c1Hub {
+  border: 4px solid #fff;
+  text-align: center;
+  width: 60%;
+}
+
+.r4c1Dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: var(--noth-red);
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.r4c1Sys {
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.r4c1Title {
+  font-size: 65px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.r4Tag {
+  background: #fff;
+  color: #000;
+  padding: 15px 30px;
+  font-size: 35px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  display: inline-block;
+  border: 2px solid #000;
+}
+
+.r4TagAccent {
+  background: var(--noth-red);
+  color: #fff;
+  border-color: var(--noth-red);
+}
+
+.r4c3Grid {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.r4c3Item {
+  border: 1px solid #444;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.r4c3Label {
+  font-size: 20px;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.r4c3Value {
+  font-size: 55px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.r4c4Price {
+  background: var(--noth-red);
+  color: #fff;
+  padding: 50px;
+  border-radius: 20px;
+  width: 70%;
+  text-align: center;
+}
+
+.r4c4Label {
+  font-size: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.r4c4Amount {
+  font-size: 150px;
+  line-height: 0.9;
+  font-weight: 900;
+}
+
+.r4c4Foot {
+  margin-top: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.r4c5Bar {
+  border-top: 2px dotted #666;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.r4c5Action {
+  color: var(--noth-red);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.r4c5Title {
+  font-size: 55px;
+  font-weight: 800;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.r4Btn {
+  background: transparent;
+  border: 3px solid var(--wa-green);
+  color: var(--wa-green);
+  border-radius: 50px;
+  padding: 20px 40px;
+  font-size: 35px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.hudBrackets {
+  position: relative;
+}
+
+.hudBrackets::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 30px;
+  height: 30px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  pointer-events: none;
+}
+
+.hudBrackets::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 30px;
+  height: 30px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  pointer-events: none;
+}

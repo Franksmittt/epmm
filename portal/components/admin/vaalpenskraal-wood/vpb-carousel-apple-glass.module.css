@@ -1,0 +1,153 @@
+/* Row 1 · Apple glassmorphism · 1080×1080 */
+
+.appleRoot {
+  --apple-glass: rgba(25, 25, 28, 0.65);
+  --apple-border: rgba(255, 255, 255, 0.2);
+  --wa-green: #25d366;
+}
+
+.r1Glass {
+  background: var(--apple-glass);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid var(--apple-border);
+  border-radius: 40px;
+  padding: 40px;
+}
+
+.r1c1Title {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  text-align: center;
+  line-height: 1.1;
+  color: #fff;
+}
+
+/* Card 2: top headline — large display type */
+.r1c2HeadingTop {
+  position: absolute;
+  z-index: 3;
+  top: 40px;
+  left: 48px;
+  right: 48px;
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-transform: none;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.45),
+    0 8px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* Card 2: full-width glass strip — species line only */
+.r1c2Wrap {
+  position: absolute;
+  z-index: 2;
+  bottom: 60px;
+  left: 48px;
+  right: 48px;
+  width: auto;
+  max-width: none;
+  container-type: inline-size;
+}
+
+.r1c2Title {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  text-align: left;
+  white-space: nowrap;
+  /* As large as fits one row inside the glass; scales with panel width */
+  font-size: 40px;
+  font-size: clamp(28px, 6.2cqi, 52px);
+  letter-spacing: -0.035em;
+}
+
+.r1c2Sub {
+  font-size: 24px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.r1c3Title {
+  font-size: 45px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.r1c4Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 80%;
+}
+
+.r1c4Box {
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.r1c4BoxLabel {
+  font-size: 24px;
+  color: #aaa;
+  font-weight: 600;
+}
+
+.r1c4BoxValue {
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 8px;
+}
+
+.r1c5Bar {
+  height: 250px;
+  border-radius: 0;
+  border-top: 1px solid var(--apple-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  background: var(--apple-glass);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.r1c5Title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.r1c5Sub {
+  font-size: 24px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.r1c5Phone {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.r1c5Phone .waIcon {
+  color: var(--wa-green);
+}

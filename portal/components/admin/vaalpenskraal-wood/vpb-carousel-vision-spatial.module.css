@@ -1,0 +1,149 @@
+/* Row 3 · Vision OS spatial · 1080×1080 */
+
+.visionRoot {
+  --wa-green: #25d366;
+}
+
+.r3Pill {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 100px;
+  padding: 25px 50px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.r3c1Circle {
+  text-align: center;
+  border-radius: 500px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.r3c1Brand {
+  font-size: 30px;
+  color: #aaa;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.r3c1Title {
+  font-size: 75px;
+  color: #fff;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.r3c2Title {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.r3c3Bar {
+  width: 85%;
+  height: 200px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.r3c3Col {
+  text-align: center;
+}
+
+.r3c3Label {
+  font-size: 24px;
+  color: #aaa;
+  font-weight: 600;
+}
+
+.r3c3Value {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.r3c3Divider {
+  width: 2px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.r3c4Block {
+  width: 60%;
+  padding: 60px;
+  border-radius: 40px;
+  text-align: center;
+  border: 2px solid var(--wa-green);
+}
+
+.r3c4Sub {
+  font-size: 35px;
+  color: #aaa;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.r3c4Price {
+  font-size: 140px;
+  color: #fff;
+  line-height: 0.9;
+  font-weight: 900;
+}
+
+.r3c4Del {
+  font-size: 26px;
+  color: var(--wa-green);
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.r3c5Top {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.r3c5TopTitle {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 800;
+}
+
+.r3c5Bot {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background: rgba(37, 211, 102, 0.2);
+  border: 1px solid var(--wa-green);
+}
+
+.r3c5PhoneRow {
+  font-size: 60px;
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+}
+
+.r3c5PhoneRow .waIcon {
+  color: var(--wa-green);
+}

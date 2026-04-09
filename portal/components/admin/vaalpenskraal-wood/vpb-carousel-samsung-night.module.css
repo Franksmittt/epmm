@@ -1,0 +1,145 @@
+/* Row 2 · Samsung Nightography OLED · 1080×1080 */
+
+.samsungRoot {
+  --sam-blue: #0057b8;
+  --sam-oled: rgba(10, 10, 10, 0.95);
+  --wa-green: #25d366;
+  --pure-white: #ffffff;
+}
+
+.r2Oled {
+  background: var(--sam-oled);
+  border: 1px solid #222;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.r2c1Panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border-right: 2px solid var(--sam-blue);
+  z-index: 2;
+}
+
+.r2c1Brand {
+  color: var(--sam-blue);
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.r2c1Title {
+  font-size: 75px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--pure-white);
+}
+
+.r2c2Block {
+  border-radius: 40px;
+  padding: 40px;
+  text-align: right;
+}
+
+.r2c2Tag {
+  font-size: 24px;
+  color: var(--sam-blue);
+  font-weight: 700;
+}
+
+.r2c2Title {
+  font-size: 65px;
+  font-weight: 800;
+  color: var(--pure-white);
+  line-height: 1.05;
+  margin-top: 8px;
+}
+
+.r2c3Top {
+  border-radius: 0 0 40px 0;
+  padding: 40px;
+}
+
+.r2c3Bot {
+  border-radius: 40px 0 0 0;
+  padding: 40px;
+}
+
+.r2c3Title {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--pure-white);
+  line-height: 1.1;
+}
+
+.r2c4Block {
+  width: 70%;
+  padding: 60px;
+  border-radius: 40px;
+  text-align: center;
+}
+
+.r2c4Sub {
+  font-size: 30px;
+  color: #888;
+  font-weight: 600;
+}
+
+.r2c4Price {
+  font-size: 130px;
+  font-weight: 900;
+  color: var(--pure-white);
+  line-height: 1;
+  margin-top: 12px;
+}
+
+.r2c4Del {
+  font-size: 24px;
+  color: var(--sam-blue);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.r2c5Bar {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid var(--wa-green);
+  flex-wrap: nowrap;
+  gap: 20px;
+  min-width: 0;
+}
+
+.r2c5Title {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--pure-white);
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.r2c5Phone {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--wa-green);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.r2c5Phone .waIcon {
+  color: var(--wa-green);
+}

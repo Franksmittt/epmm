@@ -275,22 +275,31 @@ export default async function AdminClientSchedulePage({
 
       {slug === "vaalpenskraal-wood" ? (
         <section className="space-y-4 rounded-md border border-white/15 bg-[#1D1D1F] p-5">
-          <div>
-            <h2 className="text-lg font-semibold text-white">
-              Overlay studio · Braai mix (flagship)
-            </h2>
-            <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
-              Two presets: <strong className="text-white/90">Data Stream</strong>{" "}
-              (overclocked ticker + italic hero + cyan HUD) and{" "}
-              <strong className="text-white/90">Notification Bubble</strong>{" "}
-              (spatial AR tag + speech bubbles + WhatsApp row). Separate square
-              and vertical heroes, JSON (
-              <code className="text-white/80">
-                vaalpenskraal-wood-braai-overlay
-              </code>{" "}
-              · <code className="text-white/80">preset</code>), export 1080×1080 and
-              1080×1920. Colours: #FF3D00 / #00E5FF on black.
-            </p>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h2 className="text-lg font-semibold text-white">
+                Overlay studio · Braai mix (flagship)
+              </h2>
+              <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
+                Two presets:{" "}
+                <strong className="text-white/90">Data Stream</strong>{" "}
+                (overclocked ticker + italic hero + cyan HUD) and{" "}
+                <strong className="text-white/90">Notification Bubble</strong>{" "}
+                (spatial AR tag + speech bubbles + WhatsApp row). Separate square
+                and vertical heroes, JSON (
+                <code className="text-white/80">
+                  vaalpenskraal-wood-braai-overlay
+                </code>{" "}
+                · <code className="text-white/80">preset</code>), export
+                1080×1080 and 1080×1920. Colours: #FF3D00 / #00E5FF on black.
+              </p>
+            </div>
+            <Link
+              href={`/admin/clients/${encodeURIComponent(slug)}/carousel`}
+              className="shrink-0 rounded-md border border-white/20 bg-white/5 px-3 py-2 text-sm font-medium text-white hover:border-white/35 hover:bg-white/10"
+            >
+              Facebook carousel studio (5 cards) →
+            </Link>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">
             <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
