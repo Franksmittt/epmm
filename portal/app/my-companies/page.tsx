@@ -47,13 +47,27 @@ export default async function MyCompaniesPage() {
               <p className="mt-2 text-sm text-[#8E8E93]">
                 Posts, captions, and downloads for this brand.
               </p>
-              <div className="mt-4">
+              <div className="mt-4 flex flex-wrap gap-2">
                 <Link
                   href={`/${c.slug}`}
                   className="inline-flex rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-black hover:bg-white/90"
                 >
                   Open {c.name}
                 </Link>
+                <Link
+                  href={`/admin/clients/${encodeURIComponent(c.slug)}`}
+                  className="inline-flex rounded-md border border-white/25 px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10"
+                >
+                  Calendar & export tools
+                </Link>
+                {c.slug === "alberton-tyre-clinic" ? (
+                  <Link
+                    href={`/admin/clients/${encodeURIComponent(c.slug)}/april-campaign`}
+                    className="inline-flex rounded-md border border-orange-500/40 px-4 py-2.5 text-sm font-medium text-orange-200 hover:bg-orange-500/10"
+                  >
+                    April–May post pack
+                  </Link>
+                ) : null}
               </div>
             </li>
           ))}
