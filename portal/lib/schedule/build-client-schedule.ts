@@ -77,7 +77,9 @@ export async function buildClientSchedule(slug: string): Promise<WeekSchedule> {
     clientSlug: slug,
     clientDisplayName: client.name,
     weekLabel:
-      dates.length === 0 ? "No scheduled posts yet" : "Your scheduled content",
+      dates.length === 0
+        ? "No scheduled posts yet"
+        : "Posting calendar · two months at a time",
     days,
   };
 }

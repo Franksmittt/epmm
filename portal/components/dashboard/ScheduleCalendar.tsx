@@ -155,9 +155,10 @@ export function ScheduleCalendar({ week }: { week: WeekSchedule }) {
   const jumpKeys = scheduledKeys.filter((k) => !visibleKeys.has(k));
 
   return (
-    <div className="mx-auto max-w-5xl space-y-4">
+    <div className="w-full space-y-4">
       <div className="rounded-md border border-white/10 bg-black/30 px-4 py-3 text-sm text-[#8E8E93]">
         <p className="text-white/90">
+          Every client sees this same layout.{" "}
           <span className="font-medium text-emerald-300">Green</span> days have a
           scheduled post — tap to copy the caption and download images. Grey days
           have nothing yet.

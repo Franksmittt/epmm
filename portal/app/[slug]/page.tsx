@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { ClientShell } from "@/components/dashboard/ClientShell";
 import { WeekBento } from "@/components/dashboard/WeekBento";
+import { CLIENT_PORTAL_CONTENT_CLASS } from "@/lib/dashboard/client-portal";
 import { getClientBySlug } from "@/lib/clients/registry";
 import { buildClientSchedule } from "@/lib/schedule/build-client-schedule";
 
@@ -22,8 +23,8 @@ export default async function ClientWeekPage({ params }: Props) {
 
   return (
     <ClientShell clientName={week.clientDisplayName}>
-      <div className="mx-auto max-w-6xl flex-1 px-4 py-10">
-        <header className="mb-10 space-y-2">
+      <div className={`flex-1 ${CLIENT_PORTAL_CONTENT_CLASS}`}>
+        <header className="mb-8 space-y-2 sm:mb-10">
           <p className="text-sm text-[#8E8E93]">{week.weekLabel}</p>
           <h1 className="text-3xl font-semibold tracking-tight text-white">
             {week.clientDisplayName}
