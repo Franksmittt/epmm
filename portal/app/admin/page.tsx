@@ -56,12 +56,20 @@ export default async function AdminHomePage() {
             <span className="font-medium">{totalIncomplete}</span> need work
           </span>
         </div>
-        <Link
-          href={`/admin/schedule?y=${year}&m=${month}`}
-          className="mt-4 inline-flex rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-black"
-        >
-          Open master schedule
-        </Link>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link
+            href={`/admin/schedule?y=${year}&m=${month}`}
+            className="inline-flex rounded-md bg-white px-4 py-2.5 text-sm font-semibold text-black"
+          >
+            Open master schedule
+          </Link>
+          <Link
+            href="/admin/rapid-studio"
+            className="inline-flex rounded-md bg-[#d70a0a] px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-600"
+          >
+            Rapid Studio
+          </Link>
+        </div>
       </section>
 
       <div>

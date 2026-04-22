@@ -34,6 +34,12 @@ export default function AdminLayout({
             >
               Master schedule
             </Link>
+            <Link
+              href="/admin/rapid-studio"
+              className="text-[#8E8E93] hover:text-white"
+            >
+              Rapid Studio
+            </Link>
           </div>
           <form action={logoutAction}>
             <button
