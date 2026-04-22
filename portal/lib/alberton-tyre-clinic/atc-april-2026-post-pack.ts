@@ -1,5 +1,5 @@
 /**
- * April 2026 post calendar for Alberton Tyre Clinic (Mon / Wed / Fri).
+ * April–May 2026 post calendar for Alberton Tyre Clinic (Mon / Wed / Fri).
  * Each slot assigns a template (1–5) and copy patches merged onto studio defaults.
  * Templates: 1 Velocity · 2 Kinetic Grip · 3 Commercial Transit · 4 Tectonic Tread · 5 Kinetic Monolith
  */
@@ -25,6 +25,11 @@ export type AtcAprilPostSlot = {
   facebookCaption: string;
   /** Merged onto defaults for `preset` in the overlay studio */
   copyPatch: Record<string, string>;
+  /**
+   * Optional 1:1 shipped creative under `portal/public` (path as seen by the browser).
+   * Manual ads: ATC_ad1 … ad6 map to post dates 24 Apr, 27 Apr, 29 Apr, 1 May, 4 May, 6 May 2026.
+   */
+  squareAssetUrl?: string;
 };
 
 const LOC =
@@ -377,34 +382,42 @@ ${LOC}
   {
     date: "2026-04-24",
     weekday: "Fri",
-    templateNumber: 1,
-    preset: "velocity-premium",
-    productLine: "Multi-brand · SUV & family safety focus",
-    facebookCaption: `School run season, tyres are homework too. 🚸
+    templateNumber: 4,
+    preset: "tectonic-tread",
+    squareAssetUrl: "/uploads/alberton-tyre-clinic/2026-04-24-square.png",
+    productLine: "BFGoodrich · All-Terrain T/A KO2 · off-road",
+    facebookCaption: `Don't just drive the dirt. Dominate it. 🛻💨
 
-Right size, right pressure, right tread depth. We carry major brands and honest advice for SUVs and family cars.
+The BFGoodrich All-Terrain T/A KO2 is the undisputed gold standard for South African off-roaders for a reason. Featuring race-proven CoreGard Technology, these tires offer significantly tougher sidewalls and ruthless traction. Whether you're dodging local potholes or tackling severe rock crawling, you need rubber that fights back.
 
-👉 Alberton Tyre Clinic
+Get your bakkie ready for the dirt with the experts at Alberton Tyre Clinic.
 
-${LOC}
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
 
-#TyreSafety #FamilyCar #AlbertonTyreClinic`,
+#BFGoodrich #TAKO2 #OffRoadSA #BakkieLife #AlbertonTyreClinic #4x4SouthAfrica #NewRedruth`,
     copyPatch: {
-      brandName: "ALBERTON TYRE CLINIC",
-      squareStatusPill: "Brand",
-      squareTechHighlight: "Featured Product",
-      squareTechLine: "Major brands · honest SUV advice",
-      headlinePrimary: "Family.",
-      headlineMuted: "First.",
-      squareButtonText: "011 907 8495",
-      verticalStoreLoc: "ALBERTON · TYRE SAFETY",
-      verticalStatusPill: "Brand",
-      verticalProductLine: "Major brands · honest SUV advice",
-      subtext:
-        "From Dunlop to Bridgestone to Continental, we help you pick the tyre that matches how you drive, not just the poster on the wall.",
-      priceLabel: "Visit",
-      priceValue: "St Columb Rd",
-      verticalButtonText: "011 907 8495",
+      duelSquareBrandBadge: "BFGoodrich",
+      duelSquareHeroL1: "CoreGard.",
+      duelSquareHeroL2Outline: "KO2.",
+      duelSquareProductTitle: "BFGoodrich All-Terrain T/A KO2",
+      duelSquareProductSub: "Premium AT fitment",
+      duelSquareSpec1: "Sidewall toughness",
+      duelSquareSpec2: "Off-road grip",
+      duelVerticalBrandBadge: "BFGoodrich",
+      duelVerticalSpec1: "All-Terrain T/A KO2",
+      duelVerticalSpec2: "Bakkie & 4x4",
+      duelVerticalHeadlineL1: "Dominate.",
+      duelVerticalHeadlineL2Outline: "The dirt.",
+      duelVerticalSubtext:
+        "BFGoodrich KO2 with CoreGard Technology — tougher sidewalls and traction for SA conditions. Fitted at Alberton Tyre Clinic.",
+      duelVerticalServiceTitle: "BFGoodrich KO2",
+      duelVerticalServiceSub: "Quote & fitment",
+      duelVerticalPhone: "011 907 8495",
+      duelSquarePhone: "011 907 8495",
     },
   },
   {
@@ -412,66 +425,196 @@ ${LOC}
     weekday: "Mon",
     templateNumber: 2,
     preset: "kinetic-grip",
-    productLine: "Maxxis · dual-sport AT (seasonal)",
-    facebookCaption: `Adventure calling? Fit rubber that won't flinch. 🏞️
+    squareAssetUrl: "/uploads/alberton-tyre-clinic/2026-04-27-square.png",
+    productLine: "Dunlop · SP Touring R1 L · daily commuter",
+    facebookCaption: `Daily commuting doesn't have to chew through your tread. 🛣️🚗
 
-Ask about Maxxis all-terrain options in stock, tough patterns for weekend trails and weekday tar.
+Engineered specifically for abrasive South African road conditions, the Dunlop SP Touring R1 L delivers premium safety and up to 6% more mileage than its predecessor. Keep your family safe on the tarmac with superior wet grip and a deeper tread life—without breaking the bank.
 
-👉 Alberton Tyre Clinic
+Don't let worn tires compromise your daily school run. Drop in for a quick, professional fitment today.
 
-${LOC}
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
 
-#Maxxis #AllTerrain #AlbertonTyreClinic`,
+#DunlopTyres #DailyDrive #RoadSafetySA #TyreFitment #Alberton #JohannesburgSouth #VWPolo`,
     copyPatch: {
-      gripVerticalPartnerBadge: "AT Specialist",
-      gripVerticalHeadlineSolid: "Trail.",
-      gripVerticalHeadlineOutline: "Ready.",
+      gripVerticalPartnerBadge: "BRAND",
+      gripVerticalHeadlineSolid: "Daily.",
+      gripVerticalHeadlineOutline: "Further.",
       gripVerticalSubtext:
-        "Maxxis all-terrain lines, popular on bakkies that work Mon–Fri and explore Sat–Sun. Stock varies; message us your size.",
-      gripVerticalProductBrand: "Maxxis AT range",
-      gripVerticalProductSub: "While stocks last",
+        "Dunlop SP Touring R1 L — more mileage vs predecessor, wet grip and tread life for abrasive SA roads. Fitted at Alberton Tyre Clinic.",
+      gripVerticalProductBrand: "Dunlop SP Touring R1 L",
+      gripVerticalProductSub: "Commuter touring",
       gripVerticalPhone: "011 907 8495",
       gripSquareBrandPill: "Alberton Tyre Clinic",
-      gripSquareHeroSolid: "Weekend.",
-      gripSquareHeroOutline: "Grip.",
-      gripSquareProductTitle: "Maxxis AT options",
-      gripSquareProductSub: "Bakkie & SUV",
+      gripSquareHeroSolid: "School run.",
+      gripSquareHeroOutline: "Safe.",
+      gripSquareProductTitle: "Dunlop SP Touring R1 L",
+      gripSquareProductSub: "Daily drive tyres",
       gripSquarePhone: "011 907 8495",
     },
   },
   {
     date: "2026-04-29",
     weekday: "Wed",
-    templateNumber: 3,
-    preset: "commercial-transit",
-    productLine: "Run-flat & premium SUV enquiries",
-    facebookCaption: `Run-flat or low-profile SUV? We speak your size language. 🔧
+    templateNumber: 5,
+    preset: "kinetic-monolith",
+    squareAssetUrl: "/uploads/alberton-tyre-clinic/2026-04-29-square.png",
+    productLine: "Black Rhino · Vagabond · Fusion Forged wheels",
+    facebookCaption: `Stance. Strength. Absolute presence. 🔥
 
-Premium fitment, careful mounting, and alignment, protect those expensive rims at Alberton Tyre Clinic.
+Transform your rig's stance with the Black Rhino Vagabond. These aren't just cheap show rims—they are Fusion Forged alloys specifically engineered for serious structural integrity to support the heavy load ratings of your overland rigs and SUVs. Matte black, rugged, and built to take a beating while looking flawless.
 
-${LOC}
+Bring your Ranger or Hilux to the pros. We’ll get them fitted and balanced with absolute precision.
 
-#RunFlat #SUV #AlbertonTyreClinic`,
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#BlackRhinoWheels #MagWheels #ToyotaHilux #FordRanger #AlbertonTyreClinic #BakkieUpgrades #OverlandSA`,
     copyPatch: {
-      commVerticalCorpBadge: "Premium SUV",
-      commVerticalSpec1: "Run-flat savvy",
-      commVerticalSpec2: "Low profile OK",
-      commVerticalHeadlineLine1: "Premium.",
-      commVerticalHeadlineLine2: "Handled.",
-      commVerticalSubtext:
-        "Low-profile and run-flat tyres need skilled mounting, our workshop is set up for performance and luxury fitments.",
-      commVerticalServiceTitle: "Premium fitment desk",
-      commVerticalServiceSub: "Book ahead",
-      commVerticalPhone: "011 907 8495",
-      commSquareHeroLine1: "Rims",
-      commSquareHeroLine2: "protected.",
-      commSquareServiceTitle: "Run-flat & UHP",
-      commSquareServiceSub:
-        "Careful mounting, torqued to spec, Alberton's tyre clinic for picky cars.",
-      commSquareSpec1: "Run-flat stock",
-      commSquareSpec2: "SUV specialists",
-      commSquareActionLbl: "WhatsApp size",
-      commSquarePhone: "011 907 8495",
+      kineticTelemetryText: "WHEELS // FORGED",
+      kineticVerticalBrandTag: "Alberton Tyre Clinic",
+      kineticHeroSolid: "Stance.",
+      kineticHeroOutline: "Locked.",
+      kineticVerticalWidgetBefore: "Black Rhino Vagabond — ",
+      kineticVerticalWidgetStrong: "Fusion Forged",
+      kineticVerticalWidgetAfter: " alloys for load-rated overland and SUV builds. Fitted and balanced in-house.",
+      kineticVerticalMetricVal: "Vagabond",
+      kineticVerticalMetricLbl: "Black Rhino",
+      kineticVerticalCta: "011 907 8495",
+      kineticSquareBrandTag: "Alberton Tyre Clinic · Wheels",
+      kineticSquareWidgetBefore: "Matte black presence: ",
+      kineticSquareWidgetStrong: "Black Rhino Vagabond",
+      kineticSquareWidgetAfter: ", precision fitment for Ranger, Hilux, and more.",
+      kineticSquareMetricLbl: "Range",
+      kineticSquareMetricVal: "Forged SUV",
+      kineticSquareCta: "011 907 8495",
+    },
+  },
+  {
+    date: "2026-05-01",
+    weekday: "Fri",
+    templateNumber: 1,
+    preset: "velocity-premium",
+    squareAssetUrl: "/uploads/alberton-tyre-clinic/2026-05-01-square.png",
+    productLine: "Yokohama · BluEarth-Es ES32 · efficiency",
+    facebookCaption: `Save at the pumps. Stay safe on the road. ⛽🛡️
+
+The Yokohama BluEarth-Es ES32 is the ultimate smart upgrade for your family hatchback. Combining premium Japanese engineering with everyday reliability, this tire offers a remarkably quiet ride, brilliant wet grip, and reduced rolling resistance—meaning your tank takes you further.
+
+Experience the difference of an honest, hard-working local team that puts your safety first.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#YokohamaTyres #FuelEfficiency #SuzukiSwift #EcoFriendlyDriving #AlbertonBusiness #TyreSafety`,
+    copyPatch: {
+      brandName: "ALBERTON TYRE CLINIC",
+      squareStatusPill: "Brand",
+      squareTechHighlight: "Featured Product",
+      squareTechLine: "Yokohama BluEarth-Es ES32",
+      headlinePrimary: "Further.",
+      headlineMuted: "Per tank.",
+      squareButtonText: "011 907 8495",
+      verticalStoreLoc: "ALBERTON · YOKOHAMA",
+      verticalStatusPill: "Brand",
+      verticalProductLine: "Yokohama BluEarth-Es ES32",
+      subtext:
+        "BluEarth-Es ES32 — quiet ride, wet grip, and lower rolling resistance for hatchbacks and family cars. Fitted at Alberton Tyre Clinic.",
+      priceLabel: "Quote",
+      priceValue: "Same-day bay",
+      verticalButtonText: "011 907 8495",
+    },
+  },
+  {
+    date: "2026-05-04",
+    weekday: "Mon",
+    templateNumber: 4,
+    preset: "tectonic-tread",
+    squareAssetUrl: "/uploads/alberton-tyre-clinic/2026-05-04-square.png",
+    productLine: "Pirelli · Scorpion All Terrain Plus · luxury SUV",
+    facebookCaption: `Luxury meets the wild. 🏔️✨
+
+Why compromise your SUV's premium ride when the pavement ends? The Pirelli Scorpion All Terrain Plus brings high-performance engineering directly to your luxury 4x4. Featuring highly aggressive tread patterns optimized for extreme durability, mud traction, and high resistance to sidewall cuts.
+
+Look incredible. Perform anywhere. Trust your premium vehicle to Alberton's leading fitment specialists.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#PirelliScorpion #LuxurySUV #4x4SouthAfrica #PremiumTyres #AlbertonTyreClinic #JohannesburgCars`,
+    copyPatch: {
+      duelSquareBrandBadge: "Pirelli",
+      duelSquareHeroL1: "Scorpion.",
+      duelSquareHeroL2Outline: "Anywhere.",
+      duelSquareProductTitle: "Pirelli Scorpion All Terrain Plus",
+      duelSquareProductSub: "Luxury 4x4 AT",
+      duelSquareSpec1: "Mud traction",
+      duelSquareSpec2: "Sidewall cuts",
+      duelVerticalBrandBadge: "Pirelli",
+      duelVerticalSpec1: "Scorpion AT Plus",
+      duelVerticalSpec2: "Premium SUV",
+      duelVerticalHeadlineL1: "Luxury.",
+      duelVerticalHeadlineL2Outline: "Off-road.",
+      duelVerticalSubtext:
+        "Scorpion All Terrain Plus — aggressive pattern, durability, and sidewall resistance for luxury 4x4s. Fitted at Alberton Tyre Clinic.",
+      duelVerticalServiceTitle: "Pirelli Scorpion AT+",
+      duelVerticalServiceSub: "Premium fitment",
+      duelVerticalPhone: "011 907 8495",
+      duelSquarePhone: "011 907 8495",
+    },
+  },
+  {
+    date: "2026-05-06",
+    weekday: "Wed",
+    templateNumber: 4,
+    preset: "tectonic-tread",
+    squareAssetUrl: "/uploads/alberton-tyre-clinic/2026-05-06-square.png",
+    productLine: "Bridgestone · Dueler A/T 002 · alignment",
+    facebookCaption: `Premium rubber deserves millimeter-perfect precision. 📐🛠️
+
+The Bridgestone Dueler A/T 002 is an absolute beast, boasting a massive 40% improvement in mileage over its predecessor while balancing on-road comfort with intense off-road grip. But to get that kind of longevity, your setup needs to be flawless. Potholes knock your suspension out of spec and chew through your tread.
+
+Let our expert technicians use advanced 3D laser alignment technology to lock in your geometry and maximize the life of your new tires.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#BridgestoneDueler #WheelAlignment #TyreMaintenance #AlbertonTyreClinic #CarCareSA #GautengCars`,
+    copyPatch: {
+      duelSquareBrandBadge: "Bridgestone",
+      duelSquareHeroL1: "Dueler.",
+      duelSquareHeroL2Outline: "Aligned.",
+      duelSquareProductTitle: "Bridgestone Dueler A/T 002",
+      duelSquareProductSub: "AT + 3D laser alignment",
+      duelSquareSpec1: "Mileage focus",
+      duelSquareSpec2: "Geometry lock-in",
+      duelVerticalBrandBadge: "Bridgestone",
+      duelVerticalSpec1: "Dueler A/T 002",
+      duelVerticalSpec2: "3D alignment",
+      duelVerticalHeadlineL1: "Precision.",
+      duelVerticalHeadlineL2Outline: "Longevity.",
+      duelVerticalSubtext:
+        "Dueler A/T 002 with big mileage gains — pair new rubber with 3D laser alignment so suspension geometry does not waste tread.",
+      duelVerticalServiceTitle: "Dueler A/T 002",
+      duelVerticalServiceSub: "Alignment bay",
+      duelVerticalPhone: "011 907 8495",
+      duelSquarePhone: "011 907 8495",
     },
   },
 ];

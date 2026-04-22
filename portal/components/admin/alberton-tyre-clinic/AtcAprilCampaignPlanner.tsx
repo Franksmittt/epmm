@@ -43,6 +43,7 @@ export function AtcAprilCampaignPlanner() {
         applyKey: `${slot.date}-${Date.now()}`,
         preset: slot.preset,
         copy: atcMergedCopyForPreset(slot.preset, slot.copyPatch),
+        squareHeroUrl: slot.squareAssetUrl ?? null,
       });
     },
     [],
@@ -64,11 +65,12 @@ export function AtcAprilCampaignPlanner() {
     <div className="space-y-8">
       <div className="rounded-md border border-orange-500/30 bg-orange-500/[0.06] p-4">
         <h2 className="text-lg font-semibold text-white">
-          April 2026 post pack · Alberton Tyre Clinic
+          April–May 2026 post pack · Alberton Tyre Clinic
         </h2>
         <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#8E8E93]">
-          Thirteen feed slots (every Monday, Wednesday, Friday). Each row picks a
-          template (1–5) and product/service copy — all merged for you. Click{" "}
+          Sixteen feed slots (every Monday, Wednesday, Friday through 6 May).
+          Each row picks a template (1–5) and product/service copy — all merged
+          for you. Click{" "}
           <span className="text-white/90">Load into studio</span>, upload square
           + vertical heroes, export PNGs, then paste the caption into Facebook.
           Template numbers match the studio presets: 1 Velocity · 2 Kinetic Grip
@@ -83,6 +85,7 @@ export function AtcAprilCampaignPlanner() {
               <th className="px-3 py-2.5">Date</th>
               <th className="px-3 py-2.5">Template</th>
               <th className="px-3 py-2.5">Product / theme</th>
+              <th className="px-3 py-2.5">Square</th>
               <th className="px-3 py-2.5">Actions</th>
             </tr>
           </thead>
@@ -118,6 +121,28 @@ export function AtcAprilCampaignPlanner() {
                   </td>
                   <td className="px-3 py-2.5 align-top text-xs leading-relaxed">
                     {s.productLine}
+                  </td>
+                  <td className="px-3 py-2.5 align-top">
+                    {s.squareAssetUrl ? (
+                      <a
+                        href={s.squareAssetUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-block rounded border border-white/15 bg-black/50 p-0.5 hover:border-white/30"
+                        title="Open shipped 1:1 asset"
+                      >
+                        {/* eslint-disable-next-line @next/next/no-img-element -- small planner thumb */}
+                        <img
+                          src={s.squareAssetUrl}
+                          alt=""
+                          width={44}
+                          height={44}
+                          className="rounded-sm object-cover"
+                        />
+                      </a>
+                    ) : (
+                      <span className="text-xs text-[#8E8E93]">—</span>
+                    )}
                   </td>
                   <td className="px-3 py-2.5 align-top">
                     <div className="flex flex-wrap gap-2">

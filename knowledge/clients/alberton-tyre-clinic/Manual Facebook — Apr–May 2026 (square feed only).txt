@@ -1,0 +1,126 @@
+Alberton Tyre Clinic — manual Facebook feed (square creatives only, no stories)
+
+Cadence: Friday · Monday · Wednesday
+
+Schedule (paste captions below as-is; no “Post X” labels in the live post)
+
+  Fri 24 Apr 2026 — BFGoodrich · Off-road / bakkie (All-Terrain T/A KO2)
+  Mon 27 Apr 2026 — Dunlop · Daily commuter (SP Touring R1 L)
+  Wed 29 Apr 2026 — Black Rhino · Wheels (Vagabond)
+  Fri  1 May 2026 — Yokohama · Family hatch / efficiency (BluEarth-Es ES32)
+  Mon  4 May 2026 — Pirelli · Luxury SUV AT (Scorpion All Terrain Plus)
+  Wed  6 May 2026 — Bridgestone · AT + alignment (Dueler A/T 002 + 3D laser alignment)
+
+Shipped 1:1 assets (portal `public/`, same names for Facebook manual upload)
+
+  Client file naming (ATC_adN) maps to post number N, then to calendar date:
+  ATC_ad1 → 24 Apr 2026 → portal/public/uploads/alberton-tyre-clinic/2026-04-24-square.png
+  ATC_ad2 → 27 Apr 2026 → …/2026-04-27-square.png
+  ATC_ad3 → 29 Apr 2026 → …/2026-04-29-square.png
+  ATC_ad4 →  1 May 2026 → …/2026-05-01-square.png
+  ATC_ad5 →  4 May 2026 → …/2026-05-04-square.png
+  ATC_ad6 →  6 May 2026 → …/2026-05-06-square.png
+
+  Original exports (kept under knowledge for reference):
+  knowledge/clients/alberton-tyre-clinic/client_images/ATC_ad1_1080x1080_Studio (5).png
+  knowledge/clients/alberton-tyre-clinic/client_images/ATC_ad2_1080x1080_Studio (2).png
+  knowledge/clients/alberton-tyre-clinic/client_images/ATC_ad3_1080x1080_Studio (1).png
+  knowledge/clients/alberton-tyre-clinic/client_images/ATC_ad4_1080x1080_Studio.png
+  knowledge/clients/alberton-tyre-clinic/client_images/ATC_ad5_1080x1080_Studio.png
+  knowledge/clients/alberton-tyre-clinic/client_images/ATC_ad6_1080x1080_Studio (2).png
+
+--- Fri 24 Apr 2026 — Facebook caption (copy from next line) ---
+
+Don't just drive the dirt. Dominate it. 🛻💨
+
+The BFGoodrich All-Terrain T/A KO2 is the undisputed gold standard for South African off-roaders for a reason. Featuring race-proven CoreGard Technology, these tires offer significantly tougher sidewalls and ruthless traction. Whether you're dodging local potholes or tackling severe rock crawling, you need rubber that fights back.
+
+Get your bakkie ready for the dirt with the experts at Alberton Tyre Clinic.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#BFGoodrich #TAKO2 #OffRoadSA #BakkieLife #AlbertonTyreClinic #4x4SouthAfrica #NewRedruth
+
+--- Mon 27 Apr 2026 ---
+
+Daily commuting doesn't have to chew through your tread. 🛣️🚗
+
+Engineered specifically for abrasive South African road conditions, the Dunlop SP Touring R1 L delivers premium safety and up to 6% more mileage than its predecessor. Keep your family safe on the tarmac with superior wet grip and a deeper tread life—without breaking the bank.
+
+Don't let worn tires compromise your daily school run. Drop in for a quick, professional fitment today.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#DunlopTyres #DailyDrive #RoadSafetySA #TyreFitment #Alberton #JohannesburgSouth #VWPolo
+
+--- Wed 29 Apr 2026 ---
+
+Stance. Strength. Absolute presence. 🔥
+
+Transform your rig's stance with the Black Rhino Vagabond. These aren't just cheap show rims—they are Fusion Forged alloys specifically engineered for serious structural integrity to support the heavy load ratings of your overland rigs and SUVs. Matte black, rugged, and built to take a beating while looking flawless.
+
+Bring your Ranger or Hilux to the pros. We’ll get them fitted and balanced with absolute precision.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#BlackRhinoWheels #MagWheels #ToyotaHilux #FordRanger #AlbertonTyreClinic #BakkieUpgrades #OverlandSA
+
+--- Fri 1 May 2026 ---
+
+Save at the pumps. Stay safe on the road. ⛽🛡️
+
+The Yokohama BluEarth-Es ES32 is the ultimate smart upgrade for your family hatchback. Combining premium Japanese engineering with everyday reliability, this tire offers a remarkably quiet ride, brilliant wet grip, and reduced rolling resistance—meaning your tank takes you further.
+
+Experience the difference of an honest, hard-working local team that puts your safety first.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#YokohamaTyres #FuelEfficiency #SuzukiSwift #EcoFriendlyDriving #AlbertonBusiness #TyreSafety
+
+--- Mon 4 May 2026 ---
+
+Luxury meets the wild. 🏔️✨
+
+Why compromise your SUV's premium ride when the pavement ends? The Pirelli Scorpion All Terrain Plus brings high-performance engineering directly to your luxury 4x4. Featuring highly aggressive tread patterns optimized for extreme durability, mud traction, and high resistance to sidewall cuts.
+
+Look incredible. Perform anywhere. Trust your premium vehicle to Alberton's leading fitment specialists.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#PirelliScorpion #LuxurySUV #4x4SouthAfrica #PremiumTyres #AlbertonTyreClinic #JohannesburgCars
+
+--- Wed 6 May 2026 ---
+
+Premium rubber deserves millimeter-perfect precision. 📐🛠️
+
+The Bridgestone Dueler A/T 002 is an absolute beast, boasting a massive 40% improvement in mileage over its predecessor while balancing on-road comfort with intense off-road grip. But to get that kind of longevity, your setup needs to be flawless. Potholes knock your suspension out of spec and chew through your tread.
+
+Let our expert technicians use advanced 3D laser alignment technology to lock in your geometry and maximize the life of your new tires.
+
+📍 Alberton Tyre Clinic
+🏢 26 St Columb Rd, New Redruth, Alberton, 1449
+📞 011 907 8495 (Landline)
+📱 081 884 9807 (WhatsApp)
+💻 https://www.albertontyreclinic.co.za/
+
+#BridgestoneDueler #WheelAlignment #TyreMaintenance #AlbertonTyreClinic #CarCareSA #GautengCars

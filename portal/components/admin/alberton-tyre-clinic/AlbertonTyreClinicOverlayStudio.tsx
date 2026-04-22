@@ -361,6 +361,8 @@ export type AtcStudioCampaignPayload = {
   applyKey: string;
   preset: AtcOverlayPresetId;
   copy: Record<string, string>;
+  /** Shipped 1:1 under `/public`, or null to clear when loading a slot without an asset. */
+  squareHeroUrl: string | null;
 };
 
 function keysForPreset(p: AtcOverlayPresetId): readonly string[] {
@@ -618,6 +620,7 @@ export function AlbertonTyreClinicOverlayStudio({
       ...prev,
       [campaignApply.preset]: campaignApply.copy,
     }));
+    setBgSquareDataUrl(campaignApply.squareHeroUrl);
     // eslint-disable-next-line react-hooks/exhaustive-deps -- re-apply only when slot key changes
   }, [campaignApply?.applyKey]);
 
