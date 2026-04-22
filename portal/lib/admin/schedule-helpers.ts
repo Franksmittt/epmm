@@ -11,7 +11,8 @@ export function getDayPostStatus(
   const cap = entry.caption?.trim().length ?? 0;
   const hasSq = Boolean(entry.squareUrl);
   const hasV = Boolean(entry.verticalUrl);
-  if (cap > 0 && hasSq && hasV) return "complete";
+  const feedOnly = Boolean(entry.feedOnly);
+  if (cap > 0 && hasSq && (hasV || feedOnly)) return "complete";
   return "incomplete";
 }
 
@@ -31,7 +32,7 @@ export function missingParts(entry: StoredDayContent | undefined): string[] {
   const m: string[] = [];
   if (!entry.caption?.trim()) m.push("caption");
   if (!entry.squareUrl) m.push("square");
-  if (!entry.verticalUrl) m.push("vertical");
+  if (!entry.verticalUrl && !entry.feedOnly) m.push("vertical");
   return m;
 }
 

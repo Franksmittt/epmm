@@ -1,6 +1,5 @@
 "use client";
 
-import { LayoutGroup } from "framer-motion";
 import { DayCard } from "@/components/dashboard/DayCard";
 import type { WeekSchedule } from "@/lib/schedule/types";
 
@@ -22,12 +21,14 @@ export function WeekBento({ week }: WeekBentoProps) {
   }
 
   return (
-    <LayoutGroup>
-      <div className="grid auto-rows-fr gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {week.days.map((day) => (
-          <DayCard key={day.id} day={day} />
-        ))}
-      </div>
-    </LayoutGroup>
+    <div className="mx-auto flex max-w-2xl flex-col gap-2 sm:gap-3">
+      <p className="mb-1 text-xs text-[#8E8E93]">
+        Tap a day to open downloads and copy the caption. List stays compact so
+        nothing shifts beside other rows.
+      </p>
+      {week.days.map((day) => (
+        <DayCard key={day.id} day={day} />
+      ))}
+    </div>
   );
 }

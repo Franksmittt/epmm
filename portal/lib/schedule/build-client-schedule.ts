@@ -44,25 +44,32 @@ export async function buildClientSchedule(slug: string): Promise<WeekSchedule> {
       ? path.extname(row.verticalUrl) || ".jpg"
       : ".jpg";
 
+    const posts = [
+      {
+        id: `${iso}-square`,
+        label: "Square (feed)",
+        caption: row.caption,
+        assetUrl: row.squareUrl,
+        assetFileName: row.squareUrl
+          ? `${safeName}_${iso}_square${squareExt}`
+          : null,
+      },
+    ];
+
+    if (row.verticalUrl) {
+      posts.push({
+        id: `${iso}-vertical`,
+        label: "Vertical (story)",
+        caption: row.caption,
+        assetUrl: row.verticalUrl,
+        assetFileName: `${safeName}_${iso}_vertical${verticalExt}`,
+      });
+    }
+
     return {
       id: iso,
       dayLabel,
-      posts: [
-        {
-          id: `${iso}-square`,
-          label: "Square (feed)",
-          caption: row.caption,
-          assetUrl: row.squareUrl,
-          assetFileName: `${safeName}_${iso}_square${squareExt}`,
-        },
-        {
-          id: `${iso}-vertical`,
-          label: "Vertical (story)",
-          caption: row.caption,
-          assetUrl: row.verticalUrl,
-          assetFileName: `${safeName}_${iso}_vertical${verticalExt}`,
-        },
-      ],
+      posts,
     };
   });
 

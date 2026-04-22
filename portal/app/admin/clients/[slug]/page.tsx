@@ -11,6 +11,7 @@ import {
   summarizeClientMonth,
 } from "@/lib/admin/schedule-helpers";
 import { getClientBySlug } from "@/lib/clients/registry";
+import { getSession } from "@/lib/auth/session";
 import { loadAppData } from "@/lib/data/app-data";
 import { EfsAdventureOverlayStudio } from "@/components/admin/absolute-offroad/EfsAdventureOverlayStudio";
 import { AbmMasterBatteryOverlayStudio } from "@/components/admin/alberton-battery-mart/AbmMasterBatteryOverlayStudio";
@@ -64,6 +65,9 @@ export default async function AdminClientSchedulePage({
     year: "numeric",
   });
 
+  const session = await getSession();
+  const isAdmin = session?.role === "admin";
+
   return (
     <div className="space-y-10">
       <div>
@@ -99,9 +103,9 @@ export default async function AdminClientSchedulePage({
               Overlay studio · templates
             </h2>
             <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
-              Four presets: EFS Adventure Pro, Onca Armor, Rock Sliders, and
-              DeGraaf Performance (cyan accent + glow). Separate square/vertical
-              heroes,
+              Five presets: EFS Adventure Pro, Onca Armor, Rock Sliders, Photon
+              Lux (lighting beacon — own layout, AO blue + yellow), and DeGraaf
+              Performance (cyan accent + glow). Separate square/vertical heroes,
               per-preset copy + JSON (
               <code className="text-white/80">preset</code> +{" "}
               <code className="text-white/80">efs-adventure-overlay</code>),
@@ -157,13 +161,21 @@ export default async function AdminClientSchedulePage({
               <code className="text-white/80">alberton-tyre-clinic-overlay</code>
               ), export 1080×1080 and 1080×1920.
             </p>
-            <p className="mt-3">
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
               <Link
                 href={`/admin/clients/${encodeURIComponent(slug)}/april-campaign`}
                 className="text-sm font-medium text-orange-400 hover:text-orange-300"
               >
                 April 2026 post pack → pre-assigned templates + captions
               </Link>
+              {isAdmin ? (
+                <Link
+                  href={`/admin/clients/${encodeURIComponent(slug)}/vault`}
+                  className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+                >
+                  Vault (admin only) → prompts + HTML archive
+                </Link>
+              ) : null}
             </p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">

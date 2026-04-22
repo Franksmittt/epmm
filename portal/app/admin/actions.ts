@@ -92,12 +92,16 @@ export async function saveClientDayAction(
     return { error: "Could not save one of the images." };
   }
 
-  data.schedules[slug][date] = {
+  const next: StoredDayContent = {
     caption: caption.trim(),
     squareUrl,
     verticalUrl,
     updatedAt: new Date().toISOString(),
   };
+  if (!verticalUrl && prev.feedOnly) {
+    next.feedOnly = true;
+  }
+  data.schedules[slug][date] = next;
 
   await saveAppData(data);
   revalidatePath("/admin");

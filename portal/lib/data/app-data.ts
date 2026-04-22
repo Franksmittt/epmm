@@ -8,6 +8,8 @@ export interface StoredDayContent {
   squareUrl: string | null;
   verticalUrl: string | null;
   updatedAt: string;
+  /** Feed post only: no 9:16 story asset; admin completion skips vertical. */
+  feedOnly?: boolean;
 }
 
 export interface AppData {
