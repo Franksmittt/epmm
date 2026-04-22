@@ -1,6 +1,6 @@
 "use client";
 
-import { DayCard } from "@/components/dashboard/DayCard";
+import { ScheduleCalendar } from "@/components/dashboard/ScheduleCalendar";
 import type { WeekSchedule } from "@/lib/schedule/types";
 
 interface WeekBentoProps {
@@ -20,15 +20,5 @@ export function WeekBento({ week }: WeekBentoProps) {
     );
   }
 
-  return (
-    <div className="mx-auto flex max-w-2xl flex-col gap-2 sm:gap-3">
-      <p className="mb-1 text-xs text-[#8E8E93]">
-        Tap a day to open downloads and copy the caption. List stays compact so
-        nothing shifts beside other rows.
-      </p>
-      {week.days.map((day) => (
-        <DayCard key={day.id} day={day} />
-      ))}
-    </div>
-  );
+  return <ScheduleCalendar week={week} />;
 }
