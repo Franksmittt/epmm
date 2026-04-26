@@ -1,7 +1,8 @@
 "use client";
 
 import html2canvas from "html2canvas";
-import { useCallback } from "react";
+import { useCallback, useMemo, useState } from "react";
+import { RapidStudioCampaignLayouts } from "./RapidStudioCampaignLayouts";
 import "./rapid-studio.css";
 
 function bindImage(
@@ -18,6 +19,15 @@ function bindImage(
   reader.readAsDataURL(file);
 }
 
+const CAMPAIGN_CARD_IDS = new Set([
+  "card-7",
+  "card-8",
+  "card-9",
+  "card-10",
+  "card-11",
+  "card-12",
+]);
+
 async function downloadImage(cardId: string) {
   if (typeof document === "undefined") return;
   const active = document.activeElement;
@@ -28,25 +38,90 @@ async function downloadImage(cardId: string) {
   const targetElement = document.getElementById(cardId);
   if (!targetElement) return;
 
+  const isCampaign = CAMPAIGN_CARD_IDS.has(cardId);
   const canvas = await html2canvas(targetElement, {
     scale: 3,
     useCORS: true,
-    backgroundColor: "#000000",
+    backgroundColor: isCampaign ? "#ffffff" : "#000000",
   });
 
   const link = document.createElement("a");
-  link.download = `${cardId}-streetwear-story.png`;
+  link.download = isCampaign
+    ? `${cardId}-campaign-story.png`
+    : `${cardId}-streetwear-story.png`;
   link.href = canvas.toDataURL("image/png");
   link.click();
 }
 
 export function RapidStudio() {
+  const [theme, setTheme] = useState("red");
+
+  const themeVars = useMemo(() => {
+    if (theme === "blue") {
+      return {
+        "--rs-red-overlay": "rgba(0, 102, 204, 0.9)",
+        "--rs-red-solid": "#0066cc",
+        "--rs-red-hover": "#2a85e6",
+      } as React.CSSProperties;
+    }
+    if (theme === "green") {
+      return {
+        "--rs-red-overlay": "rgba(0, 153, 102, 0.9)",
+        "--rs-red-solid": "#009966",
+        "--rs-red-hover": "#00b377",
+      } as React.CSSProperties;
+    }
+    if (theme === "purple") {
+      return {
+        "--rs-red-overlay": "rgba(121, 40, 202, 0.9)",
+        "--rs-red-solid": "#7928ca",
+        "--rs-red-hover": "#9a4de2",
+      } as React.CSSProperties;
+    }
+    if (theme === "orange") {
+      return {
+        "--rs-red-overlay": "rgba(217, 102, 0, 0.9)",
+        "--rs-red-solid": "#d96600",
+        "--rs-red-hover": "#ff8a1f",
+      } as React.CSSProperties;
+    }
+    if (theme === "mono") {
+      return {
+        "--rs-red-overlay": "rgba(51, 51, 51, 0.92)",
+        "--rs-red-solid": "#333333",
+        "--rs-red-hover": "#4a4a4a",
+      } as React.CSSProperties;
+    }
+    return {
+      "--rs-red-overlay": "rgba(215, 10, 10, 0.92)",
+      "--rs-red-solid": "#d70a0a",
+      "--rs-red-hover": "#ff1a1a",
+    } as React.CSSProperties;
+  }, [theme]);
+
   const onDownload = useCallback((cardId: string) => {
     void downloadImage(cardId);
   }, []);
 
   return (
-    <div id="rapid-studio-root">
+    <div id="rapid-studio-root" style={themeVars}>
+      <div className="theme-toolbar">
+        <label htmlFor="rapid-theme-select">Accent theme</label>
+        <select
+          id="rapid-theme-select"
+          value={theme}
+          onChange={(e) => setTheme(e.target.value)}
+          aria-label="Rapid studio accent theme"
+        >
+          <option value="red">Red (default)</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="purple">Purple</option>
+          <option value="orange">Orange</option>
+          <option value="mono">Monochrome</option>
+        </select>
+      </div>
+
       <div className="editor-wrapper">
         <h3 className="wrapper-title">Layout 1: Bottom Bar</h3>
         <div className="controls">
@@ -459,6 +534,8 @@ export function RapidStudio() {
           Download Template
         </button>
       </div>
+
+      <RapidStudioCampaignLayouts onPickImage={bindImage} onDownload={onDownload} />
     </div>
   );
 }

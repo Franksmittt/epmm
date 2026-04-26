@@ -2,6 +2,7 @@
 #rapid-studio-root {
   --rs-red-overlay: rgba(215, 10, 10, 0.92);
   --rs-red-solid: #d70a0a;
+  --rs-red-hover: #ff1a1a;
   --rs-white: #ffffff;
   --rs-black: #000000;
 
@@ -76,7 +77,36 @@
 }
 
 #rapid-studio-root .download-btn:hover {
-  background: #ff1a1a;
+  background: var(--rs-red-hover);
+}
+
+#rapid-studio-root .theme-toolbar {
+  width: 100%;
+  max-width: 1480px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  background: #222;
+}
+
+#rapid-studio-root .theme-toolbar label {
+  color: #d1d5db;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+#rapid-studio-root .theme-toolbar select {
+  background: #111827;
+  color: white;
+  border: 1px solid #4b5563;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
 }
 
 #rapid-studio-root [contenteditable="true"] {
@@ -302,4 +332,397 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* —— Campaign editorial cards (light canvas, theme accent) —— */
+#rapid-studio-root .story-card--campaign {
+  background: #ffffff;
+  color: #151515;
+}
+
+#rapid-studio-root .story-card--campaign .camp-ink {
+  color: #151515;
+}
+
+#rapid-studio-root .story-card--campaign .camp-ink-bg {
+  background: #151515;
+  color: #fff;
+}
+
+#rapid-studio-root .story-card--campaign .camp-promo-fill {
+  background: var(--rs-red-solid);
+  color: #fff;
+}
+
+/* —— Campaign v2: shared typography (editorial system) —— */
+#rapid-studio-root .campv2-aside-panel {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 44%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 16px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(180deg, #fafafa 0%, #f1f1f1 100%);
+  border-right: 1px solid #e0e0e0;
+  z-index: 2;
+}
+
+#rapid-studio-root .campv2-aside-panel--invert {
+  left: auto;
+  right: 0;
+  width: 42%;
+  border-right: none;
+  border-left: 1px solid #3a3a3a;
+  background: linear-gradient(180deg, #2c2c2c 0%, #161616 100%);
+}
+
+#rapid-studio-root .campv2-aside-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#rapid-studio-root .campv2-aside-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#rapid-studio-root .campv2-eyebrow {
+  margin: 0;
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5c5c5c;
+  line-height: 1.35;
+}
+
+#rapid-studio-root .campv2-eyebrow--invert {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+#rapid-studio-root .campv2-promo-pill {
+  align-self: flex-start;
+  padding: 7px 12px;
+  border-radius: 3px;
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.2;
+  max-width: 100%;
+}
+
+#rapid-studio-root .campv2-headline {
+  margin: 0;
+  font-size: 1.38rem;
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #151515;
+}
+
+#rapid-studio-root .campv2-headline--invert {
+  color: #fff;
+}
+
+#rapid-studio-root .campv2-accent-rule {
+  width: 40px;
+  height: 4px;
+  background: var(--rs-red-solid);
+  border-radius: 1px;
+}
+
+#rapid-studio-root .campv2-deck {
+  margin: 0;
+  font-size: 0.56rem;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0.02em;
+  color: #3a3a3a;
+}
+
+#rapid-studio-root .campv2-deck--invert {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+#rapid-studio-root .campv2-cta {
+  margin: 0;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #151515;
+}
+
+#rapid-studio-root .campv2-cta--invert {
+  color: #fff;
+}
+
+/* Campaign 1 — Classic: hero + bottom band */
+#rapid-studio-root .camp1v2-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 58%;
+  overflow: hidden;
+  background: #d8d8d8;
+  z-index: 1;
+}
+
+#rapid-studio-root .camp1v2-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#rapid-studio-root .camp1v2-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 42%;
+  box-sizing: border-box;
+  padding: 14px 16px 16px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #fafafa 0%, #eeeeee 100%);
+  border-top: 1px solid #e0e0e0;
+  z-index: 2;
+}
+
+#rapid-studio-root .camp1v2-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+
+/* Campaign 2 — Split: image left + inverted column */
+#rapid-studio-root .camp2v2-photo {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 58%;
+  height: 100%;
+  overflow: hidden;
+  background: #d4d4d4;
+  z-index: 1;
+}
+
+#rapid-studio-root .camp2v2-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Campaign 3 — Inverted: full bleed + bottom scrim */
+#rapid-studio-root .camp3v2-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #c8c8c8;
+  z-index: 1;
+}
+
+#rapid-studio-root .camp3v2-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#rapid-studio-root .camp3v2-scrim {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 46%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.35) 55%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+#rapid-studio-root .camp3v2-copy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  z-index: 3;
+}
+
+/* Campaign 4 — Side promo (copy left, image right) */
+#rapid-studio-root .camp4v2-photo {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 56%;
+  height: 100%;
+  overflow: hidden;
+  background: #d4d4d4;
+  z-index: 1;
+}
+
+#rapid-studio-root .camp4v2-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Campaign 5 — Corner tag: full bleed + floating promo panel */
+#rapid-studio-root .camp5v2-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #c8c8c8;
+  z-index: 1;
+}
+
+#rapid-studio-root .camp5v2-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#rapid-studio-root .camp5v2-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.06) 0%,
+    transparent 42%,
+    rgba(0, 0, 0, 0.28) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+#rapid-studio-root .camp5v2-tag {
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  left: auto;
+  width: 56%;
+  max-width: 156px;
+  box-sizing: border-box;
+  padding: 11px 11px 13px 13px;
+  background: #fff;
+  border-left: 5px solid var(--rs-red-solid);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+  z-index: 3;
+}
+
+#rapid-studio-root .camp5v2-tag-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+#rapid-studio-root .camp5v2-tag .campv2-headline {
+  font-size: 1.05rem;
+  line-height: 0.95;
+}
+
+#rapid-studio-root .camp5v2-tag .campv2-promo-pill {
+  padding: 5px 9px;
+  font-size: 0.5rem;
+}
+
+#rapid-studio-root .camp5v2-tag .campv2-deck {
+  font-size: 0.5rem;
+  line-height: 1.4;
+}
+
+#rapid-studio-root .camp5v2-tag .campv2-cta {
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+/* Campaign 6 — Block: top bar + image + footer */
+#rapid-studio-root .camp6v2-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 11%;
+  box-sizing: border-box;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: linear-gradient(180deg, #f6f6f6 0%, #ececec 100%);
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 2;
+}
+
+#rapid-studio-root .camp6v2-topbar .campv2-eyebrow {
+  flex: 1;
+  min-width: 0;
+}
+
+#rapid-studio-root .camp6v2-topbar .campv2-promo-pill {
+  flex-shrink: 0;
+}
+
+#rapid-studio-root .camp6v2-photo {
+  position: absolute;
+  top: 11%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background: #d0d0d0;
+  z-index: 1;
+}
+
+#rapid-studio-root .camp6v2-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#rapid-studio-root .camp6v2-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 39%;
+  box-sizing: border-box;
+  padding: 14px 16px 16px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
+  border-top: 1px solid #e0e0e0;
+  z-index: 2;
+}
+
+#rapid-studio-root .camp6v2-footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+}
+
+#rapid-studio-root .camp6v2-footer .campv2-headline {
+  font-size: 1.22rem;
 }

@@ -88,7 +88,7 @@
 
 .heroTitle {
   color: #fff;
-  font-size: 95px;
+  font-size: 58px;
   font-weight: 900;
   text-transform: uppercase;
   line-height: 0.85;
@@ -96,10 +96,12 @@
   text-shadow: 5px 5px 0 rgba(255, 61, 0, 0.3);
   font-style: italic;
   letter-spacing: -2px;
+  white-space: nowrap;
+  max-width: calc(100% - 80px);
 }
 
 .bottomHud {
-  background: rgba(0, 15, 25, 0.6);
+  background: rgba(0, 15, 25, 0.95);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   border-top: 2px solid #00e5ff;
@@ -112,9 +114,43 @@
 
 .hudHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 16px;
+}
+
+.hudPromoCol {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+  justify-content: center;
+}
+
+.hudWhatsAppLine {
+  color: #00e5ff;
+  font-weight: 900;
+  font-size: 44px;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-transform: none;
+  text-shadow: 0 0 28px rgba(0, 229, 255, 0.4);
+  white-space: nowrap;
+}
+
+.hudDeliveryPill {
+  background: #ff3d00;
+  color: #fff;
+  font-weight: 900;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  margin-left: auto;
+  box-shadow: 0 8px 24px rgba(255, 61, 0, 0.35);
 }
 
 .woodsList {
@@ -134,6 +170,7 @@
   font-size: 16px;
   letter-spacing: 2px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .dataGrid {

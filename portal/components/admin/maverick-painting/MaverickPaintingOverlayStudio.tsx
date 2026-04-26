@@ -455,7 +455,6 @@ export function MaverickPaintingOverlayStudio() {
   const [copyByPreset, setCopyByPreset] = useState<CopyByPreset>(
     initialCopyByPreset,
   );
-
   const ind = copyByPreset["zenith-industrial-monolith"];
   const str = copyByPreset["structural-hud"];
   const ent = copyByPreset["enterprise-ecosystem"];

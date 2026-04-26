@@ -275,6 +275,64 @@ export default async function AdminClientSchedulePage({
               <code className="text-white/80">preset</code>), export 1080×1080 and
               1080×1920.
             </p>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <a
+                href="/admin/legacy-studios/miwesu-carousel.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-orange-400 hover:text-orange-300"
+              >
+                Open legacy Miwesu carousel pack (vpk_braai_ultimate) →
+              </a>
+              <a
+                href="/admin/legacy-studios/miwesu-firewood-elite-studio.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+              >
+                Open Miwesu elite pack (estate/performance/stripes) →
+              </a>
+              <a
+                href="/admin/legacy-studios/miwesu-firewood-hilti-studio.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+              >
+                Open Miwesu Hilti pack →
+              </a>
+              <a
+                href="/admin/legacy-studios/miwesu-firewood-fusion-studio.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+              >
+                Open Miwesu fusion pack →
+              </a>
+              <a
+                href="/admin/legacy-studios/miwesu-firewood-titan-studio.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+              >
+                Open Miwesu titan pack →
+              </a>
+              <a
+                href="/admin/legacy-studios/miwesu-firewood-converse-allstar.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+              >
+                Open Miwesu converse/all-star pack →
+              </a>
+              <a
+                href="/admin/legacy-studios/miwesu-firewood-ua-monolithic.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+              >
+                Open Miwesu UA monolithic pack →
+              </a>
+            </p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">
             <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
@@ -304,6 +362,16 @@ export default async function AdminClientSchedulePage({
                 </code>{" "}
                 · <code className="text-white/80">preset</code>), export
                 1080×1080 and 1080×1920. Colours: #FF3D00 / #00E5FF on black.
+              </p>
+              <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+                <a
+                  href="/admin/legacy-studios/vaal-studio.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-medium text-orange-400 hover:text-orange-300"
+                >
+                  Open legacy Vaal studio pack (vpk_braai_ultimate) →
+                </a>
               </p>
             </div>
             <Link
@@ -362,6 +430,24 @@ export default async function AdminClientSchedulePage({
               <code className="text-white/80">maverick-painting-overlay</code>),
               export 1080×1080 and 1080×1920.
             </p>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <a
+                href="/admin/legacy-studios/index.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-orange-400 hover:text-orange-300"
+              >
+                Open Maverick legacy hub →
+              </a>
+              <a
+                href="/admin/legacy-studios/maverick-social.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-[#8E8E93] underline decoration-white/20 hover:text-white"
+              >
+                Open Maverick social pack (25 square templates) →
+              </a>
+            </p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">
             <p className="mb-4 text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
@@ -379,13 +465,25 @@ export default async function AdminClientSchedulePage({
               Overlay studio · templates
             </h2>
             <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
-              Three presets: Relocation Radar, Waypoint compact (route line +
-              dots), and Corporate transit (blueprint grid, B2B badge, left-accent
-              strip on square). Sky blue{" "}
+              Twelve presets now available in the native dropdown, including
+              Relocation Radar / REC Hook / Tracking UI / Waypoint compact / GPS
+              Map Overlay / Goods-in-Transit / Accountability / Accredited /
+              Corporate transit / Eco Estate Moves / Suburb Routing / Long
+              Distance. Sky blue{" "}
               <code className="text-white/80">#0284c7</code>. Separate
               square/vertical heroes, per-preset copy + JSON (
               <code className="text-white/80">on-the-move-again-overlay</code>),
               export 1080×1080 and 1080×1920.
+            </p>
+            <p className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+              <a
+                href="/admin/legacy-studios/otma-studio.html"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-medium text-orange-400 hover:text-orange-300"
+              >
+                Open legacy OTMA studio pack (10 templates) →
+              </a>
             </p>
           </div>
           <div className="rounded-md border border-white/10 bg-black/40 p-4">

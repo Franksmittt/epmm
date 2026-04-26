@@ -36,8 +36,8 @@ export default async function AdminRapidStudioPage() {
         </Link>
         <h1 className="mt-2 text-2xl font-semibold text-white">Rapid Studio</h1>
         <p className="mt-1 max-w-2xl text-sm leading-relaxed text-[#8E8E93]">
-          Six vertical story layouts. Swap images, edit text inline, then download
-          a high-resolution PNG for each card.
+          Twelve story layouts: six dark streetwear cards and six light editorial campaign cards.
+          Swap images, edit copy inline, use the accent theme, then download a PNG per card.
         </p>
       </div>
       <RapidStudio />

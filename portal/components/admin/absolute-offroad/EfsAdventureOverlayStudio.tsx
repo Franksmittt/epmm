@@ -8,6 +8,8 @@ import oncaSquare from "./ao-onca-armor-square.module.css";
 import oncaVertical from "./ao-onca-armor-vertical.module.css";
 import rockSquare from "./ao-rock-sliders-square.module.css";
 import rockVertical from "./ao-rock-sliders-vertical.module.css";
+import photonSquare from "./ao-photon-lux-square.module.css";
+import photonVertical from "./ao-photon-lux-vertical.module.css";
 import degraafSquare from "./ao-degraaf-square.module.css";
 import degraafVertical from "./ao-degraaf-vertical.module.css";
 
@@ -15,6 +17,7 @@ export type AoOverlayPresetId =
   | "adventure-pro"
   | "onca-armor"
   | "rock-sliders"
+  | "photon-lux"
   | "degraaf-performance";
 
 export const AO_OVERLAY_PRESETS: { id: AoOverlayPresetId; label: string }[] = [
@@ -23,6 +26,11 @@ export const AO_OVERLAY_PRESETS: { id: AoOverlayPresetId; label: string }[] = [
   {
     id: "rock-sliders",
     label: "Rock Sliders — Chassis Armored (strip + reticle)",
+  },
+  {
+    id: "photon-lux",
+    label:
+      "Photon Lux — Lighting beacon (centered hero, AO blue + yellow, beam field)",
   },
   {
     id: "degraaf-performance",
@@ -83,6 +91,27 @@ const ROCK_KEYS = [
   "rockVerticalWa",
 ] as const;
 
+const PHOTON_KEYS = [
+  "photonSquareBrandPill",
+  "photonSquareHeroL1",
+  "photonSquareHeroL2",
+  "photonSquareProductL1",
+  "photonSquareProductL2",
+  "photonSquareProductSub",
+  "photonSquareSpec1",
+  "photonSquareSpec2",
+  "photonSquareCommsLbl",
+  "photonSquareWa",
+  "photonVerticalHqName",
+  "photonVerticalHeadlineL1",
+  "photonVerticalHeadlineL2",
+  "photonVerticalSubtext",
+  "photonVerticalProductL1",
+  "photonVerticalProductL2",
+  "photonVerticalProductSub",
+  "photonVerticalWa",
+] as const;
+
 const DEGRAAF_KEYS = [
   "degraafSquareBrandPill",
   "degraafSquareHeroL1",
@@ -107,12 +136,13 @@ const DEGRAAF_KEYS = [
 type AdventureCopyKey = (typeof ADVENTURE_KEYS)[number];
 type OncaCopyKey = (typeof ONCA_KEYS)[number];
 type RockCopyKey = (typeof ROCK_KEYS)[number];
+type PhotonCopyKey = (typeof PHOTON_KEYS)[number];
 type DegraafCopyKey = (typeof DEGRAAF_KEYS)[number];
 
 /** Stable id for prompts. */
 export const OVERLAY_JSON_TEMPLATE_ID = "efs-adventure-overlay";
-/** v5: rock vertical spec tags removed. v4 degraaf; v3 rock; v2 Onca; v1 Adventure. */
-export const OVERLAY_JSON_VERSION = 5;
+/** v9: Photon Lux unique beacon/beam layouts; AO blue+yellow (not Rock clone). */
+export const OVERLAY_JSON_VERSION = 10;
 
 const DEFAULTS_ADVENTURE: Record<AdventureCopyKey, string> = {
   brandLogo: "EFS 4x4",
@@ -121,7 +151,7 @@ const DEFAULTS_ADVENTURE: Record<AdventureCopyKey, string> = {
   headlineMuted: "Protection.",
   techLabel:
     "63mm side tubing. Winch ready. Robotically welded precision for the ultimate overland assault.",
-  buttonText: "View Specifications",
+  buttonText: "079 507 0901",
 };
 
 const DEFAULTS_ONCA: Record<OncaCopyKey, string> = {
@@ -170,6 +200,28 @@ const DEFAULTS_ROCK: Record<RockCopyKey, string> = {
   rockVerticalWa: "079 507 0901",
 };
 
+const DEFAULTS_PHOTON: Record<PhotonCopyKey, string> = {
+  photonSquareBrandPill: "Absolute Offroad",
+  photonSquareHeroL1: "Illuminate.",
+  photonSquareHeroL2: "Path.",
+  photonSquareProductL1: "Rigid LED Light Bar",
+  photonSquareProductL2: "",
+  photonSquareProductSub: "(Auxiliary)",
+  photonSquareSpec1: "IP68 Rated",
+  photonSquareSpec2: "Combo Beam",
+  photonSquareCommsLbl: "Call or WhatsApp",
+  photonSquareWa: "079 507 0901",
+  photonVerticalHqName: "Absolute Offroad",
+  photonVerticalHeadlineL1: "Night.",
+  photonVerticalHeadlineL2: "Dominance.",
+  photonVerticalSubtext:
+    "Premium auxiliary lighting and harnesses. We supply and fit LED bars, spots, and intelligent switching for overland rigs.",
+  photonVerticalProductL1: "Rigid Industries SR-Series Pro",
+  photonVerticalProductL2: "",
+  photonVerticalProductSub: "(Combo / Flood)",
+  photonVerticalWa: "079 507 0901",
+};
+
 const DEFAULTS_DEGRAAF: Record<DegraafCopyKey, string> = {
   degraafSquareBrandPill: "Absolute Offroad",
   degraafSquareHeroL1: "Let It.",
@@ -196,6 +248,7 @@ type CopyByPreset = {
   "adventure-pro": Record<AdventureCopyKey, string>;
   "onca-armor": Record<OncaCopyKey, string>;
   "rock-sliders": Record<RockCopyKey, string>;
+  "photon-lux": Record<PhotonCopyKey, string>;
   "degraaf-performance": Record<DegraafCopyKey, string>;
 };
 
@@ -203,6 +256,7 @@ const initialCopyByPreset: CopyByPreset = {
   "adventure-pro": { ...DEFAULTS_ADVENTURE },
   "onca-armor": { ...DEFAULTS_ONCA },
   "rock-sliders": { ...DEFAULTS_ROCK },
+  "photon-lux": { ...DEFAULTS_PHOTON },
   "degraaf-performance": { ...DEFAULTS_DEGRAAF },
 };
 
@@ -239,6 +293,7 @@ function isAoPresetId(v: unknown): v is AoOverlayPresetId {
     v === "adventure-pro" ||
     v === "onca-armor" ||
     v === "rock-sliders" ||
+    v === "photon-lux" ||
     v === "degraaf-performance"
   );
 }
@@ -250,6 +305,9 @@ function inferPresetFromBlock(
     if (Object.prototype.hasOwnProperty.call(block, k)) {
       return "degraaf-performance";
     }
+  }
+  for (const k of PHOTON_KEYS) {
+    if (Object.prototype.hasOwnProperty.call(block, k)) return "photon-lux";
   }
   for (const k of ROCK_KEYS) {
     if (Object.prototype.hasOwnProperty.call(block, k)) return "rock-sliders";
@@ -265,6 +323,7 @@ function inferPresetFromBlock(
 
 function keysForPreset(p: AoOverlayPresetId): readonly string[] {
   if (p === "degraaf-performance") return DEGRAAF_KEYS;
+  if (p === "photon-lux") return PHOTON_KEYS;
   if (p === "rock-sliders") return ROCK_KEYS;
   if (p === "onca-armor") return ONCA_KEYS;
   return ADVENTURE_KEYS;
@@ -272,6 +331,7 @@ function keysForPreset(p: AoOverlayPresetId): readonly string[] {
 
 function exportSlugForPreset(p: AoOverlayPresetId): string {
   if (p === "degraaf-performance") return "degraaf-performance";
+  if (p === "photon-lux") return "photon-lux";
   if (p === "rock-sliders") return "rock-sliders";
   if (p === "onca-armor") return "onca-armor";
   return "adventure-pro";
@@ -326,6 +386,7 @@ export function EfsAdventureOverlayStudio() {
   const adv = copyByPreset["adventure-pro"];
   const onca = copyByPreset["onca-armor"];
   const rock = copyByPreset["rock-sliders"];
+  const photon = copyByPreset["photon-lux"];
   const degraaf = copyByPreset["degraaf-performance"];
 
   const patchAdventure = (key: AdventureCopyKey, value: string) => {
@@ -346,6 +407,13 @@ export function EfsAdventureOverlayStudio() {
     setCopyByPreset((prev) => ({
       ...prev,
       "rock-sliders": { ...prev["rock-sliders"], [key]: value },
+    }));
+  };
+
+  const patchPhoton = (key: PhotonCopyKey, value: string) => {
+    setCopyByPreset((prev) => ({
+      ...prev,
+      "photon-lux": { ...prev["photon-lux"], [key]: value },
     }));
   };
 
@@ -493,6 +561,9 @@ export function EfsAdventureOverlayStudio() {
       if (preset === "degraaf-performance") {
         return { ...prev, "degraaf-performance": { ...DEFAULTS_DEGRAAF } };
       }
+      if (preset === "photon-lux") {
+        return { ...prev, "photon-lux": { ...DEFAULTS_PHOTON } };
+      }
       return { ...prev, "adventure-pro": { ...DEFAULTS_ADVENTURE } };
     });
   };
@@ -576,10 +647,20 @@ export function EfsAdventureOverlayStudio() {
         </div>
         <div className={adventureSquare.heroWindow} />
         <div className={adventureSquare.commandDock}>
-          <h1 className={adventureSquare.headline}>
-            {adv.headlinePrimary}
-            {adv.headlinePrimary && adv.headlineMuted ? <br /> : null}
-            {adv.headlineMuted ? (
+          <h1
+            className={`${adventureSquare.headline} ${adventureSquare.headlineSquareOneLine}`}
+          >
+            {adv.headlinePrimary ? (
+              <span>{adv.headlinePrimary}</span>
+            ) : null}
+            {adv.headlinePrimary && adv.headlineMuted ? (
+              <>
+                {" "}
+                <span className={adventureSquare.headlineMuted}>
+                  {adv.headlineMuted}
+                </span>
+              </>
+            ) : adv.headlineMuted ? (
               <span className={adventureSquare.headlineMuted}>
                 {adv.headlineMuted}
               </span>
@@ -587,22 +668,11 @@ export function EfsAdventureOverlayStudio() {
           </h1>
           <div className={adventureSquare.metaRow}>
             <p className={adventureSquare.techLabel}>{adv.techLabel}</p>
-            <button type="button" className={adventureSquare.actionButton}>
+            <button
+              type="button"
+              className={`${adventureSquare.actionButton} ${adventureSquare.actionButtonSolo}`}
+            >
               {adv.buttonText}
-              <svg
-                width={29}
-                height={29}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={3}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden
-              >
-                <line x1="7" y1="17" x2="17" y2="7" />
-                <polyline points="7 7 17 7 17 17" />
-              </svg>
             </button>
           </div>
         </div>
@@ -631,7 +701,27 @@ export function EfsAdventureOverlayStudio() {
           <div className={adventureVertical.brandLogo}>{adv.brandLogo}</div>
           <div className={adventureVertical.seriesBadge}>{adv.seriesBadge}</div>
         </div>
-        <div className={adventureVertical.heroWindow} />
+        <div className={adventureVertical.heroMid}>
+          <div className={adventureVertical.storyMidCenter}>
+            <div className={adventureVertical.storyMidSlot}>
+              {bgSquareDataUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  className={adventureVertical.storyMidImg}
+                  src={bgSquareDataUrl}
+                  alt=""
+                />
+              ) : (
+                <div
+                  className={adventureVertical.storyMidPlaceholder}
+                  aria-hidden
+                >
+                  Square image
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
         <div className={adventureVertical.commandDock}>
           <h1 className={adventureVertical.headline}>
             {adv.headlinePrimary}
@@ -644,22 +734,11 @@ export function EfsAdventureOverlayStudio() {
           </h1>
           <div className={adventureVertical.metaColumn}>
             <p className={adventureVertical.techLabel}>{adv.techLabel}</p>
-            <button type="button" className={adventureVertical.actionButton}>
-              <span>{adv.buttonText}</span>
-              <svg
-                width={48}
-                height={48}
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2.5}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden
-              >
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
+            <button
+              type="button"
+              className={`${adventureVertical.actionButton} ${adventureVertical.actionButtonSolo}`}
+            >
+              {adv.buttonText}
             </button>
           </div>
         </div>
@@ -737,52 +816,72 @@ export function EfsAdventureOverlayStudio() {
         ) : null}
         <div className={oncaVertical.cadGrid} />
         <div className={oncaVertical.scrim} />
-        <div className={oncaVertical.targetBox} />
-        <div className={oncaVertical.topCommand}>
-          <div className={oncaVertical.hqLockup}>
-            <span className={oncaVertical.hqName}>
-              {onca.oncaVerticalHqName}
-            </span>
-          </div>
-        </div>
-        <div className={oncaVertical.armorTerminal}>
-          <div className={oncaVertical.specGrid}>
-            <div className={oncaVertical.specTag}>
-              {onca.oncaVerticalSpec1}
-            </div>
-            <div className={oncaVertical.specTag}>
-              {onca.oncaVerticalSpec2}
-            </div>
-          </div>
-          <h1 className={oncaVertical.headline}>
-            {onca.oncaVerticalHeadlineL1}
-            <br />
-            <span className={oncaVertical.headlineOutline}>
-              {onca.oncaVerticalHeadlineL2}
-            </span>
-          </h1>
-          <p className={oncaVertical.subtext}>
-            {onca.oncaVerticalSubtextBefore}
-            {onca.oncaVerticalSubtextStrong.trim() ? (
-              <strong>{onca.oncaVerticalSubtextStrong}</strong>
-            ) : null}
-            {onca.oncaVerticalSubtextAfter}
-          </p>
-          <div className={oncaVertical.actionDock}>
-            <div className={oncaVertical.productId}>
-              <span className={oncaVertical.productTitle}>
-                {onca.oncaVerticalProductL1}
-                <br />
-                {onca.oncaVerticalProductL2}
-              </span>
-              <span className={oncaVertical.productSub}>
-                {onca.oncaVerticalProductSub}
+        <div className={oncaVertical.columnShell}>
+          <div className={oncaVertical.topCommand}>
+            <div className={oncaVertical.hqLockup}>
+              <span className={oncaVertical.hqName}>
+                {onca.oncaVerticalHqName}
               </span>
             </div>
-            <button type="button" className={oncaVertical.btnWa}>
-              <PhoneHandsetSvg size={16} />
-              {onca.oncaVerticalWa}
-            </button>
+          </div>
+          <div className={oncaVertical.midColumn}>
+            <div className={oncaVertical.midImageSlot}>
+              {bgSquareDataUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  className={oncaVertical.midImageImg}
+                  src={bgSquareDataUrl}
+                  alt=""
+                />
+              ) : (
+                <div
+                  className={oncaVertical.midImagePlaceholder}
+                  aria-hidden
+                >
+                  Square image
+                </div>
+              )}
+            </div>
+          </div>
+          <div className={oncaVertical.armorTerminal}>
+            <div className={oncaVertical.specGrid}>
+              <div className={oncaVertical.specTag}>
+                {onca.oncaVerticalSpec1}
+              </div>
+              <div className={oncaVertical.specTag}>
+                {onca.oncaVerticalSpec2}
+              </div>
+            </div>
+            <h1 className={oncaVertical.headline}>
+              {onca.oncaVerticalHeadlineL1}
+              <br />
+              <span className={oncaVertical.headlineOutline}>
+                {onca.oncaVerticalHeadlineL2}
+              </span>
+            </h1>
+            <p className={oncaVertical.subtext}>
+              {onca.oncaVerticalSubtextBefore}
+              {onca.oncaVerticalSubtextStrong.trim() ? (
+                <strong>{onca.oncaVerticalSubtextStrong}</strong>
+              ) : null}
+              {onca.oncaVerticalSubtextAfter}
+            </p>
+            <div className={oncaVertical.actionDock}>
+              <div className={oncaVertical.productId}>
+                <span className={oncaVertical.productTitle}>
+                  {onca.oncaVerticalProductL1}
+                  <br />
+                  {onca.oncaVerticalProductL2}
+                </span>
+                <span className={oncaVertical.productSub}>
+                  {onca.oncaVerticalProductSub}
+                </span>
+              </div>
+              <button type="button" className={oncaVertical.btnWa}>
+                <PhoneHandsetSvg size={16} />
+                {onca.oncaVerticalWa}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -869,37 +968,214 @@ export function EfsAdventureOverlayStudio() {
         ) : null}
         <div className={rockVertical.cadGrid} />
         <div className={rockVertical.scrim} />
-        <div className={rockVertical.topCommand}>
-          <div className={rockVertical.hqLockup}>
-            <span className={rockVertical.hqName}>
-              {rock.rockVerticalHqName}
-            </span>
-          </div>
-        </div>
-        <div className={rockVertical.armorTerminal}>
-          <h1 className={rockVertical.headline}>
-            {rock.rockVerticalHeadlineL1}
-            <br />
-            <span className={rockVertical.headlineOutline}>
-              {rock.rockVerticalHeadlineL2}
-            </span>
-          </h1>
-          <p className={rockVertical.subtext}>{rock.rockVerticalSubtext}</p>
-          <div className={rockVertical.actionDock}>
-            <div className={rockVertical.productId}>
-              <span className={rockVertical.productTitle}>
-                {rock.rockVerticalProductL1}
-                <br />
-                {rock.rockVerticalProductL2}
-              </span>
-              <span className={rockVertical.productSub}>
-                {rock.rockVerticalProductSub}
+        <div className={rockVertical.columnShell}>
+          <div className={rockVertical.topCommand}>
+            <div className={rockVertical.hqLockup}>
+              <span className={rockVertical.hqName}>
+                {rock.rockVerticalHqName}
               </span>
             </div>
-            <button type="button" className={rockVertical.btnWa}>
-              <PhoneHandsetSvg size={16} />
-              {rock.rockVerticalWa}
+          </div>
+          <div className={rockVertical.midColumn}>
+            <div className={rockVertical.midImageSlot}>
+              {bgSquareDataUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  className={rockVertical.midImageImg}
+                  src={bgSquareDataUrl}
+                  alt=""
+                />
+              ) : (
+                <div
+                  className={rockVertical.midImagePlaceholder}
+                  aria-hidden
+                >
+                  Square image
+                </div>
+              )}
+            </div>
+          </div>
+          <div className={rockVertical.armorTerminal}>
+            <h1 className={rockVertical.headline}>
+              {rock.rockVerticalHeadlineL1}
+              <br />
+              <span className={rockVertical.headlineOutline}>
+                {rock.rockVerticalHeadlineL2}
+              </span>
+            </h1>
+            <p className={rockVertical.subtext}>{rock.rockVerticalSubtext}</p>
+            <div className={rockVertical.actionDock}>
+              <div className={rockVertical.productId}>
+                <span className={rockVertical.productTitle}>
+                  {rock.rockVerticalProductL1}
+                  <br />
+                  {rock.rockVerticalProductL2}
+                </span>
+                <span className={rockVertical.productSub}>
+                  {rock.rockVerticalProductSub}
+                </span>
+              </div>
+              <button type="button" className={rockVertical.btnWa}>
+                <PhoneHandsetSvg size={16} />
+                {rock.rockVerticalWa}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const squareCanvasPhoton = (
+    <div
+      ref={squareRef}
+      className={`${photonSquare.root} ${photonSquare.canvas1080}`}
+      aria-label="Absolute Offroad Photon Lux square export"
+    >
+      <div className={photonSquare.adCanvas}>
+        {bgSquareDataUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className={photonSquare.heroBg}
+            src={bgSquareDataUrl}
+            alt=""
+          />
+        ) : null}
+        <div className={photonSquare.scrimTop} />
+        <div className={photonSquare.scrimBottom} />
+        <div className={photonSquare.topPerimeter}>
+          <div className={photonSquare.luxTicks} aria-hidden>
+            <span />
+            <span />
+            <span />
+          </div>
+          <div className={photonSquare.brandPill}>
+            {photon.photonSquareBrandPill}
+          </div>
+          <h1 className={photonSquare.heroType}>
+            {photon.photonSquareHeroL1}
+            <br />
+            <span className={photonSquare.heroOutline}>
+              {photon.photonSquareHeroL2}
+            </span>
+          </h1>
+        </div>
+        <div className={photonSquare.armorStrip}>
+          <div className={photonSquare.stripSpecs}>
+            <div className={photonSquare.productId}>
+              <span className={photonSquare.productLine}>
+                {[photon.photonSquareProductL1, photon.photonSquareProductL2]
+                  .map((s) => s.trim())
+                  .filter(Boolean)
+                  .join(" ")}
+              </span>
+              <span className={photonSquare.productIdSub}>
+                {photon.photonSquareProductSub}
+              </span>
+            </div>
+            <div className={photonSquare.specRow}>
+              <span className={photonSquare.specMini}>
+                {photon.photonSquareSpec1}
+              </span>
+              <span className={photonSquare.specMini}>
+                {photon.photonSquareSpec2}
+              </span>
+            </div>
+          </div>
+          <div className={photonSquare.divider} />
+          <div className={photonSquare.stripCompany}>
+            <span className={photonSquare.commsLbl}>
+              {photon.photonSquareCommsLbl}
+            </span>
+            <button type="button" className={photonSquare.btnWa}>
+              <PhoneHandsetSvg size={18} />
+              {photon.photonSquareWa}
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const verticalCanvasPhoton = (
+    <div
+      ref={verticalRef}
+      className={`${photonVertical.root} ${photonVertical.canvas1080x1920}`}
+      aria-label="Absolute Offroad Photon Lux vertical export"
+    >
+      <div className={photonVertical.adCanvas}>
+        {bgVerticalDataUrl ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            className={photonVertical.heroBg}
+            src={bgVerticalDataUrl}
+            alt=""
+          />
+        ) : null}
+        <div className={photonVertical.beamField} />
+        <div className={photonVertical.scrim} />
+        <div className={photonVertical.columnShell}>
+          <div className={photonVertical.topCommand}>
+            <div className={photonVertical.hqLockup}>
+              <span className={photonVertical.hqName}>
+                {photon.photonVerticalHqName}
+              </span>
+            </div>
+            <div className={photonVertical.outputLadder} aria-hidden>
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+          <div className={photonVertical.midColumn}>
+            <div className={photonVertical.midImageSlot}>
+              {bgSquareDataUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  className={photonVertical.midImageImg}
+                  src={bgSquareDataUrl}
+                  alt=""
+                />
+              ) : (
+                <div
+                  className={photonVertical.midImagePlaceholder}
+                  aria-hidden
+                >
+                  Square image
+                </div>
+              )}
+            </div>
+          </div>
+          <div className={photonVertical.armorTerminal}>
+            <div className={photonVertical.stageRail}>
+              <h1 className={photonVertical.headline}>
+                {photon.photonVerticalHeadlineL1}
+                <br />
+                <span className={photonVertical.headlineOutline}>
+                  {photon.photonVerticalHeadlineL2}
+                </span>
+              </h1>
+              <p className={photonVertical.subtext}>
+                {photon.photonVerticalSubtext}
+              </p>
+            </div>
+            <div className={photonVertical.actionDock}>
+              <div className={photonVertical.productId}>
+                <span className={photonVertical.productTitle}>
+                  {[photon.photonVerticalProductL1, photon.photonVerticalProductL2]
+                    .map((s) => s.trim())
+                    .filter(Boolean)
+                    .join(" ")}
+                </span>
+                <span className={photonVertical.productSub}>
+                  {photon.photonVerticalProductSub}
+                </span>
+              </div>
+              <button type="button" className={photonVertical.btnWa}>
+                <PhoneHandsetSvg size={16} />
+                {photon.photonVerticalWa}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -983,45 +1259,66 @@ export function EfsAdventureOverlayStudio() {
         ) : null}
         <div className={degraafVertical.performanceGlow} />
         <div className={degraafVertical.scrim} />
-        <div className={degraafVertical.topHud}>
-          <div className={degraafVertical.brandLockup}>
-            <span className={degraafVertical.btName}>
-              {degraaf.degraafVerticalHqName}
-            </span>
-          </div>
-        </div>
-        <div className={degraafVertical.performanceTerminal}>
-          <div className={degraafVertical.specGrid}>
-            <div className={degraafVertical.specTag}>
-              {degraaf.degraafVerticalSpec1}
-            </div>
-            <div className={degraafVertical.specTag}>
-              {degraaf.degraafVerticalSpec2}
-            </div>
-          </div>
-          <h1 className={degraafVertical.headline}>
-            {degraaf.degraafVerticalHeadlineL1}
-            <br />
-            <span className={degraafVertical.headlineOutline}>
-              {degraaf.degraafVerticalHeadlineL2}
-            </span>
-          </h1>
-          <p className={degraafVertical.subtext}>
-            {degraaf.degraafVerticalSubtext}
-          </p>
-          <div className={degraafVertical.actionDock}>
-            <div className={degraafVertical.productId}>
-              <span className={degraafVertical.productBrand}>
-                {degraaf.degraafVerticalProductBrand}
-              </span>
-              <span className={degraafVertical.productSub}>
-                {degraaf.degraafVerticalProductSub}
+        <div className={degraafVertical.columnShell}>
+          <div className={degraafVertical.topHud}>
+            <div className={degraafVertical.brandLockup}>
+              <span className={degraafVertical.btName}>
+                {degraaf.degraafVerticalHqName}
               </span>
             </div>
-            <button type="button" className={degraafVertical.btnWa}>
-              <PhoneHandsetSvg size={16} />
-              {degraaf.degraafVerticalWa}
-            </button>
+          </div>
+          <div className={degraafVertical.midColumn}>
+            <div className={degraafVertical.midImageSlot}>
+              {bgSquareDataUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  className={degraafVertical.midImageImg}
+                  src={bgSquareDataUrl}
+                  alt=""
+                />
+              ) : (
+                <div
+                  className={degraafVertical.midImagePlaceholder}
+                  aria-hidden
+                >
+                  Square image
+                </div>
+              )}
+            </div>
+          </div>
+          <div className={degraafVertical.performanceTerminal}>
+            <div className={degraafVertical.specGrid}>
+              <div className={degraafVertical.specTag}>
+                {degraaf.degraafVerticalSpec1}
+              </div>
+              <div className={degraafVertical.specTag}>
+                {degraaf.degraafVerticalSpec2}
+              </div>
+            </div>
+            <h1 className={degraafVertical.headline}>
+              {degraaf.degraafVerticalHeadlineL1}
+              <br />
+              <span className={degraafVertical.headlineOutline}>
+                {degraaf.degraafVerticalHeadlineL2}
+              </span>
+            </h1>
+            <p className={degraafVertical.subtext}>
+              {degraaf.degraafVerticalSubtext}
+            </p>
+            <div className={degraafVertical.actionDock}>
+              <div className={degraafVertical.productId}>
+                <span className={degraafVertical.productBrand}>
+                  {degraaf.degraafVerticalProductBrand}
+                </span>
+                <span className={degraafVertical.productSub}>
+                  {degraaf.degraafVerticalProductSub}
+                </span>
+              </div>
+              <button type="button" className={degraafVertical.btnWa}>
+                <PhoneHandsetSvg size={16} />
+                {degraaf.degraafVerticalWa}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1035,7 +1332,9 @@ export function EfsAdventureOverlayStudio() {
         ? squareCanvasOnca
         : preset === "rock-sliders"
           ? squareCanvasRock
-          : squareCanvasDegraaf;
+          : preset === "photon-lux"
+            ? squareCanvasPhoton
+            : squareCanvasDegraaf;
   const verticalCanvas =
     preset === "adventure-pro"
       ? verticalCanvasAdventure
@@ -1043,7 +1342,9 @@ export function EfsAdventureOverlayStudio() {
         ? verticalCanvasOnca
         : preset === "rock-sliders"
           ? verticalCanvasRock
-          : verticalCanvasDegraaf;
+          : preset === "photon-lux"
+            ? verticalCanvasPhoton
+            : verticalCanvasDegraaf;
 
   const previewLabel =
     preset === "adventure-pro"
@@ -1052,7 +1353,9 @@ export function EfsAdventureOverlayStudio() {
         ? "Onca Armor"
         : preset === "rock-sliders"
           ? "Rock Sliders"
-          : "DeGraaf Performance";
+          : preset === "photon-lux"
+            ? "Photon Lux"
+            : "DeGraaf Performance";
 
   return (
     <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
@@ -1078,11 +1381,13 @@ export function EfsAdventureOverlayStudio() {
           <p className="text-xs leading-relaxed text-[#8E8E93]">
             {preset === "degraaf-performance"
               ? "Performance cyan UI: carbon glass strip with blue accent + yellow phone; vertical adds bottom glow (screen blend), blue spec tags, and product dock."
-              : preset === "rock-sliders"
-                ? "Chassis Armored: square strip with “Call or WhatsApp” label + phone button; vertical uses CAD grid scrim and uppercase CTA (no spec tag row)."
-                : preset === "onca-armor"
-                  ? "Tactical yellow/blue glass: brand pill + hero type, armor strip with specs and WhatsApp-style call button; vertical adds CAD grid and target reticle."
-                  : "Original EFS Adventure layout: brand, series badge, headline pair, tech copy, CTA."}
+              : preset === "photon-lux"
+                ? "Lighting-only layout: square uses centered beacon (meter ticks + pill + hero + stacked dock), not the Rock strip. Vertical uses beam-field scrim, HQ + output ladder, mid square frame, and asymmetric stage card with full-width CTA — AO navy + yellow."
+                : preset === "rock-sliders"
+                  ? "Chassis Armored: square strip with “Call or WhatsApp” label + phone button; vertical uses CAD grid scrim and uppercase CTA (no spec tag row)."
+                  : preset === "onca-armor"
+                    ? "Tactical yellow/blue glass: brand pill + hero type, armor strip with specs and WhatsApp-style call button; vertical adds CAD grid and a mid-frame slot for the square 1:1 image."
+                    : "EFS Adventure: square headline on one line; vertical story matches command-dock width with height ~10% less than a square; optional vertical full-bleed; CTA defaults to phone."}
           </p>
         </div>
 
@@ -1091,7 +1396,14 @@ export function EfsAdventureOverlayStudio() {
             Hero images (separate per format)
           </p>
           <div className="space-y-2">
-            <label className="text-xs text-[#8E8E93]">Square 1:1</label>
+            <label className="text-xs text-[#8E8E93]">
+              Square 1:1
+              <span className="mt-1 block font-normal normal-case tracking-normal text-[#8E8E93]/85">
+                Also fills the framed mid-frame on the vertical layout (between
+                header and bottom card), same as Alberton Tyre Clinic style
+                templates.
+              </span>
+            </label>
             <input
               ref={squareFileRef}
               type="file"
@@ -1140,10 +1452,11 @@ export function EfsAdventureOverlayStudio() {
             <code className="text-white/80">preset</code> to{" "}
             <code className="text-white/80">adventure-pro</code>,{" "}
             <code className="text-white/80">onca-armor</code>,{" "}
-            <code className="text-white/80">rock-sliders</code>, or{" "}
+            <code className="text-white/80">rock-sliders</code>,{" "}
+            <code className="text-white/80">photon-lux</code>, or{" "}
             <code className="text-white/80">degraaf-performance</code>. Without{" "}
             <code className="text-white/80">preset</code>, keys infer DeGraaf →
-            Rock → Onca → Adventure.
+            Photon → Rock → Onca → Adventure.
           </p>
           <div className="space-y-2">
             <div className="flex flex-wrap items-center justify-between gap-2">
@@ -1162,7 +1475,7 @@ export function EfsAdventureOverlayStudio() {
               rows={
                 preset === "degraaf-performance"
                   ? 30
-                  :                 preset === "rock-sliders"
+                  : preset === "rock-sliders" || preset === "photon-lux"
                     ? 28
                     : preset === "onca-armor"
                       ? 28
@@ -1230,7 +1543,7 @@ export function EfsAdventureOverlayStudio() {
               onChange={(v) => patchAdventure("headlinePrimary", v)}
             />
             <Field
-              label="Headline — muted line"
+              label="Headline — muted (square: same line as primary; story: line below)"
               value={adv.headlineMuted}
               onChange={(v) => patchAdventure("headlineMuted", v)}
             />
@@ -1241,7 +1554,7 @@ export function EfsAdventureOverlayStudio() {
               rows={4}
             />
             <Field
-              label="Button label"
+              label="CTA (phone / WhatsApp number)"
               value={adv.buttonText}
               onChange={(v) => patchAdventure("buttonText", v)}
             />
@@ -1455,6 +1768,120 @@ export function EfsAdventureOverlayStudio() {
               label="Dock button — phone number"
               value={rock.rockVerticalWa}
               onChange={(v) => patchRock("rockVerticalWa", v)}
+            />
+          </>
+        ) : preset === "photon-lux" ? (
+          <>
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Square · Photon Lux
+            </p>
+            <Field
+              label="Brand pill"
+              value={photon.photonSquareBrandPill}
+              onChange={(v) => patchPhoton("photonSquareBrandPill", v)}
+            />
+            <Field
+              label="Hero — line 1 (solid)"
+              value={photon.photonSquareHeroL1}
+              onChange={(v) => patchPhoton("photonSquareHeroL1", v)}
+            />
+            <Field
+              label="Hero — line 2 (outline)"
+              value={photon.photonSquareHeroL2}
+              onChange={(v) => patchPhoton("photonSquareHeroL2", v)}
+            />
+            <Field
+              label="Product title (one line in strip)"
+              value={[photon.photonSquareProductL1, photon.photonSquareProductL2]
+                .map((s) => s.trim())
+                .filter(Boolean)
+                .join(" ")}
+              onChange={(v) => {
+                setCopyByPreset((prev) => ({
+                  ...prev,
+                  "photon-lux": {
+                    ...prev["photon-lux"],
+                    photonSquareProductL1: v,
+                    photonSquareProductL2: "",
+                  },
+                }));
+              }}
+            />
+            <Field
+              label="Product sub (mono)"
+              value={photon.photonSquareProductSub}
+              onChange={(v) => patchPhoton("photonSquareProductSub", v)}
+            />
+            <Field
+              label="Spec chip 1"
+              value={photon.photonSquareSpec1}
+              onChange={(v) => patchPhoton("photonSquareSpec1", v)}
+            />
+            <Field
+              label="Spec chip 2"
+              value={photon.photonSquareSpec2}
+              onChange={(v) => patchPhoton("photonSquareSpec2", v)}
+            />
+            <Field
+              label="Comms label (above button)"
+              value={photon.photonSquareCommsLbl}
+              onChange={(v) => patchPhoton("photonSquareCommsLbl", v)}
+            />
+            <Field
+              label="Phone / WhatsApp number"
+              value={photon.photonSquareWa}
+              onChange={(v) => patchPhoton("photonSquareWa", v)}
+            />
+            <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
+              Vertical · Photon Lux
+            </p>
+            <Field
+              label="HQ lockup name"
+              value={photon.photonVerticalHqName}
+              onChange={(v) => patchPhoton("photonVerticalHqName", v)}
+            />
+            <Field
+              label="Headline — line 1"
+              value={photon.photonVerticalHeadlineL1}
+              onChange={(v) => patchPhoton("photonVerticalHeadlineL1", v)}
+            />
+            <Field
+              label="Headline — line 2 (outline)"
+              value={photon.photonVerticalHeadlineL2}
+              onChange={(v) => patchPhoton("photonVerticalHeadlineL2", v)}
+            />
+            <Field
+              label="Subtext (body)"
+              value={photon.photonVerticalSubtext}
+              onChange={(v) => patchPhoton("photonVerticalSubtext", v)}
+              rows={4}
+            />
+            <Field
+              label="Product title (one line in dock)"
+              value={[photon.photonVerticalProductL1, photon.photonVerticalProductL2]
+                .map((s) => s.trim())
+                .filter(Boolean)
+                .join(" ")}
+              onChange={(v) => {
+                setCopyByPreset((prev) => ({
+                  ...prev,
+                  "photon-lux": {
+                    ...prev["photon-lux"],
+                    photonVerticalProductL1: v,
+                    photonVerticalProductL2: "",
+                  },
+                }));
+              }}
+            />
+            <Field
+              label="Product sub (mono)"
+              value={photon.photonVerticalProductSub}
+              onChange={(v) => patchPhoton("photonVerticalProductSub", v)}
+            />
+            <Field
+              label="Dock button — phone number"
+              value={photon.photonVerticalWa}
+              onChange={(v) => patchPhoton("photonVerticalWa", v)}
             />
           </>
         ) : (

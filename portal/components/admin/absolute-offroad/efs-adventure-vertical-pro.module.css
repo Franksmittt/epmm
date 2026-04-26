@@ -103,6 +103,64 @@
   align-items: center;
 }
 
+/* Band between status bar and command dock (same horizontal inset as dock). */
+.heroMid {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 0;
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+/* Fills heroMid; story frame matches command-dock width (same horizontal inset).
+ * Nudged up from dead-centre so it sits between the status bar and command dock. */
+.storyMidCenter {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-5.5%);
+}
+
+/* Full command-dock width; height = 90% of width (~10% shorter than a square). */
+.storyMidSlot {
+  width: 100%;
+  aspect-ratio: 10 / 9;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 35px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(8, 8, 8, 0.5);
+  box-sizing: border-box;
+}
+
+.storyMidImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.storyMidPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+}
+
 .commandDock {
   position: relative;
   z-index: 2;
@@ -168,6 +226,10 @@
   transform: scale(0.96);
 }
 
+.actionButtonSolo {
+  justify-content: center;
+}
+
 /* ─── 1080×1920 export (scale ≈ 2.4× 450px reference) ─── */
 
 .root.canvas1080x1920 .adContainer {
@@ -191,6 +253,19 @@
   border-radius: 19px;
   font-size: 25px;
   letter-spacing: 2px;
+}
+
+.root.canvas1080x1920 .heroMid {
+  padding: 0 48px;
+}
+
+.root.canvas1080x1920 .storyMidSlot {
+  border-radius: 84px;
+}
+
+.root.canvas1080x1920 .storyMidPlaceholder {
+  font-size: 22px;
+  letter-spacing: 0.22em;
 }
 
 .root.canvas1080x1920 .commandDock {
@@ -223,7 +298,3 @@
   font-size: 36px;
 }
 
-.root.canvas1080x1920 .actionButton svg {
-  width: 48px;
-  height: 48px;
-}

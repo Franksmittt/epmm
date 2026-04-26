@@ -15,8 +15,37 @@ export const OTMA_OVERLAY_JSON_VERSION = 3;
 
 export type OtmaOverlayPresetId =
   | "relocation-radar"
+  | "rec-hook"
+  | "tracking-ui"
   | "waypoint-compact"
-  | "corporate-transit";
+  | "gps-map-overlay"
+  | "goods-in-transit"
+  | "accredited"
+  | "accountability"
+  | "corporate-transit"
+  | "eco-estate-moves"
+  | "suburb-routing"
+  | "long-distance";
+
+type OtmaPresetFamily = "radar" | "waypoint" | "corporate";
+
+function familyForPreset(id: OtmaOverlayPresetId): OtmaPresetFamily {
+  if (id === "relocation-radar" || id === "rec-hook" || id === "tracking-ui") {
+    return "radar";
+  }
+  if (
+    id === "waypoint-compact" ||
+    id === "gps-map-overlay" ||
+    id === "goods-in-transit" ||
+    id === "accredited" ||
+    id === "accountability" ||
+    id === "eco-estate-moves" ||
+    id === "suburb-routing"
+  ) {
+    return "waypoint";
+  }
+  return "corporate";
+}
 
 export const OTMA_OVERLAY_PRESETS: {
   id: OtmaOverlayPresetId;
@@ -29,14 +58,59 @@ export const OTMA_OVERLAY_PRESETS: {
     short: "Relocation Radar",
   },
   {
+    id: "rec-hook",
+    label: "1. The REC Hook (legacy pack)",
+    short: "REC Hook",
+  },
+  {
+    id: "tracking-ui",
+    label: "2. Tracking UI (legacy pack)",
+    short: "Tracking UI",
+  },
+  {
     id: "waypoint-compact",
     label: "Waypoint compact — route line + waypoint dots",
     short: "Waypoint",
   },
   {
+    id: "gps-map-overlay",
+    label: "3. GPS Map Overlay (legacy pack)",
+    short: "GPS Map",
+  },
+  {
+    id: "goods-in-transit",
+    label: "4. Goods-in-Transit (legacy pack)",
+    short: "Goods Transit",
+  },
+  {
+    id: "accountability",
+    label: "5. Accountability (legacy pack)",
+    short: "Accountability",
+  },
+  {
+    id: "accredited",
+    label: "6. Accredited (legacy pack)",
+    short: "Accredited",
+  },
+  {
     id: "corporate-transit",
     label: "Corporate transit — blueprint grid + B2B badge",
     short: "Corporate",
+  },
+  {
+    id: "eco-estate-moves",
+    label: "7. Eco Estate Moves (legacy pack)",
+    short: "Eco Estate",
+  },
+  {
+    id: "suburb-routing",
+    label: "9. Suburb Routing (legacy pack)",
+    short: "Suburb Routing",
+  },
+  {
+    id: "long-distance",
+    label: "10. Long Distance (legacy pack)",
+    short: "Long Distance",
   },
 ];
 
@@ -181,11 +255,133 @@ const DEFAULTS_CORP: Record<CorpCopyKey, string> = {
   corpVerticalPhone: "072 100 0936",
 };
 
+function defaultsForPreset(
+  id: OtmaOverlayPresetId,
+): Record<string, string> {
+  if (id === "rec-hook") {
+    return {
+      ...DEFAULTS_RADAR,
+      squareHeroL1: "Smile! You're",
+      squareHeroL2Blue: "On Camera.",
+      verticalHeadlineL1: "Smile! You're",
+      verticalHeadlineL2Blue: "On Camera.",
+      verticalTrackingLabel: "LIVE FEED",
+    };
+  }
+  if (id === "tracking-ui") {
+    return {
+      ...DEFAULTS_RADAR,
+      squareHeroL1: "Tracking",
+      squareHeroL2Blue: "UI.",
+      squareServiceL1: "Status",
+      squareServiceL2: "In Transit",
+      squareServiceSub: "Asset protection active",
+      squareSpec1: "SECURE RELOCATION",
+      squareSpec2: "GOODS COVERED",
+    };
+  }
+  if (id === "gps-map-overlay") {
+    return {
+      ...DEFAULTS_WAYPOINT,
+      wpSquareHeroL1: "Track Your",
+      wpSquareHeroL2Blue: "Assets.",
+      wpVerticalHeadlineL1: "Track Your",
+      wpVerticalHeadlineL2Blue: "Assets.",
+      wpSquareStatusPill: "GPS MONITORED",
+      wpVerticalStatusPill: "GPS MONITORED",
+    };
+  }
+  if (id === "goods-in-transit") {
+    return {
+      ...DEFAULTS_WAYPOINT,
+      wpSquareHeroL1: "Goods-in-",
+      wpSquareHeroL2Blue: "Transit.",
+      wpVerticalHeadlineL1: "Insurance",
+      wpVerticalHeadlineL2Blue: "Included.",
+      wpSquareSubtext: "Total asset protection from collection to delivery.",
+      wpVerticalSubtext:
+        "Insurance included. Total asset protection from collection to delivery.",
+    };
+  }
+  if (id === "accountability") {
+    return {
+      ...DEFAULTS_WAYPOINT,
+      wpSquareHeroL1: "Zero",
+      wpSquareHeroL2Blue: "Risk.",
+      wpVerticalHeadlineL1: "Zero",
+      wpVerticalHeadlineL2Blue: "Risk.",
+      wpSquareSubtext:
+        "The service recovery paradox: accountability is the core relocation metric.",
+      wpVerticalSubtext:
+        "The service recovery paradox: accountability is the core relocation metric.",
+    };
+  }
+  if (id === "accredited") {
+    return {
+      ...DEFAULTS_WAYPOINT,
+      wpSquareHeroL1: "Alberton's",
+      wpSquareHeroL2Blue: "Finest.",
+      wpVerticalHeadlineL1: "PMA + AMOSA",
+      wpVerticalHeadlineL2Blue: "Accredited.",
+      wpSquareTrust1: "PMA Accredited",
+      wpSquareTrust2: "AMOSA Certified",
+    };
+  }
+  if (id === "eco-estate-moves") {
+    return {
+      ...DEFAULTS_WAYPOINT,
+      wpSquareHeroL1: "Eco Estate",
+      wpSquareHeroL2Blue: "Moves.",
+      wpVerticalHeadlineL1: "Meyersdal",
+      wpVerticalHeadlineL2Blue: "Eco Estate.",
+      wpSquareStatusPill: "ESTATE RELOCATION",
+      wpVerticalStatusPill: "ESTATE RELOCATION",
+    };
+  }
+  if (id === "suburb-routing") {
+    return {
+      ...DEFAULTS_WAYPOINT,
+      wpSquareHeroL1: "Suburb",
+      wpSquareHeroL2Blue: "Routing.",
+      wpVerticalHeadlineL1: "Brackenhurst",
+      wpVerticalHeadlineL2Blue: "→ New Redruth",
+      wpSquareStatusPill: "ROUTE ACTIVE",
+      wpVerticalStatusPill: "ROUTE ACTIVE",
+    };
+  }
+  if (id === "long-distance") {
+    return {
+      ...DEFAULTS_CORP,
+      corpSquareHeroL1: "Gauteng to",
+      corpSquareHeroL2Blue: "Anywhere.",
+      corpVerticalHeadlineL1: "National",
+      corpVerticalHeadlineL2Blue: "Transport.",
+      corpSquareServiceTitle: "Long-Distance",
+      corpSquareServiceBody: "Vehicle transport and long-haul relocation support.",
+      corpVerticalServiceTitle: "Long-Distance & Vehicle",
+      corpVerticalServiceSub: "Transport",
+    };
+  }
+  if (id === "relocation-radar") return { ...DEFAULTS_RADAR };
+  if (id === "waypoint-compact") return { ...DEFAULTS_WAYPOINT };
+  if (id === "corporate-transit") return { ...DEFAULTS_CORP };
+  return { ...DEFAULTS_RADAR };
+}
+
 function initialCopyByPreset(): Record<OtmaOverlayPresetId, Record<string, string>> {
   return {
-    "relocation-radar": { ...DEFAULTS_RADAR },
-    "waypoint-compact": { ...DEFAULTS_WAYPOINT },
-    "corporate-transit": { ...DEFAULTS_CORP },
+    "relocation-radar": defaultsForPreset("relocation-radar"),
+    "rec-hook": defaultsForPreset("rec-hook"),
+    "tracking-ui": defaultsForPreset("tracking-ui"),
+    "waypoint-compact": defaultsForPreset("waypoint-compact"),
+    "gps-map-overlay": defaultsForPreset("gps-map-overlay"),
+    "goods-in-transit": defaultsForPreset("goods-in-transit"),
+    "accountability": defaultsForPreset("accountability"),
+    "accredited": defaultsForPreset("accredited"),
+    "corporate-transit": defaultsForPreset("corporate-transit"),
+    "eco-estate-moves": defaultsForPreset("eco-estate-moves"),
+    "suburb-routing": defaultsForPreset("suburb-routing"),
+    "long-distance": defaultsForPreset("long-distance"),
   };
 }
 
@@ -205,8 +401,17 @@ function stripMarkdownJsonFence(raw: string): string {
 function isPresetId(v: unknown): v is OtmaOverlayPresetId {
   return (
     v === "relocation-radar" ||
+    v === "rec-hook" ||
+    v === "tracking-ui" ||
     v === "waypoint-compact" ||
-    v === "corporate-transit"
+    v === "gps-map-overlay" ||
+    v === "goods-in-transit" ||
+    v === "accountability" ||
+    v === "accredited" ||
+    v === "corporate-transit" ||
+    v === "eco-estate-moves" ||
+    v === "suburb-routing" ||
+    v === "long-distance"
   );
 }
 
@@ -291,25 +496,29 @@ export function OtmaRelocationRadarOverlayStudio() {
 
   const [preset, setPreset] = useState<OtmaOverlayPresetId>("relocation-radar");
   const [copyByPreset, setCopyByPreset] = useState(initialCopyByPreset);
+  const presetFamily = familyForPreset(preset);
 
   const setRadar = (key: RadarCopyKey, value: string) => {
+    if (presetFamily !== "radar") return;
     setCopyByPreset((prev) => ({
       ...prev,
-      "relocation-radar": { ...prev["relocation-radar"], [key]: value },
+      [preset]: { ...prev[preset], [key]: value },
     }));
   };
 
   const setWaypoint = (key: WaypointCopyKey, value: string) => {
+    if (presetFamily !== "waypoint") return;
     setCopyByPreset((prev) => ({
       ...prev,
-      "waypoint-compact": { ...prev["waypoint-compact"], [key]: value },
+      [preset]: { ...prev[preset], [key]: value },
     }));
   };
 
   const setCorp = (key: CorpCopyKey, value: string) => {
+    if (presetFamily !== "corporate") return;
     setCopyByPreset((prev) => ({
       ...prev,
-      "corporate-transit": { ...prev["corporate-transit"], [key]: value },
+      [preset]: { ...prev[preset], [key]: value },
     }));
   };
 
@@ -386,15 +595,18 @@ export function OtmaRelocationRadarOverlayStudio() {
 
     const targetPreset: OtmaOverlayPresetId =
       (isPresetId(root.preset) ? root.preset : null) ??
-      inferPresetFromBlock(block) ??
+      (inferPresetFromBlock(block) != null
+        ? presetFamily === "radar"
+          ? preset
+          : inferPresetFromBlock(block)
+        : null) ??
       preset;
 
-    const keys =
-      targetPreset === "relocation-radar"
-        ? RADAR_KEYS
-        : targetPreset === "waypoint-compact"
-          ? WAYPOINT_KEYS
-          : CORP_KEYS;
+    const keys = familyForPreset(targetPreset) === "radar"
+      ? RADAR_KEYS
+      : familyForPreset(targetPreset) === "waypoint"
+        ? WAYPOINT_KEYS
+        : CORP_KEYS;
     const picked: Record<string, string> = {};
     let any = false;
     for (const key of keys) {
@@ -418,7 +630,7 @@ export function OtmaRelocationRadarOverlayStudio() {
     }));
     setApplyFlash(true);
     window.setTimeout(() => setApplyFlash(false), 2000);
-  }, [jsonPaste, preset]);
+  }, [jsonPaste, preset, presetFamily]);
 
   const onPickSquare = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -443,22 +655,10 @@ export function OtmaRelocationRadarOverlayStudio() {
   };
 
   const resetCopy = () => {
-    if (preset === "relocation-radar") {
-      setCopyByPreset((p) => ({
-        ...p,
-        "relocation-radar": { ...DEFAULTS_RADAR },
-      }));
-    } else if (preset === "waypoint-compact") {
-      setCopyByPreset((p) => ({
-        ...p,
-        "waypoint-compact": { ...DEFAULTS_WAYPOINT },
-      }));
-    } else {
-      setCopyByPreset((p) => ({
-        ...p,
-        "corporate-transit": { ...DEFAULTS_CORP },
-      }));
-    }
+    setCopyByPreset((p) => ({
+      ...p,
+      [preset]: defaultsForPreset(preset),
+    }));
   };
 
   const downloadSquare = useCallback(async () => {
@@ -516,9 +716,9 @@ export function OtmaRelocationRadarOverlayStudio() {
   const scaleSquare = PREVIEW_SQUARE / 1080;
   const scaleVert = VERT_PREVIEW_W / 1080;
 
-  const cr = copyByPreset["relocation-radar"] as typeof DEFAULTS_RADAR;
-  const cw = copyByPreset["waypoint-compact"] as typeof DEFAULTS_WAYPOINT;
-  const cc = copyByPreset["corporate-transit"] as typeof DEFAULTS_CORP;
+  const cr = copyByPreset[preset] as typeof DEFAULTS_RADAR;
+  const cw = copyByPreset[preset] as typeof DEFAULTS_WAYPOINT;
+  const cc = copyByPreset[preset] as typeof DEFAULTS_CORP;
 
   const radarSquareCanvas = (
     <div
@@ -897,27 +1097,27 @@ export function OtmaRelocationRadarOverlayStudio() {
   );
 
   const squareCanvas =
-    preset === "relocation-radar"
+    presetFamily === "radar"
       ? radarSquareCanvas
-      : preset === "waypoint-compact"
+      : presetFamily === "waypoint"
         ? waypointSquareCanvas
         : corporateSquareCanvas;
   const verticalCanvas =
-    preset === "relocation-radar"
+    presetFamily === "radar"
       ? radarVerticalCanvas
-      : preset === "waypoint-compact"
+      : presetFamily === "waypoint"
         ? waypointVerticalCanvas
         : corporateVerticalCanvas;
 
   const keysHint =
-    preset === "relocation-radar"
+    presetFamily === "radar"
       ? RADAR_KEYS.join(", ")
-      : preset === "waypoint-compact"
+      : presetFamily === "waypoint"
         ? WAYPOINT_KEYS.join(", ")
         : CORP_KEYS.join(", ");
 
   const jsonRows =
-    preset === "relocation-radar" ? 24 : preset === "waypoint-compact" ? 22 : 26;
+    presetFamily === "radar" ? 24 : presetFamily === "waypoint" ? 22 : 26;
   const presetShort =
     OTMA_OVERLAY_PRESETS.find((p) => p.id === preset)?.short ?? preset;
 
@@ -1004,8 +1204,17 @@ export function OtmaRelocationRadarOverlayStudio() {
             <code className="text-white/80">{OTMA_OVERLAY_JSON_TEMPLATE_ID}</code>
             , <code className="text-white/80">preset</code>{" "}
             <code className="text-white/80">relocation-radar</code>,{" "}
-            <code className="text-white/80">waypoint-compact</code>, or{" "}
+            <code className="text-white/80">rec-hook</code>,{" "}
+            <code className="text-white/80">tracking-ui</code>,{" "}
+            <code className="text-white/80">waypoint-compact</code>,{" "}
+            <code className="text-white/80">gps-map-overlay</code>,{" "}
+            <code className="text-white/80">goods-in-transit</code>,{" "}
+            <code className="text-white/80">accountability</code>,{" "}
+            <code className="text-white/80">accredited</code>,{" "}
             <code className="text-white/80">corporate-transit</code>,{" "}
+            <code className="text-white/80">eco-estate-moves</code>,{" "}
+            <code className="text-white/80">suburb-routing</code>, or{" "}
+            <code className="text-white/80">long-distance</code>,{" "}
             <code className="text-white/80">copy</code>. v
             {OTMA_OVERLAY_JSON_VERSION}: infer{" "}
             <code className="text-white/80">corp*</code> /{" "}
@@ -1071,7 +1280,7 @@ export function OtmaRelocationRadarOverlayStudio() {
           {keysHint}
         </p>
 
-        {preset === "relocation-radar" ? (
+        {presetFamily === "radar" ? (
           <>
             <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
               Square · Relocation Radar
@@ -1181,7 +1390,7 @@ export function OtmaRelocationRadarOverlayStudio() {
               onChange={(v) => setRadar("verticalCta", v)}
             />
           </>
-        ) : preset === "waypoint-compact" ? (
+        ) : presetFamily === "waypoint" ? (
           <>
             <p className="text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
               Square · Waypoint

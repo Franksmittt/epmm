@@ -18,7 +18,7 @@ export { VKW_CAROUSEL_PRESETS } from "./VaalpenskraalWoodCarouselRenders";
 
 export const VKW_CAROUSEL_JSON_TEMPLATE_ID =
   "vaalpenskraal-wood-braai-carousel";
-export const VKW_CAROUSEL_JSON_VERSION = 1;
+export const VKW_CAROUSEL_JSON_VERSION = 2;
 
 export const VKW_CAROUSEL_CARD_COUNT = 5;
 

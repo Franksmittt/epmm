@@ -20,10 +20,28 @@ const inter = Inter({
 export const MWW_OVERLAY_JSON_TEMPLATE_ID = "miwesu-wood-overlay";
 export const MWW_OVERLAY_JSON_VERSION = 2;
 
-export type MwwPresetId =
-  | "thermal-dynamics"
-  | "braai-mix"
-  | "balanced-burn";
+export type MwwPresetId = string;
+
+type MwwPresetFamily = "thermal-dynamics" | "braai-mix" | "balanced-burn";
+
+function familyForPreset(id: MwwPresetId): MwwPresetFamily {
+  if (
+    id === "braai-mix" ||
+    id === "legacy-carousel-pack" ||
+    id === "legacy-fusion-studio" ||
+    id === "legacy-converse-allstar"
+  ) {
+    return "braai-mix";
+  }
+  if (
+    id === "balanced-burn" ||
+    id === "legacy-elite-stripes" ||
+    id === "legacy-hilti-studio"
+  ) {
+    return "balanced-burn";
+  }
+  return "thermal-dynamics";
+}
 
 export const MWW_OVERLAY_PRESETS: { id: MwwPresetId; label: string }[] = [
   {
@@ -38,6 +56,15 @@ export const MWW_OVERLAY_PRESETS: { id: MwwPresetId; label: string }[] = [
     id: "balanced-burn",
     label: "Balanced burn — golden flame hero (Geelhaak-style)",
   },
+  { id: "legacy-carousel-pack", label: "Legacy: Miwesu carousel pack" },
+  { id: "legacy-elite-estate", label: "Legacy: Elite — Estate" },
+  { id: "legacy-elite-performance", label: "Legacy: Elite — Performance" },
+  { id: "legacy-elite-stripes", label: "Legacy: Elite — Stripes" },
+  { id: "legacy-hilti-studio", label: "Legacy: Hilti studio" },
+  { id: "legacy-fusion-studio", label: "Legacy: Fusion studio" },
+  { id: "legacy-titan-studio", label: "Legacy: Titan studio" },
+  { id: "legacy-converse-allstar", label: "Legacy: Converse / All-star" },
+  { id: "legacy-ua-monolithic", label: "Legacy: UA monolithic" },
 ];
 
 const THERMAL_KEYS = [
@@ -148,30 +175,34 @@ const DEFAULT_BRAAI: Record<BraaiCopyKey, string> = {
   perBagLabel: "Per Bag",
 };
 
-type CopyByPreset = {
-  "thermal-dynamics": Record<ThermalCopyKey, string>;
-  "braai-mix": Record<BraaiCopyKey, string>;
-  "balanced-burn": Record<ThermalCopyKey, string>;
-};
+type CopyByPreset = Record<MwwPresetId, Record<string, string>>;
+
+function defaultsForPreset(id: MwwPresetId): Record<string, string> {
+  const family = familyForPreset(id);
+  if (family === "braai-mix") {
+    return { ...DEFAULT_BRAAI };
+  }
+  if (family === "balanced-burn") {
+    return { ...DEFAULT_BALANCED };
+  }
+  return { ...DEFAULT_THERMAL };
+}
 
 function initialCopyByPreset(): CopyByPreset {
-  return {
-    "thermal-dynamics": { ...DEFAULT_THERMAL },
-    "braai-mix": { ...DEFAULT_BRAAI },
-    "balanced-burn": { ...DEFAULT_BALANCED },
-  };
+  return Object.fromEntries(
+    MWW_OVERLAY_PRESETS.map((p) => [p.id, defaultsForPreset(p.id)]),
+  );
 }
 
 function keysForPreset(p: MwwPresetId): readonly string[] {
-  if (p === "braai-mix") return BRAAI_MIX_KEYS;
+  if (familyForPreset(p) === "braai-mix") return BRAAI_MIX_KEYS;
   return THERMAL_KEYS;
 }
 
 function isPresetId(x: unknown): x is MwwPresetId {
   return (
-    x === "thermal-dynamics" ||
-    x === "braai-mix" ||
-    x === "balanced-burn"
+    typeof x === "string" &&
+    MWW_OVERLAY_PRESETS.some((p) => p.id === x)
   );
 }
 
@@ -219,8 +250,10 @@ function extractCopyBlock(parsed: unknown): Record<string, unknown> | null {
 }
 
 function exportSlug(p: MwwPresetId): string {
-  if (p === "thermal-dynamics") return "thermal";
-  if (p === "braai-mix") return "braai-mix";
+  if (p.startsWith("legacy-")) return p.replace(/^legacy-/, "");
+  const family = familyForPreset(p);
+  if (family === "thermal-dynamics") return "thermal";
+  if (family === "braai-mix") return "braai-mix";
   return "balanced-burn";
 }
 
@@ -252,30 +285,44 @@ export function MiwesuWoodOverlayStudio() {
     initialCopyByPreset,
   );
 
-  const th = copyByPreset["thermal-dynamics"];
-  const br = copyByPreset["braai-mix"];
-  const bal = copyByPreset["balanced-burn"];
+  const presetFamily = familyForPreset(preset);
+  const active = copyByPreset[preset] ?? defaultsForPreset(preset);
+  const th = active as typeof DEFAULT_THERMAL;
+  const br = active as typeof DEFAULT_BRAAI;
+  const bal = active as typeof DEFAULT_BALANCED;
 
-  const patchThermal = useCallback((key: ThermalCopyKey, value: string) => {
-    setCopyByPreset((prev) => ({
-      ...prev,
-      "thermal-dynamics": { ...prev["thermal-dynamics"], [key]: value },
-    }));
-  }, []);
+  const patchThermal = useCallback(
+    (key: ThermalCopyKey, value: string) => {
+      if (presetFamily === "braai-mix") return;
+      setCopyByPreset((prev) => ({
+        ...prev,
+        [preset]: { ...(prev[preset] ?? defaultsForPreset(preset)), [key]: value },
+      }));
+    },
+    [preset, presetFamily],
+  );
 
-  const patchBalanced = useCallback((key: ThermalCopyKey, value: string) => {
-    setCopyByPreset((prev) => ({
-      ...prev,
-      "balanced-burn": { ...prev["balanced-burn"], [key]: value },
-    }));
-  }, []);
+  const patchBalanced = useCallback(
+    (key: ThermalCopyKey, value: string) => {
+      if (presetFamily !== "balanced-burn") return;
+      setCopyByPreset((prev) => ({
+        ...prev,
+        [preset]: { ...(prev[preset] ?? defaultsForPreset(preset)), [key]: value },
+      }));
+    },
+    [preset, presetFamily],
+  );
 
-  const patchBraai = useCallback((key: BraaiCopyKey, value: string) => {
-    setCopyByPreset((prev) => ({
-      ...prev,
-      "braai-mix": { ...prev["braai-mix"], [key]: value },
-    }));
-  }, []);
+  const patchBraai = useCallback(
+    (key: BraaiCopyKey, value: string) => {
+      if (presetFamily !== "braai-mix") return;
+      setCopyByPreset((prev) => ({
+        ...prev,
+        [preset]: { ...(prev[preset] ?? defaultsForPreset(preset)), [key]: value },
+      }));
+    },
+    [preset, presetFamily],
+  );
 
   const [bgSquareDataUrl, setBgSquareDataUrl] = useState<string | null>(null);
   const [bgVerticalDataUrl, setBgVerticalDataUrl] = useState<string | null>(
@@ -417,12 +464,7 @@ export function MiwesuWoodOverlayStudio() {
   const resetCopy = () => {
     setCopyByPreset((prev) => ({
       ...prev,
-      [preset]:
-        preset === "thermal-dynamics"
-          ? { ...DEFAULT_THERMAL }
-          : preset === "balanced-burn"
-            ? { ...DEFAULT_BALANCED }
-            : { ...DEFAULT_BRAAI },
+      [preset]: defaultsForPreset(preset),
     }));
   };
 
@@ -484,7 +526,7 @@ export function MiwesuWoodOverlayStudio() {
   const scaleVert = VERT_PREVIEW_W / 1080;
 
   const squareCanvas =
-    preset === "braai-mix" ? (
+    presetFamily === "braai-mix" ? (
       <div
         ref={squareRef}
         className={`${inter.variable} ${braaiSquare.root}`}
@@ -538,7 +580,7 @@ export function MiwesuWoodOverlayStudio() {
           </div>
         </div>
       </div>
-    ) : preset === "balanced-burn" ? (
+    ) : presetFamily === "balanced-burn" ? (
       <div
         ref={squareRef}
         className={`${inter.variable} ${balancedSquare.root}`}
@@ -666,7 +708,7 @@ export function MiwesuWoodOverlayStudio() {
     );
 
   const verticalCanvas =
-    preset === "braai-mix" ? (
+    presetFamily === "braai-mix" ? (
       <div
         ref={verticalRef}
         className={`${inter.variable} ${braaiVertical.root}`}
@@ -711,7 +753,7 @@ export function MiwesuWoodOverlayStudio() {
           </div>
         </div>
       </div>
-    ) : preset === "balanced-burn" ? (
+    ) : presetFamily === "balanced-burn" ? (
       <div
         ref={verticalRef}
         className={`${inter.variable} ${balancedVertical.root}`}
@@ -830,9 +872,9 @@ export function MiwesuWoodOverlayStudio() {
     );
 
   const previewLabel =
-    preset === "thermal-dynamics"
+    presetFamily === "thermal-dynamics"
       ? "Thermal dynamics"
-      : preset === "braai-mix"
+      : presetFamily === "braai-mix"
         ? "Braai mix"
         : "Balanced burn";
 
@@ -901,7 +943,7 @@ export function MiwesuWoodOverlayStudio() {
         </div>
 
         <div className="space-y-3 rounded-md border border-white/10 bg-black/30 p-3">
-          {preset === "braai-mix" ? (
+          {presetFamily === "braai-mix" ? (
             <>
               <p className="text-xs font-medium text-[#8E8E93]">
                 Vertical (glass card)
@@ -1019,7 +1061,7 @@ export function MiwesuWoodOverlayStudio() {
                 onChange={(x) => patchBraai("perBagLabel", x)}
               />
             </>
-          ) : preset === "balanced-burn" ? (
+          ) : presetFamily === "balanced-burn" ? (
             <>
               <Field
                 label="Status pill"

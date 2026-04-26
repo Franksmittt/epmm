@@ -1,0 +1,447 @@
+/* Absolute Offroad — Photon Lux vertical 9:16. Beam field + split rail (≠ Rock CAD + slab). AO blue + yellow. */
+
+.root {
+  --pure-black: #000000;
+  --pure-white: #ffffff;
+  --ao-blue: #0a192f;
+  --ao-yellow: #ffd500;
+  --stealth-grey: #8892b0;
+  --glass: rgba(10, 25, 47, 0.9);
+}
+
+.root * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.adCanvas {
+  --photon-dock-h: 15px;
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 9 / 16;
+  background-color: var(--pure-black);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 40px 80px rgba(10, 25, 47, 0.65);
+}
+
+.heroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Cone / beam texture — not square CAD grid */
+.beamField {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      ellipse 120% 55% at 50% -5%,
+      rgba(255, 213, 0, 0.14) 0%,
+      transparent 52%
+    ),
+    radial-gradient(
+      circle at 50% 108%,
+      rgba(10, 25, 47, 0.55) 0%,
+      transparent 42%
+    ),
+    repeating-linear-gradient(
+      105deg,
+      rgba(10, 25, 47, 0.22) 0 1px,
+      transparent 1px 14px
+    );
+  opacity: 0.95;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 25, 47, 0.82) 0%,
+    rgba(0, 0, 0, 0) 38%,
+    rgba(0, 0, 0, 0) 52%,
+    rgba(10, 25, 47, 0.92) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.columnShell {
+  position: relative;
+  z-index: 10;
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top: brand + faux output ladder (Rock is lone HQ pill) */
+.topCommand {
+  position: relative;
+  flex-shrink: 0;
+  padding: 22px var(--photon-dock-h) 12px var(--photon-dock-h);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hqLockup {
+  background: rgba(10, 25, 47, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 10px 16px;
+  border-radius: 12px;
+  border-left: 4px solid var(--ao-yellow);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.hqName {
+  color: var(--pure-white);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.outputLadder {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+  padding: 4px 0;
+}
+
+.outputLadder span {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--ao-yellow);
+  box-shadow: 0 0 8px rgba(255, 213, 0, 0.35);
+}
+
+.outputLadder span:nth-child(1) {
+  width: 22px;
+}
+
+.outputLadder span:nth-child(2) {
+  width: 34px;
+}
+
+.outputLadder span:nth-child(3) {
+  width: 26px;
+}
+
+.midColumn {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 6px var(--photon-dock-h);
+}
+
+.midImageSlot {
+  position: relative;
+  width: 100%;
+  flex: 1 1 0;
+  min-height: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 25, 47, 0.5);
+  border: 2px solid rgba(255, 213, 0, 0.28);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    0 14px 36px rgba(0, 0, 0, 0.5);
+}
+
+.midImageSlot:has(.midImageImg) {
+  background: rgba(10, 25, 47, 0.28);
+}
+
+.midImageImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.midImagePlaceholder {
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* Asymmetric stage card: yellow rail + clipped panel */
+.armorTerminal {
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 var(--photon-dock-h) 18px var(--photon-dock-h);
+  background: var(--glass);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px 28px 28px 28px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.75);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.armorTerminal::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(
+    180deg,
+    var(--ao-yellow) 0%,
+    rgba(255, 213, 0, 0.25) 100%
+  );
+  border-radius: 8px 0 0 8px;
+  pointer-events: none;
+}
+
+.stageRail {
+  padding: 22px 22px 18px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.headline {
+  color: var(--pure-white);
+  font-size: 2.65rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  padding-left: 4px;
+}
+
+.headlineOutline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.92);
+  display: block;
+}
+
+.subtext {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  padding-left: 4px;
+}
+
+.subtext strong {
+  color: var(--ao-yellow);
+  font-weight: 600;
+}
+
+.actionDock {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  padding: 16px 20px 20px 26px;
+  border-top: 1px solid rgba(255, 213, 0, 0.15);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.productId {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.productTitle {
+  color: var(--pure-white);
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.productSub {
+  color: var(--stealth-grey);
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.63rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  margin-top: 5px;
+}
+
+.btnWa {
+  background: var(--ao-yellow);
+  color: var(--pure-black);
+  width: 100%;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-family:
+    ui-monospace,
+    "SF Mono",
+    "Cascadia Code",
+    monospace;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 22px rgba(255, 213, 0, 0.22);
+}
+
+.btnWa svg {
+  flex-shrink: 0;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* ─── 1080×1920 (×2.4) ─── */
+
+.root.canvas1080x1920 .adCanvas {
+  width: 1080px;
+  height: 1920px;
+  max-width: none;
+  aspect-ratio: auto;
+  --photon-dock-h: 36px;
+}
+
+.root.canvas1080x1920 .midColumn {
+  padding: 14px var(--photon-dock-h);
+}
+
+.root.canvas1080x1920 .midImageSlot {
+  border-radius: 38px;
+}
+
+.root.canvas1080x1920 .midImagePlaceholder {
+  font-size: 22px;
+  letter-spacing: 0.22em;
+}
+
+.root.canvas1080x1920 .topCommand {
+  padding: 53px var(--photon-dock-h) 29px var(--photon-dock-h);
+}
+
+.root.canvas1080x1920 .hqLockup {
+  padding: 24px 38px;
+  border-radius: 29px;
+  border-left-width: 10px;
+}
+
+.root.canvas1080x1920 .hqName {
+  font-size: 29px;
+}
+
+.root.canvas1080x1920 .outputLadder span:nth-child(1) {
+  width: 53px;
+  height: 7px;
+}
+
+.root.canvas1080x1920 .outputLadder span:nth-child(2) {
+  width: 82px;
+  height: 7px;
+}
+
+.root.canvas1080x1920 .outputLadder span:nth-child(3) {
+  width: 62px;
+  height: 7px;
+}
+
+.root.canvas1080x1920 .armorTerminal {
+  margin: 0 var(--photon-dock-h) 43px var(--photon-dock-h);
+  border-radius: 19px 67px 67px 67px;
+}
+
+.root.canvas1080x1920 .armorTerminal::before {
+  width: 12px;
+}
+
+.root.canvas1080x1920 .stageRail {
+  padding: 53px 53px 43px 62px;
+  gap: 29px;
+}
+
+.root.canvas1080x1920 .headline {
+  font-size: 98px;
+  letter-spacing: -4px;
+}
+
+.root.canvas1080x1920 .headlineOutline {
+  -webkit-text-stroke-width: 3px;
+}
+
+.root.canvas1080x1920 .subtext {
+  font-size: 29px;
+}
+
+.root.canvas1080x1920 .actionDock {
+  padding: 38px 48px 48px 62px;
+  gap: 34px;
+}
+
+.root.canvas1080x1920 .productTitle {
+  font-size: 36px;
+}
+
+.root.canvas1080x1920 .productSub {
+  font-size: 22px;
+}
+
+.root.canvas1080x1920 .btnWa {
+  min-height: 106px;
+  border-radius: 29px;
+  font-size: 29px;
+  gap: 19px;
+}
+
+.root.canvas1080x1920 .btnWa svg {
+  width: 38px;
+  height: 38px;
+}

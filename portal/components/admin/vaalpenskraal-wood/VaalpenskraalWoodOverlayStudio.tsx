@@ -20,13 +20,38 @@ const inter = Inter({
 });
 
 export const VKW_BRAI_OVERLAY_JSON_TEMPLATE_ID = "vaalpenskraal-wood-braai-overlay";
-export const VKW_BRAI_OVERLAY_JSON_VERSION = 1;
+export const VKW_BRAI_OVERLAY_JSON_VERSION = 2;
 
-export type VkwBraiPresetId =
+export type VkwBraiPresetId = string;
+
+type VkwPresetFamily =
   | "data-stream"
   | "notify-spatial"
   | "reality-distortion"
   | "vision-glass";
+
+function familyForPreset(id: VkwBraiPresetId): VkwPresetFamily {
+  if (id === "notify-spatial") return "notify-spatial";
+  if (id === "reality-distortion") return "reality-distortion";
+  if (id === "vision-glass") return "vision-glass";
+  if (id.startsWith("legacy-vaal-ws14-")) {
+    const n = Number.parseInt(id.replace("legacy-vaal-ws14-", ""), 10);
+    if (!Number.isNaN(n) && n % 4 === 0) return "notify-spatial";
+    if (!Number.isNaN(n) && n % 4 === 1) return "data-stream";
+    if (!Number.isNaN(n) && n % 4 === 2) return "reality-distortion";
+    return "vision-glass";
+  }
+  if (id.startsWith("legacy-vaal-a") || id.startsWith("legacy-vaal-b")) {
+    return "data-stream";
+  }
+  if (id.startsWith("legacy-vaal-c") || id.startsWith("legacy-vaal-d")) {
+    return "reality-distortion";
+  }
+  if (id.startsWith("legacy-vaal-e")) {
+    return "vision-glass";
+  }
+  return "data-stream";
+}
 
 export const VKW_BRAI_OVERLAY_PRESETS: { id: VkwBraiPresetId; label: string }[] =
   [
@@ -48,6 +73,24 @@ export const VKW_BRAI_OVERLAY_PRESETS: { id: VkwBraiPresetId; label: string }[] 
       label:
         "Vision glass panel — frosted footer, detail grid, gradient CTA bar",
     },
+    { id: "legacy-vaal-a1", label: "Legacy Vaal A1 · The Monolith" },
+    { id: "legacy-vaal-a2", label: "Legacy Vaal A2 · Price Reveal" },
+    { id: "legacy-vaal-a3", label: "Legacy Vaal A3 · Macro Detail" },
+    { id: "legacy-vaal-a4", label: "Legacy Vaal A4 · Glass Overlay" },
+    { id: "legacy-vaal-a5", label: "Legacy Vaal A5 · The Signature" },
+    { id: "legacy-vaal-b3", label: "Legacy Vaal B3 · Neon Contrast" },
+    { id: "legacy-vaal-b4", label: "Legacy Vaal B4 · Interaction Zone" },
+    { id: "legacy-vaal-b5", label: "Legacy Vaal B5 · Motion Blur" },
+    { id: "legacy-vaal-c1", label: "Legacy Vaal C1 · The Trifecta" },
+    { id: "legacy-vaal-c4", label: "Legacy Vaal C4 · Composition" },
+    { id: "legacy-vaal-d1", label: "Legacy Vaal D1 · The Cinema" },
+    { id: "legacy-vaal-d2", label: "Legacy Vaal D2 · Location Focus" },
+    { id: "legacy-vaal-d3", label: "Legacy Vaal D3 · Heavy Weight" },
+    { id: "legacy-vaal-e4", label: "Legacy Vaal E4 · Audacious Bleed" },
+    ...Array.from({ length: 25 }, (_, i) => ({
+      id: `legacy-vaal-ws14-${String(i + 1).padStart(2, "0")}`,
+      label: `Legacy Vaal WS14 · Template ${String(i + 1).padStart(2, "0")}`,
+    })),
   ];
 
 const STREAM_KEYS = [
@@ -127,30 +170,30 @@ type GlassCopyKey = (typeof GLASS_KEYS)[number];
 
 const DEFAULT_STREAM: Record<StreamCopyKey, string> = {
   ticker1: "FREE GAUTENG DELIVERY",
-  ticker2: "WA: 063 184 1939",
-  heroTitleSquare: "Vaalpenskraal\nBraai Mix",
-  heroTitleVertical: "Vaalpens\nkraal",
-  woodsSquare: "SWARTHAAK / GEELHAAK",
-  badgeSquare: "WHOLESALE DEAL",
-  woodsVertical: "10KG PREMIUM MIX",
-  badgeVertical: "WHOLESALE",
+  ticker2: "WhatsApp: 063 184 1939",
+  heroTitleSquare: "The Ultimate Braai Mix",
+  heroTitleVertical: "Vaalpenskraal",
+  woodsSquare: "SWARTHAAK / GEELHAAK / KAMEELDORING",
+  badgeSquare: "",
+  woodsVertical: "",
+  badgeVertical: "",
   sqM1Label: "Minimum Order QTY",
   sqM1Value: "50 x 10KG BAGS",
   sqM2Label: "Total Delivered",
   sqM2Value: "R1250",
-  vtM1Label: "Minimum Order Quantity",
+  vtM1Label: "",
   vtM1Value: "50 x 10KG BAGS",
-  vtM2Label: "Total Price (Delivered)",
+  vtM2Label: "",
   vtM2Value: "R1250",
-  vtM3Label: "Dispatch Line",
-  vtM3Value: "WA: 063 184 1939",
+  vtM3Label: "",
+  vtM3Value: "WhatsApp: 063 184 1939",
 };
 
 const DEFAULT_NOTIFY: Record<NotifyCopyKey, string> = {
   productNameSquare: "Vaalpenskraal",
   productNameVertical: "Vaalpens\nkraal",
-  productSubSquare: "10KG PREMIUM BRAAI MIX",
-  productSubVertical: "10KG BRAAI MIX",
+  productSubSquare: "THE ULTIMATE BRAAI MIX",
+  productSubVertical: "THE ULTIMATE BRAAI MIX",
   speechBeforeSquare: "50 x 10kg bags delivered for ",
   speechHighlight: "R1250",
   speechLine1Vertical: "50 x 10kg bags",
@@ -164,22 +207,22 @@ const DEFAULT_REALITY: Record<RealityCopyKey, string> = {
   villainCopy: "Ordinary fires are dead.",
   heroHeading: "VAALPENS\nKRAAL.",
   subSquare:
-    "10KG of Absolute Premium Hardwood.\nThe reinvention of the braai.",
+    "The Ultimate Braai Mix from Vaalpenskraal.\nKiln-dry bushveld hardwood—serious heat, less smoke.",
   subVertical:
-    "The reinvention of the braai. 10KG of absolute premium hardwood.",
+    "The Ultimate Braai Mix from Vaalpenskraal—kiln-dry bushveld hardwood, serious heat, less smoke.",
   floatingBadge: "FREE GAUTENG DELIVERY",
   priceCurrency: "R",
   priceNumber: "1250",
   priceContext: "50 x 10KG Bags Delivered",
-  ctaLine: "063 184 1939",
+  ctaLine: "WhatsApp: 063 184 1939",
 };
 
 const DEFAULT_GLASS: Record<GlassCopyKey, string> = {
   brandName: "Vaalpenskraal",
-  headlineSquare: "The Ultimate Burn.",
-  headlineVertical: "Ignite the Elements.",
-  subheadSquare: "Premium Brix Mix Firewood",
-  subheadVertical: "Premium Brix Mix",
+  headlineSquare: "The Ultimate Braai Mix.",
+  headlineVertical: "The Ultimate Braai Mix.",
+  subheadSquare: "Thabazimbi bushveld · kiln-dry · wholesale",
+  subheadVertical: "Thabazimbi bushveld · kiln-dry · wholesale",
   woodTypes: "Swarthaak • Geelhaak • Kameeldoring",
   sqD1Label: "Bag Size",
   sqD1Value: "10kg",
@@ -197,35 +240,34 @@ const DEFAULT_GLASS: Record<GlassCopyKey, string> = {
   ctaDeliveryLine2: "in Gauteng",
 };
 
-type CopyByPreset = {
-  "data-stream": Record<StreamCopyKey, string>;
-  "notify-spatial": Record<NotifyCopyKey, string>;
-  "reality-distortion": Record<RealityCopyKey, string>;
-  "vision-glass": Record<GlassCopyKey, string>;
-};
+type CopyByPreset = Record<VkwBraiPresetId, Record<string, string>>;
+
+function defaultsForPreset(id: VkwBraiPresetId): Record<string, string> {
+  const family = familyForPreset(id);
+  if (family === "notify-spatial") return { ...DEFAULT_NOTIFY };
+  if (family === "reality-distortion") return { ...DEFAULT_REALITY };
+  if (family === "vision-glass") return { ...DEFAULT_GLASS };
+  return { ...DEFAULT_STREAM };
+}
 
 function initialCopyByPreset(): CopyByPreset {
-  return {
-    "data-stream": { ...DEFAULT_STREAM },
-    "notify-spatial": { ...DEFAULT_NOTIFY },
-    "reality-distortion": { ...DEFAULT_REALITY },
-    "vision-glass": { ...DEFAULT_GLASS },
-  };
+  return Object.fromEntries(
+    VKW_BRAI_OVERLAY_PRESETS.map((p) => [p.id, defaultsForPreset(p.id)]),
+  );
 }
 
 function keysForPreset(p: VkwBraiPresetId): readonly string[] {
-  if (p === "data-stream") return STREAM_KEYS;
-  if (p === "notify-spatial") return NOTIFY_KEYS;
-  if (p === "reality-distortion") return REALITY_KEYS;
+  const family = familyForPreset(p);
+  if (family === "data-stream") return STREAM_KEYS;
+  if (family === "notify-spatial") return NOTIFY_KEYS;
+  if (family === "reality-distortion") return REALITY_KEYS;
   return GLASS_KEYS;
 }
 
 function isPresetId(x: unknown): x is VkwBraiPresetId {
   return (
-    x === "data-stream" ||
-    x === "notify-spatial" ||
-    x === "reality-distortion" ||
-    x === "vision-glass"
+    typeof x === "string" &&
+    VKW_BRAI_OVERLAY_PRESETS.some((p) => p.id === x)
   );
 }
 
@@ -277,9 +319,11 @@ function extractCopyBlock(parsed: unknown): Record<string, unknown> | null {
 }
 
 function exportSlug(p: VkwBraiPresetId): string {
-  if (p === "data-stream") return "data-stream";
-  if (p === "notify-spatial") return "notify-spatial";
-  if (p === "reality-distortion") return "reality-distortion";
+  if (p.startsWith("legacy-")) return p;
+  const family = familyForPreset(p);
+  if (family === "data-stream") return "data-stream";
+  if (family === "notify-spatial") return "notify-spatial";
+  if (family === "reality-distortion") return "reality-distortion";
   return "vision-glass";
 }
 
@@ -302,6 +346,48 @@ function readFileAsDataUrl(
 
 function titleLines(text: string): string[] {
   return text.split("\n").filter((l) => l.length > 0);
+}
+
+/** Split "A / B / C" for top ticker segments; single string if no slashes. */
+function woodsTickerParts(woods: string): string[] {
+  const t = woods.trim();
+  if (!t) return [];
+  const parts = t.split(/\s*\/\s*/).map((p) => p.trim()).filter(Boolean);
+  return parts.length > 0 ? parts : [t];
+}
+
+type VkwVerticalMidSlotClasses = {
+  midImageSlot: string;
+  midImageImg: string;
+  midImagePlaceholder: string;
+};
+
+/** Square 1:1 upload crop-fills this framed slot on all 9:16 vertical previews (Alberton Tyre Clinic pattern). */
+function VkwVerticalMidSlot({
+  mod,
+  bgSquareDataUrl,
+}: {
+  mod: Record<string, string>;
+  bgSquareDataUrl: string | null;
+}) {
+  const { midImageSlot, midImageImg, midImagePlaceholder } =
+    mod as VkwVerticalMidSlotClasses;
+  return (
+    <div className={midImageSlot}>
+      {bgSquareDataUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element -- data URL from user upload
+        <img
+          className={midImageImg}
+          src={bgSquareDataUrl}
+          alt=""
+        />
+      ) : (
+        <div className={midImagePlaceholder} aria-hidden>
+          Square image
+        </div>
+      )}
+    </div>
+  );
 }
 
 function WaIcon({ size = 20 }: { size?: number }) {
@@ -342,39 +428,44 @@ export function VaalpenskraalWoodOverlayStudio() {
   const [copyByPreset, setCopyByPreset] = useState<CopyByPreset>(
     initialCopyByPreset,
   );
-
-  const s = copyByPreset["data-stream"];
-  const n = copyByPreset["notify-spatial"];
-  const r = copyByPreset["reality-distortion"];
-  const g = copyByPreset["vision-glass"];
+  const presetFamily = familyForPreset(preset);
+  const activeCopy = copyByPreset[preset] ?? defaultsForPreset(preset);
+  const s = activeCopy as typeof DEFAULT_STREAM;
+  const n = activeCopy as typeof DEFAULT_NOTIFY;
+  const r = activeCopy as typeof DEFAULT_REALITY;
+  const g = activeCopy as typeof DEFAULT_GLASS;
 
   const patchStream = useCallback((key: StreamCopyKey, value: string) => {
+    if (presetFamily !== "data-stream") return;
     setCopyByPreset((prev) => ({
       ...prev,
-      "data-stream": { ...prev["data-stream"], [key]: value },
+      [preset]: { ...(prev[preset] ?? defaultsForPreset(preset)), [key]: value },
     }));
-  }, []);
+  }, [preset, presetFamily]);
 
   const patchNotify = useCallback((key: NotifyCopyKey, value: string) => {
+    if (presetFamily !== "notify-spatial") return;
     setCopyByPreset((prev) => ({
       ...prev,
-      "notify-spatial": { ...prev["notify-spatial"], [key]: value },
+      [preset]: { ...(prev[preset] ?? defaultsForPreset(preset)), [key]: value },
     }));
-  }, []);
+  }, [preset, presetFamily]);
 
   const patchReality = useCallback((key: RealityCopyKey, value: string) => {
+    if (presetFamily !== "reality-distortion") return;
     setCopyByPreset((prev) => ({
       ...prev,
-      "reality-distortion": { ...prev["reality-distortion"], [key]: value },
+      [preset]: { ...(prev[preset] ?? defaultsForPreset(preset)), [key]: value },
     }));
-  }, []);
+  }, [preset, presetFamily]);
 
   const patchGlass = useCallback((key: GlassCopyKey, value: string) => {
+    if (presetFamily !== "vision-glass") return;
     setCopyByPreset((prev) => ({
       ...prev,
-      "vision-glass": { ...prev["vision-glass"], [key]: value },
+      [preset]: { ...(prev[preset] ?? defaultsForPreset(preset)), [key]: value },
     }));
-  }, []);
+  }, [preset, presetFamily]);
 
   const [bgSquareDataUrl, setBgSquareDataUrl] = useState<string | null>(null);
   const [bgVerticalDataUrl, setBgVerticalDataUrl] = useState<string | null>(
@@ -511,14 +602,7 @@ export function VaalpenskraalWoodOverlayStudio() {
   const resetCopy = () => {
     setCopyByPreset((prev) => ({
       ...prev,
-      [preset]:
-        preset === "data-stream"
-          ? { ...DEFAULT_STREAM }
-          : preset === "notify-spatial"
-            ? { ...DEFAULT_NOTIFY }
-            : preset === "reality-distortion"
-              ? { ...DEFAULT_REALITY }
-              : { ...DEFAULT_GLASS },
+      [preset]: defaultsForPreset(preset),
     }));
   };
 
@@ -580,16 +664,16 @@ export function VaalpenskraalWoodOverlayStudio() {
   const scaleVert = VERT_PREVIEW_W / 1080;
 
   const previewLabel =
-    preset === "data-stream"
+    presetFamily === "data-stream"
       ? "Data Stream"
-      : preset === "notify-spatial"
+      : presetFamily === "notify-spatial"
         ? "Notification Bubble (Spatial)"
-        : preset === "reality-distortion"
+        : presetFamily === "reality-distortion"
           ? "Reality Distortion (Nightography)"
           : "Vision glass panel";
 
   const squareCanvas =
-    preset === "data-stream" ? (
+    presetFamily === "data-stream" ? (
       <div
         ref={squareRef}
         className={`${inter.variable} ${streamSquare.root}`}
@@ -607,12 +691,15 @@ export function VaalpenskraalWoodOverlayStudio() {
           <div className={streamSquare.edgeGradient} aria-hidden />
           <div className={streamSquare.uiLayer}>
             <div className={streamSquare.topBar}>
-              <div className={streamSquare.topTicker}>
-                <div className={streamSquare.tickerText}>{s.ticker1}</div>
-                {s.ticker2.trim() ? (
-                  <div className={streamSquare.tickerText}>{s.ticker2}</div>
-                ) : null}
-              </div>
+              {s.woodsSquare.trim() ? (
+                <div className={streamSquare.topTicker}>
+                  {woodsTickerParts(s.woodsSquare).map((chunk, i) => (
+                    <div key={i} className={streamSquare.tickerText}>
+                      {chunk}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
               <h1 className={streamSquare.heroTitle}>
                 {titleLines(s.heroTitleSquare).map((line, i) => (
                   <span key={i}>
@@ -624,8 +711,14 @@ export function VaalpenskraalWoodOverlayStudio() {
             </div>
             <div className={streamSquare.bottomHud}>
               <div className={streamSquare.hudHeader}>
-                <div className={streamSquare.woodsList}>{s.woodsSquare}</div>
-                <div className={streamSquare.badge}>{s.badgeSquare}</div>
+                {s.ticker2.trim() ? (
+                  <div className={streamSquare.hudPromoCol}>
+                    <div className={streamSquare.hudWhatsAppLine}>{s.ticker2}</div>
+                  </div>
+                ) : null}
+                {s.ticker1.trim() ? (
+                  <div className={streamSquare.hudDeliveryPill}>{s.ticker1}</div>
+                ) : null}
               </div>
               <div className={streamSquare.dataGrid}>
                 <div className={streamSquare.metric}>
@@ -647,7 +740,7 @@ export function VaalpenskraalWoodOverlayStudio() {
           </div>
         </div>
       </div>
-    ) : preset === "notify-spatial" ? (
+    ) : presetFamily === "notify-spatial" ? (
       <div
         ref={squareRef}
         className={`${inter.variable} ${notifySquare.root}`}
@@ -697,7 +790,7 @@ export function VaalpenskraalWoodOverlayStudio() {
           </div>
         </div>
       </div>
-    ) : preset === "reality-distortion" ? (
+    ) : presetFamily === "reality-distortion" ? (
       <div
         ref={squareRef}
         className={`${inter.variable} ${realitySquare.root}`}
@@ -802,7 +895,7 @@ export function VaalpenskraalWoodOverlayStudio() {
     );
 
   const verticalCanvas =
-    preset === "data-stream" ? (
+    presetFamily === "data-stream" ? (
       <div
         ref={verticalRef}
         className={`${inter.variable} ${streamVertical.root}`}
@@ -832,18 +925,40 @@ export function VaalpenskraalWoodOverlayStudio() {
                 ))}
               </h1>
             </div>
+            <div className={streamVertical.midColumn}>
+              <VkwVerticalMidSlot
+                mod={streamVertical}
+                bgSquareDataUrl={bgSquareDataUrl}
+              />
+            </div>
             <div className={streamVertical.bottomHud}>
-              <div className={streamVertical.hudHeader}>
-                <div className={streamVertical.woodsList}>{s.woodsVertical}</div>
-                <div className={streamVertical.badge}>{s.badgeVertical}</div>
-              </div>
+              {s.woodsVertical.trim() || s.badgeVertical.trim() ? (
+                <div className={streamVertical.hudHeader}>
+                  {s.woodsVertical.trim() ? (
+                    <div className={streamVertical.woodsList}>
+                      {s.woodsVertical}
+                    </div>
+                  ) : null}
+                  {s.badgeVertical.trim() ? (
+                    <div className={streamVertical.badge}>{s.badgeVertical}</div>
+                  ) : null}
+                </div>
+              ) : null}
               <div className={streamVertical.dataGrid}>
-                <div className={streamVertical.metric}>
-                  <div className={streamVertical.mLabel}>{s.vtM1Label}</div>
+                <div
+                  className={`${streamVertical.metric} ${!s.vtM1Label.trim() ? streamVertical.metricValueSolo : ""}`}
+                >
+                  {s.vtM1Label.trim() ? (
+                    <div className={streamVertical.mLabel}>{s.vtM1Label}</div>
+                  ) : null}
                   <div className={streamVertical.mVal}>{s.vtM1Value}</div>
                 </div>
-                <div className={streamVertical.metric}>
-                  <div className={streamVertical.mLabel}>{s.vtM2Label}</div>
+                <div
+                  className={`${streamVertical.metric} ${!s.vtM2Label.trim() ? streamVertical.metricValueSolo : ""}`}
+                >
+                  {s.vtM2Label.trim() ? (
+                    <div className={streamVertical.mLabel}>{s.vtM2Label}</div>
+                  ) : null}
                   <div
                     className={`${streamVertical.mVal} ${streamVertical.mValLarge} ${streamVertical.mHighlight}`}
                   >
@@ -851,9 +966,11 @@ export function VaalpenskraalWoodOverlayStudio() {
                   </div>
                 </div>
                 <div
-                  className={`${streamVertical.metric} ${streamVertical.metricDivider}`}
+                  className={`${streamVertical.metric} ${streamVertical.metricDivider} ${!s.vtM3Label.trim() ? streamVertical.metricValueSolo : ""}`}
                 >
-                  <div className={streamVertical.mLabel}>{s.vtM3Label}</div>
+                  {s.vtM3Label.trim() ? (
+                    <div className={streamVertical.mLabel}>{s.vtM3Label}</div>
+                  ) : null}
                   <div
                     className={`${streamVertical.mVal} ${streamVertical.mValDispatch}`}
                   >
@@ -865,7 +982,7 @@ export function VaalpenskraalWoodOverlayStudio() {
           </div>
         </div>
       </div>
-    ) : preset === "notify-spatial" ? (
+    ) : presetFamily === "notify-spatial" ? (
       <div
         ref={verticalRef}
         className={`${inter.variable} ${notifyVertical.root}`}
@@ -901,6 +1018,12 @@ export function VaalpenskraalWoodOverlayStudio() {
                 </div>
               </div>
             </div>
+            <div className={notifyVertical.midColumn}>
+              <VkwVerticalMidSlot
+                mod={notifyVertical}
+                bgSquareDataUrl={bgSquareDataUrl}
+              />
+            </div>
             <div className={notifyVertical.bubbleCol}>
               <div className={notifyVertical.speechBubble}>
                 <span className={notifyVertical.unreadDot} aria-hidden />
@@ -924,7 +1047,7 @@ export function VaalpenskraalWoodOverlayStudio() {
           </div>
         </div>
       </div>
-    ) : preset === "reality-distortion" ? (
+    ) : presetFamily === "reality-distortion" ? (
       <div
         ref={verticalRef}
         className={`${inter.variable} ${realityVertical.root}`}
@@ -943,17 +1066,25 @@ export function VaalpenskraalWoodOverlayStudio() {
             <div className={realityVertical.heroRadialScrim} aria-hidden />
           </div>
           <div className={realityVertical.particleSwarm} aria-hidden />
-          <div className={realityVertical.typographyLayer}>
-            <div className={realityVertical.villainCopy}>{r.villainCopy}</div>
-            <h1 className={realityVertical.heroCopy}>
-              {titleLines(r.heroHeading).map((line, i) => (
-                <span key={i}>
-                  {i > 0 ? <br /> : null}
-                  {line}
-                </span>
-              ))}
-            </h1>
-            <p className={realityVertical.heroSub}>{r.subVertical}</p>
+          <div className={realityVertical.mainColumn}>
+            <div className={realityVertical.typographyLayer}>
+              <div className={realityVertical.villainCopy}>{r.villainCopy}</div>
+              <h1 className={realityVertical.heroCopy}>
+                {titleLines(r.heroHeading).map((line, i) => (
+                  <span key={i}>
+                    {i > 0 ? <br /> : null}
+                    {line}
+                  </span>
+                ))}
+              </h1>
+              <p className={realityVertical.heroSub}>{r.subVertical}</p>
+            </div>
+            <div className={realityVertical.midColumn}>
+              <VkwVerticalMidSlot
+                mod={realityVertical}
+                bgSquareDataUrl={bgSquareDataUrl}
+              />
+            </div>
           </div>
           <div className={realityVertical.uiLayer}>
             <div className={realityVertical.squirclePanel}>
@@ -995,6 +1126,12 @@ export function VaalpenskraalWoodOverlayStudio() {
             />
           ) : null}
           <div className={glassVertical.overlayGradient} aria-hidden />
+          <div className={glassVertical.heroStage}>
+            <VkwVerticalMidSlot
+              mod={glassVertical}
+              bgSquareDataUrl={bgSquareDataUrl}
+            />
+          </div>
           <div className={glassVertical.glassPanel}>
             <div className={glassVertical.brandName}>{g.brandName}</div>
             <h1 className={glassVertical.headline}>{g.headlineVertical}</h1>
@@ -1040,7 +1177,7 @@ export function VaalpenskraalWoodOverlayStudio() {
       <div className="w-full shrink-0 space-y-4 lg:max-w-[min(100%,380px)]">
         <div className="space-y-2 rounded-md border border-white/10 bg-black/30 p-3">
           <label className="block text-xs font-medium uppercase tracking-wide text-[#8E8E93]">
-            Braai mix template
+            Ultimate Braai Mix templates
           </label>
           <select
             value={preset}
@@ -1063,7 +1200,12 @@ export function VaalpenskraalWoodOverlayStudio() {
             Hero images
           </p>
           <div className="space-y-2">
-            <label className="text-xs text-[#8E8E93]">Square 1:1</label>
+            <label className="text-xs text-[#8E8E93]">
+              Square 1:1
+              <span className="mt-1 block font-normal normal-case tracking-normal text-[#8E8E93]/85">
+                Same file fills the framed middle area on 9:16 vertical previews.
+              </span>
+            </label>
             <input
               ref={squareFileRef}
               type="file"
@@ -1082,7 +1224,13 @@ export function VaalpenskraalWoodOverlayStudio() {
             ) : null}
           </div>
           <div className="space-y-2 border-t border-white/10 pt-3">
-            <label className="text-xs text-[#8E8E93]">Vertical 9:16</label>
+            <label className="text-xs text-[#8E8E93]">
+              Vertical 9:16 (optional)
+              <span className="mt-1 block font-normal normal-case tracking-normal text-[#8E8E93]/85">
+                Full-bleed background only; the square upload still fills the
+                framed middle on vertical.
+              </span>
+            </label>
             <input
               ref={verticalFileRef}
               type="file"
@@ -1102,17 +1250,17 @@ export function VaalpenskraalWoodOverlayStudio() {
           </div>
         </div>
 
-        {preset === "data-stream" ? (
+        {presetFamily === "data-stream" ? (
           <div className="space-y-3 rounded-md border border-white/10 bg-black/30 p-3">
             <p className="text-xs font-medium uppercase text-[#8E8E93]">
               Data Stream copy
             </p>
-            <Field label="Ticker 1" value={s.ticker1} onChange={(v) => patchStream("ticker1", v)} />
-            <Field label="Ticker 2 (square only; hidden on vertical)" value={s.ticker2} onChange={(v) => patchStream("ticker2", v)} />
-            <Field label="Hero title · square (use line break for two lines)" value={s.heroTitleSquare} onChange={(v) => patchStream("heroTitleSquare", v)} rows={2} />
-            <Field label="Hero title · vertical" value={s.heroTitleVertical} onChange={(v) => patchStream("heroTitleVertical", v)} rows={2} />
-            <Field label="HUD woods line · square" value={s.woodsSquare} onChange={(v) => patchStream("woodsSquare", v)} />
-            <Field label="HUD badge · square" value={s.badgeSquare} onChange={(v) => patchStream("badgeSquare", v)} />
+            <Field label="Ticker 1 · vertical top; square orange pill (ex‑badge slot)" value={s.ticker1} onChange={(v) => patchStream("ticker1", v)} />
+            <Field label="Ticker 2 · square large WhatsApp line (bottom HUD left)" value={s.ticker2} onChange={(v) => patchStream("ticker2", v)} />
+            <Field label="Hero title · square (optional \\n for extra lines)" value={s.heroTitleSquare} onChange={(v) => patchStream("heroTitleSquare", v)} rows={2} />
+            <Field label="Hero title · vertical (optional \\n for extra lines)" value={s.heroTitleVertical} onChange={(v) => patchStream("heroTitleVertical", v)} rows={2} />
+            <Field label="Square top orange strip · woods (use / to split segments)" value={s.woodsSquare} onChange={(v) => patchStream("woodsSquare", v)} />
+            <Field label="Square badge (unused on Data Stream layout)" value={s.badgeSquare} onChange={(v) => patchStream("badgeSquare", v)} />
             <Field label="HUD woods line · vertical" value={s.woodsVertical} onChange={(v) => patchStream("woodsVertical", v)} />
             <Field label="HUD badge · vertical" value={s.badgeVertical} onChange={(v) => patchStream("badgeVertical", v)} />
             <Field label="Square metric 1 label" value={s.sqM1Label} onChange={(v) => patchStream("sqM1Label", v)} />
@@ -1126,7 +1274,7 @@ export function VaalpenskraalWoodOverlayStudio() {
             <Field label="Vertical metric 3 label" value={s.vtM3Label} onChange={(v) => patchStream("vtM3Label", v)} />
             <Field label="Vertical metric 3 value" value={s.vtM3Value} onChange={(v) => patchStream("vtM3Value", v)} />
           </div>
-        ) : preset === "notify-spatial" ? (
+        ) : presetFamily === "notify-spatial" ? (
           <div className="space-y-3 rounded-md border border-white/10 bg-black/30 p-3">
             <p className="text-xs font-medium uppercase text-[#8E8E93]">
               Notification Bubble copy
@@ -1143,7 +1291,7 @@ export function VaalpenskraalWoodOverlayStudio() {
             <Field label="Sub bubble · vertical" value={n.subBubbleVertical} onChange={(v) => patchNotify("subBubbleVertical", v)} />
             <Field label="WhatsApp row" value={n.whatsappLine} onChange={(v) => patchNotify("whatsappLine", v)} />
           </div>
-        ) : preset === "reality-distortion" ? (
+        ) : presetFamily === "reality-distortion" ? (
           <div className="space-y-3 rounded-md border border-white/10 bg-black/30 p-3">
             <p className="text-xs font-medium uppercase text-[#8E8E93]">
               Reality Distortion copy

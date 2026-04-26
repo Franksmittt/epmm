@@ -218,7 +218,7 @@ const DEFAULT_CAROUSEL_MOCK: Record<
   carouselCard5Eyebrow: "Card 05 / 05",
   carouselCard5Headline: "WhatsApp us",
   carouselCard5Body: "Tap to message. COD. Same-day routing where we can.",
-  carouselCard5Cta: "063 184 1939",
+  carouselCard5Cta: "WhatsApp: 063 184 1939",
 };
 
 const DEFAULT_APPLE: Record<(typeof APPLE_GLASS_KEYS)[number], string> = {
@@ -238,7 +238,7 @@ const DEFAULT_APPLE: Record<(typeof APPLE_GLASS_KEYS)[number], string> = {
   appleC4Box4V: "FREE",
   appleC5Title: "Secure your load.",
   appleC5Sub: "Order instantly on WhatsApp",
-  appleC5Phone: "063 184 1939",
+  appleC5Phone: "WhatsApp: 063 184 1939",
 };
 
 const DEFAULT_SAMSUNG: Record<(typeof SAMSUNG_KEYS)[number], string> = {
@@ -252,7 +252,7 @@ const DEFAULT_SAMSUNG: Record<(typeof SAMSUNG_KEYS)[number], string> = {
   samC4Price: "R1250",
   samC4Del: "Free Delivery in Gauteng",
   samC5Title: "WhatsApp to Order",
-  samC5Phone: "063 184 1939",
+  samC5Phone: "WhatsApp: 063 184 1939",
 };
 
 const DEFAULT_VISION: Record<(typeof VISION_KEYS)[number], string> = {
@@ -268,7 +268,7 @@ const DEFAULT_VISION: Record<(typeof VISION_KEYS)[number], string> = {
   visC4Price: "R1250",
   visC4Del: "Including Free Delivery in Gauteng",
   visC5Top: "Order Instantly",
-  visC5Phone: "063 184 1939",
+  visC5Phone: "WhatsApp: 063 184 1939",
 };
 
 const DEFAULT_NOTHING: Record<(typeof NOTHING_KEYS)[number], string> = {
@@ -286,7 +286,7 @@ const DEFAULT_NOTHING: Record<(typeof NOTHING_KEYS)[number], string> = {
   notC4Foot: "[INC. DEL GAUTENG]",
   notC5Action: "ACTION_REQUIRED",
   notC5Title: "Initiate Order.",
-  notC5Phone: "063 184 1939",
+  notC5Phone: "WhatsApp: 063 184 1939",
 };
 
 const DEFAULT_CYBER: Record<(typeof CYBER_KEYS)[number], string> = {
@@ -306,7 +306,7 @@ const DEFAULT_CYBER: Record<(typeof CYBER_KEYS)[number], string> = {
   hudC4Sub: "Free Del [GP]",
   hudC4Price: "R1250",
   hudC5Title: "Transmit Order",
-  hudC5Phone: "063 184 1939",
+  hudC5Phone: "WhatsApp: 063 184 1939",
 };
 
 export function defaultCopyForPreset(

@@ -118,6 +118,11 @@
   color: rgba(255, 255, 255, 0.35);
 }
 
+/* Square only: “Defiant. Protection.” on one line */
+.headlineSquareOneLine {
+  white-space: nowrap;
+}
+
 .metaRow {
   display: flex;
   justify-content: space-between;
@@ -151,6 +156,11 @@
 
 .actionButton:active {
   transform: scale(0.92);
+}
+
+.actionButtonSolo {
+  justify-content: center;
+  gap: 0;
 }
 
 /* ─── 1080×1080 export canvas (1.8× the former 600 logical design) ─── */
@@ -207,7 +217,3 @@
   gap: 14px;
 }
 
-.root.canvas1080 .actionButton svg {
-  width: 29px;
-  height: 29px;
-}
