@@ -81,28 +81,26 @@ export function RapidStudioCampaignLayouts({ onPickImage, onDownload }: Props) {
           <div className="camp2v2-photo">
             <img src={CAMP_IMG} id="img-8" alt="" />
           </div>
-          <aside className="campv2-aside-panel campv2-aside-panel--invert" aria-label="Promo copy">
+          <aside className="campv2-aside-panel campv2-aside-panel--invert camp2v2-aside" aria-label="Promo copy">
             <div className="campv2-aside-top">
               <p className="campv2-eyebrow campv2-eyebrow--invert" contentEditable suppressContentEditableWarning>
                 Just landed
               </p>
-              <div className="campv2-promo-pill camp-promo-fill">
+              <div className="campv2-promo-pill camp-promo-fill camp2v2-promo-pill">
                 <span contentEditable suppressContentEditableWarning>
                   Sale · 50% off
                 </span>
               </div>
             </div>
-            <div className="campv2-aside-bottom">
-              <h2 className="campv2-headline campv2-headline--invert">
+            <div className="camp2v2-aside-mid">
+              <h2 className="campv2-headline campv2-headline--invert camp2v2-headline">
                 <span contentEditable suppressContentEditableWarning>
-                  New
-                </span>
-                <br />
-                <span contentEditable suppressContentEditableWarning>
-                  arrival
+                  New arrival
                 </span>
               </h2>
               <div className="campv2-accent-rule" aria-hidden />
+            </div>
+            <div className="campv2-aside-bottom camp2v2-aside-bottom">
               <p className="campv2-deck campv2-deck--invert" contentEditable suppressContentEditableWarning>
                 Fresh silhouettes, same energy. Tap in.
               </p>
@@ -185,17 +183,17 @@ export function RapidStudioCampaignLayouts({ onPickImage, onDownload }: Props) {
             <img src={CAMP_IMG} id="img-10" alt="" />
           </div>
           <aside className="campv2-aside-panel" aria-label="Promo copy">
-            <div className="campv2-aside-top">
-              <p className="campv2-eyebrow" contentEditable suppressContentEditableWarning>
-                Limited run
-              </p>
-              <div className="campv2-promo-pill camp-promo-fill">
-                <span contentEditable suppressContentEditableWarning>
-                  Big sale · weekend only
-                </span>
+            <div className="camp4v2-aside-lead">
+              <div className="campv2-aside-top">
+                <p className="campv2-eyebrow" contentEditable suppressContentEditableWarning>
+                  Limited run
+                </p>
+                <div className="campv2-promo-pill camp-promo-fill camp4v2-promo-pill">
+                  <span contentEditable suppressContentEditableWarning>
+                    Big sale · weekend only
+                  </span>
+                </div>
               </div>
-            </div>
-            <div className="campv2-aside-bottom">
               <h2 className="campv2-headline">
                 <span contentEditable suppressContentEditableWarning>
                   Street
@@ -206,6 +204,8 @@ export function RapidStudioCampaignLayouts({ onPickImage, onDownload }: Props) {
                 </span>
               </h2>
               <div className="campv2-accent-rule" aria-hidden />
+            </div>
+            <div className="camp4v2-aside-tail">
               <p className="campv2-deck" contentEditable suppressContentEditableWarning>
                 Drop-in fits, new palettes, same attitude.
               </p>
@@ -243,7 +243,7 @@ export function RapidStudioCampaignLayouts({ onPickImage, onDownload }: Props) {
               <p className="campv2-eyebrow" contentEditable suppressContentEditableWarning>
                 New drop
               </p>
-              <div className="campv2-promo-pill camp-promo-fill">
+              <div className="campv2-promo-pill camp-promo-fill camp5v2-promo-pill">
                 <span contentEditable suppressContentEditableWarning>
                   30% off · today only
                 </span>
@@ -311,9 +311,14 @@ export function RapidStudioCampaignLayouts({ onPickImage, onDownload }: Props) {
                 </span>
               </h2>
               <div className="campv2-accent-rule" aria-hidden />
-              <p className="campv2-deck" contentEditable suppressContentEditableWarning>
-                www.yourbrand.com · Restocks weekly · Free returns
-              </p>
+              <div className="camp6v2-deck-stack">
+                <p className="camp6v2-footer-url" contentEditable suppressContentEditableWarning>
+                  www.yourbrand.com
+                </p>
+                <p className="campv2-deck camp6v2-footer-deck" contentEditable suppressContentEditableWarning>
+                  Restocks weekly · Free returns
+                </p>
+              </div>
               <p className="campv2-cta" contentEditable suppressContentEditableWarning>
                 Shop new in →
               </p>

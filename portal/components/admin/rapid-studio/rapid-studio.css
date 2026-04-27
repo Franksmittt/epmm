@@ -524,6 +524,60 @@
   object-position: center;
 }
 
+#rapid-studio-root .camp2v2-promo-pill {
+  align-self: stretch;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Campaign 2: headline + rule vertically centered between pill and deck */
+#rapid-studio-root .camp2v2-aside.campv2-aside-panel {
+  justify-content: flex-start;
+  gap: 0;
+  min-height: 0;
+}
+
+#rapid-studio-root .camp2v2-aside > .campv2-aside-top,
+#rapid-studio-root .camp2v2-aside > .camp2v2-aside-bottom {
+  flex-shrink: 0;
+}
+
+#rapid-studio-root .camp2v2-aside-mid {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+#rapid-studio-root .camp2v2-aside-bottom {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+#rapid-studio-root .camp2v2-aside-bottom .campv2-deck,
+#rapid-studio-root .camp2v2-aside-bottom .campv2-cta {
+  width: 100%;
+}
+
+#rapid-studio-root .camp2v2-headline {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  width: min-content;
+  max-width: none;
+  margin-inline: auto;
+  align-self: center;
+}
+
 /* Campaign 3 — Inverted: full bleed + bottom scrim */
 #rapid-studio-root .camp3v2-photo {
   position: absolute;
@@ -584,6 +638,29 @@
   object-position: center;
 }
 
+#rapid-studio-root .camp4v2-promo-pill {
+  align-self: stretch;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#rapid-studio-root .camp4v2-aside-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+#rapid-studio-root .camp4v2-aside-tail {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
 /* Campaign 5 — Corner tag: full bleed + floating promo panel */
 #rapid-studio-root .camp5v2-photo {
   position: absolute;
@@ -641,9 +718,13 @@
   line-height: 0.95;
 }
 
-#rapid-studio-root .camp5v2-tag .campv2-promo-pill {
+#rapid-studio-root .camp5v2-tag .camp5v2-promo-pill {
   padding: 5px 9px;
   font-size: 0.5rem;
+  align-self: stretch;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #rapid-studio-root .camp5v2-tag .campv2-deck {
@@ -725,4 +806,24 @@
 
 #rapid-studio-root .camp6v2-footer .campv2-headline {
   font-size: 1.22rem;
+}
+
+#rapid-studio-root .camp6v2-deck-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+#rapid-studio-root .camp6v2-footer-url {
+  margin: 0;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #4a4a4a;
+  line-height: 1.35;
+}
+
+#rapid-studio-root .camp6v2-footer-deck {
+  margin: 0;
 }
