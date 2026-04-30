@@ -40,6 +40,12 @@ export default function AdminLayout({
             >
               Rapid Studio
             </Link>
+            <Link
+              href="/admin/animation-studio"
+              className="text-[#8E8E93] hover:text-white"
+            >
+              Animation Studio
+            </Link>
           </div>
           <form action={logoutAction}>
             <button

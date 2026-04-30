@@ -69,6 +69,12 @@ export default async function AdminHomePage() {
           >
             Rapid Studio
           </Link>
+          <Link
+            href="/admin/animation-studio"
+            className="inline-flex rounded-md border border-teal-400/50 bg-teal-950/40 px-4 py-2.5 text-sm font-semibold text-teal-200 hover:border-teal-300 hover:bg-teal-900/50"
+          >
+            Animation Studio
+          </Link>
         </div>
       </section>
 

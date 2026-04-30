@@ -1,0 +1,10 @@
+Miwesu Wood — shared reference text for AI image prompts (firewood delivery / stacking creatives; same physical product spec as Vaalpenskraal wholesale bags).
+Paste the paragraph below into every prompt where the bag must match product reality.
+
+---
+
+Heavy-duty woven polypropylene sack in semi-translucent milky white: a visible tight cross-hatch from flat plastic tapes forming a crisp checkerboard grid with narrow tape width and slightly raised crossings. Glossy, slightly reflective skin with sharp, angular crinkles and stress-sharp folds where the weave is taut over lumpy split wood—overall stiff, crinkly, industrial, not soft fabric. Tall rectangular standing form (~40 cm high × ~30 cm wide on the main face) with side gussets so it reads modestly boxy when full; wide folded and reinforced top hem that looks more opaque than the body; small horizontally oriented oval die-cut handle just below that hem, clean punched edges. Frosted semi-transparent panel diffuses detail but still reveals dark jagged silhouettes, rough bark, and muted tan split faces of horizontally layered firewood—uneven thickness and ends produce a realistic bumpy outer silhouette rather than a flat slab. Studio-style lighting rakes the surface so specular highlights ride the crinkle ridges and tape edges, emphasizing the stiff, synthetic, crinkly character of the plastic against a solid black background that isolates every fold and weave cue.
+
+---
+
+Note: For in-scene (non-studio) shots, drop the “solid black background” clause and keep the material description; match scale to human hands and vehicle beds—bags stay hand-carry size, never mattress-scale.
